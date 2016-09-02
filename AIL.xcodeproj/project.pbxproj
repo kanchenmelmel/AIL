@@ -13,9 +13,11 @@
 		963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */; };
 		963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963061CE1D77E1280079B7C5 /* Assets.xcassets */; };
 		963061D21D77E1280079B7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963061D01D77E1280079B7C5 /* LaunchScreen.storyboard */; };
+		C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2662452685324A770F0164 /* Pods_AIL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
 		963061C11D77E1280079B7C5 /* AIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963061C41D77E1280079B7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		963061C61D77E1280079B7C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		963061CE1D77E1280079B7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		963061D11D77E1280079B7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		963061D31D77E1280079B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.debug.xcconfig"; sourceTree = "<group>"; };
+		AE2662452685324A770F0164 /* Pods_AIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69EFDD5AB6EBC4F4E4D8ED54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE2662452685324A770F0164 /* Pods_AIL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70B05ED6CEF8437B8D6BFB16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */,
+				7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		963061B81D77E1270079B7C5 = {
 			isa = PBXGroup;
 			children = (
+				968DD6D41D793AD8003B5DA4 /* Networking */,
+				968DD6D31D793AC7003B5DA4 /* Uitility */,
 				963061C31D77E1280079B7C5 /* AIL */,
 				963061C21D77E1280079B7C5 /* Products */,
+				70B05ED6CEF8437B8D6BFB16 /* Pods */,
+				69EFDD5AB6EBC4F4E4D8ED54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +93,20 @@
 			path = AIL;
 			sourceTree = "<group>";
 		};
+		968DD6D31D793AC7003B5DA4 /* Uitility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Uitility;
+			sourceTree = "<group>";
+		};
+		968DD6D41D793AD8003B5DA4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963061D61D77E1280079B7C5 /* Build configuration list for PBXNativeTarget "AIL" */;
 			buildPhases = (
+				71184C9210B700D4E5A74D7C /* 📦 Check Pods Manifest.lock */,
 				963061BD1D77E1270079B7C5 /* Sources */,
 				963061BE1D77E1270079B7C5 /* Frameworks */,
 				963061BF1D77E1270079B7C5 /* Resources */,
+				372BAD23656B6A3FD07CC2FE /* 📦 Embed Pods Frameworks */,
+				C54BA3BAEA90F0656782D836 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		372BAD23656B6A3FD07CC2FE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71184C9210B700D4E5A74D7C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C54BA3BAEA90F0656782D836 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		963061BD1D77E1270079B7C5 /* Sources */ = {
@@ -253,23 +344,29 @@
 		};
 		963061D71D77E1280079B7C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AIL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.melmel.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		963061D81D77E1280079B7C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AIL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.melmel.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -292,6 +389,7 @@
 				963061D81D77E1280079B7C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
