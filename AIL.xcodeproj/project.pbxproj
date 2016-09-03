@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */; };
+		4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */; };
+		4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */; };
 		963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C41D77E1280079B7C5 /* AppDelegate.swift */; };
 		963061C71D77E1280079B7C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C61D77E1280079B7C5 /* ViewController.swift */; };
 		963061CA1D77E1280079B7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963061C81D77E1280079B7C5 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCollectionViewCell.swift; path = AIL/PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = AIL/MenuVC.swift; sourceTree = "<group>"; };
+		4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
 		963061C11D77E1280079B7C5 /* AIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963061C41D77E1280079B7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				963061C61D77E1280079B7C5 /* ViewController.swift */,
+				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -65,6 +70,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4DAEAFAE1D7ACC2F00842C4F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		69EFDD5AB6EBC4F4E4D8ED54 /* Frameworks */ = {
@@ -87,6 +100,7 @@
 		963061B81D77E1270079B7C5 = {
 			isa = PBXGroup;
 			children = (
+				4DAEAFAE1D7ACC2F00842C4F /* Extension */,
 				4DAEAFA91D7A488000842C4F /* Model */,
 				4DAEAFA81D7A486F00842C4F /* View */,
 				4DAEAFA71D7A486700842C4F /* Controller */,
@@ -141,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963061D61D77E1280079B7C5 /* Build configuration list for PBXNativeTarget "AIL" */;
 			buildPhases = (
-				71184C9210B700D4E5A74D7C /* 📦 Check Pods Manifest.lock */,
+				71184C9210B700D4E5A74D7C /* [CP] Check Pods Manifest.lock */,
 				963061BD1D77E1270079B7C5 /* Sources */,
 				963061BE1D77E1270079B7C5 /* Frameworks */,
 				963061BF1D77E1270079B7C5 /* Resources */,
-				372BAD23656B6A3FD07CC2FE /* 📦 Embed Pods Frameworks */,
-				C54BA3BAEA90F0656782D836 /* 📦 Copy Pods Resources */,
+				372BAD23656B6A3FD07CC2FE /* [CP] Embed Pods Frameworks */,
+				C54BA3BAEA90F0656782D836 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,14 +218,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		372BAD23656B6A3FD07CC2FE /* 📦 Embed Pods Frameworks */ = {
+		372BAD23656B6A3FD07CC2FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,14 +233,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71184C9210B700D4E5A74D7C /* 📦 Check Pods Manifest.lock */ = {
+		71184C9210B700D4E5A74D7C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,14 +248,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C54BA3BAEA90F0656782D836 /* 📦 Copy Pods Resources */ = {
+		C54BA3BAEA90F0656782D836 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +272,10 @@
 			files = (
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
 				963061C71D77E1280079B7C5 /* ViewController.swift in Sources */,
+				4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
 				963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */,
+				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
