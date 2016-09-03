@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreData
+import SlideMenuControllerSwift
+
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
+        let leftViewController = myStoryboard.instantiateViewControllerWithIdentifier("left") as! MenuVC
+        
+       
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        leftViewController.mainViewController = nvc
+        
+        let slideMC = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController)
+        slideMC.changeLeftViewWidth(170)
+        slideMC.automaticallyAdjustsScrollViewInsets = true
+     //   slideMenuController.delegate = mainViewController
+        self.window?.rootViewController = slideMC
+        self.window?.makeKeyAndVisible()
+
         return true
     }
 
