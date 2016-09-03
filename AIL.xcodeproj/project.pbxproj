@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */; };
 		963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C41D77E1280079B7C5 /* AppDelegate.swift */; };
 		963061C71D77E1280079B7C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C61D77E1280079B7C5 /* ViewController.swift */; };
 		963061CA1D77E1280079B7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963061C81D77E1280079B7C5 /* Main.storyboard */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCollectionViewCell.swift; path = AIL/PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
 		963061C11D77E1280079B7C5 /* AIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963061C41D77E1280079B7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		963061C61D77E1280079B7C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		963061C61D77E1280079B7C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = AIL/ViewController.swift; sourceTree = "<group>"; };
 		963061C91D77E1280079B7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		963061CC1D77E1280079B7C5 /* AIL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AIL.xcdatamodel; sourceTree = "<group>"; };
 		963061CE1D77E1280079B7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +44,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DAEAFA71D7A486700842C4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				963061C61D77E1280079B7C5 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4DAEAFA81D7A486F00842C4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4DAEAFA91D7A488000842C4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		69EFDD5AB6EBC4F4E4D8ED54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +87,9 @@
 		963061B81D77E1270079B7C5 = {
 			isa = PBXGroup;
 			children = (
+				4DAEAFA91D7A488000842C4F /* Model */,
+				4DAEAFA81D7A486F00842C4F /* View */,
+				4DAEAFA71D7A486700842C4F /* Controller */,
 				968DD6D41D793AD8003B5DA4 /* Networking */,
 				968DD6D31D793AC7003B5DA4 /* Uitility */,
 				963061C31D77E1280079B7C5 /* AIL */,
@@ -83,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				963061C41D77E1280079B7C5 /* AppDelegate.swift */,
-				963061C61D77E1280079B7C5 /* ViewController.swift */,
 				963061C81D77E1280079B7C5 /* Main.storyboard */,
 				963061CE1D77E1280079B7C5 /* Assets.xcassets */,
 				963061D01D77E1280079B7C5 /* LaunchScreen.storyboard */,
@@ -229,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
 				963061C71D77E1280079B7C5 /* ViewController.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
 				963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */,
