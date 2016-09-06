@@ -14,7 +14,7 @@ import CoreData
 
 extension Category {
 
-    @NSManaged var categoryId: NSNumber?
-    @NSManaged var categoryName: String?
+    @NSManaged var id: NSNumber?
+    @NSManaged var name: String?
 
 }

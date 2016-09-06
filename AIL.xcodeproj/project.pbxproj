@@ -21,9 +21,9 @@
 		9671E5E11D7E6EAC008250C7 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5E01D7E6EAC008250C7 /* JSONParser.swift */; };
 		9671E5E61D7E808F008250C7 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5E21D7E808F008250C7 /* Post+CoreDataProperties.swift */; };
 		9671E5E71D7E808F008250C7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5E31D7E808F008250C7 /* Post.swift */; };
-		9671E5E81D7E808F008250C7 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5E41D7E808F008250C7 /* Category+CoreDataProperties.swift */; };
-		9671E5E91D7E808F008250C7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5E51D7E808F008250C7 /* Category.swift */; };
 		9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */; };
+		9671E5EF1D7E8622008250C7 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5ED1D7E8622008250C7 /* Category+CoreDataProperties.swift */; };
+		9671E5F01D7E8622008250C7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EE1D7E8622008250C7 /* Category.swift */; };
 		C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2662452685324A770F0164 /* Pods_AIL.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,9 +45,9 @@
 		9671E5E01D7E6EAC008250C7 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		9671E5E21D7E808F008250C7 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9671E5E31D7E808F008250C7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		9671E5E41D7E808F008250C7 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9671E5E51D7E808F008250C7 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperation.swift; sourceTree = "<group>"; };
+		9671E5ED1D7E8622008250C7 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9671E5EE1D7E8622008250C7 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2662452685324A770F0164 /* Pods_AIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,10 +162,10 @@
 		9671E5EA1D7E8095008250C7 /* ManagedObject */ = {
 			isa = PBXGroup;
 			children = (
+				9671E5ED1D7E8622008250C7 /* Category+CoreDataProperties.swift */,
+				9671E5EE1D7E8622008250C7 /* Category.swift */,
 				9671E5E21D7E808F008250C7 /* Post+CoreDataProperties.swift */,
 				9671E5E31D7E808F008250C7 /* Post.swift */,
-				9671E5E41D7E808F008250C7 /* Category+CoreDataProperties.swift */,
-				9671E5E51D7E808F008250C7 /* Category.swift */,
 			);
 			name = ManagedObject;
 			sourceTree = "<group>";
@@ -311,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
+				9671E5EF1D7E8622008250C7 /* Category+CoreDataProperties.swift in Sources */,
 				9671E5E71D7E808F008250C7 /* Post.swift in Sources */,
 				9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */,
 				963061C71D77E1280079B7C5 /* ViewController.swift in Sources */,
@@ -318,12 +319,11 @@
 				9671E5E61D7E808F008250C7 /* Post+CoreDataProperties.swift in Sources */,
 				4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
-				9671E5E81D7E808F008250C7 /* Category+CoreDataProperties.swift in Sources */,
 				963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */,
-				9671E5E91D7E808F008250C7 /* Category.swift in Sources */,
 				9671E5DF1D7E52AE008250C7 /* UrlConstants.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* RequestOperation.swift in Sources */,
+				9671E5F01D7E8622008250C7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
