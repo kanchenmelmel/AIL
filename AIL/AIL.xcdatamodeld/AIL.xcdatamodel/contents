@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Automatic">
-    <entity name="Post" syncable="YES"/>
+    <entity name="Category" representedClassName=".Category" syncable="YES">
+        <attribute name="categoryId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Post" representedClassName=".Post" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="editDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="featuredImageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Post" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="Post" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Category" positionX="-54" positionY="54" width="128" height="75"/>
     </elements>
 </model>

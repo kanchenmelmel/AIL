@@ -8,9 +8,12 @@
 
 import Foundation
 import SwiftyJSON
+import CoreData
 
 class JSONParser {
-    static func parseJSONToPostManagedObject(json:JSON) {
+    
+    
+    static func parseJSONToPostManagedObject(checkIfExistInCoreData:Bool,ifInsertIntoManagedContext:Bool,json:JSON) -> Post{
         
     }
 }
