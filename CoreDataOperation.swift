@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class CoreDataOperation {
-    func checkIdExist(id:Int,entityType:EntityType) -> Bool {
+    static func checkIdExist(id:Int,entityType:EntityType) -> Bool {
         
         
         let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext

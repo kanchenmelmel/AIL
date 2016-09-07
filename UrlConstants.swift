@@ -6,5 +6,5 @@
 //  Copyright © 2016 au.com.melmel. All rights reserved.
 //
 
-let BASE_URL = "http://ail.vic.edu.au//wp-json/wp/v2"
+let BASE_URL = "http://ail.vic.edu.au//wp-json/wp/v2/"
 let RESOURSES = "posts"

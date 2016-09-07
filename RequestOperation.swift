@@ -17,18 +17,15 @@ import SwiftyJSON
 
 
 class RequestOperation {
-    func requestLatestTwentyPosts(completionHandler:([Post])) {
+    func requestLatestTwentyPosts(completionHandler:([Post]) -> Void) {
         Alamofire.request(.GET, BASE_URL+RESOURSES, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
-                    var posts = [Post]()
                     let jsonArray = JSON(value)
-                    for json in jsonArray {
-                        let post = JSONParser.parseJSONToPostManagedObject(true, ifInsertIntoManagedContext: true, json: json)
-                        posts.append(post)
-                    }
+                    completionHandler(JSONParser.parseJSONDictionaryToPostManagedObject(true, ifInsertIntoManagedContext: true, jsonArray: jsonArray))
                 }
+            case .Failure: break;
             }
         }
         
