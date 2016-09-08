@@ -33,6 +33,43 @@ class CoreDataOperation {
         return false
         
     }
+    
+    
+    /* 
+     This Function returns the latest date of edit date of all posts in Core Data
+     */
+    static func getRecentEditDateForPost() -> NSDate?{
+        let fetchRequest = NSFetchRequest()
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        fetchRequest.entity = NSEntityDescription.entityForName(EntityType.Post.rawValue, inManagedObjectContext: managedObjectContext)
+        fetchRequest.resultType = .DictionaryResultType
+        
+        
+        // Setup Expression
+        let keyPathExpression = NSExpression(forKeyPath: "editDate")
+        
+        let latestUpdateDateExpression = NSExpression(forFunction: "max", arguments: [keyPathExpression])
+        
+        let latestUpdateDateExpressionDescription = NSExpressionDescription()
+        latestUpdateDateExpressionDescription.name = "latestUpdateDate"
+        latestUpdateDateExpressionDescription.expression = latestUpdateDateExpression
+        latestUpdateDateExpressionDescription.expressionResultType = .DateAttributeType
+        
+        // Setup Fetch Request
+        
+        fetchRequest.propertiesToFetch = [latestUpdateDateExpressionDescription]
+        do {
+            let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest)
+            
+            if fetchResults[0].valueForKey("latestUpdateDate") != nil {
+                let latestUpdateDate = fetchResults[0].valueForKey("latestUpdateDate") as! NSDate
+                return latestUpdateDate
+            }
+        } catch{}
+        
+        return nil
+        
+    }
 }
 
 
