@@ -17,7 +17,8 @@ import SwiftyJSON
 
 
 class RequestOperation {
-    func requestLatestTwentyPosts(completionHandler:([Post]) -> Void) {
+    func requestLatestTwentyPosts(completionHandler: ([Post]) -> Void) {
+        print(BASE_URL+RESOURSES)
         Alamofire.request(.GET, BASE_URL+RESOURSES, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
             case .Success:
@@ -25,7 +26,7 @@ class RequestOperation {
                     let jsonArray = JSON(value)
                     completionHandler(JSONParser.parseJSONDictionaryToPostManagedObject(true, ifInsertIntoManagedContext: true, jsonArray: jsonArray))
                 }
-            case .Failure: break;
+            case .Failure: break
             }
         }
         

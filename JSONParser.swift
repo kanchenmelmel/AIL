@@ -25,7 +25,7 @@ class JSONParser {
             managedObjectContextToBeInserted = nil
         }
         var posts = [Post]()
-        for index in 0...jsonArray.count {
+        for index in 0...jsonArray.count-1 {
             if checkIfExistInCoreData {
                 if !CoreDataOperation.checkIdExist(jsonArray[index]["id"].int!, entityType: .Post){
                     let post = Post(entity: postDescription!, insertIntoManagedObjectContext: managedObjectContextToBeInserted)

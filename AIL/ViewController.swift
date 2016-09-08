@@ -16,8 +16,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-
-
+        
+        let requestOperation = RequestOperation()
+        
+        requestOperation.requestLatestTwentyPosts { (posts) in
+            print(posts.count)
+        }
         
     }
     
