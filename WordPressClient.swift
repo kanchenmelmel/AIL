@@ -16,7 +16,7 @@ import SwiftyJSON
  */
 
 
-class RequestOperation {
+class WordPressClient {
     func requestLatestTwentyPosts(completionHandler: ([Post]) -> Void) {
         print(BASE_URL+RESOURSES)
         Alamofire.request(.GET, BASE_URL+RESOURSES, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in

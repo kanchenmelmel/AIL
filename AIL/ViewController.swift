@@ -17,9 +17,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let requestOperation = RequestOperation()
+        let wordpressClient = WordPressClient()
         
-        requestOperation.requestLatestTwentyPosts { (posts) in
+        wordpressClient.requestLatestTwentyPosts { (posts) in
             print(posts.count)
         }
         
