@@ -20,7 +20,7 @@ class PostCollectionViewCell: UICollectionViewCell {
         //layer.borderWidth = 1
         layer.borderColor = UIColor.clearColor().CGColor
         layer.shadowOpacity = 0.2
-        layer.shadowRadius = 2
+        layer.shadowRadius = 3
         layer.shadowColor = UIColor.grayColor().CGColor
         layer.shadowOffset = CGSizeZero
         layer.masksToBounds = false
