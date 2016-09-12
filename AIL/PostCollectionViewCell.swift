@@ -14,6 +14,7 @@ class PostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var postLabel: UILabel!
     
     override func awakeFromNib() {
+<<<<<<< HEAD
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = false;
         
@@ -25,8 +26,21 @@ class PostCollectionViewCell: UICollectionViewCell {
         //self.clipsToBounds = true
         
         NSLog("xxx")
+=======
+        layer.cornerRadius = 10
+        clipsToBounds = true
+        //layer.borderWidth = 1
+        layer.borderColor = UIColor.clearColor().CGColor
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 3
+        layer.shadowColor = UIColor.grayColor().CGColor
+        layer.shadowOffset = CGSizeZero
+        layer.masksToBounds = false
+        
+>>>>>>> master
         
         postImage.layer.cornerRadius = 10
         postImage.clipsToBounds = true
+       // postLabel.textColor = UIColor.blueColor()
     }
 }
