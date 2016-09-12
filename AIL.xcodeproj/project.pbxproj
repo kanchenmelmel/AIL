@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */; };
+		4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */; };
 		4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */; };
 		4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */; };
 		4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationItem.swift; path = AIL/CustomUINavigationItem.swift; sourceTree = "<group>"; };
+		4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationController.swift; path = AIL/CustomUINavigationController.swift; sourceTree = "<group>"; };
 		4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCollectionViewCell.swift; path = AIL/PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = AIL/MenuVC.swift; sourceTree = "<group>"; };
 		4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */,
+				4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */,
+				4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -325,10 +331,12 @@
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
 				9671E5E61D7E808F008250C7 /* Post+CoreDataProperties.swift in Sources */,
 				4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */,
+				4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
 				964C52B51D7FC563006E1E9D /* DateFormatter.swift in Sources */,
 				963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */,
 				9671E5DF1D7E52AE008250C7 /* UrlConstants.swift in Sources */,
+				4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
 				9671E5F01D7E8622008250C7 /* Category.swift in Sources */,
