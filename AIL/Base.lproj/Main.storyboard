@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dDL-vg-kTa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dDL-vg-kTa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main-->
@@ -16,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5I-bq-w4z">
-                                <rect key="frame" x="191" y="348" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Tke-ah-hnO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <constraints>
@@ -31,7 +26,7 @@
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cpW-4n-mFY">
                                 <rect key="frame" x="0.0" y="108" width="600" height="194"/>
-                                <color key="backgroundColor" red="0.89324575177751186" green="0.97425828970331585" blue="0.9547090176294365" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.99607843137254903" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="194" id="0Px-GM-Ufp"/>
                                 </constraints>
@@ -82,13 +77,22 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FourButtonsImg" translatesAutoresizingMaskIntoConstraints="NO" id="pIO-3X-iWO">
+                                <rect key="frame" x="20" y="316" width="560" height="163"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="163" id="M8m-st-Wdf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.89324575179999999" green="0.97425828969999995" blue="0.95470901760000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Tke-ah-hnO" secondAttribute="trailing" id="6Cu-Xs-Lpx"/>
+                            <constraint firstItem="pIO-3X-iWO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ah7-Y0-4r3"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="Tke-ah-hnO" secondAttribute="bottom" id="B7P-M3-aMi"/>
                             <constraint firstItem="Tke-ah-hnO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FVZ-Pe-yKT"/>
+                            <constraint firstItem="pIO-3X-iWO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IW9-bo-ASc"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IeZ-1V-uQs"/>
+                            <constraint firstItem="pIO-3X-iWO" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="14" id="L4o-Uk-CTh"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mrb-tv-L4R"/>
                             <constraint firstItem="Tke-ah-hnO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pOw-QL-4ry"/>
                             <constraint firstAttribute="trailing" secondItem="cpW-4n-mFY" secondAttribute="trailing" id="x0e-ZO-A7v"/>
@@ -157,6 +161,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FourButtonsImg" width="702" height="381"/>
         <image name="Group_shot_1" width="600" height="500"/>
         <image name="SideMenu" width="363" height="1329"/>
     </resources>

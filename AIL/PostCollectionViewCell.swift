@@ -15,8 +15,17 @@ class PostCollectionViewCell: UICollectionViewCell {
     
     
     override func awakeFromNib() {
-        self.layer.cornerRadius = 10
-        self.clipsToBounds = true
+        layer.cornerRadius = 10
+        clipsToBounds = true
+        //layer.borderWidth = 1
+        layer.borderColor = UIColor.clearColor().CGColor
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 2
+        layer.shadowColor = UIColor.grayColor().CGColor
+        layer.shadowOffset = CGSizeZero
+        layer.masksToBounds = false
+        
+        
         postImage.layer.cornerRadius = 10
         postImage.clipsToBounds = true
     }
