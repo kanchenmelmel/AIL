@@ -28,5 +28,6 @@ class PostCollectionViewCell: UICollectionViewCell {
         
         postImage.layer.cornerRadius = 10
         postImage.clipsToBounds = true
+       // postLabel.textColor = UIColor.blueColor()
     }
 }
