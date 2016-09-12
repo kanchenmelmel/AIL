@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import SlideMenuControllerSwift
-import Alamofire
 
 
 
@@ -35,15 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      //   slideMenuController.delegate = mainViewController
         self.window?.rootViewController = slideMC
         self.window?.makeKeyAndVisible()
-        
-        // Start Reachability Manager
-        let reachabilityManager = NetworkReachabilityManager(host: "ail.vic.edu.au")
-        
-        reachabilityManager?.listener = { status in
-            print("Network status changed:\(status)")
-        }
-        
-        reachabilityManager?.startListening()
 
         return true
     }

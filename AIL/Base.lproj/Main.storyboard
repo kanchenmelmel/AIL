@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dDL-vg-kTa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dDL-vg-kTa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -26,28 +26,18 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cpW-4n-mFY">
-<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="109" width="600" height="183"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-=======
-                                <rect key="frame" x="0.0" y="108" width="600" height="194"/>
-                                <color key="backgroundColor" red="0.9882352941176471" green="0.99607843137254903" blue="1" alpha="1" colorSpace="calibratedRGB"/>
->>>>>>> master
                                 <constraints>
                                     <constraint firstAttribute="height" constant="183" id="0Px-GM-Ufp"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MXD-4m-F5x">
-<<<<<<< HEAD
                                     <size key="itemSize" width="286" height="156"/>
-=======
-                                    <size key="itemSize" width="449" height="145"/>
->>>>>>> master
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-<<<<<<< HEAD
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
                                         <rect key="frame" x="10" y="14" width="286" height="155.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -63,36 +53,13 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE复议详解！复议吗" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-vr-SJl">
                                                     <rect key="frame" x="16" y="115" width="254" height="21"/>
-=======
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="25" width="449" height="145"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="449" height="145"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PTE复议详解！PTE也能申请复议" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-vr-SJl">
-                                                    <rect key="frame" x="101" y="121" width="247" height="21"/>
->>>>>>> master
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="BEp-fN-5Cl"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-<<<<<<< HEAD
                                                     <color key="textColor" red="0.27450980392156865" green="0.46274509803921571" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-=======
-                                                    <color key="textColor" red="0.19215686269999999" green="0.3803921569" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-hn-0hA">
-                                                    <rect key="frame" x="0.0" y="13" width="449" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="6zJ-2V-sz6"/>
-                                                    </constraints>
-                                                </imageView>
->>>>>>> master
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -105,11 +72,7 @@
                                             <constraint firstItem="ibP-vr-SJl" firstAttribute="top" secondItem="8Pl-hn-0hA" secondAttribute="bottom" constant="8" symbolic="YES" id="Rih-eC-YS1"/>
                                             <constraint firstItem="ibP-vr-SJl" firstAttribute="leading" secondItem="GOM-uh-xnG" secondAttribute="leadingMargin" constant="8" id="SKN-Tz-0mj"/>
                                         </constraints>
-<<<<<<< HEAD
                                         <size key="customSize" width="286" height="155.5"/>
-=======
-                                        <size key="customSize" width="449" height="145"/>
->>>>>>> master
                                         <connections>
                                             <outlet property="postImage" destination="8Pl-hn-0hA" id="AhK-0v-mYh"/>
                                             <outlet property="postLabel" destination="ibP-vr-SJl" id="TpK-97-DPr"/>
@@ -117,7 +80,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-<<<<<<< HEAD
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPK-gI-S2O" userLabel="Main Buttons View">
                                 <rect key="frame" x="10" y="305" width="580" height="192"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -146,67 +108,16 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
-=======
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-Ku-fr0">
-                                <rect key="frame" x="20" y="494" width="560" height="100"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-Up-9Mu">
-                                        <rect key="frame" x="0.0" y="0.0" width="186" height="100"/>
-                                        <state key="normal" image="报考流程"/>
-                                        <connections>
-                                            <segue destination="qR6-uc-2DZ" kind="show" id="rkc-W8-mcf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGC-Mx-Jeg">
-                                        <rect key="frame" x="187" y="0.0" width="186" height="100"/>
-                                        <state key="normal" image="联系我们"/>
-                                        <connections>
-                                            <segue destination="3Rg-iI-EBl" kind="show" id="V8c-AZ-FDJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-vQ-jhN">
-                                        <rect key="frame" x="374" y="0.0" width="186" height="100"/>
-                                        <state key="normal" title="Button" image="培训课程"/>
-                                        <connections>
-                                            <segue destination="F5B-Bw-dcm" kind="show" id="YZR-CY-A8A"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="fx2-RM-Jrg"/>
-                                </constraints>
-                            </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FourButtonsImg" translatesAutoresizingMaskIntoConstraints="NO" id="pIO-3X-iWO">
-                                <rect key="frame" x="20" y="316" width="560" height="163"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="163" id="M8m-st-Wdf"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
->>>>>>> master
                         <constraints>
                             <constraint firstItem="NbK-gi-mvf" firstAttribute="top" secondItem="CPK-gI-S2O" secondAttribute="bottom" constant="14.5" id="3lV-rN-bUZ">
                                 <variation key="heightClass=regular" constant="14"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="Tke-ah-hnO" secondAttribute="trailing" id="6Cu-Xs-Lpx"/>
-<<<<<<< HEAD
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="Tke-ah-hnO" secondAttribute="bottom" constant="7" id="B7P-M3-aMi"/>
                             <constraint firstItem="Tke-ah-hnO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FVZ-Pe-yKT"/>
                             <constraint firstItem="NbK-gi-mvf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TEj-fb-VjQ"/>
                             <constraint firstAttribute="trailing" secondItem="NbK-gi-mvf" secondAttribute="trailing" id="ZaK-OG-DYk"/>
                             <constraint firstAttribute="trailing" secondItem="CPK-gI-S2O" secondAttribute="trailing" constant="10" id="kXe-wu-sgp"/>
-=======
-                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="top" secondItem="pIO-3X-iWO" secondAttribute="bottom" constant="15" id="7L7-2G-P6V"/>
-                            <constraint firstItem="pIO-3X-iWO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ah7-Y0-4r3"/>
-                            <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="Tke-ah-hnO" secondAttribute="bottom" id="B7P-M3-aMi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="T9M-Ku-fr0" secondAttribute="trailing" id="BjC-JM-ULb"/>
-                            <constraint firstItem="Tke-ah-hnO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FVZ-Pe-yKT"/>
-                            <constraint firstItem="pIO-3X-iWO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IW9-bo-ASc"/>
-                            <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IeZ-1V-uQs"/>
-                            <constraint firstItem="pIO-3X-iWO" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="14" id="L4o-Uk-CTh"/>
-                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ddy-4K-pr2"/>
->>>>>>> master
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mrb-tv-L4R"/>
                             <constraint firstItem="Tke-ah-hnO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pOw-QL-4ry"/>
                             <constraint firstItem="CPK-gI-S2O" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="13" id="pZu-Fh-a1D"/>
@@ -247,210 +158,6 @@
             </objects>
             <point key="canvasLocation" x="1057" y="302"/>
         </scene>
-        <!--报考流程-->
-        <scene sceneID="9MO-hd-2r3">
-            <objects>
-                <viewController id="qR6-uc-2DZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tgn-L3-CeI"/>
-                        <viewControllerLayoutGuide type="bottom" id="QQV-Or-G7T"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w2R-G2-Gcm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="轻松报名" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Jx-HFJ">
-                                <rect key="frame" x="0.0" y="72" width="600" height="165"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="165" id="4CG-Rb-OM4"/>
-                                </constraints>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-lZ-6qv">
-                                <rect key="frame" x="0.0" y="236" width="600" height="364"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="364" id="5eV-57-QKC"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="QQV-Or-G7T" firstAttribute="top" secondItem="dLu-lZ-6qv" secondAttribute="bottom" id="5ia-Ve-Z9H"/>
-                            <constraint firstItem="8rj-Jx-HFJ" firstAttribute="leading" secondItem="w2R-G2-Gcm" secondAttribute="leading" id="OV8-B5-uZ5"/>
-                            <constraint firstItem="dLu-lZ-6qv" firstAttribute="top" secondItem="Tgn-L3-CeI" secondAttribute="bottom" constant="172" id="dyf-zq-diV"/>
-                            <constraint firstAttribute="trailing" secondItem="8rj-Jx-HFJ" secondAttribute="trailing" id="f0U-or-2xD"/>
-                            <constraint firstItem="dLu-lZ-6qv" firstAttribute="leading" secondItem="w2R-G2-Gcm" secondAttribute="leading" id="hAA-ET-EOc"/>
-                            <constraint firstAttribute="trailing" secondItem="dLu-lZ-6qv" secondAttribute="trailing" id="oVW-nU-nyE"/>
-                            <constraint firstItem="8rj-Jx-HFJ" firstAttribute="top" secondItem="Tgn-L3-CeI" secondAttribute="bottom" constant="8" id="y3Q-f4-vYu"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="报考流程" id="ogy-dv-wto"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T5b-lm-ezs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="558" y="1085"/>
-        </scene>
-        <!--联系我们-->
-        <scene sceneID="5Mi-Ex-daW">
-            <objects>
-                <viewController id="3Rg-iI-EBl" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AHB-uc-gpW"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mkc-cL-CfR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vrn-ow-CZE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-7O-Sr0">
-                                <rect key="frame" x="0.0" y="264" width="600" height="130"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NTx-ZA-4a9">
-                                        <rect key="frame" x="46" y="12" width="570" height="101"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q6-ZX-AnJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="183" height="24"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="联系电话：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNJ-lS-0tc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="24"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="(03)96708868" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZ6-RW-cl1">
-                                                        <rect key="frame" x="85" y="0.0" width="98" height="24"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                                        <color key="textColor" red="0.30980392156862746" green="0.45098039215686275" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTc-6L-kqq">
-                                                <rect key="frame" x="0.0" y="31" width="570" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="W6P-1m-tP2"/>
-                                                </constraints>
-                                            </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8k-Do-meL">
-                                                <rect key="frame" x="0.0" y="39" width="223" height="24"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="邮箱地址：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hT-ra-fbt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="24"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="pte@ail.vic.edu.au" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7H-VL-Vyu">
-                                                        <rect key="frame" x="85" y="0.0" width="138" height="24"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                                        <color key="textColor" red="0.30980392159999998" green="0.45098039220000002" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kry-Sy-j1q">
-                                                <rect key="frame" x="0.0" y="70" width="570" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="OlL-Yj-PTv"/>
-                                                    <constraint firstAttribute="height" constant="1" id="TsH-X4-n3S"/>
-                                                </constraints>
-                                            </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldi-LF-c5A">
-                                                <rect key="frame" x="0.0" y="78" width="349" height="24"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="地址：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAT-pI-RSs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="24"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Level 2, 388 Bourke St, Melbourne 3000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuV-6v-J5s">
-                                                        <rect key="frame" x="51" y="0.0" width="298" height="24"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                                        <color key="textColor" red="0.30980392159999998" green="0.45098039220000002" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="4pS-KW-uA4"/>
-                                    <constraint firstAttribute="bottom" secondItem="NTx-ZA-4a9" secondAttribute="bottom" constant="17" id="9YT-dW-gTo"/>
-                                    <constraint firstItem="NTx-ZA-4a9" firstAttribute="leading" secondItem="vdg-7O-Sr0" secondAttribute="leading" constant="46" id="AP5-8L-zEi"/>
-                                    <constraint firstItem="NTx-ZA-4a9" firstAttribute="top" secondItem="vdg-7O-Sr0" secondAttribute="top" constant="12" id="Dcu-pb-mMl"/>
-                                    <constraint firstAttribute="trailing" secondItem="NTx-ZA-4a9" secondAttribute="trailing" constant="-16" id="GfU-aL-1gR"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact us" translatesAutoresizingMaskIntoConstraints="NO" id="e87-Sh-0HD">
-                                <rect key="frame" x="0.0" y="72" width="600" height="184"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="aHK-Z0-9PP"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="vdg-7O-Sr0" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" id="ShR-Ou-kH6"/>
-                            <constraint firstItem="e87-Sh-0HD" firstAttribute="top" secondItem="AHB-uc-gpW" secondAttribute="bottom" constant="8" id="WOz-Z1-ewc"/>
-                            <constraint firstItem="vdg-7O-Sr0" firstAttribute="top" secondItem="e87-Sh-0HD" secondAttribute="bottom" constant="8" id="dPP-TG-nvF"/>
-                            <constraint firstItem="e87-Sh-0HD" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" id="sQ7-BR-bGH"/>
-                            <constraint firstAttribute="trailing" secondItem="vdg-7O-Sr0" secondAttribute="trailing" id="wJx-7z-mr9"/>
-                            <constraint firstAttribute="trailing" secondItem="e87-Sh-0HD" secondAttribute="trailing" id="zW3-tD-2bk"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="联系我们" id="QvR-Fs-O2x"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="njh-gO-CyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1196" y="1085"/>
-        </scene>
-        <!--课程培训-->
-        <scene sceneID="1ed-Ux-BWo">
-            <objects>
-                <viewController id="F5B-Bw-dcm" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="D8n-wK-g3B"/>
-                        <viewControllerLayoutGuide type="bottom" id="JIE-Ci-hyn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DgU-37-6mt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-UX-fwF">
-                                <rect key="frame" x="0.0" y="64" width="600" height="61"/>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="9Tu-UN-TX4"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="PTE周末班"/>
-                                    <segment title="PTE平时班"/>
-                                    <segment title="PTE一对一VIP"/>
-                                </segments>
-                            </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="课程培训" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-0B-bJV">
-                                <rect key="frame" x="0.0" y="124" width="600" height="175"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tWD-UX-fwF" firstAttribute="top" secondItem="D8n-wK-g3B" secondAttribute="bottom" id="K2B-Qm-IoB"/>
-                            <constraint firstAttribute="trailing" secondItem="tWD-UX-fwF" secondAttribute="trailing" id="l9s-1s-ZTN"/>
-                            <constraint firstItem="tWD-UX-fwF" firstAttribute="leading" secondItem="DgU-37-6mt" secondAttribute="leading" id="qVR-lv-VoI"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="课程培训" id="4l6-77-I47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AdH-rY-9jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1879" y="1085"/>
-        </scene>
         <!--MenuVC-->
         <scene sceneID="WTA-wA-Lmy">
             <objects>
@@ -478,12 +185,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZ1-8d-r4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728" y="309"/>
+            <point key="canvasLocation" x="1709" y="363"/>
         </scene>
-        <!--CustomUI Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="Bbj-1N-jZY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDL-vg-kTa" customClass="CustomUINavigationController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDL-vg-kTa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7EP-ad-fFn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -496,18 +203,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Duu-AE-gDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="309"/>
+            <point key="canvasLocation" x="245" y="302"/>
         </scene>
     </scenes>
     <resources>
-        <image name="FourButtonsImg" width="702" height="381"/>
         <image name="Group_shot_1" width="600" height="500"/>
         <image name="SideMenu" width="363" height="1329"/>
-        <image name="contact us" width="743" height="314"/>
-        <image name="培训课程" width="239" height="171"/>
-        <image name="报考流程" width="239" height="169"/>
-        <image name="联系我们" width="260" height="175"/>
-        <image name="课程培训" width="740" height="285"/>
-        <image name="轻松报名" width="748" height="274"/>
     </resources>
 </document>
