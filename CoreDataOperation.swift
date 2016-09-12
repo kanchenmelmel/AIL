@@ -70,7 +70,17 @@ class CoreDataOperation {
         return nil
         
     }
+    
+    static func saveManagedObjectContext() {
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        do{
+            try managedObjectContext.save()
+        } catch {
+            print("Errors when save Core Data managedObjectContext!!")
+        }
+    }
 }
+
 
 
 enum EntityType:String {
