@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
         let leftViewController = myStoryboard.instantiateViewControllerWithIdentifier("left") as! MenuVC
-        
        
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         leftViewController.mainViewController = nvc
