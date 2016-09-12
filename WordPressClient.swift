@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import CoreData
 
 
 /* RequestOperation Class
@@ -25,6 +26,9 @@ class WordPressClient {
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
                     completionHandler(JSONParser.parseJSONDictionaryToPostManagedObject(true, ifInsertIntoManagedContext: true, jsonArray: jsonArray))
+                    
+                    // Save Managed Object Context
+                    CoreDataOperation.saveManagedObjectContext()
                 }
             case .Failure: break
             }
