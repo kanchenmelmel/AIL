@@ -40,7 +40,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCell", forIndexPath: indexPath) as? PostCollectionViewCell{
             cell.backgroundColor = UIColor.whiteColor()
-            cell.postLabel.textColor = UIColor.lightGrayColor()
+            //cell.postLabel.textColor = UIColor.lightGrayColor()
             return cell
         }
             
