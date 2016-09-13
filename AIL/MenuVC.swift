@@ -24,6 +24,9 @@ class MenuVC: UIViewController {
     }
     
 
+    @IBAction func userMessagePressed(sender: AnyObject) {
+        
+    }
     /*
     // MARK: - Navigation
 
