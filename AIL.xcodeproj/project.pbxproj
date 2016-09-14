@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */; };
 		4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */; };
 		4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */; };
 		4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainButtonsContainer.swift; sourceTree = "<group>"; };
 		4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationItem.swift; path = AIL/CustomUINavigationItem.swift; sourceTree = "<group>"; };
 		4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationController.swift; path = AIL/CustomUINavigationController.swift; sourceTree = "<group>"; };
 		4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMessageVC.swift; path = AIL/UserMessageVC.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */,
 				4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */,
 				962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */,
+				3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */,
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
 				9671E5EF1D7E8622008250C7 /* Category+CoreDataProperties.swift in Sources */,
 				9671E5E71D7E808F008250C7 /* Post.swift in Sources */,

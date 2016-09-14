@@ -96,28 +96,64 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-Ku-fr0">
+                                <rect key="frame" x="0.0" y="510" width="600" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-Up-9Mu">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="86"/>
+                                        <state key="normal" image="报考流程"/>
+                                        <connections>
+                                            <segue destination="qR6-uc-2DZ" kind="show" id="rkc-W8-mcf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGC-Mx-Jeg">
+                                        <rect key="frame" x="201" y="0.0" width="199" height="86"/>
+                                        <state key="normal" image="联系我们"/>
+                                        <connections>
+                                            <segue destination="3Rg-iI-EBl" kind="show" id="V8c-AZ-FDJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-vQ-jhN">
+                                        <rect key="frame" x="401" y="0.0" width="200" height="86"/>
+                                        <state key="normal" title="Button" image="培训课程"/>
+                                        <connections>
+                                            <segue destination="F5B-Bw-dcm" kind="show" id="YZR-CY-A8A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="fx2-RM-Jrg"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3c-nN-5PQ" customClass="MainButtonsContainer" customModule="AIL" customModuleProvider="target">
+                                <rect key="frame" x="10" y="304" width="580" height="192"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="ygh-3B-BCS"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cpW-4n-mFY">
-                                <rect key="frame" x="0.0" y="108" width="600" height="194"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="183"/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.99607843137254903" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="194" id="0Px-GM-Ufp"/>
+                                    <constraint firstAttribute="height" constant="183" id="0Px-GM-Ufp"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MXD-4m-F5x">
-                                    <size key="itemSize" width="449" height="145"/>
+                                    <size key="itemSize" width="286" height="156"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="449" height="145"/>
+                                        <rect key="frame" x="0.0" y="14" width="286" height="155.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="449" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="155.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PTE复议详解！PTE也能申请复议" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-vr-SJl">
-                                                    <rect key="frame" x="101" y="121" width="247" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE复议详解！PTE也能申请复议" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-vr-SJl">
+                                                    <rect key="frame" x="16" y="115" width="254" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="BEp-fN-5Cl"/>
                                                     </constraints>
@@ -126,9 +162,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-hn-0hA">
-                                                    <rect key="frame" x="0.0" y="13" width="449" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="286" height="107"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="6zJ-2V-sz6"/>
+                                                        <constraint firstAttribute="height" constant="107" id="6zJ-2V-sz6"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -136,12 +172,19 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="8Pl-hn-0hA" firstAttribute="leading" secondItem="GOM-uh-xnG" secondAttribute="leading" id="0vo-Z5-XD9"/>
+                                            <constraint firstItem="ibP-vr-SJl" firstAttribute="leading" secondItem="GOM-uh-xnG" secondAttribute="leadingMargin" constant="8" id="8li-g6-Dh5"/>
                                             <constraint firstAttribute="trailing" secondItem="8Pl-hn-0hA" secondAttribute="trailing" id="I3u-aV-ACS"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ibP-vr-SJl" secondAttribute="trailing" constant="8" id="X8C-In-bcW"/>
                                             <constraint firstItem="ibP-vr-SJl" firstAttribute="centerX" secondItem="GOM-uh-xnG" secondAttribute="centerX" id="aVk-hl-1yu"/>
                                             <constraint firstItem="ibP-vr-SJl" firstAttribute="top" secondItem="8Pl-hn-0hA" secondAttribute="bottom" constant="8" id="o9k-Ve-3Y9"/>
-                                            <constraint firstItem="8Pl-hn-0hA" firstAttribute="top" secondItem="GOM-uh-xnG" secondAttribute="top" constant="13" id="zwc-iR-ZNP"/>
+                                            <constraint firstItem="8Pl-hn-0hA" firstAttribute="top" secondItem="GOM-uh-xnG" secondAttribute="top" id="zwc-iR-ZNP"/>
                                         </constraints>
-                                        <size key="customSize" width="449" height="145"/>
+                                        <size key="customSize" width="286" height="155.5"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="aVk-hl-1yu"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="postImage" destination="8Pl-hn-0hA" id="AhK-0v-mYh"/>
                                             <outlet property="postLabel" destination="ibP-vr-SJl" id="TpK-97-DPr"/>
@@ -149,54 +192,19 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-Ku-fr0">
-                                <rect key="frame" x="20" y="494" width="560" height="100"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-Up-9Mu">
-                                        <rect key="frame" x="0.0" y="0.0" width="186" height="100"/>
-                                        <state key="normal" image="报考流程"/>
-                                        <connections>
-                                            <segue destination="qR6-uc-2DZ" kind="show" id="rkc-W8-mcf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGC-Mx-Jeg">
-                                        <rect key="frame" x="187" y="0.0" width="186" height="100"/>
-                                        <state key="normal" image="联系我们"/>
-                                        <connections>
-                                            <segue destination="3Rg-iI-EBl" kind="show" id="V8c-AZ-FDJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-vQ-jhN">
-                                        <rect key="frame" x="374" y="0.0" width="186" height="100"/>
-                                        <state key="normal" title="Button" image="培训课程"/>
-                                        <connections>
-                                            <segue destination="F5B-Bw-dcm" kind="show" id="YZR-CY-A8A"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="fx2-RM-Jrg"/>
-                                </constraints>
-                            </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FourButtonsImg" translatesAutoresizingMaskIntoConstraints="NO" id="pIO-3X-iWO">
-                                <rect key="frame" x="20" y="316" width="560" height="163"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="163" id="M8m-st-Wdf"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="L3c-nN-5PQ" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="12.5" id="2DA-xg-qVe"/>
                             <constraint firstAttribute="trailing" secondItem="Tke-ah-hnO" secondAttribute="trailing" id="6Cu-Xs-Lpx"/>
-                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="top" secondItem="pIO-3X-iWO" secondAttribute="bottom" constant="15" id="7L7-2G-P6V"/>
-                            <constraint firstItem="pIO-3X-iWO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ah7-Y0-4r3"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="Tke-ah-hnO" secondAttribute="bottom" id="B7P-M3-aMi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="T9M-Ku-fr0" secondAttribute="trailing" id="BjC-JM-ULb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T9M-Ku-fr0" secondAttribute="trailing" constant="-20" id="BjC-JM-ULb"/>
                             <constraint firstItem="Tke-ah-hnO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FVZ-Pe-yKT"/>
-                            <constraint firstItem="pIO-3X-iWO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IW9-bo-ASc"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IeZ-1V-uQs"/>
-                            <constraint firstItem="pIO-3X-iWO" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="14" id="L4o-Uk-CTh"/>
-                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ddy-4K-pr2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L3c-nN-5PQ" secondAttribute="trailing" constant="-10" id="M0H-HD-Ywi"/>
+                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="top" secondItem="L3c-nN-5PQ" secondAttribute="bottom" constant="14.5" id="Zdw-KF-hCn"/>
+                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ddy-4K-pr2"/>
+                            <constraint firstItem="L3c-nN-5PQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="gAe-eb-GeH"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mrb-tv-L4R"/>
                             <constraint firstItem="Tke-ah-hnO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pOw-QL-4ry"/>
                             <constraint firstAttribute="trailing" secondItem="cpW-4n-mFY" secondAttribute="trailing" id="x0e-ZO-A7v"/>
@@ -583,7 +591,6 @@
     </scenes>
     <resources>
         <image name="Background" width="183" height="667"/>
-        <image name="FourButtonsImg" width="702" height="381"/>
         <image name="Group_shot_1" width="600" height="500"/>
         <image name="TopIcon" width="88" height="90"/>
         <image name="contact us" width="743" height="314"/>

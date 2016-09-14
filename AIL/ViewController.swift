@@ -57,10 +57,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        //return CGSize(width: collectionView.frame.size.width/3.2, height: 100)
-        return CGSize(width: 300, height: 180)
-    }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
