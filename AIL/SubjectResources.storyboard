@@ -22,27 +22,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="110.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jCg-SQ-hJm">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="jCg-SQ-hJm" customClass="RoundedImageView" customModule="AIL">
                                             <rect key="frame" x="477" y="12" width="115" height="88"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="115" id="Te6-v0-VRe"/>
                                                 <constraint firstAttribute="height" constant="88" id="Wl4-86-dUc"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xup-CS-cna">
-                                            <rect key="frame" x="8" y="12" width="430" height="40"/>
+                                            <rect key="frame" x="8" y="12" width="430" height="41"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Model BlackHole Re-Creates Stephen Hawking Prediction">
                                                     <attributes>
                                                         <color key="NSColor" red="0.27058823529411763" green="0.46666666666666667" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                        <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这段语音主要说了通过模拟黑洞的吞噬方式，霍金这段语音主要说了通过模拟黑洞的吞噬方式，霍金" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ia-sf-nGf">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="这段语音主要说了通过模拟黑洞的吞噬方式，霍金这段语音主要说了通过模拟黑洞的吞噬方式，霍金" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ia-sf-nGf">
                                             <rect key="frame" x="8" y="56" width="407" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,7 +80,40 @@
                     </tableView>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1074" y="-485"/>
+            <point key="canvasLocation" x="934" y="-520"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="D3Q-4u-d9A">
+            <objects>
+                <viewController id="RgZ-f6-D7J" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rnN-vZ-Vw9"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Es-1E-gUp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ayv-mA-HfG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-At-nlm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zp2-At-nlm" firstAttribute="top" secondItem="ayv-mA-HfG" secondAttribute="top" id="0nj-H9-kQj"/>
+                            <constraint firstItem="0Es-1E-gUp" firstAttribute="top" secondItem="Zp2-At-nlm" secondAttribute="bottom" id="FTH-tb-AM9"/>
+                            <constraint firstItem="Zp2-At-nlm" firstAttribute="leading" secondItem="ayv-mA-HfG" secondAttribute="leading" id="gKy-PA-90Y"/>
+                            <constraint firstAttribute="trailing" secondItem="Zp2-At-nlm" secondAttribute="trailing" id="mXO-bG-XNl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PgT-Gn-Ztv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="-513"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Group_shot_1" width="600" height="500"/>
+    </resources>
 </document>

@@ -34,6 +34,7 @@
 		9671E5F01D7E8622008250C7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EE1D7E8622008250C7 /* Category.swift */; };
 		9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6731D88DEDF00360D98 /* Messages.storyboard */; };
 		9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */; };
+		9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */; };
 		C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2662452685324A770F0164 /* Pods_AIL.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		9671E5EE1D7E8622008250C7 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9683A6731D88DEDF00360D98 /* Messages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
 		9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubjectResources.storyboard; sourceTree = "<group>"; };
+		9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDesignableExtension.swift; sourceTree = "<group>"; };
 		A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2662452685324A770F0164 /* Pods_AIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,11 +89,11 @@
 		4DAEAFA71D7A486700842C4F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9683A6771D88E05C00360D98 /* SubjectResources */,
 				9671E5DB1D7E4B7D008250C7 /* SlideMenuController */,
 				963061C61D77E1280079B7C5 /* ViewController.swift */,
 				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
 				4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */,
-				962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -99,6 +101,8 @@
 		4DAEAFA81D7A486F00842C4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9683A6791D88E0B800360D98 /* DesignableExtension */,
+				9683A6781D88E08D00360D98 /* SubjectResources */,
 				4D9C9A751D88B3DC00EA98D0 /* UserMessageCell.swift */,
 				4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */,
 				4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */,
@@ -196,6 +200,29 @@
 				9671E5E31D7E808F008250C7 /* Post.swift */,
 			);
 			name = ManagedObject;
+			sourceTree = "<group>";
+		};
+		9683A6771D88E05C00360D98 /* SubjectResources */ = {
+			isa = PBXGroup;
+			children = (
+				962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */,
+			);
+			name = SubjectResources;
+			sourceTree = "<group>";
+		};
+		9683A6781D88E08D00360D98 /* SubjectResources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SubjectResources;
+			sourceTree = "<group>";
+		};
+		9683A6791D88E0B800360D98 /* DesignableExtension */ = {
+			isa = PBXGroup;
+			children = (
+				9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */,
+			);
+			name = DesignableExtension;
 			sourceTree = "<group>";
 		};
 		968DD6D31D793AC7003B5DA4 /* Uitility */ = {
@@ -358,6 +385,7 @@
 				963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */,
 				4D9C9A761D88B3DC00EA98D0 /* UserMessageCell.swift in Sources */,
 				9671E5DF1D7E52AE008250C7 /* UrlConstants.swift in Sources */,
+				9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */,
 				4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */,
 				4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
