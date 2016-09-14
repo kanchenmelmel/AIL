@@ -9,8 +9,6 @@
 import UIKit
 
 
-
-//@IBDesignable
 class MainButtonsContainer: UIView {
 
     var centreButton: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
