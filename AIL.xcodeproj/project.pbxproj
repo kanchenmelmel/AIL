@@ -32,6 +32,7 @@
 		9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */; };
 		9671E5EF1D7E8622008250C7 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5ED1D7E8622008250C7 /* Category+CoreDataProperties.swift */; };
 		9671E5F01D7E8622008250C7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EE1D7E8622008250C7 /* Category.swift */; };
+		9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6731D88DEDF00360D98 /* Messages.storyboard */; };
 		C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2662452685324A770F0164 /* Pods_AIL.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperation.swift; sourceTree = "<group>"; };
 		9671E5ED1D7E8622008250C7 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9671E5EE1D7E8622008250C7 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		9683A6731D88DEDF00360D98 /* Messages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
 		A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2662452685324A770F0164 /* Pods_AIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 				963061D01D77E1280079B7C5 /* LaunchScreen.storyboard */,
 				963061D31D77E1280079B7C5 /* Info.plist */,
 				963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */,
+				9683A6731D88DEDF00360D98 /* Messages.storyboard */,
 			);
 			path = AIL;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				963061D21D77E1280079B7C5 /* LaunchScreen.storyboard in Resources */,
 				963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */,
+				9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */,
 				963061CA1D77E1280079B7C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

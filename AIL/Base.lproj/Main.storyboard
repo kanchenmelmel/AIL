@@ -8,6 +8,7 @@
         <!--Subject Resources Table View Controller-->
         <scene sceneID="xlC-YW-cgp">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drQ-yi-JKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="sIf-d4-2Gj" customClass="SubjectResourcesTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" id="mPK-W0-JMv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -73,7 +74,6 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="drQ-yi-JKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1074" y="-485"/>
         </scene>
