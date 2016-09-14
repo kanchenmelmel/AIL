@@ -89,32 +89,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Tke-ah-hnO">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Adr-34-DsV"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-Ku-fr0">
                                 <rect key="frame" x="0.0" y="510" width="600" height="86"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-Up-9Mu">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="86"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="199.5" height="86"/>
                                         <state key="normal" image="报考流程"/>
                                         <connections>
                                             <segue destination="qR6-uc-2DZ" kind="show" id="rkc-W8-mcf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGC-Mx-Jeg">
-                                        <rect key="frame" x="201" y="0.0" width="199" height="86"/>
+                                        <rect key="frame" x="200.5" y="0.0" width="199" height="86"/>
                                         <state key="normal" image="联系我们"/>
                                         <connections>
                                             <segue destination="3Rg-iI-EBl" kind="show" id="V8c-AZ-FDJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-vQ-jhN">
-                                        <rect key="frame" x="401" y="0.0" width="200" height="86"/>
+                                        <rect key="frame" x="400.5" y="0.0" width="199.5" height="86"/>
                                         <state key="normal" title="Button" image="培训课程"/>
                                         <connections>
                                             <segue destination="F5B-Bw-dcm" kind="show" id="YZR-CY-A8A"/>
@@ -125,12 +118,157 @@
                                     <constraint firstAttribute="height" constant="86" id="fx2-RM-Jrg"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3c-nN-5PQ" customClass="MainButtonsContainer" customModule="AIL" customModuleProvider="target">
-                                <rect key="frame" x="10" y="304" width="580" height="192"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Tke-ah-hnO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="192" id="ygh-3B-BCS"/>
+                                    <constraint firstAttribute="height" constant="44" id="Adr-34-DsV"/>
                                 </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8te-Cn-js9">
+                                <rect key="frame" x="10" y="303" width="580" height="192"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-Nf-TRU">
+                                        <rect key="frame" x="0.0" y="0.0" width="580" height="192"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="boP-4K-O0N">
+                                                <rect key="frame" x="0.0" y="0.0" width="580" height="91"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkw-nM-vDm" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="285" height="91"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="机经题库"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="baokao"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="left"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="jijing"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-Ri-jZ6" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                                        <rect key="frame" x="295" y="0.0" width="285" height="91"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="beikao"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="备考攻略"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="right"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ap8-Oz-2aj">
+                                                <rect key="frame" x="0.0" y="101" width="580" height="91"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxy-Vm-3bS" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="285" height="91"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="zice"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="题型自测"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="left"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caE-IZ-KjS" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                                        <rect key="frame" x="295" y="0.0" width="285" height="91"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="right"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="全真模考"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="mokao"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="192" id="DpW-Vv-7YB"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="192" id="bwc-7A-PhT"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="bwc-7A-PhT"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL0-Il-4JH" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                        <rect key="frame" x="219" y="26" width="141" height="141"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="141" id="HXF-Jk-Nqi"/>
+                                            <constraint firstAttribute="height" constant="141" id="QhK-ne-ipm"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="center"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="PTE素材资料"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pte"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="70"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                <real key="value" value="70"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kmj-Nf-TRU" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="top" id="0qa-dn-XrL"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="kmj-Nf-TRU" secondAttribute="trailing" constant="-10" id="26m-aa-rgh"/>
+                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="centerY" secondItem="8te-Cn-js9" secondAttribute="centerY" id="9Re-um-P5s"/>
+                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="top" constant="25.5" id="FeL-NR-4c9"/>
+                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="centerX" secondItem="8te-Cn-js9" secondAttribute="centerX" id="Kxo-7R-v86"/>
+                                    <constraint firstAttribute="trailing" secondItem="kmj-Nf-TRU" secondAttribute="trailing" id="NDc-bm-2kb"/>
+                                    <constraint firstItem="kmj-Nf-TRU" firstAttribute="leading" secondItem="8te-Cn-js9" secondAttribute="leading" id="RzC-Bq-4Qg"/>
+                                    <constraint firstAttribute="bottom" secondItem="kmj-Nf-TRU" secondAttribute="bottom" id="WeP-eY-Yhi"/>
+                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="leading" secondItem="8te-Cn-js9" secondAttribute="leading" constant="25.5" id="Zsn-VO-bdG"/>
+                                    <constraint firstAttribute="height" constant="192" id="n7d-MP-a2d"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="26m-aa-rgh"/>
+                                        <exclude reference="Zsn-VO-bdG"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cpW-4n-mFY">
                                 <rect key="frame" x="0.0" y="108" width="600" height="183"/>
@@ -138,18 +276,19 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="183" id="0Px-GM-Ufp"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MXD-4m-F5x">
-                                    <size key="itemSize" width="286" height="156"/>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AgB-nd-xht">
+                                    <size key="itemSize" width="286" height="155.5"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="14" width="286" height="155.5"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="74" width="286" height="99"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="155.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE复议详解！PTE也能申请复议" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-vr-SJl">
@@ -179,7 +318,7 @@
                                             <constraint firstItem="ibP-vr-SJl" firstAttribute="top" secondItem="8Pl-hn-0hA" secondAttribute="bottom" constant="8" id="o9k-Ve-3Y9"/>
                                             <constraint firstItem="8Pl-hn-0hA" firstAttribute="top" secondItem="GOM-uh-xnG" secondAttribute="top" id="zwc-iR-ZNP"/>
                                         </constraints>
-                                        <size key="customSize" width="286" height="155.5"/>
+                                        <size key="customSize" width="286" height="99"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="aVk-hl-1yu"/>
@@ -195,19 +334,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="L3c-nN-5PQ" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="12.5" id="2DA-xg-qVe"/>
+                            <constraint firstItem="8te-Cn-js9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="42N-WR-C9Y"/>
                             <constraint firstAttribute="trailing" secondItem="Tke-ah-hnO" secondAttribute="trailing" id="6Cu-Xs-Lpx"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="Tke-ah-hnO" secondAttribute="bottom" id="B7P-M3-aMi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T9M-Ku-fr0" secondAttribute="trailing" constant="-20" id="BjC-JM-ULb"/>
                             <constraint firstItem="Tke-ah-hnO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FVZ-Pe-yKT"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IeZ-1V-uQs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L3c-nN-5PQ" secondAttribute="trailing" constant="-10" id="M0H-HD-Ywi"/>
-                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="top" secondItem="L3c-nN-5PQ" secondAttribute="bottom" constant="14.5" id="Zdw-KF-hCn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8te-Cn-js9" secondAttribute="trailing" constant="-10" id="TrA-Lq-TQC"/>
+                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="bottom" constant="14.5" id="atN-Sz-wyK"/>
                             <constraint firstItem="T9M-Ku-fr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ddy-4K-pr2"/>
-                            <constraint firstItem="L3c-nN-5PQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="gAe-eb-GeH"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mrb-tv-L4R"/>
                             <constraint firstItem="Tke-ah-hnO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pOw-QL-4ry"/>
                             <constraint firstAttribute="trailing" secondItem="cpW-4n-mFY" secondAttribute="trailing" id="x0e-ZO-A7v"/>
+                            <constraint firstItem="8te-Cn-js9" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="12.5" id="y3n-RI-zxg"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -593,7 +732,13 @@
         <image name="Background" width="183" height="667"/>
         <image name="Group_shot_1" width="600" height="500"/>
         <image name="TopIcon" width="88" height="90"/>
+        <image name="baokao" width="40" height="41"/>
+        <image name="beikao" width="36" height="37"/>
         <image name="contact us" width="743" height="314"/>
+        <image name="jijing" width="44" height="35"/>
+        <image name="mokao" width="35" height="36"/>
+        <image name="pte" width="52" height="49"/>
+        <image name="zice" width="33" height="37"/>
         <image name="培训课程" width="239" height="171"/>
         <image name="报考流程" width="239" height="169"/>
         <image name="消息" width="71" height="54"/>

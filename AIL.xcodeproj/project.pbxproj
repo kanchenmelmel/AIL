@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */; };
+		3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */; };
 		4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */; };
 		4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */; };
 		4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainButtonsContainer.swift; path = AIL/MainButtonsContainer.swift; sourceTree = "<group>"; };
+		3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMainButton.swift; path = AIL/HomeMainButton.swift; sourceTree = "<group>"; };
 		4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationItem.swift; path = AIL/CustomUINavigationItem.swift; sourceTree = "<group>"; };
 		4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationController.swift; path = AIL/CustomUINavigationController.swift; sourceTree = "<group>"; };
 		4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMessageVC.swift; path = AIL/UserMessageVC.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */,
 				962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */,
 				3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */,
+				3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */,
 				963061C71D77E1280079B7C5 /* ViewController.swift in Sources */,
 				9671E5E11D7E6EAC008250C7 /* JSONParser.swift in Sources */,
+				3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */,
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
 				9671E5E61D7E808F008250C7 /* Post+CoreDataProperties.swift in Sources */,
 				962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */,
