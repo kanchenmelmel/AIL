@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Subject Resources Table View Controller-->
+        <scene sceneID="Nu4-CL-yEq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2f-kY-HbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="lQU-Cj-5sJ" customClass="SubjectResourcesTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" id="xj3-dU-SXZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="111" id="GrL-6F-tlE" customClass="SubjectResourcesTableViewCell" customModule="AIL" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="111"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GrL-6F-tlE" id="aK7-Au-NzN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="110.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jCg-SQ-hJm">
+                                            <rect key="frame" x="477" y="12" width="115" height="88"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="115" id="Te6-v0-VRe"/>
+                                                <constraint firstAttribute="height" constant="88" id="Wl4-86-dUc"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xup-CS-cna">
+                                            <rect key="frame" x="8" y="12" width="430" height="40"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Model BlackHole Re-Creates Stephen Hawking Prediction">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.27058823529411763" green="0.46666666666666667" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这段语音主要说了通过模拟黑洞的吞噬方式，霍金这段语音主要说了通过模拟黑洞的吞噬方式，霍金" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ia-sf-nGf">
+                                            <rect key="frame" x="8" y="56" width="407" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cZ-do-arz">
+                                            <rect key="frame" x="8" y="93" width="42" height="10"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jCg-SQ-hJm" firstAttribute="leading" secondItem="7Ia-sf-nGf" secondAttribute="trailing" constant="62" id="2my-Yx-zRd"/>
+                                        <constraint firstItem="xup-CS-cna" firstAttribute="leading" secondItem="aK7-Au-NzN" secondAttribute="leading" constant="8" id="M20-yn-7HS"/>
+                                        <constraint firstItem="jCg-SQ-hJm" firstAttribute="centerY" secondItem="aK7-Au-NzN" secondAttribute="centerY" id="Zl8-0l-fDC"/>
+                                        <constraint firstItem="7Ia-sf-nGf" firstAttribute="leading" secondItem="aK7-Au-NzN" secondAttribute="leadingMargin" id="aBV-4S-meo"/>
+                                        <constraint firstItem="xup-CS-cna" firstAttribute="top" secondItem="aK7-Au-NzN" secondAttribute="top" constant="12" id="eOo-7i-bqn"/>
+                                        <constraint firstItem="jCg-SQ-hJm" firstAttribute="leading" secondItem="xup-CS-cna" secondAttribute="trailing" constant="39" id="m2h-Fe-ZaR"/>
+                                        <constraint firstItem="jCg-SQ-hJm" firstAttribute="trailing" secondItem="aK7-Au-NzN" secondAttribute="trailingMargin" id="zSo-rz-cYk"/>
+                                        <constraint firstItem="7Ia-sf-nGf" firstAttribute="top" secondItem="xup-CS-cna" secondAttribute="bottom" constant="4" id="zzR-kL-Z8q"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lQU-Cj-5sJ" id="Tfv-sM-FPi"/>
+                            <outlet property="delegate" destination="lQU-Cj-5sJ" id="mIn-MY-dZv"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1074" y="-485"/>
+        </scene>
+    </scenes>
+</document>
