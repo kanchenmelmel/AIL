@@ -14,6 +14,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Setup Search bar in Nav Bar
+        self.searchDisplayController?.displaysSearchBarInNavigationBar = true
+        let searchBar = UISearchBar()
+        self.navigationItem.titleView = searchBar
+        //let searchBarItem = UIBarButtonItem.init(customView: searchBar)
+        //self.navigationItem.rightBarButtonItem = searchBarItem
+        
+        // Customize CollectionView
         collectionView.delegate = self
         collectionView.dataSource = self
         
