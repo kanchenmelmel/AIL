@@ -8,8 +8,6 @@ target 'AIL' do
   # Pods for AIL
 pod 'SlideMenuControllerSwift'
 pod 'SwiftyJSON'
-pod 'Alamofire', '~> 3.4'
-pod 'AlamofireImage', '~> 2.0'
-pod 'AlamofireNetworkActivityIndicator', '~> 1.0'
+pod 'Alamofire', '~> 3.5’
 
 end

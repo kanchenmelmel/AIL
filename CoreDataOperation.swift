@@ -22,11 +22,15 @@ class CoreDataOperation {
         let predicate = NSPredicate(format: "id = %@", "\(id)")
         request.predicate = predicate
         
-        let count = managedObjectContext.countForFetchRequest(request, error: nil)
         
+        var count = 0
+        do {
+            count = try managedObjectContext.countForFetchRequest(request)
+        } catch {
+            print("There is error when fetch data count from core data")
+        }
         
         if count != 0 {
-            print(true)
             return true
         }
         print(false)

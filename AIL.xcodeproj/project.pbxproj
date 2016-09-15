@@ -258,12 +258,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963061D61D77E1280079B7C5 /* Build configuration list for PBXNativeTarget "AIL" */;
 			buildPhases = (
+				6615F2FF09926148D377B99E /* 📦 Check Pods Manifest.lock */,
 				71184C9210B700D4E5A74D7C /* [CP] Check Pods Manifest.lock */,
 				963061BD1D77E1270079B7C5 /* Sources */,
 				963061BE1D77E1270079B7C5 /* Frameworks */,
 				963061BF1D77E1270079B7C5 /* Resources */,
 				372BAD23656B6A3FD07CC2FE /* [CP] Embed Pods Frameworks */,
 				C54BA3BAEA90F0656782D836 /* [CP] Copy Pods Resources */,
+				665269B806FA97C96BA6105E /* 📦 Embed Pods Frameworks */,
+				B9B95BDF09578CD752AAD50D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +289,7 @@
 				TargetAttributes = {
 					963061C01D77E1270079B7C5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -338,6 +342,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6615F2FF09926148D377B99E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		665269B806FA97C96BA6105E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		71184C9210B700D4E5A74D7C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +385,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9B95BDF09578CD752AAD50D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C54BA3BAEA90F0656782D836 /* [CP] Copy Pods Resources */ = {
@@ -520,6 +569,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.melmel.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -534,6 +584,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.melmel.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
