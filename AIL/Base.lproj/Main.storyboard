@@ -352,14 +352,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="轻松报名" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Jx-HFJ">
-                                <frame key="frameInset" minY="72" width="600" height="165"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="轻松报名" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Jx-HFJ">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="165" id="4CG-Rb-OM4"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-lZ-6qv">
-                                <frame key="frameInset" minY="236" width="600" height="364"/>
+                                <frame key="frameInset" minY="236" width="414" height="364"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="364" id="5eV-57-QKC"/>
                                 </constraints>
@@ -380,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5b-lm-ezs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="1225"/>
+            <point key="canvasLocation" x="397.10144927536237" y="1224.4565217391305"/>
         </scene>
         <!--联系我们-->
         <scene sceneID="5Mi-Ex-daW">
@@ -397,7 +396,8 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-7O-Sr0">
                                 <frame key="frameInset" minY="264" width="600" height="130"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NTx-ZA-4a9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NTx-ZA-4a9">
+                                        <frame key="frameInset" minX="46" minY="14" width="384" height="101"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Q6-ZX-AnJ">
                                                 <subviews>
@@ -468,8 +468,7 @@
                                     <constraint firstAttribute="trailing" secondItem="NTx-ZA-4a9" secondAttribute="trailing" constant="-16" id="GfU-aL-1gR"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="contact us" translatesAutoresizingMaskIntoConstraints="NO" id="e87-Sh-0HD">
-                                <frame key="frameInset" minY="72" width="600" height="184"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact us" translatesAutoresizingMaskIntoConstraints="NO" id="e87-Sh-0HD">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="184" id="aHK-Z0-9PP"/>
                                 </constraints>
@@ -489,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njh-gO-CyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="1225"/>
+            <point key="canvasLocation" x="1545" y="1224"/>
         </scene>
         <!--课程培训-->
         <scene sceneID="1ed-Ux-BWo">
@@ -531,7 +530,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdH-rY-9jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="1225"/>
+            <point key="canvasLocation" x="2709" y="1224"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="WTA-wA-Lmy">
@@ -555,7 +554,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-UM-vGr">
                                         <state key="normal" title="通知消息"/>
                                         <connections>
-                                            <segue destination="QcK-2n-3Ss" kind="show" id="acv-ev-NQg"/>
+                                            <segue destination="THu-B7-IcD" kind="show" id="GeP-Mz-35L"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-3b-Ygs">
@@ -585,69 +584,6 @@
             </objects>
             <point key="canvasLocation" x="1727.536231884058" y="308.96739130434787"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="Im4-RY-5tT">
-            <objects>
-                <tableViewController id="o3v-IZ-9pr" customClass="UserMessageVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="cPh-SE-sp5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userMessageCell" rowHeight="85" id="kSE-jw-aWM" customClass="UserMessageCell" customModule="AIL" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="414" height="85"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kSE-jw-aWM" id="OFP-QQ-0oe">
-                                    <frame key="frameInset" width="414" height="84.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="消息" translatesAutoresizingMaskIntoConstraints="NO" id="5sM-vR-kBX">
-                                            <frame key="frameInset" minX="22" minY="18" width="53" height="47"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="公告通知-开班通知" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqV-Iw-SMw">
-                                            <frame key="frameInset" minX="88" minY="18" width="259" height="23"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                            <color key="textColor" red="0.17647058823529413" green="0.36862745098039218" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="为了针对年底最后的几场考试..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGT-Lx-WdL">
-                                            <frame key="frameInset" minX="88" minY="56" width="259" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.70588235294117652" green="0.70980392156862748" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12.08.2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxY-if-Ucc">
-                                            <frame key="frameInset" minX="374" minY="20" width="84" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" red="0.62675883507853403" green="0.62675883507853403" blue="0.62675883507853403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="o3v-IZ-9pr" id="MIr-11-Jwk"/>
-                            <outlet property="delegate" destination="o3v-IZ-9pr" id="Q5M-Qh-TAZ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="MwP-Wv-DAp">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="MzB-wJ-9VL">
-                            <connections>
-                                <action selector="backButtonPressed:" destination="o3v-IZ-9pr" id="sXN-8n-Aq8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jAS-0D-T0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationItem title="Title" id="ds1-Du-t5U"/>
-            </objects>
-            <point key="canvasLocation" x="3262" y="302"/>
-        </scene>
         <!--CustomUI Navigation Controller-->
         <scene sceneID="Bbj-1N-jZY">
             <objects>
@@ -666,23 +602,13 @@
             </objects>
             <point key="canvasLocation" x="248" y="309"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wOI-CH-ynC">
+        <!--MessagesNavigationController-->
+        <scene sceneID="uJ4-X8-knV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QcK-2n-3Ss" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="myK-pK-0aR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="o3v-IZ-9pr" kind="relationship" relationship="rootViewController" id="ZXU-uB-9jF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fwN-ix-qa4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Messages" referencedIdentifier="MessagesNavigationController" id="THu-B7-IcD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qz4-nZ-QGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450" y="302"/>
+            <point key="canvasLocation" x="2398" y="140"/>
         </scene>
     </scenes>
     <resources>
@@ -698,7 +624,6 @@
         <image name="zice" width="33" height="36"/>
         <image name="培训课程" width="239" height="171"/>
         <image name="报考流程" width="239" height="169"/>
-        <image name="消息" width="71" height="54"/>
         <image name="联系我们" width="260" height="175"/>
         <image name="课程培训" width="740" height="285"/>
         <image name="轻松报名" width="748" height="274"/>
