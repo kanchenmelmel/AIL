@@ -9,14 +9,16 @@
 import UIKit
 import SlideMenuControllerSwift
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SlideMenuControllerDelegate {
+    
+    
+    var leftButtonIndex = 0
 
     @IBOutlet weak var collectionView: UICollectionView!
+    let searchBar = UISearchBar()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setup Search bar in Nav Bar
-        self.searchDisplayController?.displaysSearchBarInNavigationBar = true
-        let searchBar = UISearchBar()
         self.navigationItem.titleView = searchBar
         //let searchBarItem = UIBarButtonItem.init(customView: searchBar)
         //self.navigationItem.rightBarButtonItem = searchBarItem
@@ -30,6 +32,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         wordpressClient.requestLatestTwentyPosts { (posts) in
             print(posts.count)
         }
+        
+        self.slideMenuController()?.delegate = self
         
     }
     
@@ -74,6 +78,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return 10
     }
     
+    
+//    func leftWillOpen() {
+//        
+//        let storyboard = UIStoryboard(name: "Messages", bundle: nil)
+//        let messagesTableVC = storyboard.instantiateViewControllerWithIdentifier("")
+//        self.navigationController?.pushViewController(messagesTableVC, animated: true)
+//        self.slideMenuController()?.closeLeft()
+//    }
     
 }
 
