@@ -9,11 +9,22 @@
 import UIKit
 import SlideMenuControllerSwift
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SlideMenuControllerDelegate,UISearchBarDelegate {
+    
+    
+    var leftButtonIndex = 0
 
     @IBOutlet weak var collectionView: UICollectionView!
+    let searchBar = UISearchBar()
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Setup Search bar in Nav Bar
+        self.navigationItem.titleView = searchBar
+        searchBar.delegate = self
+        //let searchBarItem = UIBarButtonItem.init(customView: searchBar)
+        //self.navigationItem.rightBarButtonItem = searchBarItem
+        
+        // Customize CollectionView
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -22,6 +33,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         wordpressClient.requestLatestTwentyPosts { (posts) in
             print(posts.count)
         }
+        
+        self.slideMenuController()?.delegate = self
         
     }
     
@@ -66,6 +79,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return 10
     }
     
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+    }
+    
+//    func leftWillOpen() {
+//        
+//        let storyboard = UIStoryboard(name: "Messages", bundle: nil)
+//        let messagesTableVC = storyboard.instantiateViewControllerWithIdentifier("")
+//        self.navigationController?.pushViewController(messagesTableVC, animated: true)
+//        self.slideMenuController()?.closeLeft()
+//    }
     
 }
 

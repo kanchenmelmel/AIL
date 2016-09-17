@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class MenuVC: UIViewController {
     
     var mainViewController: UIViewController!
 
+    @IBAction func archiveButtonClick(sender: AnyObject) {
+    }
+    
+    @IBAction func showMessageTableVC(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func ShowAboutAILButtonClick(sender: AnyObject) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

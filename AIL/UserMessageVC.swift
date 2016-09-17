@@ -45,11 +45,17 @@ class UserMessageVC: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("userMessageCell", forIndexPath: indexPath)
 
         // Configure the cell...
+        let messageIcon = UIImage(named: "Unread")
+        cell.imageView?.image = messageIcon
+        
 
         return cell
     }
     
 
+    @IBAction func CloseButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
