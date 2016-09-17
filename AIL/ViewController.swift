@@ -9,7 +9,7 @@
 import UIKit
 import SlideMenuControllerSwift
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SlideMenuControllerDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SlideMenuControllerDelegate,UISearchBarDelegate {
     
     
     var leftButtonIndex = 0
@@ -20,6 +20,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         // Setup Search bar in Nav Bar
         self.navigationItem.titleView = searchBar
+        searchBar.delegate = self
         //let searchBarItem = UIBarButtonItem.init(customView: searchBar)
         //self.navigationItem.rightBarButtonItem = searchBarItem
         
@@ -78,6 +79,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return 10
     }
     
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+    }
     
 //    func leftWillOpen() {
 //        

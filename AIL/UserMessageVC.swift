@@ -45,6 +45,9 @@ class UserMessageVC: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("userMessageCell", forIndexPath: indexPath)
 
         // Configure the cell...
+        let messageIcon = UIImage(named: "Unread")
+        cell.imageView?.image = messageIcon
+        
 
         return cell
     }

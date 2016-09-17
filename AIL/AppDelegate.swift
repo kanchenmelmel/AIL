@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+                
         let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
         let leftViewController = myStoryboard.instantiateViewControllerWithIdentifier("left") as! MenuVC

@@ -473,23 +473,23 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-xz-gex">
-                                <frame key="frameInset" minX="176" minY="234" width="62" height="168"/>
+                                <frame key="frameInset" minX="176" minY="234" width="113" height="144"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-ny-SrX">
-                                        <state key="normal" title="我的收藏"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-ny-SrX">
+                                        <state key="normal" title="     我的收藏" image="ArchiveButton"/>
                                         <connections>
                                             <action selector="archiveButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="SRx-jK-hW0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-UM-vGr">
-                                        <state key="normal" title="通知消息"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-UM-vGr">
+                                        <state key="normal" title="     通知消息" image="messagesButton"/>
                                         <connections>
                                             <action selector="showMessageTableVC:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="Dtp-Ls-7Wc"/>
                                             <segue destination="THu-B7-IcD" kind="show" id="qTQ-6B-xIB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-3b-Ygs">
-                                        <state key="normal" title="关于AIL"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-3b-Ygs">
+                                        <state key="normal" title="     关于A I L" image="AboutAILButton"/>
                                         <connections>
                                             <action selector="ShowAboutAILButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="iSH-s4-9cp"/>
                                         </connections>
@@ -519,14 +519,16 @@
             </objects>
             <point key="canvasLocation" x="3300" y="97.601199400299862"/>
         </scene>
-        <!--CustomUI Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="Bbj-1N-jZY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDL-vg-kTa" customClass="CustomUINavigationController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDL-vg-kTa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7EP-ad-fFn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.27058823529411763" green="0.46666666666666667" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
@@ -559,6 +561,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AboutAILButton" width="15" height="13"/>
+        <image name="ArchiveButton" width="16" height="15"/>
         <image name="Background" width="183" height="667"/>
         <image name="Group_shot_1" width="600" height="500"/>
         <image name="TopIcon" width="87" height="89"/>
@@ -566,6 +570,7 @@
         <image name="beikao" width="35" height="36"/>
         <image name="contact us" width="743" height="314"/>
         <image name="jijing" width="44" height="35"/>
+        <image name="messagesButton" width="14" height="14"/>
         <image name="mokao" width="34" height="36"/>
         <image name="pte" width="52" height="49"/>
         <image name="zice" width="33" height="36"/>
@@ -576,6 +581,6 @@
         <image name="轻松报名" width="748" height="274"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qTQ-6B-xIB"/>
+        <segue reference="N7Y-Gh-kQm"/>
     </inferredMetricsTieBreakers>
 </document>

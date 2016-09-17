@@ -23,7 +23,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="为了针对年底最后的几场考试为了针对年底最后的几场考试" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ew8-1Y-iMY">
-                                            <frame key="frameInset" minX="8" minY="29" width="268" height="32"/>
+                                            <frame key="frameInset" minX="70" minY="29" width="268" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.70588235290000001" green="0.70980392160000005" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqZ-nP-uP8">
-                                            <frame key="frameInset" minX="8" minY="8" width="268" height="15"/>
+                                            <frame key="frameInset" minX="70" minY="8" width="268" height="15"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="公告通知">
                                                     <attributes>
@@ -68,11 +68,11 @@
                                         <constraint firstItem="3x4-jL-tys" firstAttribute="trailing" secondItem="Bvx-6o-475" secondAttribute="trailingMargin" id="An9-br-5qm"/>
                                         <constraint firstItem="3x4-jL-tys" firstAttribute="leading" secondItem="fqZ-nP-uP8" secondAttribute="trailing" constant="77" id="FaI-0c-HUp"/>
                                         <constraint firstItem="3x4-jL-tys" firstAttribute="top" secondItem="Bvx-6o-475" secondAttribute="topMargin" id="G8d-Nm-9iJ"/>
+                                        <constraint firstItem="ew8-1Y-iMY" firstAttribute="leading" secondItem="Bvx-6o-475" secondAttribute="leading" constant="70" id="KrX-Nh-7AS"/>
                                         <constraint firstItem="ew8-1Y-iMY" firstAttribute="top" secondItem="fqZ-nP-uP8" secondAttribute="bottom" constant="6" id="M0w-UH-Z4i"/>
+                                        <constraint firstItem="fqZ-nP-uP8" firstAttribute="leading" secondItem="Bvx-6o-475" secondAttribute="leading" constant="70" id="Ojf-wN-iM8"/>
                                         <constraint firstItem="fqZ-nP-uP8" firstAttribute="top" secondItem="Bvx-6o-475" secondAttribute="topMargin" id="W0k-JC-mq1"/>
-                                        <constraint firstItem="ew8-1Y-iMY" firstAttribute="leading" secondItem="Bvx-6o-475" secondAttribute="leadingMargin" id="WTX-Wf-Dqe"/>
                                         <constraint firstItem="fqZ-nP-uP8" firstAttribute="top" secondItem="Bvx-6o-475" secondAttribute="topMargin" constant="12" id="gZc-sj-CJP"/>
-                                        <constraint firstItem="fqZ-nP-uP8" firstAttribute="leading" secondItem="Bvx-6o-475" secondAttribute="leadingMargin" id="h2U-ve-Evq"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ew8-1Y-iMY" secondAttribute="trailing" constant="130" id="qAb-Y6-eIO"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -84,7 +84,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="通知消息" id="Dwc-Co-1Oz">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="eSt-rT-1ue">
+                        <barButtonItem key="leftBarButtonItem" image="BackButton" id="eSt-rT-1ue">
                             <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="CloseButton:" destination="l4o-xE-fEN" id="mCe-Yt-C3w"/>
@@ -102,9 +102,13 @@
             <objects>
                 <navigationController storyboardIdentifier="MessagesTableNavCtrl" automaticallyAdjustsScrollViewInsets="NO" id="872-LM-Wpx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bQE-Jo-dcp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bQE-Jo-dcp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -116,4 +120,7 @@
             <point key="canvasLocation" x="3260.8695652173915" y="301.63043478260875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BackButton" width="9" height="17"/>
+    </resources>
 </document>

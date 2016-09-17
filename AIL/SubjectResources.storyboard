@@ -39,11 +39,10 @@
                                             <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cZ-do-arz">
-                                            <frame key="frameInset" minX="8" minY="93" width="42" height="10"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12.08.2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cZ-do-arz">
+                                            <frame key="frameInset" minX="8" minY="93" width="55" height="10"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="jCg-SQ-hJm" customClass="RoundedImageView" customModule="AIL">
@@ -60,7 +59,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="jCg-SQ-hJm" firstAttribute="leading" secondItem="7Ia-sf-nGf" secondAttribute="trailing" constant="62" id="2my-Yx-zRd"/>
+                                        <constraint firstItem="1cZ-do-arz" firstAttribute="leading" secondItem="aK7-Au-NzN" secondAttribute="leadingMargin" id="82L-l7-aup"/>
                                         <constraint firstItem="xup-CS-cna" firstAttribute="leading" secondItem="aK7-Au-NzN" secondAttribute="leading" constant="8" id="M20-yn-7HS"/>
+                                        <constraint firstItem="1cZ-do-arz" firstAttribute="bottom" secondItem="aK7-Au-NzN" secondAttribute="bottomMargin" id="SWH-vo-MGl"/>
                                         <constraint firstItem="jCg-SQ-hJm" firstAttribute="centerY" secondItem="aK7-Au-NzN" secondAttribute="centerY" id="Zl8-0l-fDC"/>
                                         <constraint firstItem="7Ia-sf-nGf" firstAttribute="leading" secondItem="aK7-Au-NzN" secondAttribute="leadingMargin" id="aBV-4S-meo"/>
                                         <constraint firstItem="xup-CS-cna" firstAttribute="top" secondItem="aK7-Au-NzN" secondAttribute="top" constant="12" id="eOo-7i-bqn"/>
