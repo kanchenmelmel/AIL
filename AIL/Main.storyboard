@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dDL-vg-kTa">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8te-Cn-js9">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-Nf-TRU">
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="boP-4K-O0N">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkw-nM-vDm" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="机经题库"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="baokao"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="left"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="jijing"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-Ri-jZ6" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                                        <state key="normal" title="Button"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="beikao"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="备考攻略"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="right"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ap8-Oz-2aj">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxy-Vm-3bS" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="zice"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="题型自测"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="left"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caE-IZ-KjS" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="right"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="全真模考"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="mokao"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                                <real key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="192" id="DpW-Vv-7YB"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="192" id="bwc-7A-PhT"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="bwc-7A-PhT"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL0-Il-4JH" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="141" id="HXF-Jk-Nqi"/>
+                                            <constraint firstAttribute="height" constant="141" id="QhK-ne-ipm"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="center"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="PTE素材资料"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pte"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="70"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                                <real key="value" value="70"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Ng3-6s-FB9" kind="show" id="BJf-fJ-zel"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kmj-Nf-TRU" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="top" id="0qa-dn-XrL"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="kmj-Nf-TRU" secondAttribute="trailing" constant="-10" id="26m-aa-rgh"/>
+                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="centerY" secondItem="8te-Cn-js9" secondAttribute="centerY" id="9Re-um-P5s"/>
+                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="top" constant="25.5" id="FeL-NR-4c9"/>
+                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="centerX" secondItem="8te-Cn-js9" secondAttribute="centerX" id="Kxo-7R-v86"/>
+                                    <constraint firstAttribute="trailing" secondItem="kmj-Nf-TRU" secondAttribute="trailing" id="NDc-bm-2kb"/>
+                                    <constraint firstItem="kmj-Nf-TRU" firstAttribute="leading" secondItem="8te-Cn-js9" secondAttribute="leading" id="RzC-Bq-4Qg"/>
+                                    <constraint firstAttribute="bottom" secondItem="kmj-Nf-TRU" secondAttribute="bottom" id="WeP-eY-Yhi"/>
+                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="leading" secondItem="8te-Cn-js9" secondAttribute="leading" constant="25.5" id="Zsn-VO-bdG"/>
+                                    <constraint firstAttribute="height" constant="192" id="n7d-MP-a2d"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Zsn-VO-bdG"/>
+                                        <exclude reference="26m-aa-rgh"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cpW-4n-mFY">
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.99607843137254903" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="0Px-GM-Ufp"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AgB-nd-xht">
+                                    <size key="itemSize" width="286" height="155.5"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="42" width="286" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE复议详解！PTE也能申请复议" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-vr-SJl">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="BEp-fN-5Cl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.19215686269999999" green="0.3803921569" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-hn-0hA">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="107" id="6zJ-2V-sz6"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="8Pl-hn-0hA" firstAttribute="leading" secondItem="GOM-uh-xnG" secondAttribute="leading" id="0vo-Z5-XD9"/>
+                                            <constraint firstItem="ibP-vr-SJl" firstAttribute="leading" secondItem="GOM-uh-xnG" secondAttribute="leadingMargin" constant="8" id="8li-g6-Dh5"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Pl-hn-0hA" secondAttribute="trailing" id="I3u-aV-ACS"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ibP-vr-SJl" secondAttribute="trailing" constant="8" id="X8C-In-bcW"/>
+                                            <constraint firstItem="ibP-vr-SJl" firstAttribute="centerX" secondItem="GOM-uh-xnG" secondAttribute="centerX" id="aVk-hl-1yu"/>
+                                            <constraint firstItem="ibP-vr-SJl" firstAttribute="top" secondItem="8Pl-hn-0hA" secondAttribute="bottom" constant="8" id="o9k-Ve-3Y9"/>
+                                            <constraint firstItem="8Pl-hn-0hA" firstAttribute="top" secondItem="GOM-uh-xnG" secondAttribute="top" id="zwc-iR-ZNP"/>
+                                        </constraints>
+                                        <size key="customSize" width="286" height="99"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="aVk-hl-1yu"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="postImage" destination="8Pl-hn-0hA" id="AhK-0v-mYh"/>
+                                            <outlet property="postLabel" destination="ibP-vr-SJl" id="TpK-97-DPr"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-Ku-fr0">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-Up-9Mu">
+                                        <state key="normal" image="报考流程"/>
+                                        <connections>
+                                            <segue destination="qR6-uc-2DZ" kind="show" id="rkc-W8-mcf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGC-Mx-Jeg">
+                                        <state key="normal" image="联系我们"/>
+                                        <connections>
+                                            <segue destination="3Rg-iI-EBl" kind="show" id="V8c-AZ-FDJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-vQ-jhN">
+                                        <state key="normal" title="Button" image="培训课程"/>
+                                        <connections>
+                                            <segue destination="F5B-Bw-dcm" kind="show" id="YZR-CY-A8A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="fx2-RM-Jrg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8te-Cn-js9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="42N-WR-C9Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T9M-Ku-fr0" secondAttribute="trailing" constant="-20" id="BjC-JM-ULb"/>
+                            <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IeZ-1V-uQs"/>
+                            <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PvT-St-LKz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8te-Cn-js9" secondAttribute="trailing" constant="-10" id="TrA-Lq-TQC"/>
+                            <constraint firstAttribute="trailing" secondItem="cpW-4n-mFY" secondAttribute="trailing" id="U9P-dr-EbR"/>
+                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="bottom" constant="8" id="atN-Sz-wyK"/>
+                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ddy-4K-pr2"/>
+                            <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mrb-tv-L4R"/>
+                            <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="tLQ-OT-kAb"/>
+                            <constraint firstAttribute="trailing" secondItem="cpW-4n-mFY" secondAttribute="trailing" id="x0e-ZO-A7v"/>
+                            <constraint firstItem="8te-Cn-js9" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="8" id="y3n-RI-zxg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IeZ-1V-uQs"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="83X-wQ-yVC"/>
+                    <connections>
+                        <outlet property="collectionView" destination="cpW-4n-mFY" id="xJW-To-faq"/>
+                        <segue destination="THu-B7-IcD" kind="show" identifier="showMessagesNavigationControllerSegue" id="N7Y-Gh-kQm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="254"/>
+        </scene>
+        <!--报考流程-->
+        <scene sceneID="9MO-hd-2r3">
+            <objects>
+                <viewController id="qR6-uc-2DZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tgn-L3-CeI"/>
+                        <viewControllerLayoutGuide type="bottom" id="QQV-Or-G7T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w2R-G2-Gcm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-lZ-6qv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="364" id="5eV-57-QKC"/>
+                                </constraints>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="轻松报名" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Jx-HFJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="XFu-su-6Nf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QQV-Or-G7T" firstAttribute="top" secondItem="dLu-lZ-6qv" secondAttribute="bottom" id="5ia-Ve-Z9H"/>
+                            <constraint firstItem="8rj-Jx-HFJ" firstAttribute="top" secondItem="Tgn-L3-CeI" secondAttribute="bottom" id="JYQ-Hj-lJc"/>
+                            <constraint firstItem="8rj-Jx-HFJ" firstAttribute="leading" secondItem="w2R-G2-Gcm" secondAttribute="leading" id="VM5-Rj-5dx"/>
+                            <constraint firstItem="dLu-lZ-6qv" firstAttribute="top" secondItem="Tgn-L3-CeI" secondAttribute="bottom" constant="172" id="dyf-zq-diV"/>
+                            <constraint firstItem="dLu-lZ-6qv" firstAttribute="leading" secondItem="w2R-G2-Gcm" secondAttribute="leading" id="hAA-ET-EOc"/>
+                            <constraint firstAttribute="trailing" secondItem="dLu-lZ-6qv" secondAttribute="trailing" id="oVW-nU-nyE"/>
+                            <constraint firstAttribute="trailing" secondItem="8rj-Jx-HFJ" secondAttribute="trailing" id="xqQ-Az-ST8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="报考流程" id="ogy-dv-wto"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5b-lm-ezs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397.10144927536237" y="1224.4565217391305"/>
+        </scene>
+        <!--联系我们-->
+        <scene sceneID="5Mi-Ex-daW">
+            <objects>
+                <viewController id="3Rg-iI-EBl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AHB-uc-gpW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mkc-cL-CfR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vrn-ow-CZE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-7O-Sr0">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NTx-ZA-4a9">
+                                        <frame key="frameInset" minX="25" minY="15" width="1000" height="102"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Q6-ZX-AnJ">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系电话：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNJ-lS-0tc">
+                                                        <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(03)96708868" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZ6-RW-cl1">
+                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                        <color key="textColor" red="0.30980392156862746" green="0.45098039215686275" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTc-6L-kqq">
+                                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="W6P-1m-tP2"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8k-Do-meL">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮箱地址：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hT-ra-fbt">
+                                                        <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pte@ail.vic.edu.au" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7H-VL-Vyu">
+                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                        <color key="textColor" red="0.30980392159999998" green="0.45098039220000002" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kry-Sy-j1q">
+                                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="OlL-Yj-PTv"/>
+                                                    <constraint firstAttribute="height" constant="1" id="TsH-X4-n3S"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldi-LF-c5A">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAT-pI-RSs">
+                                                        <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 2, 388 Bourke St, Melbourne 3000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuV-6v-J5s">
+                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                        <color key="textColor" red="0.30980392159999998" green="0.45098039220000002" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="4pS-KW-uA4"/>
+                                    <constraint firstItem="NTx-ZA-4a9" firstAttribute="leading" secondItem="vdg-7O-Sr0" secondAttribute="leading" constant="25" id="afA-6s-QG1"/>
+                                    <constraint firstItem="NTx-ZA-4a9" firstAttribute="top" secondItem="vdg-7O-Sr0" secondAttribute="top" constant="14" id="gn0-Qe-74n"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="contact us" translatesAutoresizingMaskIntoConstraints="NO" id="e87-Sh-0HD">
+                                <frame key="frameInset" minY="52" width="414" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="aHK-Z0-9PP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vdg-7O-Sr0" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" id="ShR-Ou-kH6"/>
+                            <constraint firstItem="e87-Sh-0HD" firstAttribute="top" secondItem="AHB-uc-gpW" secondAttribute="bottom" constant="8" id="WOz-Z1-ewc"/>
+                            <constraint firstItem="vdg-7O-Sr0" firstAttribute="top" secondItem="e87-Sh-0HD" secondAttribute="bottom" constant="8" id="dPP-TG-nvF"/>
+                            <constraint firstItem="e87-Sh-0HD" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" id="sQ7-BR-bGH"/>
+                            <constraint firstAttribute="trailing" secondItem="vdg-7O-Sr0" secondAttribute="trailing" id="wJx-7z-mr9"/>
+                            <constraint firstAttribute="trailing" secondItem="e87-Sh-0HD" secondAttribute="trailing" id="zW3-tD-2bk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="联系我们" id="QvR-Fs-O2x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njh-gO-CyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544.9275362318842" y="1223.6413043478262"/>
+        </scene>
+        <!--课程培训-->
+        <scene sceneID="1ed-Ux-BWo">
+            <objects>
+                <viewController id="F5B-Bw-dcm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D8n-wK-g3B"/>
+                        <viewControllerLayoutGuide type="bottom" id="JIE-Ci-hyn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DgU-37-6mt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-UX-fwF">
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9Tu-UN-TX4"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="PTE周末班"/>
+                                    <segment title="PTE平时班"/>
+                                    <segment title="PTE一对一VIP"/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="课程培训" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-0B-bJV">
+                                <frame key="frameInset" minY="124" width="413" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tWD-UX-fwF" firstAttribute="top" secondItem="D8n-wK-g3B" secondAttribute="bottom" id="K2B-Qm-IoB"/>
+                            <constraint firstAttribute="trailing" secondItem="tWD-UX-fwF" secondAttribute="trailing" id="l9s-1s-ZTN"/>
+                            <constraint firstItem="tWD-UX-fwF" firstAttribute="leading" secondItem="DgU-37-6mt" secondAttribute="leading" id="qVR-lv-VoI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="课程培训" id="4l6-77-I47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdH-rY-9jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5773" y="1273"/>
+        </scene>
+        <!--MenuVC-->
+        <scene sceneID="WTA-wA-Lmy">
+            <objects>
+                <viewController storyboardIdentifier="left" id="Qug-lZ-qUb" customClass="MenuVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QAP-Kv-tes"/>
+                        <viewControllerLayoutGuide type="bottom" id="G9D-PS-47j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="op8-Ba-Ov1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-xz-gex">
+                                <frame key="frameInset" minX="176" minY="234" width="113" height="144"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-ny-SrX">
+                                        <state key="normal" title="     我的收藏" image="ArchiveButton"/>
+                                        <connections>
+                                            <action selector="archiveButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="SRx-jK-hW0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-UM-vGr">
+                                        <state key="normal" title="     通知消息" image="messagesButton"/>
+                                        <connections>
+                                            <action selector="showMessageTableVC:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="Dtp-Ls-7Wc"/>
+                                            <segue destination="THu-B7-IcD" kind="show" id="qTQ-6B-xIB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-3b-Ygs">
+                                        <state key="normal" title="     关于A I L" image="AboutAILButton"/>
+                                        <connections>
+                                            <action selector="ShowAboutAILButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="iSH-s4-9cp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vSq-uJ-YpP">
+                                <frame key="frameInset" minX="163" minY="64" width="88" height="90"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vSq-uJ-YpP" firstAttribute="centerX" secondItem="op8-Ba-Ov1" secondAttribute="centerX" id="2rq-qH-9oO"/>
+                            <constraint firstItem="SWP-CC-47e" firstAttribute="leading" secondItem="op8-Ba-Ov1" secondAttribute="leading" id="6gs-ZZ-l1w"/>
+                            <constraint firstItem="Ypy-xz-gex" firstAttribute="centerX" secondItem="op8-Ba-Ov1" secondAttribute="centerX" id="G5K-Xf-Vev"/>
+                            <constraint firstItem="Ypy-xz-gex" firstAttribute="top" secondItem="vSq-uJ-YpP" secondAttribute="bottom" constant="80" id="JO1-lw-xDm"/>
+                            <constraint firstItem="G9D-PS-47j" firstAttribute="top" secondItem="SWP-CC-47e" secondAttribute="bottom" id="Xgs-W3-Okz"/>
+                            <constraint firstItem="SWP-CC-47e" firstAttribute="top" secondItem="op8-Ba-Ov1" secondAttribute="top" id="vpT-J4-n10"/>
+                            <constraint firstItem="vSq-uJ-YpP" firstAttribute="top" secondItem="QAP-Kv-tes" secondAttribute="bottom" constant="44" id="yYg-AK-Qor"/>
+                            <constraint firstAttribute="trailing" secondItem="SWP-CC-47e" secondAttribute="trailing" id="yy2-yW-fJ8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8au-UR-PtK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZ1-8d-r4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3300" y="97.601199400299862"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bbj-1N-jZY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDL-vg-kTa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7EP-ad-fFn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.27058823529411763" green="0.46666666666666667" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2ft-QX-YSb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Duu-AE-gDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="280"/>
+        </scene>
+        <!--MessagesTableNavCtrl-->
+        <scene sceneID="uJ4-X8-knV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Messages" referencedIdentifier="MessagesTableNavCtrl" id="THu-B7-IcD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qz4-nZ-QGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453" y="280"/>
+        </scene>
+        <!--SubjectResourcesTableVC-->
+        <scene sceneID="wIT-Zr-e5L">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SubjectResources" referencedIdentifier="SubjectResourcesTableVC" id="Ng3-6s-FB9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0T-9h-nwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="-437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AboutAILButton" width="15" height="13"/>
+        <image name="ArchiveButton" width="16" height="15"/>
+        <image name="Background" width="183" height="667"/>
+        <image name="Group_shot_1" width="600" height="500"/>
+        <image name="TopIcon" width="87" height="89"/>
+        <image name="baokao" width="40" height="40"/>
+        <image name="beikao" width="35" height="36"/>
+        <image name="contact us" width="743" height="314"/>
+        <image name="jijing" width="44" height="35"/>
+        <image name="messagesButton" width="14" height="14"/>
+        <image name="mokao" width="34" height="36"/>
+        <image name="pte" width="52" height="49"/>
+        <image name="zice" width="33" height="36"/>
+        <image name="培训课程" width="239" height="171"/>
+        <image name="报考流程" width="239" height="169"/>
+        <image name="联系我们" width="260" height="175"/>
+        <image name="课程培训" width="740" height="285"/>
+        <image name="轻松报名" width="748" height="274"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="N7Y-Gh-kQm"/>
+    </inferredMetricsTieBreakers>
+</document>
