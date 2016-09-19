@@ -34,8 +34,8 @@ class EmailEjector {
             url(bodyType),
             parameters: parameters,
             encoding: ParameterEncoding.JSON
-            ).responseJSON { response in
-                promise.resolve()
+        ).responseJSON { response in
+            promise.resolve()
         }
         return promise
     }
