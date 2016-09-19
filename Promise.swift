@@ -17,8 +17,8 @@ class Promise<T> {
     
     private var result: T?
     private var error: String?
-    private var then_inited = false
-    private var fail_inited = false
+    
+    init() {}
     
     func resolve(value: T) {
         if self.onSuccess != nil {
@@ -51,7 +51,5 @@ class Promise<T> {
             self.onFail = callback
         }
     }
-    
-    init() {}
     
 }
