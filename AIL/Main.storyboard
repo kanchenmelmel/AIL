@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8te-Cn-js9">
@@ -279,7 +279,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QQV-Or-G7T"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w2R-G2-Gcm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-lZ-6qv">
@@ -319,13 +319,13 @@
                         <viewControllerLayoutGuide type="bottom" id="Mkc-cL-CfR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vrn-ow-CZE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-7O-Sr0">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NTx-ZA-4a9">
-                                        <frame key="frameInset" minX="25" minY="15" width="1000" height="102"/>
+                                        <frame key="frameInset" minX="25" minY="15" width="1000" height="101"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Q6-ZX-AnJ">
                                                 <subviews>
@@ -426,7 +426,7 @@
                         <viewControllerLayoutGuide type="bottom" id="JIE-Ci-hyn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DgU-37-6mt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-UX-fwF">
@@ -467,7 +467,7 @@
                         <viewControllerLayoutGuide type="bottom" id="G9D-PS-47j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="op8-Ba-Ov1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
@@ -569,7 +569,7 @@
         <image name="beikao" width="35" height="36"/>
         <image name="contact us" width="743" height="314"/>
         <image name="jijing" width="44" height="35"/>
-        <image name="messagesButton" width="14" height="13"/>
+        <image name="messagesButton" width="14" height="14"/>
         <image name="mokao" width="34" height="36"/>
         <image name="pte" width="52" height="49"/>
         <image name="zice" width="33" height="36"/>
