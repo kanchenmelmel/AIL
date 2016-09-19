@@ -26,8 +26,8 @@ class EmailEjector {
         }
     }
     
-    class func eject(type bodyType: BodyType, from: String, to: String, title: String, body: String) -> Promise<Void> {
-        let promise = Promise<Void>()
+    class func eject(type bodyType: BodyType, from: String, to: String, title: String, body: String) -> Promise<Void, Void> {
+        let promise = Promise<Void, Void>()
         let parameters = [ "from": from, "to":  to, "subject": title, "body": body ]
         Alamofire.request(
             .POST,
@@ -40,11 +40,11 @@ class EmailEjector {
         return promise
     }
     
-    class func ejectText(from from: String, to: String, title: String, body: String) -> Promise<Void> {
+    class func ejectText(from from: String, to: String, title: String, body: String) -> Promise<Void, Void> {
         return eject(type: .TEXT, from: from, to: to, title: title, body: body);
     }
     
-    class func ejectHTML(from from: String, to: String, title: String, body: String) -> Promise<Void> {
+    class func ejectHTML(from from: String, to: String, title: String, body: String) -> Promise<Void, Void> {
         return eject(type: .HTML, from: from, to: to, title: title, body: body);
     }
 }

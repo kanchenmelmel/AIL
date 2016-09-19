@@ -10,13 +10,13 @@ import Foundation
 import Swift
 
 
-class Promise<T> {
+class Promise<T, E> {
     
-    private var onSuccess: ((T) -> Void)?
-    private var onFail: ((String) -> Void)?
+    private var onSuccess: (T -> Void)?
+    private var onFail: (E -> Void)?
     
     private var result: T?
-    private var error: String?
+    private var error: E?
     
     init() {}
     
@@ -28,7 +28,7 @@ class Promise<T> {
         }
     }
     
-    func reject(error: String) {
+    func reject(error: E) {
         if self.onFail != nil {
             self.onFail!(error)
         } else {
@@ -36,7 +36,7 @@ class Promise<T> {
         }
     }
     
-    func then(callback: (T) -> Void) -> Void {
+    func then(callback: T -> Void) -> Void {
         if self.result != nil {
             callback(self.result!)
         } else {
@@ -44,7 +44,7 @@ class Promise<T> {
         }
     }
     
-    func fail(callback: (String) -> Void) -> Void {
+    func fail(callback: E -> Void) -> Void {
         if self.error != nil {
             callback(self.error!)
         } else {
