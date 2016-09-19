@@ -33,16 +33,16 @@ class ContactUsVC: UIViewController {
             to: "Australian Institute of Language <wenyuzhaox@gmail.com>", // TODO: Replace email address with: pte@ail.vic.edu.au
             title: "用户反馈 (Australian Institute of Language iOS客户端)",
             body: "姓名：\(name)\n联系方式：\(contact)\n反馈信息：\n\n\(message)"
-            ).then {
-                let alert = UIAlertController(
-                    title: "发送成功",
-                    message: "您的反馈已收到",
-                    preferredStyle: UIAlertControllerStyle.Alert
-                )
-                alert.addAction(UIAlertAction(title: "确认", style: UIAlertActionStyle.Default) { _ in
-                    print("done")
-                })
-                self.presentViewController(alert, animated: true, completion: nil)
+        ).then {
+            let alert = UIAlertController(
+                title: "发送成功",
+                message: "您的反馈已收到",
+                preferredStyle: UIAlertControllerStyle.Alert
+            )
+            alert.addAction(UIAlertAction(title: "确认", style: UIAlertActionStyle.Default) { _ in
+                print("done")
+            })
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
