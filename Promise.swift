@@ -36,7 +36,7 @@ class Promise<T, E> {
         }
     }
     
-    func then(callback: T -> Void) -> Void {
+    func then(callback: T -> Void) {
         if self.result != nil {
             callback(self.result!)
         } else {
@@ -44,7 +44,7 @@ class Promise<T, E> {
         }
     }
     
-    func fail(callback: E -> Void) -> Void {
+    func fail(callback: E -> Void) {
         if self.error != nil {
             callback(self.error!)
         } else {
