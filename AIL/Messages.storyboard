@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s4N-SQ-cle" id="Bvx-6o-475">
-                                    <frame key="frameInset" width="414" height="71"/>
+                                    <frame key="frameInset" width="414" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="为了针对年底最后的几场考试为了针对年底最后的几场考试" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ew8-1Y-iMY">
@@ -102,7 +102,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MessagesTableNavCtrl" automaticallyAdjustsScrollViewInsets="NO" id="872-LM-Wpx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bQE-Jo-dcp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bQE-Jo-dcp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
