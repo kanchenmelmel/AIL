@@ -8,6 +8,7 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import CoreData
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SlideMenuControllerDelegate,UISearchBarDelegate {
     
@@ -16,6 +17,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var collectionView: UICollectionView!
     let searchBar = UISearchBar()
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    var featurePosts = [Post]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setup Search bar in Nav Bar
@@ -31,14 +36,33 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let wordpressClient = WordPressClient()
         
         wordpressClient.requestLatestTwentyPosts { (posts) in
-            print(posts.count)
+            print("Melmel:\(posts.count)")
         }
         
         self.slideMenuController()?.delegate = self
         
+        
+        //The code is to be moved to PostRetriever.swift
+        let postRequest = NSFetchRequest()
+        postRequest.entity = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
+        
+        let httpString = "http"
+        let predicate = NSPredicate(format: "featuredImageUrl contains[c] %@", httpString)
+        postRequest.predicate = predicate
+        
+        do{
+            let results = try managedObjectContext.executeFetchRequest(postRequest) as! [Post]
+            
+            self.featurePosts = results
+        }catch {
+            print ("Error: Could not fetch featured Posts")
+        }
+        
+        
     }
     
     
+  
     
     override func viewDidAppear(animated: Bool) {
         self.setNavigationBarItem()
@@ -53,7 +77,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCell", forIndexPath: indexPath) as? PostCollectionViewCell{
             cell.backgroundColor = UIColor.whiteColor()
-            //cell.postLabel.textColor = UIColor.lightGrayColor()
+            
+            let featurePost = self.featurePosts[indexPath.row]
+            
+            cell.postLabel.text = featurePost.title
+            
             return cell
         }
             
@@ -76,7 +104,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.featurePosts.count
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
