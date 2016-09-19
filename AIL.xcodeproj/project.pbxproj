@@ -20,6 +20,8 @@
 		4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */; };
 		4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */; };
 		4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */; };
+		4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E51D90226900294ACC /* ImageOperation.swift */; };
+		4DDD17E81D90942A00294ACC /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E71D90942A00294ACC /* FileDownloader.swift */; };
 		960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */; };
 		962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */; };
 		962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */; };
@@ -58,6 +60,8 @@
 		4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = AIL/MenuVC.swift; sourceTree = "<group>"; };
 		4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRetriever.swift; sourceTree = "<group>"; };
+		4DDD17E51D90226900294ACC /* ImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
+		4DDD17E71D90942A00294ACC /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
 		7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
 		960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressSyncManager.swift; sourceTree = "<group>"; };
 		962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 		968DD6D31D793AC7003B5DA4 /* Uitility */ = {
 			isa = PBXGroup;
 			children = (
+				4DDD17E71D90942A00294ACC /* FileDownloader.swift */,
+				4DDD17E51D90226900294ACC /* ImageOperation.swift */,
 				964C52B41D7FC563006E1E9D /* DateFormatter.swift */,
 				9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */,
 				4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */,
@@ -445,6 +451,7 @@
 				963061C71D77E1280079B7C5 /* ViewController.swift in Sources */,
 				9671E5E11D7E6EAC008250C7 /* JSONParser.swift in Sources */,
 				3DE209341D8FA03C001BCEA4 /* EmailEjecter.swift in Sources */,
+				4DDD17E81D90942A00294ACC /* FileDownloader.swift in Sources */,
 				3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */,
 				4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */,
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
@@ -462,6 +469,7 @@
 				9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */,
 				4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */,
 				4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */,
+				4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
 				9671E5F01D7E8622008250C7 /* Category.swift in Sources */,

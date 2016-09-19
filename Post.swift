@@ -6,12 +6,19 @@
 //  Copyright © 2016 au.com.melmel. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 
+
+enum PhotoRecordState {
+    case New, Downloaded, Failed
+}
 
 class Post: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
+    
+    var featuredImage : UIImage?
+    var featuredImageState : PhotoRecordState = .New
 
 }
