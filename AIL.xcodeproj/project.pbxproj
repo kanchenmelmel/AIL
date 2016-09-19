@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */; };
 		3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */; };
+		3DDAFCDA1D8F75AD00B5EE1F /* ContactUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDAFCD91D8F75AD00B5EE1F /* ContactUsVC.swift */; };
+		3DDAFCDC1D8F895A00B5EE1F /* EmailEjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDAFCDB1D8F895A00B5EE1F /* EmailEjector.swift */; };
+		3DDAFCDE1D8F8F5800B5EE1F /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDAFCDD1D8F8F5800B5EE1F /* Promise.swift */; };
 		4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */; };
 		4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */; };
 		4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainButtonsContainer.swift; path = AIL/MainButtonsContainer.swift; sourceTree = "<group>"; };
 		3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMainButton.swift; path = AIL/HomeMainButton.swift; sourceTree = "<group>"; };
+		3DDAFCD91D8F75AD00B5EE1F /* ContactUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactUsVC.swift; path = AIL/ContactUsVC.swift; sourceTree = "<group>"; };
+		3DDAFCDB1D8F895A00B5EE1F /* EmailEjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailEjector.swift; path = AIL/EmailEjector.swift; sourceTree = "<group>"; };
+		3DDAFCDD1D8F8F5800B5EE1F /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationItem.swift; path = AIL/CustomUINavigationItem.swift; sourceTree = "<group>"; };
 		4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationController.swift; path = AIL/CustomUINavigationController.swift; sourceTree = "<group>"; };
 		4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMessageVC.swift; path = AIL/UserMessageVC.swift; sourceTree = "<group>"; };
@@ -98,6 +104,7 @@
 				963061C61D77E1280079B7C5 /* ViewController.swift */,
 				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
 				4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */,
+				3DDAFCD91D8F75AD00B5EE1F /* ContactUsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -236,6 +243,7 @@
 			children = (
 				964C52B41D7FC563006E1E9D /* DateFormatter.swift */,
 				9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */,
+				3DDAFCDD1D8F8F5800B5EE1F /* Promise.swift */,
 			);
 			name = Uitility;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				9671E5E01D7E6EAC008250C7 /* JSONParser.swift */,
 				9671E5DE1D7E52AE008250C7 /* UrlConstants.swift */,
 				960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */,
+				3DDAFCDB1D8F895A00B5EE1F /* EmailEjector.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -289,7 +298,6 @@
 				TargetAttributes = {
 					963061C01D77E1270079B7C5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = SSKL6SFPT2;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -442,13 +450,16 @@
 				964C52B51D7FC563006E1E9D /* DateFormatter.swift in Sources */,
 				963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */,
 				4D9C9A761D88B3DC00EA98D0 /* UserMessageCell.swift in Sources */,
+				3DDAFCDA1D8F75AD00B5EE1F /* ContactUsVC.swift in Sources */,
 				9671E5DF1D7E52AE008250C7 /* UrlConstants.swift in Sources */,
 				9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */,
 				4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */,
 				4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
+				3DDAFCDE1D8F8F5800B5EE1F /* Promise.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
 				9671E5F01D7E8622008250C7 /* Category.swift in Sources */,
+				3DDAFCDC1D8F895A00B5EE1F /* EmailEjector.swift in Sources */,
 				962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,7 +568,7 @@
 			baseConfigurationReference = A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SSKL6SFPT2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AIL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -573,7 +584,7 @@
 			baseConfigurationReference = 7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SSKL6SFPT2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AIL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

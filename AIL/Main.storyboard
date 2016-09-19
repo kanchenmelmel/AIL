@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8te-Cn-js9">
@@ -279,7 +279,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QQV-Or-G7T"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w2R-G2-Gcm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-lZ-6qv">
@@ -313,19 +313,19 @@
         <!--联系我们-->
         <scene sceneID="5Mi-Ex-daW">
             <objects>
-                <viewController id="3Rg-iI-EBl" sceneMemberID="viewController">
+                <viewController id="3Rg-iI-EBl" customClass="ContactUsVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AHB-uc-gpW"/>
                         <viewControllerLayoutGuide type="bottom" id="Mkc-cL-CfR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vrn-ow-CZE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-7O-Sr0">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NTx-ZA-4a9">
-                                        <frame key="frameInset" minX="25" minY="15" width="1000" height="102"/>
+                                        <frame key="frameInset" minX="25" minY="14" width="349" height="101"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Q6-ZX-AnJ">
                                                 <subviews>
@@ -394,28 +394,84 @@
                                     <constraint firstItem="NTx-ZA-4a9" firstAttribute="top" secondItem="vdg-7O-Sr0" secondAttribute="top" constant="14" id="gn0-Qe-74n"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="contact us" translatesAutoresizingMaskIntoConstraints="NO" id="e87-Sh-0HD">
-                                <frame key="frameInset" minY="52" width="414" height="184"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact us" translatesAutoresizingMaskIntoConstraints="NO" id="e87-Sh-0HD">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="184" id="aHK-Z0-9PP"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euz-ID-Tt2">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fUq-ba-GZZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="联系方式" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYt-j8-OoX">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="T3X-IW-6pD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="写下你的问题....." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M8e-9I-sSE">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="Ywe-3J-uxa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cli-4K-voC">
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.46274509800000002" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90.5" id="g3C-Ul-rHw"/>
+                                    <constraint firstAttribute="height" constant="29" id="idz-Zx-Hz7"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="发送"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bYt-j8-OoX" secondAttribute="trailing" id="1Ri-t2-VHu"/>
+                            <constraint firstItem="euz-ID-Tt2" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" id="1l8-3c-Gf7"/>
+                            <constraint firstItem="cli-4K-voC" firstAttribute="top" secondItem="M8e-9I-sSE" secondAttribute="bottom" constant="6" id="3Aj-TJ-th5"/>
+                            <constraint firstItem="euz-ID-Tt2" firstAttribute="top" secondItem="vdg-7O-Sr0" secondAttribute="bottom" constant="6" id="8pV-tS-lQ6"/>
+                            <constraint firstItem="M8e-9I-sSE" firstAttribute="top" secondItem="bYt-j8-OoX" secondAttribute="bottom" constant="6" id="KKG-La-O2G"/>
+                            <constraint firstItem="bYt-j8-OoX" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" id="OiD-hf-txT"/>
+                            <constraint firstItem="bYt-j8-OoX" firstAttribute="top" secondItem="euz-ID-Tt2" secondAttribute="bottom" constant="6" id="Rwx-hG-GXt"/>
                             <constraint firstItem="vdg-7O-Sr0" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" id="ShR-Ou-kH6"/>
                             <constraint firstItem="e87-Sh-0HD" firstAttribute="top" secondItem="AHB-uc-gpW" secondAttribute="bottom" constant="8" id="WOz-Z1-ewc"/>
                             <constraint firstItem="vdg-7O-Sr0" firstAttribute="top" secondItem="e87-Sh-0HD" secondAttribute="bottom" constant="8" id="dPP-TG-nvF"/>
+                            <constraint firstAttribute="trailing" secondItem="M8e-9I-sSE" secondAttribute="trailing" id="diL-WH-UIU"/>
+                            <constraint firstItem="cli-4K-voC" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" constant="25" id="i5O-K1-XDX"/>
+                            <constraint firstItem="M8e-9I-sSE" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" id="jRa-bc-hOb"/>
                             <constraint firstItem="e87-Sh-0HD" firstAttribute="leading" secondItem="vrn-ow-CZE" secondAttribute="leading" id="sQ7-BR-bGH"/>
+                            <constraint firstAttribute="trailing" secondItem="euz-ID-Tt2" secondAttribute="trailing" id="trp-NN-ORd"/>
                             <constraint firstAttribute="trailing" secondItem="vdg-7O-Sr0" secondAttribute="trailing" id="wJx-7z-mr9"/>
                             <constraint firstAttribute="trailing" secondItem="e87-Sh-0HD" secondAttribute="trailing" id="zW3-tD-2bk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="联系我们" id="QvR-Fs-O2x"/>
+                    <connections>
+                        <outlet property="contactTextField" destination="bYt-j8-OoX" id="nRL-bR-DQG"/>
+                        <outlet property="messageTextView" destination="M8e-9I-sSE" id="5Ax-SO-D3B"/>
+                        <outlet property="nameTextField" destination="euz-ID-Tt2" id="HMj-HJ-i0I"/>
+                        <outlet property="sendMessageButton" destination="cli-4K-voC" id="Ktq-zF-zQh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njh-gO-CyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544.9275362318842" y="1223.6413043478262"/>
+            <point key="canvasLocation" x="1544.8" y="1222.9385307346329"/>
         </scene>
         <!--课程培训-->
         <scene sceneID="1ed-Ux-BWo">
@@ -426,7 +482,7 @@
                         <viewControllerLayoutGuide type="bottom" id="JIE-Ci-hyn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DgU-37-6mt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-UX-fwF">
@@ -467,7 +523,7 @@
                         <viewControllerLayoutGuide type="bottom" id="G9D-PS-47j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="op8-Ba-Ov1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
@@ -569,7 +625,7 @@
         <image name="beikao" width="35" height="36"/>
         <image name="contact us" width="743" height="314"/>
         <image name="jijing" width="44" height="35"/>
-        <image name="messagesButton" width="14" height="13"/>
+        <image name="messagesButton" width="14" height="14"/>
         <image name="mokao" width="34" height="36"/>
         <image name="pte" width="52" height="49"/>
         <image name="zice" width="33" height="36"/>
