@@ -42,13 +42,16 @@ class ImageDownloader:NSOperation {
         
         let imageData = NSData(contentsOfURL:NSURL(string:post.featuredImageUrl!.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)!)
         
+    //    let imageData = NSData(contentsOfURL:NSURL(string:post.featuredImageUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSUTF8StringEncoding)!)!)
+        
+        
         if imageData?.length != 0 {
             let image = UIImage(data: imageData!)
             self.post.featuredImage = image
             
             let saver = FileDownloader()
             saver.saveImageFile(image!, postId: post.id! as Int, fileName: FEATURED_IMAGE_NAME)
-            post.featured_image_downloaded = true
+            post.featuredImageDownloaded = true
             try! post.managedObjectContext?.save()
         }
             
