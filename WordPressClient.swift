@@ -18,6 +18,9 @@ import CoreData
 
 
 class WordPressClient {
+    
+    
+    // Request the latest 20 posts
     func requestLatestTwentyPosts(completionHandler: ([Post]) -> Void) {
         print(BASE_URL+RESOURSES)
         Alamofire.request(.GET, BASE_URL+RESOURSES, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
