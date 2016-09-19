@@ -246,7 +246,11 @@
 				964C52B41D7FC563006E1E9D /* DateFormatter.swift */,
 				9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				3DDAFCDD1D8F8F5800B5EE1F /* Promise.swift */,
+=======
+				4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */,
+>>>>>>> master
 =======
 				4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */,
 >>>>>>> master

@@ -326,7 +326,11 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NTx-ZA-4a9">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <frame key="frameInset" minX="25" minY="14" width="349" height="101"/>
+=======
+                                        <frame key="frameInset" minX="25" minY="15" width="1000" height="101"/>
+>>>>>>> master
 =======
                                         <frame key="frameInset" minX="25" minY="15" width="1000" height="101"/>
 >>>>>>> master
