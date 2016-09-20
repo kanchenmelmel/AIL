@@ -51,12 +51,12 @@ class ImageDownloader:NSOperation {
             
             let saver = FileDownloader()
             saver.saveImageFile(image!, postId: post.id! as Int, fileName: FEATURED_IMAGE_NAME)
-            post.featuredImageDownloaded = true
+            post.featuredImageDownloadedToFileSys = true
             try! post.managedObjectContext?.save()
         }
             
         else {
-            self.post.featuredImageState = .Failed
+            self.post.featuredLoadingImageState = .Failed
             self.post.featuredImage = UIImage(named: "failed")
             
         }

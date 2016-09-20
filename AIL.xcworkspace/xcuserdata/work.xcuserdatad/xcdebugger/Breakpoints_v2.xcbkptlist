@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
             endingLineNumber = "41"
-            landmarkName = "saveImageFile(_:postId:fileName:)"
+            landmarkName = "saveImageFile(image:postId:fileName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

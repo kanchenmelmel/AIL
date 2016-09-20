@@ -86,17 +86,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.postLabel.text = featurePost.title
             
             
-            if featurePost.featuredImageDownloaded == true {
+            if featurePost.featuredImageDownloadedToFileSys == true {
                 let fileDownloader = FileDownloader()
                 featurePost.featuredImage = fileDownloader.imageFromFile(featurePost.id! as Int, fileName: FEATURED_IMAGE_NAME)
-                featurePost.featuredImageState = .Downloaded
+                featurePost.featuredLoadingImageState = .Downloaded
                 
             } else {
                 if featurePost.featuredImageUrl != nil {
-                    if featurePost.featuredImageState == .Downloaded {
+                    if featurePost.featuredLoadingImageState == .Downloaded {
                         
                     }
-                    if featurePost.featuredImageState == .New {
+                    if featurePost.featuredLoadingImageState == .New {
                         //if (!tableView.dragging && !tableView.decelerating){
                             startOperationsForPhoto(featurePost, indexPath: indexPath)
                         //}
@@ -116,7 +116,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func startOperationsForPhoto(post:Post,indexPath:NSIndexPath) {
-        switch (post.featuredImageState) {
+        switch (post.featuredLoadingImageState) {
         case .New:
             startDownloadFeaturedImageForPost (post:post,indexPath:indexPath)
         default: break
@@ -139,7 +139,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 dispatch_async(dispatch_get_main_queue(), {
                     self.pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
                     self.collectionView.reloadItemsAtIndexPaths([indexPath])
-                    post.featuredImageState = .Downloaded
+                    post.featuredLoadingImageState = .Downloaded
                 })
             }
             

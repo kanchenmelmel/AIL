@@ -38,19 +38,19 @@ class FileDownloader {
         let postDirectoryLocation = documentDirectory.URLByAppendingPathComponent("posts")
         // Create post Directory
         do {
-            try fileManager.createDirectoryAtURL(postDirectoryLocation, withIntermediateDirectories: true, attributes: nil)
+            try fileManager.createDirectoryAtURL(postDirectoryLocation!, withIntermediateDirectories: true, attributes: nil)
         } catch {
             
         }
         
-        let imageLocation = postDirectoryLocation.URLByAppendingPathComponent("\(postId)")
+        let imageLocation = postDirectoryLocation!.URLByAppendingPathComponent("\(postId)")
         // Create image Directory
         do {
-            try fileManager.createDirectoryAtURL(imageLocation, withIntermediateDirectories: true, attributes: nil)
+            try fileManager.createDirectoryAtURL(imageLocation!, withIntermediateDirectories: true, attributes: nil)
         }catch{}//
         
-        let imageURL = imageLocation.URLByAppendingPathComponent(fileName)
-        imgData!.writeToFile(imageURL.path!, atomically:true)//Write image to disk
+        let imageURL = imageLocation!.URLByAppendingPathComponent(fileName)
+        imgData!.writeToFile(imageURL!.path!, atomically:true)//Write image to disk
     }
     
     
@@ -58,9 +58,9 @@ class FileDownloader {
         let documentDirectory = try! NSFileManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
         let postDirectoryLocation = documentDirectory.URLByAppendingPathComponent("posts")
         
-        let imageLocation = postDirectoryLocation.URLByAppendingPathComponent("\(postId)").URLByAppendingPathComponent("\(fileName)")
+        let imageLocation = postDirectoryLocation!.URLByAppendingPathComponent("\(postId)")!.URLByAppendingPathComponent("\(fileName)")
         
-        let image = UIImage(contentsOfFile: imageLocation.path!)
+        let image = UIImage(contentsOfFile: imageLocation!.path!)
         return image!
     }
 }

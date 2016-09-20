@@ -2,11 +2,8 @@
 //  Post+CoreDataProperties.swift
 //  AIL
 //
-//  Created by Work on 6/09/2016.
+//  Created by Work on 20/09/2016.
 //  Copyright © 2016 au.com.melmel. All rights reserved.
-//
-//  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
-//  to delete and recreate this implementation file for your updated model.
 //
 
 import Foundation
@@ -14,14 +11,36 @@ import CoreData
 
 extension Post {
 
-    @NSManaged var id: NSNumber?
-    @NSManaged var title: String?
-    @NSManaged var link: String?
-    @NSManaged var date: NSDate?
-    @NSManaged var thumbnailUrl: String?
-    @NSManaged var featuredImageUrl: String?
-    @NSManaged var status: String?
-    @NSManaged var editDate: NSDate?
-    @NSManaged var categories: NSSet?
+//    @nonobjc public class func fetchRequest() -> NSFetchRequest<Post> {
+//        return NSFetchRequest<Post>(entityName: "Post");
+//    }
+
+    @NSManaged public var date: NSDate?
+    @NSManaged public var editDate: NSDate?
+    @NSManaged public var featuredImageUrl: String?
+    @NSManaged public var id: NSNumber?
+    @NSManaged public var link: String?
+    @NSManaged public var status: String?
+    @NSManaged public var thumbnailUrl: String?
+    @NSManaged public var title: String?
+    @NSManaged public var featuredImageDownloadedToFileSys: NSNumber?
+    @NSManaged public var categories: NSSet?
+
+}
+
+// MARK: Generated accessors for categories
+extension Post {
+
+    @objc(addCategoriesObject:)
+    @NSManaged public func addToCategories(_ value: Category)
+
+    @objc(removeCategoriesObject:)
+    @NSManaged public func removeFromCategories(_ value: Category)
+
+    @objc(addCategories:)
+    @NSManaged public func addToCategories(_ values: NSSet)
+
+    @objc(removeCategories:)
+    @NSManaged public func removeFromCategories(_ values: NSSet)
 
 }

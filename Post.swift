@@ -19,6 +19,6 @@ class Post: NSManagedObject {
 // Insert code here to add functionality to your managed object subclass
     
     var featuredImage : UIImage?
-    var featuredImageState : PhotoRecordState = .New
+    var featuredLoadingImageState : PhotoRecordState = .New
 
 }
