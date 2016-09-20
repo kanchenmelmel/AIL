@@ -24,6 +24,7 @@
 		963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */; };
 		963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963061CE1D77E1280079B7C5 /* Assets.xcassets */; };
 		963061D21D77E1280079B7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963061D01D77E1280079B7C5 /* LaunchScreen.storyboard */; };
+		963C30671D90A296000C6C85 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C30661D90A296000C6C85 /* Category+CoreDataClass.swift */; };
 		964C52B51D7FC563006E1E9D /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C52B41D7FC563006E1E9D /* DateFormatter.swift */; };
 		9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5DC1D7E4FCF008250C7 /* WordPressClient.swift */; };
 		9671E5DF1D7E52AE008250C7 /* UrlConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5DE1D7E52AE008250C7 /* UrlConstants.swift */; };
@@ -32,7 +33,6 @@
 		9671E5E71D7E808F008250C7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5E31D7E808F008250C7 /* Post.swift */; };
 		9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */; };
 		9671E5EF1D7E8622008250C7 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5ED1D7E8622008250C7 /* Category+CoreDataProperties.swift */; };
-		9671E5F01D7E8622008250C7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EE1D7E8622008250C7 /* Category.swift */; };
 		9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6731D88DEDF00360D98 /* Messages.storyboard */; };
 		9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */; };
 		9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */; };
@@ -61,6 +61,7 @@
 		963061CE1D77E1280079B7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		963061D11D77E1280079B7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		963061D31D77E1280079B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		963C30661D90A296000C6C85 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		964C52B41D7FC563006E1E9D /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		9671E5DC1D7E4FCF008250C7 /* WordPressClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressClient.swift; sourceTree = "<group>"; };
 		9671E5DE1D7E52AE008250C7 /* UrlConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlConstants.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		9671E5E31D7E808F008250C7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperation.swift; sourceTree = "<group>"; };
 		9671E5ED1D7E8622008250C7 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9671E5EE1D7E8622008250C7 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9683A6731D88DEDF00360D98 /* Messages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
 		9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubjectResources.storyboard; sourceTree = "<group>"; };
 		9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDesignableExtension.swift; sourceTree = "<group>"; };
@@ -111,7 +111,6 @@
 				4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */,
 				4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */,
 				4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */,
-				962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */,
 				3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */,
 				3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */,
 			);
@@ -200,8 +199,8 @@
 		9671E5EA1D7E8095008250C7 /* ManagedObject */ = {
 			isa = PBXGroup;
 			children = (
+				963C30661D90A296000C6C85 /* Category+CoreDataClass.swift */,
 				9671E5ED1D7E8622008250C7 /* Category+CoreDataProperties.swift */,
-				9671E5EE1D7E8622008250C7 /* Category.swift */,
 				9671E5E21D7E808F008250C7 /* Post+CoreDataProperties.swift */,
 				9671E5E31D7E808F008250C7 /* Post.swift */,
 			);
@@ -219,6 +218,7 @@
 		9683A6781D88E08D00360D98 /* SubjectResources */ = {
 			isa = PBXGroup;
 			children = (
+				962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */,
 			);
 			name = SubjectResources;
 			sourceTree = "<group>";
@@ -448,7 +448,7 @@
 				4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
-				9671E5F01D7E8622008250C7 /* Category.swift in Sources */,
+				963C30671D90A296000C6C85 /* Category+CoreDataClass.swift in Sources */,
 				962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

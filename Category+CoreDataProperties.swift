@@ -2,19 +2,21 @@
 //  Category+CoreDataProperties.swift
 //  AIL
 //
-//  Created by Work on 6/09/2016.
+//  Created by Work on 20/09/2016.
 //  Copyright © 2016 au.com.melmel. All rights reserved.
-//
-//  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
-//  to delete and recreate this implementation file for your updated model.
 //
 
 import Foundation
 import CoreData
 
+
 extension Category {
 
-    @NSManaged var id: NSNumber?
-    @NSManaged var name: String?
+    @nonobjc public override class func fetchRequest() -> NSFetchRequest {
+        return NSFetchRequest(entityName: "Category");
+    }
+
+    @NSManaged public var id: NSNumber?
+    @NSManaged public var name: String?
 
 }
