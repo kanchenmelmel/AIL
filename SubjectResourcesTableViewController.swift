@@ -9,9 +9,17 @@
 import UIKit
 
 class SubjectResourcesTableViewController: UITableViewController {
+    var resourcesPosts = [Post]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let resourceList = CoreDataOperation.fetchResourcesPostFromCoreData() {
+            resourcesPosts = resourceList
+        }
+        else {
+            print("There is someting wrong while loadding resources from Core Data")
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,15 +42,19 @@ class SubjectResourcesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return resourcesPosts.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SubjectResourcesTableViewVell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("SubjectResourcesTableViewVell", forIndexPath: indexPath) as! SubjectResourcesTableViewCell
 
         // Configure the cell...
-
+        cell.titleLabel.text = resourcesPosts[indexPath.row].title
+//        cell.subtitleLabel.text = resourcesPosts[indexPath.row].description
+        
+        
+        
         return cell
     }
  
