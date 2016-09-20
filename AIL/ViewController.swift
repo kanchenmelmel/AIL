@@ -125,26 +125,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func startDownloadFeaturedImageForPost(post post:Post,indexPath:NSIndexPath) {
-        if pendingOperations.downloadsInProgress[indexPath] != nil {
-            return
-        }
-        
-        
-            let downloader = ImageDownloader(post: post)
-            
-            downloader.completionBlock = {
-                if downloader.cancelled {
-                    return
-                }
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
-                    self.collectionView.reloadItemsAtIndexPaths([indexPath])
-                    post.featuredLoadingImageState = .Downloaded
-                })
-            }
-            
-            pendingOperations.downloadsInProgress[indexPath] = downloader
-            pendingOperations.downloadQueue.addOperation(downloader)
+//        if pendingOperations.downloadsInProgress[indexPath] != nil {
+//            return
+//        }
+//        
+//        
+//            let downloader = ImageDownloader(post: post)
+//        
+//            downloader.completionBlock = {
+//                if downloader.cancelled {
+//                    return
+//                }
+//                dispatch_async(dispatch_get_main_queue(), {
+//                    self.pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
+//                    self.collectionView.reloadItemsAtIndexPaths([indexPath])
+//                    post.featuredLoadingImageState = .Downloaded
+//                })
+//            }
+//            
+//            pendingOperations.downloadsInProgress[indexPath] = downloader
+//            pendingOperations.downloadQueue.addOperation(downloader)
         
         
         
