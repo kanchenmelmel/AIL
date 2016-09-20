@@ -10,6 +10,8 @@ import UIKit
 
 class SubjectResourcesTableViewController: UITableViewController {
     var resourcesPosts = [Post]()
+    
+    var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,9 @@ class SubjectResourcesTableViewController: UITableViewController {
         else {
             print("There is someting wrong while loadding resources from Core Data")
         }
+        
+        self.setUpTableViewImageCoordinator()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -54,8 +59,37 @@ class SubjectResourcesTableViewController: UITableViewController {
 //        cell.subtitleLabel.text = resourcesPosts[indexPath.row].description
         
         
+        // Images
+        print(resourcesPosts[indexPath.row].featuredImageUrl)
+        if resourcesPosts[indexPath.row].featuredImageUrl != nil {
+            
+            let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
+            cell.cellImageView.image = imageRecord.image
+            print(imageRecord.image)
+            
+            switch (imageRecord.state) {
+            case .New, .Downloaded:
+                
+                self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: { 
+                    self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                })
+            default:
+                print("Do Nothing for loading cell image \(indexPath.row)")
+            }
+            
+            
+        }
+        
+        
         
         return cell
+    }
+    
+    func setUpTableViewImageCoordinator(){
+        for post in resourcesPosts {
+            let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
+            self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+        }
     }
  
 
