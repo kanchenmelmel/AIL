@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */; };
 		3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */; };
+		3DE209321D8FA015001BCEA4 /* ContactUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */; };
+		3DE209341D8FA03C001BCEA4 /* EmailEjecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */; };
+		3DE209361D8FA084001BCEA4 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209351D8FA084001BCEA4 /* Promise.swift */; };
 		4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */; };
 		4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */; };
 		4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */; };
@@ -16,6 +19,9 @@
 		4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */; };
 		4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */; };
 		4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */; };
+		4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */; };
+		4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E51D90226900294ACC /* ImageOperation.swift */; };
+		4DDD17E81D90942A00294ACC /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E71D90942A00294ACC /* FileDownloader.swift */; };
 		960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */; };
 		962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */; };
 		962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */; };
@@ -43,6 +49,9 @@
 /* Begin PBXFileReference section */
 		3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainButtonsContainer.swift; path = AIL/MainButtonsContainer.swift; sourceTree = "<group>"; };
 		3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMainButton.swift; path = AIL/HomeMainButton.swift; sourceTree = "<group>"; };
+		3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactUsVC.swift; path = AIL/ContactUsVC.swift; sourceTree = "<group>"; };
+		3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailEjecter.swift; path = AIL/EmailEjecter.swift; sourceTree = "<group>"; };
+		3DE209351D8FA084001BCEA4 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationItem.swift; path = AIL/CustomUINavigationItem.swift; sourceTree = "<group>"; };
 		4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationController.swift; path = AIL/CustomUINavigationController.swift; sourceTree = "<group>"; };
 		4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMessageVC.swift; path = AIL/UserMessageVC.swift; sourceTree = "<group>"; };
@@ -50,6 +59,9 @@
 		4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCollectionViewCell.swift; path = AIL/PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = AIL/MenuVC.swift; sourceTree = "<group>"; };
 		4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRetriever.swift; sourceTree = "<group>"; };
+		4DDD17E51D90226900294ACC /* ImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
+		4DDD17E71D90942A00294ACC /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
 		7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
 		960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressSyncManager.swift; sourceTree = "<group>"; };
 		962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +110,7 @@
 				963061C61D77E1280079B7C5 /* ViewController.swift */,
 				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
 				4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */,
+				3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -234,8 +247,12 @@
 		968DD6D31D793AC7003B5DA4 /* Uitility */ = {
 			isa = PBXGroup;
 			children = (
+				4DDD17E71D90942A00294ACC /* FileDownloader.swift */,
+				4DDD17E51D90226900294ACC /* ImageOperation.swift */,
 				964C52B41D7FC563006E1E9D /* DateFormatter.swift */,
 				9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */,
+				4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */,
+				3DE209351D8FA084001BCEA4 /* Promise.swift */,
 			);
 			name = Uitility;
 			sourceTree = "<group>";
@@ -247,6 +264,7 @@
 				9671E5E01D7E6EAC008250C7 /* JSONParser.swift */,
 				9671E5DE1D7E52AE008250C7 /* UrlConstants.swift */,
 				960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */,
+				3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -432,20 +450,26 @@
 				9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */,
 				963061C71D77E1280079B7C5 /* ViewController.swift in Sources */,
 				9671E5E11D7E6EAC008250C7 /* JSONParser.swift in Sources */,
+				3DE209341D8FA03C001BCEA4 /* EmailEjecter.swift in Sources */,
+				4DDD17E81D90942A00294ACC /* FileDownloader.swift in Sources */,
 				3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */,
+				4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */,
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
 				9671E5E61D7E808F008250C7 /* Post+CoreDataProperties.swift in Sources */,
 				962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */,
 				4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */,
 				4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */,
+				3DE209321D8FA015001BCEA4 /* ContactUsVC.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
 				964C52B51D7FC563006E1E9D /* DateFormatter.swift in Sources */,
 				963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */,
+				3DE209361D8FA084001BCEA4 /* Promise.swift in Sources */,
 				4D9C9A761D88B3DC00EA98D0 /* UserMessageCell.swift in Sources */,
 				9671E5DF1D7E52AE008250C7 /* UrlConstants.swift in Sources */,
 				9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */,
 				4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */,
 				4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */,
+				4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
 				963C30671D90A296000C6C85 /* Category+CoreDataClass.swift in Sources */,

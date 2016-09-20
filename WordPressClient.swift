@@ -28,6 +28,7 @@ class WordPressClient {
             case .Success:
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
+                   // print (jsonArray)
                     completionHandler(JSONParser.parseJSONDictionaryToPostManagedObject(true, ifInsertIntoManagedContext: true, jsonArray: jsonArray))
                     
                     // Save Managed Object Context

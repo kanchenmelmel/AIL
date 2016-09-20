@@ -26,6 +26,7 @@ class JSONParser {
         }
         var posts = [Post]()
         for index in 0...jsonArray.count-1 {
+           // print ("Jason is \(index)")
             if checkIfExistInCoreData {
                 if !CoreDataOperation.checkIdExist(jsonArray[index]["id"].int!, entityType: .Post){
                     let post = Post(entity: postDescription!, insertIntoManagedObjectContext: managedObjectContextToBeInserted)
@@ -60,7 +61,8 @@ class JSONParser {
                 }
             }
         }
-        
+        print ("Test1")
+        print (posts)
         return posts
     }
 }
