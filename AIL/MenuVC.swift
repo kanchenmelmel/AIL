@@ -11,7 +11,17 @@ import SlideMenuControllerSwift
 
 class MenuVC: UIViewController {
     
-    var mainViewController: UIViewController!
+    //var mainViewController: UIViewController!
+    
+    override func awakeFromNib() {
+//        if let controller = self.storyboard?.instantiateViewControllerWithIdentifier("main") {
+//            self.mainViewController = controller
+//        }
+//        if let controller = self.storyboard?.instantiateViewControllerWithIdentifier("left") {
+//            self.mainViewController = controller
+//        }
+        super.awakeFromNib()
+    }
 
     @IBAction func archiveButtonClick(sender: AnyObject) {
     }

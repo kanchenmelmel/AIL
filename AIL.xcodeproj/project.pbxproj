@@ -122,6 +122,7 @@
 		4DAEAFA81D7A486F00842C4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				967CF92C1D922F13007CF78C /* CustomizedView */,
 				9683A6791D88E0B800360D98 /* DesignableExtension */,
 				9683A6781D88E08D00360D98 /* SubjectResources */,
 				4D9C9A751D88B3DC00EA98D0 /* UserMessageCell.swift */,
@@ -232,6 +233,13 @@
 				9671E5E31D7E808F008250C7 /* Post.swift */,
 			);
 			name = ManagedObject;
+			sourceTree = "<group>";
+		};
+		967CF92C1D922F13007CF78C /* CustomizedView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomizedView;
 			sourceTree = "<group>";
 		};
 		9683A6771D88E05C00360D98 /* SubjectResources */ = {
