@@ -28,8 +28,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         // Setup Search bar in Nav Bar
 
-        searchBar.setSearchFieldBackgroundImage(self., forState: <#T##UIControlState#>)
+        searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Normal)
+        searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Selected)
         
+//        if let index = searchBar.indexofSear
+        
+//        setUpSearchBar()
         
         self.searchBar.barTintColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
         self.searchBar.backgroundColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
@@ -188,6 +192,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        self.navigationController?.pushViewController(messagesTableVC, animated: true)
 //        self.slideMenuController()?.closeLeft()
 //    }
+    
+    
+    func setUpSearchBar() {
+        var index:Int?
+//        let searchBarView = self.subviews[0]
+        
+        for i in 0 ..< searchBar.subviews.count {
+            print(i)
+            if searchBar.subviews[i].isKindOfClass(UITextField) {
+                index = i
+                print(i)
+                break
+            }
+        }
+        
+        let searchFeild = searchBar.subviews[index!] as! UITextField
+        
+        searchFeild.backgroundColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
+        
+        
+
+    }
     
 }
 
