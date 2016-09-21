@@ -14,7 +14,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     var leftButtonIndex = 0
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     let searchBar = UISearchBar()
     
@@ -23,6 +23,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var featurePosts = [Post]()
     
     let pendingOperations = PendingOperations()
+    
+    var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,17 +64,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         
+        self.setUpTableViewImageCoordinator()
+        
     }
     
     
-  
+    
     
     override func viewDidAppear(animated: Bool) {
         self.setNavigationBarItem()
         
-    
         
-
+        
+        
     }
     
     
@@ -86,32 +90,37 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.postLabel.text = featurePost.title
             
             
-            if featurePost.featuredImageDownloadedToFileSys == true {
-                let fileDownloader = FileDownloader()
-                featurePost.featuredImage = fileDownloader.imageFromFile(featurePost.id! as Int, fileName: FEATURED_IMAGE_NAME)
-                featurePost.featuredLoadingImageState = .Downloaded
+            if featurePost.featuredImageUrl != nil {
                 
-            } else {
-                if featurePost.featuredImageUrl != nil {
-                    if featurePost.featuredLoadingImageState == .Downloaded {
-                        
-                    }
-                    if featurePost.featuredLoadingImageState == .New {
-                        //if (!tableView.dragging && !tableView.decelerating){
-                            startOperationsForPhoto(featurePost, indexPath: indexPath)
-                        //}
-                    }
+                let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
+                cell.postImage.image = imageRecord.image
+                
+                switch (imageRecord.state) {
+                case .New, .Downloaded:
                     
+                    self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
+                        // self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                        self.collectionView.reloadItemsAtIndexPaths([indexPath])
+                    })
+                default:
+                    print("Do Nothing for loading cell image \(indexPath.row)")
                 }
                 
+                
             }
-            cell.postImage.image = featurePost.featuredImage
             
             return cell
         }
             
         else{
             return UICollectionViewCell()
+        }
+    }
+    
+    func setUpTableViewImageCoordinator(){
+        for post in featurePosts {
+            let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
+            self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
         }
     }
     
@@ -125,26 +134,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func startDownloadFeaturedImageForPost(post post:Post,indexPath:NSIndexPath) {
-//        if pendingOperations.downloadsInProgress[indexPath] != nil {
-//            return
-//        }
-//        
-//        
-//            let downloader = ImageDownloader(post: post)
-//        
-//            downloader.completionBlock = {
-//                if downloader.cancelled {
-//                    return
-//                }
-//                dispatch_async(dispatch_get_main_queue(), {
-//                    self.pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
-//                    self.collectionView.reloadItemsAtIndexPaths([indexPath])
-//                    post.featuredLoadingImageState = .Downloaded
-//                })
-//            }
-//            
-//            pendingOperations.downloadsInProgress[indexPath] = downloader
-//            pendingOperations.downloadQueue.addOperation(downloader)
+        //        if pendingOperations.downloadsInProgress[indexPath] != nil {
+        //            return
+        //        }
+        //
+        //
+        //            let downloader = ImageDownloader(post: post)
+        //
+        //            downloader.completionBlock = {
+        //                if downloader.cancelled {
+        //                    return
+        //                }
+        //                dispatch_async(dispatch_get_main_queue(), {
+        //                    self.pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
+        //                    self.collectionView.reloadItemsAtIndexPaths([indexPath])
+        //                    post.featuredLoadingImageState = .Downloaded
+        //                })
+        //            }
+        //
+        //            pendingOperations.downloadsInProgress[indexPath] = downloader
+        //            pendingOperations.downloadQueue.addOperation(downloader)
         
         
         
@@ -153,7 +162,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //TODO Goes to another view controller
     }
     
-
+    
     
     
     
@@ -174,13 +183,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchBar.showsCancelButton = false
     }
     
-//    func leftWillOpen() {
-//        
-//        let storyboard = UIStoryboard(name: "Messages", bundle: nil)
-//        let messagesTableVC = storyboard.instantiateViewControllerWithIdentifier("")
-//        self.navigationController?.pushViewController(messagesTableVC, animated: true)
-//        self.slideMenuController()?.closeLeft()
-//    }
+    //    func leftWillOpen() {
+    //
+    //        let storyboard = UIStoryboard(name: "Messages", bundle: nil)
+    //        let messagesTableVC = storyboard.instantiateViewControllerWithIdentifier("")
+    //        self.navigationController?.pushViewController(messagesTableVC, animated: true)
+    //        self.slideMenuController()?.closeLeft()
+    //    }
     
 }
 

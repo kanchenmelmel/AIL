@@ -35,7 +35,8 @@ class TableViewImageLoadingCoordinator {
             if downloader.cancelled {
                 return
             }
-            dispatch_async(dispatch_get_main_queue(), { 
+            dispatch_async(dispatch_get_main_queue(), {
+                self.pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
                 completionHandler()
             })
             
