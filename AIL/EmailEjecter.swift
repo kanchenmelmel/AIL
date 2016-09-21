@@ -9,8 +9,17 @@
 import Foundation
 import Alamofire
 
+struct Email {
+    var from: String
+    var to: String
+    var title: String
+    var content: String
+    
+}
+
 class EmailEjector {
-    enum BodyType {
+    
+    private enum BodyType {
         case HTML
         case TEXT
     }
@@ -26,26 +35,29 @@ class EmailEjector {
         }
     }
     
-    class func eject(type bodyType: BodyType, from: String, to: String, title: String, body: String) -> Promise<Void, Void> {
-        let promise = Promise<Void, Void>()
-        let parameters = [ "from": from, "to":  to, "subject": title, "body": body ]
-        Alamofire.request(
-            .POST,
-            url(bodyType),
-            parameters: parameters,
-            encoding: ParameterEncoding.JSON
-        ).responseJSON { response in
-            promise.resolve()
+    private class func eject_email(type type: BodyType, email: Email) -> (Response<AnyObject, NSError> -> Void) -> Void {
+        let parameters = [
+            "from": email.from,
+            "to":  email.to,
+            "subject": email.title,
+            "body": email.content
+        ]
+        return { callback in
+            Alamofire.request(
+                .POST,
+                url(type),
+                parameters: parameters,
+                encoding: ParameterEncoding.JSON
+            ).responseJSON(completionHandler: callback)
         }
-        return promise
     }
     
-    class func ejectText(from from: String, to: String, title: String, body: String) -> Promise<Void, Void> {
-        return eject(type: .TEXT, from: from, to: to, title: title, body: body);
+    class func eject(email email: Email) -> (Response<AnyObject, NSError> -> Void) -> Void {
+        return eject_email(type: .TEXT, email: email);
     }
     
-    class func ejectHTML(from from: String, to: String, title: String, body: String) -> Promise<Void, Void> {
-        return eject(type: .HTML, from: from, to: to, title: title, body: body);
+    class func ejectHTMLEmail(email email: Email) -> (Response<AnyObject, NSError> -> Void) -> Void {
+        return eject_email(type: .HTML, email: email);
     }
 }
 
