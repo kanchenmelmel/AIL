@@ -28,12 +28,15 @@ class ContactUsVC: UIViewController {
         let name = self.nameTextField.text!
         let contact = self.contactTextField.text!
         let message = self.messageTextView.text!
-        EmailEjector.ejectText(
+        
+        let email = Email(
             from: "Australian Institute of Language 用户反馈 <user-feedback.noreply@ail.vic.edu.au>",
             to: "Australian Institute of Language <wenyuzhaox@gmail.com>", // TODO: Replace email address with: pte@ail.vic.edu.au
             title: "用户反馈 (Australian Institute of Language iOS客户端)",
-            body: "姓名：\(name)\n联系方式：\(contact)\n反馈信息：\n\n\(message)"
-        ).then {
+            content: "姓名：\(name)\n联系方式：\(contact)\n反馈信息：\n\n\(message)"
+        )
+        
+        (EmailEjector.eject(email: email)) { _ in
             let alert = UIAlertController(
                 title: "发送成功",
                 message: "您的反馈已收到",
