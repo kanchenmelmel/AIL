@@ -21,6 +21,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     var featurePosts = [Post]()
+    
+    let pendingOperations = PendingOperations()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setup Search bar in Nav Bar
@@ -82,6 +85,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             cell.postLabel.text = featurePost.title
             
+            
+            if featurePost.featuredImageDownloadedToFileSys == true {
+                let fileDownloader = FileDownloader()
+                featurePost.featuredImage = fileDownloader.imageFromFile(featurePost.id! as Int, fileName: FEATURED_IMAGE_NAME)
+                featurePost.featuredLoadingImageState = .Downloaded
+                
+            } else {
+                if featurePost.featuredImageUrl != nil {
+                    if featurePost.featuredLoadingImageState == .Downloaded {
+                        
+                    }
+                    if featurePost.featuredLoadingImageState == .New {
+                        //if (!tableView.dragging && !tableView.decelerating){
+                            startOperationsForPhoto(featurePost, indexPath: indexPath)
+                        //}
+                    }
+                    
+                }
+                
+            }
+            cell.postImage.image = featurePost.featuredImage
+            
             return cell
         }
             
@@ -90,7 +115,40 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    func startOperationsForPhoto(post:Post,indexPath:NSIndexPath) {
+        switch (post.featuredLoadingImageState) {
+        case .New:
+            startDownloadFeaturedImageForPost (post:post,indexPath:indexPath)
+        default: break
+            //NSLog("Do nothing")
+        }
+    }
     
+    func startDownloadFeaturedImageForPost(post post:Post,indexPath:NSIndexPath) {
+//        if pendingOperations.downloadsInProgress[indexPath] != nil {
+//            return
+//        }
+//        
+//        
+//            let downloader = ImageDownloader(post: post)
+//        
+//            downloader.completionBlock = {
+//                if downloader.cancelled {
+//                    return
+//                }
+//                dispatch_async(dispatch_get_main_queue(), {
+//                    self.pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
+//                    self.collectionView.reloadItemsAtIndexPaths([indexPath])
+//                    post.featuredLoadingImageState = .Downloaded
+//                })
+//            }
+//            
+//            pendingOperations.downloadsInProgress[indexPath] = downloader
+//            pendingOperations.downloadQueue.addOperation(downloader)
+        
+        
+        
+    }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //TODO Goes to another view controller
     }

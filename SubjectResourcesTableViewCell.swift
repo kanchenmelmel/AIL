@@ -9,7 +9,10 @@
 import UIKit
 
 class SubjectResourcesTableViewCell: UITableViewCell {
+    @IBOutlet weak var cellImageView: RoundedImageView!
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

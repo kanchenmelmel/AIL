@@ -83,6 +83,23 @@ class CoreDataOperation {
             print("Errors when save Core Data managedObjectContext!!")
         }
     }
+    
+    static func fetchResourcesPostFromCoreData() -> [Post]?{
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let resourcePostFetchRequest = NSFetchRequest(entityName: EntityType.Post.rawValue)
+        
+        do {
+            let objects = try managedObjectContext.executeFetchRequest(resourcePostFetchRequest) as! [Post]
+            return objects
+            
+            
+        } catch {
+            print("fetch request errors!")
+        }
+        
+        return nil
+    }
 }
 
 

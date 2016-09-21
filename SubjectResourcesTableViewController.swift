@@ -9,9 +9,22 @@
 import UIKit
 
 class SubjectResourcesTableViewController: UITableViewController {
+    var resourcesPosts = [Post]()
+    
+    var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let resourceList = CoreDataOperation.fetchResourcesPostFromCoreData() {
+            resourcesPosts = resourceList
+        }
+        else {
+            print("There is someting wrong while loadding resources from Core Data")
+        }
+        
+        self.setUpTableViewImageCoordinator()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,16 +47,49 @@ class SubjectResourcesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return resourcesPosts.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SubjectResourcesTableViewVell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("SubjectResourcesTableViewVell", forIndexPath: indexPath) as! SubjectResourcesTableViewCell
 
         // Configure the cell...
-
+        cell.titleLabel.text = resourcesPosts[indexPath.row].title
+//        cell.subtitleLabel.text = resourcesPosts[indexPath.row].description
+        
+        
+        // Images
+        print(resourcesPosts[indexPath.row].featuredImageUrl)
+        if resourcesPosts[indexPath.row].featuredImageUrl != nil {
+            
+            let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
+            cell.cellImageView.image = imageRecord.image
+            print(imageRecord.image)
+            
+            switch (imageRecord.state) {
+            case .New, .Downloaded:
+                
+                self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: { 
+                    self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                })
+            default:
+                print("Do Nothing for loading cell image \(indexPath.row)")
+            }
+            
+            
+        }
+        
+        
+        
         return cell
+    }
+    
+    func setUpTableViewImageCoordinator(){
+        for post in resourcesPosts {
+            let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
+            self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+        }
     }
  
 
