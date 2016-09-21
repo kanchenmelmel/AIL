@@ -44,6 +44,7 @@
 		9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */; };
 		9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */; };
 		9698D2E01D8BB717007ECB09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9698D2DF1D8BB717007ECB09 /* Main.storyboard */; };
+		96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ADCDA21D925AC600ACBC05 /* CustomizedSearchBar.swift */; };
 		C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2662452685324A770F0164 /* Pods_AIL.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubjectResources.storyboard; sourceTree = "<group>"; };
 		9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDesignableExtension.swift; sourceTree = "<group>"; };
 		9698D2DF1D8BB717007ECB09 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		96ADCDA21D925AC600ACBC05 /* CustomizedSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedSearchBar.swift; sourceTree = "<group>"; };
 		A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2662452685324A770F0164 /* Pods_AIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 		4DAEAFA81D7A486F00842C4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				967CF92C1D922F13007CF78C /* CustomizedView */,
 				9683A6791D88E0B800360D98 /* DesignableExtension */,
 				9683A6781D88E08D00360D98 /* SubjectResources */,
 				4D9C9A751D88B3DC00EA98D0 /* UserMessageCell.swift */,
@@ -230,6 +233,14 @@
 				9671E5E31D7E808F008250C7 /* Post.swift */,
 			);
 			name = ManagedObject;
+			sourceTree = "<group>";
+		};
+		967CF92C1D922F13007CF78C /* CustomizedView */ = {
+			isa = PBXGroup;
+			children = (
+				96ADCDA21D925AC600ACBC05 /* CustomizedSearchBar.swift */,
+			);
+			name = CustomizedView;
 			sourceTree = "<group>";
 		};
 		9683A6771D88E05C00360D98 /* SubjectResources */ = {
@@ -472,6 +483,7 @@
 				4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */,
 				963574941D90C3F800B8D1A5 /* Category+CoreDataClass.swift in Sources */,
 				4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */,
+				96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */,
 				3DE209321D8FA015001BCEA4 /* ContactUsVC.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
 				964C52B51D7FC563006E1E9D /* DateFormatter.swift in Sources */,

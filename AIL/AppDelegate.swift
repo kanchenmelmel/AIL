@@ -23,12 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
                 
         let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
+        //let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
         let leftViewController = myStoryboard.instantiateViewControllerWithIdentifier("left") as! MenuVC
+        self.window?.makeKeyAndVisible()
         
        
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-        leftViewController.mainViewController = nvc
+        let nvc: UINavigationController = myStoryboard.instantiateViewControllerWithIdentifier("mainNavCtrl") as! UINavigationController
+        //leftViewController.mainViewController = nvc
         
         let slideMC = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController)
         slideMC.changeLeftViewWidth(170)
