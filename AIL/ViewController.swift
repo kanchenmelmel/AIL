@@ -37,9 +37,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
 //        setUpSearchBar()
         
-//        self.searchBar.barTintColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
-//        self.searchBar.backgroundColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
-        self.searchBar.tintColor = UIColor(red: 68.0, green: 120.0, blue: 180.0, alpha: 1.0)
+        self.searchBar.barTintColor = UIColor.whiteColor()
+        //        self.searchBar.backgroundColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
+//        self.searchBar.tintColor = UIColor(red: 68.0, green: 120.0, blue: 180.0, alpha: 1.0)
         self.navigationItem.titleView = searchBar
         searchBar.delegate = self
         //let searchBarItem = UIBarButtonItem.init(customView: searchBar)
