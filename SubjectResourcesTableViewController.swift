@@ -148,6 +148,7 @@ class SubjectResourcesTableViewController: UITableViewController {
             
             let index = tableView.indexPathForSelectedRow
             destnatinationVC.urlString = resourcesPosts[index!.row].link!
+            destnatinationVC.titleString = resourcesPosts[index!.row].title!
         }
     }
 

@@ -11,6 +11,7 @@ import UIKit
 class ResourceWebViewController: UIViewController, UIWebViewDelegate {
     
     var urlString:String?
+    var titleString:String?
     
     var loading = false
     var timer:NSTimer? = nil
@@ -40,6 +41,14 @@ class ResourceWebViewController: UIViewController, UIWebViewDelegate {
     
     
     
+    @IBAction func showActivityViewController(sender: AnyObject) {
+        
+        let url = NSURL(string: urlString!)
+        let activityViewController = UIActivityViewController(activityItems: [titleString!,url!], applicationActivities: nil)
+        self.navigationController?.presentViewController(activityViewController, animated: true, completion: { 
+            
+        })
+    }
     
     
     
