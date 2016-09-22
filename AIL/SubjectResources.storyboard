@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -74,7 +74,7 @@
                                     <outlet property="cellImageView" destination="jCg-SQ-hJm" id="JFQ-V6-TIX"/>
                                     <outlet property="subtitleLabel" destination="7Ia-sf-nGf" id="TK8-6s-JIp"/>
                                     <outlet property="titleLabel" destination="xup-CS-cna" id="uH6-YF-z9B"/>
-                                    <segue destination="RgZ-f6-D7J" kind="show" id="pQy-Ws-wzc"/>
+                                    <segue destination="RgZ-f6-D7J" kind="show" identifier="resourcesPostWebViewSegue" id="pQy-Ws-wzc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1840.5797101449277" y="-520.10869565217399"/>
         </scene>
-        <!--View Controller-->
+        <!--Resource Web View Controller-->
         <scene sceneID="D3Q-4u-d9A">
             <objects>
-                <viewController id="RgZ-f6-D7J" sceneMemberID="viewController">
+                <viewController id="RgZ-f6-D7J" customClass="ResourceWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rnN-vZ-Vw9"/>
                         <viewControllerLayoutGuide type="bottom" id="0Es-1E-gUp"/>
@@ -104,19 +104,29 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-At-nlm">
                                 <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="k6M-ES-wpn">
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Zp2-At-nlm" firstAttribute="top" secondItem="ayv-mA-HfG" secondAttribute="top" id="0nj-H9-kQj"/>
                             <constraint firstItem="0Es-1E-gUp" firstAttribute="top" secondItem="Zp2-At-nlm" secondAttribute="bottom" id="FTH-tb-AM9"/>
+                            <constraint firstItem="k6M-ES-wpn" firstAttribute="leading" secondItem="ayv-mA-HfG" secondAttribute="leading" id="RdS-KF-dzK"/>
+                            <constraint firstItem="k6M-ES-wpn" firstAttribute="top" secondItem="ayv-mA-HfG" secondAttribute="top" id="Uy6-FC-efM"/>
                             <constraint firstItem="Zp2-At-nlm" firstAttribute="leading" secondItem="ayv-mA-HfG" secondAttribute="leading" id="gKy-PA-90Y"/>
+                            <constraint firstItem="Zp2-At-nlm" firstAttribute="top" secondItem="ayv-mA-HfG" secondAttribute="top" id="hX2-yd-DY7"/>
+                            <constraint firstAttribute="trailing" secondItem="k6M-ES-wpn" secondAttribute="trailing" id="hXJ-eO-dw3"/>
                             <constraint firstAttribute="trailing" secondItem="Zp2-At-nlm" secondAttribute="trailing" id="mXO-bG-XNl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="k6M-ES-wpn" id="fSE-40-nou"/>
+                        <outlet property="webView" destination="Zp2-At-nlm" id="X6R-En-1NR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PgT-Gn-Ztv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4449.275362318841" y="-428.804347826087"/>
+            <point key="canvasLocation" x="3944.9275362318845" y="-431.25000000000006"/>
         </scene>
     </scenes>
     <resources>
