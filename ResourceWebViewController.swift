@@ -55,6 +55,9 @@ class ResourceWebViewController: UIViewController, UIWebViewDelegate {
     
     
     // Web View Start Load page
+    
+    
+    
     func webViewDidStartLoad(webView: UIWebView) {
         progressView.progress = 0
         loading = true
