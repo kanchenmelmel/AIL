@@ -37,8 +37,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
 //        setUpSearchBar()
         
-        self.searchBar.barTintColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
-        self.searchBar.backgroundColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
+//        self.searchBar.barTintColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
+//        self.searchBar.backgroundColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
         self.searchBar.tintColor = UIColor(red: 68.0, green: 120.0, blue: 180.0, alpha: 1.0)
         self.navigationItem.titleView = searchBar
         searchBar.delegate = self
@@ -203,26 +203,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //    }
     
     
-    func setUpSearchBar() {
-        var index:Int?
-//        let searchBarView = self.subviews[0]
-        
-        for i in 0 ..< searchBar.subviews.count {
-            print(i)
-            if searchBar.subviews[i].isKindOfClass(UITextField) {
-                index = i
-                print(i)
-                break
-            }
-        }
-        
-        let searchFeild = searchBar.subviews[index!] as! UITextField
-        
-        searchFeild.backgroundColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
-        
-        
-
-    }
+//    func setUpSearchBar() {
+//        var index:Int?
+////        let searchBarView = self.subviews[0]
+//        
+//        for i in 0 ..< searchBar.subviews.count {
+//            print(i)
+//            if searchBar.subviews[i].isKindOfClass(UITextField) {
+//                index = i
+//                print(i)
+//                break
+//            }
+//        }
+//        
+//        let searchFeild = searchBar.subviews[index!] as! UITextField
+//        
+//        searchFeild.backgroundColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
+//        
+//        
+//
+//    }
     
 }
 
