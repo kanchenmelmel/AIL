@@ -39,4 +39,6 @@ class WordPressClient {
         }
         
     }
+    
+    func 
 }
