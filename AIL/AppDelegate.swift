@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import SlideMenuControllerSwift
 import Alamofire
+import AlamofireNetworkActivityIndicator
 
 
 
@@ -21,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        
+        //set up activityManager
+        NetworkActivityIndicatorManager.sharedManager.isEnabled = true
                 
         let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
         //let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController

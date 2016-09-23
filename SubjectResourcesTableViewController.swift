@@ -144,7 +144,7 @@ class SubjectResourcesTableViewController: UITableViewController {
  */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "resourcesPostWebViewSegue" {
-            let destnatinationVC = segue.destinationViewController as! ResourceWebViewController
+            let destnatinationVC = segue.destinationViewController as! WebViewController
             
             let index = tableView.indexPathForSelectedRow
             destnatinationVC.urlString = resourcesPosts[index!.row].link!

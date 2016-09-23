@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GrL-6F-tlE" id="aK7-Au-NzN">
-                                    <frame key="frameInset" width="414" height="110"/>
+                                    <frame key="frameInset" width="414" height="110.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xup-CS-cna">
@@ -92,7 +92,7 @@
         <!--PTE素材-->
         <scene sceneID="D3Q-4u-d9A">
             <objects>
-                <viewController id="RgZ-f6-D7J" customClass="ResourceWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RgZ-f6-D7J" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rnN-vZ-Vw9"/>
                         <viewControllerLayoutGuide type="bottom" id="0Es-1E-gUp"/>
@@ -123,7 +123,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PTE素材" id="pVJ-aJ-1bv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="7ZH-yz-57B">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="7ZH-yz-57B">
                             <connections>
                                 <action selector="showActivityViewController:" destination="RgZ-f6-D7J" id="XQg-wg-1Sb"/>
                             </connections>
@@ -140,6 +140,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ActivityVCButton" width="19" height="4"/>
         <image name="Group_shot_1" width="600" height="500"/>
     </resources>
 </document>
