@@ -56,9 +56,45 @@ class JSONParser {
                         let dateFormatter = DateFormatter()
                         post.editDate = dateFormatter.formatDateStringToMelTime(jsonArray[index]["editdate"].stringValue)
                     }
+                    if jsonArray[index]["excerpt"].isExists() {
+                        post.excerpt = jsonArray[index]["excerpt"].stringValue
+                    }
                     posts.append(post)
                     
                 }
+            } else {
+                let post = Post(entity: postDescription!, insertIntoManagedObjectContext: managedObjectContextToBeInserted)
+                if jsonArray[index]["id"].isExists() {
+                    post.id = jsonArray[index]["id"].int
+                }
+                if jsonArray[index]["title"].isExists() {
+                    post.title = jsonArray[index]["title"].stringValue
+                }
+                if jsonArray[index]["link"].isExists() {
+                    post.link = jsonArray[index]["link"].stringValue
+                }
+                if jsonArray[index]["date"].isExists() {
+                    let dateFormatter = DateFormatter()
+                    post.date = dateFormatter.formatDateStringToMelTime(jsonArray[index]["date"].stringValue)
+                }
+                if jsonArray[index]["thumbnail_url"].isExists() {
+                    post.thumbnailUrl = jsonArray[index]["thumbnail_url"].stringValue
+                }
+                if jsonArray[index]["featured_image_url"].isExists() {
+                    post.featuredImageUrl = jsonArray[index]["featured_image_url"].stringValue
+                }
+                if jsonArray[index]["status"].isExists() {
+                    post.status = jsonArray[index]["status"].stringValue
+                }
+                if jsonArray[index]["editdate"].isExists() {
+                    let dateFormatter = DateFormatter()
+                    post.editDate = dateFormatter.formatDateStringToMelTime(jsonArray[index]["editdate"].stringValue)
+                }
+                if jsonArray[index]["excerpt"].isExists() {
+                    post.excerpt = jsonArray[index]["excerpt"].stringValue
+                }
+                posts.append(post)
+
             }
         }
         print ("Test1")

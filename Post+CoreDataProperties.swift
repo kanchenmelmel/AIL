@@ -2,7 +2,7 @@
 //  Post+CoreDataProperties.swift
 //  AIL
 //
-//  Created by Work on 20/09/2016.
+//  Created by Work on 22/9/16.
 //  Copyright © 2016 au.com.melmel. All rights reserved.
 //
 
@@ -17,13 +17,14 @@ extension Post {
 
     @NSManaged public var date: NSDate?
     @NSManaged public var editDate: NSDate?
+    @NSManaged public var featuredImageDownloadedToFileSys: NSNumber?
     @NSManaged public var featuredImageUrl: String?
     @NSManaged public var id: NSNumber?
     @NSManaged public var link: String?
     @NSManaged public var status: String?
     @NSManaged public var thumbnailUrl: String?
     @NSManaged public var title: String?
-    @NSManaged public var featuredImageDownloadedToFileSys: NSNumber?
+    @NSManaged public var excerpt: String?
     @NSManaged public var categories: NSSet?
 
 }

@@ -12,18 +12,27 @@ class SubjectResourcesTableViewController: UITableViewController {
     var resourcesPosts = [Post]()
     
     var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
+    
+    let client = WordPressClient()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let resourceList = CoreDataOperation.fetchResourcesPostFromCoreData() {
-            resourcesPosts = resourceList
-        }
-        else {
-            print("There is someting wrong while loadding resources from Core Data")
+//        if let resourceList = CoreDataOperation.fetchResourcesPostFromCoreData() {
+//            resourcesPosts = resourceList
+//        }
+//        else {
+//            print("There is someting wrong while loadding resources from Core Data")
+//        }
+        
+        client.requestLatestResourcesPosts { (posts) in
+            self.resourcesPosts = posts
+            print(posts.count)
+            self.tableView.reloadData()
+            self.setUpTableViewImageCoordinator()
         }
         
-        self.setUpTableViewImageCoordinator()
+        
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -56,7 +65,7 @@ class SubjectResourcesTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.titleLabel.text = resourcesPosts[indexPath.row].title
-//        cell.subtitleLabel.text = resourcesPosts[indexPath.row].description
+        cell.subtitleLabel.text = resourcesPosts[indexPath.row].excerpt
         
         
         // Images
@@ -129,13 +138,19 @@ class SubjectResourcesTableViewController: UITableViewController {
     */
 
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     MARK: - Navigation
+ 
+     In a storyboard-based application, you will often want to do a little preparation before navigation
+ */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "resourcesPostWebViewSegue" {
+            let destnatinationVC = segue.destinationViewController as! ResourceWebViewController
+            
+            let index = tableView.indexPathForSelectedRow
+            destnatinationVC.urlString = resourcesPosts[index!.row].link!
+            destnatinationVC.titleString = resourcesPosts[index!.row].title!
+        }
     }
-    */
+
 
 }
