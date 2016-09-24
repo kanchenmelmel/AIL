@@ -21,6 +21,7 @@
 		4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */; };
 		4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E51D90226900294ACC /* ImageOperation.swift */; };
 		4DDD17E81D90942A00294ACC /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E71D90942A00294ACC /* FileDownloader.swift */; };
+		4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDD17E91D965E3600294ACC /* AllPosts.storyboard */; };
 		960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */; };
 		962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */; };
 		962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 		4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRetriever.swift; sourceTree = "<group>"; };
 		4DDD17E51D90226900294ACC /* ImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
 		4DDD17E71D90942A00294ACC /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
+		4DDD17E91D965E3600294ACC /* AllPosts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AllPosts.storyboard; path = ../AllPosts.storyboard; sourceTree = "<group>"; };
 		7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
 		960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressSyncManager.swift; sourceTree = "<group>"; };
 		962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				963061C41D77E1280079B7C5 /* AppDelegate.swift */,
 				963061CE1D77E1280079B7C5 /* Assets.xcassets */,
 				9698D2DF1D8BB717007ECB09 /* Main.storyboard */,
+				4DDD17E91D965E3600294ACC /* AllPosts.storyboard */,
 				963061D01D77E1280079B7C5 /* LaunchScreen.storyboard */,
 				963061D31D77E1280079B7C5 /* Info.plist */,
 				963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */,
@@ -367,6 +370,7 @@
 				9698D2E01D8BB717007ECB09 /* Main.storyboard in Resources */,
 				9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */,
 				963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */,
+				4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */,
 				9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

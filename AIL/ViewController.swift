@@ -174,6 +174,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //TODO Goes to another view controller
+        print ("CollectionViewDidSeleceted")
+        let featurePost = featurePosts[indexPath.row]
+       // print (featurePost.link)
+        self.performSegueWithIdentifier("showPostWebViewSegue", sender: featurePost)
     }
     
     
@@ -230,13 +234,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPostWebViewSegue" {
-            let cellIndex = collectionView.indexPathsForSelectedItems()![0]
+           // let cellIndex = collectionView.indexPathsForSelectedItems()![0]
             
-            let selectedPost = featurePosts[cellIndex.row]
+            //let selectedPost = featurePosts[cellIndex.row]
             
-            let destinationVC = segue.destinationViewController as! WebViewController
-            destinationVC.urlString = selectedPost.link
-            destinationVC.titleString = selectedPost.title
+            if let selectedPost = sender as? Post{
+            
+                let destinationVC = segue.destinationViewController as! WebViewController
+                destinationVC.urlString = selectedPost.link
+                destinationVC.titleString = selectedPost.title
+            }
         }
     }
     
