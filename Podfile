@@ -10,4 +10,6 @@ pod 'SlideMenuControllerSwift'
 pod 'SwiftyJSON'
 pod 'Alamofire', '~> 3.5’
 
+pod 'AlamofireNetworkActivityIndicator'
+
 end

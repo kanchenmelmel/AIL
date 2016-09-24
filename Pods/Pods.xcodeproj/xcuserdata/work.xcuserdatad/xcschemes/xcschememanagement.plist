@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireNetworkActivityIndicator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AIL.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2301595FA3F5FD8FB1986E7344CD09DD</key>
+		<key>016294C6367A8FC7B90F77DF748EFBCA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65294A25C1E8B2FF63948FBCA82E0135</key>
+		<key>228FFC4E78F899B58C33C57F31513A8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9552782AE994A52D7B53715F4CEF6F77</key>
+		<key>B90D3DB457500DDA824361B5B4A48E0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2752BAC1DB9A298990707C6690E7736</key>
 		<dict>
 			<key>primary</key>
 			<true/>

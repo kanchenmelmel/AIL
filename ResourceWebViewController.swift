@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResourceWebViewController: UIViewController, UIWebViewDelegate {
+class WebViewController: UIViewController, UIWebViewDelegate {
     
     var urlString:String?
     var titleString:String?

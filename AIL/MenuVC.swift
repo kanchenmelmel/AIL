@@ -24,10 +24,14 @@ class MenuVC: UIViewController {
     }
 
     @IBAction func archiveButtonClick(sender: AnyObject) {
+        
+        
     }
     
     @IBAction func showMessageTableVC(sender: AnyObject) {
+        let slideMenuController = self.slideMenuController()
         
+        slideMenuController!.performSegueWithIdentifier("showMessagesTableViewSegue", sender: slideMenuController)
     }
     
     @IBAction func ShowAboutAILButtonClick(sender: AnyObject) {

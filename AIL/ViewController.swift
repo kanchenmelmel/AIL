@@ -70,10 +70,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let results = try managedObjectContext.executeFetchRequest(postRequest) as! [Post]
             
             self.featurePosts = results
+            
         }catch {
             print ("Error: Could not fetch featured Posts")
         }
         
+        
+        self.collectionView.reloadData()
         
         self.setUpTableViewImageCoordinator()
         
@@ -223,6 +226,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        
 //
 //    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showPostWebViewSegue" {
+            let cellIndex = collectionView.indexPathsForSelectedItems()![0]
+            
+            let selectedPost = featurePosts[cellIndex.row]
+            
+            let destinationVC = segue.destinationViewController as! WebViewController
+            destinationVC.urlString = selectedPost.link
+            destinationVC.titleString = selectedPost.title
+        }
+    }
     
 }
 
