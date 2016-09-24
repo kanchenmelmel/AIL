@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8te-Cn-js9">
@@ -164,24 +164,24 @@
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AgB-nd-xht">
-                                    <size key="itemSize" width="286" height="155.5"/>
+                                    <size key="itemSize" width="287" height="169"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="286" height="99"/>
+                                        <rect key="frame" x="0.0" y="7" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="286" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE复议详解！PTE也能申请复议" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-vr-SJl">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="BEp-fN-5Cl"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <color key="textColor" red="0.19215686269999999" green="0.3803921569" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -201,7 +201,7 @@
                                             <constraint firstItem="ibP-vr-SJl" firstAttribute="top" secondItem="8Pl-hn-0hA" secondAttribute="bottom" constant="8" id="o9k-Ve-3Y9"/>
                                             <constraint firstItem="8Pl-hn-0hA" firstAttribute="top" secondItem="GOM-uh-xnG" secondAttribute="top" id="zwc-iR-ZNP"/>
                                         </constraints>
-                                        <size key="customSize" width="286" height="99"/>
+                                        <size key="customSize" width="287" height="169"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="aVk-hl-1yu"/>
@@ -210,47 +210,69 @@
                                         <connections>
                                             <outlet property="postImage" destination="8Pl-hn-0hA" id="AhK-0v-mYh"/>
                                             <outlet property="postLabel" destination="ibP-vr-SJl" id="TpK-97-DPr"/>
+                                            <segue destination="YNd-PP-dOb" kind="show" identifier="showPostWebViewSegue" id="xon-Lo-aao"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-Ku-fr0">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-Up-9Mu">
-                                        <state key="normal" image="报考流程"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-Up-9Mu" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="报考流程"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="buttonImg" value="baokao"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="qR6-uc-2DZ" kind="show" id="rkc-W8-mcf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGC-Mx-Jeg">
-                                        <state key="normal" image="联系我们"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGC-Mx-Jeg" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="buttonImg" value="lianxi"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="联系我们"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="3Rg-iI-EBl" kind="show" id="V8c-AZ-FDJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-vQ-jhN">
-                                        <state key="normal" title="Button" image="培训课程"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-vQ-jhN" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="培训课程"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="buttonImg" value="peixun"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="F5B-Bw-dcm" kind="show" id="YZR-CY-A8A"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="fx2-RM-Jrg"/>
+                                    <constraint firstAttribute="height" constant="87.5" id="5g3-t5-vK3"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8te-Cn-js9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="42N-WR-C9Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="T9M-Ku-fr0" secondAttribute="trailing" constant="-20" id="BjC-JM-ULb"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IeZ-1V-uQs"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PvT-St-LKz"/>
+                            <constraint firstAttribute="trailing" secondItem="T9M-Ku-fr0" secondAttribute="trailing" id="RvI-cW-CEY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8te-Cn-js9" secondAttribute="trailing" constant="-10" id="TrA-Lq-TQC"/>
                             <constraint firstAttribute="trailing" secondItem="cpW-4n-mFY" secondAttribute="trailing" id="U9P-dr-EbR"/>
-                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="bottom" constant="8" id="atN-Sz-wyK"/>
-                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ddy-4K-pr2"/>
+                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jk0-Gr-t1D"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mrb-tv-L4R"/>
+                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="bottom" constant="8" id="tEu-7i-vdO"/>
                             <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="tLQ-OT-kAb"/>
                             <constraint firstAttribute="trailing" secondItem="cpW-4n-mFY" secondAttribute="trailing" id="x0e-ZO-A7v"/>
                             <constraint firstItem="8te-Cn-js9" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="8" id="y3n-RI-zxg"/>
@@ -279,7 +301,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QQV-Or-G7T"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w2R-G2-Gcm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-lZ-6qv">
@@ -319,7 +341,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mkc-cL-CfR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vrn-ow-CZE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-7O-Sr0">
@@ -332,11 +354,17 @@
                                                         <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="13"/>
+                                                        </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(03)96708868" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZ6-RW-cl1">
                                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                         <color key="textColor" red="0.30980392156862746" green="0.45098039215686275" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -353,11 +381,17 @@
                                                         <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="13"/>
+                                                        </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pte@ail.vic.edu.au" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7H-VL-Vyu">
                                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                         <color key="textColor" red="0.30980392159999998" green="0.45098039220000002" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -375,11 +409,17 @@
                                                         <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="13"/>
+                                                        </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 2, 388 Bourke St, Melbourne 3000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuV-6v-J5s">
                                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                         <color key="textColor" red="0.30980392159999998" green="0.45098039220000002" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -388,9 +428,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="4pS-KW-uA4"/>
                                     <constraint firstItem="NTx-ZA-4a9" firstAttribute="leading" secondItem="vdg-7O-Sr0" secondAttribute="leading" constant="25" id="afA-6s-QG1"/>
                                     <constraint firstItem="NTx-ZA-4a9" firstAttribute="top" secondItem="vdg-7O-Sr0" secondAttribute="top" constant="14" id="gn0-Qe-74n"/>
+                                    <constraint firstAttribute="bottom" secondItem="NTx-ZA-4a9" secondAttribute="bottom" constant="14" id="hp9-XP-buW"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact us" translatesAutoresizingMaskIntoConstraints="NO" id="e87-Sh-0HD">
@@ -398,15 +438,6 @@
                                     <constraint firstAttribute="height" constant="184" id="aHK-Z0-9PP"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-tk-Fec">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Zpg-F5-u05"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="联系方式" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-ai-p4q">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -424,7 +455,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvO-Lu-OKW">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvO-Lu-OKW">
+                                <frame key="frameInset" minX="25" minY="605" width="90.5" height="29"/>
                                 <color key="backgroundColor" red="0.27450980390000002" green="0.46274509800000002" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90.5" id="Z04-Ua-fC9"/>
@@ -439,6 +471,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-tk-Fec">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zpg-F5-u05"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -471,7 +512,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njh-gO-CyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544.8" y="1222.9385307346329"/>
+            <point key="canvasLocation" x="1543.125" y="1222.1830985915492"/>
         </scene>
         <!--课程培训-->
         <scene sceneID="1ed-Ux-BWo">
@@ -482,7 +523,7 @@
                         <viewControllerLayoutGuide type="bottom" id="JIE-Ci-hyn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DgU-37-6mt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-UX-fwF">
@@ -523,7 +564,7 @@
                         <viewControllerLayoutGuide type="bottom" id="G9D-PS-47j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="op8-Ba-Ov1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
@@ -539,8 +580,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-UM-vGr">
                                         <state key="normal" title="     通知消息" image="messagesButton"/>
                                         <connections>
-                                            <action selector="showMessageTableVC:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="Dtp-Ls-7Wc"/>
-                                            <segue destination="THu-B7-IcD" kind="show" id="qTQ-6B-xIB"/>
+                                            <segue destination="THu-B7-IcD" kind="show" id="UjJ-a8-4ga"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-3b-Ygs">
@@ -580,7 +620,7 @@
                 <viewControllerPlaceholder storyboardName="Messages" referencedIdentifier="MessagesTableNavCtrl" id="THu-B7-IcD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qz4-nZ-QGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2391.1999999999998" y="279.76011994002999"/>
+            <point key="canvasLocation" x="3697" y="-88"/>
         </scene>
         <!--SubjectResourcesTableVC-->
         <scene sceneID="wIT-Zr-e5L">
@@ -588,7 +628,7 @@
                 <viewControllerPlaceholder storyboardName="SubjectResources" referencedIdentifier="SubjectResourcesTableVC" id="Ng3-6s-FB9" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0T-9h-nwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="-437"/>
+            <point key="canvasLocation" x="2334" y="24"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="van-p4-Yc0">
@@ -613,9 +653,59 @@
             </objects>
             <point key="canvasLocation" x="760.79999999999995" y="253.2233883058471"/>
         </scene>
+        <!--最新资讯-->
+        <scene sceneID="isE-LC-CiF">
+            <objects>
+                <viewController id="YNd-PP-dOb" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gtW-Lq-rDM"/>
+                        <viewControllerLayoutGuide type="bottom" id="uMg-8f-D6q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="89f-nl-GKD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pll-WC-Xev">
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UY0-zi-xHY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="m8j-9G-XAO"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pll-WC-Xev" firstAttribute="top" secondItem="89f-nl-GKD" secondAttribute="top" id="Btu-1b-FNC"/>
+                            <constraint firstItem="UY0-zi-xHY" firstAttribute="top" secondItem="89f-nl-GKD" secondAttribute="top" constant="65" id="VSx-bX-1Da"/>
+                            <constraint firstItem="UY0-zi-xHY" firstAttribute="leading" secondItem="89f-nl-GKD" secondAttribute="leading" id="qOU-ja-RQG"/>
+                            <constraint firstItem="uMg-8f-D6q" firstAttribute="top" secondItem="pll-WC-Xev" secondAttribute="bottom" id="vVy-j0-lh5"/>
+                            <constraint firstItem="pll-WC-Xev" firstAttribute="leading" secondItem="89f-nl-GKD" secondAttribute="leading" id="yh1-62-eRz"/>
+                            <constraint firstAttribute="trailing" secondItem="pll-WC-Xev" secondAttribute="trailing" id="z35-U5-V7x"/>
+                            <constraint firstAttribute="trailing" secondItem="UY0-zi-xHY" secondAttribute="trailing" id="zVJ-gq-G3T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="最新资讯" id="1tV-mN-gHJ">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="Yyu-h9-XNp">
+                            <connections>
+                                <action selector="showActivityViewController:" destination="YNd-PP-dOb" id="8rA-R7-2k3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="UY0-zi-xHY" id="3HT-5n-IEu"/>
+                        <outlet property="webView" destination="pll-WC-Xev" id="vgG-Wq-6Bs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meB-n7-z3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3233" y="-508"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AboutAILButton" width="15" height="13"/>
+        <image name="ActivityVCButton" width="19" height="4"/>
         <image name="ArchiveButton" width="16" height="15"/>
         <image name="Background" width="183" height="667"/>
         <image name="Group_shot_1" width="600" height="500"/>
@@ -624,13 +714,12 @@
         <image name="beikao" width="35" height="36"/>
         <image name="contact us" width="743" height="314"/>
         <image name="jijing" width="44" height="35"/>
+        <image name="lianxi" width="47" height="40"/>
         <image name="messagesButton" width="14" height="14"/>
         <image name="mokao" width="34" height="36"/>
+        <image name="peixun" width="40" height="40"/>
         <image name="pte" width="52" height="49"/>
         <image name="zice" width="33" height="36"/>
-        <image name="培训课程" width="239" height="171"/>
-        <image name="报考流程" width="239" height="169"/>
-        <image name="联系我们" width="260" height="175"/>
         <image name="课程培训" width="740" height="285"/>
         <image name="轻松报名" width="748" height="274"/>
     </resources>

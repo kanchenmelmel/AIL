@@ -34,6 +34,7 @@
 		963574981D90E15D00B8D1A5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963574971D90E15D00B8D1A5 /* ImageDownloader.swift */; };
 		9635749A1D90EF3300B8D1A5 /* TableViewImageLoadingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963574991D90EF3300B8D1A5 /* TableViewImageLoadingCoordinator.swift */; };
 		964C52B51D7FC563006E1E9D /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C52B41D7FC563006E1E9D /* DateFormatter.swift */; };
+		965216B31D94B29F00EA1823 /* HomeViewBottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965216B21D94B29F00EA1823 /* HomeViewBottomButton.swift */; };
 		965693401D9392B300FAC04B /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656933E1D9392B300FAC04B /* Post+CoreDataClass.swift */; };
 		965693411D9392B300FAC04B /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656933F1D9392B300FAC04B /* Post+CoreDataProperties.swift */; };
 		965693431D939BA800FAC04B /* ResourceWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965693421D939BA800FAC04B /* ResourceWebViewController.swift */; };
@@ -80,6 +81,7 @@
 		963574971D90E15D00B8D1A5 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		963574991D90EF3300B8D1A5 /* TableViewImageLoadingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewImageLoadingCoordinator.swift; sourceTree = "<group>"; };
 		964C52B41D7FC563006E1E9D /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		965216B21D94B29F00EA1823 /* HomeViewBottomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewBottomButton.swift; sourceTree = "<group>"; };
 		9656933E1D9392B300FAC04B /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9656933F1D9392B300FAC04B /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		965693421D939BA800FAC04B /* ResourceWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceWebViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */,
 				3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */,
 				3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */,
+				965216B21D94B29F00EA1823 /* HomeViewBottomButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965216B31D94B29F00EA1823 /* HomeViewBottomButton.swift in Sources */,
 				3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */,
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
 				963574981D90E15D00B8D1A5 /* ImageDownloader.swift in Sources */,
@@ -558,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -600,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

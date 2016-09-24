@@ -43,6 +43,8 @@ class HomeMainButton: UIButton {
         }
     }
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()
@@ -52,6 +54,8 @@ class HomeMainButton: UIButton {
         super.init(coder: coder)!
         self.initialize()
     }
+    
+    
     
     override func prepareForInterfaceBuilder() {
         self.initialize()
