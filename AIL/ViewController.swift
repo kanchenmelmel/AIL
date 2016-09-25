@@ -160,10 +160,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //TODO Goes to another view controller
-        print ("CollectionViewDidSeleceted")
-        let featurePost = featurePosts[indexPath.row]
-       // print (featurePost.link)
-        self.performSegueWithIdentifier("showPostWebViewSegue", sender: featurePost)
+        if indexPath.row == featurePosts.count - 1 {
+            print ("Lastrow")
+        }
+        else{
+            let featurePost = featurePosts[indexPath.row]
+
+            self.performSegueWithIdentifier("showPostWebViewSegue", sender: featurePost)
+        }
+        
     }
     
     
