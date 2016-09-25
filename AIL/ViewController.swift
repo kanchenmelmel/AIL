@@ -22,9 +22,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var featurePosts = [Post]()
     
-    let pendingOperations = PendingOperations()
-    
     var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
+    let wordpressClient = WordPressClient()
+    let postRetriever = PostRetriever()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +49,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let wordpressClient = WordPressClient()
-        
+      
         wordpressClient.requestLatestTwentyPosts { (posts) in
             print("Melmel:\(posts.count)")
         }
@@ -59,32 +58,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         
+        featurePosts = postRetriever.fetchPosts()
         
-        
-        
-        //The code is to be moved to PostRetriever.swift
-        let postRequest = NSFetchRequest()
-        postRequest.entity = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
-        
-        let httpString = "http"
-        let predicate = NSPredicate(format: "featuredImageUrl contains[c] %@", httpString)
-        postRequest.predicate = predicate
-        
-        do{
-            let results = try managedObjectContext.executeFetchRequest(postRequest) as! [Post]
-            
-            self.featurePosts = results
-            
-        }catch {
-            print ("Error: Could not fetch featured Posts")
+        if featurePosts.count <= 0 {
+            wordpressClient.requestLatestTwentyPosts { (posts) in
+                
+                self.featurePosts = self.postRetriever.fetchPosts()
+                self.createLastPost()
+                self.collectionView.reloadData()
+                self.setUpTableViewImageCoordinator()
+            }
+        }
+        else{
+            createLastPost()
+            self.collectionView.reloadData()
+            self.setUpTableViewImageCoordinator()
         }
         
-       
-        createLastPost()
         
-        self.collectionView.reloadData()
-        
-        self.setUpTableViewImageCoordinator()
+
         
     }
     
@@ -118,6 +110,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCell", forIndexPath: indexPath) as? PostCollectionViewCell{
             cell.backgroundColor = UIColor.whiteColor()
             
+            print ("123123: \(self.featurePosts.count)")
+            
             let featurePost = self.featurePosts[indexPath.row]
             
             cell.postLabel.text = featurePost.title
@@ -125,6 +119,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             if featurePost.featuredImageUrl != nil {
                 
+                print ("456456: \(self.tableViewImageLoadingCoordinator.imageRecords.count)")
                 let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
                 cell.postImage.image = imageRecord.image
                 
@@ -140,6 +135,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
                 
                 
+            }
+            else{
+                cell.postImage.image = featurePost.featuredImage
             }
             
             return cell
@@ -159,40 +157,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    func startOperationsForPhoto(post:Post,indexPath:NSIndexPath) {
-        switch (post.featuredLoadingImageState) {
-        case .New:
-            startDownloadFeaturedImageForPost (post:post,indexPath:indexPath)
-        default: break
-            //NSLog("Do nothing")
-        }
-    }
-    
-    func startDownloadFeaturedImageForPost(post post:Post,indexPath:NSIndexPath) {
-        //        if pendingOperations.downloadsInProgress[indexPath] != nil {
-        //            return
-        //        }
-        //
-        //
-        //            let downloader = ImageDownloader(post: post)
-        //
-        //            downloader.completionBlock = {
-        //                if downloader.cancelled {
-        //                    return
-        //                }
-        //                dispatch_async(dispatch_get_main_queue(), {
-        //                    self.pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
-        //                    self.collectionView.reloadItemsAtIndexPaths([indexPath])
-        //                    post.featuredLoadingImageState = .Downloaded
-        //                })
-        //            }
-        //
-        //            pendingOperations.downloadsInProgress[indexPath] = downloader
-        //            pendingOperations.downloadQueue.addOperation(downloader)
-        
-        
-        
-    }
+
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //TODO Goes to another view controller
         print ("CollectionViewDidSeleceted")
