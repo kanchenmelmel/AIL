@@ -22,6 +22,8 @@
 		4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E51D90226900294ACC /* ImageOperation.swift */; };
 		4DDD17E81D90942A00294ACC /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E71D90942A00294ACC /* FileDownloader.swift */; };
 		4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDD17E91D965E3600294ACC /* AllPosts.storyboard */; };
+		4DDD17EE1D97BB9500294ACC /* AllPostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17ED1D97BB9500294ACC /* AllPostsCell.swift */; };
+		4DDD17F41D97BDEF00294ACC /* AllPostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17F31D97BDEF00294ACC /* AllPostsVC.swift */; };
 		960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */; };
 		962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */; };
 		962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */; };
@@ -67,6 +69,8 @@
 		4DDD17E51D90226900294ACC /* ImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
 		4DDD17E71D90942A00294ACC /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
 		4DDD17E91D965E3600294ACC /* AllPosts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AllPosts.storyboard; path = ../AllPosts.storyboard; sourceTree = "<group>"; };
+		4DDD17ED1D97BB9500294ACC /* AllPostsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsCell.swift; sourceTree = "<group>"; };
+		4DDD17F31D97BDEF00294ACC /* AllPostsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsVC.swift; sourceTree = "<group>"; };
 		7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
 		960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressSyncManager.swift; sourceTree = "<group>"; };
 		962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		4DDD17EB1D9771DB00294ACC /* AllPosts */ = {
 			isa = PBXGroup;
 			children = (
+				4DDD17ED1D97BB9500294ACC /* AllPostsCell.swift */,
 			);
 			name = AllPosts;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 		4DDD17EC1D9771E700294ACC /* AllPosts */ = {
 			isa = PBXGroup;
 			children = (
+				4DDD17F31D97BDEF00294ACC /* AllPostsVC.swift */,
 			);
 			name = AllPosts;
 			sourceTree = "<group>";
@@ -506,6 +512,7 @@
 				9635749A1D90EF3300B8D1A5 /* TableViewImageLoadingCoordinator.swift in Sources */,
 				3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */,
 				4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */,
+				4DDD17EE1D97BB9500294ACC /* AllPostsCell.swift in Sources */,
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
 				962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */,
 				4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */,
@@ -523,6 +530,7 @@
 				4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */,
 				4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
+				4DDD17F41D97BDEF00294ACC /* AllPostsVC.swift in Sources */,
 				965693431D939BA800FAC04B /* ResourceWebViewController.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
 				962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */,

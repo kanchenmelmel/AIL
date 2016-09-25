@@ -9,13 +9,13 @@
         <!--PTE素材库-->
         <scene sceneID="TlF-lq-40Z">
             <objects>
-                <tableViewController storyboardIdentifier="AllPostsTableVC" id="V5H-xB-tkw" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AllPostsTableVC" id="V5H-xB-tkw" customClass="AllPostsVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" id="5ez-wU-yA5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubjectResourcesTableViewVell" rowHeight="111" id="UkB-uN-AV9" customClass="SubjectResourcesTableViewCell" customModule="AIL" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllPostsCell" rowHeight="111" id="UkB-uN-AV9" customClass="AllPostsCell" customModule="AIL" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UkB-uN-AV9" id="DB8-Z2-GWs">
@@ -71,7 +71,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="td8-P8-xaa" kind="show" id="T29-be-gNu"/>
+                                    <outlet property="cellImageView" destination="ASd-Nr-BGV" id="kq3-sP-IzF"/>
+                                    <outlet property="dateLabel" destination="lsx-ms-tlL" id="bpH-LX-OOQ"/>
+                                    <outlet property="subtitleLabel" destination="xNw-De-Ofm" id="HdX-yd-gwC"/>
+                                    <outlet property="titleLabel" destination="EJB-1T-fdY" id="cWi-Sf-RNu"/>
+                                    <segue destination="td8-P8-xaa" kind="show" identifier="webviewController" id="T29-be-gNu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
