@@ -58,6 +58,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.slideMenuController()?.delegate = self
         
         
+        
+        
+        
+        
         //The code is to be moved to PostRetriever.swift
         let postRequest = NSFetchRequest()
         postRequest.entity = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
@@ -75,6 +79,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print ("Error: Could not fetch featured Posts")
         }
         
+       
+        createLastPost()
         
         self.collectionView.reloadData()
         
@@ -90,6 +96,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         
+        
+    }
+    
+    func createLastPost() -> Void{
+        //create last post
+        let postDescription = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
+        let lastPost = Post(entity: postDescription!, insertIntoManagedObjectContext: nil)
+        
+        lastPost.featuredImage = UIImage(named: "pte")
+        lastPost.title = "点击阅读更多资讯"
+        lastPost.featuredImageUrl = nil
+        
+        featurePosts.append(lastPost)
         
     }
     
@@ -133,8 +152,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func setUpTableViewImageCoordinator(){
         for post in featurePosts {
-            let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
-            self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+            if post.featuredImageUrl != nil{
+                let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
+                self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+            }
         }
     }
     
