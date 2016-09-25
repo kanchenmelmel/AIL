@@ -8,3 +8,41 @@
 
 import UIKit
 import CoreData
+
+
+class PostRetriever{
+    
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    func fetchPosts() -> [Post]{
+        
+        var posts = [Post]()
+        let postRequest = NSFetchRequest()
+
+        postRequest.entity = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
+
+        let httpString = "http"
+        let predicate = NSPredicate(format: "featuredImageUrl contains[c] %@", httpString)
+        postRequest.predicate = predicate
+
+        do{
+            let results = try managedObjectContext.executeFetchRequest(postRequest) as! [Post]
+
+                posts = results
+                return posts
+
+        }catch {
+            print ("Error: Could not fetch featured Posts")
+        }
+        
+        return posts
+
+    }
+    
+    
+    
+    
+    
+    
+}
