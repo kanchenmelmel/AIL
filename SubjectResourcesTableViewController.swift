@@ -67,6 +67,10 @@ class SubjectResourcesTableViewController: UITableViewController {
         cell.titleLabel.text = resourcesPosts[indexPath.row].title
         cell.subtitleLabel.text = resourcesPosts[indexPath.row].excerpt
         
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .MediumStyle
+        cell.dateLabel.text = "\(dateFormatter.stringFromDate(resourcesPosts[indexPath.row].date!).uppercaseString)" + " "
+        
         
         // Images
         print(resourcesPosts[indexPath.row].featuredImageUrl)

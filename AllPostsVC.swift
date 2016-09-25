@@ -10,14 +10,22 @@ import UIKit
 
 class AllPostsVC: UITableViewController{
 
+    
+    var allPosts = [Post]()
+    
+    var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
+    
+    let client = WordPressClient()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        client.requestAllPosts { (posts) in
+            self.allPosts = posts
+            self.tableView.reloadData()
+            self.setUpTableViewImageCoordinator()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,11 +36,67 @@ class AllPostsVC: UITableViewController{
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return allPosts.count
+    }
+    
+    func setUpTableViewImageCoordinator(){
+        for post in allPosts {
+            let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
+            self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("AllPostsCell", forIndexPath: indexPath) as! AllPostsCell
+        
+        // Configure the cell...
+        let post = allPosts[indexPath.row]
+        cell.titleLabel.text = post.title
+        cell.subtitleLabel.text = post.excerpt
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .MediumStyle
+        cell.dateLabel.text = "\(dateFormatter.stringFromDate(post.date!).uppercaseString)" + " "
+        
+        
+        // Images
+      
+        if post.featuredImageUrl != nil {
+            
+            let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
+            cell.cellImageView.image = imageRecord.image
+            print(imageRecord.image)
+            
+            switch (imageRecord.state) {
+            case .New, .Downloaded:
+                
+                self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
+                    self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                })
+            default:
+                print("Do Nothing for loading cell image \(indexPath.row)")
+            }
+            
+            
+        }
+        
+        
+        
+        return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "webviewController" {
+            let destnatinationVC = segue.destinationViewController as! WebViewController
+            
+            let index = tableView.indexPathForSelectedRow
+            destnatinationVC.urlString = allPosts[index!.row].link!
+            destnatinationVC.titleString = allPosts[index!.row].title!
+        }
     }
 
     /*
