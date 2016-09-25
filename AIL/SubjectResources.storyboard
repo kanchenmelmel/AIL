@@ -72,6 +72,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellImageView" destination="jCg-SQ-hJm" id="JFQ-V6-TIX"/>
+                                    <outlet property="dateLabel" destination="1cZ-do-arz" id="I2X-Nf-Jn1"/>
                                     <outlet property="subtitleLabel" destination="7Ia-sf-nGf" id="TK8-6s-JIp"/>
                                     <outlet property="titleLabel" destination="xup-CS-cna" id="uH6-YF-z9B"/>
                                     <segue destination="RgZ-f6-D7J" kind="show" identifier="resourcesPostWebViewSegue" id="pQy-Ws-wzc"/>

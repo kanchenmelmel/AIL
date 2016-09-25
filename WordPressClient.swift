@@ -61,4 +61,27 @@ class WordPressClient {
 //        Alamofire.request
         
     }
+    
+    func requestAllPosts(completionHandler: ([Post]) -> Void) {
+        let urlArguments = "?filter[posts_per_page]=50"
+        print(BASE_URL+RESOURSES+urlArguments)
+        Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let jsonArray = JSON(value)
+                    // print (jsonArray)
+                    completionHandler(JSONParser.parseJSONDictionaryToPostManagedObject(false, ifInsertIntoManagedContext: false, jsonArray: jsonArray))
+                    
+                    // Save Managed Object Context
+                    //CoreDataOperation.saveManagedObjectContext()
+                    
+                }
+            case .Failure: break
+            }
+        }
+        
+        //        Alamofire.request
+        
+    }
 }

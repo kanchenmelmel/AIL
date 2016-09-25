@@ -161,7 +161,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //TODO Goes to another view controller
         if indexPath.row == featurePosts.count - 1 {
-            print ("Lastrow")
+            self.performSegueWithIdentifier("allPostVC", sender: nil)
         }
         else{
             let featurePost = featurePosts[indexPath.row]
