@@ -630,6 +630,14 @@
             </objects>
             <point key="canvasLocation" x="2334" y="24"/>
         </scene>
+        <!--AllPostsTableVC-->
+        <scene sceneID="vmw-uv-2hO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AllPosts" referencedIdentifier="AllPostsTableVC" id="Tbn-Fn-BNn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkv-Fk-q6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2307" y="356"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="van-p4-Yc0">
             <objects>
