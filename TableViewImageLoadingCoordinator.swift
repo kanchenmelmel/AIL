@@ -47,5 +47,47 @@ class TableViewImageLoadingCoordinator {
         pendingOperations.downloadQueue.addOperation(downloader)
     }
     
+    func suspendAllOperations(){
+        pendingOperations.downloadQueue.suspended = true
+    }
+    
+    
+    func resumeAllOperations(){
+        pendingOperations.downloadQueue.suspended = false
+        
+    }
+    
+    func loadImagesForOnScreenCells(indexPaths: [NSIndexPath], completionhandler:(indexPath:NSIndexPath)->Void){
+        
+        let allPendingOperations = Set(pendingOperations.downloadsInProgress.keys)
+        
+        var toBeCancelled = allPendingOperations
+        let visiblePaths = Set(indexPaths)
+        toBeCancelled.subtractInPlace(visiblePaths)
+        
+        var toBeStarted = visiblePaths
+        toBeStarted.subtractInPlace(allPendingOperations)
+        
+        for indexPath in toBeCancelled{
+            if let pendingDownload = pendingOperations.downloadsInProgress[indexPath]{
+                pendingDownload.cancel()
+            }
+            pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
+            
+        }
+        
+        for indexPath in toBeStarted{
+            let indexPath = indexPath as NSIndexPath
+//            let recordToProcess = posts[indexPath.row]
+//            print("test")
+            let imageRecord = self.imageRecords[indexPath.row]
+            //startOperationsForPhoto(recordToProcess, indexPath: indexPath)
+            self.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
+                completionhandler(indexPath: indexPath)
+            })
+        }
+
+    }
+    
     
 }

@@ -43,6 +43,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     @IBAction func showActivityViewController(sender: AnyObject) {
         
+        
         let url = NSURL(string: urlString!)
         print("Test3")
         let activityViewController = UIActivityViewController(activityItems: [titleString!,url!], applicationActivities: nil)

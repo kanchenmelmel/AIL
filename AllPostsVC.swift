@@ -36,6 +36,9 @@ class AllPostsVC: UITableViewController{
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        print ("visiblePaths: \(tableView.indexPathsForVisibleRows)")
+        
+        
         return 1
     }
 
@@ -73,10 +76,11 @@ class AllPostsVC: UITableViewController{
             
             switch (imageRecord.state) {
             case .New, .Downloaded:
-                
-                self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
-                    self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-                })
+                if (!tableView.dragging && !tableView.decelerating){
+                    self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
+                        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    })
+                }
             default:
                 print("Do Nothing for loading cell image \(indexPath.row)")
             }
@@ -87,6 +91,30 @@ class AllPostsVC: UITableViewController{
         
         
         return cell
+    }
+    
+    override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        self.tableViewImageLoadingCoordinator.suspendAllOperations()
+    }
+    
+    override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate{
+            
+           
+            
+            self.tableViewImageLoadingCoordinator.loadImagesForOnScreenCells(tableView.indexPathsForVisibleRows!, completionhandler: { (indexPath) in
+                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            })
+            self.tableViewImageLoadingCoordinator.resumeAllOperations()
+        }
+    }
+    
+    override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        self.tableViewImageLoadingCoordinator.loadImagesForOnScreenCells(tableView.indexPathsForVisibleRows!, completionhandler: { (indexPath) in
+            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        })
+        
+        self.tableViewImageLoadingCoordinator.resumeAllOperations()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
