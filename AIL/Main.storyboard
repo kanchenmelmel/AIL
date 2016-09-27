@@ -23,7 +23,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8te-Cn-js9">
@@ -313,7 +313,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QQV-Or-G7T"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w2R-G2-Gcm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-lZ-6qv">
@@ -353,7 +353,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mkc-cL-CfR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vrn-ow-CZE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-7O-Sr0">
@@ -531,16 +531,16 @@
         <!--课程培训-->
         <scene sceneID="1ed-Ux-BWo">
             <objects>
-                <viewController id="F5B-Bw-dcm" sceneMemberID="viewController">
+                <viewController id="F5B-Bw-dcm" customClass="CourseTrainingViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D8n-wK-g3B"/>
                         <viewControllerLayoutGuide type="bottom" id="JIE-Ci-hyn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DgU-37-6mt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-UX-fwF">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-UX-fwF" customClass="CustomizedSegmentedControl" customModule="AIL" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9Tu-UN-TX4"/>
@@ -550,8 +550,11 @@
                                     <segment title="PTE平时班"/>
                                     <segment title="PTE一对一VIP"/>
                                 </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="selectedBackgroundImage" value="Background"/>
+                                </userDefinedRuntimeAttributes>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="课程培训" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-0B-bJV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="课程培训" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-0B-bJV">
                                 <frame key="frameInset" minY="124" width="413" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -564,6 +567,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="课程培训" id="4l6-77-I47"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="tWD-UX-fwF" id="Woc-I1-Wne"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdH-rY-9jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -578,7 +584,7 @@
                         <viewControllerLayoutGuide type="bottom" id="G9D-PS-47j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="op8-Ba-Ov1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
@@ -684,7 +690,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uMg-8f-D6q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="89f-nl-GKD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pll-WC-Xev">
@@ -737,7 +743,7 @@
         <image name="contact us" width="743" height="314"/>
         <image name="jijing" width="44" height="35"/>
         <image name="lianxi" width="47" height="40"/>
-        <image name="messagesButton" width="14" height="13"/>
+        <image name="messagesButton" width="14" height="14"/>
         <image name="mokao" width="34" height="36"/>
         <image name="peixun" width="40" height="40"/>
         <image name="pte" width="52" height="49"/>
@@ -748,4 +754,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="0Lz-0j-XMW"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>
