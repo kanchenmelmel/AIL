@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--机经题库-->
+        <scene sceneID="iQN-xU-gtB">
+            <objects>
+                <tableViewController storyboardIdentifier="BeiKaoGongLueTableVC" id="xhr-LG-ZU8" customClass="BeiKaoGongLueTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" id="U56-tj-YuY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TestDBTableViewCell" rowHeight="111" id="YjQ-w3-gkr" customClass="SubjectResourcesTableViewCell" customModule="AIL" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="111"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YjQ-w3-gkr" id="7yd-Ry-XJo">
+                                    <frame key="frameInset" width="375" height="110.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wk9-VB-BaN">
+                                            <attributedString key="attributedText">
+                                                <fragment content="Model BlackHole Re-Creates Stephen Hawking Prediction">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.27058823529411763" green="0.46666666666666667" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这段语音主要说了通过模拟黑洞的吞噬方式，霍金这段语音主要说了通过模拟黑洞的吞噬方式，霍金" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZy-NZ-kut">
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12.08.2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ3-WG-rPa">
+                                            <frame key="frameInset" minX="8" minY="93" width="55" height="10"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="QOi-m1-rzA" customClass="RoundedImageView" customModule="AIL">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="88" id="xYJ-vn-whg"/>
+                                                <constraint firstAttribute="width" constant="115" id="y1Z-NZ-Obs"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QOi-m1-rzA" firstAttribute="trailing" secondItem="7yd-Ry-XJo" secondAttribute="trailingMargin" id="0gl-2y-Kb6"/>
+                                        <constraint firstItem="wk9-VB-BaN" firstAttribute="leading" secondItem="7yd-Ry-XJo" secondAttribute="leading" constant="8" id="8Qm-dk-1ka"/>
+                                        <constraint firstItem="sZ3-WG-rPa" firstAttribute="leading" secondItem="7yd-Ry-XJo" secondAttribute="leadingMargin" id="BRT-hP-eAq"/>
+                                        <constraint firstItem="sZ3-WG-rPa" firstAttribute="bottom" secondItem="7yd-Ry-XJo" secondAttribute="bottomMargin" id="E3y-1x-Re5"/>
+                                        <constraint firstItem="lZy-NZ-kut" firstAttribute="top" secondItem="wk9-VB-BaN" secondAttribute="bottom" constant="4" id="Gub-pA-UJZ"/>
+                                        <constraint firstItem="wk9-VB-BaN" firstAttribute="top" secondItem="7yd-Ry-XJo" secondAttribute="top" constant="12" id="MjF-Rk-XaK"/>
+                                        <constraint firstItem="QOi-m1-rzA" firstAttribute="leading" secondItem="wk9-VB-BaN" secondAttribute="trailing" constant="39" id="jVd-P7-5bm"/>
+                                        <constraint firstItem="QOi-m1-rzA" firstAttribute="leading" secondItem="lZy-NZ-kut" secondAttribute="trailing" constant="62" id="nsz-cH-8DS"/>
+                                        <constraint firstItem="QOi-m1-rzA" firstAttribute="centerY" secondItem="7yd-Ry-XJo" secondAttribute="centerY" id="rsT-FY-hyB"/>
+                                        <constraint firstItem="lZy-NZ-kut" firstAttribute="leading" secondItem="7yd-Ry-XJo" secondAttribute="leadingMargin" id="vso-DK-IG2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellImageView" destination="QOi-m1-rzA" id="qgQ-2j-UsF"/>
+                                    <outlet property="dateLabel" destination="sZ3-WG-rPa" id="1Jm-eh-8Hw"/>
+                                    <outlet property="subtitleLabel" destination="lZy-NZ-kut" id="8Sh-iu-law"/>
+                                    <outlet property="titleLabel" destination="wk9-VB-BaN" id="49l-1z-Au7"/>
+                                    <segue destination="u9n-vD-AW4" kind="show" identifier="resourcesPostWebViewSegue" id="nQ4-TS-4kS">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xhr-LG-ZU8" id="0Km-i5-9mu"/>
+                            <outlet property="delegate" destination="xhr-LG-ZU8" id="ZaW-Pj-fss"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="机经题库" id="bmN-tT-1ao"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXm-z5-jbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.5797101449277" y="-520.10869565217399"/>
+        </scene>
+        <!--机经题库-->
+        <scene sceneID="Dzs-vN-CDe">
+            <objects>
+                <viewController id="u9n-vD-AW4" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oAZ-Cz-roF"/>
+                        <viewControllerLayoutGuide type="bottom" id="YWM-yb-mDy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XhW-Kg-ezU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNV-A2-rsG">
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yXE-1e-R9T">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="I7G-cW-fo9"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YWM-yb-mDy" firstAttribute="top" secondItem="MNV-A2-rsG" secondAttribute="bottom" id="IkO-Ud-4mI"/>
+                            <constraint firstAttribute="trailing" secondItem="MNV-A2-rsG" secondAttribute="trailing" id="YJF-qA-OEn"/>
+                            <constraint firstAttribute="trailing" secondItem="yXE-1e-R9T" secondAttribute="trailing" id="Ztn-6Q-m9W"/>
+                            <constraint firstItem="MNV-A2-rsG" firstAttribute="leading" secondItem="XhW-Kg-ezU" secondAttribute="leading" id="jq3-Sr-um1"/>
+                            <constraint firstItem="MNV-A2-rsG" firstAttribute="top" secondItem="XhW-Kg-ezU" secondAttribute="top" id="oIC-5x-qJ2"/>
+                            <constraint firstItem="yXE-1e-R9T" firstAttribute="leading" secondItem="XhW-Kg-ezU" secondAttribute="leading" id="yiZ-5G-hsX"/>
+                            <constraint firstItem="yXE-1e-R9T" firstAttribute="top" secondItem="XhW-Kg-ezU" secondAttribute="top" constant="65" id="ykD-27-dmk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="机经题库" id="pd2-q4-to9">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="DL0-SX-OIZ">
+                            <connections>
+                                <action selector="showActivityViewController:" destination="u9n-vD-AW4" id="S41-zs-7ac"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="yXE-1e-R9T" id="Mov-ht-yX7"/>
+                        <outlet property="webView" destination="MNV-A2-rsG" id="OH0-sG-U6p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wj-dD-iiH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797.5999999999999" y="-527.58620689655174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ActivityVCButton" width="19" height="4"/>
+        <image name="Group_shot_1" width="600" height="500"/>
+    </resources>
+</document>
