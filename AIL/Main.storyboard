@@ -6,6 +6,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--TestDBTableVC-->
+        <scene sceneID="QiB-7y-wfL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TestDB" referencedIdentifier="TestDBTableVC" id="5om-ZF-r0u" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ymr-TX-Qak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1340" y="-127"/>
+        </scene>
         <!--首页-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -41,6 +49,9 @@
                                                                 <real key="value" value="12"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="5om-ZF-r0u" kind="show" id="nAE-Uu-tUz"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-Ri-jZ6" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
                                                         <state key="normal" title="Button"/>

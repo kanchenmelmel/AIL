@@ -26,12 +26,12 @@ class TestDBTableViewController: UITableViewController {
         //            print("There is someting wrong while loadding resources from Core Data")
         //        }
         
-        client.requestLatestResourcesPosts { (posts) in
+        client.requestLatestPostsByCategories(166, completionHandler: { (posts) in
             self.posts = posts
             print(posts.count)
             self.tableView.reloadData()
             self.setUpTableViewImageCoordinator()
-        }
+        })
         
         
         
@@ -62,7 +62,7 @@ class TestDBTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SubjectResourcesTableViewVell", forIndexPath: indexPath) as! SubjectResourcesTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TestDBTableViewCell", forIndexPath: indexPath) as! SubjectResourcesTableViewCell
         
         // Configure the cell...
         cell.titleLabel.text = posts[indexPath.row].title
@@ -79,7 +79,7 @@ class TestDBTableViewController: UITableViewController {
             
             let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
             cell.cellImageView.image = imageRecord.image
-            print(imageRecord.image)
+            //print(imageRecord.image)
             
             switch (imageRecord.state) {
             case .New, .Downloaded:
@@ -101,7 +101,10 @@ class TestDBTableViewController: UITableViewController {
     
     func setUpTableViewImageCoordinator(){
         for post in posts {
-            let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
+            NSLog("\(post.featuredImageUrl)")
+            
+            let imageUrlString = post.featuredImageUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+            let imageRecord = ImageRecord(name: "", url: NSURL(string: imageUrlString!)!)
             self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
         }
     }
