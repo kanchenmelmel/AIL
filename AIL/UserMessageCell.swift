@@ -10,6 +10,14 @@ import UIKit
 
 class UserMessageCell: UITableViewCell {
 
+    @IBOutlet weak var viewImage: UIImageView!
+    
+    @IBOutlet weak var titleLbael: UILabel!
+    
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
