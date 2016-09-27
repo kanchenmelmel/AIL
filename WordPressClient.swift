@@ -39,8 +39,9 @@ class WordPressClient {
         
     }
     
-    func requestLatestResourcesPosts(completionHandler: ([Post]) -> Void) {
-        let urlArguments = "?categories=159"
+    func requestLatestPostsByCategories(categoryId:Int, completionHandler: ([Post]) -> Void) {
+        //159
+        let urlArguments = "?categories=\(categoryId)"
         print(BASE_URL+RESOURSES+urlArguments)
         Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
@@ -84,4 +85,5 @@ class WordPressClient {
         //        Alamofire.request
         
     }
+    
 }

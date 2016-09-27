@@ -25,12 +25,13 @@ class SubjectResourcesTableViewController: UITableViewController {
 //            print("There is someting wrong while loadding resources from Core Data")
 //        }
         
-        client.requestLatestResourcesPosts { (posts) in
+        client.requestLatestPostsByCategories(159) { (posts) in
             self.resourcesPosts = posts
             print(posts.count)
             self.tableView.reloadData()
             self.setUpTableViewImageCoordinator()
         }
+        
         
         
         
