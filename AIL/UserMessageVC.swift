@@ -10,6 +10,13 @@ import UIKit
 
 class UserMessageVC: UITableViewController {
 
+    
+    var userMessages = [Message]()
+    
+    let tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
+    
+    let client = WordPressClient()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -127,13 +127,13 @@
 		4DAEAFA71D7A486700842C4F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4DDD18061D9AD00400294ACC /* UserMessage */,
 				96A691D41D98FF2C00D29995 /* BeiKaoGongLue */,
 				4DDD17EC1D9771E700294ACC /* AllPosts */,
 				9683A6771D88E05C00360D98 /* SubjectResources */,
 				9671E5DB1D7E4B7D008250C7 /* SlideMenuController */,
 				963061C61D77E1280079B7C5 /* ViewController.swift */,
 				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
-				4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */,
 				3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */,
 			);
 			name = Controller;
@@ -142,11 +142,11 @@
 		4DAEAFA81D7A486F00842C4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4DDD18051D9ACBD800294ACC /* UserMessage */,
 				4DDD17EB1D9771DB00294ACC /* AllPosts */,
 				967CF92C1D922F13007CF78C /* CustomizedView */,
 				9683A6791D88E0B800360D98 /* DesignableExtension */,
 				9683A6781D88E08D00360D98 /* SubjectResources */,
-				4D9C9A751D88B3DC00EA98D0 /* UserMessageCell.swift */,
 				4DAEAFAA1D7A50EF00842C4F /* PostCollectionViewCell.swift */,
 				4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */,
 				4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */,
@@ -186,6 +186,22 @@
 				4DDD17F31D97BDEF00294ACC /* AllPostsVC.swift */,
 			);
 			name = AllPosts;
+			sourceTree = "<group>";
+		};
+		4DDD18051D9ACBD800294ACC /* UserMessage */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C9A751D88B3DC00EA98D0 /* UserMessageCell.swift */,
+			);
+			name = UserMessage;
+			sourceTree = "<group>";
+		};
+		4DDD18061D9AD00400294ACC /* UserMessage */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */,
+			);
+			name = UserMessage;
 			sourceTree = "<group>";
 		};
 		69EFDD5AB6EBC4F4E4D8ED54 /* Frameworks */ = {

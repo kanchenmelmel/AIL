@@ -10,3 +10,6 @@ let BASE_URL = "http://ail.vic.edu.au//wp-json/wp/v2/"
 let RESOURSES = "posts"
 
 let FEATURED_IMAGE_NAME = "featured_image.jpg"
+
+let TEST_URL = "http://melmel.com.au/test/wp-json/wp/v2/"
+let TEST_RESOURCES = "messages"
