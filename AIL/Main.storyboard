@@ -6,13 +6,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TestDBTableVC-->
+        <!--BeiKaoGongLueTableVC-->
         <scene sceneID="QiB-7y-wfL">
             <objects>
-                <viewControllerPlaceholder storyboardName="TestDB" referencedIdentifier="TestDBTableVC" id="5om-ZF-r0u" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="BeiKaoGongLue" referencedIdentifier="BeiKaoGongLueTableVC" id="5om-ZF-r0u" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymr-TX-Qak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="-127"/>
+            <point key="canvasLocation" x="1563" y="-148"/>
         </scene>
         <!--首页-->
         <scene sceneID="tne-QT-ifu">
@@ -50,7 +50,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="5om-ZF-r0u" kind="show" id="nAE-Uu-tUz"/>
+                                                            <segue destination="Ng3-6s-FB9" kind="show" id="0Lz-0j-XMW"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-Ri-jZ6" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
@@ -745,4 +745,7 @@
         <image name="课程培训" width="740" height="285"/>
         <image name="轻松报名" width="748" height="274"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0Lz-0j-XMW"/>
+    </inferredMetricsTieBreakers>
 </document>

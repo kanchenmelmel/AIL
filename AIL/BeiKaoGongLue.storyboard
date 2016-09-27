@@ -9,7 +9,7 @@
         <!--机经题库-->
         <scene sceneID="iQN-xU-gtB">
             <objects>
-                <tableViewController storyboardIdentifier="TestDBTableVC" id="xhr-LG-ZU8" customClass="TestDBTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BeiKaoGongLueTableVC" id="xhr-LG-ZU8" customClass="BeiKaoGongLueTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" id="U56-tj-YuY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

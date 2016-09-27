@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestDBTableViewController: UITableViewController {
+class BeiKaoGongLueTableViewController: UITableViewController {
 
     var posts = [Post]()
     
