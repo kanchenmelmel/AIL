@@ -13,25 +13,32 @@ class UserMessageVC: UITableViewController {
     
     var userMessages = [Message]()
     
-    let tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
+    //let tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     
     let client = WordPressClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
+        
+        userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
+        
+        if userMessages.count <= 0 {
+            client.requestAllMessages { (messages) in
+                self.userMessages = messages
+              
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -41,7 +48,7 @@ class UserMessageVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return userMessages.count
     }
 
     @IBAction func backButtonPressed(sender: AnyObject) {
@@ -49,10 +56,25 @@ class UserMessageVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("userMessageCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("userMessageCell", forIndexPath: indexPath) as! UserMessageCell
+        
+        let message = userMessages[indexPath.row]
 
         // Configure the cell...
-        let messageIcon = UIImage(named: "Unread")
+        cell.titleLbael.text = message.title
+        cell.subtitleLabel.text = message.content
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .MediumStyle
+        cell.dateLabel.text = "\(dateFormatter.stringFromDate(message.date!).uppercaseString)" + " "
+        
+        var messageIcon: UIImage?
+        if message.viewed == true {
+            messageIcon = UIImage(named: "Read")
+        }
+        else{
+            messageIcon = UIImage(named: "Unread")
+        }
         cell.imageView?.image = messageIcon
         
 

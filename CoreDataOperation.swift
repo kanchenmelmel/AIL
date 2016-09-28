@@ -100,6 +100,24 @@ class CoreDataOperation {
         
         return nil
     }
+    
+    
+    static func fetchAllMessagesFromCoreData() -> [Message]?{
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let messageFetchRequest = NSFetchRequest(entityName: EntityType.Message.rawValue)
+        
+        do {
+            let objects = try managedObjectContext.executeFetchRequest(messageFetchRequest) as! [Message]
+            return objects
+            
+            
+        } catch {
+            print("fetch request errors!")
+        }
+        
+        return nil
+    }
 }
 
 
@@ -107,4 +125,5 @@ class CoreDataOperation {
 enum EntityType:String {
     case Post = "Post"
     case Category = "Category"
+    case Message = "Message"
 }

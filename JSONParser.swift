@@ -97,8 +97,65 @@ class JSONParser {
 
             }
         }
-        print ("Test1")
-        print (posts)
         return posts
+    }
+    
+    
+    
+    static func parseJSONDictionaryToMessageManagedObject(checkIfExistInCoreData:Bool,ifInsertIntoManagedContext:Bool,jsonArray:JSON) -> [Message]{
+        
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let messageDescription = NSEntityDescription.entityForName("Message", inManagedObjectContext: managedObjectContext)
+        
+        var managedObjectContextToBeInserted:NSManagedObjectContext? = managedObjectContext
+        
+        if !ifInsertIntoManagedContext {
+            managedObjectContextToBeInserted = nil
+        }
+        var messages = [Message]()
+        for index in 0...jsonArray.count-1 {
+            if checkIfExistInCoreData {
+                if !CoreDataOperation.checkIdExist(jsonArray[index]["id"].int!, entityType: .Message){
+                    let message = Message(entity: messageDescription!, insertIntoManagedObjectContext: managedObjectContextToBeInserted)
+                    if jsonArray[index]["id"].isExists() {
+                        message.id = jsonArray[index]["id"].int
+                    }
+                    if jsonArray[index]["title"].isExists() {
+                        message.title = jsonArray[index]["title"].stringValue
+                    }
+                    if jsonArray[index]["date"].isExists() {
+                        let dateFormatter = DateFormatter()
+                        message.date = dateFormatter.formatDateStringToMelTime(jsonArray[index]["date"].stringValue)
+                    }
+                    if jsonArray[index]["content"].isExists() {
+                        message.content = jsonArray[index]["content"].stringValue
+                    }
+                    message.viewed = false
+                
+                    messages.append(message)
+                    
+                }
+            } else {
+                let message = Message(entity: messageDescription!, insertIntoManagedObjectContext: managedObjectContextToBeInserted)
+                if jsonArray[index]["id"].isExists() {
+                    message.id = jsonArray[index]["id"].int
+                }
+                if jsonArray[index]["title"].isExists() {
+                    message.title = jsonArray[index]["title"].stringValue
+                }
+                if jsonArray[index]["date"].isExists() {
+                    let dateFormatter = DateFormatter()
+                    message.date = dateFormatter.formatDateStringToMelTime(jsonArray[index]["date"].stringValue)
+                }
+                if jsonArray[index]["content"].isExists() {
+                    message.content = jsonArray[index]["content"].stringValue
+                }
+                
+                messages.append(message)
+                
+            }
+        }
+        return messages
     }
 }
