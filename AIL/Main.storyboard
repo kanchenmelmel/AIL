@@ -784,6 +784,9 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0zl-iP-nO1"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibe-Ro-kr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

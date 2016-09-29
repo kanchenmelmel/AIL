@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    
+    
+    //Old
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         
@@ -28,25 +31,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
                 
         let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
-        //mainViewController.setNavigationBarItem()
+//        let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
+//        mainViewController.setNavigationBarItem()
         let leftViewController = myStoryboard.instantiateViewControllerWithIdentifier("left") as! MenuVC
         self.window?.makeKeyAndVisible()
         
        
         let nvc: UINavigationController = myStoryboard.instantiateViewControllerWithIdentifier("mainNavCtrl") as! UINavigationController
-        //leftViewController.mainViewController = nvc
+//        leftViewController.mainViewController = nvc
         
-        let slideMC = SlideMenuController(mainViewController: mainViewController, leftMenuViewController: leftViewController)
+        let slideMC = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController)
         
         
         slideMC.changeLeftViewWidth(170)
         slideMC.automaticallyAdjustsScrollViewInsets = true
      //   slideMenuController.delegate = mainViewController
         
-        self.window?.rootViewController = nvc
+        self.window?.rootViewController = slideMC
         
-        nvc.pushViewController(mainViewController, animated: true)
+//        nvc.pushViewController(mainViewController, animated: true)
         self.window?.makeKeyAndVisible()
         
         // Start Reachability Manager
@@ -60,6 +63,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+    
+//    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+//        
+//        
+//        //set up activityManager
+//        NetworkActivityIndicatorManager.sharedManager.isEnabled = true
+//        
+//        let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
+//        //        mainViewController.setNavigationBarItem()
+//        let leftViewController = myStoryboard.instantiateViewControllerWithIdentifier("left") as! MenuVC
+//        self.window?.makeKeyAndVisible()
+//        
+//        
+//        let nvc: UINavigationController = myStoryboard.instantiateViewControllerWithIdentifier("mainNavCtrl") as! UINavigationController
+//        //        leftViewController.mainViewController = nvc
+//        
+//        let slideMC = SlideMenuController(mainViewController: mainViewController, leftMenuViewController: leftViewController)
+//        
+//        
+//        slideMC.changeLeftViewWidth(170)
+//        slideMC.automaticallyAdjustsScrollViewInsets = true
+//        //   slideMenuController.delegate = mainViewController
+//        
+//        self.window?.rootViewController = nvc
+//        
+//        nvc.pushViewController(slideMC, animated: true)
+//        self.window?.makeKeyAndVisible()
+//        
+//        // Start Reachability Manager
+//        let reachabilityManager = NetworkReachabilityManager(host: "ail.vic.edu.au")
+//        
+//        reachabilityManager?.listener = { status in
+//            print("Network status changed:\(status)")
+//        }
+//        
+//        reachabilityManager?.startListening()
+//        
+//        return true
+//    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
