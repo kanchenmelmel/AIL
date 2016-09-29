@@ -68,7 +68,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.08.2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x4-jL-tys">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="17" id="ece-mE-Fyd"/>
+                                                <constraint firstAttribute="height" constant="17" id="bZo-nB-u5A"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" red="0.62675883509999997" green="0.62675883509999997" blue="0.62675883509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,16 +76,16 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="3x4-jL-tys" firstAttribute="trailing" secondItem="Bvx-6o-475" secondAttribute="trailingMargin" id="3Zn-Cg-CVy"/>
                                         <constraint firstItem="fqZ-nP-uP8" firstAttribute="top" secondItem="Bvx-6o-475" secondAttribute="topMargin" constant="2" id="4Ze-Ye-3Vs"/>
-                                        <constraint firstItem="3x4-jL-tys" firstAttribute="leading" secondItem="fqZ-nP-uP8" secondAttribute="trailing" constant="96" id="EMr-qm-KKz"/>
                                         <constraint firstItem="ew8-1Y-iMY" firstAttribute="leading" secondItem="apd-d6-h0b" secondAttribute="trailing" constant="5" id="UFG-dq-gyu"/>
                                         <constraint firstItem="apd-d6-h0b" firstAttribute="top" secondItem="Bvx-6o-475" secondAttribute="top" constant="8" id="ZFG-L6-n2f"/>
                                         <constraint firstAttribute="trailing" secondItem="ew8-1Y-iMY" secondAttribute="trailing" constant="114" id="a3A-JB-YWx"/>
                                         <constraint firstItem="ew8-1Y-iMY" firstAttribute="top" secondItem="fqZ-nP-uP8" secondAttribute="bottom" constant="3" id="cd4-IX-0Ym"/>
                                         <constraint firstItem="apd-d6-h0b" firstAttribute="leading" secondItem="Bvx-6o-475" secondAttribute="leading" constant="8" id="dRP-pb-pnI"/>
-                                        <constraint firstItem="3x4-jL-tys" firstAttribute="top" secondItem="Bvx-6o-475" secondAttribute="topMargin" id="h9B-3B-GWh"/>
+                                        <constraint firstItem="3x4-jL-tys" firstAttribute="top" secondItem="Bvx-6o-475" secondAttribute="topMargin" id="dcV-QI-XfT"/>
                                         <constraint firstItem="fqZ-nP-uP8" firstAttribute="leading" secondItem="apd-d6-h0b" secondAttribute="trailing" constant="5" id="luH-bR-u3v"/>
+                                        <constraint firstItem="3x4-jL-tys" firstAttribute="trailing" secondItem="Bvx-6o-475" secondAttribute="trailingMargin" id="oy5-ug-Fjf"/>
+                                        <constraint firstItem="3x4-jL-tys" firstAttribute="leading" secondItem="fqZ-nP-uP8" secondAttribute="trailing" constant="73" id="ur9-IH-5kE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
