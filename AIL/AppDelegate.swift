@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
                 
         let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        //let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
+        let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
+        //mainViewController.setNavigationBarItem()
         let leftViewController = myStoryboard.instantiateViewControllerWithIdentifier("left") as! MenuVC
         self.window?.makeKeyAndVisible()
         
@@ -36,11 +37,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nvc: UINavigationController = myStoryboard.instantiateViewControllerWithIdentifier("mainNavCtrl") as! UINavigationController
         //leftViewController.mainViewController = nvc
         
-        let slideMC = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController)
+        let slideMC = SlideMenuController(mainViewController: mainViewController, leftMenuViewController: leftViewController)
+        
+        
         slideMC.changeLeftViewWidth(170)
         slideMC.automaticallyAdjustsScrollViewInsets = true
      //   slideMenuController.delegate = mainViewController
-        self.window?.rootViewController = slideMC
+        
+        self.window?.rootViewController = nvc
+        
+        nvc.pushViewController(mainViewController, animated: true)
         self.window?.makeKeyAndVisible()
         
         // Start Reachability Manager

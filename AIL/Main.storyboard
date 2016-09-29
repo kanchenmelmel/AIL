@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yoz-IM-NgN">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yoz-IM-NgN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -12,7 +12,7 @@
                 <viewControllerPlaceholder storyboardName="BeiKaoGongLue" referencedIdentifier="BeiKaoGongLueTableVC" id="5om-ZF-r0u" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymr-TX-Qak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1563" y="-148"/>
+            <point key="canvasLocation" x="2322" y="-277"/>
         </scene>
         <!--首页-->
         <scene sceneID="tne-QT-ifu">
@@ -569,19 +569,118 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="课程培训" translatesAutoresizingMaskIntoConstraints="NO" id="WC1-0B-bJV">
-                                <frame key="frameInset" minY="114" width="375" height="175"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vie-va-S5s">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="9mk-dI-4I9"/>
+                                </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2C-DD-NPQ">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="UE5-CK-cyd">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="入学须知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2db-M7-2mU">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="ATL-Ev-mUS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0Z-CD-wMl">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="P0O-fK-poD"/>
+                                                    <constraint firstAttribute="width" constant="343" id="dMA-pQ-RtG"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qNC-Ki-nMp">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="授课时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79w-UM-O2f">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="D4c-fW-n3a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7U-kr-eu7">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="3Aq-qj-3Nt"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="E07-w7-6v5"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Div-Po-RLF">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课程费用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onb-t0-xlU">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="LsD-sT-NNX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7de-8m-2Rg">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="343" id="6bg-87-FRK"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Sze-P3-V56"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vie-va-S5s" secondAttribute="trailing" id="824-n9-irm"/>
+                            <constraint firstItem="Vie-va-S5s" firstAttribute="leading" secondItem="DgU-37-6mt" secondAttribute="leading" id="8Io-vx-irt"/>
+                            <constraint firstItem="Vie-va-S5s" firstAttribute="top" secondItem="CKM-4x-vcE" secondAttribute="bottom" id="DCM-eb-BMa"/>
                             <constraint firstAttribute="trailing" secondItem="CKM-4x-vcE" secondAttribute="trailing" id="WtE-Y7-nda"/>
+                            <constraint firstItem="u2C-DD-NPQ" firstAttribute="leading" secondItem="DgU-37-6mt" secondAttribute="leading" constant="16" id="XAP-zQ-0hF"/>
+                            <constraint firstItem="u2C-DD-NPQ" firstAttribute="top" secondItem="Vie-va-S5s" secondAttribute="bottom" constant="16" id="YPh-4o-C9S"/>
+                            <constraint firstAttribute="trailing" secondItem="u2C-DD-NPQ" secondAttribute="trailing" constant="16" id="abd-SJ-hIi"/>
                             <constraint firstItem="CKM-4x-vcE" firstAttribute="top" secondItem="D8n-wK-g3B" secondAttribute="bottom" id="ekE-Rc-OlG"/>
                             <constraint firstItem="CKM-4x-vcE" firstAttribute="leading" secondItem="DgU-37-6mt" secondAttribute="leading" id="w18-yq-YCX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="课程培训" id="4l6-77-I47"/>
+                    <connections>
+                        <outlet property="courseFeeLabel" destination="7de-8m-2Rg" id="fji-dJ-bkb"/>
+                        <outlet property="courseIntroDesLabel" destination="o0Z-CD-wMl" id="qFZ-Rc-U1Z"/>
+                        <outlet property="courseTimeLabel" destination="i7U-kr-eu7" id="uQU-ZN-2dJ"/>
+                        <outlet property="segmentedControl" destination="CKM-4x-vcE" id="9Mz-rI-vLY"/>
+                        <outlet property="timetableImageView" destination="Vie-va-S5s" id="5Sz-bX-b3t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdH-rY-9jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -685,9 +784,6 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="m0z-As-qJ4"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibe-Ro-kr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -760,7 +856,6 @@
         <image name="peixun" width="40" height="40"/>
         <image name="pte" width="52" height="49"/>
         <image name="zice" width="33" height="36"/>
-        <image name="课程培训" width="740" height="285"/>
         <image name="轻松报名" width="748" height="274"/>
     </resources>
     <inferredMetricsTieBreakers>
