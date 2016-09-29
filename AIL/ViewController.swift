@@ -34,7 +34,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Setup Search bar in Nav Bar
         
 
-        //self.setNavigationBarItem()
+//        self.setNavigationBarItem()
         searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Normal)
         searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Selected)
         
@@ -89,7 +89,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     override func viewDidAppear(animated: Bool) {
-        self.setNavigationBarItem()
+//        self.setNavigationBarItem()
         
         
         
@@ -101,7 +101,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let postDescription = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
         let lastPost = Post(entity: postDescription!, insertIntoManagedObjectContext: nil)
         
-        lastPost.featuredImage = UIImage(named: "pte")
+        lastPost.featuredImage = UIImage(named: "AllPostsButton")
         lastPost.title = "点击阅读更多资讯"
         lastPost.featuredImageUrl = nil
         
@@ -197,15 +197,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchBar.showsCancelButton = false
     }
     
-    func setNavigationBarItem() {
-        self.addLeftBarButtonWithImage(UIImage(named: "SideMenuButton")!)
-        //print("test Add nav item")
-        // self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
-        self.slideMenuController()?.removeLeftGestures()
-        self.slideMenuController()?.removeRightGestures()
-        self.slideMenuController()?.addLeftGestures()
-        self.slideMenuController()?.addRightGestures()
-    }
+//    func setNavigationBarItem() {
+//        self.addLeftBarButtonWithImage(UIImage(named: "SideMenuButton")!)
+//        //print("test Add nav item")
+//        // self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
+//        self.slideMenuController()?.removeLeftGestures()
+//        self.slideMenuController()?.removeRightGestures()
+//        self.slideMenuController()?.addLeftGestures()
+//        self.slideMenuController()?.addRightGestures()
+//    }
     
     //    func leftWillOpen() {
     //
