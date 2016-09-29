@@ -11,5 +11,5 @@ let RESOURSES = "posts"
 
 let FEATURED_IMAGE_NAME = "featured_image.jpg"
 
-let MESSAGES_URL = "http://melmel.com.au/test/wp-json/wp/v2/"
+let MESSAGES_URL = "http://ail.vic.edu.au/wp-json/wp/v2/"
 let MESSAGES_RESOURCES = "messages"
