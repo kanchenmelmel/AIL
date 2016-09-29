@@ -28,8 +28,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setNavigationBarItem()
+        
         // Setup Search bar in Nav Bar
+        
 
+        //self.setNavigationBarItem()
         searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Normal)
         searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Selected)
         
@@ -190,6 +195,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.showsCancelButton = false
+    }
+    
+    func setNavigationBarItem() {
+        self.addLeftBarButtonWithImage(UIImage(named: "SideMenuButton")!)
+        //print("test Add nav item")
+        // self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
+        self.slideMenuController()?.removeLeftGestures()
+        self.slideMenuController()?.removeRightGestures()
+        self.slideMenuController()?.addLeftGestures()
+        self.slideMenuController()?.addRightGestures()
     }
     
     //    func leftWillOpen() {
