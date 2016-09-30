@@ -142,6 +142,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
             }
             else{
+              //  cell.postImage.aspect
+                cell.postImage.contentMode = .ScaleAspectFit
                 cell.postImage.image = featurePost.featuredImage
             }
             
