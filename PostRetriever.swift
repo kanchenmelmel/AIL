@@ -28,6 +28,7 @@ class PostRetriever{
         let httpString = "http"
         let predicate = NSPredicate(format: "featuredImageUrl contains[c] %@", httpString)
         postRequest.predicate = predicate
+        postRequest.fetchLimit = 10
 
         do{
             let results = try managedObjectContext.executeFetchRequest(postRequest) as! [Post]
