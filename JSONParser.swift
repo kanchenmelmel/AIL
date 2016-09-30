@@ -25,6 +25,9 @@ class JSONParser {
             managedObjectContextToBeInserted = nil
         }
         var posts = [Post]()
+        if jsonArray.count <= 0{
+            return posts
+        }
         for index in 0...jsonArray.count-1 {
            // print ("Jason is \(index)")
             if checkIfExistInCoreData {

@@ -13,6 +13,8 @@ class AllPostsVC: UITableViewController{
     
     var allPosts = [Post]()
     var isLoading = false
+    var numOfPosts:Int?
+    var reachToTheEnd = false
     
     var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     
@@ -69,22 +71,33 @@ class AllPostsVC: UITableViewController{
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if (indexPath.row == allPosts.count-1) && !isLoading{
             isLoading = true
-            let oldestPost = allPosts[indexPath.row]
-            //loadPreviousPosts(oldestPost.date!,excludeId: oldestPost.id as! Int)
-            client.requestPreviousPosts(oldestPost.date!, excludeID: oldestPost.id as! Int, completionHandler: { (posts) in
-                    self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
-                    for post in posts {
-                        print ("ppp: \(post.featuredImageUrl)")
-                        if let imageURL = post.featuredImageUrl{
-                            print("pppnn")
-                            let imageRecord = ImageRecord(name: "", url: NSURL(string: imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
-                            self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+            
+            if reachToTheEnd == false {
+                numOfPosts = allPosts.count
+                print ("num1:\(numOfPosts)")
+                let oldestPost = allPosts[indexPath.row]
+
+                client.requestPreviousPosts(oldestPost.date!, excludeID: oldestPost.id as! Int, completionHandler: { (posts) in
+                        self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
+                        print ("num2:\(self.numOfPosts)")
+                        print ("num3: \(self.allPosts.count)")
+                        if self.numOfPosts == self.allPosts.count{
+                            self.reachToTheEnd = true
+                            print ("pppTRUE")
                         }
-                    }
-                    //self.setUpTableViewImageCoordinator()
-                    self.isLoading = false
-                    self.tableView.reloadData()
-            })
+                        for post in posts {
+                            print ("ppp: \(post.featuredImageUrl)")
+                            if let imageURL = post.featuredImageUrl{
+                                print("pppnn")
+                                let imageRecord = ImageRecord(name: "", url: NSURL(string: imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
+                                self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+                            }
+                        }
+                        //self.setUpTableViewImageCoordinator()
+                        self.isLoading = false
+                        self.tableView.reloadData()
+                })
+        }
         }
     }
     
