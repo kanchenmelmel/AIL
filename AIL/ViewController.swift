@@ -119,7 +119,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             if featurePost.featuredImageUrl != nil {
                 
-                print ("456456: \(self.tableViewImageLoadingCoordinator.imageRecords.count)")
+                cell.postImage.contentMode = .ScaleAspectFill
+               
                 let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
                 cell.postImage.image = imageRecord.image
                 
@@ -137,9 +138,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
             }
             else{
-              //  cell.postImage.aspect
-                cell.postImage.contentMode = .ScaleAspectFit
-                cell.postImage.image = featurePost.featuredImage
+              
+                    cell.postImage.contentMode = .ScaleAspectFit
+                    cell.postImage.image = featurePost.featuredImage
+
             }
             
             return cell

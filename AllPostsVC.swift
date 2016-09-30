@@ -62,8 +62,10 @@ class AllPostsVC: UITableViewController{
     func setUpTableViewImageCoordinator(){
         //self.tableViewImageLoadingCoordinator.imageRecords.removeAll()
         for post in allPosts {
-            let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
-            self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+            if let imageURL = post.featuredImageUrl{
+                let imageRecord = ImageRecord(name: "", url: NSURL(string: imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
+                self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+            }
         }
     }
     
