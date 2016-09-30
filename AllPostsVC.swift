@@ -20,9 +20,19 @@ class AllPostsVC: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        client.requestAllPosts { (posts) in
-            self.allPosts = posts
+        
+        
+        allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
+        
+        if allPosts.count <= 0 {
+            client.requestLatestTwentyPosts { (posts) in
+                
+                self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
+                self.tableView.reloadData()
+                self.setUpTableViewImageCoordinator()
+            }
+        }
+        else{
             self.tableView.reloadData()
             self.setUpTableViewImageCoordinator()
         }

@@ -54,11 +54,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
         
-      
-        wordpressClient.requestLatestTwentyPosts { (posts) in
-            print("Melmel:\(posts.count)")
-        }
-        
         self.slideMenuController()?.delegate = self
         
         
