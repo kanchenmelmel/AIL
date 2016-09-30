@@ -107,6 +107,9 @@ class CoreDataOperation {
         
         let messageFetchRequest = NSFetchRequest(entityName: EntityType.Message.rawValue)
         
+        let dateSort = NSSortDescriptor(key: "date", ascending: false)
+        messageFetchRequest.sortDescriptors=[dateSort]
+        
         do {
             let objects = try managedObjectContext.executeFetchRequest(messageFetchRequest) as! [Message]
             return objects

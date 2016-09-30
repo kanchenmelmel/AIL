@@ -21,6 +21,9 @@ class PostRetriever{
         let postRequest = NSFetchRequest()
 
         postRequest.entity = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
+        
+        let dateSort = NSSortDescriptor(key: "date", ascending: false)
+        postRequest.sortDescriptors=[dateSort]
 
         let httpString = "http"
         let predicate = NSPredicate(format: "featuredImageUrl contains[c] %@", httpString)
