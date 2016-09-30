@@ -89,6 +89,9 @@ class CoreDataOperation {
         
         let resourcePostFetchRequest = NSFetchRequest(entityName: EntityType.Post.rawValue)
         
+        let dateSort = NSSortDescriptor(key: "date", ascending: false)
+        resourcePostFetchRequest.sortDescriptors=[dateSort]
+        
         do {
             let objects = try managedObjectContext.executeFetchRequest(resourcePostFetchRequest) as! [Post]
             return objects

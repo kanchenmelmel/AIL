@@ -12,6 +12,7 @@ class AllPostsVC: UITableViewController{
 
     
     var allPosts = [Post]()
+    var isLoading = false
     
     var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     
@@ -57,9 +58,33 @@ class AllPostsVC: UITableViewController{
     }
     
     func setUpTableViewImageCoordinator(){
+        //self.tableViewImageLoadingCoordinator.imageRecords.removeAll()
         for post in allPosts {
             let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
             self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+        }
+    }
+    
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.row == allPosts.count-1) && !isLoading{
+            isLoading = true
+            let oldestPost = allPosts[indexPath.row]
+            //loadPreviousPosts(oldestPost.date!,excludeId: oldestPost.id as! Int)
+            client.requestPreviousPosts(oldestPost.date!, excludeID: oldestPost.id as! Int, completionHandler: { (posts) in
+                    self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
+                    for post in posts {
+                        print ("ppp: \(post.featuredImageUrl)")
+                        if let imageURL = post.featuredImageUrl{
+                            print("pppnn")
+                            let imageRecord = ImageRecord(name: "", url: NSURL(string: imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
+                            self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
+                        }
+                    }
+                    //self.setUpTableViewImageCoordinator()
+                    self.isLoading = false
+                    self.tableView.reloadData()
+            })
         }
     }
     
