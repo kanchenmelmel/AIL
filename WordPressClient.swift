@@ -87,10 +87,13 @@ class WordPressClient {
     }
     
     
-    func requestPreviousPosts(completionHandler: ([Post]) -> Void) {
+    func requestPreviousPosts(beforeDate: NSDate, excludeID: Int, completionHandler: ([Post]) -> Void) {
         
-       // let url = NSURL(string: "\(baseURIString)?before=\(beforeDateString)&exclude=\(excludeId)")
-        let urlArguments = "?filter[posts_per_page]=50"
+        let dateFormatter = DateFormatter()
+        let beforeDateString = dateFormatter.formatDateToDateString(beforeDate)
+        
+        //let url = NSURL(string: "\(baseURIString)?before=\(beforeDateString)&exclude=\(excludeId)")
+        let urlArguments = "?before=\(beforeDateString)&exclude=\(excludeID)"
         print(BASE_URL+RESOURSES+urlArguments)
         Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
@@ -98,7 +101,7 @@ class WordPressClient {
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
                     // print (jsonArray)
-                    completionHandler(JSONParser.parseJSONDictionaryToPostManagedObject(false, ifInsertIntoManagedContext: false, jsonArray: jsonArray))
+                    completionHandler(JSONParser.parseJSONDictionaryToPostManagedObject(true, ifInsertIntoManagedContext: true, jsonArray: jsonArray))
                     
                     // Save Managed Object Context
                     //CoreDataOperation.saveManagedObjectContext()

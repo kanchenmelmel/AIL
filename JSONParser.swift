@@ -81,6 +81,8 @@ class JSONParser {
                     post.thumbnailUrl = jsonArray[index]["thumbnail_url"].stringValue
                 }
                 if jsonArray[index]["featured_image_url"].isExists() {
+//                    let url = jsonArray[index]["featured_image_url"].stringValue
+//                    post.featuredImageUrl = url
                     post.featuredImageUrl = jsonArray[index]["featured_image_url"].stringValue
                 }
                 if jsonArray[index]["status"].isExists() {
