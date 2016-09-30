@@ -94,7 +94,7 @@ class WordPressClient {
         
         //let url = NSURL(string: "\(baseURIString)?before=\(beforeDateString)&exclude=\(excludeId)")
         let urlArguments = "?before=\(beforeDateString)&exclude=\(excludeID)"
-        print(BASE_URL+RESOURSES+urlArguments)
+        print("num: \(BASE_URL+RESOURSES+urlArguments)")
         Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
             case .Success:
@@ -104,7 +104,7 @@ class WordPressClient {
                     completionHandler(JSONParser.parseJSONDictionaryToPostManagedObject(true, ifInsertIntoManagedContext: true, jsonArray: jsonArray))
                     
                     // Save Managed Object Context
-                    //CoreDataOperation.saveManagedObjectContext()
+                    CoreDataOperation.saveManagedObjectContext()
                     
                 }
             case .Failure: break
