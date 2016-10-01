@@ -20,6 +20,8 @@ class AllPostsVC: UITableViewController{
     
     let client = WordPressClient()
     
+    var refresher: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +41,17 @@ class AllPostsVC: UITableViewController{
             self.tableView.reloadData()
             self.setUpTableViewImageCoordinator()
         }
+        
+        // Initialize the refresh control
+        refresher = UIRefreshControl()
+       // self.tableView.addSubview(refresher)
+        refresher.addTarget(self, action: #selector(self.updatePosts), forControlEvents: .ValueChanged)
+
+        refresher.beginRefreshing()
+        self.tableView.setContentOffset(CGPoint(x: 0,y: self.tableView.contentOffset.y - self.refresher.frame.size.height), animated: true)
+
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -176,16 +189,13 @@ class AllPostsVC: UITableViewController{
             destnatinationVC.titleString = allPosts[index!.row].title!
         }
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func updatePosts(){
+        //self.tableView.reloadData()
+        refresher.endRefreshing()
+        print ("updateposts")
+        
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
