@@ -686,10 +686,10 @@
             </objects>
             <point key="canvasLocation" x="5772" y="1272.4137931034484"/>
         </scene>
-        <!--MenuVC-->
+        <!--Left MenuVC-->
         <scene sceneID="WTA-wA-Lmy">
             <objects>
-                <viewController storyboardIdentifier="left" id="Qug-lZ-qUb" customClass="MenuVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="left" id="Qug-lZ-qUb" customClass="LeftMenuVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QAP-Kv-tes"/>
                         <viewControllerLayoutGuide type="bottom" id="G9D-PS-47j"/>
@@ -699,9 +699,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-xz-gex">
-                                <frame key="frameInset" minX="176" minY="234" width="113" height="144"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-xz-gex">
+                                <frame key="frameInset" minX="176" minY="234" width="113" height="205"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK7-fN-fgQ">
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                        <state key="normal" title="     首页" image="ArchiveButton"/>
+                                        <connections>
+                                            <action selector="homeButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="TlW-NS-rqM"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-ny-SrX">
                                         <state key="normal" title="     我的收藏" image="ArchiveButton"/>
                                         <connections>
@@ -711,7 +718,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-UM-vGr">
                                         <state key="normal" title="     通知消息" image="messagesButton"/>
                                         <connections>
-                                            <segue destination="THu-B7-IcD" kind="show" id="UjJ-a8-4ga"/>
+                                            <action selector="showMessageButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="TgD-vt-E3A"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-3b-Ygs">

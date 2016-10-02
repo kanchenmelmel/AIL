@@ -1,17 +1,16 @@
 //
-//  TableViewController.swift
+//  ArchiveVCsTableViewController.swift
 //  AIL
 //
-//  Created by WuKaipeng on 14/09/2016.
+//  Created by Work on 2/10/16.
 //  Copyright © 2016 au.com.melmel. All rights reserved.
 //
 
 import UIKit
 
-class UserMessageVC: UITableViewController {
+class ArchiveVCsTableViewController: UITableViewController {
 
-    
-    var userMessages = [Message]()
+    var archives = [Archive]()
     
     //let tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     
@@ -27,12 +26,12 @@ class UserMessageVC: UITableViewController {
         if userMessages.count <= 0 {
             client.requestAllMessages { (messages) in
                 self.userMessages = messages
-              
+                
                 self.tableView.reloadData()
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,17 +39,17 @@ class UserMessageVC: UITableViewController {
     
     
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return userMessages.count
     }
-
+    
     @IBAction func backButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -59,7 +58,7 @@ class UserMessageVC: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("userMessageCell", forIndexPath: indexPath) as! UserMessageCell
         
         let message = userMessages[indexPath.row]
-
+        
         // Configure the cell...
         cell.titleLbael.text = message.title
         cell.subtitleLabel.text = message.content
@@ -77,17 +76,23 @@ class UserMessageVC: UITableViewController {
         }
         cell.imageView?.image = messageIcon
         
+        
+        return cell
+    }
+
+    /*
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
 
         return cell
     }
-    
+    */
 
-    @IBAction func CloseButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
     /*
     // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
@@ -95,11 +100,11 @@ class UserMessageVC: UITableViewController {
 
     /*
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
@@ -107,14 +112,14 @@ class UserMessageVC: UITableViewController {
 
     /*
     // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
     */
 
     /*
     // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
@@ -124,7 +129,7 @@ class UserMessageVC: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

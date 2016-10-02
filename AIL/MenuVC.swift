@@ -10,7 +10,7 @@ import UIKit
 import SlideMenuControllerSwift
 
 enum LeftMenuOption {
-    case main = 0
+    case main
     case archive
     case message
     case aboutAIL
@@ -56,15 +56,19 @@ class LeftMenuVC: UIViewController {
     }
     
 
+    @IBAction func homeButtonClick(sender: AnyObject) {
+        self.changeViewController(.main)
+    }
     @IBAction func archiveButtonClick(sender: AnyObject) {
         self.changeViewController(.archive)
         
         
     }
     
-    @IBAction func showMessageTableVC(sender: AnyObject) {
+    @IBAction func showMessageButtonClick(sender: AnyObject) {
         self.changeViewController(.message)
     }
+
     
     @IBAction func ShowAboutAILButtonClick(sender: AnyObject) {
         self.changeViewController(.aboutAIL)
@@ -113,6 +117,7 @@ extension LeftMenuVC:LeftMenuProtocol {
             self.slideMenuController()?.changeMainViewController(self.messageVC, close: true)
         case .aboutAIL:
             self.slideMenuController()?.changeMainViewController(self.aboutAILVC, close: true)
+        default:break;
         }
     }
 }
