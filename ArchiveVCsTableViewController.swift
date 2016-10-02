@@ -48,25 +48,25 @@ class ArchiveVCsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("userMessageCell", forIndexPath: indexPath) as! UserMessageCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("archiveCell", forIndexPath: indexPath) as! UserMessageCell
         
-        let message = archives[indexPath.row]
+        let archive = archives[indexPath.row]
         
         // Configure the cell...
-        cell.titleLbael.text = message.title
-        cell.subtitleLabel.text = message.content
+        cell.titleLbael.text = archive.postTitle
+        cell.subtitleLabel.text = archive.excerpt
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .MediumStyle
-        cell.dateLabel.text = "\(dateFormatter.stringFromDate(message.date!).uppercaseString)" + " "
+        cell.dateLabel.text = "\(dateFormatter.stringFromDate(archive.archiveDate!).uppercaseString)" + " "
         
         var messageIcon: UIImage?
-        if message.viewed == true {
-            messageIcon = UIImage(named: "Read")
-        }
-        else{
-            messageIcon = UIImage(named: "Unread")
-        }
+//        if archive.viewed == true {
+//            messageIcon = UIImage(named: "Read")
+//        }
+//        else{
+//            messageIcon = UIImage(named: "Unread")
+//        }
         cell.imageView?.image = messageIcon
         
         

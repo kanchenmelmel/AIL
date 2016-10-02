@@ -141,8 +141,7 @@ class CoreDataOperation {
         } catch {
             print("fetch request errors!")
         }
-        
-
+        return nil
     }
 }
 

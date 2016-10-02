@@ -9,13 +9,13 @@
         <!--通知消息-->
         <scene sceneID="Fxu-Al-7fi">
             <objects>
-                <tableViewController storyboardIdentifier="MessagesTableVC" id="QHz-u4-Rff" customClass="UserMessageVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MessagesTableVC" id="QHz-u4-Rff" customClass="ArchiveVCsTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" id="t1C-XX-u2E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="archiveCell" rowHeight="71" id="x4j-CL-HAR" customClass="UserMessageCell" customModule="AIL" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="archiveCell" rowHeight="71" id="x4j-CL-HAR">
                                 <rect key="frame" x="0.0" y="92" width="375" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x4j-CL-HAR" id="yU1-cx-yRV">
@@ -106,7 +106,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tm1-fp-MQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationItem title="Title" id="Pzf-Bn-sYE"/>
             </objects>
-            <point key="canvasLocation" x="4165.217391304348" y="300"/>
+            <point key="canvasLocation" x="4169" y="301"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YgE-A3-G3q">
