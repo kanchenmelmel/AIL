@@ -18,6 +18,13 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var webView: UIWebView!
+    
+    
+    // Tool bar
+    @IBOutlet weak var archiveButton: UIButton!
+    @IBOutlet weak var commentButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,11 +41,6 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
     
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     
     @IBAction func showActivityViewController(sender: AnyObject) {
@@ -87,6 +89,13 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
+    
+    // Tool bar buttons actions
+    @IBAction func archiveButtonClick(sender: AnyObject) {
+    }
+    
+    @IBAction func comentButtonClick(sender: AnyObject) {
+    }
 
     /*
     // MARK: - Navigation
