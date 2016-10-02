@@ -124,6 +124,26 @@ class CoreDataOperation {
         
         return nil
     }
+    
+    static func fetchAllArchivesFromCoreData() ->[Archive]? {
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let messageFetchRequest = NSFetchRequest(entityName: EntityType.Archive.rawValue)
+        
+        let dateSort = NSSortDescriptor(key: "archiveDate", ascending: false)
+        messageFetchRequest.sortDescriptors=[dateSort]
+        
+        do {
+            let objects = try managedObjectContext.executeFetchRequest(messageFetchRequest) as! [Archive]
+            return objects
+            
+            
+        } catch {
+            print("fetch request errors!")
+        }
+        
+
+    }
 }
 
 
@@ -132,4 +152,5 @@ enum EntityType:String {
     case Post = "Post"
     case Category = "Category"
     case Message = "Message"
+    case Archive = "Archive"
 }

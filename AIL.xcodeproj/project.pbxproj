@@ -54,6 +54,8 @@
 		96A173981DA0D1F30002F360 /* AboutAIL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A173971DA0D1F30002F360 /* AboutAIL.storyboard */; };
 		96A1739A1DA0D29E0002F360 /* Archive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A173991DA0D29E0002F360 /* Archive.storyboard */; };
 		96A1739F1DA0D3660002F360 /* ArchiveVCsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1739E1DA0D3660002F360 /* ArchiveVCsTableViewController.swift */; };
+		96A173A21DA0D4E30002F360 /* Archive+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A173A01DA0D4E30002F360 /* Archive+CoreDataClass.swift */; };
+		96A173A31DA0D4E30002F360 /* Archive+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A173A11DA0D4E30002F360 /* Archive+CoreDataProperties.swift */; };
 		96A691D31D98F90200D29995 /* BeiKaoGongLue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A691D21D98F90200D29995 /* BeiKaoGongLue.storyboard */; };
 		96A691D61D98FF5500D29995 /* BeiKaoGongLueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A691D51D98FF5500D29995 /* BeiKaoGongLueTableViewController.swift */; };
 		96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ADCDA21D925AC600ACBC05 /* CustomizedSearchBar.swift */; };
@@ -113,6 +115,8 @@
 		96A173971DA0D1F30002F360 /* AboutAIL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutAIL.storyboard; sourceTree = "<group>"; };
 		96A173991DA0D29E0002F360 /* Archive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Archive.storyboard; sourceTree = "<group>"; };
 		96A1739E1DA0D3660002F360 /* ArchiveVCsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveVCsTableViewController.swift; sourceTree = "<group>"; };
+		96A173A01DA0D4E30002F360 /* Archive+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Archive+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96A173A11DA0D4E30002F360 /* Archive+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Archive+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		96A691D21D98F90200D29995 /* BeiKaoGongLue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BeiKaoGongLue.storyboard; sourceTree = "<group>"; };
 		96A691D51D98FF5500D29995 /* BeiKaoGongLueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeiKaoGongLueTableViewController.swift; sourceTree = "<group>"; };
 		96ADCDA21D925AC600ACBC05 /* CustomizedSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedSearchBar.swift; sourceTree = "<group>"; };
@@ -298,6 +302,8 @@
 		9671E5EA1D7E8095008250C7 /* ManagedObject */ = {
 			isa = PBXGroup;
 			children = (
+				96A173A01DA0D4E30002F360 /* Archive+CoreDataClass.swift */,
+				96A173A11DA0D4E30002F360 /* Archive+CoreDataProperties.swift */,
 				4DDD18011D9ACA0000294ACC /* Message+CoreDataClass.swift */,
 				4DDD18021D9ACA0000294ACC /* Message+CoreDataProperties.swift */,
 				9656933E1D9392B300FAC04B /* Post+CoreDataClass.swift */,
@@ -563,6 +569,7 @@
 				3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */,
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
 				963574981D90E15D00B8D1A5 /* ImageDownloader.swift in Sources */,
+				96A173A21DA0D4E30002F360 /* Archive+CoreDataClass.swift in Sources */,
 				963574951D90C3F800B8D1A5 /* Category+CoreDataProperties.swift in Sources */,
 				965693401D9392B300FAC04B /* Post+CoreDataClass.swift in Sources */,
 				965693411D9392B300FAC04B /* Post+CoreDataProperties.swift in Sources */,
@@ -577,6 +584,7 @@
 				9635749A1D90EF3300B8D1A5 /* TableViewImageLoadingCoordinator.swift in Sources */,
 				3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */,
 				4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */,
+				96A173A31DA0D4E30002F360 /* Archive+CoreDataProperties.swift in Sources */,
 				4DDD17EE1D97BB9500294ACC /* AllPostsCell.swift in Sources */,
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
 				962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */,

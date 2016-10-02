@@ -21,15 +21,8 @@ class ArchiveVCsTableViewController: UITableViewController {
         
         self.setNavigationBarItem()
         
-        userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
+        archives = CoreDataOperation.fetchAllArchivesFromCoreData()!
         
-        if userMessages.count <= 0 {
-            client.requestAllMessages { (messages) in
-                self.userMessages = messages
-                
-                self.tableView.reloadData()
-            }
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,7 +40,7 @@ class ArchiveVCsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return userMessages.count
+        return archives.count
     }
     
     @IBAction func backButtonPressed(sender: AnyObject) {
@@ -57,7 +50,7 @@ class ArchiveVCsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("userMessageCell", forIndexPath: indexPath) as! UserMessageCell
         
-        let message = userMessages[indexPath.row]
+        let message = archives[indexPath.row]
         
         // Configure the cell...
         cell.titleLbael.text = message.title
