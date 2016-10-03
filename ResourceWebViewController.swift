@@ -21,8 +21,6 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     
     // Tool bar
-    @IBOutlet weak var archiveButton: UIButton!
-    @IBOutlet weak var commentButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -46,12 +44,15 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     @IBAction func showActivityViewController(sender: AnyObject) {
         
         
-        let url = NSURL(string: urlString!)
-        print("Test3")
-        let activityViewController = UIActivityViewController(activityItems: [titleString!,url!], applicationActivities: nil)
-        self.navigationController?.presentViewController(activityViewController, animated: true, completion: { 
-            
-        })
+//        let url = NSURL(string: urlString!)
+//        print("Test3")
+//        let activityViewController = UIActivityViewController(activityItems: [titleString!,url!], applicationActivities: nil)
+//        self.navigationController?.presentViewController(activityViewController, animated: true, completion: { 
+//            
+//        })
+        
+        
+        self.rightTopBarButtonItemAction(self.urlString!,titleString: self.titleString!)
     }
     
     
@@ -90,12 +91,11 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     }
     
     
-    // Tool bar buttons actions
-    @IBAction func archiveButtonClick(sender: AnyObject) {
-    }
     
-    @IBAction func comentButtonClick(sender: AnyObject) {
-    }
+    
+    
+    
+    
 
     /*
     // MARK: - Navigation
@@ -106,5 +106,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
 
 }
