@@ -25,8 +25,6 @@ class AllPostsVC: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
         
         if allPosts.count <= 0 {
@@ -185,6 +183,10 @@ class AllPostsVC: UITableViewController{
             let destnatinationVC = segue.destinationViewController as! WebViewController
             
             let index = tableView.indexPathForSelectedRow
+            
+            destnatinationVC.post = allPosts[index!.row]
+            
+            
             destnatinationVC.urlString = allPosts[index!.row].link!
             destnatinationVC.titleString = allPosts[index!.row].title!
         }

@@ -34,23 +34,38 @@ extension UIViewController {
     }
     
     
-    func rightTopBarButtonItemAction(urlString:String?,titleString:String?){
+    func rightTopBarButtonItemAction(post:Post){
         typealias actionClosure = ()-> Void
         
         // Add Share Action
         var items = [(String, actionClosure)]()
         
         items.append(("收藏",{() -> Void in
+            self.archivePost(post)
         }))
         
         items.append(("分享",{() -> Void in
-            let url = NSURL(string: urlString!)
+            let url = NSURL(string: post.link!)
             print("Test3")
-            let activityViewController = UIActivityViewController(activityItems: [titleString!,url!], applicationActivities: nil)
+            let activityViewController = UIActivityViewController(activityItems: [post.title!,url!], applicationActivities: nil)
             self.navigationController?.presentViewController(activityViewController, animated: true, completion: {
                 
             })
         }))
         self.showActionSheet(nil, message: nil, items: items, cancleButtonTitle: "取消")
+    }
+    
+    
+    func archivePost(post:Post) {
+        let archive = CoreDataOperation.createArchiveObject()
+        //archive.addToCategories(categories)
+        archive.postId = post.id
+        archive.postTitle = post.title
+        archive.excerpt = post.excerpt
+        archive.link = post.link
+        archive.addToCategories(post.categories!)
+        
+        CoreDataOperation.saveManagedObjectContext()
+        
     }
 }

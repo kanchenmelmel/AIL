@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--通知消息-->
+        <!--我的收藏-->
         <scene sceneID="Fxu-Al-7fi">
             <objects>
                 <tableViewController storyboardIdentifier="MessagesTableVC" id="QHz-u4-Rff" customClass="ArchiveVCsTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="archiveCell" rowHeight="71" id="x4j-CL-HAR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="archiveCell" rowHeight="71" id="x4j-CL-HAR" customClass="UserMessageCell" customModule="AIL" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x4j-CL-HAR" id="yU1-cx-yRV">
@@ -93,6 +93,7 @@
                                     <outlet property="subtitleLabel" destination="yeF-iB-IVO" id="hix-al-5S5"/>
                                     <outlet property="titleLbael" destination="sS5-a6-OWE" id="8uz-lD-MGT"/>
                                     <outlet property="viewImage" destination="uth-Ya-2Kf" id="Nlt-xf-w5Z"/>
+                                    <segue destination="8p5-gH-MlQ" kind="show" identifier="showArchiveWebVCSegue" id="wmT-E6-ZFi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -101,12 +102,12 @@
                             <outlet property="delegate" destination="QHz-u4-Rff" id="VyV-86-J6H"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="通知消息" id="gRm-CY-Tjg"/>
+                    <navigationItem key="navigationItem" title="我的收藏" id="gRm-CY-Tjg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tm1-fp-MQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationItem title="Title" id="Pzf-Bn-sYE"/>
             </objects>
-            <point key="canvasLocation" x="4169" y="301"/>
+            <point key="canvasLocation" x="4114" y="301"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YgE-A3-G3q">
@@ -131,5 +132,53 @@
             </objects>
             <point key="canvasLocation" x="3260.8695652173915" y="301.63043478260875"/>
         </scene>
+        <!--我的收藏-->
+        <scene sceneID="t9m-fF-EbJ">
+            <objects>
+                <viewController id="8p5-gH-MlQ" customClass="ArchiveWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cfx-6C-Z3o"/>
+                        <viewControllerLayoutGuide type="bottom" id="jHW-Up-Vxd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2xE-Lx-Qqd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAg-nS-74k">
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tRt-Z4-zDL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="aEi-6p-DC4"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jHW-Up-Vxd" firstAttribute="top" secondItem="jAg-nS-74k" secondAttribute="bottom" id="7wF-XR-bsX"/>
+                            <constraint firstItem="tRt-Z4-zDL" firstAttribute="top" secondItem="2xE-Lx-Qqd" secondAttribute="top" constant="65" id="CdH-mh-jgX"/>
+                            <constraint firstItem="jAg-nS-74k" firstAttribute="leading" secondItem="2xE-Lx-Qqd" secondAttribute="leading" id="E8M-mV-NZ3"/>
+                            <constraint firstAttribute="trailing" secondItem="jAg-nS-74k" secondAttribute="trailing" id="ZfF-i7-pQA"/>
+                            <constraint firstItem="jAg-nS-74k" firstAttribute="top" secondItem="2xE-Lx-Qqd" secondAttribute="top" id="cao-i1-XS8"/>
+                            <constraint firstAttribute="trailing" secondItem="tRt-Z4-zDL" secondAttribute="trailing" id="fz2-T2-eHX"/>
+                            <constraint firstItem="tRt-Z4-zDL" firstAttribute="leading" secondItem="2xE-Lx-Qqd" secondAttribute="leading" id="xlL-Fv-tW0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的收藏" id="cst-C5-0EG">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="Osy-Zh-reU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="tRt-Z4-zDL" id="Bro-pN-iDo"/>
+                        <outlet property="webView" destination="jAg-nS-74k" id="YBj-Ha-SED"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pww-aR-qvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5055" y="301"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ActivityVCButton" width="19" height="4"/>
+    </resources>
 </document>

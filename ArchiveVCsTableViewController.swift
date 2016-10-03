@@ -60,14 +60,14 @@ class ArchiveVCsTableViewController: UITableViewController {
         dateFormatter.dateStyle = .MediumStyle
         cell.dateLabel.text = "\(dateFormatter.stringFromDate(archive.archiveDate!).uppercaseString)" + " "
         
-        var messageIcon: UIImage?
+        //var messageIcon: UIImage?
 //        if archive.viewed == true {
 //            messageIcon = UIImage(named: "Read")
 //        }
 //        else{
 //            messageIcon = UIImage(named: "Unread")
 //        }
-        cell.imageView?.image = messageIcon
+        //cell.imageView?.image = messageIcon
         
         
         return cell
@@ -118,14 +118,21 @@ class ArchiveVCsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)  {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showArchiveWebVCSegue" {
+            let destinationVC = segue.destinationViewController as! ArchiveWebViewController
+            
+            let index = self.tableView.indexPathForSelectedRow
+            let archive = archives[index!.row]
+            destinationVC.urlString = archive.link
+        }
     }
-    */
+ 
+ 
 
 }
