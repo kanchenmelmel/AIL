@@ -17,6 +17,10 @@ class UserMessageVC: UITableViewController {
     
     let client = WordPressClient()
     
+    var isLoading = false
+    var numOfPosts:Int?
+    var reachToTheEnd = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
