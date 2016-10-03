@@ -42,16 +42,20 @@ class AllPostsVC: UITableViewController{
             self.setUpTableViewImageCoordinator()
         }
         
+        
+
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         // Initialize the refresh control
         refresher = UIRefreshControl()
-       // self.tableView.addSubview(refresher)
-        refresher.addTarget(self, action: #selector(self.updatePosts), forControlEvents: .ValueChanged)
-
-        refresher.beginRefreshing()
-        self.tableView.setContentOffset(CGPoint(x: 0,y: self.tableView.contentOffset.y - self.refresher.frame.size.height), animated: true)
-
-        
-        
+        refresher.addTarget(self, action: #selector(AllPostsVC.updatePosts), forControlEvents: .ValueChanged)
+        refresher.backgroundColor = UIColor.clearColor()
+        refresher.tintColor = hexStringToUIColor("#00B2EE")
+       // refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        self.tableView.addSubview(refresher)
     }
 
     override func didReceiveMemoryWarning() {
@@ -192,9 +196,66 @@ class AllPostsVC: UITableViewController{
     
     func updatePosts(){
         //self.tableView.reloadData()
+//        func updatePosts(){
+//            if reachabilityManager.isReachable(){
+//                print("is Reachable")
+//                let postUpdateUtility = PostsUpdateUtility()
+//                postUpdateUtility.updateAllPosts {
+//                    
+//                    dispatch_async(dispatch_get_main_queue(), {
+//                        print("Update table view")
+//                        self.posts = postUpdateUtility.fetchPosts()
+//                        self.tableView.reloadData()
+//                        self.activityIndicatorView.stopAnimating()
+//                        self.activityIndicatorView.willMoveToSuperview(self.tableView)
+//                        self.refreshControl?.endRefreshing()
+//                    })
+//                }
+//            } else {
+//                print("No Internet Connection")
+//                self.refreshControl?.endRefreshing()
+//                //  popUpWarningMessage("No Internet Connection")
+//                alert.showAlert(self)
+//                
+//            }
+//            
+//            
+//        }
+        client.requestLatestTwentyPosts { (posts) in
+            self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
+            let reversedPosts = posts.reverse()
+            for post in reversedPosts {
+                if let imageURL = post.featuredImageUrl{
+                    let imageRecord = ImageRecord(name: "", url: NSURL(string: imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
+                    self.tableViewImageLoadingCoordinator.imageRecords.insert(imageRecord, atIndex: 0)
+                }
+            }
+        }
         refresher.endRefreshing()
         print ("updateposts")
         
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rgbValue:UInt32 = 0
+        NSScanner(string: cString).scanHexInt(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 
     /*
