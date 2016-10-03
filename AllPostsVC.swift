@@ -27,21 +27,14 @@ class AllPostsVC: UITableViewController{
         
         
         
-        allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
-        
-        if allPosts.count <= 0 {
-            client.requestLatestTwentyPosts { (posts) in
-                
-                self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
-                self.tableView.reloadData()
-                self.setUpTableViewImageCoordinator()
-            }
-        }
-        else{
+       
+        client.requestLatestTwentyPosts { (posts) in
+            
+            self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
             self.tableView.reloadData()
             self.setUpTableViewImageCoordinator()
         }
-        
+       
         
 
         
@@ -195,32 +188,6 @@ class AllPostsVC: UITableViewController{
     }
     
     func updatePosts(){
-        //self.tableView.reloadData()
-//        func updatePosts(){
-//            if reachabilityManager.isReachable(){
-//                print("is Reachable")
-//                let postUpdateUtility = PostsUpdateUtility()
-//                postUpdateUtility.updateAllPosts {
-//                    
-//                    dispatch_async(dispatch_get_main_queue(), {
-//                        print("Update table view")
-//                        self.posts = postUpdateUtility.fetchPosts()
-//                        self.tableView.reloadData()
-//                        self.activityIndicatorView.stopAnimating()
-//                        self.activityIndicatorView.willMoveToSuperview(self.tableView)
-//                        self.refreshControl?.endRefreshing()
-//                    })
-//                }
-//            } else {
-//                print("No Internet Connection")
-//                self.refreshControl?.endRefreshing()
-//                //  popUpWarningMessage("No Internet Connection")
-//                alert.showAlert(self)
-//                
-//            }
-//            
-//            
-//        }
         client.requestLatestTwentyPosts { (posts) in
             self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
             let reversedPosts = posts.reverse()
@@ -228,10 +195,12 @@ class AllPostsVC: UITableViewController{
                 if let imageURL = post.featuredImageUrl{
                     let imageRecord = ImageRecord(name: "", url: NSURL(string: imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
                     self.tableViewImageLoadingCoordinator.imageRecords.insert(imageRecord, atIndex: 0)
+                    
                 }
             }
+            self.tableView.reloadData()
+            self.refresher.endRefreshing()
         }
-        refresher.endRefreshing()
         print ("updateposts")
         
     }
