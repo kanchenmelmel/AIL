@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //        let mainViewController = myStoryboard.instantiateViewControllerWithIdentifier("main") as! ViewController
 //        mainViewController.setNavigationBarItem()
-        let leftViewController = myStoryboard.instantiateViewControllerWithIdentifier("left") as! MenuVC
+        let leftViewController = myStoryboard.instantiateViewControllerWithIdentifier("left") as! LeftMenuVC
         self.window?.makeKeyAndVisible()
         
        

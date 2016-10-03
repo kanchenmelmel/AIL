@@ -18,6 +18,11 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var webView: UIWebView!
+    
+    
+    // Tool bar
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,22 +39,20 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
     
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     
     @IBAction func showActivityViewController(sender: AnyObject) {
         
         
-        let url = NSURL(string: urlString!)
-        print("Test3")
-        let activityViewController = UIActivityViewController(activityItems: [titleString!,url!], applicationActivities: nil)
-        self.navigationController?.presentViewController(activityViewController, animated: true, completion: { 
-            
-        })
+//        let url = NSURL(string: urlString!)
+//        print("Test3")
+//        let activityViewController = UIActivityViewController(activityItems: [titleString!,url!], applicationActivities: nil)
+//        self.navigationController?.presentViewController(activityViewController, animated: true, completion: { 
+//            
+//        })
+        
+        
+        self.rightTopBarButtonItemAction(self.urlString!,titleString: self.titleString!)
     }
     
     
@@ -87,6 +90,12 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
+    
+    
+    
+    
+    
+    
 
     /*
     // MARK: - Navigation
@@ -97,5 +106,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
 
 }
