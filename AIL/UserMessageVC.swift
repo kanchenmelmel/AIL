@@ -130,6 +130,17 @@ class UserMessageVC: UITableViewController {
         CoreDataOperation.saveManagedObjectContext()
         
         self.tableView.reloadData()
+        self.performSegueWithIdentifier("messageVC", sender: message)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "messageVC" {
+            if let message = sender as? Message{
+                let destnatinationVC = segue.destinationViewController as! MessageVC
+                destnatinationVC.message = message
+            
+            }
+        }
     }
 
     @IBAction func CloseButton(sender: AnyObject) {
