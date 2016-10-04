@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--机经题库-->
+        <!--备考攻略-->
         <scene sceneID="iQN-xU-gtB">
             <objects>
-                <tableViewController storyboardIdentifier="BeiKaoGongLueTableVC" id="xhr-LG-ZU8" customClass="BeiKaoGongLueTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BeiKaoGongLueTableVC" title="备考攻略" id="xhr-LG-ZU8" customClass="BeiKaoGongLueTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" id="U56-tj-YuY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,16 +86,16 @@
                             <outlet property="delegate" destination="xhr-LG-ZU8" id="ZaW-Pj-fss"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="机经题库" id="bmN-tT-1ao"/>
+                    <navigationItem key="navigationItem" title="备考攻略" id="bmN-tT-1ao"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXm-z5-jbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1840.5797101449277" y="-520.10869565217399"/>
         </scene>
-        <!--机经题库-->
+        <!--备考攻略-->
         <scene sceneID="Dzs-vN-CDe">
             <objects>
-                <viewController id="u9n-vD-AW4" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="备考攻略" id="u9n-vD-AW4" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oAZ-Cz-roF"/>
                         <viewControllerLayoutGuide type="bottom" id="YWM-yb-mDy"/>
