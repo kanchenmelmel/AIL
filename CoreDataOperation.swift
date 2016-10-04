@@ -128,13 +128,13 @@ class CoreDataOperation {
     static func fetchAllArchivesFromCoreData() ->[Archive]? {
         let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         
-        let messageFetchRequest = NSFetchRequest(entityName: EntityType.Archive.rawValue)
+        let archiveFetchRequest = NSFetchRequest(entityName: EntityType.Archive.rawValue)
         
         let dateSort = NSSortDescriptor(key: "archiveDate", ascending: false)
-        messageFetchRequest.sortDescriptors=[dateSort]
+        archiveFetchRequest.sortDescriptors=[dateSort]
         
         do {
-            let objects = try managedObjectContext.executeFetchRequest(messageFetchRequest) as! [Archive]
+            let objects = try managedObjectContext.executeFetchRequest(archiveFetchRequest) as! [Archive]
             return objects
             
             
@@ -143,6 +143,28 @@ class CoreDataOperation {
         }
         return nil
     }
+    
+    static func createArchiveObject() -> Archive{
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let archive = Archive(entity: NSEntityDescription.entityForName("Archive", inManagedObjectContext: managedObjectContext)!, insertIntoManagedObjectContext: managedObjectContext)
+        
+        archive.archiveDate = NSDate()
+        return archive
+    }
+    
+    static func deleteManagedObjectFromCoreData(objectToDelete:NSManagedObject){
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        managedObjectContext.deleteObject(objectToDelete)
+        do {
+            try managedObjectContext.save()
+        } catch {
+            NSLog("Exception when deleting managed object")
+        }
+    }
+    
+    
 }
 
 

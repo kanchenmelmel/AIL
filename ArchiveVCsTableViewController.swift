@@ -60,17 +60,35 @@ class ArchiveVCsTableViewController: UITableViewController {
         dateFormatter.dateStyle = .MediumStyle
         cell.dateLabel.text = "\(dateFormatter.stringFromDate(archive.archiveDate!).uppercaseString)" + " "
         
-        var messageIcon: UIImage?
+        //var messageIcon: UIImage?
 //        if archive.viewed == true {
 //            messageIcon = UIImage(named: "Read")
 //        }
 //        else{
 //            messageIcon = UIImage(named: "Unread")
 //        }
-        cell.imageView?.image = messageIcon
+        //cell.imageView?.image = messageIcon
         
         
         return cell
+    }
+    
+    
+    
+    // Swipe to delete 
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            
+            let archive = archives[indexPath.row]
+            CoreDataOperation.deleteManagedObjectFromCoreData(archive)
+            archives.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
 
     /*
@@ -118,14 +136,21 @@ class ArchiveVCsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)  {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showArchiveWebVCSegue" {
+            let destinationVC = segue.destinationViewController as! ArchiveWebViewController
+            
+            let index = self.tableView.indexPathForSelectedRow
+            let archive = archives[index!.row]
+            destinationVC.urlString = archive.link
+        }
     }
-    */
+ 
+ 
 
 }

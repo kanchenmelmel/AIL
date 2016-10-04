@@ -179,6 +179,7 @@ class SubjectResourcesTableViewController: UITableViewController {
             let destnatinationVC = segue.destinationViewController as! WebViewController
             
             let index = tableView.indexPathForSelectedRow
+            destnatinationVC.post = resourcesPosts[index!.row]
             destnatinationVC.urlString = resourcesPosts[index!.row].link!
             destnatinationVC.titleString = resourcesPosts[index!.row].title!
         }

@@ -1,23 +1,21 @@
 //
-//  ResourceWebViewController.swift
+//  ArchiveWebViewController.swift
 //  AIL
 //
-//  Created by Work on 22/9/16.
+//  Created by Work on 3/10/16.
 //  Copyright © 2016 au.com.melmel. All rights reserved.
 //
 
 import UIKit
 
-class WebViewController: UIViewController, UIWebViewDelegate {
-    
-    var post:Post?
+class ArchiveWebViewController: UIViewController,UIWebViewDelegate {
     
     var urlString:String?
     var titleString:String?
     
     var loading = false
     var timer:NSTimer? = nil
-
+    
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var webView: UIWebView!
     
@@ -27,35 +25,23 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         progressView.progress  = 0
         let url = NSURL(string:urlString!)
         
         let request = NSMutableURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 10.0)
-//        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
+        //        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
         webView.loadRequest(request as NSURLRequest)
         webView.delegate = self
     }
-
+    
+    
+    
+    
     
 
-    
-    
-    @IBAction func showActivityViewController(sender: AnyObject) {
-        
-        
-//        let url = NSURL(string: urlString!)
-//        print("Test3")
-//        let activityViewController = UIActivityViewController(activityItems: [titleString!,url!], applicationActivities: nil)
-//        self.navigationController?.presentViewController(activityViewController, animated: true, completion: { 
-//            
-//        })
-        
-        
-        self.rightTopBarButtonItemAction(self.post!)
-    }
     
     
     
@@ -68,7 +54,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         progressView.progress = 0
         loading = true
         timer = NSTimer.scheduledTimerWithTimeInterval(0.01667, target: self, selector: #selector(self.updateProgressView), userInfo: nil, repeats: true)
-//        timer = NSTimer.scheduledTimer(timeInterval: 0.01667, target: self, selector: #selector(self.updateProgressView), userInfo: nil, repeats: true)
+        //        timer = NSTimer.scheduledTimer(timeInterval: 0.01667, target: self, selector: #selector(self.updateProgressView), userInfo: nil, repeats: true)
     }
     
     // Web View Finish Loading Page
@@ -91,12 +77,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
             timer?.invalidate()
         }
     }
-    
-    
-    
-    
-    
-    
+
     
 
     /*
@@ -108,8 +89,5 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    
 
 }

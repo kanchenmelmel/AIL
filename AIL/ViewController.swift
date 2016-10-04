@@ -246,6 +246,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if let selectedPost = sender as? Post{
             
                 let destinationVC = segue.destinationViewController as! WebViewController
+                destinationVC.post = selectedPost
                 destinationVC.urlString = selectedPost.link
                 destinationVC.titleString = selectedPost.title
             }

@@ -65,6 +65,16 @@ class UserMessageVC: UITableViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+//<<<<<<< HEAD
+    
+//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        return true
+//    }
+//    
+//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+    
+//=======
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if (indexPath.row == userMessages.count-1) && !isLoading{
             isLoading = true
@@ -82,6 +92,7 @@ class UserMessageVC: UITableViewController {
                     self.tableView.reloadData()
                 })
             }
+//>>>>>>> master
         }
     }
     

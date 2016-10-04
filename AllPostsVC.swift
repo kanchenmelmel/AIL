@@ -25,12 +25,26 @@ class AllPostsVC: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//<<<<<<< HEAD
+//        allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
+//        
+//        if allPosts.count <= 0 {
+//            client.requestLatestTwentyPosts { (posts) in
+//                
+//                self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
+//                self.tableView.reloadData()
+//                self.setUpTableViewImageCoordinator()
+//            }
+//        }
+//        else{
+//=======
         
         
        
         client.requestLatestTwentyPosts { (posts) in
             
             self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
+//>>>>>>> master
             self.tableView.reloadData()
             self.setUpTableViewImageCoordinator()
         }
@@ -182,6 +196,10 @@ class AllPostsVC: UITableViewController{
             let destnatinationVC = segue.destinationViewController as! WebViewController
             
             let index = tableView.indexPathForSelectedRow
+            
+            destnatinationVC.post = allPosts[index!.row]
+            
+            
             destnatinationVC.urlString = allPosts[index!.row].link!
             destnatinationVC.titleString = allPosts[index!.row].title!
         }
