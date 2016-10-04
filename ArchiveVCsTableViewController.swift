@@ -72,6 +72,24 @@ class ArchiveVCsTableViewController: UITableViewController {
         
         return cell
     }
+    
+    
+    
+    // Swipe to delete 
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            
+            let archive = archives[indexPath.row]
+            CoreDataOperation.deleteManagedObjectFromCoreData(archive)
+            archives.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

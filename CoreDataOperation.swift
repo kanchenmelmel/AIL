@@ -153,6 +153,17 @@ class CoreDataOperation {
         return archive
     }
     
+    static func deleteManagedObjectFromCoreData(objectToDelete:NSManagedObject){
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        managedObjectContext.deleteObject(objectToDelete)
+        do {
+            try managedObjectContext.save()
+        } catch {
+            NSLog("Exception when deleting managed object")
+        }
+    }
+    
     
 }
 

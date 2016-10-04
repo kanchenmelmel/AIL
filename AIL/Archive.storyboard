@@ -165,9 +165,7 @@
                             <constraint firstItem="tRt-Z4-zDL" firstAttribute="leading" secondItem="2xE-Lx-Qqd" secondAttribute="leading" id="xlL-Fv-tW0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="我的收藏" id="cst-C5-0EG">
-                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="Osy-Zh-reU"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="我的收藏" id="cst-C5-0EG"/>
                     <connections>
                         <outlet property="progressView" destination="tRt-Z4-zDL" id="Bro-pN-iDo"/>
                         <outlet property="webView" destination="jAg-nS-74k" id="YBj-Ha-SED"/>
@@ -178,7 +176,4 @@
             <point key="canvasLocation" x="5055" y="301"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ActivityVCButton" width="19" height="4"/>
-    </resources>
 </document>
