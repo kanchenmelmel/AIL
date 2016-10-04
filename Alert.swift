@@ -42,7 +42,7 @@ class Alert {
         
         let attributedString = NSAttributedString(string: "此选项暂未开通", attributes: [
             NSFontAttributeName : UIFont.systemFontOfSize(20),
-            NSForegroundColorAttributeName : UIColor.whiteColor()
+            NSForegroundColorAttributeName : hexStringToUIColor("#3299CC")
             ])
         
         
@@ -53,7 +53,7 @@ class Alert {
         
         let subview :UIView = alertController.view.subviews.last! as UIView
         let alertContentView = subview.subviews.last! as UIView
-        alertContentView.backgroundColor = GLOBAL_TINT_COLOR
+        alertContentView.backgroundColor = hexStringToUIColor("#325C74")
         alertContentView.layer.cornerRadius = 10
         
         
@@ -69,5 +69,27 @@ class Alert {
         let loadingAlertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
         activityIndicatorView.center = loadingAlertController.view.center
         
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rgbValue:UInt32 = 0
+        NSScanner(string: cString).scanHexInt(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }
