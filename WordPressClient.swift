@@ -138,6 +138,36 @@ class WordPressClient {
         
         //        Alamofire.request
         
+        
+    }
+    
+    
+    func requestPreviousMessages(beforeDate: NSDate, excludeID: Int, completionHandler: ([Message]) -> Void) {
+        
+        let dateFormatter = DateFormatter()
+        let beforeDateString = dateFormatter.formatDateToDateString(beforeDate)
+        
+        //let url = NSURL(string: "\(baseURIString)?before=\(beforeDateString)&exclude=\(excludeId)")
+        let urlArguments = "?before=\(beforeDateString)&exclude=\(excludeID)"
+        print("num: \(MESSAGES_URL+MESSAGES_RESOURCES+urlArguments)")
+        Alamofire.request(.GET, MESSAGES_URL+MESSAGES_RESOURCES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let jsonArray = JSON(value)
+                    // print (jsonArray)
+                    completionHandler(JSONParser.parseJSONDictionaryToMessageManagedObject(true, ifInsertIntoManagedContext: true, jsonArray: jsonArray))
+                    
+                    // Save Managed Object Context
+                    CoreDataOperation.saveManagedObjectContext()
+                    
+                }
+            case .Failure: break
+            }
+        }
+        
+        //        Alamofire.request
+        
     }
     
     

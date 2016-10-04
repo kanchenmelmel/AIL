@@ -119,6 +119,10 @@ class JSONParser {
             managedObjectContextToBeInserted = nil
         }
         var messages = [Message]()
+        
+        if jsonArray.count <= 0{
+            return messages
+        }
         for index in 0...jsonArray.count-1 {
             if checkIfExistInCoreData {
                 if !CoreDataOperation.checkIdExist(jsonArray[index]["id"].int!, entityType: .Message){

@@ -17,29 +17,39 @@ class UserMessageVC: UITableViewController {
     
     let client = WordPressClient()
     
+    var isLoading = false
+    var numOfMessages:Int?
+    var reachToTheEnd = false
+    var refresher: UIRefreshControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setNavigationBarItem()
         
-        userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
-        
-        if userMessages.count <= 0 {
-            client.requestAllMessages { (messages) in
-                self.userMessages = messages
-              
-                self.tableView.reloadData()
-            }
+       
+        client.requestAllMessages { (messages) in
+            
+            print ("abc: \(messages.count)")
+            self.userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
+          
+            self.tableView.reloadData()
         }
+    
+        
     }
-
+    override func viewDidAppear(animated: Bool) {
+        // Initialize the refresh control
+        refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(self.updateMessages), forControlEvents: .ValueChanged)
+        refresher.backgroundColor = UIColor.clearColor()
+        refresher.tintColor = hexStringToUIColor("#00B2EE")
+        self.tableView.addSubview(refresher)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -55,14 +65,34 @@ class UserMessageVC: UITableViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+//<<<<<<< HEAD
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
+//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        return true
+//    }
+//    
+//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+//=======
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.row == userMessages.count-1) && !isLoading{
+            isLoading = true
             
+            if reachToTheEnd == false {
+                numOfMessages = userMessages.count
+                let oldestMessage = userMessages[indexPath.row]
+                
+                client.requestPreviousMessages(oldestMessage.date!, excludeID: oldestMessage.id as! Int, completionHandler: { (messages) in
+                    self.userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
+                    if self.numOfMessages == self.userMessages.count{
+                        self.reachToTheEnd = true
+                    }
+                    self.isLoading = false
+                    self.tableView.reloadData()
+                })
+            }
+//>>>>>>> master
         }
     }
     
@@ -92,53 +122,50 @@ class UserMessageVC: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let message = userMessages[indexPath.row]
+        
+        message.setValue(true, forKey: "viewed")
+        
+        CoreDataOperation.saveManagedObjectContext()
+        
+        self.tableView.reloadData()
+    }
 
     @IBAction func CloseButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func updateMessages(){
+        client.requestAllMessages { (messages) in
+            self.userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
+            self.tableView.reloadData()
+            self.refresher.endRefreshing()
+        }
+        print ("updateMessages")
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rgbValue:UInt32 = 0
+        NSScanner(string: cString).scanHexInt(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
