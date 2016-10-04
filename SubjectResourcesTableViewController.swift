@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
+
 
 class SubjectResourcesTableViewController: UITableViewController {
     var resourcesPosts = [Post]()
@@ -14,6 +16,9 @@ class SubjectResourcesTableViewController: UITableViewController {
     var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     
     let client = WordPressClient()
+    
+    let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2.0 - 50,UIScreen.mainScreen().bounds.height/2.0 - 50,100.0,100.0), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +28,17 @@ class SubjectResourcesTableViewController: UITableViewController {
 //        }
 //        else {
 //            print("There is someting wrong while loadding resources from Core Data")
-//        }
         
+//        }
+        self.tableView.addSubview(activityIndicatorView)
+        activityIndicatorView.startAnimating()
         client.requestLatestPostsByCategories(159) { (posts) in
+            
             self.resourcesPosts = posts
             print(posts.count)
             self.tableView.reloadData()
             self.setUpTableViewImageCoordinator()
+            self.activityIndicatorView.stopAnimating()
         }
         
         

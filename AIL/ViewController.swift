@@ -16,7 +16,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var leftButtonIndex = 0
     
     @IBOutlet weak var collectionView: UICollectionView!
-    let searchBar = UISearchBar()
+    
+    let searchController = UISearchController()
+    
+    
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
@@ -35,18 +38,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
 
 //        self.setNavigationBarItem()
-        searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Normal)
-        searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Selected)
+//        let searchBar = searchController.searchBar
+        searchController.searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Normal)
+        searchController.searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Selected)
         
 //        if let index = searchBar.indexofSear
         
 //        setUpSearchBar()
         
-        self.searchBar.barTintColor = UIColor.whiteColor()
+        searchController.searchBar.barTintColor = UIColor.whiteColor()
         //        self.searchBar.backgroundColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
 //        self.searchBar.tintColor = UIColor(red: 68.0, green: 120.0, blue: 180.0, alpha: 1.0)
-        self.navigationItem.titleView = searchBar
-        searchBar.delegate = self
+        self.navigationItem.titleView = searchController.searchBar
+        searchController.searchBar.delegate = self
         //let searchBarItem = UIBarButtonItem.init(customView: searchBar)
         //self.navigationItem.rightBarButtonItem = searchBarItem
         
