@@ -95,6 +95,9 @@ class LeftMenuVC: UIViewController {
         let archiveStoryboard = UIStoryboard(name: "Messages", bundle: nil)
         self.messageVC = archiveStoryboard.instantiateViewControllerWithIdentifier("MessagesTableNavCtrl")
         
+        let aboutAILStoryboard = UIStoryboard(name: "AboutAIL", bundle: nil)
+        self.aboutAILVC = aboutAILStoryboard.instantiateViewControllerWithIdentifier("AboutAILNavCtrl")
+        
         
     }
     /*

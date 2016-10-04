@@ -350,7 +350,7 @@
         <!--联系我们-->
         <scene sceneID="5Mi-Ex-daW">
             <objects>
-                <viewController id="3Rg-iI-EBl" customClass="ContactUsVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contactUsVC" id="3Rg-iI-EBl" customClass="ContactUsVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AHB-uc-gpW"/>
                         <viewControllerLayoutGuide type="bottom" id="Mkc-cL-CfR"/>

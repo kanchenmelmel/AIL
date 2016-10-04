@@ -64,6 +64,7 @@
 		96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ADCDA21D925AC600ACBC05 /* CustomizedSearchBar.swift */; };
 		96E8C7741D9A307100843C89 /* CourseTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8C7731D9A307100843C89 /* CourseTrainingViewController.swift */; };
 		96E8C7761D9A311000843C89 /* CustomizedSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8C7751D9A311000843C89 /* CustomizedSegmentedControl.swift */; };
+		96F188161DA3571300987E98 /* AboutAILViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F188151DA3571300987E98 /* AboutAILViewController.swift */; };
 		C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2662452685324A770F0164 /* Pods_AIL.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,7 @@
 		96ADCDA21D925AC600ACBC05 /* CustomizedSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedSearchBar.swift; sourceTree = "<group>"; };
 		96E8C7731D9A307100843C89 /* CourseTrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTrainingViewController.swift; sourceTree = "<group>"; };
 		96E8C7751D9A311000843C89 /* CustomizedSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedSegmentedControl.swift; sourceTree = "<group>"; };
+		96F188151DA3571300987E98 /* AboutAILViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAILViewController.swift; sourceTree = "<group>"; };
 		A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2662452685324A770F0164 /* Pods_AIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 		4DAEAFA81D7A486F00842C4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96F188141DA356F900987E98 /* AboutAIL */,
 				4DDD18051D9ACBD800294ACC /* UserMessage */,
 				4DDD17EB1D9771DB00294ACC /* AllPosts */,
 				967CF92C1D922F13007CF78C /* CustomizedView */,
@@ -404,6 +407,14 @@
 			name = BeiKaoGongLue;
 			sourceTree = "<group>";
 		};
+		96F188141DA356F900987E98 /* AboutAIL */ = {
+			isa = PBXGroup;
+			children = (
+				96F188151DA3571300987E98 /* AboutAILViewController.swift */,
+			);
+			name = AboutAIL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -619,6 +630,7 @@
 				4D9C9A761D88B3DC00EA98D0 /* UserMessageCell.swift in Sources */,
 				9671E5DF1D7E52AE008250C7 /* UrlConstants.swift in Sources */,
 				9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */,
+				96F188161DA3571300987E98 /* AboutAILViewController.swift in Sources */,
 				4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */,
 				4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */,
 				4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */,
