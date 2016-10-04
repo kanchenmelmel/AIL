@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class AllPostsVC: UITableViewController{
 
@@ -21,6 +22,9 @@ class AllPostsVC: UITableViewController{
     let client = WordPressClient()
     
     var refresher: UIRefreshControl!
+    
+    
+    let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2.0 - 50,UIScreen.mainScreen().bounds.height/2.0 - 50,100.0,100.0), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +44,15 @@ class AllPostsVC: UITableViewController{
 //=======
         
         
-       
+        self.tableView.addSubview(activityIndicatorView)
+        activityIndicatorView.startAnimating()
         client.requestLatestTwentyPosts { (posts) in
             
             self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
 //>>>>>>> master
             self.tableView.reloadData()
             self.setUpTableViewImageCoordinator()
+            self.activityIndicatorView.stopAnimating()
         }
        
         
