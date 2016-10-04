@@ -12,6 +12,8 @@
 		3DE209321D8FA015001BCEA4 /* ContactUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */; };
 		3DE209341D8FA03C001BCEA4 /* EmailEjecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */; };
 		4D333F8E1DA3B87600D557C2 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D333F8D1DA3B87600D557C2 /* MessageVC.swift */; };
+		4D333F901DA3C67800D557C2 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D333F8F1DA3C67800D557C2 /* Alert.swift */; };
+		4D333F921DA3C6C300D557C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D333F911DA3C6C300D557C2 /* Constants.swift */; };
 		4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */; };
 		4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */; };
 		4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */; };
@@ -75,6 +77,8 @@
 		3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactUsVC.swift; path = AIL/ContactUsVC.swift; sourceTree = "<group>"; };
 		3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailEjecter.swift; path = AIL/EmailEjecter.swift; sourceTree = "<group>"; };
 		4D333F8D1DA3B87600D557C2 /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
+		4D333F8F1DA3C67800D557C2 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		4D333F911DA3C6C300D557C2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4D9C9A6D1D86C41800EA98D0 /* CustomUINavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationItem.swift; path = AIL/CustomUINavigationItem.swift; sourceTree = "<group>"; };
 		4D9C9A6F1D86CA1A00EA98D0 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUINavigationController.swift; path = AIL/CustomUINavigationController.swift; sourceTree = "<group>"; };
 		4D9C9A731D88B2FF00EA98D0 /* UserMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMessageVC.swift; path = AIL/UserMessageVC.swift; sourceTree = "<group>"; };
@@ -371,6 +375,7 @@
 		968DD6D31D793AC7003B5DA4 /* Uitility */ = {
 			isa = PBXGroup;
 			children = (
+				4D333F8F1DA3C67800D557C2 /* Alert.swift */,
 				96A173A41DA0E0290002F360 /* PostCatagoryRecognizer.swift */,
 				4DDD17E71D90942A00294ACC /* FileDownloader.swift */,
 				4DDD17E51D90226900294ACC /* ImageOperation.swift */,
@@ -387,6 +392,7 @@
 				9671E5DC1D7E4FCF008250C7 /* WordPressClient.swift */,
 				9671E5E01D7E6EAC008250C7 /* JSONParser.swift */,
 				9671E5DE1D7E52AE008250C7 /* UrlConstants.swift */,
+				4D333F911DA3C6C300D557C2 /* Constants.swift */,
 				960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */,
 				3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */,
 			);
@@ -599,9 +605,11 @@
 				965216B31D94B29F00EA1823 /* HomeViewBottomButton.swift in Sources */,
 				3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */,
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
+				4D333F901DA3C67800D557C2 /* Alert.swift in Sources */,
 				963574981D90E15D00B8D1A5 /* ImageDownloader.swift in Sources */,
 				963574951D90C3F800B8D1A5 /* Category+CoreDataProperties.swift in Sources */,
 				965693401D9392B300FAC04B /* Post+CoreDataClass.swift in Sources */,
+				4D333F921DA3C6C300D557C2 /* Constants.swift in Sources */,
 				965693411D9392B300FAC04B /* Post+CoreDataProperties.swift in Sources */,
 				9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */,
 				96E8C7741D9A307100843C89 /* CourseTrainingViewController.swift in Sources */,

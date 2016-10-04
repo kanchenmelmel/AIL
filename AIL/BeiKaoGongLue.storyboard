@@ -124,7 +124,7 @@
                             <constraint firstItem="yXE-1e-R9T" firstAttribute="top" secondItem="XhW-Kg-ezU" secondAttribute="top" constant="65" id="ykD-27-dmk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="机经题库" id="pd2-q4-to9">
+                    <navigationItem key="navigationItem" title="备考攻略" id="pd2-q4-to9">
                         <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="DL0-SX-OIZ">
                             <connections>
                                 <action selector="showActivityViewController:" destination="u9n-vD-AW4" id="S41-zs-7ac"/>

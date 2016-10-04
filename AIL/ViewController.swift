@@ -13,6 +13,7 @@ import CoreData
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SlideMenuControllerDelegate,UISearchBarDelegate {
     
     
+    
     var leftButtonIndex = 0
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -25,6 +26,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     let wordpressClient = WordPressClient()
     let postRetriever = PostRetriever()
+    
+    let alert = Alert()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -236,6 +239,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //
 //    }
     
+    
+    @IBAction func mockExamButtonPressed(sender: AnyObject) {
+        
+        alert.showTempAlert(self)
+    }
+    
+    @IBAction func selfExamButtonPressed(sender: AnyObject) {
+        
+        alert.showTempAlert(self)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPostWebViewSegue" {
