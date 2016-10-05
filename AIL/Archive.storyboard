@@ -14,9 +14,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你暂时没有收藏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zeq-np-ofY">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="archiveCell" rowHeight="71" id="x4j-CL-HAR" customClass="UserMessageCell" customModule="AIL" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="71"/>
+                                <rect key="frame" x="0.0" y="136" width="375" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x4j-CL-HAR" id="yU1-cx-yRV">
                                     <frame key="frameInset" width="375" height="70"/>
@@ -103,6 +110,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="我的收藏" id="gRm-CY-Tjg"/>
+                    <connections>
+                        <outlet property="tableHearderLabel" destination="Zeq-np-ofY" id="dsY-fx-jCD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tm1-fp-MQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationItem title="Title" id="Pzf-Bn-sYE"/>

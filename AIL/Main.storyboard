@@ -113,6 +113,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="mockExamButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Whu-hc-V1X"/>
+                                                            <segue destination="F2h-Yu-gaf" kind="show" id="zka-pP-M9N"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -231,6 +232,15 @@
                                             <outlet property="postImage" destination="8Pl-hn-0hA" id="AhK-0v-mYh"/>
                                             <outlet property="postLabel" destination="ibP-vr-SJl" id="TpK-97-DPr"/>
                                         </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPostCell" id="3aG-XG-aY6">
+                                        <rect key="frame" x="297" y="7" width="287" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <size key="customSize" width="287" height="169"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -853,6 +863,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meB-n7-z3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2908" y="234.33283358320841"/>
+        </scene>
+        <!--全真模考-->
+        <scene sceneID="cmW-fd-Dnr">
+            <objects>
+                <viewController id="F2h-Yu-gaf" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l5s-p3-7Yu"/>
+                        <viewControllerLayoutGuide type="bottom" id="24n-mw-nKe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w4r-k3-go2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPu-Db-zvo">
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-oC-nb6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="HeD-2g-OiO"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="WPu-Db-zvo" firstAttribute="leading" secondItem="w4r-k3-go2" secondAttribute="leading" id="DZc-f0-auO"/>
+                            <constraint firstAttribute="trailing" secondItem="ewH-oC-nb6" secondAttribute="trailing" id="MdJ-ui-Uoi"/>
+                            <constraint firstItem="24n-mw-nKe" firstAttribute="top" secondItem="WPu-Db-zvo" secondAttribute="bottom" id="WCm-Mo-Esr"/>
+                            <constraint firstItem="WPu-Db-zvo" firstAttribute="top" secondItem="w4r-k3-go2" secondAttribute="top" id="Wyz-lo-bHX"/>
+                            <constraint firstItem="ewH-oC-nb6" firstAttribute="top" secondItem="w4r-k3-go2" secondAttribute="top" constant="65" id="gu8-hE-gyF"/>
+                            <constraint firstAttribute="trailing" secondItem="WPu-Db-zvo" secondAttribute="trailing" id="jmz-Ad-kqc"/>
+                            <constraint firstItem="ewH-oC-nb6" firstAttribute="leading" secondItem="w4r-k3-go2" secondAttribute="leading" id="omv-Fc-hk5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="全真模考" id="2GG-Ju-sem"/>
+                    <connections>
+                        <outlet property="progressView" destination="ewH-oC-nb6" id="ZLS-nA-sqC"/>
+                        <outlet property="webView" destination="WPu-Db-zvo" id="a0l-rF-JnB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMn-Yx-Sgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797.5999999999999" y="-527.58620689655174"/>
         </scene>
     </scenes>
     <resources>

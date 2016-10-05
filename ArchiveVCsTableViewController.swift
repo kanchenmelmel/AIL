@@ -16,19 +16,25 @@ class ArchiveVCsTableViewController: UITableViewController {
     
     let client = WordPressClient()
     
+    @IBOutlet weak var tableHearderLabel: UILabel!
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.tableHeaderView = nil
         self.setNavigationBarItem()
         
         archives = CoreDataOperation.fetchAllArchivesFromCoreData()!
         
+        if archives.count == 0 {
+            self.tableView.tableHeaderView = tableHearderLabel
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     
     // MARK: - Table view data source
