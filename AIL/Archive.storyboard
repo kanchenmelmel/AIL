@@ -96,6 +96,25 @@
                                     <segue destination="8p5-gH-MlQ" kind="show" identifier="showArchiveWebVCSegue" id="wmT-E6-ZFi"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noPostCell" id="Hpe-if-he1">
+                                <rect key="frame" x="0.0" y="163" width="375" height="71"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hpe-if-he1" id="hIb-rs-iBo">
+                                    <frame key="frameInset" width="375" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你暂时没有收藏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rw-KM-Heh">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7rw-KM-Heh" firstAttribute="centerY" secondItem="hIb-rs-iBo" secondAttribute="centerY" id="jSs-6L-khX"/>
+                                        <constraint firstItem="7rw-KM-Heh" firstAttribute="centerX" secondItem="hIb-rs-iBo" secondAttribute="centerX" id="mdh-Kf-eyS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="QHz-u4-Rff" id="ByM-qQ-owO"/>

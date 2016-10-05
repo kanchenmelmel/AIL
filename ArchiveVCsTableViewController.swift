@@ -15,20 +15,21 @@ class ArchiveVCsTableViewController: UITableViewController {
     //let tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     
     let client = WordPressClient()
-    
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         self.setNavigationBarItem()
         
         archives = CoreDataOperation.fetchAllArchivesFromCoreData()!
-        
+        print(archives.count)
     }
+
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     
     // MARK: - Table view data source
@@ -40,6 +41,10 @@ class ArchiveVCsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
+        if archives.count == 0 {
+            return 1
+        }
         return archives.count
     }
     
@@ -48,6 +53,11 @@ class ArchiveVCsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if archives.count == 0 {
+            return tableView.dequeueReusableCellWithIdentifier("noPostCell",forIndexPath: indexPath)
+        }
+        
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("archiveCell", forIndexPath: indexPath) as! UserMessageCell
         
         let archive = archives[indexPath.row]
@@ -78,6 +88,9 @@ class ArchiveVCsTableViewController: UITableViewController {
     // Swipe to delete 
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if archives.count == 0 {
+            return false
+        }
         return true
     }
     
@@ -88,6 +101,7 @@ class ArchiveVCsTableViewController: UITableViewController {
             CoreDataOperation.deleteManagedObjectFromCoreData(archive)
             archives.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.reloadData()
         }
     }
 

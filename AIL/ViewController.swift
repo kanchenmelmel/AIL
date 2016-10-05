@@ -39,19 +39,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Setup Search bar in Nav Bar
         
-
-//        self.setNavigationBarItem()
-//        let searchBar = searchController.searchBar
+        
+        //        self.setNavigationBarItem()
+        //        let searchBar = searchController.searchBar
         searchController.searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Normal)
         searchController.searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Selected)
         
-//        if let index = searchBar.indexofSear
+        //        if let index = searchBar.indexofSear
         
-//        setUpSearchBar()
+        //        setUpSearchBar()
         
         searchController.searchBar.barTintColor = UIColor.whiteColor()
         //        self.searchBar.backgroundColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
-//        self.searchBar.tintColor = UIColor(red: 68.0, green: 120.0, blue: 180.0, alpha: 1.0)
+        //        self.searchBar.tintColor = UIColor(red: 68.0, green: 120.0, blue: 180.0, alpha: 1.0)
         self.navigationItem.titleView = searchController.searchBar
         searchController.searchBar.delegate = self
         //let searchBarItem = UIBarButtonItem.init(customView: searchBar)
@@ -71,19 +71,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             wordpressClient.requestLatestTwentyPosts { (posts) in
                 
                 self.featurePosts = self.postRetriever.fetchPosts()
-                self.createLastPost()
+                //                self.createLastPost()
                 self.collectionView.reloadData()
                 self.setUpTableViewImageCoordinator()
             }
         }
         else{
-            createLastPost()
+            //            createLastPost()
             self.collectionView.reloadData()
             self.setUpTableViewImageCoordinator()
         }
         
         
-
+        
         
     }
     
@@ -91,71 +91,75 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     override func viewDidAppear(animated: Bool) {
-//        self.setNavigationBarItem()
+        //        self.setNavigationBarItem()
         
         
         
         
     }
     
-    func createLastPost() -> Void{
-        //create last post
-        let postDescription = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
-        let lastPost = Post(entity: postDescription!, insertIntoManagedObjectContext: nil)
-        
-        lastPost.featuredImage = UIImage(named: "AllPostsButton")
-        lastPost.title = "点击阅读更多资讯"
-        lastPost.featuredImageUrl = nil
-        
-        featurePosts.append(lastPost)
-        
-    }
+    //    func createLastPost() -> Void{
+    //        //create last post
+    //        let postDescription = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
+    //        let lastPost = Post(entity: postDescription!, insertIntoManagedObjectContext: nil)
+    //
+    //        lastPost.featuredImage = UIImage(named: "AllPostsButton")
+    //        lastPost.title = "点击阅读更多资讯"
+    //        lastPost.featuredImageUrl = nil
+    //
+    //        featurePosts.append(lastPost)
+    //
+    //    }
     
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCell", forIndexPath: indexPath) as? PostCollectionViewCell{
-            cell.backgroundColor = UIColor.whiteColor()
-            
-            print ("123123: \(self.featurePosts.count)")
-            
-            let featurePost = self.featurePosts[indexPath.row]
-            
-            cell.postLabel.text = featurePost.title
-            
-            
-            if featurePost.featuredImageUrl != nil {
+        if indexPath.row < self.featurePosts.count {
+            if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCell", forIndexPath: indexPath) as? PostCollectionViewCell{
+                cell.backgroundColor = UIColor.whiteColor()
                 
-                cell.postImage.contentMode = .ScaleAspectFill
-               
-                let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
-                cell.postImage.image = imageRecord.image
+                print ("123123: \(self.featurePosts.count)")
                 
-                switch (imageRecord.state) {
-                case .New, .Downloaded:
+                let featurePost = self.featurePosts[indexPath.row]
+                
+                cell.postLabel.text = featurePost.title
+                
+                
+                if featurePost.featuredImageUrl != nil {
                     
-                    self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
-                        // self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-                        self.collectionView.reloadItemsAtIndexPaths([indexPath])
-                    })
-                default:
-                    print("Do Nothing for loading cell image \(indexPath.row)")
+                    cell.postImage.contentMode = .ScaleAspectFill
+                    
+                    let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
+                    cell.postImage.image = imageRecord.image
+                    
+                    switch (imageRecord.state) {
+                    case .New, .Downloaded:
+                        
+                        self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
+                            // self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                            self.collectionView.reloadItemsAtIndexPaths([indexPath])
+                        })
+                    default:
+                        print("Do Nothing for loading cell image \(indexPath.row)")
+                    }
+                    
+                    
                 }
-                
-                
-            }
-            else{
-              
+                else{
+                    
                     cell.postImage.contentMode = .ScaleAspectFit
                     cell.postImage.image = featurePost.featuredImage
-
+                    
+                }
+                
+                return cell
             }
-            
-            return cell
-        }
-            
-        else{
-            return UICollectionViewCell()
+                
+            else{
+                return UICollectionViewCell()
+            }
+        } else {
+            return collectionView.dequeueReusableCellWithReuseIdentifier("allPostCell", forIndexPath: indexPath)
         }
     }
     
@@ -168,15 +172,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //TODO Goes to another view controller
-        if indexPath.row == featurePosts.count - 1 {
+        if indexPath.row == featurePosts.count {
             self.performSegueWithIdentifier("allPostVC", sender: nil)
         }
         else{
             let featurePost = featurePosts[indexPath.row]
-
+            
             self.performSegueWithIdentifier("showPostWebViewSegue", sender: featurePost)
         }
         
@@ -191,7 +195,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.featurePosts.count
+        return self.featurePosts.count + 1
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
@@ -203,15 +207,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchBar.showsCancelButton = false
     }
     
-//    func setNavigationBarItem() {
-//        self.addLeftBarButtonWithImage(UIImage(named: "SideMenuButton")!)
-//        //print("test Add nav item")
-//        // self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
-//        self.slideMenuController()?.removeLeftGestures()
-//        self.slideMenuController()?.removeRightGestures()
-//        self.slideMenuController()?.addLeftGestures()
-//        self.slideMenuController()?.addRightGestures()
-//    }
+    //    func setNavigationBarItem() {
+    //        self.addLeftBarButtonWithImage(UIImage(named: "SideMenuButton")!)
+    //        //print("test Add nav item")
+    //        // self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
+    //        self.slideMenuController()?.removeLeftGestures()
+    //        self.slideMenuController()?.removeRightGestures()
+    //        self.slideMenuController()?.addLeftGestures()
+    //        self.slideMenuController()?.addRightGestures()
+    //    }
     
     //    func leftWillOpen() {
     //
@@ -222,26 +226,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //    }
     
     
-//    func setUpSearchBar() {
-//        var index:Int?
-////        let searchBarView = self.subviews[0]
-//        
-//        for i in 0 ..< searchBar.subviews.count {
-//            print(i)
-//            if searchBar.subviews[i].isKindOfClass(UITextField) {
-//                index = i
-//                print(i)
-//                break
-//            }
-//        }
-//        
-//        let searchFeild = searchBar.subviews[index!] as! UITextField
-//        
-//        searchFeild.backgroundColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
-//        
-//        
-//
-//    }
+    //    func setUpSearchBar() {
+    //        var index:Int?
+    ////        let searchBarView = self.subviews[0]
+    //
+    //        for i in 0 ..< searchBar.subviews.count {
+    //            print(i)
+    //            if searchBar.subviews[i].isKindOfClass(UITextField) {
+    //                index = i
+    //                print(i)
+    //                break
+    //            }
+    //        }
+    //
+    //        let searchFeild = searchBar.subviews[index!] as! UITextField
+    //
+    //        searchFeild.backgroundColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
+    //
+    //
+    //
+    //    }
     
     
     @IBAction func mockExamButtonPressed(sender: AnyObject) {
@@ -256,12 +260,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPostWebViewSegue" {
-           // let cellIndex = collectionView.indexPathsForSelectedItems()![0]
+            // let cellIndex = collectionView.indexPathsForSelectedItems()![0]
             
             //let selectedPost = featurePosts[cellIndex.row]
             
             if let selectedPost = sender as? Post{
-            
+                
                 let destinationVC = segue.destinationViewController as! WebViewController
                 destinationVC.post = selectedPost
                 destinationVC.urlString = selectedPost.link
