@@ -316,7 +316,7 @@
         <!--报考流程-->
         <scene sceneID="9MO-hd-2r3">
             <objects>
-                <viewController id="qR6-uc-2DZ" sceneMemberID="viewController">
+                <viewController id="qR6-uc-2DZ" customClass="ExamBookingVC" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tgn-L3-CeI"/>
                         <viewControllerLayoutGuide type="bottom" id="QQV-Or-G7T"/>
@@ -325,33 +325,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-lZ-6qv">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="364" id="5eV-57-QKC"/>
-                                </constraints>
-                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="轻松报名" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-Jx-HFJ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="165" id="XFu-su-6Nf"/>
+                                    <constraint firstAttribute="height" constant="127" id="U1o-Yj-yPj"/>
                                 </constraints>
                             </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6am-Ps-78d">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QQV-Or-G7T" firstAttribute="top" secondItem="dLu-lZ-6qv" secondAttribute="bottom" id="5ia-Ve-Z9H"/>
-                            <constraint firstItem="8rj-Jx-HFJ" firstAttribute="top" secondItem="Tgn-L3-CeI" secondAttribute="bottom" id="JYQ-Hj-lJc"/>
-                            <constraint firstItem="8rj-Jx-HFJ" firstAttribute="leading" secondItem="w2R-G2-Gcm" secondAttribute="leading" id="VM5-Rj-5dx"/>
-                            <constraint firstItem="dLu-lZ-6qv" firstAttribute="top" secondItem="Tgn-L3-CeI" secondAttribute="bottom" constant="172" id="dyf-zq-diV"/>
-                            <constraint firstItem="dLu-lZ-6qv" firstAttribute="leading" secondItem="w2R-G2-Gcm" secondAttribute="leading" id="hAA-ET-EOc"/>
-                            <constraint firstAttribute="trailing" secondItem="dLu-lZ-6qv" secondAttribute="trailing" id="oVW-nU-nyE"/>
-                            <constraint firstAttribute="trailing" secondItem="8rj-Jx-HFJ" secondAttribute="trailing" id="xqQ-Az-ST8"/>
+                            <constraint firstItem="QQV-Or-G7T" firstAttribute="top" secondItem="6am-Ps-78d" secondAttribute="bottom" id="Edu-O9-Tf5"/>
+                            <constraint firstItem="6am-Ps-78d" firstAttribute="top" secondItem="8rj-Jx-HFJ" secondAttribute="bottom" id="Gi0-8L-HYi"/>
+                            <constraint firstAttribute="trailing" secondItem="8rj-Jx-HFJ" secondAttribute="trailing" id="OTw-3N-1P8"/>
+                            <constraint firstAttribute="trailing" secondItem="6am-Ps-78d" secondAttribute="trailing" id="Qd4-ah-1GY"/>
+                            <constraint firstItem="8rj-Jx-HFJ" firstAttribute="leading" secondItem="w2R-G2-Gcm" secondAttribute="leading" id="Ymd-rE-Gsv"/>
+                            <constraint firstItem="6am-Ps-78d" firstAttribute="leading" secondItem="w2R-G2-Gcm" secondAttribute="leading" id="fc9-jv-NQr"/>
+                            <constraint firstItem="8rj-Jx-HFJ" firstAttribute="top" secondItem="Tgn-L3-CeI" secondAttribute="bottom" id="gA3-6P-cbx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="报考流程" id="ogy-dv-wto"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5b-lm-ezs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397.10144927536237" y="1224.4565217391305"/>
+            <point key="canvasLocation" x="396" y="1223.8380809595203"/>
         </scene>
         <!--联系我们-->
         <scene sceneID="5Mi-Ex-daW">
