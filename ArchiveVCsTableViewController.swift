@@ -15,8 +15,6 @@ class ArchiveVCsTableViewController: UITableViewController {
     //let tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     
     let client = WordPressClient()
-    
-    @IBOutlet weak var tableHearderLabel: UILabel!
     override func viewDidLoad() {
         
         
@@ -24,16 +22,13 @@ class ArchiveVCsTableViewController: UITableViewController {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.tableView.tableHeaderView = nil
+    override func viewDidAppear(animated: Bool) {
         self.setNavigationBarItem()
         
         archives = CoreDataOperation.fetchAllArchivesFromCoreData()!
-        
-        if archives.count == 0 {
-            self.tableView.tableHeaderView = tableHearderLabel
-        }
+        print(archives.count)
     }
+
     
     
     
@@ -46,6 +41,10 @@ class ArchiveVCsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
+        if archives.count == 0 {
+            return 1
+        }
         return archives.count
     }
     
@@ -54,6 +53,11 @@ class ArchiveVCsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if archives.count == 0 {
+            return tableView.dequeueReusableCellWithIdentifier("noPostCell",forIndexPath: indexPath)
+        }
+        
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("archiveCell", forIndexPath: indexPath) as! UserMessageCell
         
         let archive = archives[indexPath.row]
@@ -84,6 +88,9 @@ class ArchiveVCsTableViewController: UITableViewController {
     // Swipe to delete 
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if archives.count == 0 {
+            return false
+        }
         return true
     }
     
@@ -94,6 +101,7 @@ class ArchiveVCsTableViewController: UITableViewController {
             CoreDataOperation.deleteManagedObjectFromCoreData(archive)
             archives.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.reloadData()
         }
     }
 

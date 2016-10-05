@@ -59,6 +59,7 @@
 		9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6731D88DEDF00360D98 /* Messages.storyboard */; };
 		9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */; };
 		9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */; };
+		968E0DA21DA4C7B30067DA8D /* LastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E0DA11DA4C7B30067DA8D /* LastCollectionViewCell.swift */; };
 		96A173981DA0D1F30002F360 /* AboutAIL.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A173971DA0D1F30002F360 /* AboutAIL.storyboard */; };
 		96A1739A1DA0D29E0002F360 /* Archive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A173991DA0D29E0002F360 /* Archive.storyboard */; };
 		96A1739F1DA0D3660002F360 /* ArchiveVCsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1739E1DA0D3660002F360 /* ArchiveVCsTableViewController.swift */; };
@@ -128,6 +129,7 @@
 		9683A6731D88DEDF00360D98 /* Messages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
 		9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubjectResources.storyboard; sourceTree = "<group>"; };
 		9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDesignableExtension.swift; sourceTree = "<group>"; };
+		968E0DA11DA4C7B30067DA8D /* LastCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastCollectionViewCell.swift; sourceTree = "<group>"; };
 		96A173971DA0D1F30002F360 /* AboutAIL.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutAIL.storyboard; sourceTree = "<group>"; };
 		96A173991DA0D29E0002F360 /* Archive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Archive.storyboard; sourceTree = "<group>"; };
 		96A1739E1DA0D3660002F360 /* ArchiveVCsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveVCsTableViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */,
 				965216B21D94B29F00EA1823 /* HomeViewBottomButton.swift */,
 				96E8C7751D9A311000843C89 /* CustomizedSegmentedControl.swift */,
+				968E0DA11DA4C7B30067DA8D /* LastCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				96F188161DA3571300987E98 /* AboutAILViewController.swift in Sources */,
 				4D9C9A701D86CA1A00EA98D0 /* CustomUINavigationController.swift in Sources */,
 				4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */,
+				968E0DA21DA4C7B30067DA8D /* LastCollectionViewCell.swift in Sources */,
 				4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */,
 				964096831DA221FC006D63B8 /* ArchiveWebViewController.swift in Sources */,
 				96A1739F1DA0D3660002F360 /* ArchiveVCsTableViewController.swift in Sources */,

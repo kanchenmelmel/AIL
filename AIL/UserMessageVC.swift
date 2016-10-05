@@ -21,7 +21,7 @@ class UserMessageVC: UITableViewController {
     var isLoading = false
     var numOfMessages:Int?
     var reachToTheEnd = false
-    var refresher: UIRefreshControl!
+    //var refresher: UIRefreshControl!
     
     
     let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2.0 - 50,UIScreen.mainScreen().bounds.height/2.0 - 50,100.0,100.0), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
@@ -43,15 +43,19 @@ class UserMessageVC: UITableViewController {
             self.activityIndicatorView.stopAnimating()
         }
     
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl!.backgroundColor = UIColor.clearColor()
+        self.refreshControl!.tintColor = hexStringToUIColor("#00B2EE")
+        self.refreshControl!.addTarget(self, action: #selector(self.updateMessages), forControlEvents: .ValueChanged)
         
     }
     override func viewDidAppear(animated: Bool) {
         // Initialize the refresh control
-        refresher = UIRefreshControl()
-        refresher.addTarget(self, action: #selector(self.updateMessages), forControlEvents: .ValueChanged)
-        refresher.backgroundColor = UIColor.clearColor()
-        refresher.tintColor = hexStringToUIColor("#00B2EE")
-        self.tableView.addSubview(refresher)
+//        refresher = UIRefreshControl()
+//        refresher.addTarget(self, action: #selector(self.updateMessages), forControlEvents: .ValueChanged)
+//        refresher.backgroundColor = UIColor.clearColor()
+//        refresher.tintColor = hexStringToUIColor("#00B2EE")
+//        self.tableView.addSubview(refresher)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -159,7 +163,7 @@ class UserMessageVC: UITableViewController {
         client.requestAllMessages { (messages) in
             self.userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
             self.tableView.reloadData()
-            self.refresher.endRefreshing()
+            self.refreshControl?.endRefreshing()
         }
         print ("updateMessages")
         

@@ -233,7 +233,7 @@
                                             <outlet property="postLabel" destination="ibP-vr-SJl" id="TpK-97-DPr"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPostCell" id="3aG-XG-aY6">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPostCell" id="3aG-XG-aY6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
                                         <rect key="frame" x="297" y="7" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -790,7 +790,7 @@
                 <viewControllerPlaceholder storyboardName="AllPosts" referencedIdentifier="AllPostsTableVC" id="Tbn-Fn-BNn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkv-Fk-q6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2286" y="385"/>
+            <point key="canvasLocation" x="2285" y="385"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="van-p4-Yc0">

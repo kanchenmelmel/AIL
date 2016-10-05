@@ -163,6 +163,7 @@ class BeiKaoGongLueTableViewController: UITableViewController {
             let destnatinationVC = segue.destinationViewController as! WebViewController
             
             let index = tableView.indexPathForSelectedRow
+            destnatinationVC.post = posts[index!.row]
             destnatinationVC.urlString = posts[index!.row].link!
             destnatinationVC.titleString = posts[index!.row].title!
         }
