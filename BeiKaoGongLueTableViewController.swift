@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class BeiKaoGongLueTableViewController: UITableViewController {
 
@@ -15,6 +16,8 @@ class BeiKaoGongLueTableViewController: UITableViewController {
     var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
     
     let client = WordPressClient()
+    
+    let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2.0 - 50,UIScreen.mainScreen().bounds.height/2.0 - 50,100.0,100.0), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +29,15 @@ class BeiKaoGongLueTableViewController: UITableViewController {
         //            print("There is someting wrong while loadding resources from Core Data")
         //        }
         
+        self.tableView.addSubview(activityIndicatorView)
+        
+        activityIndicatorView.startAnimating()
+        
         client.requestLatestPostsByCategories(166, completionHandler: { (posts) in
             self.posts = posts
             print(posts.count)
             self.tableView.reloadData()
+            self.activityIndicatorView.stopAnimating()
             self.setUpTableViewImageCoordinator()
         })
         

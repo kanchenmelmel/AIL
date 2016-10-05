@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class UserMessageVC: UITableViewController {
 
@@ -21,18 +22,25 @@ class UserMessageVC: UITableViewController {
     var numOfMessages:Int?
     var reachToTheEnd = false
     var refresher: UIRefreshControl!
+    
+    
+    let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2.0 - 50,UIScreen.mainScreen().bounds.height/2.0 - 50,100.0,100.0), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setNavigationBarItem()
         
-       
+       self.tableView.addSubview(activityIndicatorView)
+        
+        activityIndicatorView.startAnimating()
         client.requestAllMessages { (messages) in
             
             print ("abc: \(messages.count)")
             self.userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
           
             self.tableView.reloadData()
+            
+            self.activityIndicatorView.stopAnimating()
         }
     
         
