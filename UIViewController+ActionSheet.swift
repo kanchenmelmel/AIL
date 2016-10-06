@@ -68,4 +68,13 @@ extension UIViewController {
         CoreDataOperation.saveManagedObjectContext()
         
     }
+    
+    
+    func applyCSSToUIWebView(webView:UIWebView) {
+        let cssString = "#Top_bar,.post-nav,footer,header {display:none;}"
+        let javascriptString = "var style = document.createElement('style'); style.innerHTML = '%@'; document.head.appendChild(style)"
+        let javascriptWithCssString = String(format: javascriptString, cssString)
+        webView.stringByEvaluatingJavaScriptFromString(javascriptWithCssString)
+        
+    }
 }

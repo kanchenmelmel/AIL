@@ -248,11 +248,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //    }
     
     
-    @IBAction func mockExamButtonPressed(sender: AnyObject) {
-        
-        alert.showTempAlert(self)
-    }
-    
+//    @IBAction func mockExamButtonPressed(sender: AnyObject) {
+//        
+//        alert.showTempAlert(self)
+//    }
+//    
     @IBAction func selfExamButtonPressed(sender: AnyObject) {
         
         alert.showTempAlert(self)
