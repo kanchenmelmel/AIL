@@ -1,14 +1,14 @@
 //
-//  TestWebViewController.swift
+//  BookProcessViewController.swift
 //  AIL
 //
-//  Created by Work on 6/10/16.
+//  Created by Work on 7/10/16.
 //  Copyright © 2016 au.com.melmel. All rights reserved.
 //
 
 import UIKit
 
-class TestWebViewController: UIViewController, UIWebViewDelegate {
+class BookProcessViewController: UIViewController,UIWebViewDelegate {
 
     var urlString:String?
     var titleString:String?
@@ -28,7 +28,7 @@ class TestWebViewController: UIViewController, UIWebViewDelegate {
         
         // Do any additional setup after loading the view.
         
-        urlString = "http://pte-practice.com"
+        urlString = "http://ail.vic.edu.au/pte-booking/"
         
         progressView.progress  = 0
         let url = NSURL(string:urlString!)
@@ -59,7 +59,7 @@ class TestWebViewController: UIViewController, UIWebViewDelegate {
     
     // Web View Finish Loading Page
     func webViewDidFinishLoad(webView: UIWebView) {
-        //applyCSSToUIWebView(webView)
+        applyCSSToUIWebView(webView)
         loading = false
     }
     

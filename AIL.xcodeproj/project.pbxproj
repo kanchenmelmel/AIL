@@ -58,6 +58,7 @@
 		9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */; };
 		9672A1571D9BA14300A64A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9672A1561D9BA14300A64A01 /* Main.storyboard */; };
 		9679786F1DA6727C0095EB91 /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679786E1DA6727C0095EB91 /* TestWebViewController.swift */; };
+		967978711DA682BE0095EB91 /* BookProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967978701DA682BE0095EB91 /* BookProcessViewController.swift */; };
 		9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6731D88DEDF00360D98 /* Messages.storyboard */; };
 		9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */; };
 		9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */; };
@@ -130,6 +131,7 @@
 		9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperation.swift; sourceTree = "<group>"; };
 		9672A1561D9BA14300A64A01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9679786E1DA6727C0095EB91 /* TestWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
+		967978701DA682BE0095EB91 /* BookProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookProcessViewController.swift; sourceTree = "<group>"; };
 		9683A6731D88DEDF00360D98 /* Messages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
 		9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubjectResources.storyboard; sourceTree = "<group>"; };
 		9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDesignableExtension.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */,
 				96E8C7731D9A307100843C89 /* CourseTrainingViewController.swift */,
 				9679786E1DA6727C0095EB91 /* TestWebViewController.swift */,
+				967978701DA682BE0095EB91 /* BookProcessViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				4DDD18031D9ACA0000294ACC /* Message+CoreDataClass.swift in Sources */,
 				4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */,
 				96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */,
+				967978711DA682BE0095EB91 /* BookProcessViewController.swift in Sources */,
 				3DE209321D8FA015001BCEA4 /* ContactUsVC.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
 				9679786F1DA6727C0095EB91 /* TestWebViewController.swift in Sources */,
