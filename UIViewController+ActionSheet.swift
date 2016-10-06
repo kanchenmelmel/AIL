@@ -42,6 +42,8 @@ extension UIViewController {
         
         items.append(("收藏",{() -> Void in
             self.archivePost(post)
+            let alert = Alert()
+            alert.showArchivedSuccessfullyAlert(self)
         }))
         
         items.append(("分享",{() -> Void in
