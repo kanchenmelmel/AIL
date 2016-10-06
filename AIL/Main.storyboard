@@ -112,7 +112,6 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="mockExamButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Whu-hc-V1X"/>
                                                             <segue destination="F2h-Yu-gaf" kind="show" id="zka-pP-M9N"/>
                                                         </connections>
                                                     </button>
@@ -881,7 +880,7 @@
         <!--全真模考-->
         <scene sceneID="cmW-fd-Dnr">
             <objects>
-                <viewController id="F2h-Yu-gaf" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="F2h-Yu-gaf" customClass="TestWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l5s-p3-7Yu"/>
                         <viewControllerLayoutGuide type="bottom" id="24n-mw-nKe"/>
