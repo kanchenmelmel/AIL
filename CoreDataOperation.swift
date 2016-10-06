@@ -165,6 +165,35 @@ class CoreDataOperation {
     }
     
     
+    static func checkMessagePostIdExist(postId:Int) -> Bool {
+        
+        
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let request = NSFetchRequest()
+        request.entity = NSEntityDescription.entityForName(EntityType.Message.rawValue, inManagedObjectContext: managedObjectContext)
+        request.resultType = .CountResultType
+        
+        // Set up predicate
+        let predicate = NSPredicate(format: "postId = %@", "\(postId)")
+        request.predicate = predicate
+        
+        
+        var count = 0
+        do {
+            let result = try managedObjectContext.executeFetchRequest(request)
+            count = result.count
+        } catch {
+            print("There is error when fetch data count from core data")
+        }
+        
+        if count != 0 {
+            return true
+        }
+        return false
+        
+    }
+    
+    
 }
 
 

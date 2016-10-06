@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s4N-SQ-cle" id="Bvx-6o-475">
-                                    <frame key="frameInset" width="414" height="70"/>
+                                    <frame key="frameInset" width="414" height="71"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apd-d6-h0b">
@@ -141,17 +141,29 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12.08.2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfx-LY-CQd">
+                                <frame key="frameInset" minX="283" minY="72" width="111" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="uIl-qK-eln"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.62675883509999997" green="0.62675883509999997" blue="0.62675883509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Yfx-LY-CQd" firstAttribute="top" secondItem="lTG-64-95V" secondAttribute="bottom" constant="8" id="OyE-Qu-Z8e"/>
                             <constraint firstItem="BxG-Fa-dRx" firstAttribute="leading" secondItem="TFG-eH-pUn" secondAttribute="leading" constant="22" id="PHZ-Ch-Jc2"/>
                             <constraint firstItem="ToW-u1-LRt" firstAttribute="leading" secondItem="TFG-eH-pUn" secondAttribute="leading" constant="22" id="Ptx-G7-QBp"/>
+                            <constraint firstAttribute="trailing" secondItem="Yfx-LY-CQd" secondAttribute="trailing" constant="20" id="fpQ-WO-dmI"/>
                             <constraint firstItem="ToW-u1-LRt" firstAttribute="top" secondItem="BxG-Fa-dRx" secondAttribute="bottom" constant="25.5" id="n9p-45-fsd"/>
                             <constraint firstItem="BxG-Fa-dRx" firstAttribute="top" secondItem="lTG-64-95V" secondAttribute="bottom" constant="10" id="yUf-bQ-lFs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ToW-u1-LRt" secondAttribute="trailing" constant="22" id="zTK-6s-Swa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="Yfx-LY-CQd" id="TUw-Qg-oZN"/>
                         <outlet property="subtitleLabel" destination="ToW-u1-LRt" id="jMq-6U-c6A"/>
                         <outlet property="titleLabel" destination="BxG-Fa-dRx" id="zU5-fN-kgB"/>
                     </connections>

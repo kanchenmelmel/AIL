@@ -26,7 +26,7 @@ class ArchiveVCsTableViewController: UITableViewController {
         self.setNavigationBarItem()
         
         archives = CoreDataOperation.fetchAllArchivesFromCoreData()!
-        print(archives.count)
+        self.tableView.reloadData()
     }
 
     

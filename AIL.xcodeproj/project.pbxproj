@@ -165,6 +165,7 @@
 		4DAEAFA71D7A486700842C4F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				967978721DA6D3130095EB91 /* CourseTraining */,
 				4DCA806E1DA3D850000B8841 /* ExamBooking */,
 				966D81FA1DA1D8880069270A /* Entension */,
 				96A1739B1DA0D3210002F360 /* ArchiveVCs */,
@@ -360,6 +361,13 @@
 				963574931D90C3F800B8D1A5 /* Category+CoreDataProperties.swift */,
 			);
 			name = ManagedObject;
+			sourceTree = "<group>";
+		};
+		967978721DA6D3130095EB91 /* CourseTraining */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CourseTraining;
 			sourceTree = "<group>";
 		};
 		967CF92C1D922F13007CF78C /* CustomizedView */ = {

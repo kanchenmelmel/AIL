@@ -59,15 +59,20 @@ extension UIViewController {
     
     
     func archivePost(post:Post) {
-        let archive = CoreDataOperation.createArchiveObject()
-        //archive.addToCategories(categories)
-        archive.postId = post.id
-        archive.postTitle = post.title
-        archive.excerpt = post.excerpt
-        archive.link = post.link
-        archive.addToCategories(post.categories!)
+       // let postId = Int(post.id!)
         
-        CoreDataOperation.saveManagedObjectContext()
+            let archive = CoreDataOperation.createArchiveObject()
+            //archive.addToCategories(categories)
+            archive.postId = post.id
+            
+            archive.postTitle = post.title
+            archive.excerpt = post.excerpt
+            archive.link = post.link
+            archive.addToCategories(post.categories!)
+            
+            CoreDataOperation.saveManagedObjectContext()
+        
+        
         
     }
     
