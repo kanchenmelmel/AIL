@@ -159,7 +159,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 return UICollectionViewCell()
             }
         } else {
-            return collectionView.dequeueReusableCellWithReuseIdentifier("allPostCell", forIndexPath: indexPath)
+            return collectionView.dequeueReusableCellWithReuseIdentifier("allPostCell", forIndexPath: indexPath) as! LastCollectionViewCell
         }
     }
     

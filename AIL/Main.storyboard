@@ -203,7 +203,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="BEp-fN-5Cl"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                                    <color key="textColor" red="0.19215686269999999" green="0.3803921569" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-hn-0hA">
@@ -239,7 +239,23 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RX2-RR-9DU">
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AllPostsButton" translatesAutoresizingMaskIntoConstraints="NO" id="7el-84-M98"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击阅读更多资讯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3W-fm-IEh">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                            <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="RX2-RR-9DU" firstAttribute="centerX" secondItem="3aG-XG-aY6" secondAttribute="centerX" id="rz2-QL-8Rh"/>
+                                            <constraint firstItem="RX2-RR-9DU" firstAttribute="centerY" secondItem="3aG-XG-aY6" secondAttribute="centerY" id="sZX-xV-5QM"/>
+                                        </constraints>
                                         <size key="customSize" width="287" height="169"/>
                                     </collectionViewCell>
                                 </cells>
@@ -718,7 +734,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK7-fN-fgQ">
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <state key="normal" title="     首页" image="ArchiveButton"/>
+                                        <state key="normal" title="     首页" image="HomeButton"/>
                                         <connections>
                                             <action selector="homeButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="TlW-NS-rqM"/>
                                         </connections>
@@ -906,11 +922,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AboutAILButton" width="15" height="13"/>
+        <image name="AboutAILButton" width="17" height="16"/>
         <image name="ActivityVCButton" width="19" height="4"/>
+        <image name="AllPostsButton" width="61" height="60"/>
         <image name="ArchiveButton" width="16" height="15"/>
         <image name="Background" width="183" height="667"/>
         <image name="Group_shot_1" width="600" height="500"/>
+        <image name="HomeButton" width="15" height="13"/>
         <image name="TopIcon" width="87" height="89"/>
         <image name="baokao" width="40" height="40"/>
         <image name="beikao" width="35" height="36"/>
