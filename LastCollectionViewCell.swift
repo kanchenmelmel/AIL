@@ -1,18 +1,14 @@
 //
-//  PostCollectionViewCell.swift
+//  LastCollectionViewCell.swift
 //  AIL
 //
-//  Created by WuKaipeng on 3/09/2016.
+//  Created by Work on 5/10/16.
 //  Copyright © 2016 au.com.melmel. All rights reserved.
 //
 
 import UIKit
 
-class PostCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var postImage: UIImageView!
-    @IBOutlet weak var postLabel: UILabel!
-    
+class LastCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         layer.cornerRadius = 10
@@ -27,8 +23,8 @@ class PostCollectionViewCell: UICollectionViewCell {
         self.backgroundColor = UIColor.whiteColor()
         
         
-        postImage.layer.cornerRadius = 10
-        postImage.clipsToBounds = true
-       // postLabel.textColor = UIColor.blueColor()
+//        postImage.layer.cornerRadius = 10
+//        postImage.clipsToBounds = true
     }
+    
 }

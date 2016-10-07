@@ -64,6 +64,31 @@ class Alert {
         })
     }
     
+    func showArchivedSuccessfullyAlert(viewController: UIViewController) {
+        let attributedString = NSAttributedString(string: "收藏成功", attributes: [
+            NSFontAttributeName : UIFont.systemFontOfSize(20),
+            NSForegroundColorAttributeName : hexStringToUIColor("#3299CC")
+            ])
+        
+        
+        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .Alert)
+        viewController.presentViewController(alertController, animated: true, completion: nil)
+        alertController.setValue(attributedString, forKey: "attributedMessage")
+        
+        
+        let subview :UIView = alertController.view.subviews.last! as UIView
+        let alertContentView = subview.subviews.last! as UIView
+        alertContentView.backgroundColor = hexStringToUIColor("#325C74")
+        alertContentView.layer.cornerRadius = 10
+        
+        
+        let delay = 1.0 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            alertController.dismissViewControllerAnimated(true, completion: nil)
+        })
+    }
+    
     func showLoadingAlertController(viewController:UIViewController) {
         let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
         let loadingAlertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
