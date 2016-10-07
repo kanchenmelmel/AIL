@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
 
@@ -45,6 +46,9 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
     var loading = false
     var timer:NSTimer? = nil
     
+    let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2.0 - 50,UIScreen.mainScreen().bounds.height/2.0 - 50,100.0,100.0), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,9 +80,16 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func webViewDidStartLoad(webView: UIWebView) {
+        self.view.addSubview(activityIndicatorView)
+        activityIndicatorView.startAnimating()
+    }
+    
     
     func webViewDidFinishLoad(webView: UIWebView) {
         applyCSSToUIWebView(webView)
+        activityIndicatorView.stopAnimating()
+        activityIndicatorView.removeFromSuperview()
         loading = false
     }
     
