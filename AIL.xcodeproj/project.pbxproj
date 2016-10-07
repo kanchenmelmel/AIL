@@ -59,6 +59,7 @@
 		9672A1571D9BA14300A64A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9672A1561D9BA14300A64A01 /* Main.storyboard */; };
 		9679786F1DA6727C0095EB91 /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679786E1DA6727C0095EB91 /* TestWebViewController.swift */; };
 		967978711DA682BE0095EB91 /* BookProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967978701DA682BE0095EB91 /* BookProcessViewController.swift */; };
+		967978741DA6E90B0095EB91 /* CourseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967978731DA6E90B0095EB91 /* CourseWebViewController.swift */; };
 		9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6731D88DEDF00360D98 /* Messages.storyboard */; };
 		9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */; };
 		9683A67B1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */; };
@@ -132,6 +133,7 @@
 		9672A1561D9BA14300A64A01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9679786E1DA6727C0095EB91 /* TestWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		967978701DA682BE0095EB91 /* BookProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookProcessViewController.swift; sourceTree = "<group>"; };
+		967978731DA6E90B0095EB91 /* CourseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseWebViewController.swift; sourceTree = "<group>"; };
 		9683A6731D88DEDF00360D98 /* Messages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
 		9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubjectResources.storyboard; sourceTree = "<group>"; };
 		9683A67A1D88E0EC00360D98 /* UIImageViewDesignableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDesignableExtension.swift; sourceTree = "<group>"; };
@@ -177,7 +179,6 @@
 				963061C61D77E1280079B7C5 /* ViewController.swift */,
 				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
 				3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */,
-				96E8C7731D9A307100843C89 /* CourseTrainingViewController.swift */,
 				9679786E1DA6727C0095EB91 /* TestWebViewController.swift */,
 				967978701DA682BE0095EB91 /* BookProcessViewController.swift */,
 			);
@@ -366,6 +367,8 @@
 		967978721DA6D3130095EB91 /* CourseTraining */ = {
 			isa = PBXGroup;
 			children = (
+				967978731DA6E90B0095EB91 /* CourseWebViewController.swift */,
+				96E8C7731D9A307100843C89 /* CourseTrainingViewController.swift */,
 			);
 			name = CourseTraining;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				4D333F901DA3C67800D557C2 /* Alert.swift in Sources */,
 				963574981D90E15D00B8D1A5 /* ImageDownloader.swift in Sources */,
 				963574951D90C3F800B8D1A5 /* Category+CoreDataProperties.swift in Sources */,
+				967978741DA6E90B0095EB91 /* CourseWebViewController.swift in Sources */,
 				965693401D9392B300FAC04B /* Post+CoreDataClass.swift in Sources */,
 				4D333F921DA3C6C300D557C2 /* Constants.swift in Sources */,
 				965693411D9392B300FAC04B /* Post+CoreDataProperties.swift in Sources */,

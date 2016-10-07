@@ -253,6 +253,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        alert.showTempAlert(self)
 //    }
 //    
+    @IBAction func courseButtonClick(sender: AnyObject) {
+        alert.showTempAlert(self)
+    }
     @IBAction func selfExamButtonPressed(sender: AnyObject) {
         
         alert.showTempAlert(self)
