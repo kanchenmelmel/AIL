@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CourseTrainingViewController: UIViewController {
+class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
 
+    @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var segmentedControl: CustomizedSegmentedControl!
     private var pageViewController:UIPageViewController?
     
@@ -29,9 +30,20 @@ class CourseTrainingViewController: UIViewController {
     let swipeGestureLeft = UISwipeGestureRecognizer()
     let swipeGestureRight = UISwipeGestureRecognizer()
     
+
+    
+    
+    let dayUrl = NSURL(string:DAY_CLASS_URL)
+    let vipUrl = NSURL(string:VIP_CLASS_URL)
+    let weekendUrl = NSURL(string:WEEKEND_CLASS_URL)
+    let questionUrl = NSURL(string:QUESTION_CLASS_URL)
+
     var controllers = [CourseWebViewController]()
     var thePage = CourseWebViewController()
+
     
+    var loading = false
+    var timer:NSTimer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +63,11 @@ class CourseTrainingViewController: UIViewController {
         
         
         self.segmentedControl.addTarget(self, action: #selector(segmentedValueChanged(_:)), forControlEvents: .ValueChanged)
-
+        
+    
+        webView.delegate = self
+        
+        loadWebView(weekendUrl!)
         // Do any additional setup after loading the view.
     }
 
@@ -61,18 +77,17 @@ class CourseTrainingViewController: UIViewController {
     }
     
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func webViewDidFinishLoad(webView: UIWebView) {
+        applyCSSToUIWebView(webView)
+        loading = false
     }
-    */
     
+    func loadWebView(url: NSURL){
+        
+        let request = NSMutableURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 10.0)
+        webView.loadRequest(request as NSURLRequest)
+        
+    }
     
     /// Handle gesture action swipe to left
     ///
@@ -101,91 +116,106 @@ class CourseTrainingViewController: UIViewController {
     
     func segmentedValueChanged(sender:AnyObject?) {
         if segmentedControl.selectedIndex == 0 {
-            //self.courseIntroDesLabel.text = "1"
-            getItemController(0)
+
+            loadWebView(weekendUrl!)
         }
         if segmentedControl.selectedIndex == 1 {
-            //self.courseIntroDesLabel.text = "2"
-            getItemController(1)
+            loadWebView(dayUrl!)
         }
         if segmentedControl.selectedIndex == 2 {
-            //self.courseIntroDesLabel.text = "3"
-            getItemController(2)
+            loadWebView(vipUrl!)
+        }
+        if segmentedControl.selectedIndex == 3 {
+            loadWebView(questionUrl!)
         }
     }
-    
-    func createPageViewController(){
-        self.pageViewController = self.storyboard!.instantiateViewControllerWithIdentifier("PageControl") as! UIPageViewController
-        pageViewController!.dataSource = self
-        pageViewController!.delegate = self
-        
-        var firstController = getItemController(thePage.itemIndex)!
-        var startingViewControllers = [firstController]
-        pageViewController!.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
-        //pageViewController = pageController
-        addChildViewController(pageViewController!)
-        self.view.addSubview(pageViewController!.view)
-        pageViewController!.didMoveToParentViewController(self)
-        
-    }
-    
-    
-    func getItemController(itemIndex: Int) -> UIViewController? {
-        var vc: CourseWebViewController? = nil
-        switch itemIndex {
-        case 0:
-            vc = self.storyboard!.instantiateViewControllerWithIdentifier("CourseWebViewController") as! CourseWebViewController
-            vc?.itemIndex = itemIndex
-            vc?.urlString = "http://ail.vic.edu.au"
-            
-            
-        case 1:
-            vc = self.storyboard!.instantiateViewControllerWithIdentifier("CourseWebViewController") as! CourseWebViewController
-            vc?.itemIndex = itemIndex
-            
-            
-        case 2:
-            vc = self.storyboard!.instantiateViewControllerWithIdentifier("CourseWebViewController") as! CourseWebViewController
-            vc?.itemIndex = itemIndex
-            
-        default:
-            return nil
-            
-        }
-        return vc
-    }
+//=======
+//            //self.courseIntroDesLabel.text = "1"
+//            getItemController(0)
+//        }
+//        if segmentedControl.selectedIndex == 1 {
+//            //self.courseIntroDesLabel.text = "2"
+//            getItemController(1)
+//        }
+//        if segmentedControl.selectedIndex == 2 {
+//            //self.courseIntroDesLabel.text = "3"
+//            getItemController(2)
+//        }
+//    }
+//    
+//    func createPageViewController(){
+//        self.pageViewController = self.storyboard!.instantiateViewControllerWithIdentifier("PageControl") as! UIPageViewController
+//        pageViewController!.dataSource = self
+//        pageViewController!.delegate = self
+//        
+//        var firstController = getItemController(thePage.itemIndex)!
+//        var startingViewControllers = [firstController]
+//        pageViewController!.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+//        //pageViewController = pageController
+//        addChildViewController(pageViewController!)
+//        self.view.addSubview(pageViewController!.view)
+//        pageViewController!.didMoveToParentViewController(self)
+//        
+//    }
+//    
+//    
+//    func getItemController(itemIndex: Int) -> UIViewController? {
+//        var vc: CourseWebViewController? = nil
+//        switch itemIndex {
+//        case 0:
+//            vc = self.storyboard!.instantiateViewControllerWithIdentifier("CourseWebViewController") as! CourseWebViewController
+//            vc?.itemIndex = itemIndex
+//            vc?.urlString = "http://ail.vic.edu.au"
+//            
+//            
+//        case 1:
+//            vc = self.storyboard!.instantiateViewControllerWithIdentifier("CourseWebViewController") as! CourseWebViewController
+//            vc?.itemIndex = itemIndex
+//            
+//            
+//        case 2:
+//            vc = self.storyboard!.instantiateViewControllerWithIdentifier("CourseWebViewController") as! CourseWebViewController
+//            vc?.itemIndex = itemIndex
+//            
+//        default:
+//            return nil
+//            
+//>>>>>>> master
+//        }
+//        return vc
+//    }
 
 }
 
-extension CourseTrainingViewController: UIPageViewControllerDataSource,UIPageViewControllerDelegate, UINavigationControllerDelegate{
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        let itemController = viewController as! CourseWebViewController
-        
-        if itemController.itemIndex > 0 {
-            return getItemController(itemController.itemIndex-1)
-        }
-        
-        return nil
-    }
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        
-        let itemController = viewController as! CourseWebViewController
-        
-        if itemController.itemIndex+1 < 3 {
-            return getItemController(itemController.itemIndex+1)
-        }
-        
-        return nil
-    }
-    
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 3
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 0
-    }
-    
+//extension CourseTrainingViewController: UIPageViewControllerDataSource,UIPageViewControllerDelegate, UINavigationControllerDelegate{
+//    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+//        let itemController = viewController as! CourseWebViewController
+//        
+//        if itemController.itemIndex > 0 {
+//            return getItemController(itemController.itemIndex-1)
+//        }
+//        
+//        return nil
+//    }
+//    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+//        
+//        let itemController = viewController as! CourseWebViewController
+//        
+//        if itemController.itemIndex+1 < 3 {
+//            return getItemController(itemController.itemIndex+1)
+//        }
+//        
+//        return nil
+//    }
+//    
+//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        return 3
+//    }
+//    
+//    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        return 0
+//    }
+
 //    func pageViewController(photoPageViewController: UIPageViewController,
 //                            didFinishAnimating finished: Bool,
 //                                               previousViewControllers pageViewController: [AnyObject],
@@ -202,4 +232,4 @@ extension CourseTrainingViewController: UIPageViewControllerDataSource,UIPageVie
 //        
 //    }
 
-}
+
