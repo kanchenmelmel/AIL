@@ -15,4 +15,9 @@ let MESSAGES_URL = "http://ail.vic.edu.au/wp-json/wp/v2/"
 let MESSAGES_RESOURCES = "messages"
 
 
+let WEEKEND_CLASS_URL = "http://ail.vic.edu.au/pte-course-weekend/"
+let DAY_CLASS_URL = "http://ail.vic.edu.au/pte-course-dayclass/"
+let VIP_CLASS_URL = "http://ail.vic.edu.au/pte-course-vip/"
+let QUESTION_CLASS_URL = "http://ail.vic.edu.au/pte-course-question/"
+
 

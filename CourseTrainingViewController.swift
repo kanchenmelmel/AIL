@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CourseTrainingViewController: UIViewController {
+class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
 
+    @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var segmentedControl: CustomizedSegmentedControl!
     
     // Course Info Elements
@@ -33,7 +34,13 @@ class CourseTrainingViewController: UIViewController {
     
     
     
+    let dayUrl = NSURL(string:DAY_CLASS_URL)
+    let vipUrl = NSURL(string:VIP_CLASS_URL)
+    let weekendUrl = NSURL(string:WEEKEND_CLASS_URL)
+    let questionUrl = NSURL(string:QUESTION_CLASS_URL)
     
+    var loading = false
+    var timer:NSTimer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +57,11 @@ class CourseTrainingViewController: UIViewController {
         
         
         self.segmentedControl.addTarget(self, action: #selector(segmentedValueChanged(_:)), forControlEvents: .ValueChanged)
-
+        
+    
+        webView.delegate = self
+        
+        loadWebView(weekendUrl!)
         // Do any additional setup after loading the view.
     }
 
@@ -60,18 +71,17 @@ class CourseTrainingViewController: UIViewController {
     }
     
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func webViewDidFinishLoad(webView: UIWebView) {
+        applyCSSToUIWebView(webView)
+        loading = false
     }
-    */
     
+    func loadWebView(url: NSURL){
+        
+        let request = NSMutableURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 10.0)
+        webView.loadRequest(request as NSURLRequest)
+        
+    }
     
     /// Handle gesture action swipe to left
     ///
@@ -100,13 +110,16 @@ class CourseTrainingViewController: UIViewController {
     
     func segmentedValueChanged(sender:AnyObject?) {
         if segmentedControl.selectedIndex == 0 {
-            self.courseIntroDesLabel.text = "1"
+            loadWebView(weekendUrl!)
         }
         if segmentedControl.selectedIndex == 1 {
-            self.courseIntroDesLabel.text = "2"
+            loadWebView(dayUrl!)
         }
         if segmentedControl.selectedIndex == 2 {
-            self.courseIntroDesLabel.text = "3"
+            loadWebView(vipUrl!)
+        }
+        if segmentedControl.selectedIndex == 3 {
+            loadWebView(questionUrl!)
         }
     }
 

@@ -15,7 +15,7 @@ class CustomizedSegmentedControl: UIControl {
     private var labels = [UILabel]()
     var thumbView = UIView()
     
-    var items: [String] = ["PTE周末班", "PTE平时班", "PTE一对一VIP"] {
+    var items: [String] = ["PTE周末班", "PTE冲刺班", "VIP 一对一","刷题讲解班"] {
         didSet {
             setupLabels()
         }
