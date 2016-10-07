@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         // Start Reachability Manager
-        let reachabilityManager = NetworkReachabilityManager(host: "ail.vic.edu.au")
+        let reachabilityManager = NetworkReachabilityManager(host: "http://ail.vic.edu.au")
         
         reachabilityManager?.listener = { status in
             print("Network status changed:\(status)")

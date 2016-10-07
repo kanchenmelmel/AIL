@@ -26,7 +26,7 @@ class ArchiveVCsTableViewController: UITableViewController {
         self.setNavigationBarItem()
         
         archives = CoreDataOperation.fetchAllArchivesFromCoreData()!
-        print(archives.count)
+        self.tableView.reloadData()
     }
 
     
@@ -98,9 +98,13 @@ class ArchiveVCsTableViewController: UITableViewController {
         if editingStyle == .Delete {
             
             let archive = archives[indexPath.row]
+            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             CoreDataOperation.deleteManagedObjectFromCoreData(archive)
+            
             archives.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            if archives.count != 0 {
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            }
             tableView.reloadData()
         }
     }
