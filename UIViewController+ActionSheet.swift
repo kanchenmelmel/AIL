@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 extension UIViewController {
     
@@ -83,5 +84,11 @@ extension UIViewController {
         let javascriptWithCssString = String(format: javascriptString, cssString)
         webView.stringByEvaluatingJavaScriptFromString(javascriptWithCssString)
         
+    }
+}
+
+extension UIViewController:NVActivityIndicatorViewable {
+    func startAnimating() {
+        startAnimating(CGSizeMake(50, 50), message: "Loading", type: .BallPulse, color: UIColor.tintColor(), padding: 0)
     }
 }

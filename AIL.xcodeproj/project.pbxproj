@@ -57,6 +57,7 @@
 		9671E5E11D7E6EAC008250C7 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5E01D7E6EAC008250C7 /* JSONParser.swift */; };
 		9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */; };
 		9672A1571D9BA14300A64A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9672A1561D9BA14300A64A01 /* Main.storyboard */; };
+		9678CCDB1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9678CCDA1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift */; };
 		9679786F1DA6727C0095EB91 /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679786E1DA6727C0095EB91 /* TestWebViewController.swift */; };
 		967978711DA682BE0095EB91 /* BookProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967978701DA682BE0095EB91 /* BookProcessViewController.swift */; };
 		967978741DA6E90B0095EB91 /* CourseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967978731DA6E90B0095EB91 /* CourseWebViewController.swift */; };
@@ -131,6 +132,7 @@
 		9671E5E01D7E6EAC008250C7 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperation.swift; sourceTree = "<group>"; };
 		9672A1561D9BA14300A64A01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9678CCDA1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeActivityIndicatorView.swift; sourceTree = "<group>"; };
 		9679786E1DA6727C0095EB91 /* TestWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		967978701DA682BE0095EB91 /* BookProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookProcessViewController.swift; sourceTree = "<group>"; };
 		967978731DA6E90B0095EB91 /* CourseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseWebViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 		963061B81D77E1270079B7C5 = {
 			isa = PBXGroup;
 			children = (
+				9678CCD91DA9E40900F2EBB2 /* ActivityIndicatorView */,
 				963574961D90E12600B8D1A5 /* TableCellImageAsycLoading */,
 				4DAEAFAE1D7ACC2F00842C4F /* Extension */,
 				4DAEAFA91D7A488000842C4F /* Model */,
@@ -362,6 +365,14 @@
 				963574931D90C3F800B8D1A5 /* Category+CoreDataProperties.swift */,
 			);
 			name = ManagedObject;
+			sourceTree = "<group>";
+		};
+		9678CCD91DA9E40900F2EBB2 /* ActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				9678CCDA1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift */,
+			);
+			name = ActivityIndicatorView;
 			sourceTree = "<group>";
 		};
 		967978721DA6D3130095EB91 /* CourseTraining */ = {
@@ -664,6 +675,7 @@
 				4DDD17EE1D97BB9500294ACC /* AllPostsCell.swift in Sources */,
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
 				962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */,
+				9678CCDB1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift in Sources */,
 				4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */,
 				963574941D90C3F800B8D1A5 /* Category+CoreDataClass.swift in Sources */,
 				966D82001DA208440069270A /* Archive+CoreDataProperties.swift in Sources */,
