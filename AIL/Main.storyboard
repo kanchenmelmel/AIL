@@ -191,7 +191,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="7" width="287" height="169"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -233,7 +233,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPostCell" id="3aG-XG-aY6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="297" y="7" width="287" height="169"/>
+                                        <rect key="frame" x="0.0" y="208" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -556,7 +556,7 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="thumbViewHeight">
-                                        <real key="value" value="1.5"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -584,14 +584,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdH-rY-9jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2446" y="985"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="8s6-M1-orf">
-            <objects>
-                <pageViewController storyboardIdentifier="PageControl" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="fKB-Fh-TgG" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rFG-q7-gjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3962" y="899"/>
         </scene>
         <!--Left MenuVC-->
         <scene sceneID="WTA-wA-Lmy">
@@ -838,45 +830,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8n9-CJ-4eK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="748" y="986"/>
-        </scene>
-        <!--Course Web View Controller-->
-        <scene sceneID="pgl-t1-qXt">
-            <objects>
-                <viewController storyboardIdentifier="CourseWebViewController" id="DpK-mz-Ykn" customClass="CourseWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="W8z-oz-yvV"/>
-                        <viewControllerLayoutGuide type="bottom" id="0US-kp-1tM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HZn-kH-KN5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-ab-d6g">
-                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yek-B7-4Rw">
-                                <frame key="frameInset" minX="16" minY="332" width="343" height="2"/>
-                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </progressView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="u4b-ab-d6g" firstAttribute="leading" secondItem="HZn-kH-KN5" secondAttribute="leading" id="FJ8-kf-xNA"/>
-                            <constraint firstItem="yek-B7-4Rw" firstAttribute="top" secondItem="W8z-oz-yvV" secondAttribute="bottom" id="Qfq-Jw-mjH"/>
-                            <constraint firstItem="u4b-ab-d6g" firstAttribute="top" secondItem="HZn-kH-KN5" secondAttribute="top" id="eh6-uj-BEl"/>
-                            <constraint firstAttribute="trailing" secondItem="yek-B7-4Rw" secondAttribute="trailing" id="j50-s3-snV"/>
-                            <constraint firstAttribute="trailing" secondItem="u4b-ab-d6g" secondAttribute="trailing" id="ssO-H9-U8G"/>
-                            <constraint firstItem="0US-kp-1tM" firstAttribute="top" secondItem="u4b-ab-d6g" secondAttribute="bottom" id="uoP-jM-Svm"/>
-                            <constraint firstItem="yek-B7-4Rw" firstAttribute="leading" secondItem="HZn-kH-KN5" secondAttribute="leading" id="ys9-Fs-iON"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="progressView" destination="yek-B7-4Rw" id="zeV-aB-ICm"/>
-                        <outlet property="webView" destination="u4b-ab-d6g" id="w9o-dj-XYk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Xr-P9-Dfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3206" y="1075"/>
         </scene>
     </scenes>
     <resources>

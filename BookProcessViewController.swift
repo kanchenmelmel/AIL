@@ -59,7 +59,7 @@ class BookProcessViewController: UIViewController,UIWebViewDelegate {
     
     // Web View Finish Loading Page
     func webViewDidFinishLoad(webView: UIWebView) {
-        applyCSSToUIWebView(webView)
+        //applyCSSToUIWebView(webView)
         loading = false
     }
     
