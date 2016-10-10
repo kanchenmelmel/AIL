@@ -9,6 +9,8 @@
 import UIKit
 
 class BookProcessViewController: UIViewController,UIWebViewDelegate {
+    
+    var post:Post?
 
     var urlString:String?
     var titleString:String?
@@ -37,6 +39,8 @@ class BookProcessViewController: UIViewController,UIWebViewDelegate {
         //        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
         webView.loadRequest(request as NSURLRequest)
         webView.delegate = self
+        post = CoreDataOperation.buildRandomPost(1, title: "报考流程", excerpt: "PTE报考流程", date: NSDate(), link: urlString!)
+        
     }
     
     
@@ -78,6 +82,14 @@ class BookProcessViewController: UIViewController,UIWebViewDelegate {
             timer?.invalidate()
         }
     }
+    
+    @IBAction func ActivityButtonClick(sender: AnyObject) {
+        
+        if post != nil {
+            self.rightTopBarButtonItemAction(post!)
+        }
+    }
+    
 
 
 }
