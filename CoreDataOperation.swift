@@ -199,11 +199,13 @@ class CoreDataOperation {
         
         let postDescription = NSEntityDescription.entityForName(EntityType.Post.rawValue, inManagedObjectContext: managedObjectContext)
         
-        let post = Post(entity: postDescription, insertIntoManagedObjectContext: nil)
+        let post = Post(entity: postDescription!, insertIntoManagedObjectContext: nil)
         
         post.id = id
         post.title = title
-
+        post.date = date
+        post.excerpt = excerpt
+        post.link = link
         
         
         return post
