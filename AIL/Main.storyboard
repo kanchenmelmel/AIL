@@ -599,13 +599,20 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-xz-gex">
-                                <frame key="frameInset" minX="176" minY="234" width="113" height="205"/>
+                                <frame key="frameInset" minX="176" minY="234" width="113" height="266"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK7-fN-fgQ">
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <state key="normal" title="     首页" image="HomeButton"/>
+                                        <state key="normal" title="     备考神器" image="HomeButton"/>
                                         <connections>
                                             <action selector="homeButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="TlW-NS-rqM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcH-9Y-CW1">
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                        <state key="normal" title="     积分账户" image="HomeButton"/>
+                                        <connections>
+                                            <action selector="homeButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="btd-be-Z1V"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-ny-SrX">
@@ -650,14 +657,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZ1-8d-r4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4239.1999999999998" y="97.601199400299862"/>
-        </scene>
-        <!--MessagesTableNavCtrl-->
-        <scene sceneID="uJ4-X8-knV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Messages" referencedIdentifier="MessagesTableNavCtrl" id="THu-B7-IcD" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qz4-nZ-QGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3527" y="54"/>
         </scene>
         <!--SubjectResourcesTableVC-->
         <scene sceneID="wIT-Zr-e5L">
