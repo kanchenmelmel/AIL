@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutAILViewController: UIViewController {
+class AboutAILViewController: UITableViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var contactTextField: UITextField!
