@@ -595,7 +595,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -612,13 +612,13 @@
                                             <frame key="frameInset" width="375" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="写下你的问题....." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="31l-Br-qM3">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="写下你的问题......" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="31l-Br-qM3">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="89" id="0Wy-nc-6Oa"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -639,7 +639,7 @@
                     <navigationItem key="navigationItem" title="关于AIL" id="byr-R9-hrx"/>
                     <connections>
                         <outlet property="contactTextField" destination="FSU-Tv-gtD" id="6pe-yb-meL"/>
-                        <outlet property="messageTextView" destination="31l-Br-qM3" id="FOc-kS-f0K"/>
+                        <outlet property="messageTextView" destination="31l-Br-qM3" id="JXE-Rc-8ka"/>
                         <outlet property="nameTextField" destination="oPu-wO-Um9" id="GwG-IR-Utj"/>
                         <outlet property="sendMessageButton" destination="Uyr-pQ-ugj" id="ZMR-fw-Xrb"/>
                     </connections>

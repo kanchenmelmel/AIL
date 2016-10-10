@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutAILViewController: UITableViewController {
+class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var contactTextField: UITextField!
@@ -20,8 +20,12 @@ class AboutAILViewController: UITableViewController {
         super.viewDidLoad()
         sendMessageButton.addTarget(self, action: #selector(self.sendMessageButtonPressed), forControlEvents: .TouchUpInside)
         
+        
         // Do any additional setup after loading the view.
         
+        self.messageTextView.delegate = self
+        self.nameTextField.delegate = self
+        self.contactTextField.delegate = self
         self.setNavigationBarItem()
         
         
@@ -34,7 +38,7 @@ class AboutAILViewController: UITableViewController {
         
         let email = Email(
             from: "Australian Institute of Language 用户反馈 <user-feedback.noreply@ail.vic.edu.au>",
-            to: "Australian Institute of Language <wenyuzhaox@gmail.com>", // TODO: Replace email address with: pte@ail.vic.edu.au
+            to: "Australian Institute of Language <patrickgao1990@gmail.com>", // TODO: Replace email address with: pte@ail.vic.edu.au
             title: "用户反馈 (Australian Institute of Language iOS客户端)",
             content: "姓名：\(name)\n联系方式：\(contact)\n反馈信息：\n\n\(message)"
         )
@@ -50,6 +54,35 @@ class AboutAILViewController: UITableViewController {
                 })
             self.presentViewController(alert, animated: true, completion: nil)
         }
+    }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        
+        print("test")
+        if text == "\n" {
+            self.messageTextView.resignFirstResponder()
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.text == "写下你的问题......" {
+            textView.text = ""
+        }
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "写下你的问题......"
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 
