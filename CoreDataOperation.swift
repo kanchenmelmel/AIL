@@ -193,6 +193,22 @@ class CoreDataOperation {
         
     }
     
+    static func buildRandomPost(id:Int,title:String,excerpt:String,date:NSDate,link:String) -> Post {
+        
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let postDescription = NSEntityDescription.entityForName(EntityType.Post.rawValue, inManagedObjectContext: managedObjectContext)
+        
+        let post = Post(entity: postDescription, insertIntoManagedObjectContext: nil)
+        
+        post.id = id
+        post.title = title
+
+        
+        
+        return post
+    }
+    
     
 }
 
