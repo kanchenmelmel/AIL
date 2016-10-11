@@ -11,6 +11,7 @@ import SlideMenuControllerSwift
 
 enum LeftMenuOption {
     case main
+    case rewardAccount
     case archive
     case message
     case aboutAIL
@@ -27,6 +28,7 @@ class LeftMenuVC: UIViewController {
     
     // Set up view Controllers that left menu can access
     var mainVC:UIViewController!
+    var rewardAccountVC:UIViewController!
     var archiveVC:UIViewController!
     var messageVC:UIViewController!
     var aboutAILVC:UIViewController!
@@ -59,6 +61,10 @@ class LeftMenuVC: UIViewController {
     @IBAction func homeButtonClick(sender: AnyObject) {
         self.changeViewController(.main)
     }
+    @IBAction func rewardAccountButtonClick(sender: AnyObject) {
+        self.changeViewController(.rewardAccount)
+    }
+    
     @IBAction func archiveButtonClick(sender: AnyObject) {
         self.changeViewController(.archive)
         
@@ -87,6 +93,9 @@ class LeftMenuVC: UIViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         self.mainVC = mainStoryboard.instantiateViewControllerWithIdentifier("mainNavCtrl")
         
+        
+        let rewardAccountStoryboard = UIStoryboard(name: "RewardAccount", bundle: nil)
+        self.rewardAccountVC = rewardAccountStoryboard.instantiateViewControllerWithIdentifier("RewardAccountNavCtrl")
         
         
         let messageStoryboard = UIStoryboard(name: "Archive", bundle: nil)
@@ -119,6 +128,8 @@ extension LeftMenuVC:LeftMenuProtocol {
         switch menu {
         case .main:
             self.slideMenuController()?.changeMainViewController(self.mainVC, close: true)
+        case .rewardAccount:
+            self.slideMenuController()?.changeMainViewController(self.rewardAccountVC, close: true)
         case .archive:
             self.slideMenuController()?.changeMainViewController(self.archiveVC, close: true)
         case .message:

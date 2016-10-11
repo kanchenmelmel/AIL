@@ -190,8 +190,36 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PTELiveCell" id="5Z5-kC-hI6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="7" width="287" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-0X-Yce">
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PTELiveCellButton" translatesAutoresizingMaskIntoConstraints="NO" id="2zZ-jM-PgV"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE考试直播论坛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-iG-qpk">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                            <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="qjG-0X-Yce" firstAttribute="centerX" secondItem="5Z5-kC-hI6" secondAttribute="centerX" id="eBS-VS-czL"/>
+                                            <constraint firstItem="qjG-0X-Yce" firstAttribute="centerY" secondItem="5Z5-kC-hI6" secondAttribute="centerY" id="su5-v9-cFI"/>
+                                        </constraints>
+                                        <size key="customSize" width="287" height="169"/>
+                                        <connections>
+                                            <segue destination="FJM-uR-bq7" kind="show" id="eLu-UO-QZY"/>
+                                        </connections>
+                                    </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
+                                        <rect key="frame" x="297" y="7" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -233,7 +261,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPostCell" id="3aG-XG-aY6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="208" width="287" height="169"/>
+                                        <rect key="frame" x="594" y="7" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -599,13 +627,20 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-xz-gex">
-                                <frame key="frameInset" minX="176" minY="234" width="113" height="205"/>
+                                <frame key="frameInset" minX="176" minY="234" width="113" height="266"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK7-fN-fgQ">
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <state key="normal" title="     首页" image="HomeButton"/>
+                                        <state key="normal" title="     备考神器" image="HomeButton"/>
                                         <connections>
                                             <action selector="homeButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="TlW-NS-rqM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcH-9Y-CW1">
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                        <state key="normal" title="     积分账户" image="RewardAccount"/>
+                                        <connections>
+                                            <action selector="rewardAccountButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="zZc-bJ-7k4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-ny-SrX">
@@ -650,14 +685,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZ1-8d-r4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4239.1999999999998" y="97.601199400299862"/>
-        </scene>
-        <!--MessagesTableNavCtrl-->
-        <scene sceneID="uJ4-X8-knV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Messages" referencedIdentifier="MessagesTableNavCtrl" id="THu-B7-IcD" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qz4-nZ-QGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3527" y="54"/>
         </scene>
         <!--SubjectResourcesTableVC-->
         <scene sceneID="wIT-Zr-e5L">
@@ -779,7 +806,13 @@
                             <constraint firstItem="ewH-oC-nb6" firstAttribute="leading" secondItem="w4r-k3-go2" secondAttribute="leading" id="omv-Fc-hk5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="全真模考" id="2GG-Ju-sem"/>
+                    <navigationItem key="navigationItem" title="全真模考" id="2GG-Ju-sem">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="85Y-OT-ytE">
+                            <connections>
+                                <action selector="activityButtonClick:" destination="F2h-Yu-gaf" id="DOP-XH-cWQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="progressView" destination="ewH-oC-nb6" id="ZLS-nA-sqC"/>
                         <outlet property="webView" destination="WPu-Db-zvo" id="a0l-rF-JnB"/>
@@ -821,7 +854,13 @@
                             <constraint firstItem="YoX-6U-aQY" firstAttribute="leading" secondItem="Pzy-la-18m" secondAttribute="leading" id="zjC-OA-czm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="报考流程" id="EXQ-h0-Yse"/>
+                    <navigationItem key="navigationItem" title="报考流程" id="EXQ-h0-Yse">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="CQn-3c-rDn">
+                            <connections>
+                                <action selector="ActivityButtonClick:" destination="cKz-Ap-BJd" id="H1Y-Id-9mt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="progressView" destination="YoX-6U-aQY" id="cUl-Mr-JE2"/>
                         <outlet property="webView" destination="vDY-H3-3BS" id="RNd-j6-M8E"/>
@@ -830,6 +869,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8n9-CJ-4eK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="748" y="986"/>
+        </scene>
+        <!--PTE考试直播论坛-->
+        <scene sceneID="Heb-Rt-7aM">
+            <objects>
+                <viewController id="FJM-uR-bq7" customClass="PTELiveForumWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Thh-nD-Enc"/>
+                        <viewControllerLayoutGuide type="bottom" id="oaw-lp-44A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fn5-4d-ccK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUG-OC-XUQ">
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B78-hJ-FfE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Cic-MI-JwN"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="B78-hJ-FfE" firstAttribute="top" secondItem="fn5-4d-ccK" secondAttribute="top" constant="65" id="1yb-w5-rza"/>
+                            <constraint firstItem="B78-hJ-FfE" firstAttribute="leading" secondItem="fn5-4d-ccK" secondAttribute="leading" id="5ij-ZO-uw4"/>
+                            <constraint firstItem="VUG-OC-XUQ" firstAttribute="leading" secondItem="fn5-4d-ccK" secondAttribute="leading" id="HFd-4c-vPv"/>
+                            <constraint firstItem="oaw-lp-44A" firstAttribute="top" secondItem="VUG-OC-XUQ" secondAttribute="bottom" id="IFP-aB-W4k"/>
+                            <constraint firstAttribute="trailing" secondItem="VUG-OC-XUQ" secondAttribute="trailing" id="csw-0c-DRo"/>
+                            <constraint firstAttribute="trailing" secondItem="B78-hJ-FfE" secondAttribute="trailing" id="dUJ-kW-DyL"/>
+                            <constraint firstItem="VUG-OC-XUQ" firstAttribute="top" secondItem="fn5-4d-ccK" secondAttribute="top" id="yql-yo-9rX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PTE考试直播论坛" id="JFs-gs-lk1">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="6qh-bM-WwZ">
+                            <connections>
+                                <action selector="activityButtonClickWithSender:" destination="FJM-uR-bq7" id="c5A-dv-jrT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="B78-hJ-FfE" id="bFF-Aq-fTO"/>
+                        <outlet property="webView" destination="VUG-OC-XUQ" id="QAK-ld-Mmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQw-1o-oat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="-528"/>
         </scene>
     </scenes>
     <resources>
@@ -840,6 +927,8 @@
         <image name="Background" width="183" height="667"/>
         <image name="Group_shot_1" width="600" height="500"/>
         <image name="HomeButton" width="15" height="13"/>
+        <image name="PTELiveCellButton" width="61" height="60"/>
+        <image name="RewardAccount" width="14" height="13"/>
         <image name="TopIcon" width="87" height="89"/>
         <image name="baokao" width="40" height="40"/>
         <image name="beikao" width="35" height="36"/>

@@ -1,17 +1,17 @@
 //
-//  BookProcessViewController.swift
+//  PTELiveForumWebViewController.swift
 //  AIL
 //
-//  Created by Work on 7/10/16.
+//  Created by Work on 11/10/16.
 //  Copyright © 2016 au.com.melmel. All rights reserved.
 //
 
 import UIKit
 
-class BookProcessViewController: UIViewController,UIWebViewDelegate {
-    
-    var post:Post?
+class PTELiveForumWebViewController: UIViewController,UIWebViewDelegate {
 
+    var post:Post?
+    
     var urlString:String?
     var titleString:String?
     
@@ -30,7 +30,7 @@ class BookProcessViewController: UIViewController,UIWebViewDelegate {
         
         // Do any additional setup after loading the view.
         
-        urlString = "http://ail.vic.edu.au/pte-booking/"
+        urlString = "http://pte-practice.com"
         
         progressView.progress  = 0
         let url = NSURL(string:urlString!)
@@ -39,8 +39,7 @@ class BookProcessViewController: UIViewController,UIWebViewDelegate {
         //        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
         webView.loadRequest(request as NSURLRequest)
         webView.delegate = self
-        post = CoreDataOperation.buildRandomPost(1, title: "报考流程", excerpt: "PTE报考流程", date: NSDate(), link: urlString!)
-        
+        post = CoreDataOperation.buildRandomPost(0, title: "全真模考", excerpt: "全真模考", date: NSDate(), link: urlString!)
     }
     
     
@@ -83,13 +82,10 @@ class BookProcessViewController: UIViewController,UIWebViewDelegate {
         }
     }
     
-    @IBAction func ActivityButtonClick(sender: AnyObject) {
-        
+    @IBAction func activityButtonClick(sender: AnyObject) {
         if post != nil {
             self.rightTopBarButtonItemAction(post!)
         }
     }
-    
-
 
 }
