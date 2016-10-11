@@ -86,14 +86,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.setUpTableViewImageCoordinator()
         }
         
-        if !UserDefaults.standard.bool(forKey: "hasSeenIntroduction") {
-            let rootCtrl = storyboard.instantiateViewController(withIdentifier: "introductionPageViewCtrl")
-            self.window?.rootViewController = rootCtrl
-            UserDefaults.standard.set(true, forKey: "hasSeenIntroduction")
-        } else {
-            let rootCtrl = storyboard.instantiateViewController(withIdentifier: "tabBarCtrl")
-            self.window?.rootViewController = rootCtrl
+        if !NSUserDefaults.standardUserDefaults().boolForKey("hasSeenIntroduction") {
+            self.setupIntroPages()
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasSeenIntroduction")
         }
+        
         
         
     }
@@ -192,7 +189,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.performSegueWithIdentifier("allPostVC", sender: nil)
         }
         else if indexPath.row != 0{
-            let featurePost = featurePosts[indexPath.row]
+            let featurePost = featurePosts[indexPath.row - 1]
             
             self.performSegueWithIdentifier("showPostWebViewSegue", sender: featurePost)
         }
