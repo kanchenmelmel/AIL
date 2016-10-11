@@ -39,7 +39,7 @@ class PTELiveForumWebViewController: UIViewController,UIWebViewDelegate {
         //        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
         webView.loadRequest(request as NSURLRequest)
         webView.delegate = self
-        post = CoreDataOperation.buildRandomPost(0, title: "全真模考", excerpt: "全真模考", date: NSDate(), link: urlString!)
+        post = CoreDataOperation.buildRandomPost(0, title: "PTE考试直播论坛", excerpt: "PTE考试直播论坛", date: NSDate(), link: urlString!)
     }
     
     
@@ -81,11 +81,11 @@ class PTELiveForumWebViewController: UIViewController,UIWebViewDelegate {
             timer?.invalidate()
         }
     }
-    
     @IBAction func activityButtonClick(sender: AnyObject) {
         if post != nil {
             self.rightTopBarButtonItemAction(post!)
         }
     }
+
 
 }
