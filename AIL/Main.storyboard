@@ -610,7 +610,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcH-9Y-CW1">
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                        <state key="normal" title="     积分账户" image="HomeButton"/>
+                                        <state key="normal" title="     积分账户" image="RewardAccount"/>
                                         <connections>
                                             <action selector="homeButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="btd-be-Z1V"/>
                                         </connections>
@@ -851,6 +851,7 @@
         <image name="Background" width="183" height="667"/>
         <image name="Group_shot_1" width="600" height="500"/>
         <image name="HomeButton" width="15" height="13"/>
+        <image name="RewardAccount" width="14" height="13"/>
         <image name="TopIcon" width="87" height="89"/>
         <image name="baokao" width="40" height="40"/>
         <image name="beikao" width="35" height="36"/>
