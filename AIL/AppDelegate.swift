@@ -11,7 +11,7 @@ import CoreData
 import SlideMenuControllerSwift
 import Alamofire
 import AlamofireNetworkActivityIndicator
-
+import EAIntroView
 
 
 
@@ -19,6 +19,8 @@ import AlamofireNetworkActivityIndicator
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
 
 
     
@@ -190,6 +192,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    
+    
 
 }
 
