@@ -114,13 +114,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        if indexPath.row < self.featurePosts.count {
+        if indexPath.row == 0 {
+            return collectionView.dequeueReusableCellWithReuseIdentifier("PTELiveCell", forIndexPath: indexPath) as! LastCollectionViewCell
+        } else if indexPath.row <= self.featurePosts.count {
             if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCell", forIndexPath: indexPath) as? PostCollectionViewCell{
                 cell.backgroundColor = UIColor.whiteColor()
                 
                 print ("123123: \(self.featurePosts.count)")
                 
-                let featurePost = self.featurePosts[indexPath.row]
+                let featurePost = self.featurePosts[indexPath.row - 1]
                 
                 cell.postLabel.text = featurePost.title
                 
@@ -129,7 +131,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     
                     cell.postImage.contentMode = .ScaleAspectFill
                     
-                    let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
+                    let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row - 1]
                     cell.postImage.image = imageRecord.image
                     
                     switch (imageRecord.state) {
@@ -140,7 +142,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                             self.collectionView.reloadItemsAtIndexPaths([indexPath])
                         })
                     default:
-                        print("Do Nothing for loading cell image \(indexPath.row)")
+                        print("Do Nothing for loading cell image \(indexPath.row - 1)")
                     }
                     
                     
@@ -175,10 +177,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //TODO Goes to another view controller
-        if indexPath.row == featurePosts.count {
+        if indexPath.row == featurePosts.count + 1 {
             self.performSegueWithIdentifier("allPostVC", sender: nil)
         }
-        else{
+        else if indexPath.row != 0{
             let featurePost = featurePosts[indexPath.row]
             
             self.performSegueWithIdentifier("showPostWebViewSegue", sender: featurePost)
@@ -195,7 +197,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.featurePosts.count + 1
+        return self.featurePosts.count + 2
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
@@ -248,14 +250,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //    }
     
     
-//    @IBAction func mockExamButtonPressed(sender: AnyObject) {
-//        
-//        alert.showTempAlert(self)
-//    }
-//    
-//    @IBAction func courseButtonClick(sender: AnyObject) {
-//        alert.showTempAlert(self)
-//    }
+    //    @IBAction func mockExamButtonPressed(sender: AnyObject) {
+    //
+    //        alert.showTempAlert(self)
+    //    }
+    //
+    //    @IBAction func courseButtonClick(sender: AnyObject) {
+    //        alert.showTempAlert(self)
+    //    }
     @IBAction func selfExamButtonPressed(sender: AnyObject) {
         
         alert.showTempAlert(self)

@@ -31,6 +31,9 @@
 		4DDD18031D9ACA0000294ACC /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD18011D9ACA0000294ACC /* Message+CoreDataClass.swift */; };
 		4DDD18041D9ACA0000294ACC /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD18021D9ACA0000294ACC /* Message+CoreDataProperties.swift */; };
 		960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */; };
+		960E658A1DAC67BE00DEE9BF /* PTELiveForumWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */; };
+		960E658C1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */; };
+		960E658F1DAC6D9F00DEE9BF /* RewardAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */; };
 		962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */; };
 		962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */; };
 		963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C41D77E1280079B7C5 /* AppDelegate.swift */; };
@@ -104,6 +107,9 @@
 		4DDD18021D9ACA0000294ACC /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
 		960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressSyncManager.swift; sourceTree = "<group>"; };
+		960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTELiveForumWebViewController.swift; sourceTree = "<group>"; };
+		960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardAccountWebViewController.swift; sourceTree = "<group>"; };
+		960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RewardAccount.storyboard; sourceTree = "<group>"; };
 		962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewController.swift; sourceTree = "<group>"; };
 		962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		963061C11D77E1280079B7C5 /* AIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +189,8 @@
 				3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */,
 				9679786E1DA6727C0095EB91 /* TestWebViewController.swift */,
 				967978701DA682BE0095EB91 /* BookProcessViewController.swift */,
+				960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */,
+				960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 				96A691D21D98F90200D29995 /* BeiKaoGongLue.storyboard */,
 				96A173971DA0D1F30002F360 /* AboutAIL.storyboard */,
 				96A173991DA0D29E0002F360 /* Archive.storyboard */,
+				960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */,
 			);
 			path = AIL;
 			sourceTree = "<group>";
@@ -544,6 +553,7 @@
 				4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */,
 				96A691D31D98F90200D29995 /* BeiKaoGongLue.storyboard in Resources */,
 				9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */,
+				960E658F1DAC6D9F00DEE9BF /* RewardAccount.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +658,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				965216B31D94B29F00EA1823 /* HomeViewBottomButton.swift in Sources */,
+				960E658A1DAC67BE00DEE9BF /* PTELiveForumWebViewController.swift in Sources */,
 				3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */,
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
 				4D333F901DA3C67800D557C2 /* Alert.swift in Sources */,
@@ -671,6 +682,7 @@
 				9656DF201DA372B500DAFC7C /* UIColorExtension.swift in Sources */,
 				3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */,
 				4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */,
+				960E658C1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift in Sources */,
 				966D81FC1DA1D8AF0069270A /* UIViewController+ActionSheet.swift in Sources */,
 				4DDD17EE1D97BB9500294ACC /* AllPostsCell.swift in Sources */,
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
