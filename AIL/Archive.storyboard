@@ -22,13 +22,8 @@
                                     <frame key="frameInset" width="375" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uth-Ya-2Kf">
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="59" id="tpB-H6-zzD"/>
-                                                <constraint firstAttribute="height" constant="60" id="uqQ-qw-Cz0"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS5-a6-OWE">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS5-a6-OWE">
+                                            <frame key="frameInset" minX="20" minY="10" width="221" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="GBn-FF-bGL"/>
                                                 <constraint firstAttribute="width" constant="150" id="xlr-6Y-0Ef"/>
@@ -58,7 +53,8 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为了针对年底最后的几场考试为了针对年底最后的几场考试" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-iB-IVO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="为了针对年底最后的几场考试为了针对年底最后的几场考试" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-iB-IVO">
+                                            <frame key="frameInset" minX="20" minY="33" width="241" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="cpy-z6-PY9"/>
                                             </constraints>
@@ -78,21 +74,18 @@
                                     <constraints>
                                         <constraint firstItem="chv-9s-MYc" firstAttribute="leading" secondItem="sS5-a6-OWE" secondAttribute="trailing" constant="73" id="1XM-MX-roV"/>
                                         <constraint firstItem="chv-9s-MYc" firstAttribute="top" secondItem="yU1-cx-yRV" secondAttribute="topMargin" id="99n-Ww-HlI"/>
+                                        <constraint firstItem="yeF-iB-IVO" firstAttribute="leading" secondItem="yU1-cx-yRV" secondAttribute="leading" constant="16" id="Eq6-7a-6SC"/>
                                         <constraint firstItem="yeF-iB-IVO" firstAttribute="top" secondItem="sS5-a6-OWE" secondAttribute="bottom" constant="3" id="Lys-Ud-8d2"/>
                                         <constraint firstItem="sS5-a6-OWE" firstAttribute="top" secondItem="yU1-cx-yRV" secondAttribute="topMargin" constant="2" id="M2E-gw-bWQ"/>
                                         <constraint firstAttribute="trailing" secondItem="yeF-iB-IVO" secondAttribute="trailing" constant="114" id="O8a-dd-VCP"/>
-                                        <constraint firstItem="sS5-a6-OWE" firstAttribute="leading" secondItem="uth-Ya-2Kf" secondAttribute="trailing" constant="5" id="nmb-Qo-BWY"/>
+                                        <constraint firstItem="sS5-a6-OWE" firstAttribute="leading" secondItem="yU1-cx-yRV" secondAttribute="leading" constant="16" id="S61-6O-UFo"/>
                                         <constraint firstItem="chv-9s-MYc" firstAttribute="trailing" secondItem="yU1-cx-yRV" secondAttribute="trailingMargin" id="qvd-VD-lSu"/>
-                                        <constraint firstItem="uth-Ya-2Kf" firstAttribute="leading" secondItem="yU1-cx-yRV" secondAttribute="leading" constant="8" id="sjr-SL-ctn"/>
-                                        <constraint firstItem="yeF-iB-IVO" firstAttribute="leading" secondItem="uth-Ya-2Kf" secondAttribute="trailing" constant="5" id="tDh-m0-ioV"/>
-                                        <constraint firstItem="uth-Ya-2Kf" firstAttribute="top" secondItem="yU1-cx-yRV" secondAttribute="top" constant="8" id="wbW-Ih-wWR"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateLabel" destination="chv-9s-MYc" id="dK9-50-ta5"/>
                                     <outlet property="subtitleLabel" destination="yeF-iB-IVO" id="hix-al-5S5"/>
                                     <outlet property="titleLbael" destination="sS5-a6-OWE" id="8uz-lD-MGT"/>
-                                    <outlet property="viewImage" destination="uth-Ya-2Kf" id="Nlt-xf-w5Z"/>
                                     <segue destination="8p5-gH-MlQ" kind="show" identifier="showArchiveWebVCSegue" id="wmT-E6-ZFi"/>
                                 </connections>
                             </tableViewCell>
@@ -126,7 +119,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tm1-fp-MQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationItem title="Title" id="Pzf-Bn-sYE"/>
             </objects>
-            <point key="canvasLocation" x="4114" y="301"/>
+            <point key="canvasLocation" x="4112.8000000000002" y="300.89955022488761"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YgE-A3-G3q">
