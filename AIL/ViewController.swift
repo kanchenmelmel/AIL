@@ -9,10 +9,14 @@
 import UIKit
 import SlideMenuControllerSwift
 import CoreData
+import EAIntroView
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SlideMenuControllerDelegate,UISearchBarDelegate {
     
     
+    
+    var introView:EAIntroView?
+    var rootView:UIView?
     
     var leftButtonIndex = 0
     
@@ -82,7 +86,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.setUpTableViewImageCoordinator()
         }
         
-        
+        if !UserDefaults.standard.bool(forKey: "hasSeenIntroduction") {
+            let rootCtrl = storyboard.instantiateViewController(withIdentifier: "introductionPageViewCtrl")
+            self.window?.rootViewController = rootCtrl
+            UserDefaults.standard.set(true, forKey: "hasSeenIntroduction")
+        } else {
+            let rootCtrl = storyboard.instantiateViewController(withIdentifier: "tabBarCtrl")
+            self.window?.rootViewController = rootCtrl
+        }
         
         
     }
@@ -277,6 +288,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 destinationVC.titleString = selectedPost.title
             }
         }
+    }
+    
+    func setupIntroPages() {
+        let page1 = EAIntroPage(customViewFromNibNamed: "IntroPage1View")
+        let page2 = EAIntroPage(customViewFromNibNamed: "IntroPage2View")
+        let page3 = EAIntroPage(customViewFromNibNamed: "IntroPage3View")
+        
+        
+        rootView = self.navigationController?.view
+        let introView = EAIntroView(frame: rootView!.bounds, andPages: [page1,page2,page3])
+        
+        introView.showInView(rootView, animateDuration: 0.3)
     }
     
 }
