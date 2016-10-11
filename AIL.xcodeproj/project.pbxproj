@@ -34,6 +34,9 @@
 		960E658A1DAC67BE00DEE9BF /* PTELiveForumWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */; };
 		960E658C1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */; };
 		960E658F1DAC6D9F00DEE9BF /* RewardAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */; };
+		960E65941DAC8E3800DEE9BF /* IntroPage1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65931DAC8E3800DEE9BF /* IntroPage1View.xib */; };
+		960E65961DAC908700DEE9BF /* IntroPage2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65951DAC908700DEE9BF /* IntroPage2View.xib */; };
+		960E65981DAC91DC00DEE9BF /* IntroPage3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */; };
 		962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */; };
 		962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */; };
 		963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C41D77E1280079B7C5 /* AppDelegate.swift */; };
@@ -110,6 +113,9 @@
 		960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTELiveForumWebViewController.swift; sourceTree = "<group>"; };
 		960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardAccountWebViewController.swift; sourceTree = "<group>"; };
 		960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RewardAccount.storyboard; sourceTree = "<group>"; };
+		960E65931DAC8E3800DEE9BF /* IntroPage1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage1View.xib; sourceTree = "<group>"; };
+		960E65951DAC908700DEE9BF /* IntroPage2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage2View.xib; sourceTree = "<group>"; };
+		960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage3View.xib; sourceTree = "<group>"; };
 		962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewController.swift; sourceTree = "<group>"; };
 		962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		963061C11D77E1280079B7C5 /* AIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +295,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		960E65921DAC8E1600DEE9BF /* IntroPages */ = {
+			isa = PBXGroup;
+			children = (
+				960E65931DAC8E3800DEE9BF /* IntroPage1View.xib */,
+				960E65951DAC908700DEE9BF /* IntroPage2View.xib */,
+				960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */,
+			);
+			name = IntroPages;
+			sourceTree = "<group>";
+		};
 		963061B81D77E1270079B7C5 = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +334,7 @@
 		963061C31D77E1280079B7C5 /* AIL */ = {
 			isa = PBXGroup;
 			children = (
+				960E65921DAC8E1600DEE9BF /* IntroPages */,
 				963061C41D77E1280079B7C5 /* AppDelegate.swift */,
 				963061CE1D77E1280079B7C5 /* Assets.xcassets */,
 				4DDD17E91D965E3600294ACC /* AllPosts.storyboard */,
@@ -551,7 +568,10 @@
 				96A173981DA0D1F30002F360 /* AboutAIL.storyboard in Resources */,
 				963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */,
 				4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */,
+				960E65941DAC8E3800DEE9BF /* IntroPage1View.xib in Resources */,
+				960E65981DAC91DC00DEE9BF /* IntroPage3View.xib in Resources */,
 				96A691D31D98F90200D29995 /* BeiKaoGongLue.storyboard in Resources */,
+				960E65961DAC908700DEE9BF /* IntroPage2View.xib in Resources */,
 				9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */,
 				960E658F1DAC6D9F00DEE9BF /* RewardAccount.storyboard in Resources */,
 			);
