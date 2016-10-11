@@ -52,9 +52,10 @@
             <objects>
                 <navigationController storyboardIdentifier="RewardAccountNavCtrl" automaticallyAdjustsScrollViewInsets="NO" id="umq-82-B8I" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6rf-Kh-V4g">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6rf-Kh-V4g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
