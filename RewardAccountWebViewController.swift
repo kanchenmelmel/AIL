@@ -31,7 +31,7 @@ class RewardAccountWebViewController: UIViewController,UIWebViewDelegate {
         
         // Do any additional setup after loading the view.
         
-        urlString = "http://pte-practice.com"
+        urlString = "http://ail.vic.edu.au/my-account/"
         
         progressView.progress  = 0
         let url = NSURL(string:urlString!)
