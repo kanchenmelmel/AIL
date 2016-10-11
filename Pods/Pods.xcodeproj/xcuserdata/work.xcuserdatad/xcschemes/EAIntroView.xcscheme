@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B575E64C6F77E5B3086D0BA0712CD38E'
-               BlueprintName = 'SlideMenuControllerSwift'
+               BlueprintIdentifier = 'AB045440E0FF21FA9AA0E0A151C95FDB'
+               BlueprintName = 'EAIntroView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SlideMenuControllerSwift.framework'>
+               BuildableName = 'EAIntroView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -2,6 +2,9 @@ PODS:
   - Alamofire (3.5.0)
   - AlamofireNetworkActivityIndicator (1.1.0):
     - Alamofire (~> 3.3)
+  - EAIntroView (2.9.0):
+    - EARestrictedScrollView (~> 1.1.0)
+  - EARestrictedScrollView (1.1.0)
   - NVActivityIndicatorView (2.12)
   - SlideMenuControllerSwift (2.2.2)
   - SwiftyJSON (2.3.2)
@@ -9,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 3.5)
   - AlamofireNetworkActivityIndicator
+  - EAIntroView (~> 2.9.0)
   - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView.git`, branch `swift2.3`)
   - SlideMenuControllerSwift
   - SwiftyJSON
@@ -26,10 +30,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
   AlamofireNetworkActivityIndicator: 36340ebf8d70241b2ebadc3dea38e8fbb95f5127
+  EAIntroView: 76f68cc56242f2e25359419e6ecc2344ee7e1756
+  EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
   NVActivityIndicatorView: de8be03826726ad99cdfacf7fe09e88cbfeef911
   SlideMenuControllerSwift: e257221100c39d49edccaaeb0238b55a0c67953a
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: f25959d0b1fdb7c86e90aaad52c39fe83d19fe73
+PODFILE CHECKSUM: 8389cd849e04148648c3f904ef7b286fa5a1c148
 
 COCOAPODS: 1.0.0
