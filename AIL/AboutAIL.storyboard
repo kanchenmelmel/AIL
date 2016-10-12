@@ -8,7 +8,7 @@
         <!--关于AIL-->
         <scene sceneID="Wb3-dr-aqu">
             <objects>
-                <tableViewController id="VSn-am-p9l" customClass="AboutAILViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AboutAILVC" id="VSn-am-p9l" customClass="AboutAILViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="6" sectionFooterHeight="1" id="Ebm-ed-mF7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                         <sections>
                             <tableViewSection id="jd1-3t-oHg">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8Oe-j3-VCz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AboutAILVC" selectionStyle="default" indentationWidth="10" id="8Oe-j3-VCz">
                                         <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Oe-j3-VCz" id="0HT-np-2cZ">
