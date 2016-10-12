@@ -103,17 +103,35 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
-            let phoneNumber = "tel://96708868"
-            UIApplication.sharedApplication().openURL(NSURL(string:phoneNumber)!)
+            
+            showStandardAlert("请问您想拨打电话么？", message: "96708868", okAction: {
+                let phoneNumber = "tel://96708868"
+                UIApplication.sharedApplication().openURL(NSURL(string:phoneNumber)!)
+                }, cancleAction: nil)
+            
         }
         if indexPath.section == 0 && indexPath.row == 1 {
-            let email = "mailto://pte@ail.vic.edu.au"
-            UIApplication.sharedApplication().openURL(NSURL(string:email)!)
+            
+            showStandardAlert("请问你想发送邮件么？", message: "pte@ail.vic.edu.au", okAction: { 
+                let email = "mailto://pte@ail.vic.edu.au"
+                UIApplication.sharedApplication().openURL(NSURL(string:email)!)
+                }, cancleAction: nil)
+            
         }
         if indexPath.section == 0 && indexPath.row == 2 {
+            let url = NSURL(string:
+                "comgooglemaps://?q=墨尔本无忧雅思培训学校&center=-37.8142814,144.96208969999998".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())!)
+
             
-            UIApplication.sharedApplication().openURL(NSURL(string:
-                "comgooglemaps://?q=AIL&center=-37.8142814,144.96208969999998")!)
+//             UIApplication.sharedApplication().openURL(url!)
+            if UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!) {
+                showStandardAlert("请问你想打开Google Maps", message: "请问你想打开Google Maps", okAction: { 
+                    UIApplication.sharedApplication().openURL(url!)
+                    }, cancleAction: nil)
+                
+            } else {
+                showStandardAlert("你没有安装Google Maps", message: nil, okAction: nil, cancleAction: nil)
+            }
 //            if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
 //                UIApplication.sharedApplication().openURL(NSURL(string:
 //                    "comgooglemaps://?q=AIL&center=-37.8142814,144.96208969999998")!)

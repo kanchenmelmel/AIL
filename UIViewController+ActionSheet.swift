@@ -85,6 +85,23 @@ extension UIViewController {
         webView.stringByEvaluatingJavaScriptFromString(javascriptWithCssString)
         
     }
+    
+    func showStandardAlert(title:String?,message:String?,okAction:(() -> Void)?,cancleAction:(() -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let cancleAction = UIAlertAction(title: "取消", style: .Cancel) { (action) in
+            if cancleAction?() != nil {
+                cancleAction!()
+            }
+        }
+        let okAction = UIAlertAction(title: "确定", style: .Default) { (action) in
+            if okAction?() != nil {
+                okAction!()
+            }
+        }
+        alert.addAction(okAction)
+        alert.addAction(cancleAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }
 
 extension UIViewController:NVActivityIndicatorViewable {
