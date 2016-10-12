@@ -37,6 +37,7 @@
 		960E65941DAC8E3800DEE9BF /* IntroPage1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65931DAC8E3800DEE9BF /* IntroPage1View.xib */; };
 		960E65961DAC908700DEE9BF /* IntroPage2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65951DAC908700DEE9BF /* IntroPage2View.xib */; };
 		960E65981DAC91DC00DEE9BF /* IntroPage3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */; };
+		961E89911DADE2520084B5DF /* JiJingDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E89901DADE2520084B5DF /* JiJingDBViewController.swift */; };
 		962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */; };
 		962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */; };
 		963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C41D77E1280079B7C5 /* AppDelegate.swift */; };
@@ -116,6 +117,7 @@
 		960E65931DAC8E3800DEE9BF /* IntroPage1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage1View.xib; sourceTree = "<group>"; };
 		960E65951DAC908700DEE9BF /* IntroPage2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage2View.xib; sourceTree = "<group>"; };
 		960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage3View.xib; sourceTree = "<group>"; };
+		961E89901DADE2520084B5DF /* JiJingDBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiJingDBViewController.swift; sourceTree = "<group>"; };
 		962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewController.swift; sourceTree = "<group>"; };
 		962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		963061C11D77E1280079B7C5 /* AIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +199,7 @@
 				967978701DA682BE0095EB91 /* BookProcessViewController.swift */,
 				960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */,
 				960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */,
+				961E89901DADE2520084B5DF /* JiJingDBViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				4D333F8E1DA3B87600D557C2 /* MessageVC.swift in Sources */,
 				9635749A1D90EF3300B8D1A5 /* TableViewImageLoadingCoordinator.swift in Sources */,
 				9656DF201DA372B500DAFC7C /* UIColorExtension.swift in Sources */,
+				961E89911DADE2520084B5DF /* JiJingDBViewController.swift in Sources */,
 				3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */,
 				4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */,
 				960E658C1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift in Sources */,

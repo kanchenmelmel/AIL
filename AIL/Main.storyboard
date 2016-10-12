@@ -50,7 +50,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="Ng3-6s-FB9" kind="show" id="0Lz-0j-XMW"/>
+                                                            <segue destination="xIQ-R1-vcv" kind="show" id="Eqq-lI-SWX"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-Ri-jZ6" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
@@ -372,7 +372,7 @@
                 <viewControllerPlaceholder storyboardName="AboutAIL" referencedIdentifier="AboutAILVC" id="ROi-LE-Hhd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C26-Jx-fHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1598" y="728"/>
+            <point key="canvasLocation" x="1660" y="1337"/>
         </scene>
         <!--课程培训-->
         <scene sceneID="1ed-Ux-BWo">
@@ -516,7 +516,7 @@
                 <viewControllerPlaceholder storyboardName="SubjectResources" referencedIdentifier="SubjectResourcesTableVC" id="Ng3-6s-FB9" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0T-9h-nwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2378" y="5"/>
+            <point key="canvasLocation" x="2470" y="97"/>
         </scene>
         <!--AllPostsTableVC-->
         <scene sceneID="vmw-uv-2hO">
@@ -547,7 +547,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibe-Ro-kr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760.79999999999995" y="253.2233883058471"/>
+            <point key="canvasLocation" x="-49" y="272"/>
         </scene>
         <!--最新资讯-->
         <scene sceneID="isE-LC-CiF">
@@ -692,7 +692,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8n9-CJ-4eK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="986"/>
+            <point key="canvasLocation" x="748" y="1316"/>
         </scene>
         <!--PTE考试直播论坛-->
         <scene sceneID="Heb-Rt-7aM">
@@ -742,6 +742,54 @@
             </objects>
             <point key="canvasLocation" x="1876" y="-528"/>
         </scene>
+        <!--机经题库-->
+        <scene sceneID="Gfs-sV-wRq">
+            <objects>
+                <viewController id="xIQ-R1-vcv" customClass="JiJingDBViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OnO-5v-Mo3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wtp-gq-MOS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gJl-YR-vfm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q18-5P-e9Y">
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vIY-D5-urU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="tNS-fa-ezf"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vIY-D5-urU" firstAttribute="leading" secondItem="gJl-YR-vfm" secondAttribute="leading" id="4K4-F9-uWd"/>
+                            <constraint firstItem="Wtp-gq-MOS" firstAttribute="top" secondItem="Q18-5P-e9Y" secondAttribute="bottom" id="L0Y-lQ-LS4"/>
+                            <constraint firstItem="Q18-5P-e9Y" firstAttribute="top" secondItem="gJl-YR-vfm" secondAttribute="top" id="dLQ-jU-QNg"/>
+                            <constraint firstItem="vIY-D5-urU" firstAttribute="top" secondItem="gJl-YR-vfm" secondAttribute="top" constant="65" id="h83-HE-1xW"/>
+                            <constraint firstAttribute="trailing" secondItem="vIY-D5-urU" secondAttribute="trailing" id="oQ5-eN-Us3"/>
+                            <constraint firstItem="Q18-5P-e9Y" firstAttribute="leading" secondItem="gJl-YR-vfm" secondAttribute="leading" id="vcz-Sa-w21"/>
+                            <constraint firstAttribute="trailing" secondItem="Q18-5P-e9Y" secondAttribute="trailing" id="xGa-oT-v3R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="机经题库" id="srb-mw-kGf">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="Pc7-J1-zbN">
+                            <connections>
+                                <action selector="activityButtonClick:" destination="xIQ-R1-vcv" id="I1v-9L-HTW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="vIY-D5-urU" id="Rdd-ld-Z2a"/>
+                        <outlet property="webView" destination="Q18-5P-e9Y" id="R16-kh-T0O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6y-H8-ZXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="-564"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AboutAILButton" width="17" height="16"/>
@@ -764,8 +812,5 @@
         <image name="pte" width="52" height="49"/>
         <image name="zice" width="33" height="36"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="0Lz-0j-XMW"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>
