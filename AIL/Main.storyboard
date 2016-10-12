@@ -191,7 +191,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PTELiveCell" id="5Z5-kC-hI6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="7" width="287" height="169"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -219,7 +219,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="297" y="7" width="287" height="169"/>
+                                        <rect key="frame" x="0.0" y="208" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -261,7 +261,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPostCell" id="3aG-XG-aY6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="594" y="7" width="287" height="169"/>
+                                        <rect key="frame" x="0.0" y="415.5" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -596,7 +596,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meB-n7-z3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2908" y="234.33283358320841"/>
+            <point key="canvasLocation" x="3364" y="253"/>
         </scene>
         <!--全真模考-->
         <scene sceneID="cmW-fd-Dnr">

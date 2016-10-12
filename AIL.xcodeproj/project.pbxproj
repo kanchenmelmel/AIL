@@ -38,6 +38,8 @@
 		960E65961DAC908700DEE9BF /* IntroPage2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65951DAC908700DEE9BF /* IntroPage2View.xib */; };
 		960E65981DAC91DC00DEE9BF /* IntroPage3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */; };
 		961E89911DADE2520084B5DF /* JiJingDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E89901DADE2520084B5DF /* JiJingDBViewController.swift */; };
+		961E89931DADFE400084B5DF /* SelfTestDB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961E89921DADFE400084B5DF /* SelfTestDB.storyboard */; };
+		961E89961DAE0F880084B5DF /* SelfTestDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E89951DAE0F880084B5DF /* SelfTestDBViewController.swift */; };
 		962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */; };
 		962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */; };
 		963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C41D77E1280079B7C5 /* AppDelegate.swift */; };
@@ -118,6 +120,8 @@
 		960E65951DAC908700DEE9BF /* IntroPage2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage2View.xib; sourceTree = "<group>"; };
 		960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage3View.xib; sourceTree = "<group>"; };
 		961E89901DADE2520084B5DF /* JiJingDBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiJingDBViewController.swift; sourceTree = "<group>"; };
+		961E89921DADFE400084B5DF /* SelfTestDB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelfTestDB.storyboard; sourceTree = "<group>"; };
+		961E89951DAE0F880084B5DF /* SelfTestDBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfTestDBViewController.swift; sourceTree = "<group>"; };
 		962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewController.swift; sourceTree = "<group>"; };
 		962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		963061C11D77E1280079B7C5 /* AIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +187,7 @@
 		4DAEAFA71D7A486700842C4F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				961E89941DAE0F230084B5DF /* SeflTestDB */,
 				967978721DA6D3130095EB91 /* CourseTraining */,
 				4DCA806E1DA3D850000B8841 /* ExamBooking */,
 				966D81FA1DA1D8880069270A /* Entension */,
@@ -308,6 +313,14 @@
 			name = IntroPages;
 			sourceTree = "<group>";
 		};
+		961E89941DAE0F230084B5DF /* SeflTestDB */ = {
+			isa = PBXGroup;
+			children = (
+				961E89951DAE0F880084B5DF /* SelfTestDBViewController.swift */,
+			);
+			name = SeflTestDB;
+			sourceTree = "<group>";
+		};
 		963061B81D77E1270079B7C5 = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +364,7 @@
 				96A173971DA0D1F30002F360 /* AboutAIL.storyboard */,
 				96A173991DA0D29E0002F360 /* Archive.storyboard */,
 				960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */,
+				961E89921DADFE400084B5DF /* SelfTestDB.storyboard */,
 			);
 			path = AIL;
 			sourceTree = "<group>";
@@ -570,6 +584,7 @@
 				9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */,
 				96A173981DA0D1F30002F360 /* AboutAIL.storyboard in Resources */,
 				963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */,
+				961E89931DADFE400084B5DF /* SelfTestDB.storyboard in Resources */,
 				4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */,
 				960E65941DAC8E3800DEE9BF /* IntroPage1View.xib in Resources */,
 				960E65981DAC91DC00DEE9BF /* IntroPage3View.xib in Resources */,
@@ -739,6 +754,7 @@
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
 				4DDD17F41D97BDEF00294ACC /* AllPostsVC.swift in Sources */,
 				965693431D939BA800FAC04B /* ResourceWebViewController.swift in Sources */,
+				961E89961DAE0F880084B5DF /* SelfTestDBViewController.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
 				4DDD18041D9ACA0000294ACC /* Message+CoreDataProperties.swift in Sources */,
 				962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */,
