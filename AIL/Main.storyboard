@@ -312,7 +312,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="联系我们"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="ROi-LE-Hhd" kind="show" id="tCL-1e-Ya2"/>
+                                            <segue destination="ROi-LE-Hhd" kind="show" identifier="showAboutAILVC" id="tCL-1e-Ya2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-vQ-jhN" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
@@ -451,7 +451,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SWP-CC-47e"/>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-xz-gex">
-                                <frame key="frameInset" minX="176" minY="234" width="113" height="266"/>
+                                <frame key="frameInset" minX="176" minY="234" width="114" height="266"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK7-fN-fgQ">
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
@@ -480,7 +480,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-3b-Ygs">
-                                        <state key="normal" title="     关于A I L" image="AboutAILButton"/>
+                                        <state key="normal" title="     联系我们" image="AboutAILButton"/>
                                         <connections>
                                             <action selector="ShowAboutAILButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="iSH-s4-9cp"/>
                                         </connections>

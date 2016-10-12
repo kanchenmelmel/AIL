@@ -16,6 +16,8 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var sendMessageButton: UIButton!
     
+    var showLeftPanelButton = true
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,11 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
         self.messageTextView.delegate = self
         self.nameTextField.delegate = self
         self.contactTextField.delegate = self
-        self.setNavigationBarItem()
+        
+        if showLeftPanelButton {
+            self.setNavigationBarItem()
+        }
+        
         
         
     }
@@ -125,44 +131,14 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
             
 //             UIApplication.sharedApplication().openURL(url!)
             if UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!) {
-                showStandardAlert("请问你想打开Google Maps", message: "请问你想打开Google Maps", okAction: { 
+                showStandardAlert("请问你想打开Google Maps", message: "AIL", okAction: {
                     UIApplication.sharedApplication().openURL(url!)
                     }, cancleAction: nil)
                 
             } else {
                 showStandardAlert("你没有安装Google Maps", message: nil, okAction: nil, cancleAction: nil)
             }
-//            if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
-//                UIApplication.sharedApplication().openURL(NSURL(string:
-//                    "comgooglemaps://?q=AIL&center=-37.8142814,144.96208969999998")!)
-//            } else {
-//                print("Can't use comgooglemaps://");
-//            }
-            
-            
-            
-            
-//            let address = "Level 2,388 Bourke St., Melbourne, 3000"
-//            let geocoder = CLGeocoder()
-//             // A string of the address info you already have
-//            geocoder.geocodeAddressString(address) { (placemarksOptional, error) -> Void in
-//                if let placemarks = placemarksOptional {
-//                    print("placemark| \(placemarks.first)")
-//                    if let location = placemarks.first?.location {
-//                        let query = "?ll=\(location.coordinate.latitude),\(location.coordinate.longitude)"
-//                        let path = "http://maps.apple.com/" + query
-//                        if let url = NSURL(string: path) {
-//                            UIApplication.sharedApplication().openURL(url)
-//                        } else {
-//                            // Could not construct url. Handle error.
-//                        }
-//                    } else {
-//                        // Could not get a location from the geocode request. Handle error.
-//                    }
-//                } else {
-//                    // Didn't get any placemarks. Handle error.
-//                }
-//            }
+
         }
     }
 }

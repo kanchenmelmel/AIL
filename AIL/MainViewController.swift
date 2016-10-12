@@ -272,6 +272,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showAboutAILVC" {
+            let destinationVC = segue.destinationViewController as! AboutAILViewController
+            destinationVC.showLeftPanelButton = false
+        }
+        
         if segue.identifier == "showPostWebViewSegue" {
             // let cellIndex = collectionView.indexPathsForSelectedItems()![0]
             
