@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 extension UIViewController {
     
@@ -83,5 +84,28 @@ extension UIViewController {
         let javascriptWithCssString = String(format: javascriptString, cssString)
         webView.stringByEvaluatingJavaScriptFromString(javascriptWithCssString)
         
+    }
+    
+    func showStandardAlert(title:String?,message:String?,okAction:(() -> Void)?,cancleAction:(() -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let cancleAction = UIAlertAction(title: "取消", style: .Cancel) { (action) in
+            if cancleAction?() != nil {
+                cancleAction!()
+            }
+        }
+        let okAction = UIAlertAction(title: "确定", style: .Default) { (action) in
+            if okAction?() != nil {
+                okAction!()
+            }
+        }
+        alert.addAction(okAction)
+        alert.addAction(cancleAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+}
+
+extension UIViewController:NVActivityIndicatorViewable {
+    func startAnimating() {
+        startAnimating(CGSizeMake(50, 50), message: "努力加载中……", type: .BallPulse, color: UIColor.tintColor(), padding: 0)
     }
 }

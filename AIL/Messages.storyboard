@@ -92,7 +92,6 @@
                                     <outlet property="dateLabel" destination="3x4-jL-tys" id="sMr-tY-ITI"/>
                                     <outlet property="subtitleLabel" destination="ew8-1Y-iMY" id="7Yb-nf-gEw"/>
                                     <outlet property="titleLbael" destination="fqZ-nP-uP8" id="Xat-P7-e0G"/>
-                                    <outlet property="viewImage" destination="apd-d6-h0b" id="ydm-D3-xHE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -31,10 +31,16 @@
 		4DDD18031D9ACA0000294ACC /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD18011D9ACA0000294ACC /* Message+CoreDataClass.swift */; };
 		4DDD18041D9ACA0000294ACC /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD18021D9ACA0000294ACC /* Message+CoreDataProperties.swift */; };
 		960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */; };
+		960E658A1DAC67BE00DEE9BF /* PTELiveForumWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */; };
+		960E658C1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */; };
+		960E658F1DAC6D9F00DEE9BF /* RewardAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */; };
+		960E65941DAC8E3800DEE9BF /* IntroPage1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65931DAC8E3800DEE9BF /* IntroPage1View.xib */; };
+		960E65961DAC908700DEE9BF /* IntroPage2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65951DAC908700DEE9BF /* IntroPage2View.xib */; };
+		960E65981DAC91DC00DEE9BF /* IntroPage3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */; };
 		962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */; };
 		962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */; };
 		963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C41D77E1280079B7C5 /* AppDelegate.swift */; };
-		963061C71D77E1280079B7C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C61D77E1280079B7C5 /* ViewController.swift */; };
+		963061C71D77E1280079B7C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C61D77E1280079B7C5 /* MainViewController.swift */; };
 		963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */; };
 		963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963061CE1D77E1280079B7C5 /* Assets.xcassets */; };
 		963061D21D77E1280079B7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963061D01D77E1280079B7C5 /* LaunchScreen.storyboard */; };
@@ -57,6 +63,7 @@
 		9671E5E11D7E6EAC008250C7 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5E01D7E6EAC008250C7 /* JSONParser.swift */; };
 		9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */; };
 		9672A1571D9BA14300A64A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9672A1561D9BA14300A64A01 /* Main.storyboard */; };
+		9678CCDB1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9678CCDA1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift */; };
 		9679786F1DA6727C0095EB91 /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679786E1DA6727C0095EB91 /* TestWebViewController.swift */; };
 		967978711DA682BE0095EB91 /* BookProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967978701DA682BE0095EB91 /* BookProcessViewController.swift */; };
 		967978741DA6E90B0095EB91 /* CourseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967978731DA6E90B0095EB91 /* CourseWebViewController.swift */; };
@@ -103,11 +110,17 @@
 		4DDD18021D9ACA0000294ACC /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
 		960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressSyncManager.swift; sourceTree = "<group>"; };
+		960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTELiveForumWebViewController.swift; sourceTree = "<group>"; };
+		960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardAccountWebViewController.swift; sourceTree = "<group>"; };
+		960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RewardAccount.storyboard; sourceTree = "<group>"; };
+		960E65931DAC8E3800DEE9BF /* IntroPage1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage1View.xib; sourceTree = "<group>"; };
+		960E65951DAC908700DEE9BF /* IntroPage2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage2View.xib; sourceTree = "<group>"; };
+		960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage3View.xib; sourceTree = "<group>"; };
 		962652031D87D5A200CB92BB /* SubjectResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewController.swift; sourceTree = "<group>"; };
 		962652051D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		963061C11D77E1280079B7C5 /* AIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963061C41D77E1280079B7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		963061C61D77E1280079B7C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = AIL/ViewController.swift; sourceTree = "<group>"; };
+		963061C61D77E1280079B7C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = AIL/MainViewController.swift; sourceTree = "<group>"; };
 		963061CC1D77E1280079B7C5 /* AIL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AIL.xcdatamodel; sourceTree = "<group>"; };
 		963061CE1D77E1280079B7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		963061D11D77E1280079B7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,6 +144,7 @@
 		9671E5E01D7E6EAC008250C7 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOperation.swift; sourceTree = "<group>"; };
 		9672A1561D9BA14300A64A01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9678CCDA1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeActivityIndicatorView.swift; sourceTree = "<group>"; };
 		9679786E1DA6727C0095EB91 /* TestWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 		967978701DA682BE0095EB91 /* BookProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookProcessViewController.swift; sourceTree = "<group>"; };
 		967978731DA6E90B0095EB91 /* CourseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseWebViewController.swift; sourceTree = "<group>"; };
@@ -176,11 +190,13 @@
 				4DDD17EC1D9771E700294ACC /* AllPosts */,
 				9683A6771D88E05C00360D98 /* SubjectResources */,
 				9671E5DB1D7E4B7D008250C7 /* SlideMenuController */,
-				963061C61D77E1280079B7C5 /* ViewController.swift */,
+				963061C61D77E1280079B7C5 /* MainViewController.swift */,
 				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
 				3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */,
 				9679786E1DA6727C0095EB91 /* TestWebViewController.swift */,
 				967978701DA682BE0095EB91 /* BookProcessViewController.swift */,
+				960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */,
+				960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -279,9 +295,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		960E65921DAC8E1600DEE9BF /* IntroPages */ = {
+			isa = PBXGroup;
+			children = (
+				960E65931DAC8E3800DEE9BF /* IntroPage1View.xib */,
+				960E65951DAC908700DEE9BF /* IntroPage2View.xib */,
+				960E65971DAC91DC00DEE9BF /* IntroPage3View.xib */,
+			);
+			name = IntroPages;
+			sourceTree = "<group>";
+		};
 		963061B81D77E1270079B7C5 = {
 			isa = PBXGroup;
 			children = (
+				9678CCD91DA9E40900F2EBB2 /* ActivityIndicatorView */,
 				963574961D90E12600B8D1A5 /* TableCellImageAsycLoading */,
 				4DAEAFAE1D7ACC2F00842C4F /* Extension */,
 				4DAEAFA91D7A488000842C4F /* Model */,
@@ -307,6 +334,7 @@
 		963061C31D77E1280079B7C5 /* AIL */ = {
 			isa = PBXGroup;
 			children = (
+				960E65921DAC8E1600DEE9BF /* IntroPages */,
 				963061C41D77E1280079B7C5 /* AppDelegate.swift */,
 				963061CE1D77E1280079B7C5 /* Assets.xcassets */,
 				4DDD17E91D965E3600294ACC /* AllPosts.storyboard */,
@@ -319,6 +347,7 @@
 				96A691D21D98F90200D29995 /* BeiKaoGongLue.storyboard */,
 				96A173971DA0D1F30002F360 /* AboutAIL.storyboard */,
 				96A173991DA0D29E0002F360 /* Archive.storyboard */,
+				960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */,
 			);
 			path = AIL;
 			sourceTree = "<group>";
@@ -362,6 +391,14 @@
 				963574931D90C3F800B8D1A5 /* Category+CoreDataProperties.swift */,
 			);
 			name = ManagedObject;
+			sourceTree = "<group>";
+		};
+		9678CCD91DA9E40900F2EBB2 /* ActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				9678CCDA1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift */,
+			);
+			name = ActivityIndicatorView;
 			sourceTree = "<group>";
 		};
 		967978721DA6D3130095EB91 /* CourseTraining */ = {
@@ -531,8 +568,12 @@
 				96A173981DA0D1F30002F360 /* AboutAIL.storyboard in Resources */,
 				963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */,
 				4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */,
+				960E65941DAC8E3800DEE9BF /* IntroPage1View.xib in Resources */,
+				960E65981DAC91DC00DEE9BF /* IntroPage3View.xib in Resources */,
 				96A691D31D98F90200D29995 /* BeiKaoGongLue.storyboard in Resources */,
+				960E65961DAC908700DEE9BF /* IntroPage2View.xib in Resources */,
 				9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */,
+				960E658F1DAC6D9F00DEE9BF /* RewardAccount.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				965216B31D94B29F00EA1823 /* HomeViewBottomButton.swift in Sources */,
+				960E658A1DAC67BE00DEE9BF /* PTELiveForumWebViewController.swift in Sources */,
 				3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */,
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
 				4D333F901DA3C67800D557C2 /* Alert.swift in Sources */,
@@ -648,7 +690,7 @@
 				965693411D9392B300FAC04B /* Post+CoreDataProperties.swift in Sources */,
 				9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */,
 				96E8C7741D9A307100843C89 /* CourseTrainingViewController.swift in Sources */,
-				963061C71D77E1280079B7C5 /* ViewController.swift in Sources */,
+				963061C71D77E1280079B7C5 /* MainViewController.swift in Sources */,
 				966D81FF1DA208440069270A /* Archive+CoreDataClass.swift in Sources */,
 				96A691D61D98FF5500D29995 /* BeiKaoGongLueTableViewController.swift in Sources */,
 				9671E5E11D7E6EAC008250C7 /* JSONParser.swift in Sources */,
@@ -660,10 +702,12 @@
 				9656DF201DA372B500DAFC7C /* UIColorExtension.swift in Sources */,
 				3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */,
 				4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */,
+				960E658C1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift in Sources */,
 				966D81FC1DA1D8AF0069270A /* UIViewController+ActionSheet.swift in Sources */,
 				4DDD17EE1D97BB9500294ACC /* AllPostsCell.swift in Sources */,
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
 				962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */,
+				9678CCDB1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift in Sources */,
 				4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */,
 				963574941D90C3F800B8D1A5 /* Category+CoreDataClass.swift in Sources */,
 				966D82001DA208440069270A /* Archive+CoreDataProperties.swift in Sources */,

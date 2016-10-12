@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--积分账户-->
+        <scene sceneID="XIk-vA-f7m">
+            <objects>
+                <viewController id="lGw-ST-sOn" customClass="RewardAccountWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="box-Q3-Fb9"/>
+                        <viewControllerLayoutGuide type="bottom" id="CT8-un-vLF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PKi-xc-KTD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zh-uU-egE">
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sxH-rq-Gbe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="PGV-ZL-xIn"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6Zh-uU-egE" firstAttribute="top" secondItem="PKi-xc-KTD" secondAttribute="top" id="34t-AN-Iu8"/>
+                            <constraint firstItem="CT8-un-vLF" firstAttribute="top" secondItem="6Zh-uU-egE" secondAttribute="bottom" id="PUs-Ne-MxL"/>
+                            <constraint firstAttribute="trailing" secondItem="sxH-rq-Gbe" secondAttribute="trailing" id="YNm-wX-aMS"/>
+                            <constraint firstItem="sxH-rq-Gbe" firstAttribute="top" secondItem="PKi-xc-KTD" secondAttribute="top" constant="65" id="bSw-hs-M3h"/>
+                            <constraint firstItem="sxH-rq-Gbe" firstAttribute="leading" secondItem="PKi-xc-KTD" secondAttribute="leading" id="k20-R1-gh4"/>
+                            <constraint firstAttribute="trailing" secondItem="6Zh-uU-egE" secondAttribute="trailing" id="s7g-cr-XeL"/>
+                            <constraint firstItem="6Zh-uU-egE" firstAttribute="leading" secondItem="PKi-xc-KTD" secondAttribute="leading" id="tnO-Sm-SBe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="积分账户" id="eRl-a9-RTE"/>
+                    <connections>
+                        <outlet property="progressView" destination="sxH-rq-Gbe" id="nEE-Pg-O2g"/>
+                        <outlet property="webView" destination="6Zh-uU-egE" id="see-ig-ykB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vx1-Y3-Zvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6384.8000000000002" y="97.601199400299862"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YLK-GV-j1m">
+            <objects>
+                <navigationController storyboardIdentifier="RewardAccountNavCtrl" automaticallyAdjustsScrollViewInsets="NO" id="umq-82-B8I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6rf-Kh-V4g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lGw-ST-sOn" kind="relationship" relationship="rootViewController" id="asH-4w-BEO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1b-w0-EUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5445.6000000000004" y="97.601199400299862"/>
+        </scene>
+    </scenes>
+</document>

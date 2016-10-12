@@ -9,6 +9,8 @@
 import UIKit
 
 class TestWebViewController: UIViewController, UIWebViewDelegate {
+    
+    var post:Post?
 
     var urlString:String?
     var titleString:String?
@@ -37,6 +39,7 @@ class TestWebViewController: UIViewController, UIWebViewDelegate {
         //        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
         webView.loadRequest(request as NSURLRequest)
         webView.delegate = self
+        post = CoreDataOperation.buildRandomPost(0, title: "全真模考", excerpt: "全真模考", date: NSDate(), link: urlString!)
     }
     
     
@@ -79,5 +82,10 @@ class TestWebViewController: UIViewController, UIWebViewDelegate {
         }
     }
 
+    @IBAction func activityButtonClick(sender: AnyObject) {
+        if post != nil {
+            self.rightTopBarButtonItemAction(post!)
+        }
+    }
 
 }

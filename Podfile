@@ -12,5 +12,5 @@ pod 'Alamofire', '~> 3.5’
 
 pod 'AlamofireNetworkActivityIndicator'
 pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :branch => 'swift2.3'
-
+pod 'EAIntroView', '~> 2.9.0'
 end

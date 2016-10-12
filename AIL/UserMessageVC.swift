@@ -24,23 +24,30 @@ class UserMessageVC: UITableViewController {
     //var refresher: UIRefreshControl!
     
     
-    let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2.0 - 50,UIScreen.mainScreen().bounds.height/2.0 - 50,100.0,100.0), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
+//    let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2.0 - 50,UIScreen.mainScreen().bounds.height/2.0 - 50,100.0,100.0), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
+//    let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(0,0,UIScreen.mainScreen().bounds.width,UIScreen.mainScreen().bounds.height), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
+//    let activityIndicatorView = CustomizeActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setNavigationBarItem()
         
-       self.tableView.addSubview(activityIndicatorView)
+//       self.tableView.addSubview(activityIndicatorView)
         
-        activityIndicatorView.startAnimating()
+        
+        //activityIndicatorView.backgroundColor = UIColor.whiteColor()
+        
+//        activityIndicatorView.startAnimating()
+        startAnimating(CGSizeMake(50, 50), message: "Loading", type: .BallPulse, color: UIColor.tintColor(), padding: 0)
         client.requestAllMessages { (messages) in
             
             print ("abc: \(messages.count)")
             self.userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
           
             self.tableView.reloadData()
-            
-            self.activityIndicatorView.stopAnimating()
+            self.stopAnimating()
+//            self.activityIndicatorView.stopAnimating()
         }
     
         self.refreshControl = UIRefreshControl()

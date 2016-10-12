@@ -75,7 +75,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     // Web View Finish Loading Page
     func webViewDidFinishLoad(webView: UIWebView) {
-        applyCSSToUIWebView(webView)
+        //applyCSSToUIWebView(webView)
         loading = false
     }
     
@@ -94,6 +94,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
             timer?.invalidate()
         }
     }
+    
     
     
     
