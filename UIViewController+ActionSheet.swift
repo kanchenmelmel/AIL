@@ -50,7 +50,8 @@ extension UIViewController {
         items.append(("分享",{() -> Void in
             let url = NSURL(string: post.link!)
             print("Test3")
-            let activityViewController = UIActivityViewController(activityItems: [post.title!,url!], applicationActivities: nil)
+            let icon = UIImage(named: "WechatShare")
+            let activityViewController = UIActivityViewController(activityItems: [post.title!,url!,icon!], applicationActivities: nil)
             self.navigationController?.presentViewController(activityViewController, animated: true, completion: {
                 
             })
