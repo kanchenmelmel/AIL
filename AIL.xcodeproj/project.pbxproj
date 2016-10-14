@@ -81,8 +81,11 @@
 		96A691D31D98F90200D29995 /* BeiKaoGongLue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A691D21D98F90200D29995 /* BeiKaoGongLue.storyboard */; };
 		96A691D61D98FF5500D29995 /* BeiKaoGongLueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A691D51D98FF5500D29995 /* BeiKaoGongLueTableViewController.swift */; };
 		96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ADCDA21D925AC600ACBC05 /* CustomizedSearchBar.swift */; };
+		96E63CBD1DAF07E700EB11C7 /* MutableCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E63CBC1DAF07E700EB11C7 /* MutableCollectionExtension.swift */; };
+		96E63CBF1DAF099100EB11C7 /* SelTestDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E63CBE1DAF099100EB11C7 /* SelTestDBTableViewController.swift */; };
 		96E8C7741D9A307100843C89 /* CourseTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8C7731D9A307100843C89 /* CourseTrainingViewController.swift */; };
 		96E8C7761D9A311000843C89 /* CustomizedSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8C7751D9A311000843C89 /* CustomizedSegmentedControl.swift */; };
+		96EB3F651DAF560900A96460 /* SelfTestDBHomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB3F641DAF560900A96460 /* SelfTestDBHomeButton.swift */; };
 		96F188161DA3571300987E98 /* AboutAILViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F188151DA3571300987E98 /* AboutAILViewController.swift */; };
 		C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2662452685324A770F0164 /* Pods_AIL.framework */; };
 /* End PBXBuildFile section */
@@ -165,8 +168,11 @@
 		96A691D21D98F90200D29995 /* BeiKaoGongLue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BeiKaoGongLue.storyboard; sourceTree = "<group>"; };
 		96A691D51D98FF5500D29995 /* BeiKaoGongLueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeiKaoGongLueTableViewController.swift; sourceTree = "<group>"; };
 		96ADCDA21D925AC600ACBC05 /* CustomizedSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedSearchBar.swift; sourceTree = "<group>"; };
+		96E63CBC1DAF07E700EB11C7 /* MutableCollectionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableCollectionExtension.swift; sourceTree = "<group>"; };
+		96E63CBE1DAF099100EB11C7 /* SelTestDBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelTestDBTableViewController.swift; sourceTree = "<group>"; };
 		96E8C7731D9A307100843C89 /* CourseTrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTrainingViewController.swift; sourceTree = "<group>"; };
 		96E8C7751D9A311000843C89 /* CustomizedSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedSegmentedControl.swift; sourceTree = "<group>"; };
+		96EB3F641DAF560900A96460 /* SelfTestDBHomeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfTestDBHomeButton.swift; sourceTree = "<group>"; };
 		96F188151DA3571300987E98 /* AboutAILViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAILViewController.swift; sourceTree = "<group>"; };
 		A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIL/Pods-AIL.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2662452685324A770F0164 /* Pods_AIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +218,7 @@
 		4DAEAFA81D7A486F00842C4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96EB3F631DAF54A400A96460 /* SelfTestDB */,
 				96F188141DA356F900987E98 /* AboutAIL */,
 				4DDD18051D9ACBD800294ACC /* UserMessage */,
 				4DDD17EB1D9771DB00294ACC /* AllPosts */,
@@ -317,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				961E89951DAE0F880084B5DF /* SelfTestDBViewController.swift */,
+				96E63CBE1DAF099100EB11C7 /* SelTestDBTableViewController.swift */,
 			);
 			name = SeflTestDB;
 			sourceTree = "<group>";
@@ -470,6 +478,7 @@
 				964C52B41D7FC563006E1E9D /* DateFormatter.swift */,
 				9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */,
 				4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */,
+				96E63CBC1DAF07E700EB11C7 /* MutableCollectionExtension.swift */,
 			);
 			name = Uitility;
 			sourceTree = "<group>";
@@ -502,6 +511,14 @@
 				96A691D51D98FF5500D29995 /* BeiKaoGongLueTableViewController.swift */,
 			);
 			name = BeiKaoGongLue;
+			sourceTree = "<group>";
+		};
+		96EB3F631DAF54A400A96460 /* SelfTestDB */ = {
+			isa = PBXGroup;
+			children = (
+				96EB3F641DAF560900A96460 /* SelfTestDBHomeButton.swift */,
+			);
+			name = SelfTestDB;
 			sourceTree = "<group>";
 		};
 		96F188141DA356F900987E98 /* AboutAIL */ = {
@@ -732,10 +749,12 @@
 				966D82001DA208440069270A /* Archive+CoreDataProperties.swift in Sources */,
 				4DDD18031D9ACA0000294ACC /* Message+CoreDataClass.swift in Sources */,
 				4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */,
+				96E63CBD1DAF07E700EB11C7 /* MutableCollectionExtension.swift in Sources */,
 				96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */,
 				967978711DA682BE0095EB91 /* BookProcessViewController.swift in Sources */,
 				3DE209321D8FA015001BCEA4 /* ContactUsVC.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
+				96E63CBF1DAF099100EB11C7 /* SelTestDBTableViewController.swift in Sources */,
 				9679786F1DA6727C0095EB91 /* TestWebViewController.swift in Sources */,
 				96A173A51DA0E0290002F360 /* PostCatagoryRecognizer.swift in Sources */,
 				964C52B51D7FC563006E1E9D /* DateFormatter.swift in Sources */,
@@ -755,6 +774,7 @@
 				4DDD17F41D97BDEF00294ACC /* AllPostsVC.swift in Sources */,
 				965693431D939BA800FAC04B /* ResourceWebViewController.swift in Sources */,
 				961E89961DAE0F880084B5DF /* SelfTestDBViewController.swift in Sources */,
+				96EB3F651DAF560900A96460 /* SelfTestDBHomeButton.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
 				4DDD18041D9ACA0000294ACC /* Message+CoreDataProperties.swift in Sources */,
 				962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */,

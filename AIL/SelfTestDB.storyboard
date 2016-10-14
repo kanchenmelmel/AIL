@@ -9,7 +9,7 @@
         <!--Self TestDB View Controller-->
         <scene sceneID="Ld7-Ir-Do1">
             <objects>
-                <viewController storyboardIdentifier="SelfTestDB" id="bzd-6C-ZAz" customClass="SelfTestDBViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelfTestDBViewController" id="bzd-6C-ZAz" customClass="SelfTestDBViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Oee-vv-csQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Hff-Ht-OXq"/>
@@ -19,90 +19,116 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Pfw-Ei-xkN">
-                                <frame key="frameInset" minX="38" minY="148" width="92" height="120"/>
+                                <frame key="frameInset" minX="38" minY="148" width="92" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tbh-pH-cpp">
-                                        <frame key="frameInset" width="92" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11X-DA-Gqv" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
-                                                <frame key="frameInset" width="46" height="88"/>
-                                                <state key="normal" title="Button"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Test"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-x4-MSR" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
-                                                <frame key="frameInset" minX="46" width="46" height="88"/>
-                                                <state key="normal" title="Button"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Test"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                        </subviews>
+                                        <frame key="frameInset" width="50" height="50"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-JJ-snz">
-                                        <frame key="frameInset" minY="30" width="92" height="30"/>
+                                        <frame key="frameInset" minY="50" width="92" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-8I-8Mb" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-8I-8Mb" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
                                                 <frame key="frameInset" width="46" height="88"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Test"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="3"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button3ClickWithSender:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="gh7-Qh-yf2"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xf-jB-0nA" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xf-jB-0nA" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
                                                 <frame key="frameInset" minX="46" width="46" height="88"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Test"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="4"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button4ClickWithSender:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="bQE-gK-f3j"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-m1-Z9J">
-                                        <frame key="frameInset" minY="60" width="92" height="30"/>
+                                        <frame key="frameInset" minY="80" width="92" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwu-I9-d5u" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwu-I9-d5u" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
                                                 <frame key="frameInset" width="46" height="88"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Test"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="5"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button5ClickWithSender:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="fNH-Ai-XYP"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-GT-8M7" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-GT-8M7" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
                                                 <frame key="frameInset" minX="46" width="46" height="88"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Test"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="6"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button6ClickWithSender:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="kSb-t4-2HL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-vj-z9u" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
-                                        <frame key="frameInset" minY="90" width="46" height="88"/>
-                                        <state key="normal" title="Button"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Test"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-vj-z9u" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
+                                <frame key="frameInset" minX="95" minY="536" width="46" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="7"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11X-DA-Gqv" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                <frame key="frameInset" minX="16" minY="52" width="87" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button1Click:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="0dg-EQ-QGe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-x4-MSR" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                <frame key="frameInset" minX="174" minY="52" width="161" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="2"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="2"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImg" value="peixun"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Click:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="aSB-K2-cT5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="WOc-wO-5mY" kind="show" identifier="showTestList" id="SQc-xd-uMt"/>
+                        <outlet property="button1" destination="11X-DA-Gqv" id="vyP-ZJ-RI3"/>
+                        <outlet property="button2" destination="hUH-x4-MSR" id="AdT-ch-JyT"/>
+                        <outlet property="button3" destination="Fhh-8I-8Mb" id="Lmk-n8-Wng"/>
+                        <outlet property="button4" destination="8xf-jB-0nA" id="xem-To-tVj"/>
+                        <outlet property="button5" destination="Uwu-I9-d5u" id="9Gz-9A-VdW"/>
+                        <outlet property="button6" destination="Ew7-GT-8M7" id="E6m-pY-KnH"/>
+                        <segue destination="WOc-wO-5mY" kind="show" identifier="showTestListSegue" id="SQc-xd-uMt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFJ-uO-aq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2414" y="244"/>
+            <point key="canvasLocation" x="-2415.1999999999998" y="243.32833583208398"/>
         </scene>
         <!--PTE素材库-->
         <scene sceneID="ZeG-Zj-rjr">
             <objects>
-                <tableViewController storyboardIdentifier="SubjectResourcesTableVC" id="WOc-wO-5mY" customClass="SubjectResourcesTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SubjectResourcesTableVC" id="WOc-wO-5mY" customClass="SelTestDBTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" id="HjJ-hZ-AHL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +138,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x1u-Ah-Jfm" id="pbJ-ZG-PiU">
-                                    <frame key="frameInset" width="375" height="110"/>
+                                    <frame key="frameInset" width="375" height="111"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDE-Rh-EuR">
@@ -237,5 +263,6 @@
     <resources>
         <image name="ActivityVCButton" width="19" height="4"/>
         <image name="Group_shot_1" width="600" height="500"/>
+        <image name="peixun" width="40" height="40"/>
     </resources>
 </document>
