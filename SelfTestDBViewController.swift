@@ -32,6 +32,7 @@ class SelfTestDBViewController: UIViewController {
     
     @IBOutlet weak var button6: SelfTestDBHomeButton!
     
+    @IBOutlet weak var randomTestButton: UIButton!
     
     var buttonItems:[(ButtonType,Int)]?
 
@@ -39,7 +40,7 @@ class SelfTestDBViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        randomTestButton.layer.cornerRadius = 5.0
         setUpButtons()
         for item in buttonItems! {
             print(item.0)
@@ -53,26 +54,32 @@ class SelfTestDBViewController: UIViewController {
     
 
     @IBAction func button1Click(sender: AnyObject) {
-        buttonItems![0].1 += 1
-        self.countButtonClick(buttonItems![0].0.rawValue, value: buttonItems![0].1)
-        self.performSegueWithIdentifier("showTestListSegue", sender: self)
+        buttonClickActionForButtonItem(0)
     }
 
     @IBAction func button2Click(sender: AnyObject) {
-        buttonItems![1].1 += 1
-        self.countButtonClick(buttonItems![1].0.rawValue, value: buttonItems![1].1)
-        print(buttonItems![1].1)
+        buttonClickActionForButtonItem(1)
     }
 
 
     @IBAction func button3Click(sender: AnyObject) {
+        buttonClickActionForButtonItem(2)
     }
+    
+    
     @IBAction func button4Click(sender: AnyObject) {
+        buttonClickActionForButtonItem(3)
     }
+
+
     @IBAction func button5Click(sender: AnyObject) {
+        buttonClickActionForButtonItem(4)
     }
+    
     @IBAction func button6Click(sender: AnyObject) {
+        buttonClickActionForButtonItem(5)
     }
+    
     
     /*
     // MARK: - Navigation
@@ -84,6 +91,12 @@ class SelfTestDBViewController: UIViewController {
     }
     */
     
+    func buttonClickActionForButtonItem(itemIndex:Int) {
+        buttonItems![itemIndex].1 += 1
+        self.countButtonClick(buttonItems![itemIndex].0.rawValue, value: buttonItems![itemIndex].1)
+        self.performSegueWithIdentifier("showTestListSegue", sender: self)
+    }
+    
     func setUpButtons(){
         
         
@@ -94,15 +107,15 @@ class SelfTestDBViewController: UIViewController {
         button1.labelText = buttonItems![0].0.rawValue
         button1.buttonImg = UIImage(named:buttonItems![0].0.rawValue)
         button2.labelText = buttonItems![1].0.rawValue
-        button1.buttonImg = UIImage(named:buttonItems![1].0.rawValue)
+        button2.buttonImg = UIImage(named:buttonItems![1].0.rawValue)
         button3.labelText = buttonItems![2].0.rawValue
-        button1.buttonImg = UIImage(named:buttonItems![2].0.rawValue)
+        button3.buttonImg = UIImage(named:buttonItems![2].0.rawValue)
         button4.labelText = buttonItems![3].0.rawValue
-        button1.buttonImg = UIImage(named:buttonItems![3].0.rawValue)
+        button4.buttonImg = UIImage(named:buttonItems![3].0.rawValue)
         button5.labelText = buttonItems![4].0.rawValue
-        button1.buttonImg = UIImage(named:buttonItems![4].0.rawValue)
+        button5.buttonImg = UIImage(named:buttonItems![4].0.rawValue)
         button6.labelText = buttonItems![5].0.rawValue
-        button1.buttonImg = UIImage(named:buttonItems![5].0.rawValue)
+        button6.buttonImg = UIImage(named:buttonItems![5].0.rawValue)
         
         
     }
