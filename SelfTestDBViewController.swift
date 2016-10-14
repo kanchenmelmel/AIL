@@ -34,10 +34,14 @@ class SelfTestDBViewController: UIViewController {
     
     @IBOutlet weak var randomTestButton: UIButton!
     
+    var selectedButtonItemIndex = 0
+    
     var buttonItems:[(ButtonType,Int)]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "题型自测"
 
         // Do any additional setup after loading the view.
         randomTestButton.layer.cornerRadius = 5.0
@@ -92,6 +96,7 @@ class SelfTestDBViewController: UIViewController {
     */
     
     func buttonClickActionForButtonItem(itemIndex:Int) {
+        self.selectedButtonItemIndex = itemIndex
         buttonItems![itemIndex].1 += 1
         self.countButtonClick(buttonItems![itemIndex].0.rawValue, value: buttonItems![itemIndex].1)
         self.performSegueWithIdentifier("showTestListSegue", sender: self)
@@ -146,5 +151,27 @@ class SelfTestDBViewController: UIViewController {
 //    func sortButtonItemsArray(oldItems:[(ButtonType,Int)]) -> [(ButtonType,Int)]{
 //        return oldItems.sortInPlace({$0.1>$1.1})
 //    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showTestListSegue" {
+            let destnationVC = segue.destinationViewController as! SelTestDBTableViewController
+            switch selectedButtonItemIndex {
+            case 0: destnationVC.categoryId = 129
+            case 1: destnationVC.categoryId = 196
+            case 2: destnationVC.categoryId = 68
+            case 3: destnationVC.categoryId = 200
+            case 4: destnationVC.categoryId = 132
+            case 5: destnationVC.categoryId = 201
+            default:break
+            }
+            destnationVC.navigationItem.title = buttonItems![selectedButtonItemIndex].0.rawValue
+            
+        }
+        if segue.identifier == "radomTestSegue" {
+            let destinationVC = segue.destinationViewController as! SelTestDBTableViewController
+            destinationVC.categoryId = 166
+            destinationVC.navigationItem.title = "随机出题"
+        }
+    }
 
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class SelTestDBTableViewController: UITableViewController {
 
+    
+    var categoryId = 0
     var resourcesPosts = [Post]()
     
     var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
@@ -32,7 +34,7 @@ class SelTestDBTableViewController: UITableViewController {
         //        self.tableView.addSubview(activityIndicatorView)
         //        activityIndicatorView.startAnimating()
         self.startAnimating()
-        client.requestLatestPostsByCategories(159) { (posts) in
+        client.requestLatestPostsByCategories(categoryId) { (posts) in
             
             self.resourcesPosts = posts.shuffle()
             print(posts.count)
@@ -133,7 +135,8 @@ class SelTestDBTableViewController: UITableViewController {
     
     func setUpTableViewImageCoordinator(){
         for post in resourcesPosts {
-            let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
+            let featuredImageUrlString = post.featuredImageUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
+            let imageRecord = ImageRecord(name: "", url: NSURL(string: featuredImageUrlString!)!)
             self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
         }
     }
@@ -187,6 +190,7 @@ class SelTestDBTableViewController: UITableViewController {
             destnatinationVC.post = resourcesPosts[index!.row]
             destnatinationVC.urlString = resourcesPosts[index!.row].link!
             destnatinationVC.titleString = resourcesPosts[index!.row].title!
+            destnatinationVC.navigationItem.title = self.navigationItem.title
         }
     }
 }

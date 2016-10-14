@@ -31,6 +31,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="7"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="WOc-wO-5mY" kind="show" identifier="radomTestSegue" id="fDT-54-phq"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kMh-CM-laD">
                                 <frame key="frameInset" minX="11" minY="190" width="353" height="460"/>
@@ -177,7 +180,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x1u-Ah-Jfm" id="pbJ-ZG-PiU">
-                                    <frame key="frameInset" width="375" height="110.5"/>
+                                    <frame key="frameInset" width="375" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDE-Rh-EuR">
@@ -306,4 +309,7 @@
         <image name="SuiJi" width="185" height="46"/>
         <image name="peixun" width="40" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fDT-54-phq"/>
+    </inferredMetricsTieBreakers>
 </document>
