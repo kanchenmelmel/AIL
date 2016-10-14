@@ -58,7 +58,7 @@ class SelfTestDBHomeButton: UIButton {
     
     func setUpButton(){
         
-        self.frame.size.height = 87.5
+//        self.frame.size.height = 87.5
         buttonImgView.frame.size = CGSizeMake(46, 50)
         buttonImgView.frame.origin = CGPointMake(self.frame.width / 2.0 - buttonImgView.frame.width / 2.0, (self.frame.height-39)/2.0)
         buttonImgView.contentMode = .Center

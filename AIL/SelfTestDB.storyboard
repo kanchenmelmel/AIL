@@ -18,18 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Pfw-Ei-xkN">
-                                <frame key="frameInset" minX="38" minY="148" width="92" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NFc-CJ-0fE">
+                                <frame key="frameInset" minY="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-vj-z9u">
+                                <frame key="frameInset" minX="16" minY="82" width="343" height="89"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="X25-w3-8IP"/>
+                                </constraints>
+                                <state key="normal" image="SuiJi"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="7"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kMh-CM-laD">
+                                <frame key="frameInset" minX="11" minY="190" width="353" height="460"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tbh-pH-cpp">
-                                        <frame key="frameInset" width="50" height="50"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-JJ-snz">
-                                        <frame key="frameInset" minY="50" width="92" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="y76-bL-Xio">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-8I-8Mb" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
-                                                <frame key="frameInset" width="46" height="88"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11X-DA-Gqv" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="1"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button1Click:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="0dg-EQ-QGe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-x4-MSR" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="2"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="2"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImg" value="peixun"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="button2Click:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="aSB-K2-cT5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hUH-x4-MSR" secondAttribute="bottom" id="Ipy-75-r1r"/>
+                                            <constraint firstAttribute="trailing" secondItem="hUH-x4-MSR" secondAttribute="trailing" id="KWN-Br-hFd"/>
+                                            <constraint firstItem="11X-DA-Gqv" firstAttribute="leading" secondItem="y76-bL-Xio" secondAttribute="leading" id="SnV-Ko-9tR"/>
+                                            <constraint firstItem="hUH-x4-MSR" firstAttribute="top" secondItem="y76-bL-Xio" secondAttribute="top" id="bzO-j9-2eq"/>
+                                            <constraint firstAttribute="bottom" secondItem="11X-DA-Gqv" secondAttribute="bottom" id="g5t-wu-5jU"/>
+                                            <constraint firstItem="11X-DA-Gqv" firstAttribute="top" secondItem="y76-bL-Xio" secondAttribute="top" id="ocG-ci-CIg"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-JJ-snz">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-8I-8Mb" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="3"/>
@@ -38,8 +80,8 @@
                                                     <action selector="button3ClickWithSender:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="gh7-Qh-yf2"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xf-jB-0nA" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
-                                                <frame key="frameInset" minX="46" width="46" height="88"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xf-jB-0nA" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="4"/>
@@ -49,12 +91,19 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8xf-jB-0nA" secondAttribute="trailing" id="7hi-vy-4Q7"/>
+                                            <constraint firstItem="Fhh-8I-8Mb" firstAttribute="leading" secondItem="Yaf-JJ-snz" secondAttribute="leading" id="Dhd-ed-T53"/>
+                                            <constraint firstAttribute="bottom" secondItem="8xf-jB-0nA" secondAttribute="bottom" id="ZAH-Wj-Wrg"/>
+                                            <constraint firstItem="8xf-jB-0nA" firstAttribute="top" secondItem="Yaf-JJ-snz" secondAttribute="top" id="agL-4r-4Tr"/>
+                                            <constraint firstItem="Fhh-8I-8Mb" firstAttribute="top" secondItem="Yaf-JJ-snz" secondAttribute="top" id="fCQ-vI-GzY"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fhh-8I-8Mb" secondAttribute="bottom" id="s7G-As-hyg"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-m1-Z9J">
-                                        <frame key="frameInset" minY="80" width="92" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-m1-Z9J">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwu-I9-d5u" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
-                                                <frame key="frameInset" width="46" height="88"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwu-I9-d5u" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="5"/>
@@ -63,8 +112,8 @@
                                                     <action selector="button5ClickWithSender:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="fNH-Ai-XYP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-GT-8M7" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
-                                                <frame key="frameInset" minX="46" width="46" height="88"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-GT-8M7" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="6"/>
@@ -74,42 +123,31 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Ew7-GT-8M7" secondAttribute="bottom" id="3qs-gN-c0L"/>
+                                            <constraint firstItem="Uwu-I9-d5u" firstAttribute="top" secondItem="4cd-m1-Z9J" secondAttribute="top" id="4Vt-4N-Ifr"/>
+                                            <constraint firstAttribute="bottom" secondItem="Uwu-I9-d5u" secondAttribute="bottom" id="MF0-GD-cBv"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ew7-GT-8M7" secondAttribute="trailing" id="VL7-gg-LnP"/>
+                                            <constraint firstItem="Uwu-I9-d5u" firstAttribute="leading" secondItem="4cd-m1-Z9J" secondAttribute="leading" id="Vku-mB-CeC"/>
+                                            <constraint firstItem="Ew7-GT-8M7" firstAttribute="top" secondItem="4cd-m1-Z9J" secondAttribute="top" id="oMC-JI-Nxe"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-vj-z9u" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
-                                <frame key="frameInset" minX="95" minY="536" width="46" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="7"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11X-DA-Gqv" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
-                                <frame key="frameInset" minX="16" minY="52" width="87" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="1"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="1"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="button1Click:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="0dg-EQ-QGe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-x4-MSR" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
-                                <frame key="frameInset" minX="174" minY="52" width="161" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="2"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="2"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImg" value="peixun"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="button2Click:" destination="bzd-6C-ZAz" eventType="touchUpInside" id="aSB-K2-cT5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hff-Ht-OXq" firstAttribute="top" secondItem="kMh-CM-laD" secondAttribute="bottom" constant="39" id="EcD-3f-ba0"/>
+                            <constraint firstItem="Sz0-vj-z9u" firstAttribute="leading" secondItem="cCT-6Y-9kd" secondAttribute="leading" constant="11" id="Kso-83-PCf"/>
+                            <constraint firstItem="NFc-CJ-0fE" firstAttribute="leading" secondItem="cCT-6Y-9kd" secondAttribute="leading" id="N6E-0D-5Vv"/>
+                            <constraint firstItem="kMh-CM-laD" firstAttribute="leading" secondItem="cCT-6Y-9kd" secondAttribute="leading" constant="11" id="W9k-Lu-1jw"/>
+                            <constraint firstItem="kMh-CM-laD" firstAttribute="top" secondItem="Sz0-vj-z9u" secondAttribute="bottom" constant="15" id="WCF-Vd-4f6"/>
+                            <constraint firstItem="Sz0-vj-z9u" firstAttribute="top" secondItem="Oee-vv-csQ" secondAttribute="bottom" constant="44" id="Wox-84-AWV"/>
+                            <constraint firstItem="Hff-Ht-OXq" firstAttribute="top" secondItem="NFc-CJ-0fE" secondAttribute="bottom" id="gP5-6S-YtK"/>
+                            <constraint firstAttribute="trailing" secondItem="Sz0-vj-z9u" secondAttribute="trailing" constant="11" id="q8e-mi-KWD"/>
+                            <constraint firstAttribute="trailing" secondItem="kMh-CM-laD" secondAttribute="trailing" constant="11" id="txP-T0-PqD"/>
+                            <constraint firstAttribute="trailing" secondItem="NFc-CJ-0fE" secondAttribute="trailing" id="uhw-jb-tro"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="button1" destination="11X-DA-Gqv" id="vyP-ZJ-RI3"/>
@@ -138,7 +176,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x1u-Ah-Jfm" id="pbJ-ZG-PiU">
-                                    <frame key="frameInset" width="375" height="111"/>
+                                    <frame key="frameInset" width="375" height="110.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDE-Rh-EuR">
@@ -262,7 +300,9 @@
     </scenes>
     <resources>
         <image name="ActivityVCButton" width="19" height="4"/>
+        <image name="Background" width="183" height="667"/>
         <image name="Group_shot_1" width="600" height="500"/>
+        <image name="SuiJi" width="185" height="46"/>
         <image name="peixun" width="40" height="40"/>
     </resources>
 </document>
