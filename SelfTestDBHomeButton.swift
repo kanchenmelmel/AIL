@@ -60,19 +60,16 @@ class SelfTestDBHomeButton: UIButton {
         
 //        self.frame.size.height = 87.5
         buttonImgView.frame.size = CGSizeMake(46, 50)
-        buttonImgView.frame.origin = CGPointMake(self.frame.width / 2.0 - buttonImgView.frame.width / 2.0, (self.frame.height-39)/2.0)
+        buttonImgView.frame.origin = CGPointMake(self.frame.width / 2.0 - buttonImgView.frame.width / 2.0, (self.frame.height-78)/2.0)
         buttonImgView.contentMode = .Center
         
         buttonLabel.frame.size = CGSizeMake(80, 13)
-        buttonLabel.frame.origin = CGPointMake(self.frame.width / 2.0 - buttonLabel.frame.width / 2.0, (self.frame.height-39)/2.0 + 65)
+        buttonLabel.frame.origin = CGPointMake(self.frame.width / 2.0 - buttonLabel.frame.width / 2.0, (self.frame.height-78)/2.0 + 65)
         buttonLabel.font = UIFont.systemFontOfSize(13.0)
+        buttonLabel.textAlignment = .Center
+        self.layer.cornerRadius = 5.0
         
-        //        stackView.addArrangedSubview(buttonImgView)
-        //        stackView.addArrangedSubview(buttonLabel)
-        //
-        //        stackView.alignment = .Center
-        //        stackView.distribution = .EqualSpacing
-        //        stackView.axis = .Vertical
+        
         
         
         

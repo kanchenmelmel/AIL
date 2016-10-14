@@ -41,6 +41,9 @@ class SelfTestDBViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         setUpButtons()
+        for item in buttonItems! {
+            print(item.0)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,10 +94,15 @@ class SelfTestDBViewController: UIViewController {
         button1.labelText = buttonItems![0].0.rawValue
         button1.buttonImg = UIImage(named:buttonItems![0].0.rawValue)
         button2.labelText = buttonItems![1].0.rawValue
+        button1.buttonImg = UIImage(named:buttonItems![1].0.rawValue)
         button3.labelText = buttonItems![2].0.rawValue
+        button1.buttonImg = UIImage(named:buttonItems![2].0.rawValue)
         button4.labelText = buttonItems![3].0.rawValue
+        button1.buttonImg = UIImage(named:buttonItems![3].0.rawValue)
         button5.labelText = buttonItems![4].0.rawValue
+        button1.buttonImg = UIImage(named:buttonItems![4].0.rawValue)
         button6.labelText = buttonItems![5].0.rawValue
+        button1.buttonImg = UIImage(named:buttonItems![5].0.rawValue)
         
         
     }
@@ -104,12 +112,12 @@ class SelfTestDBViewController: UIViewController {
         var retirvedButtonItems = [(ButtonType,Int)]()
         
         
-        retirvedButtonItems.append((.GuiNaZongJie,getUserDefaultsValueForKey("GuiNaZongJie")))
-        retirvedButtonItems.append((.YueDuPaiXu,getUserDefaultsValueForKey("YueDuPaiXu")))
-        retirvedButtonItems.append((.XieZuoGaoFen,getUserDefaultsValueForKey("XieZuoGaoFen")))
-        retirvedButtonItems.append((.DuanLuoLangDu,getUserDefaultsValueForKey("DuanLuoLangDu")))
-        retirvedButtonItems.append((.TuPianMiaoShu,getUserDefaultsValueForKey("TuPianMiaoShu")))
-        retirvedButtonItems.append((.DuanWenTi,getUserDefaultsValueForKey("DuanWenTi")))
+        retirvedButtonItems.append((.GuiNaZongJie,getUserDefaultsValueForKey("总结归纳段落")))
+        retirvedButtonItems.append((.YueDuPaiXu,getUserDefaultsValueForKey("阅读排序")))
+        retirvedButtonItems.append((.XieZuoGaoFen,getUserDefaultsValueForKey("写作高分范文")))
+        retirvedButtonItems.append((.DuanLuoLangDu,getUserDefaultsValueForKey("段落朗读")))
+        retirvedButtonItems.append((.TuPianMiaoShu,getUserDefaultsValueForKey("图片描述")))
+        retirvedButtonItems.append((.DuanWenTi,getUserDefaultsValueForKey("短问题回答")))
         return retirvedButtonItems
 
     }
