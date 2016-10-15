@@ -22,6 +22,7 @@
 		4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */; };
 		4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */; };
 		4DCA80701DA3D872000B8841 /* ExamBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA806F1DA3D872000B8841 /* ExamBookingVC.swift */; };
+		4DCA80721DB1C5F2000B8841 /* IntroPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA80711DB1C5F2000B8841 /* IntroPageVC.swift */; };
 		4DDD17E41D8F7DCE00294ACC /* PostRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */; };
 		4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E51D90226900294ACC /* ImageOperation.swift */; };
 		4DDD17E81D90942A00294ACC /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD17E71D90942A00294ACC /* FileDownloader.swift */; };
@@ -100,6 +101,7 @@
 		4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuVC.swift; path = AIL/MenuVC.swift; sourceTree = "<group>"; };
 		4DAEAFAF1D7ACC5A00842C4F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4DCA806F1DA3D872000B8841 /* ExamBookingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamBookingVC.swift; sourceTree = "<group>"; };
+		4DCA80711DB1C5F2000B8841 /* IntroPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPageVC.swift; sourceTree = "<group>"; };
 		4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRetriever.swift; sourceTree = "<group>"; };
 		4DDD17E51D90226900294ACC /* ImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
 		4DDD17E71D90942A00294ACC /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				9683A6771D88E05C00360D98 /* SubjectResources */,
 				9671E5DB1D7E4B7D008250C7 /* SlideMenuController */,
 				963061C61D77E1280079B7C5 /* MainViewController.swift */,
+				4DCA80711DB1C5F2000B8841 /* IntroPageVC.swift */,
 				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
 				3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */,
 				9679786E1DA6727C0095EB91 /* TestWebViewController.swift */,
@@ -733,6 +736,7 @@
 				964096831DA221FC006D63B8 /* ArchiveWebViewController.swift in Sources */,
 				96A1739F1DA0D3660002F360 /* ArchiveVCsTableViewController.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
+				4DCA80721DB1C5F2000B8841 /* IntroPageVC.swift in Sources */,
 				4DDD17F41D97BDEF00294ACC /* AllPostsVC.swift in Sources */,
 				965693431D939BA800FAC04B /* ResourceWebViewController.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
