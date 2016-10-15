@@ -268,10 +268,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //    @IBAction func courseButtonClick(sender: AnyObject) {
     //        alert.showTempAlert(self)
     //    }
-    @IBAction func selfExamButtonPressed(sender: AnyObject) {
-        
-        alert.showTempAlert(self)
-    }
+//    @IBAction func selfExamButtonPressed(sender: AnyObject) {
+//        
+//        alert.showTempAlert(self)
+//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
