@@ -19,11 +19,7 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="VHL-YZ-AmA">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="414" id="qKW-iz-1o3"/>
-                    </constraints>
-                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="VHL-YZ-AmA"/>
             </subviews>
             <color key="backgroundColor" red="0.1019607843" green="0.38823529410000002" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -31,6 +27,7 @@
                 <constraint firstItem="2oB-TY-04Q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ThU-vi-RiW"/>
                 <constraint firstItem="2oB-TY-04Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="198" id="VAy-p6-WsU"/>
                 <constraint firstItem="VHL-YZ-AmA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="aoW-mu-QtJ"/>
+                <constraint firstAttribute="bottom" secondItem="VHL-YZ-AmA" secondAttribute="bottom" id="haw-8u-pPy"/>
                 <constraint firstItem="VHL-YZ-AmA" firstAttribute="top" secondItem="2oB-TY-04Q" secondAttribute="bottom" constant="48" id="jXs-UP-J2L"/>
             </constraints>
             <point key="canvasLocation" x="34.5" y="87.5"/>
