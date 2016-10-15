@@ -121,7 +121,7 @@ public class NVActivityIndicatorPresenter {
         
         let actualSize = activityData.size ?? NVActivityIndicatorView.DEFAULT_BLOCKER_SIZE
         let activityIndicatorView = NVActivityIndicatorView(
-            frame: CGRectMake(0, 0, actualSize.width, actualSize.height),
+            frame: CGRectMake(0, 64, actualSize.width, actualSize.height),
             type: activityData.type,
             color: activityData.color,
             padding: activityData.padding)
