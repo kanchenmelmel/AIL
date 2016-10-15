@@ -36,6 +36,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     let alert = Alert()
     
+    var timer:NSTimer? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -300,10 +302,41 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         rootView = self.navigationController?.view
-        let introView = EAIntroView(frame: rootView!.bounds, andPages: [page1,page2,page3])
+        introView = EAIntroView(frame: rootView!.bounds, andPages: [page1,page2,page3])
         
-        introView.showInView(rootView, animateDuration: 0.3)
+        let startButton = page3.pageView.viewWithTag(1) as! UIButton
+        
+        startButton.addTarget(self, action: #selector(buttonClicked), forControlEvents: .TouchUpInside)
+        
+       // UIButton startButton = page3.pageView.viewWithTag(1)
+        introView!.skipButton.alpha = 0
+        introView!.skipButton.enabled = false
+        introView!.tapToNext = true
+        introView!.showInView(rootView, animateDuration: 0.3)
     }
+    
+    func buttonClicked(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(self.introAnimation), userInfo: nil, repeats: true)
+    
+        //self.introView?.removeFromSuperview()
+        
+        
+    }
+    
+    func introAnimation (){
+        if self.introView?.alpha > 0.2 {
+            self.introView?.alpha -= 0.1
+        }else{
+            self.introView?.removeFromSuperview()
+            timer?.invalidate()
+        }
+        
+        
+    }
+    
+    
+    
+    
     
 }
 
