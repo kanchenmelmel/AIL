@@ -19,15 +19,12 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="AZT-1f-zFc">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="gHD-Lg-Oe5"/>
-                    </constraints>
-                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="AZT-1f-zFc"/>
             </subviews>
             <color key="backgroundColor" red="0.10196078431372549" green="0.38823529411764707" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="AZT-1f-zFc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="72" id="IFY-S0-YyD"/>
+                <constraint firstAttribute="bottom" secondItem="AZT-1f-zFc" secondAttribute="bottom" constant="-2" id="Uax-KJ-gTK"/>
                 <constraint firstItem="OO7-qL-HKI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="198" id="Ze4-BO-kFt"/>
                 <constraint firstItem="AZT-1f-zFc" firstAttribute="top" secondItem="OO7-qL-HKI" secondAttribute="bottom" constant="44.5" id="c4W-L2-aaZ"/>
                 <constraint firstAttribute="trailing" secondItem="AZT-1f-zFc" secondAttribute="trailing" constant="66" id="uwP-SB-owP"/>
