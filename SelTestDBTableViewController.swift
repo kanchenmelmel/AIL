@@ -34,7 +34,7 @@ class SelTestDBTableViewController: UITableViewController {
         //        self.tableView.addSubview(activityIndicatorView)
         //        activityIndicatorView.startAnimating()
         self.startAnimating()
-        client.requestLatestPostsByCategories(categoryId) { (posts) in
+        client.requestTestPostsByCategories(categoryId) { (posts) in
             
             self.resourcesPosts = posts.shuffle()
             print(posts.count)

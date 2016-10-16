@@ -134,7 +134,9 @@ class SubjectResourcesTableViewController: UITableViewController {
     
     func setUpTableViewImageCoordinator(){
         for post in resourcesPosts {
-            let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
+            
+            let featuredImageURLString = post.featuredImageUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
+            let imageRecord = ImageRecord(name: "", url: NSURL(string: featuredImageURLString!)!)
             self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
         }
     }
