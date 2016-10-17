@@ -22,7 +22,7 @@ class WordPressClient {
     
     // Request the latest 20 posts
     func requestLatestTwentyPosts(completionHandler: ([Post]) -> Void) {
-        Alamofire.request(.GET, BASE_URL+RESOURSES, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(.GET, BASE_URL+RESOURSES + "?filter[cat]=-166", parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
