@@ -24,3 +24,23 @@ extension UIImageView {
         }
     }
 }
+
+@IBDesignable class RoundedButton:UIButton { }
+
+extension UIButton{
+    
+    @IBInspectable
+    var cornerRadius:CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue != 0
+        }
+    }
+    
+    
+    
+    
+}
