@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */; };
 		3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */; };
-		3DE209321D8FA015001BCEA4 /* ContactUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */; };
 		3DE209341D8FA03C001BCEA4 /* EmailEjecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */; };
 		4D333F8E1DA3B87600D557C2 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D333F8D1DA3B87600D557C2 /* MessageVC.swift */; };
 		4D333F901DA3C67800D557C2 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D333F8F1DA3C67800D557C2 /* Alert.swift */; };
@@ -94,7 +93,6 @@
 /* Begin PBXFileReference section */
 		3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainButtonsContainer.swift; path = AIL/MainButtonsContainer.swift; sourceTree = "<group>"; };
 		3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMainButton.swift; path = AIL/HomeMainButton.swift; sourceTree = "<group>"; };
-		3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactUsVC.swift; path = AIL/ContactUsVC.swift; sourceTree = "<group>"; };
 		3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailEjecter.swift; path = AIL/EmailEjecter.swift; sourceTree = "<group>"; };
 		4D333F8D1DA3B87600D557C2 /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		4D333F8F1DA3C67800D557C2 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 				963061C61D77E1280079B7C5 /* MainViewController.swift */,
 				4DCA80711DB1C5F2000B8841 /* IntroPageVC.swift */,
 				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
-				3DE209311D8FA015001BCEA4 /* ContactUsVC.swift */,
 				9679786E1DA6727C0095EB91 /* TestWebViewController.swift */,
 				967978701DA682BE0095EB91 /* BookProcessViewController.swift */,
 				960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */,
@@ -755,7 +752,6 @@
 				96E63CBD1DAF07E700EB11C7 /* MutableCollectionExtension.swift in Sources */,
 				96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */,
 				967978711DA682BE0095EB91 /* BookProcessViewController.swift in Sources */,
-				3DE209321D8FA015001BCEA4 /* ContactUsVC.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
 				96E63CBF1DAF099100EB11C7 /* SelTestDBTableViewController.swift in Sources */,
 				9679786F1DA6727C0095EB91 /* TestWebViewController.swift in Sources */,
