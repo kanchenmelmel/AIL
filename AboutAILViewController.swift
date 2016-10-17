@@ -14,6 +14,7 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var contactTextField: UITextField!
     @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var sendMessageButton: UIButton!
     
     var showLeftPanelButton = true
@@ -42,12 +43,13 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
         let name = self.nameTextField.text!
         let contact = self.contactTextField.text!
         let message = self.messageTextView.text!
+        let emailAddress = emailTextField.text!
         
         let email = Email(
             from: "Australian Institute of Language 用户反馈 <user-feedback.noreply@ail.vic.edu.au>",
             to: "Australian Institute of Language <patrickgao1990@gmail.com>", // TODO: Replace email address with: pte@ail.vic.edu.au
             title: "用户反馈 (Australian Institute of Language iOS客户端)",
-            content: "姓名：\(name)\n联系方式：\(contact)\n反馈信息：\n\n\(message)"
+            content: "姓名：\(name)\n电话：\(contact)\n电子邮箱：\(emailAddress)\n反馈信息：\n\n\(message)"
         )
         
         (EmailEjector.eject(email: email)) { _ in

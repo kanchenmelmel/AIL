@@ -22,7 +22,7 @@ class WordPressClient {
     
     // Request the latest 20 posts
     func requestLatestTwentyPosts(completionHandler: ([Post]) -> Void) {
-        Alamofire.request(.GET, BASE_URL+RESOURSES, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(.GET, BASE_URL+RESOURSES + "?filter[cat]=-166", parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
@@ -41,7 +41,7 @@ class WordPressClient {
     
     func requestLatestPostsByCategories(categoryId:Int, completionHandler: ([Post]) -> Void) {
         //159
-        let urlArguments = "?categories=\(categoryId)"
+        let urlArguments = "?filter[posts_per_page]=-1&categories=\(categoryId)&filter[cat]=-166"
         print(BASE_URL+RESOURSES+urlArguments)
         Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
@@ -63,8 +63,32 @@ class WordPressClient {
         
     }
     
+    func requestTestPostsByCategories(categoryId:Int, completionHandler: ([Post]) -> Void) {
+        //159
+        let urlArguments = "?filter[posts_per_page]=-1&categories=\(categoryId)"
+        print(BASE_URL+RESOURSES+urlArguments)
+        Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let jsonArray = JSON(value)
+                    // print (jsonArray)
+                    completionHandler(JSONParser.parseJSONDictionaryToPostManagedObject(false, ifInsertIntoManagedContext: false, jsonArray: jsonArray))
+                    
+                    // Save Managed Object Context
+                    //CoreDataOperation.saveManagedObjectContext()
+                    
+                }
+            case .Failure: break
+            }
+        }
+        
+        //        Alamofire.request
+        
+    }
+    
     func requestAllPosts(completionHandler: ([Post]) -> Void) {
-        let urlArguments = "?filter[posts_per_page]=50"
+        let urlArguments = "?filter[posts_per_page]=-1&filter[cat]=-166"
         print(BASE_URL+RESOURSES+urlArguments)
         Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
