@@ -12,12 +12,14 @@ class AllPostsCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+   // @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cellImageView: RoundedImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        self.layer.borderWidth = 2
+//        self.layer.borderColor = UIColor.lightGrayColor().CGColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

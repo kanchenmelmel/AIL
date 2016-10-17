@@ -133,19 +133,27 @@ class AllPostsVC: UITableViewController{
         }
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 271
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AllPostsCell", forIndexPath: indexPath) as! AllPostsCell
         
         // Configure the cell...
+    
         let post = allPosts[indexPath.row]
         cell.titleLabel.text = post.title
         cell.subtitleLabel.text = post.excerpt
+    
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .MediumStyle
-        cell.dateLabel.text = "\(dateFormatter.stringFromDate(post.date!).uppercaseString)" + " "
+
         
-        
+//        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateStyle = .MediumStyle
+//        cell.dateLabel.text = "\(dateFormatter.stringFromDate(post.date!).uppercaseString)" + " "
+//        
+//        
         // Images
       
         if post.featuredImageUrl != nil {
