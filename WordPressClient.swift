@@ -22,7 +22,7 @@ class WordPressClient {
     
     // Request the latest 20 posts
     func requestLatestTwentyPosts(completionHandler: ([Post]) -> Void) {
-        Alamofire.request(.GET, BASE_URL+RESOURSES + "?filter[cat]=-166", parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(.GET, BASE_URL+RESOURSES + "?\(EXCLUDED_CAT_ARGUMENTS)", parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
@@ -41,7 +41,7 @@ class WordPressClient {
     
     func requestLatestPostsByCategories(categoryId:Int, completionHandler: ([Post]) -> Void) {
         //159
-        let urlArguments = "?filter[posts_per_page]=-1&categories=\(categoryId)&filter[cat]=-166"
+        let urlArguments = "?filter[posts_per_page]=-1&categories=\(categoryId)&\(EXCLUDED_CAT_ARGUMENTS)"
         print(BASE_URL+RESOURSES+urlArguments)
         Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {
@@ -88,7 +88,7 @@ class WordPressClient {
     }
     
     func requestAllPosts(completionHandler: ([Post]) -> Void) {
-        let urlArguments = "?filter[posts_per_page]=-1&filter[cat]=-166"
+        let urlArguments = "?filter[posts_per_page]=-1&\(EXCLUDED_CAT_ARGUMENTS)"
         print(BASE_URL+RESOURSES+urlArguments)
         Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
             switch response.result {

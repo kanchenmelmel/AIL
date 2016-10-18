@@ -20,4 +20,6 @@ let DAY_CLASS_URL = "http://ail.vic.edu.au/pte-course-dayclass/"
 let VIP_CLASS_URL = "http://ail.vic.edu.au/pte-course-vip/"
 let QUESTION_CLASS_URL = "http://ail.vic.edu.au/pte-course-question/"
 
+let EXCLUDED_CAT_ARGUMENTS = "filter[cat]=-196,-201,-200"
+
 
