@@ -155,15 +155,28 @@ class SelfTestDBViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTestListSegue" {
             let destnationVC = segue.destinationViewController as! SelTestDBTableViewController
-            switch selectedButtonItemIndex {
-            case 0: destnationVC.categoryId = 129
-            case 1: destnationVC.categoryId = 196
-            case 2: destnationVC.categoryId = 68
-            case 3: destnationVC.categoryId = 200
-            case 4: destnationVC.categoryId = 132
-            case 5: destnationVC.categoryId = 201
-            default:break
+//            switch selectedButtonItemIndex {
+//            case 0: destnationVC.categoryId = 129
+//            case 1: destnationVC.categoryId = 196
+//            case 2: destnationVC.categoryId = 68
+//            case 3: destnationVC.categoryId = 200
+//            case 4: destnationVC.categoryId = 132
+//            case 5: destnationVC.categoryId = 201
+//            default:break
+//            }
+            
+            let buttonType = buttonItems![selectedButtonItemIndex].0
+            switch buttonType {
+            case .GuiNaZongJie: destnationVC.categoryId = 129
+            case .YueDuPaiXu: destnationVC.categoryId = 196
+            case .XieZuoGaoFen: destnationVC.categoryId = 68
+            case .DuanLuoLangDu: destnationVC.categoryId = 200
+            case .TuPianMiaoShu: destnationVC.categoryId = 132
+            case .DuanWenTi: destnationVC.categoryId = 201
             }
+            
+            
+            
             destnationVC.navigationItem.title = buttonItems![selectedButtonItemIndex].0.rawValue
             
         }
@@ -172,6 +185,10 @@ class SelfTestDBViewController: UIViewController {
             destinationVC.categoryId = 166
             destinationVC.navigationItem.title = "随机出题"
         }
+    }
+    
+    func getCateIdByItemIndex (index:Int) {
+        
     }
 
 }
