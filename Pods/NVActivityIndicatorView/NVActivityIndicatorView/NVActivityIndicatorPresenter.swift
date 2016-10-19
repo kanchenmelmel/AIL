@@ -114,19 +114,21 @@ public class NVActivityIndicatorPresenter {
     // MARK: - Helpers
     
     private func showActivity(activityData: ActivityData) {
-        let activityContainer: UIView = UIView(frame: UIScreen.mainScreen().bounds)
-        
+        let blockFrame = CGRectMake(0, 64.0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height-64.0)
+//        let activityContainer: UIView = UIView(frame: UIScreen.mainScreen().bounds)
+        let activityContainer: UIView = UIView(frame: blockFrame)
         activityContainer.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         activityContainer.restorationIdentifier = activityRestorationIdentifier
         
         let actualSize = activityData.size ?? NVActivityIndicatorView.DEFAULT_BLOCKER_SIZE
         let activityIndicatorView = NVActivityIndicatorView(
-            frame: CGRectMake(0, 64, actualSize.width, actualSize.height),
+            frame: CGRectMake(0, 0, actualSize.width, actualSize.height),
             type: activityData.type,
             color: activityData.color,
             padding: activityData.padding)
         
-        activityIndicatorView.center = activityContainer.center
+        activityIndicatorView.center.x = activityContainer.center.x
+        activityIndicatorView.center.y = activityContainer.center.y - 64
         activityIndicatorView.startAnimating()
         activityContainer.addSubview(activityIndicatorView)
         

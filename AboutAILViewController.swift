@@ -19,6 +19,7 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
     
     var showLeftPanelButton = true
     
+    let textFieldPlaceholder = "请写下你的问题......"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,18 +41,20 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
     }
     
     func sendMessageButtonPressed() {
+        if self.checkFieldsEmpty() {
         let name = self.nameTextField.text!
         let contact = self.contactTextField.text!
         let message = self.messageTextView.text!
         let emailAddress = emailTextField.text!
-        
+        let loadingAlert = UIAlertController(title:"发送中……",message:nil,preferredStyle: .Alert)
+        self.presentViewController(loadingAlert, animated: true, completion: nil)
         let email = Email(
             from: "Australian Institute of Language 用户反馈 <user-feedback.noreply@ail.vic.edu.au>",
-            to: "Australian Institute of Language <patrickgao1990@gmail.com>", // TODO: Replace email address with: pte@ail.vic.edu.au
+            to: "Australian Institute of Language <pte@ail.vic.edu.au>", // TODO: Replace email address with: pte@ail.vic.edu.au
             title: "用户反馈 (Australian Institute of Language iOS客户端)",
-            content: "姓名：\(name)\n电话：\(contact)\n电子邮箱：\(emailAddress)\n反馈信息：\n\n\(message)"
+            content: "姓名：\(name)\n电话：\(contact)\n邮箱：\(emailAddress)\n反馈信息：\n\n\(message)"
         )
-        
+        clearTextFields()
         (EmailEjector.eject(email: email)) { _ in
             let alert = UIAlertController(
                 title: "发送成功",
@@ -61,8 +64,11 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
             alert.addAction(UIAlertAction(title: "确认", style: UIAlertActionStyle.Default) { _ in
                 print("done")
                 })
+            loadingAlert.dismissViewControllerAnimated(true, completion: nil)
             self.presentViewController(alert, animated: true, completion: nil)
         }
+        }
+        
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
@@ -78,14 +84,14 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
-        if textView.text == "写下你的问题......" {
+        if textView.text == textFieldPlaceholder {
             textView.text = ""
         }
     }
     
     func textViewDidEndEditing(textView: UITextView) {
         if textView.text == "" {
-            textView.text = "写下你的问题......"
+            textView.text = textFieldPlaceholder
         }
     }
     
@@ -142,5 +148,26 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
             }
 
         }
+    }
+    
+    func clearTextFields() {
+        self.nameTextField.text = ""
+        self.contactTextField.text = ""
+        self.emailTextField.text = ""
+        self.messageTextView.text = textFieldPlaceholder
+    }
+    
+    func checkFieldsEmpty() -> Bool {
+        if self.nameTextField.text == "" || contactTextField.text == "" || emailTextField.text == "" || messageTextView.text == textFieldPlaceholder {
+            let alert = UIAlertController(title: "请输入相应表单信息。", message: nil, preferredStyle: .Alert)
+            let alertAction = UIAlertAction(title: "确定", style: .Default, handler: { (action) in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            })
+            
+            alert.addAction(alertAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+            return false
+        }
+        return true
     }
 }

@@ -39,7 +39,7 @@ class UserMessageVC: UITableViewController {
         //activityIndicatorView.backgroundColor = UIColor.whiteColor()
         
 //        activityIndicatorView.startAnimating()
-        startAnimating(CGSizeMake(50, 50), message: "Loading", type: .BallPulse, color: UIColor.tintColor(), padding: 0)
+        startAnimating()
         client.requestAllMessages { (messages) in
             
             print ("abc: \(messages.count)")
@@ -64,6 +64,11 @@ class UserMessageVC: UITableViewController {
 //        refresher.tintColor = hexStringToUIColor("#00B2EE")
 //        self.tableView.addSubview(refresher)
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        stopAnimating()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

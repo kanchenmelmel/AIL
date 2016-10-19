@@ -84,6 +84,10 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
         startAnimating()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        stopAnimating()
+    }
+    
     
     func webViewDidFinishLoad(webView: UIWebView) {
         applyCSSToUIWebView(webView)

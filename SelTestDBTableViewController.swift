@@ -54,6 +54,10 @@ class SelTestDBTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        stopAnimating()
+    }
+    
     
     // MARK: - Table view data source
     
@@ -193,4 +197,6 @@ class SelTestDBTableViewController: UITableViewController {
             destnatinationVC.navigationItem.title = self.navigationItem.title
         }
     }
+    
+    
 }

@@ -37,6 +37,8 @@ class SelfTestDBViewController: UIViewController {
     var selectedButtonItemIndex = 0
     
     var buttonItems:[(ButtonType,Int)]?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,15 +157,7 @@ class SelfTestDBViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTestListSegue" {
             let destnationVC = segue.destinationViewController as! SelTestDBTableViewController
-//            switch selectedButtonItemIndex {
-//            case 0: destnationVC.categoryId = 129
-//            case 1: destnationVC.categoryId = 196
-//            case 2: destnationVC.categoryId = 68
-//            case 3: destnationVC.categoryId = 200
-//            case 4: destnationVC.categoryId = 132
-//            case 5: destnationVC.categoryId = 201
-//            default:break
-//            }
+
             
             let buttonType = buttonItems![selectedButtonItemIndex].0
             switch buttonType {

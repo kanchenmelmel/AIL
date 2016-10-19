@@ -106,7 +106,16 @@ extension UIViewController {
 }
 
 extension UIViewController:NVActivityIndicatorViewable {
+    
+//    var activityIndicator:NVActivityIndicatorView?
     func startAnimating() {
         startAnimating(CGSizeMake(50, 50), message: "努力加载中……", type: .BallPulse, color: UIColor.tintColor(), padding: 0)
     }
+    
+    
+    
+    
+    
 }
+
+

@@ -70,6 +70,11 @@ class AllPostsVC: UITableViewController{
        // refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
         self.tableView.addSubview(refresher)
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        stopAnimating()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
