@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,11 +18,12 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllPostsCell" rowHeight="271" id="UkB-uN-AV9" customClass="AllPostsCell" customModule="AIL" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="271"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UkB-uN-AV9" id="DB8-Z2-GWs">
-                                    <frame key="frameInset" width="375" height="270.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="UkB-uN-AV9" id="DB8-Z2-GWs">
+                                    <frame key="frameInset" width="375" height="270"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJB-1T-fdY">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJB-1T-fdY">
+                                            <frame key="frameInset" width="1000" height="1000"/>
                                             <color key="tintColor" red="0.21176470588235294" green="0.38039215686274508" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="X7Z-GM-7j0"/>
@@ -38,7 +39,8 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="ASd-Nr-BGV" customClass="RoundedImageView" customModule="AIL">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="ASd-Nr-BGV" customClass="RoundedImageView" customModule="AIL">
+                                            <frame key="frameInset" width="1000" height="1000"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="163" id="7cn-bS-0Z8"/>
                                             </constraints>
@@ -48,10 +50,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P48-GZ-hOk">
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P48-GZ-hOk">
+                                            <frame key="frameInset" width="1000" height="1000"/>
                                             <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这段语音主要说了通过模拟黑洞的吞噬方式，霍金这段语音主要说了通过模拟黑洞的吞噬方式，霍金" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-De-Ofm">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="这段语音主要说了通过模拟黑洞的吞噬方式，霍金这段语音主要说了通过模拟黑洞的吞噬方式，霍金" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-De-Ofm">
+                                            <frame key="frameInset" width="1000" height="1000"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="67" id="rL8-LM-06E"/>
                                             </constraints>
@@ -96,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="1839.2" y="-520.38980509745136"/>
         </scene>
-        <!--PTE素材-->
+        <!--最新资讯-->
         <scene sceneID="auj-dI-4Qt">
             <objects>
                 <viewController id="td8-P8-xaa" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,7 +133,7 @@
                             <constraint firstAttribute="trailing" secondItem="kHL-VT-4c3" secondAttribute="trailing" id="nZs-ir-tPq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PTE素材" id="rKg-S8-eZD">
+                    <navigationItem key="navigationItem" title="最新资讯" id="rKg-S8-eZD">
                         <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="DTw-94-D2Q">
                             <connections>
                                 <action selector="showActivityViewController:" destination="td8-P8-xaa" id="uOn-nu-m0Y"/>

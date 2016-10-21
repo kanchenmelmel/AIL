@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s4N-SQ-cle" id="Bvx-6o-475">
-                                    <frame key="frameInset" width="414" height="71"/>
+                                    <frame key="frameInset" width="414" height="70.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apd-d6-h0b">
@@ -69,6 +69,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.08.2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x4-jL-tys">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="bZo-nB-u5A"/>
+                                                <constraint firstAttribute="width" constant="99" id="soE-EB-d0j"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" red="0.62675883509999997" green="0.62675883509999997" blue="0.62675883509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,7 +86,6 @@
                                         <constraint firstItem="3x4-jL-tys" firstAttribute="top" secondItem="Bvx-6o-475" secondAttribute="topMargin" id="dcV-QI-XfT"/>
                                         <constraint firstItem="fqZ-nP-uP8" firstAttribute="leading" secondItem="apd-d6-h0b" secondAttribute="trailing" constant="5" id="luH-bR-u3v"/>
                                         <constraint firstItem="3x4-jL-tys" firstAttribute="trailing" secondItem="Bvx-6o-475" secondAttribute="trailingMargin" id="oy5-ug-Fjf"/>
-                                        <constraint firstItem="3x4-jL-tys" firstAttribute="leading" secondItem="fqZ-nP-uP8" secondAttribute="trailing" constant="73" id="ur9-IH-5kE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

@@ -192,6 +192,10 @@ class SubjectResourcesTableViewController: UITableViewController {
             destnatinationVC.titleString = resourcesPosts[index!.row].title!
         }
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        stopAnimating()
+    }
 
 
 }
