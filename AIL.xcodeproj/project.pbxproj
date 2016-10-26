@@ -567,7 +567,7 @@
 				TargetAttributes = {
 					963061C01D77E1270079B7C5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = SSKL6SFPT2;
+						DevelopmentTeam = 62J5NG6GE2;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -891,11 +891,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SSKL6SFPT2;
+				DEVELOPMENT_TEAM = 62J5NG6GE2;
 				INFOPLIST_FILE = AIL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.melmel.AIL;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.vic.ail.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -908,11 +908,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SSKL6SFPT2;
+				DEVELOPMENT_TEAM = 62J5NG6GE2;
 				INFOPLIST_FILE = AIL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.melmel.AIL;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.vic.ail.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;

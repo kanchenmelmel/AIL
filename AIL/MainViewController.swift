@@ -178,7 +178,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func setUpTableViewImageCoordinator(){
         for post in featurePosts {
             if post.featuredImageUrl != nil{
-                let imageRecord = ImageRecord(name: "", url: NSURL(string: post.featuredImageUrl!)!)
+                let featuredImageURLString = post.featuredImageUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
+                let imageRecord = ImageRecord(name: "", url: NSURL(string: featuredImageURLString!)!)
                 self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
             }
         }

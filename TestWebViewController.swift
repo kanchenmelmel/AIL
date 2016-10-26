@@ -30,7 +30,7 @@ class TestWebViewController: UIViewController, UIWebViewDelegate {
         
         // Do any additional setup after loading the view.
         
-        urlString = "http://pte-practice.com"
+        urlString = "http://ail.vic.edu.au/pte-practice-test-online/"
         
         progressView.progress  = 0
         let url = NSURL(string:urlString!)
