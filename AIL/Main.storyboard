@@ -64,7 +64,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-Ri-jZ6" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
                                                         <state key="normal" title="Button"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="beikao"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pte"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="PTE素材资料"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="align" value="right"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -159,7 +159,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pte"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="beikao"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="5om-ZF-r0u" kind="show" id="pKK-Ei-4Lf"/>
