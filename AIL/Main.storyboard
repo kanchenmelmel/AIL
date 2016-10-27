@@ -542,9 +542,10 @@
             <objects>
                 <navigationController storyboardIdentifier="mainNavCtrl" automaticallyAdjustsScrollViewInsets="NO" id="yoz-IM-NgN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sDT-lq-SeK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sDT-lq-SeK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -814,13 +815,13 @@
         <image name="RewardAccount" width="14" height="13"/>
         <image name="TopIcon" width="87" height="89"/>
         <image name="baokao" width="40" height="40"/>
-        <image name="beikao" width="35" height="36"/>
+        <image name="beikao" width="46" height="48"/>
         <image name="jijing" width="44" height="35"/>
         <image name="lianxi" width="47" height="40"/>
         <image name="messagesButton" width="14" height="14"/>
         <image name="mokao" width="34" height="36"/>
         <image name="peixun" width="40" height="40"/>
-        <image name="pte" width="52" height="49"/>
+        <image name="pte" width="39" height="37"/>
         <image name="zice" width="33" height="36"/>
     </resources>
     <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>

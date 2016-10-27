@@ -32,7 +32,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="7"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="WOc-wO-5mY" kind="show" identifier="radomTestSegue" id="fDT-54-phq"/>
+                                    <segue destination="fNH-UV-g19" kind="show" identifier="radomTestSegue" id="v1S-gF-103"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kMh-CM-laD">
@@ -152,6 +152,7 @@
                             <constraint firstAttribute="trailing" secondItem="NFc-CJ-0fE" secondAttribute="trailing" id="uhw-jb-tro"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Orq-eB-GFU"/>
                     <connections>
                         <outlet property="button1" destination="11X-DA-Gqv" id="vyP-ZJ-RI3"/>
                         <outlet property="button2" destination="hUH-x4-MSR" id="AdT-ch-JyT"/>
@@ -160,7 +161,7 @@
                         <outlet property="button5" destination="Uwu-I9-d5u" id="9Gz-9A-VdW"/>
                         <outlet property="button6" destination="Ew7-GT-8M7" id="E6m-pY-KnH"/>
                         <outlet property="randomTestButton" destination="Sz0-vj-z9u" id="gfb-8O-uMa"/>
-                        <segue destination="WOc-wO-5mY" kind="show" identifier="showTestListSegue" id="SQc-xd-uMt"/>
+                        <segue destination="fNH-UV-g19" kind="show" identifier="showTestWebViewSegue" id="dmc-oo-r4x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFJ-uO-aq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,9 +237,6 @@
                                     <outlet property="dateLabel" destination="VWJ-Ud-KMv" id="CfJ-OJ-Y8c"/>
                                     <outlet property="subtitleLabel" destination="YdI-G1-9RK" id="I9y-mT-Hbk"/>
                                     <outlet property="titleLabel" destination="hDE-Rh-EuR" id="Erz-3l-q6m"/>
-                                    <segue destination="fNH-UV-g19" kind="show" identifier="resourcesPostWebViewSegue" id="rTr-sG-HpR">
-                                        <nil key="action"/>
-                                    </segue>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -251,12 +249,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NuR-rD-1eV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1476" y="245"/>
+            <point key="canvasLocation" x="-1649" y="791"/>
         </scene>
         <!--PTE素材-->
         <scene sceneID="jAq-PU-NrN">
             <objects>
-                <viewController id="fNH-UV-g19" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fNH-UV-g19" customClass="SelfTestDBWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J9u-xv-ex5"/>
                         <viewControllerLayoutGuide type="bottom" id="j4E-FD-Ewf"/>
@@ -293,13 +291,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="progressView" destination="Jbo-cO-Bz8" id="70L-1G-2Hb"/>
-                        <outlet property="webView" destination="CF0-2m-P1n" id="zdi-jz-G7H"/>
+                        <outlet property="progressView" destination="Jbo-cO-Bz8" id="V1D-cf-vLF"/>
+                        <outlet property="webView" destination="CF0-2m-P1n" id="ues-p9-WVb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwH-TC-Zh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519" y="240"/>
+            <point key="canvasLocation" x="-1465" y="105"/>
         </scene>
     </scenes>
     <resources>
@@ -310,6 +308,6 @@
         <image name="peixun" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fDT-54-phq"/>
+        <segue reference="dmc-oo-r4x"/>
     </inferredMetricsTieBreakers>
 </document>
