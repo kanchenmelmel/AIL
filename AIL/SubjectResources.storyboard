@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--PTE素材库-->
+        <!--PTE素材资料-->
         <scene sceneID="Nu4-CL-yEq">
             <objects>
                 <tableViewController storyboardIdentifier="SubjectResourcesTableVC" id="lQU-Cj-5sJ" customClass="SubjectResourcesTableViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,7 +84,7 @@
                             <outlet property="delegate" destination="lQU-Cj-5sJ" id="mIn-MY-dZv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PTE素材库" id="W7b-NY-Cna"/>
+                    <navigationItem key="navigationItem" title="PTE素材资料" id="W7b-NY-Cna"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2f-kY-HbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

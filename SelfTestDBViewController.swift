@@ -156,7 +156,7 @@ class SelfTestDBViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTestWebViewSegue" {
-            let destnationVC = segue.destinationViewController as! SelfTestDBWebViewController
+            let destnationVC = segue.destinationViewController as! SelTestDBTableViewController
 
             
             let buttonType = buttonItems![selectedButtonItemIndex].0

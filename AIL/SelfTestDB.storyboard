@@ -161,7 +161,7 @@
                         <outlet property="button5" destination="Uwu-I9-d5u" id="9Gz-9A-VdW"/>
                         <outlet property="button6" destination="Ew7-GT-8M7" id="E6m-pY-KnH"/>
                         <outlet property="randomTestButton" destination="Sz0-vj-z9u" id="gfb-8O-uMa"/>
-                        <segue destination="fNH-UV-g19" kind="show" identifier="showTestWebViewSegue" id="dmc-oo-r4x"/>
+                        <segue destination="WOc-wO-5mY" kind="show" identifier="showTestWebViewSegue" id="mru-OR-ff8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFJ-uO-aq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,6 +237,7 @@
                                     <outlet property="dateLabel" destination="VWJ-Ud-KMv" id="CfJ-OJ-Y8c"/>
                                     <outlet property="subtitleLabel" destination="YdI-G1-9RK" id="I9y-mT-Hbk"/>
                                     <outlet property="titleLabel" destination="hDE-Rh-EuR" id="Erz-3l-q6m"/>
+                                    <segue destination="gIq-im-U8R" kind="show" identifier="resourcesPostWebViewSegue" id="xFq-pP-O8D"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -249,7 +250,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NuR-rD-1eV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1649" y="791"/>
+            <point key="canvasLocation" x="-1690" y="625"/>
         </scene>
         <!--PTE素材-->
         <scene sceneID="jAq-PU-NrN">
@@ -297,7 +298,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwH-TC-Zh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1465" y="105"/>
+            <point key="canvasLocation" x="-1636" y="-93"/>
+        </scene>
+        <!--PTE素材-->
+        <scene sceneID="CfV-PJ-13a">
+            <objects>
+                <viewController id="gIq-im-U8R" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kzW-y4-zIj"/>
+                        <viewControllerLayoutGuide type="bottom" id="7rx-vb-uKK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iM0-Ah-Zpx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDd-PM-t5J">
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-2N-bf5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="mVp-zv-Vlz"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bDd-PM-t5J" firstAttribute="top" secondItem="iM0-Ah-Zpx" secondAttribute="top" id="57d-1I-q3Y"/>
+                            <constraint firstItem="vWZ-2N-bf5" firstAttribute="top" secondItem="iM0-Ah-Zpx" secondAttribute="top" constant="65" id="5pZ-36-t8E"/>
+                            <constraint firstItem="bDd-PM-t5J" firstAttribute="leading" secondItem="iM0-Ah-Zpx" secondAttribute="leading" id="9JF-ba-3no"/>
+                            <constraint firstAttribute="trailing" secondItem="bDd-PM-t5J" secondAttribute="trailing" id="Arf-p6-pTY"/>
+                            <constraint firstItem="vWZ-2N-bf5" firstAttribute="leading" secondItem="iM0-Ah-Zpx" secondAttribute="leading" id="WdY-E0-hc7"/>
+                            <constraint firstAttribute="trailing" secondItem="vWZ-2N-bf5" secondAttribute="trailing" id="acj-3f-3k4"/>
+                            <constraint firstItem="7rx-vb-uKK" firstAttribute="top" secondItem="bDd-PM-t5J" secondAttribute="bottom" id="efm-lS-8Bc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PTE素材" id="8TS-dc-mgD">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="7e2-AN-P8S">
+                            <connections>
+                                <action selector="showActivityViewController:" destination="gIq-im-U8R" id="T4W-1H-36L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="vWZ-2N-bf5" id="lxL-uI-9r0"/>
+                        <outlet property="webView" destination="bDd-PM-t5J" id="ffl-uc-i20"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7q-Ob-huh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1690" y="1423"/>
         </scene>
     </scenes>
     <resources>
@@ -307,7 +356,4 @@
         <image name="SuiJi" width="185" height="46"/>
         <image name="peixun" width="40" height="40"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="dmc-oo-r4x"/>
-    </inferredMetricsTieBreakers>
 </document>

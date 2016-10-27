@@ -706,7 +706,7 @@
             </objects>
             <point key="canvasLocation" x="748" y="1316"/>
         </scene>
-        <!--PTE考试直播论坛-->
+        <!--PTE考试内容回忆与分享-->
         <scene sceneID="Heb-Rt-7aM">
             <objects>
                 <viewController id="FJM-uR-bq7" customClass="PTELiveForumWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
@@ -738,7 +738,7 @@
                             <constraint firstItem="VUG-OC-XUQ" firstAttribute="top" secondItem="fn5-4d-ccK" secondAttribute="top" id="yql-yo-9rX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PTE考试直播论坛" id="JFs-gs-lk1">
+                    <navigationItem key="navigationItem" title="PTE考试内容回忆与分享" id="JFs-gs-lk1">
                         <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="6qh-bM-WwZ">
                             <connections>
                                 <action selector="activityButtonClick:" destination="FJM-uR-bq7" id="rlQ-wn-IPM"/>

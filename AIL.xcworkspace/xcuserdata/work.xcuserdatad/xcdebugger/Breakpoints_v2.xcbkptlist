@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CourseTrainingViewController.swift"
-            timestampString = "498532483.841488"
+            timestampString = "499235043.057944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "CourseTrainingViewController"
             landmarkType = "3">
          </BreakpointContent>
