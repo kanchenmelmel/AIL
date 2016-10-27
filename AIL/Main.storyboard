@@ -65,7 +65,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="icon" value="beikao"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="备考攻略"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="PTE素材资料"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="align" value="right"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="5"/>
@@ -143,7 +143,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="align" value="center"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="PTE素材资料"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="备考攻略"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="70"/>
                                             </userDefinedRuntimeAttribute>

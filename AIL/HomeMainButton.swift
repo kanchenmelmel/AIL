@@ -12,7 +12,7 @@ import UIKit
 class HomeMainButton: UIButton {
     
     let image = UIImageView(frame: CGRect(x: 10, y: 15, width: 50, height: 35))
-    let label = UILabel(frame: CGRect(x: 10, y: 63, width: 50, height: 12))
+    let label = UILabel(frame: CGRect(x: 10, y: 63, width: 70, height: 12))
     
     private var alignType = "left"
     @IBInspectable var align: String {
@@ -96,9 +96,9 @@ class HomeMainButton: UIButton {
             image.frame = CGRect(x: x, y: 15, width: 50, height: 35)
             label.frame =  CGRect(x: x, y: 63, width: 50, height: 12)
         } else {
-            let x = (self.frame.width - 65 - 50) / 2 + 65
-            image.frame = CGRect(x: x, y: 15, width: 50, height: 35)
-            label.frame =  CGRect(x: x, y: 63, width: 50, height: 12)
+            let x = (self.frame.width - 65 - 80) / 2 + 65
+            image.frame = CGRect(x: (self.frame.width - 65 - 50) / 2 + 65, y: 15, width: 50, height: 35)
+            label.frame =  CGRect(x: x, y: 63, width: 80, height: 12)
         }
     }
     
