@@ -12,7 +12,7 @@
                 <viewControllerPlaceholder storyboardName="BeiKaoGongLue" referencedIdentifier="BeiKaoGongLueTableVC" id="5om-ZF-r0u" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymr-TX-Qak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2322" y="-277"/>
+            <point key="canvasLocation" x="2562" y="-16"/>
         </scene>
         <!--SelfTestDBViewController-->
         <scene sceneID="mx6-xf-xr1">
@@ -78,7 +78,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="5om-ZF-r0u" kind="show" id="Wad-DT-mJv"/>
+                                                            <segue destination="Ng3-6s-FB9" kind="show" id="law-Ba-zZu"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -162,7 +162,7 @@
                                             <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pte"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Ng3-6s-FB9" kind="show" id="BJf-fJ-zel"/>
+                                            <segue destination="5om-ZF-r0u" kind="show" id="pKK-Ei-4Lf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -527,7 +527,7 @@
                 <viewControllerPlaceholder storyboardName="SubjectResources" referencedIdentifier="SubjectResourcesTableVC" id="Ng3-6s-FB9" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0T-9h-nwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2470" y="97"/>
+            <point key="canvasLocation" x="2573" y="183"/>
         </scene>
         <!--AllPostsTableVC-->
         <scene sceneID="vmw-uv-2hO">
