@@ -17,7 +17,7 @@ enum ButtonType:String {
     case DuanWenTi = "短问题回答"
 }
 
-class SelfTestDBViewController: UIViewController {
+class SelfTestDBViewController: UITableViewController {
 
     @IBOutlet weak var button1: SelfTestDBHomeButton!
     
@@ -42,6 +42,9 @@ class SelfTestDBViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        setupTableViewBG()
         
         self.navigationItem.title = "题型自测"
 
@@ -181,8 +184,10 @@ class SelfTestDBViewController: UIViewController {
         }
     }
     
-    func getCateIdByItemIndex (index:Int) {
+    func setupTableViewBG() {
+        let imageView = UIImageView(image: UIImage(named: "Background"))
+        imageView.frame = self.tableView.frame
+        self.tableView.backgroundView = imageView
         
     }
-
 }

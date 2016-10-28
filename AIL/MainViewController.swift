@@ -42,6 +42,7 @@ class ViewController: UITableViewController, UICollectionViewDelegate, UICollect
         super.viewDidLoad()
         
         self.setNavigationBarItem()
+        self.tableView.tableHeaderView = nil;
         
         // Setup Search bar in Nav Bar
         

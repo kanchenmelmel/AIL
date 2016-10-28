@@ -40,6 +40,10 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         
         
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.stopAnimating()
+    }
 
     
 
