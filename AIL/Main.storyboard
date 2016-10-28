@@ -46,7 +46,7 @@
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rti-6f-BtI">
                                                     <rect key="frame" x="0.0" y="-8" width="375" height="183"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="183" id="fgF-xf-Qx0"/>
                                                     </constraints>
@@ -164,9 +164,6 @@
                                                                 <constraint firstItem="hPh-FX-44t" firstAttribute="centerY" secondItem="NjZ-kb-YYH" secondAttribute="centerY" id="cWB-lU-WeZ"/>
                                                             </constraints>
                                                             <size key="customSize" width="287" height="169"/>
-                                                            <connections>
-                                                                <segue destination="Tbn-Fn-BNn" kind="show" id="K8R-Sa-Hsh"/>
-                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -416,389 +413,13 @@
                     <navigationItem key="navigationItem" id="M95-Z0-DMB"/>
                     <connections>
                         <outlet property="collectionView" destination="Rti-6f-BtI" id="JLm-8E-JRS"/>
+                        <segue destination="YNd-PP-dOb" kind="show" identifier="showPostWebViewSegue" id="W95-K7-zuz"/>
+                        <segue destination="Tbn-Fn-BNn" kind="show" identifier="allPostVC" id="gml-uj-PBt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AR0-P8-vkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="149"/>
-        </scene>
-        <!--PTE备考神器-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8te-Cn-js9">
-                                <rect key="frame" x="6" y="219" width="363" height="192"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-Nf-TRU">
-                                        <rect key="frame" x="0.0" y="0.0" width="363" height="192"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="boP-4K-O0N">
-                                                <rect key="frame" x="0.0" y="0.0" width="363" height="91"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkw-nM-vDm" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="176.5" height="91"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="机经题库"/>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="baokao"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="left"/>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="jijing"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
-                                                                <real key="value" value="50"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                                <real key="value" value="12"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <segue destination="xIQ-R1-vcv" kind="show" id="Eqq-lI-SWX"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-Ri-jZ6" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
-                                                        <rect key="frame" x="186.5" y="0.0" width="176.5" height="91"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pte"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="PTE素材资料"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="right"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
-                                                                <real key="value" value="50"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                                <real key="value" value="12"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <segue destination="Ng3-6s-FB9" kind="show" id="law-Ba-zZu"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ap8-Oz-2aj">
-                                                <rect key="frame" x="0.0" y="101" width="363" height="91"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxy-Vm-3bS" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="176.5" height="91"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="zice"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="题型自测"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="left"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
-                                                                <real key="value" value="50"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                                <real key="value" value="12"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <segue destination="hWD-W7-MNU" kind="show" id="u02-mf-P8V"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caE-IZ-KjS" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
-                                                        <rect key="frame" x="186.5" y="0.0" width="176.5" height="91"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="right"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="全真模考"/>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="mokao"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
-                                                                <real key="value" value="50"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                                <real key="value" value="12"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <segue destination="F2h-Yu-gaf" kind="show" id="zka-pP-M9N"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="192" id="DpW-Vv-7YB"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="192" id="bwc-7A-PhT"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="bwc-7A-PhT"/>
-                                            </mask>
-                                        </variation>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XL0-Il-4JH" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="111" y="25.5" width="141" height="141"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="141" id="HXF-Jk-Nqi"/>
-                                            <constraint firstAttribute="height" constant="141" id="QhK-ne-ipm"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="align" value="center"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="备考攻略"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="70"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
-                                                <real key="value" value="70"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="beikao"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="5om-ZF-r0u" kind="show" id="pKK-Ei-4Lf"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="kmj-Nf-TRU" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="top" id="0qa-dn-XrL"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="kmj-Nf-TRU" secondAttribute="trailing" constant="-10" id="26m-aa-rgh"/>
-                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="centerY" secondItem="8te-Cn-js9" secondAttribute="centerY" id="9Re-um-P5s"/>
-                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="top" constant="25.5" id="FeL-NR-4c9"/>
-                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="centerX" secondItem="8te-Cn-js9" secondAttribute="centerX" id="Kxo-7R-v86"/>
-                                    <constraint firstAttribute="trailing" secondItem="kmj-Nf-TRU" secondAttribute="trailing" id="NDc-bm-2kb"/>
-                                    <constraint firstItem="kmj-Nf-TRU" firstAttribute="leading" secondItem="8te-Cn-js9" secondAttribute="leading" id="RzC-Bq-4Qg"/>
-                                    <constraint firstAttribute="bottom" secondItem="kmj-Nf-TRU" secondAttribute="bottom" id="WeP-eY-Yhi"/>
-                                    <constraint firstItem="XL0-Il-4JH" firstAttribute="leading" secondItem="8te-Cn-js9" secondAttribute="leading" constant="25.5" id="Zsn-VO-bdG"/>
-                                    <constraint firstAttribute="height" constant="192" id="n7d-MP-a2d"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Zsn-VO-bdG"/>
-                                        <exclude reference="26m-aa-rgh"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cpW-4n-mFY">
-                                <rect key="frame" x="0.0" y="28" width="375" height="183"/>
-                                <color key="backgroundColor" red="0.9882352941176471" green="0.99607843137254903" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="0Px-GM-Ufp"/>
-                                </constraints>
-                                <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AgB-nd-xht">
-                                    <size key="itemSize" width="287" height="169"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PTELiveCell" id="5Z5-kC-hI6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="7" width="287" height="169"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-0X-Yce">
-                                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PTELiveCellButton" translatesAutoresizingMaskIntoConstraints="NO" id="2zZ-jM-PgV">
-                                                            <rect key="frame" x="42" y="0.0" width="61" height="60"/>
-                                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE考试内容回忆与分享" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-iG-qpk">
-                                                            <rect key="frame" x="0.0" y="70" width="145" height="16"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" red="0.14509803921568626" green="0.48627450980392156" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="qjG-0X-Yce" firstAttribute="centerX" secondItem="5Z5-kC-hI6" secondAttribute="centerX" id="eBS-VS-czL"/>
-                                            <constraint firstItem="qjG-0X-Yce" firstAttribute="centerY" secondItem="5Z5-kC-hI6" secondAttribute="centerY" id="su5-v9-cFI"/>
-                                        </constraints>
-                                        <size key="customSize" width="287" height="169"/>
-                                        <connections>
-                                            <segue destination="FJM-uR-bq7" kind="show" id="eLu-UO-QZY"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="297" y="7" width="287" height="169"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE复议详解！PTE也能申请复议" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-vr-SJl">
-                                                    <rect key="frame" x="16" y="115" width="255" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="BEp-fN-5Cl"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                                    <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-hn-0hA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="287" height="107"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="107" id="6zJ-2V-sz6"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="8Pl-hn-0hA" firstAttribute="leading" secondItem="GOM-uh-xnG" secondAttribute="leading" id="0vo-Z5-XD9"/>
-                                            <constraint firstItem="ibP-vr-SJl" firstAttribute="leading" secondItem="GOM-uh-xnG" secondAttribute="leadingMargin" constant="8" id="8li-g6-Dh5"/>
-                                            <constraint firstAttribute="trailing" secondItem="8Pl-hn-0hA" secondAttribute="trailing" id="I3u-aV-ACS"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="ibP-vr-SJl" secondAttribute="trailing" constant="8" id="X8C-In-bcW"/>
-                                            <constraint firstItem="ibP-vr-SJl" firstAttribute="centerX" secondItem="GOM-uh-xnG" secondAttribute="centerX" id="aVk-hl-1yu"/>
-                                            <constraint firstItem="ibP-vr-SJl" firstAttribute="top" secondItem="8Pl-hn-0hA" secondAttribute="bottom" constant="8" id="o9k-Ve-3Y9"/>
-                                            <constraint firstItem="8Pl-hn-0hA" firstAttribute="top" secondItem="GOM-uh-xnG" secondAttribute="top" id="zwc-iR-ZNP"/>
-                                        </constraints>
-                                        <size key="customSize" width="287" height="169"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="aVk-hl-1yu"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outlet property="postImage" destination="8Pl-hn-0hA" id="AhK-0v-mYh"/>
-                                            <outlet property="postLabel" destination="ibP-vr-SJl" id="TpK-97-DPr"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPostCell" id="3aG-XG-aY6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="594" y="7" width="287" height="169"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RX2-RR-9DU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AllPostsButton" translatesAutoresizingMaskIntoConstraints="NO" id="7el-84-M98">
-                                                            <rect key="frame" x="22.5" y="0.0" width="61" height="60"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击阅读更多资讯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3W-fm-IEh">
-                                                            <rect key="frame" x="0.0" y="70" width="106.5" height="16"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                                            <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="RX2-RR-9DU" firstAttribute="centerX" secondItem="3aG-XG-aY6" secondAttribute="centerX" id="rz2-QL-8Rh"/>
-                                            <constraint firstItem="RX2-RR-9DU" firstAttribute="centerY" secondItem="3aG-XG-aY6" secondAttribute="centerY" id="sZX-xV-5QM"/>
-                                        </constraints>
-                                        <size key="customSize" width="287" height="169"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-Ku-fr0">
-                                <rect key="frame" x="0.0" y="419" width="375" height="87.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-Up-9Mu" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="87.5"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="报考流程"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="buttonImg" value="baokao"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="cKz-Ap-BJd" kind="show" id="RJb-6q-r0u"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGC-Mx-Jeg" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="125.5" y="0.0" width="124" height="87.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="buttonImg" value="lianxi"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="联系我们"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="ROi-LE-Hhd" kind="show" identifier="showAboutAILVC" id="tCL-1e-Ya2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsG-vQ-jhN" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="250.5" y="0.0" width="124.5" height="87.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal">
-                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="培训课程"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="buttonImg" value="peixun"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="F5B-Bw-dcm" kind="show" id="4ge-wm-bqc"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="87.5" id="5g3-t5-vK3"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.92941176470588238" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="8te-Cn-js9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="42N-WR-C9Y"/>
-                            <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IeZ-1V-uQs"/>
-                            <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PvT-St-LKz"/>
-                            <constraint firstAttribute="trailing" secondItem="T9M-Ku-fr0" secondAttribute="trailing" id="RvI-cW-CEY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8te-Cn-js9" secondAttribute="trailing" constant="-10" id="TrA-Lq-TQC"/>
-                            <constraint firstAttribute="trailing" secondItem="cpW-4n-mFY" secondAttribute="trailing" id="U9P-dr-EbR"/>
-                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jk0-Gr-t1D"/>
-                            <constraint firstItem="cpW-4n-mFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mrb-tv-L4R"/>
-                            <constraint firstItem="T9M-Ku-fr0" firstAttribute="top" secondItem="8te-Cn-js9" secondAttribute="bottom" constant="8" id="tEu-7i-vdO"/>
-                            <constraint firstItem="cpW-4n-mFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="tLQ-OT-kAb"/>
-                            <constraint firstAttribute="trailing" secondItem="cpW-4n-mFY" secondAttribute="trailing" id="x0e-ZO-A7v"/>
-                            <constraint firstItem="8te-Cn-js9" firstAttribute="top" secondItem="cpW-4n-mFY" secondAttribute="bottom" constant="8" id="y3n-RI-zxg"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="IeZ-1V-uQs"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" title="PTE备考神器" id="83X-wQ-yVC"/>
-                    <connections>
-                        <outlet property="collectionView" destination="cpW-4n-mFY" id="xJW-To-faq"/>
-                        <segue destination="YNd-PP-dOb" kind="show" identifier="showPostWebViewSegue" id="tkx-vb-b37"/>
-                        <segue destination="Tbn-Fn-BNn" kind="show" identifier="allPostVC" id="XLT-fh-Tvr"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1700" y="253.2233883058471"/>
+            <point key="canvasLocation" x="1278" y="256"/>
         </scene>
         <!--AboutAILVC-->
         <scene sceneID="eUV-IP-GWA">
@@ -940,7 +561,7 @@
                             <constraint firstItem="vSq-uJ-YpP" firstAttribute="centerX" secondItem="op8-Ba-Ov1" secondAttribute="centerX" id="2rq-qH-9oO"/>
                             <constraint firstItem="SWP-CC-47e" firstAttribute="leading" secondItem="op8-Ba-Ov1" secondAttribute="leading" id="6gs-ZZ-l1w"/>
                             <constraint firstItem="Ypy-xz-gex" firstAttribute="centerX" secondItem="op8-Ba-Ov1" secondAttribute="centerX" id="G5K-Xf-Vev"/>
-                            <constraint firstItem="Ypy-xz-gex" firstAttribute="top" secondItem="vSq-uJ-YpP" secondAttribute="bottom" constant="80" id="JO1-lw-xDm"/>
+                            <constraint firstItem="Ypy-xz-gex" firstAttribute="top" secondItem="vSq-uJ-YpP" secondAttribute="bottom" constant="50" id="JO1-lw-xDm"/>
                             <constraint firstItem="G9D-PS-47j" firstAttribute="top" secondItem="SWP-CC-47e" secondAttribute="bottom" id="Xgs-W3-Okz"/>
                             <constraint firstItem="SWP-CC-47e" firstAttribute="top" secondItem="op8-Ba-Ov1" secondAttribute="top" id="vpT-J4-n10"/>
                             <constraint firstItem="vSq-uJ-YpP" firstAttribute="top" secondItem="QAP-Kv-tes" secondAttribute="bottom" constant="44" id="yYg-AK-Qor"/>
@@ -967,7 +588,7 @@
                 <viewControllerPlaceholder storyboardName="AllPosts" referencedIdentifier="AllPostsTableVC" id="Tbn-Fn-BNn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkv-Fk-q6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2285" y="385"/>
+            <point key="canvasLocation" x="2526" y="504"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="van-p4-Yc0">
@@ -1042,7 +663,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meB-n7-z3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3364" y="253"/>
+            <point key="canvasLocation" x="2970" y="231"/>
         </scene>
         <!--全真模考-->
         <scene sceneID="cmW-fd-Dnr">
@@ -1266,15 +887,5 @@
         <image name="pte" width="39" height="37"/>
         <image name="zice" width="33" height="36"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="r0H-Ax-yn6"/>
-        <segue reference="krO-F2-sFm"/>
-        <segue reference="GqX-3c-iwg"/>
-        <segue reference="Gvf-dK-r5x"/>
-        <segue reference="83k-T1-U3u"/>
-        <segue reference="3rT-mA-lvh"/>
-        <segue reference="ZzR-j5-qdp"/>
-        <segue reference="K8R-Sa-Hsh"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>
