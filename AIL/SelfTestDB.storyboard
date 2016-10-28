@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -32,7 +32,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="7"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="WOc-wO-5mY" kind="show" identifier="radomTestSegue" id="fDT-54-phq"/>
+                                    <segue destination="fNH-UV-g19" kind="show" identifier="radomTestSegue" id="v1S-gF-103"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kMh-CM-laD">
@@ -152,6 +152,7 @@
                             <constraint firstAttribute="trailing" secondItem="NFc-CJ-0fE" secondAttribute="trailing" id="uhw-jb-tro"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Orq-eB-GFU"/>
                     <connections>
                         <outlet property="button1" destination="11X-DA-Gqv" id="vyP-ZJ-RI3"/>
                         <outlet property="button2" destination="hUH-x4-MSR" id="AdT-ch-JyT"/>
@@ -160,7 +161,7 @@
                         <outlet property="button5" destination="Uwu-I9-d5u" id="9Gz-9A-VdW"/>
                         <outlet property="button6" destination="Ew7-GT-8M7" id="E6m-pY-KnH"/>
                         <outlet property="randomTestButton" destination="Sz0-vj-z9u" id="gfb-8O-uMa"/>
-                        <segue destination="WOc-wO-5mY" kind="show" identifier="showTestListSegue" id="SQc-xd-uMt"/>
+                        <segue destination="WOc-wO-5mY" kind="show" identifier="showTestWebViewSegue" id="mru-OR-ff8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFJ-uO-aq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,9 +237,7 @@
                                     <outlet property="dateLabel" destination="VWJ-Ud-KMv" id="CfJ-OJ-Y8c"/>
                                     <outlet property="subtitleLabel" destination="YdI-G1-9RK" id="I9y-mT-Hbk"/>
                                     <outlet property="titleLabel" destination="hDE-Rh-EuR" id="Erz-3l-q6m"/>
-                                    <segue destination="fNH-UV-g19" kind="show" identifier="resourcesPostWebViewSegue" id="rTr-sG-HpR">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <segue destination="gIq-im-U8R" kind="show" identifier="resourcesPostWebViewSegue" id="xFq-pP-O8D"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -251,12 +250,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NuR-rD-1eV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1476" y="245"/>
+            <point key="canvasLocation" x="-1690" y="625"/>
         </scene>
         <!--PTE素材-->
         <scene sceneID="jAq-PU-NrN">
             <objects>
-                <viewController id="fNH-UV-g19" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fNH-UV-g19" customClass="SelfTestDBWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J9u-xv-ex5"/>
                         <viewControllerLayoutGuide type="bottom" id="j4E-FD-Ewf"/>
@@ -293,13 +292,61 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="progressView" destination="Jbo-cO-Bz8" id="70L-1G-2Hb"/>
-                        <outlet property="webView" destination="CF0-2m-P1n" id="zdi-jz-G7H"/>
+                        <outlet property="progressView" destination="Jbo-cO-Bz8" id="V1D-cf-vLF"/>
+                        <outlet property="webView" destination="CF0-2m-P1n" id="ues-p9-WVb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwH-TC-Zh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519" y="240"/>
+            <point key="canvasLocation" x="-1636" y="-93"/>
+        </scene>
+        <!--PTE素材-->
+        <scene sceneID="CfV-PJ-13a">
+            <objects>
+                <viewController id="gIq-im-U8R" customClass="WebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kzW-y4-zIj"/>
+                        <viewControllerLayoutGuide type="bottom" id="7rx-vb-uKK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iM0-Ah-Zpx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDd-PM-t5J">
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-2N-bf5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="mVp-zv-Vlz"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bDd-PM-t5J" firstAttribute="top" secondItem="iM0-Ah-Zpx" secondAttribute="top" id="57d-1I-q3Y"/>
+                            <constraint firstItem="vWZ-2N-bf5" firstAttribute="top" secondItem="iM0-Ah-Zpx" secondAttribute="top" constant="65" id="5pZ-36-t8E"/>
+                            <constraint firstItem="bDd-PM-t5J" firstAttribute="leading" secondItem="iM0-Ah-Zpx" secondAttribute="leading" id="9JF-ba-3no"/>
+                            <constraint firstAttribute="trailing" secondItem="bDd-PM-t5J" secondAttribute="trailing" id="Arf-p6-pTY"/>
+                            <constraint firstItem="vWZ-2N-bf5" firstAttribute="leading" secondItem="iM0-Ah-Zpx" secondAttribute="leading" id="WdY-E0-hc7"/>
+                            <constraint firstAttribute="trailing" secondItem="vWZ-2N-bf5" secondAttribute="trailing" id="acj-3f-3k4"/>
+                            <constraint firstItem="7rx-vb-uKK" firstAttribute="top" secondItem="bDd-PM-t5J" secondAttribute="bottom" id="efm-lS-8Bc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PTE素材" id="8TS-dc-mgD">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="7e2-AN-P8S">
+                            <connections>
+                                <action selector="showActivityViewController:" destination="gIq-im-U8R" id="T4W-1H-36L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="vWZ-2N-bf5" id="lxL-uI-9r0"/>
+                        <outlet property="webView" destination="bDd-PM-t5J" id="ffl-uc-i20"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7q-Ob-huh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1690" y="1423"/>
         </scene>
     </scenes>
     <resources>
@@ -309,7 +356,4 @@
         <image name="SuiJi" width="185" height="46"/>
         <image name="peixun" width="40" height="40"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="fDT-54-phq"/>
-    </inferredMetricsTieBreakers>
 </document>

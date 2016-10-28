@@ -53,7 +53,7 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         
         
-        
+        self.segmentedControl.selectedIndex = 1
         
         // Setup gesture directions
         //self.swipeGestureLeft.direction = .Left
@@ -70,8 +70,9 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
         
     
         webView.delegate = self
+        self.segmentedControl.selectedIndex = 1
         
-        loadWebView(weekendUrl!)
+        loadWebView(dayUrl!)
         // Do any additional setup after loading the view.
     }
 

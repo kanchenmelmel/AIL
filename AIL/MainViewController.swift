@@ -220,59 +220,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchBar.showsCancelButton = false
     }
     
-    //    func setNavigationBarItem() {
-    //        self.addLeftBarButtonWithImage(UIImage(named: "SideMenuButton")!)
-    //        //print("test Add nav item")
-    //        // self.addRightBarButtonWithImage(UIImage(named: "ic_notifications_black_24dp")!)
-    //        self.slideMenuController()?.removeLeftGestures()
-    //        self.slideMenuController()?.removeRightGestures()
-    //        self.slideMenuController()?.addLeftGestures()
-    //        self.slideMenuController()?.addRightGestures()
-    //    }
     
-    //    func leftWillOpen() {
-    //
-    //        let storyboard = UIStoryboard(name: "Messages", bundle: nil)
-    //        let messagesTableVC = storyboard.instantiateViewControllerWithIdentifier("")
-    //        self.navigationController?.pushViewController(messagesTableVC, animated: true)
-    //        self.slideMenuController()?.closeLeft()
-    //    }
-    
-    
-    //    func setUpSearchBar() {
-    //        var index:Int?
-    ////        let searchBarView = self.subviews[0]
-    //
-    //        for i in 0 ..< searchBar.subviews.count {
-    //            print(i)
-    //            if searchBar.subviews[i].isKindOfClass(UITextField) {
-    //                index = i
-    //                print(i)
-    //                break
-    //            }
-    //        }
-    //
-    //        let searchFeild = searchBar.subviews[index!] as! UITextField
-    //
-    //        searchFeild.backgroundColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
-    //
-    //
-    //
-    //    }
-    
-    
-    //    @IBAction func mockExamButtonPressed(sender: AnyObject) {
-    //
-    //        alert.showTempAlert(self)
-    //    }
-    //
-    //    @IBAction func courseButtonClick(sender: AnyObject) {
-    //        alert.showTempAlert(self)
-    //    }
-//    @IBAction func selfExamButtonPressed(sender: AnyObject) {
-//        
-//        alert.showTempAlert(self)
-//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

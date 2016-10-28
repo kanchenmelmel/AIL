@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yoz-IM-NgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yoz-IM-NgN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -12,7 +12,7 @@
                 <viewControllerPlaceholder storyboardName="BeiKaoGongLue" referencedIdentifier="BeiKaoGongLueTableVC" id="5om-ZF-r0u" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymr-TX-Qak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2322" y="-277"/>
+            <point key="canvasLocation" x="2562" y="-16"/>
         </scene>
         <!--SelfTestDBViewController-->
         <scene sceneID="mx6-xf-xr1">
@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="1011" y="423"/>
         </scene>
-        <!--考试神器-->
+        <!--PTE备考神器-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,8 +64,8 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-Ri-jZ6" customClass="HomeMainButton" customModule="AIL" customModuleProvider="target">
                                                         <state key="normal" title="Button"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="beikao"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="备考攻略"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pte"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="PTE素材资料"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="align" value="right"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="5"/>
@@ -78,7 +78,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="5om-ZF-r0u" kind="show" id="Wad-DT-mJv"/>
+                                                            <segue destination="Ng3-6s-FB9" kind="show" id="law-Ba-zZu"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -143,7 +143,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="align" value="center"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="PTE素材资料"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="备考攻略"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="70"/>
                                             </userDefinedRuntimeAttribute>
@@ -159,10 +159,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="pte"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="beikao"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Ng3-6s-FB9" kind="show" id="BJf-fJ-zel"/>
+                                            <segue destination="5om-ZF-r0u" kind="show" id="pKK-Ei-4Lf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -199,7 +199,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PTELiveCell" id="5Z5-kC-hI6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
+                                        <rect key="frame" x="0.0" y="7" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -207,16 +207,19 @@
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-0X-Yce">
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PTELiveCellButton" translatesAutoresizingMaskIntoConstraints="NO" id="2zZ-jM-PgV"/>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE考试直播论坛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-iG-qpk">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PTELiveCellButton" translatesAutoresizingMaskIntoConstraints="NO" id="2zZ-jM-PgV">
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE考试内容回忆与分享" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-iG-qpk">
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                                            <color key="textColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.14509803921568626" green="0.48627450980392156" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="qjG-0X-Yce" firstAttribute="centerX" secondItem="5Z5-kC-hI6" secondAttribute="centerX" id="eBS-VS-czL"/>
                                             <constraint firstItem="qjG-0X-Yce" firstAttribute="centerY" secondItem="5Z5-kC-hI6" secondAttribute="centerY" id="su5-v9-cFI"/>
@@ -227,7 +230,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="208" width="287" height="169"/>
+                                        <rect key="frame" x="297" y="7" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -269,7 +272,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPostCell" id="3aG-XG-aY6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="415.5" width="287" height="169"/>
+                                        <rect key="frame" x="594" y="7" width="287" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="169"/>
@@ -363,7 +366,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="考试神器" id="83X-wQ-yVC"/>
+                    <navigationItem key="navigationItem" title="PTE备考神器" id="83X-wQ-yVC"/>
                     <connections>
                         <outlet property="collectionView" destination="cpW-4n-mFY" id="xJW-To-faq"/>
                         <segue destination="YNd-PP-dOb" kind="show" identifier="showPostWebViewSegue" id="tkx-vb-b37"/>
@@ -524,7 +527,7 @@
                 <viewControllerPlaceholder storyboardName="SubjectResources" referencedIdentifier="SubjectResourcesTableVC" id="Ng3-6s-FB9" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0T-9h-nwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2470" y="97"/>
+            <point key="canvasLocation" x="2573" y="183"/>
         </scene>
         <!--AllPostsTableVC-->
         <scene sceneID="vmw-uv-2hO">
@@ -539,9 +542,10 @@
             <objects>
                 <navigationController storyboardIdentifier="mainNavCtrl" automaticallyAdjustsScrollViewInsets="NO" id="yoz-IM-NgN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sDT-lq-SeK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sDT-lq-SeK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -702,7 +706,7 @@
             </objects>
             <point key="canvasLocation" x="748" y="1316"/>
         </scene>
-        <!--PTE考试直播论坛-->
+        <!--PTE考试内容回忆与分享-->
         <scene sceneID="Heb-Rt-7aM">
             <objects>
                 <viewController id="FJM-uR-bq7" customClass="PTELiveForumWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
@@ -734,7 +738,7 @@
                             <constraint firstItem="VUG-OC-XUQ" firstAttribute="top" secondItem="fn5-4d-ccK" secondAttribute="top" id="yql-yo-9rX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PTE考试直播论坛" id="JFs-gs-lk1">
+                    <navigationItem key="navigationItem" title="PTE考试内容回忆与分享" id="JFs-gs-lk1">
                         <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="6qh-bM-WwZ">
                             <connections>
                                 <action selector="activityButtonClick:" destination="FJM-uR-bq7" id="rlQ-wn-IPM"/>
@@ -811,13 +815,13 @@
         <image name="RewardAccount" width="14" height="13"/>
         <image name="TopIcon" width="87" height="89"/>
         <image name="baokao" width="40" height="40"/>
-        <image name="beikao" width="35" height="36"/>
+        <image name="beikao" width="46" height="48"/>
         <image name="jijing" width="44" height="35"/>
         <image name="lianxi" width="47" height="40"/>
         <image name="messagesButton" width="14" height="14"/>
         <image name="mokao" width="34" height="36"/>
         <image name="peixun" width="40" height="40"/>
-        <image name="pte" width="52" height="49"/>
+        <image name="pte" width="39" height="37"/>
         <image name="zice" width="33" height="36"/>
     </resources>
     <color key="tintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>

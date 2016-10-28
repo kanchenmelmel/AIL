@@ -20,7 +20,7 @@ class LastCollectionViewCell: UICollectionViewCell {
         layer.shadowColor = UIColor.grayColor().CGColor
         layer.shadowOffset = CGSizeZero
         layer.masksToBounds = false
-        self.backgroundColor = UIColor.whiteColor()
+        //self.backgroundColor = UIColor.whiteColor()
         
         
 //        postImage.layer.cornerRadius = 10

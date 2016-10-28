@@ -101,7 +101,7 @@ class SelfTestDBViewController: UIViewController {
         self.selectedButtonItemIndex = itemIndex
         buttonItems![itemIndex].1 += 1
         self.countButtonClick(buttonItems![itemIndex].0.rawValue, value: buttonItems![itemIndex].1)
-        self.performSegueWithIdentifier("showTestListSegue", sender: self)
+        self.performSegueWithIdentifier("showTestWebViewSegue", sender: self)
     }
     
     func setUpButtons(){
@@ -155,7 +155,7 @@ class SelfTestDBViewController: UIViewController {
 //    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showTestListSegue" {
+        if segue.identifier == "showTestWebViewSegue" {
             let destnationVC = segue.destinationViewController as! SelTestDBTableViewController
 
             
@@ -175,7 +175,7 @@ class SelfTestDBViewController: UIViewController {
             
         }
         if segue.identifier == "radomTestSegue" {
-            let destinationVC = segue.destinationViewController as! SelTestDBTableViewController
+            let destinationVC = segue.destinationViewController as! SelfTestDBWebViewController
             destinationVC.categoryId = 166
             destinationVC.navigationItem.title = "随机出题"
         }
