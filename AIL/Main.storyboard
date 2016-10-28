@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="896" y="740"/>
         </scene>
-        <!--View Controller-->
+        <!--PTE备考神器-->
         <scene sceneID="2zG-nT-2TC">
             <objects>
                 <tableViewController id="kei-gU-Qwh" customClass="ViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,11 +37,11 @@
                         <sections>
                             <tableViewSection id="LKn-hG-tzs">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="169" id="aMo-xj-qBP">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="169"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="177" id="aMo-xj-qBP">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="177"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="aMo-xj-qBP" id="lZA-SA-CCU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rti-6f-BtI">
@@ -58,7 +58,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PTELiveCell" id="pco-6r-gZS" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PTELiveCell" id="pco-6r-gZS" customClass="PTELiveCollectionViewCell" customModule="AIL" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="7" width="287" height="169"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -168,11 +168,11 @@
                                                     </cells>
                                                 </collectionView>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Rti-6f-BtI" secondAttribute="bottom" id="PKd-c4-r8a"/>
+                                                <constraint firstAttribute="bottom" secondItem="Rti-6f-BtI" secondAttribute="bottom" constant="4" id="PKd-c4-r8a"/>
                                                 <constraint firstAttribute="trailing" secondItem="Rti-6f-BtI" secondAttribute="trailing" id="Uvm-Kk-Ack"/>
-                                                <constraint firstItem="Rti-6f-BtI" firstAttribute="top" secondItem="lZA-SA-CCU" secondAttribute="top" id="ghU-63-9dF"/>
+                                                <constraint firstItem="Rti-6f-BtI" firstAttribute="top" secondItem="lZA-SA-CCU" secondAttribute="top" constant="4" id="ghU-63-9dF"/>
                                                 <constraint firstItem="Rti-6f-BtI" firstAttribute="leading" secondItem="lZA-SA-CCU" secondAttribute="leading" id="hxh-vY-2Fo"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -182,7 +182,7 @@
                             <tableViewSection id="3cN-LG-hpr">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="192" id="TIS-DV-mR3">
-                                        <rect key="frame" x="0.0" y="212" width="375" height="192"/>
+                                        <rect key="frame" x="0.0" y="220" width="375" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TIS-DV-mR3" id="4sk-q9-bTV">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="192"/>
@@ -233,6 +233,9 @@
                                                                             <real key="value" value="12"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <segue destination="Ng3-6s-FB9" kind="show" id="Iaf-h9-ten"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -275,6 +278,9 @@
                                                                             <real key="value" value="12"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <segue destination="F2h-Yu-gaf" kind="show" id="f1V-mw-Ttp"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -336,7 +342,7 @@
                             <tableViewSection id="kgE-4K-UFb">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="geg-74-7eh">
-                                        <rect key="frame" x="0.0" y="412" width="375" height="88"/>
+                                        <rect key="frame" x="0.0" y="420" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="geg-74-7eh" id="Fl5-fX-V7F">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
@@ -370,7 +376,7 @@
                                                                 <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="联系我们"/>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
-                                                                <segue destination="ROi-LE-Hhd" kind="show" id="GqX-3c-iwg"/>
+                                                                <segue destination="ROi-LE-Hhd" kind="show" identifier="showAboutAILVC" id="GqX-3c-iwg"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEx-NZ-rKP" customClass="HomeViewBottomButton" customModule="AIL" customModuleProvider="target">
@@ -410,7 +416,7 @@
                             <outlet property="delegate" destination="kei-gU-Qwh" id="t8t-XS-Ptt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="M95-Z0-DMB"/>
+                    <navigationItem key="navigationItem" title="PTE备考神器" id="M95-Z0-DMB"/>
                     <connections>
                         <outlet property="collectionView" destination="Rti-6f-BtI" id="JLm-8E-JRS"/>
                         <segue destination="YNd-PP-dOb" kind="show" identifier="showPostWebViewSegue" id="W95-K7-zuz"/>
@@ -580,7 +586,7 @@
                 <viewControllerPlaceholder storyboardName="SubjectResources" referencedIdentifier="SubjectResourcesTableVC" id="Ng3-6s-FB9" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0T-9h-nwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2573" y="183"/>
+            <point key="canvasLocation" x="2200" y="213"/>
         </scene>
         <!--AllPostsTableVC-->
         <scene sceneID="vmw-uv-2hO">

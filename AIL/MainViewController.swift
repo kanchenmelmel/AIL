@@ -125,7 +125,7 @@ class ViewController: UITableViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            return collectionView.dequeueReusableCellWithReuseIdentifier("PTELiveCell", forIndexPath: indexPath) as! LastCollectionViewCell
+            return collectionView.dequeueReusableCellWithReuseIdentifier("PTELiveCell", forIndexPath: indexPath) as! PTELiveCollectionViewCell
         } else if indexPath.row <= self.featurePosts.count {
             if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCell", forIndexPath: indexPath) as? PostCollectionViewCell{
                 cell.backgroundColor = UIColor.whiteColor()
