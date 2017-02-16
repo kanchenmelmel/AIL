@@ -9,11 +9,12 @@
 import UIKit
 import NVActivityIndicatorView
 
-class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
+
+class CourseTrainingViewController: UIViewController, UIWebViewDelegate, NVActivityIndicatorViewable {
 
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var segmentedControl: CustomizedSegmentedControl!
-    private var pageViewController:UIPageViewController?
+    fileprivate var pageViewController:UIPageViewController?
     
     
 //    @IBOutlet weak var courseIntroDesLabel: UILabel!
@@ -34,17 +35,17 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
 
     
     
-    let dayUrl = NSURL(string:DAY_CLASS_URL)
-    let vipUrl = NSURL(string:VIP_CLASS_URL)
-    let weekendUrl = NSURL(string:WEEKEND_CLASS_URL)
-    let questionUrl = NSURL(string:QUESTION_CLASS_URL)
+    let dayUrl = URL(string:DAY_CLASS_URL)
+    let vipUrl = URL(string:VIP_CLASS_URL)
+    let weekendUrl = URL(string:WEEKEND_CLASS_URL)
+    let questionUrl = URL(string:QUESTION_CLASS_URL)
 
     var controllers = [CourseWebViewController]()
     var thePage = CourseWebViewController()
 
     
     var loading = false
-    var timer:NSTimer? = nil
+    var timer:Timer? = nil
     
 //    let activityIndicatorView = NVActivityIndicatorView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2.0 - 50,UIScreen.mainScreen().bounds.height/2.0 - 50,100.0,100.0), type: .BallPulse, color: UIColor.tintColor(), padding: 10.0)
     
@@ -66,7 +67,7 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
         self.view.addGestureRecognizer(swipeGestureRight)
         
         
-        self.segmentedControl.addTarget(self, action: #selector(segmentedValueChanged(_:)), forControlEvents: .ValueChanged)
+        self.segmentedControl.addTarget(self, action: #selector(segmentedValueChanged(_:)), for: .valueChanged)
         
     
         webView.delegate = self
@@ -81,37 +82,37 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         startAnimating()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         stopAnimating()
     }
     
     
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         applyCSSToUIWebView(webView)
         stopAnimating()
         loading = false
     }
     
-    func loadWebView(url: NSURL){
+    func loadWebView(_ url: URL){
         
-        let request = NSMutableURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 10.0)
-        webView.loadRequest(request as NSURLRequest)
+        let request = NSMutableURLRequest(url: url, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10.0)
+        webView.loadRequest(request as URLRequest)
         
     }
     
     /// Handle gesture action swipe to left
     ///
     /// - parameter gesture:swipeGestureLeft
-    func handleGestureLeft(gesture:UIGestureRecognizer) {
+    func handleGestureLeft(_ gesture:UIGestureRecognizer) {
         if segmentedControl.selectedIndex < 2 {
             print("swipe left")
             segmentedControl.selectedIndex += 1
             segmentedControl.displayNewSelectedIndex()
-            segmentedControl.sendActionsForControlEvents(.ValueChanged)
+            segmentedControl.sendActions(for: .valueChanged)
         }
         
     }
@@ -119,16 +120,16 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate {
     /// Handle gesture action swipe to Right
     ///
     /// - parameter gesture: swipeGestureRight
-    func handleGestureRight(gesture:UIGestureRecognizer) {
+    func handleGestureRight(_ gesture:UIGestureRecognizer) {
         if segmentedControl.selectedIndex > 0 {
             print("swipe right")
             segmentedControl.selectedIndex -= 1
             segmentedControl.displayNewSelectedIndex()
-            segmentedControl.sendActionsForControlEvents(.ValueChanged)
+            segmentedControl.sendActions(for: .valueChanged)
         }
     }
     
-    func segmentedValueChanged(sender:AnyObject?) {
+    func segmentedValueChanged(_ sender:AnyObject?) {
         if segmentedControl.selectedIndex == 0 {
 
             loadWebView(weekendUrl!)

@@ -36,7 +36,7 @@ class CustomizedSearchBar: UISearchBar {
         
         for i in 0 ..< searchBarView.subviews.count {
             print(i)
-            if searchBarView.subviews[i].isKindOfClass(UITextField) {
+            if searchBarView.subviews[i].isKind(of: UITextField.self) {
                 index = i
                 print(i)
                 break

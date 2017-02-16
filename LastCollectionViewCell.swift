@@ -14,11 +14,11 @@ class LastCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 10
         clipsToBounds = true
         //layer.borderWidth = 1
-        layer.borderColor = UIColor.clearColor().CGColor
+        layer.borderColor = UIColor.clear.cgColor
         layer.shadowOpacity = 0.2
         layer.shadowRadius = 3
-        layer.shadowColor = UIColor.grayColor().CGColor
-        layer.shadowOffset = CGSizeZero
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowOffset = CGSize.zero
         layer.masksToBounds = false
         //self.backgroundColor = UIColor.whiteColor()
         

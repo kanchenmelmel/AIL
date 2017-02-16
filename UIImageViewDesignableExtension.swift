@@ -12,7 +12,7 @@ import UIKit
 
 
 extension UIImageView {
-    
+    /*
     @IBInspectable
     var cornerRadius:CGFloat {
         get {
@@ -23,11 +23,12 @@ extension UIImageView {
             layer.masksToBounds = newValue != 0
         }
     }
+    */
 }
 
 @IBDesignable class RoundedButton:UIButton { }
 
-extension UIButton{
+extension UIView {
     
     @IBInspectable
     var cornerRadius:CGFloat {

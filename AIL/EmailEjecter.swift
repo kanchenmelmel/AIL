@@ -19,23 +19,23 @@ struct Email {
 
 class EmailEjector {
     
-    private enum BodyType {
-        case HTML
-        case TEXT
+    fileprivate enum BodyType {
+        case html
+        case text
     }
     
-    private static let DOMAIN = "www.melmel.com.au";
+    fileprivate static let DOMAIN = "www.melmel.com.au";
     
-    private class func url(bodyType: BodyType) -> String {
+    fileprivate class func url(_ bodyType: BodyType) -> String {
         switch bodyType {
-        case .HTML:
+        case .html:
             return "http://\(DOMAIN)/wp-content/plugins/mailgun-rest/html.php"
-        case .TEXT:
+        case .text:
             return "http://\(DOMAIN)/wp-content/plugins/mailgun-rest/text.php"
         }
     }
     
-    private class func eject_email(type type: BodyType, email: Email) -> (Response<AnyObject, NSError> -> Void) -> Void {
+    fileprivate class func eject_email(type: BodyType, email: Email) -> (@escaping (DataResponse<Any>) -> Void) -> Void {
         let parameters = [
             "from": email.from,
             "to":  email.to,
@@ -44,20 +44,21 @@ class EmailEjector {
         ]
         return { callback in
             Alamofire.request(
-                .POST,
                 url(type),
+                method: .post,
                 parameters: parameters,
-                encoding: ParameterEncoding.JSON
+                encoding: JSONEncoding.default,
+                headers: nil
             ).responseJSON(completionHandler: callback)
         }
     }
     
-    class func eject(email email: Email) -> (Response<AnyObject, NSError> -> Void) -> Void {
-        return eject_email(type: .TEXT, email: email);
+    class func eject(email: Email) -> (@escaping (DataResponse<Any>) -> Void) -> Void {
+        return eject_email(type: .text, email: email);
     }
     
-    class func ejectHTMLEmail(email email: Email) -> (Response<AnyObject, NSError> -> Void) -> Void {
-        return eject_email(type: .HTML, email: email);
+    class func ejectHTMLEmail(email: Email) -> (@escaping (DataResponse<Any>) -> Void) -> Void {
+        return eject_email(type: .html, email: email);
     }
 }
 

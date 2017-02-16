@@ -9,13 +9,13 @@
 import Foundation
 
 enum PostCategory {
-    case SubjectResource
-    case None
+    case subjectResource
+    case none
 }
 
 //a class that identify the correct category for a discount post
 class PosttCatagoryRecognizer{
-    static func recognizeCatagory ( catagoryId:Int,postType:EntityType) -> PostCategory {
+    static func recognizeCatagory ( _ catagoryId:Int,postType:EntityType) -> PostCategory {
         if postType == .Archive {
             let subjectResources = [159]
 //            let fashionTypes = [280,532,306,300,533,1206,654,383,585]
@@ -24,7 +24,7 @@ class PosttCatagoryRecognizer{
 //            let shoppomgTypes = [17,1201]
             print("cat ID is \(catagoryId)")
             if subjectResources.contains(catagoryId){
-                return .SubjectResource
+                return .subjectResource
             }
 //            if fashionTypes.contains(catagoryId){
 //                return DiscountCatagory.fashion
@@ -38,6 +38,6 @@ class PosttCatagoryRecognizer{
 //            if shoppomgTypes.contains(catagoryId){
 //                return DiscountCatagory.shoppingds  //            }
         }
-        return .None
+        return .none
     }
 }

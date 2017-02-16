@@ -10,13 +10,39 @@ import UIKit
 import SlideMenuControllerSwift
 import CoreData
 import EAIntroView
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SlideMenuControllerDelegate,UISearchBarDelegate {
     
     
     
+    @IBOutlet weak var jiJingButton: UIButton!
     var introView:EAIntroView?
     var rootView:UIView?
+    
     
     var leftButtonIndex = 0
     
@@ -26,7 +52,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     
-    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     
     var featurePosts = [Post]()
     
@@ -36,7 +62,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     let alert = Alert()
     
-    var timer:NSTimer? = nil
+    var timer:Timer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +74,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         //        self.setNavigationBarItem()
         //        let searchBar = searchController.searchBar
-        searchController.searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Normal)
-        searchController.searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), forState: .Selected)
+        searchController.searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), for: UIControlState())
+        searchController.searchBar.setSearchFieldBackgroundImage(UIImage(named: "SearchTextFieldBK"), for: .selected)
         
         //        if let index = searchBar.indexofSear
         
         //        setUpSearchBar()
         
-        searchController.searchBar.barTintColor = UIColor.whiteColor()
+        searchController.searchBar.barTintColor = UIColor.white
         //        self.searchBar.backgroundColor = UIColor(red: 242.0, green: 242.0, blue: 242.0, alpha: 1.0)
         //        self.searchBar.tintColor = UIColor(red: 68.0, green: 120.0, blue: 180.0, alpha: 1.0)
         self.navigationItem.titleView = searchController.searchBar
@@ -88,19 +114,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.setUpTableViewImageCoordinator()
         }
         
-        if !NSUserDefaults.standardUserDefaults().boolForKey("hasSeenIntroduction") {
+        if !UserDefaults.standard.bool(forKey: "hasSeenIntroduction") {
             self.setupIntroPages()
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasSeenIntroduction")
+            UserDefaults.standard.set(true, forKey: "hasSeenIntroduction")
         }
         
         
-        
+        jiJingButton.addTarget(self, action: #selector(ViewController.presentJiJingViewController(_:)), for: .touchUpInside)
     }
     
     
+    func presentJiJingViewController(_ sender:UIButton!) {
+        let storyboard = UIStoryboard(name: "ZuiQuanJiJing", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ZuiQuanJiJing")
+        self.navigationController?.pushViewController(controller, animated: true)
+        //self.present(controller, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(UIViewController(nibName: "JiJingViewController", bundle: nil), animated: true)
+    }
     
-    
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         //        self.setNavigationBarItem()
         
         
@@ -123,12 +155,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            return collectionView.dequeueReusableCellWithReuseIdentifier("PTELiveCell", forIndexPath: indexPath) as! LastCollectionViewCell
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "PTELiveCell", for: indexPath) as! LastCollectionViewCell
         } else if indexPath.row <= self.featurePosts.count {
-            if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCell", forIndexPath: indexPath) as? PostCollectionViewCell{
-                cell.backgroundColor = UIColor.whiteColor()
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as? PostCollectionViewCell{
+                cell.backgroundColor = UIColor.white
                 
                 print ("123123: \(self.featurePosts.count)")
                 
@@ -139,17 +171,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
                 if featurePost.featuredImageUrl != nil {
                     
-                    cell.postImage.contentMode = .ScaleAspectFill
+                    cell.postImage.contentMode = .scaleAspectFill
                     
                     let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row - 1]
                     cell.postImage.image = imageRecord.image
                     
                     switch (imageRecord.state) {
-                    case .New, .Downloaded:
+                    case .new, .downloaded:
                         
                         self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
                             // self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-                            self.collectionView.reloadItemsAtIndexPaths([indexPath])
+                            self.collectionView.reloadItems(at: [indexPath])
                         })
                     default:
                         print("Do Nothing for loading cell image \(indexPath.row - 1)")
@@ -159,7 +191,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
                 else{
                     
-                    cell.postImage.contentMode = .ScaleAspectFit
+                    cell.postImage.contentMode = .scaleAspectFit
                     cell.postImage.image = featurePost.featuredImage
                     
                 }
@@ -171,30 +203,30 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 return UICollectionViewCell()
             }
         } else {
-            return collectionView.dequeueReusableCellWithReuseIdentifier("allPostCell", forIndexPath: indexPath) as! LastCollectionViewCell
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "allPostCell", for: indexPath) as! LastCollectionViewCell
         }
     }
     
     func setUpTableViewImageCoordinator(){
         for post in featurePosts {
             if post.featuredImageUrl != nil{
-                let featuredImageURLString = post.featuredImageUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
-                let imageRecord = ImageRecord(name: "", url: NSURL(string: featuredImageURLString!)!)
+                let featuredImageURLString = post.featuredImageUrl!.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)
+                let imageRecord = ImageRecord(name: "", url: URL(string: featuredImageURLString!)!)
                 self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
             }
         }
     }
     
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //TODO Goes to another view controller
         if indexPath.row == featurePosts.count + 1 {
-            self.performSegueWithIdentifier("allPostVC", sender: nil)
+            self.performSegue(withIdentifier: "allPostVC", sender: nil)
         }
         else if indexPath.row != 0{
             let featurePost = featurePosts[indexPath.row - 1]
             
-            self.performSegueWithIdentifier("showPostWebViewSegue", sender: featurePost)
+            self.performSegue(withIdentifier: "showPostWebViewSegue", sender: featurePost)
         }
         
     }
@@ -203,29 +235,29 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.featurePosts.count + 2
     }
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = true
     }
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.showsCancelButton = false
     }
     
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showAboutAILVC" {
-            let destinationVC = segue.destinationViewController as! AboutAILViewController
+            let destinationVC = segue.destination as! AboutAILViewController
             destinationVC.showLeftPanelButton = false
         }
         
@@ -236,7 +268,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             if let selectedPost = sender as? Post{
                 
-                let destinationVC = segue.destinationViewController as! WebViewController
+                let destinationVC = segue.destination as! WebViewController
                 destinationVC.post = selectedPost
                 destinationVC.urlString = selectedPost.link
                 destinationVC.titleString = selectedPost.title
@@ -253,19 +285,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         rootView = self.navigationController?.view
         introView = EAIntroView(frame: rootView!.bounds, andPages: [page1,page2,page3])
         
-        let startButton = page3.pageView.viewWithTag(1) as! UIButton
+        let startButton = page3?.pageView.viewWithTag(1) as! UIButton
         
-        startButton.addTarget(self, action: #selector(buttonClicked), forControlEvents: .TouchUpInside)
+        startButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
         
        // UIButton startButton = page3.pageView.viewWithTag(1)
         introView!.skipButton.alpha = 0
-        introView!.skipButton.enabled = false
+        introView!.skipButton.isEnabled = false
         introView!.tapToNext = true
-        introView!.showInView(rootView, animateDuration: 0.3)
+        introView!.show(in: rootView, animateDuration: 0.3)
     }
     
     func buttonClicked(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(self.introAnimation), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(self.introAnimation), userInfo: nil, repeats: true)
     
         //self.introView?.removeFromSuperview()
         

@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-public class Archive: NSManagedObject {
+open class Archive: NSManagedObject {
 
 }

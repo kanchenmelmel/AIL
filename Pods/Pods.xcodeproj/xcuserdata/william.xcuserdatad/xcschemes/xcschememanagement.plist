@@ -6,78 +6,113 @@
 	<dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>AlamofireImage.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>AlamofireNetworkActivityIndicator.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>EAIntroView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>EARestrictedScrollView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>M13PDFKit-M13PDFKitResources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>M13PDFKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-AIL.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SlideMenuControllerSwift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TTOpenInAppActivity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>010764490D3B629691EEDE556CE52273</key>
+		<key>115FA0D867E07C04838493890DBD8D29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>05094CC4A047119F7ADC14EE74C4881C</key>
+		<key>1B129E72057B5477EA759BFDFA9D488E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>228FFC4E78F899B58C33C57F31513A8E</key>
+		<key>2ACB8D966C01167BFA9FD4B6A23D0D9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2301595FA3F5FD8FB1986E7344CD09DD</key>
+		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65294A25C1E8B2FF63948FBCA82E0135</key>
+		<key>58AAD2C9E898747F2F4ABF348E6325F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>594013F336E9839810CAB9013859422A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9552782AE994A52D7B53715F4CEF6F77</key>
+		<key>822DA31A6A34C7EF41E1EC7A5EF8FC2F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DFF3807C73577AF30BAD603D2CFF557</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5B5801237D2D82B74261248E7C26C91</key>
+		<key>BA99DDAC73B1ED8E4B1629164038D9C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D592663DC02DDB734EB89853EEBE2F6D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7370040C04EADB101B663AD4EDB88FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

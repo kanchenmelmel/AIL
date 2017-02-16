@@ -9,7 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class UserMessageVC: UITableViewController {
+class UserMessageVC: UITableViewController, NVActivityIndicatorViewable {
 
     
     var userMessages = [Message]()
@@ -51,12 +51,12 @@ class UserMessageVC: UITableViewController {
         }
     
         self.refreshControl = UIRefreshControl()
-        self.refreshControl!.backgroundColor = UIColor.clearColor()
+        self.refreshControl!.backgroundColor = UIColor.clear
         self.refreshControl!.tintColor = hexStringToUIColor("#00B2EE")
-        self.refreshControl!.addTarget(self, action: #selector(self.updateMessages), forControlEvents: .ValueChanged)
+        self.refreshControl!.addTarget(self, action: #selector(self.updateMessages), for: .valueChanged)
         
     }
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         // Initialize the refresh control
 //        refresher = UIRefreshControl()
 //        refresher.addTarget(self, action: #selector(self.updateMessages), forControlEvents: .ValueChanged)
@@ -65,7 +65,7 @@ class UserMessageVC: UITableViewController {
 //        self.tableView.addSubview(refresher)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         stopAnimating()
     }
     
@@ -75,18 +75,18 @@ class UserMessageVC: UITableViewController {
     }
     
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return userMessages.count
     }
 
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 //<<<<<<< HEAD
@@ -99,7 +99,7 @@ class UserMessageVC: UITableViewController {
 //        if editingStyle == .Delete {
     
 //=======
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if (indexPath.row == userMessages.count-1) && !isLoading{
             isLoading = true
             
@@ -120,8 +120,8 @@ class UserMessageVC: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("userMessageCell", forIndexPath: indexPath) as! UserMessageCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userMessageCell", for: indexPath) as! UserMessageCell
         
         let message = userMessages[indexPath.row]
 
@@ -129,9 +129,9 @@ class UserMessageVC: UITableViewController {
         cell.titleLbael.text = message.title
         cell.subtitleLabel.text = message.content
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .MediumStyle
-        cell.dateLabel.text = "\(dateFormatter.stringFromDate(message.date!).uppercaseString)" + " "
+        let dateFormatter = Foundation.DateFormatter()
+        dateFormatter.dateStyle = .medium
+        cell.dateLabel.text = "\(dateFormatter.string(from: message.date! as Date).uppercased())" + " "
         
         var messageIcon: UIImage?
         if message.viewed == true {
@@ -146,7 +146,7 @@ class UserMessageVC: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let message = userMessages[indexPath.row]
         
         message.setValue(true, forKey: "viewed")
@@ -154,21 +154,21 @@ class UserMessageVC: UITableViewController {
         CoreDataOperation.saveManagedObjectContext()
         
         self.tableView.reloadData()
-        self.performSegueWithIdentifier("messageVC", sender: message)
+        self.performSegue(withIdentifier: "messageVC", sender: message)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "messageVC" {
             if let message = sender as? Message{
-                let destnatinationVC = segue.destinationViewController as! MessageVC
+                let destnatinationVC = segue.destination as! MessageVC
                 destnatinationVC.message = message
             
             }
         }
     }
 
-    @IBAction func CloseButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func CloseButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func updateMessages(){
@@ -181,19 +181,19 @@ class UserMessageVC: UITableViewController {
         
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+    func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+            cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))
         }
         
         if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
+            return UIColor.gray
         }
         
         var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
+        Scanner(string: cString).scanHexInt32(&rgbValue)
         
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,

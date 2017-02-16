@@ -13,10 +13,10 @@ extension UIViewController {
     
     
     
-    func showActionSheet(title:String?, message:String?,items:[(String,() -> Void)]?,cancleButtonTitle:String?){
-        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+    func showActionSheet(_ title:String?, message:String?,items:[(String,() -> Void)]?,cancleButtonTitle:String?){
+        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         
-        let cancleAction = UIAlertAction(title: cancleButtonTitle, style: .Cancel) { (action) in
+        let cancleAction = UIAlertAction(title: cancleButtonTitle, style: .cancel) { (action) in
             
         }
         
@@ -24,18 +24,18 @@ extension UIViewController {
         
         if items != nil {
             for item in items! {
-                let actionObject = UIAlertAction(title: item.0, style: .Default, handler: { (action) in
+                let actionObject = UIAlertAction(title: item.0, style: .default, handler: { (action) in
                     item.1()
                 })
                 actionSheet.addAction(actionObject)
             }
         }
-        self.presentViewController(actionSheet, animated: true, completion: nil)
+        self.present(actionSheet, animated: true, completion: nil)
         
     }
     
     
-    func rightTopBarButtonItemAction(post:Post){
+    func rightTopBarButtonItemAction(_ post:Post){
         typealias actionClosure = ()-> Void
         
         // Add Share Action
@@ -48,11 +48,11 @@ extension UIViewController {
         }))
         
         items.append(("分享",{() -> Void in
-            let url = NSURL(string: post.link!)
+            let url = URL(string: post.link!)
             print("Test3")
             let icon = UIImage(named: "WechatShare")
             let activityViewController = UIActivityViewController(activityItems: [post.title!,url!,icon!], applicationActivities: nil)
-            self.navigationController?.presentViewController(activityViewController, animated: true, completion: {
+            self.navigationController?.present(activityViewController, animated: true, completion: {
                 
             })
         }))
@@ -60,7 +60,7 @@ extension UIViewController {
     }
     
     
-    func archivePost(post:Post) {
+    func archivePost(_ post:Post) {
        // let postId = Int(post.id!)
         
             let archive = CoreDataOperation.createArchiveObject()
@@ -79,37 +79,38 @@ extension UIViewController {
     }
     
     
-    func applyCSSToUIWebView(webView:UIWebView) {
+    func applyCSSToUIWebView(_ webView:UIWebView) {
         let cssString = "#Top_bar,.post-nav,footer,header {display:none;}"
         let javascriptString = "var style = document.createElement('style'); style.innerHTML = '%@'; document.head.appendChild(style)"
         let javascriptWithCssString = String(format: javascriptString, cssString)
-        webView.stringByEvaluatingJavaScriptFromString(javascriptWithCssString)
+        webView.stringByEvaluatingJavaScript(from: javascriptWithCssString)
         
     }
     
-    func showStandardAlert(title:String?,message:String?,okAction:(() -> Void)?,cancleAction:(() -> Void)?) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let cancleAction = UIAlertAction(title: "取消", style: .Cancel) { (action) in
+    func showStandardAlert(_ title:String?,message:String?,okAction:(() -> Void)?,cancleAction:(() -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancleAction = UIAlertAction(title: "取消", style: .cancel) { (action) in
             if cancleAction?() != nil {
                 cancleAction!()
             }
         }
-        let okAction = UIAlertAction(title: "确定", style: .Default) { (action) in
+        let okAction = UIAlertAction(title: "确定", style: .default) { (action) in
             if okAction?() != nil {
                 okAction!()
             }
         }
         alert.addAction(okAction)
         alert.addAction(cancleAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
-extension UIViewController:NVActivityIndicatorViewable {
+
+extension NVActivityIndicatorViewable where Self: UIViewController {
     
 //    var activityIndicator:NVActivityIndicatorView?
-    func startAnimating() {
-        startAnimating(CGSizeMake(50, 50), message: "努力加载中……", type: .BallPulse, color: UIColor.tintColor(), padding: 0)
+    public final func startAnimating() {
+        self.startAnimating(CGSize(width: 50, height: 50), message: "努力加载中……", messageFont: nil, type: .ballPulse, color: UIColor.tintColor(), padding: 0, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: nil)
     }
     
     

@@ -6,11 +6,13 @@ target 'AIL' do
   use_frameworks!
 
   # Pods for AIL
-pod 'SlideMenuControllerSwift'
-pod 'SwiftyJSON'
-pod 'Alamofire', '~> 3.5’
+  pod 'SlideMenuControllerSwift', '~> 3.0'
+  pod 'SwiftyJSON', '~> 3.1'
+  pod 'Alamofire', '~> 4.3'
+  pod 'AlamofireNetworkActivityIndicator', '~> 2.0'
+  pod 'EAIntroView', '~> 2.9.0'
+  pod 'NVActivityIndicatorView', '~> 3.0'
 
-pod 'AlamofireNetworkActivityIndicator'
-pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :branch => 'swift2.3'
-pod 'EAIntroView', '~> 2.9.0'
+  source 'https://github.com/CocoaPods/Specs.git'
+  pod 'M13PDFKit', '1.0.2'
 end

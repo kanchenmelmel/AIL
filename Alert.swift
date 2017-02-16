@@ -12,16 +12,16 @@ import UIKit
 
 class Alert {
     
-    func showAlert(viewcontroller: UITableViewController) -> Void{
+    func showAlert(_ viewcontroller: UITableViewController) -> Void{
         
         let attributedString = NSAttributedString(string: "请检查你的网络", attributes: [
-            NSFontAttributeName : UIFont.systemFontOfSize(20),
-            NSForegroundColorAttributeName : UIColor.whiteColor()
+            NSFontAttributeName : UIFont.systemFont(ofSize: 20),
+            NSForegroundColorAttributeName : UIColor.white
             ])
         
   
-        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .Alert)
-        viewcontroller.presentViewController(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .alert)
+        viewcontroller.present(alertController, animated: true, completion: nil)
         alertController.setValue(attributedString, forKey: "attributedMessage")
         
         
@@ -32,22 +32,22 @@ class Alert {
         
         
         let delay = 2.0 * Double(NSEC_PER_SEC)
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        dispatch_after(time, dispatch_get_main_queue(), {
-            alertController.dismissViewControllerAnimated(true, completion: nil)
+        let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time, execute: {
+            alertController.dismiss(animated: true, completion: nil)
         })
     }
     
-    func showTempAlert(viewcontroller: UIViewController) -> Void{
+    func showTempAlert(_ viewcontroller: UIViewController) -> Void{
         
         let attributedString = NSAttributedString(string: "此选项暂未开通", attributes: [
-            NSFontAttributeName : UIFont.systemFontOfSize(20),
+            NSFontAttributeName : UIFont.systemFont(ofSize: 20),
             NSForegroundColorAttributeName : hexStringToUIColor("#3299CC")
             ])
         
         
-        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .Alert)
-        viewcontroller.presentViewController(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .alert)
+        viewcontroller.present(alertController, animated: true, completion: nil)
         alertController.setValue(attributedString, forKey: "attributedMessage")
         
         
@@ -58,21 +58,21 @@ class Alert {
         
         
         let delay = 1.0 * Double(NSEC_PER_SEC)
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        dispatch_after(time, dispatch_get_main_queue(), {
-            alertController.dismissViewControllerAnimated(true, completion: nil)
+        let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time, execute: {
+            alertController.dismiss(animated: true, completion: nil)
         })
     }
     
-    func showArchivedSuccessfullyAlert(viewController: UIViewController) {
+    func showArchivedSuccessfullyAlert(_ viewController: UIViewController) {
         let attributedString = NSAttributedString(string: "收藏成功", attributes: [
-            NSFontAttributeName : UIFont.systemFontOfSize(20),
+            NSFontAttributeName : UIFont.systemFont(ofSize: 20),
             NSForegroundColorAttributeName : hexStringToUIColor("#3299CC")
             ])
         
         
-        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .Alert)
-        viewController.presentViewController(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .alert)
+        viewController.present(alertController, animated: true, completion: nil)
         alertController.setValue(attributedString, forKey: "attributedMessage")
         
         
@@ -83,32 +83,32 @@ class Alert {
         
         
         let delay = 1.0 * Double(NSEC_PER_SEC)
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        dispatch_after(time, dispatch_get_main_queue(), {
-            alertController.dismissViewControllerAnimated(true, completion: nil)
+        let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time, execute: {
+            alertController.dismiss(animated: true, completion: nil)
         })
     }
     
-    func showLoadingAlertController(viewController:UIViewController) {
-        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
-        let loadingAlertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+    func showLoadingAlertController(_ viewController:UIViewController) {
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        let loadingAlertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
         activityIndicatorView.center = loadingAlertController.view.center
         
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+    func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+            cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))
         }
         
         if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
+            return UIColor.gray
         }
         
         var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
+        Scanner(string: cString).scanHexInt32(&rgbValue)
         
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,

@@ -68,13 +68,13 @@ class HomeViewBottomButton: UIButton {
     func setUpButton(){
         
         self.frame.size.height = 87.5
-        buttonImgView.frame.size = CGSizeMake(41.0, 41.0)
-        buttonImgView.frame.origin = CGPointMake(self.frame.width / 2.0 - buttonImgView.frame.width / 2.0, 15.5)
-        buttonImgView.contentMode = .Center
+        buttonImgView.frame.size = CGSize(width: 41.0, height: 41.0)
+        buttonImgView.frame.origin = CGPoint(x: self.frame.width / 2.0 - buttonImgView.frame.width / 2.0, y: 15.5)
+        buttonImgView.contentMode = .center
         
-        buttonLabel.frame.size = CGSizeMake(45.5, 11.0)
-        buttonLabel.frame.origin = CGPointMake(self.frame.width / 2.0 - buttonLabel.frame.width / 2.0, 63.5)
-        buttonLabel.font = UIFont.systemFontOfSize(11.0)
+        buttonLabel.frame.size = CGSize(width: 45.5, height: 11.0)
+        buttonLabel.frame.origin = CGPoint(x: self.frame.width / 2.0 - buttonLabel.frame.width / 2.0, y: 63.5)
+        buttonLabel.font = UIFont.systemFont(ofSize: 11.0)
         
 //        stackView.addArrangedSubview(buttonImgView)
 //        stackView.addArrangedSubview(buttonLabel)

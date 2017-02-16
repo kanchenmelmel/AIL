@@ -15,8 +15,8 @@ extension Post {
 //        return NSFetchRequest<Post>(entityName: "Post");
 //    }
 
-    @NSManaged public var date: NSDate?
-    @NSManaged public var editDate: NSDate?
+    @NSManaged public var date: Date?
+    @NSManaged public var editDate: Date?
     @NSManaged public var featuredImageDownloadedToFileSys: NSNumber?
     @NSManaged public var featuredImageUrl: String?
     @NSManaged public var id: NSNumber?

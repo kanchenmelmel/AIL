@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-public class Category: NSManagedObject {
+open class Category: NSManagedObject {
 
 }

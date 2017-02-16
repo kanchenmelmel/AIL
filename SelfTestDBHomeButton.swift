@@ -59,14 +59,14 @@ class SelfTestDBHomeButton: UIButton {
     func setUpButton(){
         
 //        self.frame.size.height = 87.5
-        buttonImgView.frame.size = CGSizeMake(46, 50)
-        buttonImgView.frame.origin = CGPointMake(self.frame.width / 2.0 - buttonImgView.frame.width / 2.0, (self.frame.height-78)/2.0)
-        buttonImgView.contentMode = .Center
+        buttonImgView.frame.size = CGSize(width: 46, height: 50)
+        buttonImgView.frame.origin = CGPoint(x: self.frame.width / 2.0 - buttonImgView.frame.width / 2.0, y: (self.frame.height-78)/2.0)
+        buttonImgView.contentMode = .center
         
-        buttonLabel.frame.size = CGSizeMake(80, 13)
-        buttonLabel.frame.origin = CGPointMake(self.frame.width / 2.0 - buttonLabel.frame.width / 2.0, (self.frame.height-78)/2.0 + 65)
-        buttonLabel.font = UIFont.systemFontOfSize(13.0)
-        buttonLabel.textAlignment = .Center
+        buttonLabel.frame.size = CGSize(width: 80, height: 13)
+        buttonLabel.frame.origin = CGPoint(x: self.frame.width / 2.0 - buttonLabel.frame.width / 2.0, y: (self.frame.height-78)/2.0 + 65)
+        buttonLabel.font = UIFont.systemFont(ofSize: 13.0)
+        buttonLabel.textAlignment = .center
         self.layer.cornerRadius = 5.0
         
         

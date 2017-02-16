@@ -21,9 +21,9 @@ class MainButtonsContainer: UIView {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        backgroundColor = UIColor.redColor()
+        backgroundColor = UIColor.red
         for button in cornerButtons.values {
-            button.backgroundColor = UIColor.redColor()
+            button.backgroundColor = UIColor.red
             addSubview(button)
         }
         addSubview(centreButton)
@@ -31,7 +31,7 @@ class MainButtonsContainer: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         let (w, h) = ((frame.width - 10) / 2, (frame.height - 10) / 2);
         cornerButtons["top-left"]!.frame = CGRect(x: 0, y: 0, width: w, height: h)
         cornerButtons["top-right"]!.frame = CGRect(x: w + 10, y: 0, width: w, height: h)
@@ -44,20 +44,20 @@ class MainButtonsContainer: UIView {
         
         // render center circle buttons
         centreButton.frame =  CGRect(x: (frame.width - 141) / 2, y: (frame.height - 141) / 2, width: 141, height: 141)
-        centreButton.layer.borderColor = UIColor(red: 242 / 255, green: 242 / 255, blue: 242 / 255, alpha: 1).CGColor
+        centreButton.layer.borderColor = UIColor(red: 242 / 255, green: 242 / 255, blue: 242 / 255, alpha: 1).cgColor
         centreButton.layer.borderWidth = 10
-        centreButton.backgroundColor = UIColor.whiteColor()
+        centreButton.backgroundColor = UIColor.white
         centreButton.layer.cornerRadius = 141 / 2
         centreButton.clipsToBounds = true
         let image = UIImageView(image: UIImage(named: "pte.png"))
-        image.contentMode = .ScaleAspectFit
+        image.contentMode = .scaleAspectFit
         image.frame = CGRect(x: 0, y: 36.5, width: 141, height: 50)
         centreButton.addSubview(image)
         let label = UILabel(frame: CGRect(x: 0, y: 93, width: 141, height: 12))
         label.text = "PTE素材资料"
         label.textColor = UIColor(red: 70 / 255, green: 118 / 255, blue: 180 / 255, alpha: 1)
-        label.font = UIFont.systemFontOfSize(12)
-        label.textAlignment = .Center
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textAlignment = .center
         centreButton.addSubview(label)
     }
     
@@ -73,19 +73,19 @@ class MainButtonsContainer: UIView {
         "bottom-right": ButtonContent(image: "mokao.png",  text: "全真模考"),
     ]
     
-    func renderMainCornerButton(type: String, button: UIView, buttonWidth: CGFloat) {
-        button.backgroundColor = UIColor.whiteColor()
+    func renderMainCornerButton(_ type: String, button: UIView, buttonWidth: CGFloat) {
+        button.backgroundColor = UIColor.white
         button.layer.cornerRadius = 5
         let x = type == "top-left" || type == "bottom-left" ? 33 : buttonWidth - 83
         let image = UIImageView(frame: CGRect(x: x, y: 15, width: 50, height: 35))
-        image.contentMode = .ScaleAspectFit
+        image.contentMode = .scaleAspectFit
         image.image = UIImage(named: MainButtonsContent[type]!.image)
         button.addSubview(image)
         let label = UILabel(frame: CGRect(x: x, y: 63, width: 50, height: 12))
         label.text = MainButtonsContent[type]!.text
-        label.textColor = UIColor.blackColor()
-        label.font = UIFont.systemFontOfSize(12)
-        label.textAlignment = .Center
+        label.textColor = UIColor.black
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textAlignment = .center
         button.addSubview(label)
     }
 }

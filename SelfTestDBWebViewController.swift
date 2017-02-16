@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class SelfTestDBWebViewController: UIViewController,UIWebViewDelegate {
+class SelfTestDBWebViewController: UIViewController,UIWebViewDelegate, NVActivityIndicatorViewable {
     
     
     
@@ -28,7 +29,7 @@ class SelfTestDBWebViewController: UIViewController,UIWebViewDelegate {
     var urlString:String?
     
     var loading = false
-    var timer:NSTimer? = nil
+    var timer:Timer? = nil
     
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var webView: UIWebView!
@@ -49,14 +50,14 @@ class SelfTestDBWebViewController: UIViewController,UIWebViewDelegate {
             self.webView.delegate = self
             
             
-            self.urlString = self.post?.link?.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
+            self.urlString = self.post?.link?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)
             
 //            self.titleString = self.post?.title
-            let url = NSURL(string:self.urlString!)
+            let url = URL(string:self.urlString!)
             
-            let request = NSMutableURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 10.0)
+            let request = NSMutableURLRequest(url: url!, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10.0)
             //        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
-            self.webView.loadRequest(request as NSURLRequest)
+            self.webView.loadRequest(request as URLRequest)
             
         }
         
@@ -75,7 +76,7 @@ class SelfTestDBWebViewController: UIViewController,UIWebViewDelegate {
     
     
     
-    @IBAction func showActivityViewController(sender: AnyObject) {
+    @IBAction func showActivityViewController(_ sender: AnyObject) {
         
         
         //        let url = NSURL(string: urlString!)
@@ -96,15 +97,15 @@ class SelfTestDBWebViewController: UIViewController,UIWebViewDelegate {
     // Web View Start Load page
     
     
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         progressView.progress = 0
         loading = true
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01667, target: self, selector: #selector(self.updateProgressView), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01667, target: self, selector: #selector(self.updateProgressView), userInfo: nil, repeats: true)
         //        timer = NSTimer.scheduledTimer(timeInterval: 0.01667, target: self, selector: #selector(self.updateProgressView), userInfo: nil, repeats: true)
     }
     
     // Web View Finish Loading Page
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         //applyCSSToUIWebView(webView)
         loading = false
         self.stopAnimating()
@@ -121,13 +122,13 @@ class SelfTestDBWebViewController: UIViewController,UIWebViewDelegate {
             }
         }
         else {
-            progressView.hidden = true
+            progressView.isHidden = true
             timer?.invalidate()
         }
     }
     
     
-    func requestPosts(completionHandler:() -> Void) {
+    func requestPosts(_ completionHandler:@escaping () -> Void) {
         self.startAnimating()
         client.requestTestPostsByCategories(categoryId) { (posts) in
             

@@ -9,11 +9,11 @@
 import UIKit
 
 class PendingOperations {
-    lazy var downloadsInProgress = [NSIndexPath:NSOperation]()
+    lazy var downloadsInProgress = [IndexPath:Operation]()
     
     
-    lazy var downloadQueue:NSOperationQueue = {
-        var queue = NSOperationQueue()
+    lazy var downloadQueue:OperationQueue = {
+        var queue = OperationQueue()
         queue.name = "Download queue"
         queue.maxConcurrentOperationCount = 1
         return queue

@@ -21,10 +21,11 @@ class WordPressClient {
     
     
     // Request the latest 20 posts
-    func requestLatestTwentyPosts(completionHandler: ([Post]) -> Void) {
-        Alamofire.request(.GET, BASE_URL+RESOURSES + "?\(EXCLUDED_CAT_ARGUMENTS)", parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+    func requestLatestTwentyPosts(_ completionHandler: @escaping ([Post]) -> Void) {
+        
+        Alamofire.request(BASE_URL+RESOURSES + "?\(EXCLUDED_CAT_ARGUMENTS)").validate().responseJSON { (response) in
             switch response.result {
-            case .Success:
+            case .success:
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
                    // print (jsonArray)
@@ -33,19 +34,19 @@ class WordPressClient {
                     // Save Managed Object Context
                     CoreDataOperation.saveManagedObjectContext()
                 }
-            case .Failure: break
+            case .failure: break
             }
         }
         
     }
     
-    func requestLatestPostsByCategories(categoryId:Int, completionHandler: ([Post]) -> Void) {
+    func requestLatestPostsByCategories(_ categoryId:Int, completionHandler: @escaping ([Post]) -> Void) {
         //159
         let urlArguments = "?filter[posts_per_page]=-1&categories=\(categoryId)&\(EXCLUDED_CAT_ARGUMENTS)"
         print(BASE_URL+RESOURSES+urlArguments)
-        Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(BASE_URL+RESOURSES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
-            case .Success:
+            case .success:
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
                     // print (jsonArray)
@@ -55,7 +56,7 @@ class WordPressClient {
                     //CoreDataOperation.saveManagedObjectContext()
                     
                 }
-            case .Failure: break
+            case .failure: break
             }
         }
         
@@ -63,13 +64,13 @@ class WordPressClient {
         
     }
     
-    func requestTestPostsByCategories(categoryId:Int, completionHandler: ([Post]) -> Void) {
+    func requestTestPostsByCategories(_ categoryId:Int, completionHandler: @escaping ([Post]) -> Void) {
         //159
         let urlArguments = "?filter[posts_per_page]=-1&categories=\(categoryId)"
         print(BASE_URL+RESOURSES+urlArguments)
-        Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(BASE_URL+RESOURSES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
-            case .Success:
+            case .success:
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
                     // print (jsonArray)
@@ -79,7 +80,7 @@ class WordPressClient {
                     //CoreDataOperation.saveManagedObjectContext()
                     
                 }
-            case .Failure: break
+            case .failure: break
             }
         }
         
@@ -87,12 +88,12 @@ class WordPressClient {
         
     }
     
-    func requestAllPosts(completionHandler: ([Post]) -> Void) {
+    func requestAllPosts(_ completionHandler: @escaping ([Post]) -> Void) {
         let urlArguments = "?filter[posts_per_page]=-1&\(EXCLUDED_CAT_ARGUMENTS)"
         print(BASE_URL+RESOURSES+urlArguments)
-        Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(BASE_URL+RESOURSES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
-            case .Success:
+            case .success:
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
                     // print (jsonArray)
@@ -102,7 +103,7 @@ class WordPressClient {
                     //CoreDataOperation.saveManagedObjectContext()
                     
                 }
-            case .Failure: break
+            case .failure: break
             }
         }
         
@@ -111,7 +112,7 @@ class WordPressClient {
     }
     
     
-    func requestPreviousPosts(beforeDate: NSDate, excludeID: Int, completionHandler: ([Post]) -> Void) {
+    func requestPreviousPosts(_ beforeDate: Date, excludeID: Int, completionHandler: @escaping ([Post]) -> Void) {
         
         let dateFormatter = DateFormatter()
         let beforeDateString = dateFormatter.formatDateToDateString(beforeDate)
@@ -119,9 +120,9 @@ class WordPressClient {
         //let url = NSURL(string: "\(baseURIString)?before=\(beforeDateString)&exclude=\(excludeId)")
         let urlArguments = "?before=\(beforeDateString)&exclude=\(excludeID)"
         print("num: \(BASE_URL+RESOURSES+urlArguments)")
-        Alamofire.request(.GET, BASE_URL+RESOURSES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(BASE_URL+RESOURSES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
-            case .Success:
+            case .success:
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
                     // print (jsonArray)
@@ -131,7 +132,7 @@ class WordPressClient {
                     CoreDataOperation.saveManagedObjectContext()
                     
                 }
-            case .Failure: break
+            case .failure: break
             }
         }
         
@@ -139,12 +140,12 @@ class WordPressClient {
         
     }
     
-    func requestAllMessages(completionHandler: ([Message]) -> Void) {
+    func requestAllMessages(_ completionHandler: @escaping ([Message]) -> Void) {
         //let urlArguments = "?filter[posts_per_page]=50"
        // print(BASE_URL+RESOURSES+urlArguments)
-        Alamofire.request(.GET, MESSAGES_URL+MESSAGES_RESOURCES, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(MESSAGES_URL+MESSAGES_RESOURCES).validate().responseJSON { (response) in
             switch response.result {
-            case .Success:
+            case .success:
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
                     // print (jsonArray)
@@ -156,7 +157,7 @@ class WordPressClient {
                     CoreDataOperation.saveManagedObjectContext()
                     
                 }
-            case .Failure: break
+            case .failure: break
             }
         }
         
@@ -166,7 +167,7 @@ class WordPressClient {
     }
     
     
-    func requestPreviousMessages(beforeDate: NSDate, excludeID: Int, completionHandler: ([Message]) -> Void) {
+    func requestPreviousMessages(_ beforeDate: Date, excludeID: Int, completionHandler: @escaping ([Message]) -> Void) {
         
         let dateFormatter = DateFormatter()
         let beforeDateString = dateFormatter.formatDateToDateString(beforeDate)
@@ -174,9 +175,9 @@ class WordPressClient {
         //let url = NSURL(string: "\(baseURIString)?before=\(beforeDateString)&exclude=\(excludeId)")
         let urlArguments = "?before=\(beforeDateString)&exclude=\(excludeID)"
         print("num: \(MESSAGES_URL+MESSAGES_RESOURCES+urlArguments)")
-        Alamofire.request(.GET, MESSAGES_URL+MESSAGES_RESOURCES+urlArguments, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+        Alamofire.request(MESSAGES_URL+MESSAGES_RESOURCES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
-            case .Success:
+            case .success:
                 if let value = response.result.value {
                     let jsonArray = JSON(value)
                     // print (jsonArray)
@@ -186,7 +187,7 @@ class WordPressClient {
                     CoreDataOperation.saveManagedObjectContext()
                     
                 }
-            case .Failure: break
+            case .failure: break
             }
         }
         

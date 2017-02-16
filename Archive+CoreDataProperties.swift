@@ -15,7 +15,7 @@ extension Archive {
 //        return NSFetchRequest<Archive>(entityName: "Archive");
 //    }
 
-    @NSManaged public var archiveDate: NSDate?
+    @NSManaged public var archiveDate: Date?
     @NSManaged public var excerpt: String?
     @NSManaged public var link: String?
     @NSManaged public var postId: NSNumber?

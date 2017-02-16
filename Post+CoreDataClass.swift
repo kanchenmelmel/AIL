@@ -10,9 +10,9 @@ import UIKit
 import CoreData
 
 enum PhotoRecordState {
-    case New, Downloaded, Failed
+    case new, downloaded, failed
 }
-public class Post: NSManagedObject {
+open class Post: NSManagedObject {
     var featuredImage : UIImage?
-    var featuredLoadingImageState : PhotoRecordState = .New
+    var featuredLoadingImageState : PhotoRecordState = .new
 }

@@ -10,12 +10,12 @@ import UIKit
 import CoreData
 
 class CoreDataOperation {
-    static func checkIdExist(id:Int,entityType:EntityType) -> Bool {
+    static func checkIdExist(_ id:Int,entityType:EntityType) -> Bool {
         
         
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        let request = NSFetchRequest()
-        request.entity = NSEntityDescription.entityForName(entityType.rawValue, inManagedObjectContext: managedObjectContext)
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+        let request = NSFetchRequest<NSFetchRequestResult>()
+        request.entity = NSEntityDescription.entity(forEntityName: entityType.rawValue, in: managedObjectContext)
         //request.resultType = .CountResultType
         
         // Set up predicate
@@ -25,7 +25,7 @@ class CoreDataOperation {
         
         var count = 0
         do {
-            count = try managedObjectContext.countForFetchRequest(request)
+            count = try managedObjectContext.count(for: request)
         } catch {
             print("There is error when fetch data count from core data")
         }
@@ -42,11 +42,11 @@ class CoreDataOperation {
     /* 
      This Function returns the latest date of edit date of all posts in Core Data
      */
-    static func getRecentEditDateForPost() -> NSDate?{
-        let fetchRequest = NSFetchRequest()
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        fetchRequest.entity = NSEntityDescription.entityForName(EntityType.Post.rawValue, inManagedObjectContext: managedObjectContext)
-        fetchRequest.resultType = .DictionaryResultType
+    static func getRecentEditDateForPost() -> Date?{
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+        fetchRequest.entity = NSEntityDescription.entity(forEntityName: EntityType.Post.rawValue, in: managedObjectContext)
+        fetchRequest.resultType = .dictionaryResultType
         
         
         // Setup Expression
@@ -57,16 +57,16 @@ class CoreDataOperation {
         let latestUpdateDateExpressionDescription = NSExpressionDescription()
         latestUpdateDateExpressionDescription.name = "latestUpdateDate"
         latestUpdateDateExpressionDescription.expression = latestUpdateDateExpression
-        latestUpdateDateExpressionDescription.expressionResultType = .DateAttributeType
+        latestUpdateDateExpressionDescription.expressionResultType = .dateAttributeType
         
         // Setup Fetch Request
         
         fetchRequest.propertiesToFetch = [latestUpdateDateExpressionDescription]
         do {
-            let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest)
+            let fetchResults = try managedObjectContext.fetch(fetchRequest)
             
-            if fetchResults[0].valueForKey("latestUpdateDate") != nil {
-                let latestUpdateDate = fetchResults[0].valueForKey("latestUpdateDate") as! NSDate
+            if (fetchResults[0] as AnyObject).value(forKey: "latestUpdateDate") != nil {
+                let latestUpdateDate = (fetchResults[0] as AnyObject).value(forKey: "latestUpdateDate") as! Date
                 return latestUpdateDate
             }
         } catch{}
@@ -76,7 +76,7 @@ class CoreDataOperation {
     }
     
     static func saveManagedObjectContext() {
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         do{
             try managedObjectContext.save()
         } catch {
@@ -85,15 +85,15 @@ class CoreDataOperation {
     }
     
     static func fetchResourcesPostFromCoreData() -> [Post]?{
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         
-        let resourcePostFetchRequest = NSFetchRequest(entityName: EntityType.Post.rawValue)
+        let resourcePostFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: EntityType.Post.rawValue)
         
         let dateSort = NSSortDescriptor(key: "date", ascending: false)
         resourcePostFetchRequest.sortDescriptors=[dateSort]
         
         do {
-            let objects = try managedObjectContext.executeFetchRequest(resourcePostFetchRequest) as! [Post]
+            let objects = try managedObjectContext.fetch(resourcePostFetchRequest) as! [Post]
             return objects
             
             
@@ -106,15 +106,15 @@ class CoreDataOperation {
     
     
     static func fetchAllMessagesFromCoreData() -> [Message]?{
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         
-        let messageFetchRequest = NSFetchRequest(entityName: EntityType.Message.rawValue)
+        let messageFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: EntityType.Message.rawValue)
         
         let dateSort = NSSortDescriptor(key: "date", ascending: false)
         messageFetchRequest.sortDescriptors=[dateSort]
         
         do {
-            let objects = try managedObjectContext.executeFetchRequest(messageFetchRequest) as! [Message]
+            let objects = try managedObjectContext.fetch(messageFetchRequest) as! [Message]
             return objects
             
             
@@ -126,15 +126,15 @@ class CoreDataOperation {
     }
     
     static func fetchAllArchivesFromCoreData() ->[Archive]? {
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         
-        let archiveFetchRequest = NSFetchRequest(entityName: EntityType.Archive.rawValue)
+        let archiveFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: EntityType.Archive.rawValue)
         
         let dateSort = NSSortDescriptor(key: "archiveDate", ascending: false)
         archiveFetchRequest.sortDescriptors=[dateSort]
         
         do {
-            let objects = try managedObjectContext.executeFetchRequest(archiveFetchRequest) as! [Archive]
+            let objects = try managedObjectContext.fetch(archiveFetchRequest) as! [Archive]
             return objects
             
             
@@ -145,18 +145,18 @@ class CoreDataOperation {
     }
     
     static func createArchiveObject() -> Archive{
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         
-        let archive = Archive(entity: NSEntityDescription.entityForName("Archive", inManagedObjectContext: managedObjectContext)!, insertIntoManagedObjectContext: managedObjectContext)
+        let archive = Archive(entity: NSEntityDescription.entity(forEntityName: "Archive", in: managedObjectContext)!, insertInto: managedObjectContext)
         
-        archive.archiveDate = NSDate()
+        archive.archiveDate = Date()
         return archive
     }
     
-    static func deleteManagedObjectFromCoreData(objectToDelete:NSManagedObject){
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    static func deleteManagedObjectFromCoreData(_ objectToDelete:NSManagedObject){
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         
-        managedObjectContext.deleteObject(objectToDelete)
+        managedObjectContext.delete(objectToDelete)
         do {
             try managedObjectContext.save()
         } catch {
@@ -165,13 +165,13 @@ class CoreDataOperation {
     }
     
     
-    static func checkMessagePostIdExist(postId:Int) -> Bool {
+    static func checkMessagePostIdExist(_ postId:Int) -> Bool {
         
         
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        let request = NSFetchRequest()
-        request.entity = NSEntityDescription.entityForName(EntityType.Message.rawValue, inManagedObjectContext: managedObjectContext)
-        request.resultType = .CountResultType
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+        let request = NSFetchRequest<NSFetchRequestResult>()
+        request.entity = NSEntityDescription.entity(forEntityName: EntityType.Message.rawValue, in: managedObjectContext)
+        request.resultType = .countResultType
         
         // Set up predicate
         let predicate = NSPredicate(format: "postId = %@", "\(postId)")
@@ -180,7 +180,7 @@ class CoreDataOperation {
         
         var count = 0
         do {
-            let result = try managedObjectContext.executeFetchRequest(request)
+            let result = try managedObjectContext.fetch(request)
             count = result.count
         } catch {
             print("There is error when fetch data count from core data")
@@ -193,15 +193,15 @@ class CoreDataOperation {
         
     }
     
-    static func buildRandomPost(id:Int,title:String,excerpt:String,date:NSDate,link:String) -> Post {
+    static func buildRandomPost(_ id:Int,title:String,excerpt:String,date:Date,link:String) -> Post {
         
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         
-        let postDescription = NSEntityDescription.entityForName(EntityType.Post.rawValue, inManagedObjectContext: managedObjectContext)
+        let postDescription = NSEntityDescription.entity(forEntityName: EntityType.Post.rawValue, in: managedObjectContext)
         
-        let post = Post(entity: postDescription!, insertIntoManagedObjectContext: nil)
+        let post = Post(entity: postDescription!, insertInto: nil)
         
-        post.id = id
+        post.id = id as NSNumber?
         post.title = title
         post.date = date
         post.excerpt = excerpt

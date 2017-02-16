@@ -16,7 +16,7 @@ extension Message {
 //        return NSFetchRequest<Message>(entityName: "Message");
 //    }
 
-    @NSManaged public var date: NSDate?
+    @NSManaged public var date: Date?
     @NSManaged public var featureImageDownloaded: NSNumber?
     @NSManaged public var featureImageUrl: String?
     @NSManaged public var id: NSNumber?

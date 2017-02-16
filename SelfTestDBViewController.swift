@@ -59,30 +59,30 @@ class SelfTestDBViewController: UIViewController {
     }
     
 
-    @IBAction func button1Click(sender: AnyObject) {
+    @IBAction func button1Click(_ sender: AnyObject) {
         buttonClickActionForButtonItem(0)
     }
 
-    @IBAction func button2Click(sender: AnyObject) {
+    @IBAction func button2Click(_ sender: AnyObject) {
         buttonClickActionForButtonItem(1)
     }
 
 
-    @IBAction func button3Click(sender: AnyObject) {
+    @IBAction func button3Click(_ sender: AnyObject) {
         buttonClickActionForButtonItem(2)
     }
     
     
-    @IBAction func button4Click(sender: AnyObject) {
+    @IBAction func button4Click(_ sender: AnyObject) {
         buttonClickActionForButtonItem(3)
     }
 
 
-    @IBAction func button5Click(sender: AnyObject) {
+    @IBAction func button5Click(_ sender: AnyObject) {
         buttonClickActionForButtonItem(4)
     }
     
-    @IBAction func button6Click(sender: AnyObject) {
+    @IBAction func button6Click(_ sender: AnyObject) {
         buttonClickActionForButtonItem(5)
     }
     
@@ -97,18 +97,18 @@ class SelfTestDBViewController: UIViewController {
     }
     */
     
-    func buttonClickActionForButtonItem(itemIndex:Int) {
+    func buttonClickActionForButtonItem(_ itemIndex:Int) {
         self.selectedButtonItemIndex = itemIndex
         buttonItems![itemIndex].1 += 1
         self.countButtonClick(buttonItems![itemIndex].0.rawValue, value: buttonItems![itemIndex].1)
-        self.performSegueWithIdentifier("showTestWebViewSegue", sender: self)
+        self.performSegue(withIdentifier: "showTestWebViewSegue", sender: self)
     }
     
     func setUpButtons(){
         
         
         let unSortedButtonItems = retireveButtonCountData()
-        buttonItems = unSortedButtonItems.sort({$0.1>$1.1})
+        buttonItems = unSortedButtonItems.sorted(by: {$0.1>$1.1})
         
         
         button1.labelText = buttonItems![0].0.rawValue
@@ -142,21 +142,21 @@ class SelfTestDBViewController: UIViewController {
 
     }
     
-    func countButtonClick(button:String,value:Int) {
-        NSUserDefaults.standardUserDefaults().setInteger(value, forKey: button)
+    func countButtonClick(_ button:String,value:Int) {
+        UserDefaults.standard.set(value, forKey: button)
         
     }
-    func getUserDefaultsValueForKey(key:String) -> Int {
-        return NSUserDefaults.standardUserDefaults().integerForKey(key)
+    func getUserDefaultsValueForKey(_ key:String) -> Int {
+        return UserDefaults.standard.integer(forKey: key)
     }
     
 //    func sortButtonItemsArray(oldItems:[(ButtonType,Int)]) -> [(ButtonType,Int)]{
 //        return oldItems.sortInPlace({$0.1>$1.1})
 //    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTestWebViewSegue" {
-            let destnationVC = segue.destinationViewController as! SelTestDBTableViewController
+            let destnationVC = segue.destination as! SelTestDBTableViewController
 
             
             let buttonType = buttonItems![selectedButtonItemIndex].0
@@ -175,13 +175,13 @@ class SelfTestDBViewController: UIViewController {
             
         }
         if segue.identifier == "radomTestSegue" {
-            let destinationVC = segue.destinationViewController as! SelfTestDBWebViewController
+            let destinationVC = segue.destination as! SelfTestDBWebViewController
             destinationVC.categoryId = 166
             destinationVC.navigationItem.title = "随机出题"
         }
     }
     
-    func getCateIdByItemIndex (index:Int) {
+    func getCateIdByItemIndex (_ index:Int) {
         
     }
 

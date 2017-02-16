@@ -13,11 +13,11 @@ import CoreData
 class JSONParser {
     
     
-    static func parseJSONDictionaryToPostManagedObject(checkIfExistInCoreData:Bool,ifInsertIntoManagedContext:Bool,jsonArray:JSON) -> [Post]{
+    static func parseJSONDictionaryToPostManagedObject(_ checkIfExistInCoreData:Bool,ifInsertIntoManagedContext:Bool,jsonArray:JSON) -> [Post]{
         
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         
-        let postDescription = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
+        let postDescription = NSEntityDescription.entity(forEntityName: "Post", in: managedObjectContext)
         
         var managedObjectContextToBeInserted:NSManagedObjectContext? = managedObjectContext
         
@@ -32,70 +32,70 @@ class JSONParser {
            // print ("Jason is \(index)")
             if checkIfExistInCoreData {
                 if !CoreDataOperation.checkIdExist(jsonArray[index]["id"].int!, entityType: .Post){
-                    let post = Post(entity: postDescription!, insertIntoManagedObjectContext: managedObjectContextToBeInserted)
-                    if jsonArray[index]["id"].isExists() {
-                        post.id = jsonArray[index]["id"].int
+                    let post = Post(entity: postDescription!, insertInto: managedObjectContextToBeInserted)
+                    if jsonArray[index]["id"].exists() {
+                        post.id = jsonArray[index]["id"].number
                     }
-                    if jsonArray[index]["title"].isExists() {
+                    if jsonArray[index]["title"].exists() {
                         post.title = jsonArray[index]["title"].stringValue
                     }
-                    if jsonArray[index]["link"].isExists() {
+                    if jsonArray[index]["link"].exists() {
                         post.link = jsonArray[index]["link"].stringValue
                     }
-                    if jsonArray[index]["date"].isExists() {
+                    if jsonArray[index]["date"].exists() {
                         let dateFormatter = DateFormatter()
                         post.date = dateFormatter.formatDateStringToMelTime(jsonArray[index]["date"].stringValue)
                     }
-                    if jsonArray[index]["thumbnail_url"].isExists() {
+                    if jsonArray[index]["thumbnail_url"].exists() {
                         post.thumbnailUrl = jsonArray[index]["thumbnail_url"].stringValue
                     }
-                    if jsonArray[index]["featured_image_url"].isExists() {
+                    if jsonArray[index]["featured_image_url"].exists() {
                         post.featuredImageUrl = jsonArray[index]["featured_image_url"].stringValue
                     }
-                    if jsonArray[index]["status"].isExists() {
+                    if jsonArray[index]["status"].exists() {
                         post.status = jsonArray[index]["status"].stringValue
                     }
-                    if jsonArray[index]["editdate"].isExists() {
+                    if jsonArray[index]["editdate"].exists() {
                         let dateFormatter = DateFormatter()
                         post.editDate = dateFormatter.formatDateStringToMelTime(jsonArray[index]["editdate"].stringValue)
                     }
-                    if jsonArray[index]["excerpt"].isExists() {
+                    if jsonArray[index]["excerpt"].exists() {
                         post.excerpt = jsonArray[index]["excerpt"].stringValue
                     }
                     posts.append(post)
                     
                 }
             } else {
-                let post = Post(entity: postDescription!, insertIntoManagedObjectContext: managedObjectContextToBeInserted)
-                if jsonArray[index]["id"].isExists() {
-                    post.id = jsonArray[index]["id"].int
+                let post = Post(entity: postDescription!, insertInto: managedObjectContextToBeInserted)
+                if jsonArray[index]["id"].exists() {
+                    post.id = jsonArray[index]["id"].number
                 }
-                if jsonArray[index]["title"].isExists() {
+                if jsonArray[index]["title"].exists() {
                     post.title = jsonArray[index]["title"].stringValue
                 }
-                if jsonArray[index]["link"].isExists() {
+                if jsonArray[index]["link"].exists() {
                     post.link = jsonArray[index]["link"].stringValue
                 }
-                if jsonArray[index]["date"].isExists() {
+                if jsonArray[index]["date"].exists() {
                     let dateFormatter = DateFormatter()
                     post.date = dateFormatter.formatDateStringToMelTime(jsonArray[index]["date"].stringValue)
                 }
-                if jsonArray[index]["thumbnail_url"].isExists() {
+                if jsonArray[index]["thumbnail_url"].exists() {
                     post.thumbnailUrl = jsonArray[index]["thumbnail_url"].stringValue
                 }
-                if jsonArray[index]["featured_image_url"].isExists() {
+                if jsonArray[index]["featured_image_url"].exists() {
 //                    let url = jsonArray[index]["featured_image_url"].stringValue
 //                    post.featuredImageUrl = url
                     post.featuredImageUrl = jsonArray[index]["featured_image_url"].stringValue
                 }
-                if jsonArray[index]["status"].isExists() {
+                if jsonArray[index]["status"].exists() {
                     post.status = jsonArray[index]["status"].stringValue
                 }
-                if jsonArray[index]["editdate"].isExists() {
+                if jsonArray[index]["editdate"].exists() {
                     let dateFormatter = DateFormatter()
                     post.editDate = dateFormatter.formatDateStringToMelTime(jsonArray[index]["editdate"].stringValue)
                 }
-                if jsonArray[index]["excerpt"].isExists() {
+                if jsonArray[index]["excerpt"].exists() {
                     post.excerpt = jsonArray[index]["excerpt"].stringValue
                 }
                 posts.append(post)
@@ -107,11 +107,11 @@ class JSONParser {
     
     
     
-    static func parseJSONDictionaryToMessageManagedObject(checkIfExistInCoreData:Bool,ifInsertIntoManagedContext:Bool,jsonArray:JSON) -> [Message]{
+    static func parseJSONDictionaryToMessageManagedObject(_ checkIfExistInCoreData:Bool,ifInsertIntoManagedContext:Bool,jsonArray:JSON) -> [Message]{
         
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         
-        let messageDescription = NSEntityDescription.entityForName("Message", inManagedObjectContext: managedObjectContext)
+        let messageDescription = NSEntityDescription.entity(forEntityName: "Message", in: managedObjectContext)
         
         var managedObjectContextToBeInserted:NSManagedObjectContext? = managedObjectContext
         
@@ -126,18 +126,18 @@ class JSONParser {
         for index in 0...jsonArray.count-1 {
             if checkIfExistInCoreData {
                 if !CoreDataOperation.checkIdExist(jsonArray[index]["id"].int!, entityType: .Message){
-                    let message = Message(entity: messageDescription!, insertIntoManagedObjectContext: managedObjectContextToBeInserted)
-                    if jsonArray[index]["id"].isExists() {
-                        message.id = jsonArray[index]["id"].int
+                    let message = Message(entity: messageDescription!, insertInto: managedObjectContextToBeInserted)
+                    if jsonArray[index]["id"].exists() {
+                        message.id = jsonArray[index]["id"].number
                     }
-                    if jsonArray[index]["title"].isExists() {
+                    if jsonArray[index]["title"].exists() {
                         message.title = jsonArray[index]["title"].stringValue
                     }
-                    if jsonArray[index]["date"].isExists() {
+                    if jsonArray[index]["date"].exists() {
                         let dateFormatter = DateFormatter()
                         message.date = dateFormatter.formatDateStringToMelTime(jsonArray[index]["date"].stringValue)
                     }
-                    if jsonArray[index]["content"].isExists() {
+                    if jsonArray[index]["content"].exists() {
                         message.content = jsonArray[index]["content"].stringValue
                     }
                     message.viewed = false
@@ -146,18 +146,18 @@ class JSONParser {
                     
                 }
             } else {
-                let message = Message(entity: messageDescription!, insertIntoManagedObjectContext: managedObjectContextToBeInserted)
-                if jsonArray[index]["id"].isExists() {
-                    message.id = jsonArray[index]["id"].int
+                let message = Message(entity: messageDescription!, insertInto: managedObjectContextToBeInserted)
+                if jsonArray[index]["id"].exists() {
+                    message.id = jsonArray[index]["id"].number
                 }
-                if jsonArray[index]["title"].isExists() {
+                if jsonArray[index]["title"].exists() {
                     message.title = jsonArray[index]["title"].stringValue
                 }
-                if jsonArray[index]["date"].isExists() {
+                if jsonArray[index]["date"].exists() {
                     let dateFormatter = DateFormatter()
                     message.date = dateFormatter.formatDateStringToMelTime(jsonArray[index]["date"].stringValue)
                 }
-                if jsonArray[index]["content"].isExists() {
+                if jsonArray[index]["content"].exists() {
                     message.content = jsonArray[index]["content"].stringValue
                 }
                 

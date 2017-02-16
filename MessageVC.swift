@@ -20,9 +20,9 @@ class MessageVC: UIViewController {
         // Do any additional setup after loading the view.
         titleLabel.text = message?.title
         subtitleLabel.text = message?.content
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .MediumStyle
-        dateLabel.text = "\(dateFormatter.stringFromDate((message?.date)!).uppercaseString)" + " "
+        let dateFormatter = Foundation.DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateLabel.text = "\(dateFormatter.string(from: (message?.date)! as Date).uppercased())" + " "
     }
 
     override func didReceiveMemoryWarning() {

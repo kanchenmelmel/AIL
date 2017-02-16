@@ -14,7 +14,7 @@ class HomeMainButton: UIButton {
     let image = UIImageView(frame: CGRect(x: 10, y: 15, width: 50, height: 35))
     let label = UILabel(frame: CGRect(x: 10, y: 63, width: 70, height: 12))
     
-    private var alignType = "left"
+    fileprivate var alignType = "left"
     @IBInspectable var align: String {
         get {
             return self.alignType
@@ -64,22 +64,22 @@ class HomeMainButton: UIButton {
     
 
     func initialize() {
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = UIColor.white
         if alignType == "center" {
             self.layer.cornerRadius = 70.5
             self.layer.borderWidth = 10
-            self.layer.borderColor = UIColor(red: 242 / 255, green: 242 / 255, blue: 242 / 255, alpha: 1).CGColor
+            self.layer.borderColor = UIColor(red: 242 / 255, green: 242 / 255, blue: 242 / 255, alpha: 1).cgColor
             label.textColor = UIColor(red: 70 / 255, green: 118 / 255, blue: 180 / 255, alpha: 1)
         } else {
             self.layer.cornerRadius = 5
             self.layer.borderWidth = 0
-            self.layer.borderColor = UIColor.clearColor().CGColor
-            label.textColor = UIColor.blackColor()
+            self.layer.borderColor = UIColor.clear.cgColor
+            label.textColor = UIColor.black
         }
         self.clipsToBounds = true
-        image.contentMode = .ScaleAspectFit
-        label.font = UIFont.systemFontOfSize(12)
-        label.textAlignment = .Center
+        image.contentMode = .scaleAspectFit
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textAlignment = .center
         
         self.addSubview(image)
         self.addSubview(label)
@@ -88,13 +88,15 @@ class HomeMainButton: UIButton {
     }
     
     func layout() {
+        //let IMAGE_W = 50
+        //let LABEL_W = 70
         if alignType == "center" {
             image.frame = CGRect(x: 0, y: 36.5, width: 141, height: 50)
             label.frame = CGRect(x: 0, y: 93, width: 141, height: 12)
         } else if alignType == "left" {
-            let x = (self.frame.width - 65 - 50) / 2
-            image.frame = CGRect(x: x, y: 15, width: 50, height: 35)
-            label.frame =  CGRect(x: x, y: 63, width: 50, height: 12)
+            let x = (self.frame.width - 65 - 80) / 2
+            image.frame = CGRect(x: x, y: 15, width: 80, height: 35)
+            label.frame =  CGRect(x: x, y: 63, width: 80, height: 12)
         } else {
             let x = (self.frame.width - 65 - 80) / 2 + 65
             image.frame = CGRect(x: (self.frame.width - 65 - 50) / 2 + 65, y: 15, width: 50, height: 35)

@@ -22,7 +22,7 @@ class ArchiveVCsTableViewController: UITableViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         self.setNavigationBarItem()
         
         archives = CoreDataOperation.fetchAllArchivesFromCoreData()!
@@ -34,12 +34,12 @@ class ArchiveVCsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
         if archives.count == 0 {
@@ -48,17 +48,17 @@ class ArchiveVCsTableViewController: UITableViewController {
         return archives.count
     }
     
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if archives.count == 0 {
-            return tableView.dequeueReusableCellWithIdentifier("noPostCell",forIndexPath: indexPath)
+            return tableView.dequeueReusableCell(withIdentifier: "noPostCell",for: indexPath)
         }
         
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("archiveCell", forIndexPath: indexPath) as! UserMessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "archiveCell", for: indexPath) as! UserMessageCell
         
         let archive = archives[indexPath.row]
         
@@ -66,9 +66,9 @@ class ArchiveVCsTableViewController: UITableViewController {
         cell.titleLbael.text = archive.postTitle
         cell.subtitleLabel.text = archive.excerpt
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .MediumStyle
-        cell.dateLabel.text = "\(dateFormatter.stringFromDate(archive.archiveDate!).uppercaseString)" + " "
+        let dateFormatter = Foundation.DateFormatter()
+        dateFormatter.dateStyle = .medium
+        cell.dateLabel.text = "\(dateFormatter.string(from: archive.archiveDate! as Date).uppercased())" + " "
         
         //var messageIcon: UIImage?
 //        if archive.viewed == true {
@@ -87,23 +87,23 @@ class ArchiveVCsTableViewController: UITableViewController {
     
     // Swipe to delete 
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         if archives.count == 0 {
             return false
         }
         return true
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             
             let archive = archives[indexPath.row]
             //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             CoreDataOperation.deleteManagedObjectFromCoreData(archive)
             
-            archives.removeAtIndex(indexPath.row)
+            archives.remove(at: indexPath.row)
             if archives.count != 0 {
-                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                tableView.deleteRows(at: [indexPath], with: .fade)
             }
             tableView.reloadData()
         }
@@ -157,11 +157,11 @@ class ArchiveVCsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)  {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "showArchiveWebVCSegue" {
-            let destinationVC = segue.destinationViewController as! ArchiveWebViewController
+            let destinationVC = segue.destination as! ArchiveWebViewController
             
             let index = self.tableView.indexPathForSelectedRow
             let archive = archives[index!.row]

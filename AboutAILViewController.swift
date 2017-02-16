@@ -23,7 +23,7 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sendMessageButton.addTarget(self, action: #selector(self.sendMessageButtonPressed), forControlEvents: .TouchUpInside)
+        sendMessageButton.addTarget(self, action: #selector(self.sendMessageButtonPressed), for: .touchUpInside)
         
         
         // Do any additional setup after loading the view.
@@ -46,8 +46,8 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
         let contact = self.contactTextField.text!
         let message = self.messageTextView.text!
         let emailAddress = emailTextField.text!
-        let loadingAlert = UIAlertController(title:"发送中……",message:nil,preferredStyle: .Alert)
-        self.presentViewController(loadingAlert, animated: true, completion: nil)
+        let loadingAlert = UIAlertController(title:"发送中……",message:nil,preferredStyle: .alert)
+        self.present(loadingAlert, animated: true, completion: nil)
         let email = Email(
             from: "Australian Institute of Language 用户反馈 <user-feedback.noreply@ail.vic.edu.au>",
             to: "Australian Institute of Language <pte@ail.vic.edu.au>", // TODO: Replace email address with: pte@ail.vic.edu.au
@@ -59,19 +59,19 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
             let alert = UIAlertController(
                 title: "发送成功",
                 message: "您的反馈已收到",
-                preferredStyle: UIAlertControllerStyle.Alert
+                preferredStyle: UIAlertControllerStyle.alert
             )
-            alert.addAction(UIAlertAction(title: "确认", style: UIAlertActionStyle.Default) { _ in
+            alert.addAction(UIAlertAction(title: "确认", style: UIAlertActionStyle.default) { _ in
                 print("done")
                 })
-            loadingAlert.dismissViewControllerAnimated(true, completion: nil)
-            self.presentViewController(alert, animated: true, completion: nil)
+            loadingAlert.dismiss(animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
         }
         
     }
     
-    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
         print("test")
         if text == "\n" {
@@ -83,19 +83,19 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
         }
     }
     
-    func textViewDidBeginEditing(textView: UITextView) {
+    func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == textFieldPlaceholder {
             textView.text = ""
         }
     }
     
-    func textViewDidEndEditing(textView: UITextView) {
+    func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text == "" {
             textView.text = textFieldPlaceholder
         }
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
@@ -115,12 +115,12 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
      Table cell Action
      */
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             
             showStandardAlert("请问您想拨打电话么？", message: "96708868", okAction: {
                 let phoneNumber = "tel://96708868"
-                UIApplication.sharedApplication().openURL(NSURL(string:phoneNumber)!)
+                UIApplication.shared.openURL(URL(string:phoneNumber)!)
                 }, cancleAction: nil)
             
         }
@@ -128,19 +128,19 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
             
             showStandardAlert("请问你想发送邮件么？", message: "pte@ail.vic.edu.au", okAction: { 
                 let email = "mailto://pte@ail.vic.edu.au"
-                UIApplication.sharedApplication().openURL(NSURL(string:email)!)
+                UIApplication.shared.openURL(URL(string:email)!)
                 }, cancleAction: nil)
             
         }
         if indexPath.section == 0 && indexPath.row == 2 {
-            let url = NSURL(string:
-                "comgooglemaps://?q=墨尔本无忧雅思培训学校&center=-37.8142814,144.96208969999998".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())!)
+            let url = URL(string:
+                "comgooglemaps://?q=墨尔本无忧雅思培训学校&center=-37.8142814,144.96208969999998".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)!)
 
             
 //             UIApplication.sharedApplication().openURL(url!)
-            if UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!) {
+            if UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!) {
                 showStandardAlert("请问你想打开Google Maps", message: "AIL", okAction: {
-                    UIApplication.sharedApplication().openURL(url!)
+                    UIApplication.shared.openURL(url!)
                     }, cancleAction: nil)
                 
             } else {
@@ -159,13 +159,13 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
     
     func checkFieldsEmpty() -> Bool {
         if self.nameTextField.text == "" || contactTextField.text == "" || emailTextField.text == "" || messageTextView.text == textFieldPlaceholder {
-            let alert = UIAlertController(title: "请输入相应表单信息。", message: nil, preferredStyle: .Alert)
-            let alertAction = UIAlertAction(title: "确定", style: .Default, handler: { (action) in
-                alert.dismissViewControllerAnimated(true, completion: nil)
+            let alert = UIAlertController(title: "请输入相应表单信息。", message: nil, preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
             })
             
             alert.addAction(alertAction)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
             return false
         }
         return true

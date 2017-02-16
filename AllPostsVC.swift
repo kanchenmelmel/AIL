@@ -9,7 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class AllPostsVC: UITableViewController{
+class AllPostsVC: UITableViewController, NVActivityIndicatorViewable {
 
     
     var allPosts = [Post]()
@@ -61,17 +61,17 @@ class AllPostsVC: UITableViewController{
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         // Initialize the refresh control
         refresher = UIRefreshControl()
-        refresher.addTarget(self, action: #selector(AllPostsVC.updatePosts), forControlEvents: .ValueChanged)
-        refresher.backgroundColor = UIColor.clearColor()
+        refresher.addTarget(self, action: #selector(AllPostsVC.updatePosts), for: .valueChanged)
+        refresher.backgroundColor = UIColor.clear
         refresher.tintColor = hexStringToUIColor("#00B2EE")
        // refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
         self.tableView.addSubview(refresher)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         stopAnimating()
     }
     
@@ -83,14 +83,14 @@ class AllPostsVC: UITableViewController{
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         print ("visiblePaths: \(tableView.indexPathsForVisibleRows)")
         
         
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allPosts.count
     }
     
@@ -98,14 +98,14 @@ class AllPostsVC: UITableViewController{
         //self.tableViewImageLoadingCoordinator.imageRecords.removeAll()
         for post in allPosts {
             if let imageURL = post.featuredImageUrl{
-                let imageRecord = ImageRecord(name: "", url: NSURL(string: imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
+                let imageRecord = ImageRecord(name: "", url: URL(string: imageURL.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!)
                 self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
             }
         }
     }
     
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if (indexPath.row == allPosts.count-1) && !isLoading{
             isLoading = true
             
@@ -126,7 +126,7 @@ class AllPostsVC: UITableViewController{
                             print ("ppp: \(post.featuredImageUrl)")
                             if let imageURL = post.featuredImageUrl{
                                 print("pppnn")
-                                let imageRecord = ImageRecord(name: "", url: NSURL(string: imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
+                                let imageRecord = ImageRecord(name: "", url: URL(string: imageURL.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!)
                                 self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
                             }
                         }
@@ -138,12 +138,12 @@ class AllPostsVC: UITableViewController{
         }
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 271
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AllPostsCell", forIndexPath: indexPath) as! AllPostsCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AllPostsCell", for: indexPath) as! AllPostsCell
         
         // Configure the cell...
     
@@ -168,10 +168,10 @@ class AllPostsVC: UITableViewController{
             print(imageRecord.image)
             
             switch (imageRecord.state) {
-            case .New, .Downloaded:
-                if (!tableView.dragging && !tableView.decelerating){
+            case .new, .downloaded:
+                if (!tableView.isDragging && !tableView.isDecelerating){
                     self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
-                        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                        self.tableView.reloadRows(at: [indexPath], with: .fade)
                     })
                 }
             default:
@@ -186,33 +186,33 @@ class AllPostsVC: UITableViewController{
         return cell
     }
     
-    override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.tableViewImageLoadingCoordinator.suspendAllOperations()
     }
     
-    override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate{
             
            
             
             self.tableViewImageLoadingCoordinator.loadImagesForOnScreenCells(tableView.indexPathsForVisibleRows!, completionhandler: { (indexPath) in
-                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
             })
             self.tableViewImageLoadingCoordinator.resumeAllOperations()
         }
     }
     
-    override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.tableViewImageLoadingCoordinator.loadImagesForOnScreenCells(tableView.indexPathsForVisibleRows!, completionhandler: { (indexPath) in
-            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            self.tableView.reloadRows(at: [indexPath], with: .fade)
         })
         
         self.tableViewImageLoadingCoordinator.resumeAllOperations()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "webviewController" {
-            let destnatinationVC = segue.destinationViewController as! WebViewController
+            let destnatinationVC = segue.destination as! WebViewController
             
             let index = tableView.indexPathForSelectedRow
             
@@ -227,11 +227,11 @@ class AllPostsVC: UITableViewController{
     func updatePosts(){
         client.requestLatestTwentyPosts { (posts) in
             self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
-            let reversedPosts = posts.reverse()
+            let reversedPosts = posts.reversed()
             for post in reversedPosts {
                 if let imageURL = post.featuredImageUrl{
-                    let imageRecord = ImageRecord(name: "", url: NSURL(string: imageURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!)
-                    self.tableViewImageLoadingCoordinator.imageRecords.insert(imageRecord, atIndex: 0)
+                    let imageRecord = ImageRecord(name: "", url: URL(string: imageURL.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!)
+                    self.tableViewImageLoadingCoordinator.imageRecords.insert(imageRecord, at: 0)
                     
                 }
             }
@@ -242,19 +242,19 @@ class AllPostsVC: UITableViewController{
         
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+    func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+            cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))
         }
         
         if ((cString.characters.count) != 6) {
-            return UIColor.grayColor()
+            return UIColor.gray
         }
         
         var rgbValue:UInt32 = 0
-        NSScanner(string: cString).scanHexInt(&rgbValue)
+        Scanner(string: cString).scanHexInt32(&rgbValue)
         
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,

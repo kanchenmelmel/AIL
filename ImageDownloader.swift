@@ -8,8 +8,32 @@
 
 import UIKit
 import Alamofire
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
 
-class ImageDownloader: NSOperation {
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
+
+class ImageDownloader: Operation {
     let imageRecord:ImageRecord
     
     init(imageRecord:ImageRecord) {
@@ -17,22 +41,22 @@ class ImageDownloader: NSOperation {
     }
     
     override func main() {
-        if self.cancelled {
+        if self.isCancelled {
             return
         }
         
-        let imageData = NSData(contentsOfURL: imageRecord.url)
+        let imageData = try? Data(contentsOf: imageRecord.url)
         
         
-        if self.cancelled {
+        if self.isCancelled {
             return
         }
         
-        if imageData?.length > 0 {
+        if imageData?.count > 0 {
             self.imageRecord.image = UIImage(data: imageData!)
-            self.imageRecord.state = .Downloaded
+            self.imageRecord.state = .downloaded
         } else {
-            self.imageRecord.state = .Failed
+            self.imageRecord.state = .failed
             self.imageRecord.image = UIImage(named: "ImagePlaceholder")
         }
     }
@@ -42,11 +66,11 @@ class ImageDownloader: NSOperation {
 }
 
 class ImageOperations {
-    lazy var downloadsInProgress = [NSIndexPath:NSOperation]()
+    lazy var downloadsInProgress = [IndexPath:Operation]()
     
     
-    lazy var downloadQueue:NSOperationQueue = {
-        var queue = NSOperationQueue()
+    lazy var downloadQueue:OperationQueue = {
+        var queue = OperationQueue()
         queue.name = "Download queue"
         queue.maxConcurrentOperationCount = 3
         return queue
@@ -56,11 +80,11 @@ class ImageOperations {
 
 class ImageRecord {
     let name:String
-    let url:NSURL
-    var state = PhotoRecordState.New
+    let url:URL
+    var state = PhotoRecordState.new
     var image = UIImage(named: "ImagePlaceholder")
     
-    init(name:String,url:NSURL) {
+    init(name:String,url:URL) {
         self.name = name
         self.url = url
     }

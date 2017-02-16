@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */; };
 		3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */; };
+		3DDBA89F1E53D31C00743BB3 /* JiJingPDF in Resources */ = {isa = PBXBuildFile; fileRef = 3DDBA89E1E53D31C00743BB3 /* JiJingPDF */; };
 		3DE209341D8FA03C001BCEA4 /* EmailEjecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */; };
+		3DE674D11E4D703700F41EDF /* CacheableURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE674D01E4D703700F41EDF /* CacheableURLProtocol.swift */; };
+		3DE674D31E4D70FA00F41EDF /* SpeechRecognition.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE674D21E4D70FA00F41EDF /* SpeechRecognition.xib */; };
+		3DE674D71E4D7D3200F41EDF /* JiJingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE674D61E4D7D3200F41EDF /* JiJingViewController.swift */; };
+		3DE674D91E4EBDF300F41EDF /* ZuiQuanJiJing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE674D81E4EBDF300F41EDF /* ZuiQuanJiJing.storyboard */; };
 		4D333F8E1DA3B87600D557C2 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D333F8D1DA3B87600D557C2 /* MessageVC.swift */; };
 		4D333F901DA3C67800D557C2 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D333F8F1DA3C67800D557C2 /* Alert.swift */; };
 		4D333F921DA3C6C300D557C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D333F911DA3C6C300D557C2 /* Constants.swift */; };
@@ -94,7 +99,13 @@
 /* Begin PBXFileReference section */
 		3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainButtonsContainer.swift; path = AIL/MainButtonsContainer.swift; sourceTree = "<group>"; };
 		3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMainButton.swift; path = AIL/HomeMainButton.swift; sourceTree = "<group>"; };
+		3DDBA89E1E53D31C00743BB3 /* JiJingPDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JiJingPDF; sourceTree = "<group>"; };
 		3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailEjecter.swift; path = AIL/EmailEjecter.swift; sourceTree = "<group>"; };
+		3DE674CF1E4D6FD000F41EDF /* AIL 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AIL 2.xcdatamodel"; sourceTree = "<group>"; };
+		3DE674D01E4D703700F41EDF /* CacheableURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheableURLProtocol.swift; sourceTree = "<group>"; };
+		3DE674D21E4D70FA00F41EDF /* SpeechRecognition.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechRecognition.xib; sourceTree = "<group>"; };
+		3DE674D61E4D7D3200F41EDF /* JiJingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiJingViewController.swift; sourceTree = "<group>"; };
+		3DE674D81E4EBDF300F41EDF /* ZuiQuanJiJing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZuiQuanJiJing.storyboard; sourceTree = "<group>"; };
 		4D333F8D1DA3B87600D557C2 /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		4D333F8F1DA3C67800D557C2 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4D333F911DA3C6C300D557C2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -213,6 +224,7 @@
 				960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */,
 				960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */,
 				961E89901DADE2520084B5DF /* JiJingDBViewController.swift */,
+				3DE674D61E4D7D3200F41EDF /* JiJingViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -335,6 +347,7 @@
 		963061B81D77E1270079B7C5 = {
 			isa = PBXGroup;
 			children = (
+				3DDBA89E1E53D31C00743BB3 /* JiJingPDF */,
 				9678CCD91DA9E40900F2EBB2 /* ActivityIndicatorView */,
 				963574961D90E12600B8D1A5 /* TableCellImageAsycLoading */,
 				4DAEAFAE1D7ACC2F00842C4F /* Extension */,
@@ -368,6 +381,8 @@
 				9672A1561D9BA14300A64A01 /* Main.storyboard */,
 				963061D01D77E1280079B7C5 /* LaunchScreen.storyboard */,
 				963061D31D77E1280079B7C5 /* Info.plist */,
+				3DE674D21E4D70FA00F41EDF /* SpeechRecognition.xib */,
+				3DE674D81E4EBDF300F41EDF /* ZuiQuanJiJing.storyboard */,
 				963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */,
 				9683A6731D88DEDF00360D98 /* Messages.storyboard */,
 				9683A6751D88DFAB00360D98 /* SubjectResources.storyboard */,
@@ -495,6 +510,7 @@
 				4D333F911DA3C6C300D557C2 /* Constants.swift */,
 				960A6BA91D8126E6000ABE5A /* WordPressSyncManager.swift */,
 				3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */,
+				3DE674D01E4D703700F41EDF /* CacheableURLProtocol.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -539,7 +555,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963061D61D77E1280079B7C5 /* Build configuration list for PBXNativeTarget "AIL" */;
 			buildPhases = (
-				6615F2FF09926148D377B99E /* 📦 Check Pods Manifest.lock */,
+				6615F2FF09926148D377B99E /* [CP] Check Pods Manifest.lock */,
 				71184C9210B700D4E5A74D7C /* [CP] Check Pods Manifest.lock */,
 				963061BD1D77E1270079B7C5 /* Sources */,
 				963061BE1D77E1270079B7C5 /* Frameworks */,
@@ -571,7 +587,7 @@
 					963061C01D77E1270079B7C5 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 62J5NG6GE2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -599,6 +615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96A1739A1DA0D29E0002F360 /* Archive.storyboard in Resources */,
+				3DE674D31E4D70FA00F41EDF /* SpeechRecognition.xib in Resources */,
 				9672A1571D9BA14300A64A01 /* Main.storyboard in Resources */,
 				963061D21D77E1280079B7C5 /* LaunchScreen.storyboard in Resources */,
 				9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */,
@@ -608,8 +625,10 @@
 				4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */,
 				960E65941DAC8E3800DEE9BF /* IntroPage1View.xib in Resources */,
 				960E65981DAC91DC00DEE9BF /* IntroPage3View.xib in Resources */,
+				3DDBA89F1E53D31C00743BB3 /* JiJingPDF in Resources */,
 				96A691D31D98F90200D29995 /* BeiKaoGongLue.storyboard in Resources */,
 				960E65961DAC908700DEE9BF /* IntroPage2View.xib in Resources */,
+				3DE674D91E4EBDF300F41EDF /* ZuiQuanJiJing.storyboard in Resources */,
 				9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */,
 				960E658F1DAC6D9F00DEE9BF /* RewardAccount.storyboard in Resources */,
 			);
@@ -633,19 +652,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6615F2FF09926148D377B99E /* 📦 Check Pods Manifest.lock */ = {
+		6615F2FF09926148D377B99E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		665269B806FA97C96BA6105E /* 📦 Embed Pods Frameworks */ = {
@@ -715,12 +734,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE674D71E4D7D3200F41EDF /* JiJingViewController.swift in Sources */,
 				965216B31D94B29F00EA1823 /* HomeViewBottomButton.swift in Sources */,
 				960E658A1DAC67BE00DEE9BF /* PTELiveForumWebViewController.swift in Sources */,
 				3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */,
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
 				4D333F901DA3C67800D557C2 /* Alert.swift in Sources */,
 				963574981D90E15D00B8D1A5 /* ImageDownloader.swift in Sources */,
+				3DE674D11E4D703700F41EDF /* CacheableURLProtocol.swift in Sources */,
 				963574951D90C3F800B8D1A5 /* Category+CoreDataProperties.swift in Sources */,
 				967978741DA6E90B0095EB91 /* CourseWebViewController.swift in Sources */,
 				965693401D9392B300FAC04B /* Post+CoreDataClass.swift in Sources */,
@@ -901,7 +922,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.vic.ail.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -918,7 +939,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.vic.ail.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -950,9 +971,10 @@
 		963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3DE674CF1E4D6FD000F41EDF /* AIL 2.xcdatamodel */,
 				963061CC1D77E1280079B7C5 /* AIL.xcdatamodel */,
 			);
-			currentVersion = 963061CC1D77E1280079B7C5 /* AIL.xcdatamodel */;
+			currentVersion = 3DE674CF1E4D6FD000F41EDF /* AIL 2.xcdatamodel */;
 			path = AIL.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

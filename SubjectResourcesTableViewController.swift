@@ -10,7 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 
 
-class SubjectResourcesTableViewController: UITableViewController {
+class SubjectResourcesTableViewController: UITableViewController, NVActivityIndicatorViewable {
     var resourcesPosts = [Post]()
     
     var tableViewImageLoadingCoordinator = TableViewImageLoadingCoordinator()
@@ -56,27 +56,27 @@ class SubjectResourcesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return resourcesPosts.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SubjectResourcesTableViewVell", forIndexPath: indexPath) as! SubjectResourcesTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SubjectResourcesTableViewVell", for: indexPath) as! SubjectResourcesTableViewCell
 
         // Configure the cell...
         cell.titleLabel.text = resourcesPosts[indexPath.row].title
         cell.subtitleLabel.text = resourcesPosts[indexPath.row].excerpt
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .MediumStyle
-        cell.dateLabel.text = "\(dateFormatter.stringFromDate(resourcesPosts[indexPath.row].date!).uppercaseString)" + " "
+        let dateFormatter = Foundation.DateFormatter()
+        dateFormatter.dateStyle = .medium
+        cell.dateLabel.text = "\(dateFormatter.string(from: resourcesPosts[indexPath.row].date! as Date).uppercased())" + " "
         
         
         // Images
@@ -88,11 +88,11 @@ class SubjectResourcesTableViewController: UITableViewController {
             print(imageRecord.image)
             
             switch (imageRecord.state) {
-            case .New, .Downloaded:
+            case .new, .downloaded:
                 
-                if (!tableView.dragging && !tableView.decelerating){
+                if (!tableView.isDragging && !tableView.isDecelerating){
                     self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
-                        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                        self.tableView.reloadRows(at: [indexPath], with: .fade)
                     })
                 }
             default:
@@ -107,25 +107,25 @@ class SubjectResourcesTableViewController: UITableViewController {
         return cell
     }
     
-    override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.tableViewImageLoadingCoordinator.suspendAllOperations()
     }
     
-    override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate{
             
             
             
             self.tableViewImageLoadingCoordinator.loadImagesForOnScreenCells(tableView.indexPathsForVisibleRows!, completionhandler: { (indexPath) in
-                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
             })
             self.tableViewImageLoadingCoordinator.resumeAllOperations()
         }
     }
     
-    override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.tableViewImageLoadingCoordinator.loadImagesForOnScreenCells(tableView.indexPathsForVisibleRows!, completionhandler: { (indexPath) in
-            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            self.tableView.reloadRows(at: [indexPath], with: .fade)
         })
         
         self.tableViewImageLoadingCoordinator.resumeAllOperations()
@@ -135,8 +135,8 @@ class SubjectResourcesTableViewController: UITableViewController {
     func setUpTableViewImageCoordinator(){
         for post in resourcesPosts {
             
-            let featuredImageURLString = post.featuredImageUrl!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
-            let imageRecord = ImageRecord(name: "", url: NSURL(string: featuredImageURLString!)!)
+            let featuredImageURLString = post.featuredImageUrl!.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)
+            let imageRecord = ImageRecord(name: "", url: URL(string: featuredImageURLString!)!)
             self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
         }
     }
@@ -182,9 +182,9 @@ class SubjectResourcesTableViewController: UITableViewController {
  
      In a storyboard-based application, you will often want to do a little preparation before navigation
  */
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "resourcesPostWebViewSegue" {
-            let destnatinationVC = segue.destinationViewController as! WebViewController
+            let destnatinationVC = segue.destination as! WebViewController
             
             let index = tableView.indexPathForSelectedRow
             destnatinationVC.post = resourcesPosts[index!.row]
@@ -193,7 +193,7 @@ class SubjectResourcesTableViewController: UITableViewController {
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         stopAnimating()
     }
 

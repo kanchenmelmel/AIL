@@ -30,20 +30,20 @@ class CustomizeActivityIndicatorView: UIView {
     }
     
     convenience init() {
-        self.init(frame:CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-        self.hidden = true
-        self.backgroundColor = UIColor.whiteColor()
-        activityIndicator = NVActivityIndicatorView(frame: CGRectMake(self.bounds.width / 2.0 - 25,self.bounds.height / 2.0 - 25, 50,50), type: .BallPulse, color: UIColor.tintColor(), padding: 0)
+        self.init(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        self.isHidden = true
+        self.backgroundColor = UIColor.white
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.bounds.width / 2.0 - 25,y: self.bounds.height / 2.0 - 25, width: 50,height: 50), type: .ballPulse, color: UIColor.tintColor(), padding: 0)
         self.addSubview(activityIndicator!)
     }
     
     func startAnimating() {
-        self.hidden = false
+        self.isHidden = false
         self.activityIndicator?.startAnimating()
     }
     
     func stopAnimating() {
-        self.hidden = true
+        self.isHidden = true
         self.activityIndicator?.stopAnimating()
     }
 

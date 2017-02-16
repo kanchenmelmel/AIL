@@ -14,7 +14,7 @@ class ArchiveWebViewController: UIViewController,UIWebViewDelegate {
     var titleString:String?
     
     var loading = false
-    var timer:NSTimer? = nil
+    var timer:Timer? = nil
     
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var webView: UIWebView!
@@ -29,11 +29,11 @@ class ArchiveWebViewController: UIViewController,UIWebViewDelegate {
         // Do any additional setup after loading the view.
         
         progressView.progress  = 0
-        let url = NSURL(string:urlString!)
+        let url = URL(string:urlString!)
         
-        let request = NSMutableURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 10.0)
+        let request = NSMutableURLRequest(url: url!, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10.0)
         //        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
-        webView.loadRequest(request as NSURLRequest)
+        webView.loadRequest(request as URLRequest)
         webView.delegate = self
     }
     
@@ -50,15 +50,15 @@ class ArchiveWebViewController: UIViewController,UIWebViewDelegate {
     // Web View Start Load page
     
     
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         progressView.progress = 0
         loading = true
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01667, target: self, selector: #selector(self.updateProgressView), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01667, target: self, selector: #selector(self.updateProgressView), userInfo: nil, repeats: true)
         //        timer = NSTimer.scheduledTimer(timeInterval: 0.01667, target: self, selector: #selector(self.updateProgressView), userInfo: nil, repeats: true)
     }
     
     // Web View Finish Loading Page
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         loading = false
     }
     
@@ -73,7 +73,7 @@ class ArchiveWebViewController: UIViewController,UIWebViewDelegate {
             }
         }
         else {
-            progressView.hidden = true
+            progressView.isHidden = true
             timer?.invalidate()
         }
     }

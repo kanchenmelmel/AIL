@@ -13,14 +13,14 @@ import CoreData
 class PostRetriever{
     
     
-    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     
     func fetchPosts() -> [Post]{
         
         var posts = [Post]()
-        let postRequest = NSFetchRequest()
+        let postRequest = NSFetchRequest<NSFetchRequestResult>()
 
-        postRequest.entity = NSEntityDescription.entityForName("Post", inManagedObjectContext: managedObjectContext)
+        postRequest.entity = NSEntityDescription.entity(forEntityName: "Post", in: managedObjectContext)
         
         let dateSort = NSSortDescriptor(key: "date", ascending: false)
         postRequest.sortDescriptors=[dateSort]
@@ -31,7 +31,7 @@ class PostRetriever{
         postRequest.fetchLimit = 10
 
         do{
-            let results = try managedObjectContext.executeFetchRequest(postRequest) as! [Post]
+            let results = try managedObjectContext.fetch(postRequest) as! [Post]
 
                 posts = results
                 return posts

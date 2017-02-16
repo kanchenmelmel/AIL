@@ -19,7 +19,7 @@ enum LeftMenuOption {
 }
 
 protocol LeftMenuProtocol : class {
-    func changeViewController(menu: LeftMenuOption)
+    func changeViewController(_ menu: LeftMenuOption)
 }
 
 class LeftMenuVC: UIViewController {
@@ -58,32 +58,32 @@ class LeftMenuVC: UIViewController {
     }
     
 
-    @IBAction func homeButtonClick(sender: AnyObject) {
+    @IBAction func homeButtonClick(_ sender: AnyObject) {
         self.changeViewController(.main)
     }
-    @IBAction func rewardAccountButtonClick(sender: AnyObject) {
+    @IBAction func rewardAccountButtonClick(_ sender: AnyObject) {
         self.changeViewController(.rewardAccount)
     }
     
-    @IBAction func archiveButtonClick(sender: AnyObject) {
+    @IBAction func archiveButtonClick(_ sender: AnyObject) {
         self.changeViewController(.archive)
         
         
     }
     
-    @IBAction func showMessageButtonClick(sender: AnyObject) {
+    @IBAction func showMessageButtonClick(_ sender: AnyObject) {
         self.changeViewController(.message)
     }
 
     
-    @IBAction func ShowAboutAILButtonClick(sender: AnyObject) {
+    @IBAction func ShowAboutAILButtonClick(_ sender: AnyObject) {
         self.changeViewController(.aboutAIL)
     }
     
     
     
 
-    @IBAction func userMessagePressed(sender: AnyObject) {
+    @IBAction func userMessagePressed(_ sender: AnyObject) {
         
     }
     
@@ -91,21 +91,21 @@ class LeftMenuVC: UIViewController {
     
     func setUpAccessableVCs() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        self.mainVC = mainStoryboard.instantiateViewControllerWithIdentifier("mainNavCtrl")
+        self.mainVC = mainStoryboard.instantiateViewController(withIdentifier: "mainNavCtrl")
         
         
         let rewardAccountStoryboard = UIStoryboard(name: "RewardAccount", bundle: nil)
-        self.rewardAccountVC = rewardAccountStoryboard.instantiateViewControllerWithIdentifier("RewardAccountNavCtrl")
+        self.rewardAccountVC = rewardAccountStoryboard.instantiateViewController(withIdentifier: "RewardAccountNavCtrl")
         
         
         let messageStoryboard = UIStoryboard(name: "Archive", bundle: nil)
-        self.archiveVC = messageStoryboard.instantiateViewControllerWithIdentifier("ArchiveNavCtrl")
+        self.archiveVC = messageStoryboard.instantiateViewController(withIdentifier: "ArchiveNavCtrl")
         
         let archiveStoryboard = UIStoryboard(name: "Messages", bundle: nil)
-        self.messageVC = archiveStoryboard.instantiateViewControllerWithIdentifier("MessagesTableNavCtrl")
+        self.messageVC = archiveStoryboard.instantiateViewController(withIdentifier: "MessagesTableNavCtrl")
         
         let aboutAILStoryboard = UIStoryboard(name: "AboutAIL", bundle: nil)
-        self.aboutAILVC = aboutAILStoryboard.instantiateViewControllerWithIdentifier("AboutAILNavCtrl")
+        self.aboutAILVC = aboutAILStoryboard.instantiateViewController(withIdentifier: "AboutAILNavCtrl")
         
         
     }
@@ -124,7 +124,7 @@ class LeftMenuVC: UIViewController {
 }
 
 extension LeftMenuVC:LeftMenuProtocol {
-    func changeViewController(menu: LeftMenuOption) {
+    func changeViewController(_ menu: LeftMenuOption) {
         switch menu {
         case .main:
             self.slideMenuController()?.changeMainViewController(self.mainVC, close: true)
