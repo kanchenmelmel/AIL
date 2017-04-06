@@ -141,7 +141,7 @@ class SelTestDBTableViewController: UITableViewController, NVActivityIndicatorVi
     func setUpTableViewImageCoordinator(){
         for post in resourcesPosts {
             let featuredImageUrlString = post.featuredImageUrl!.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)
-            let imageRecord = ImageRecord(name: "", url: URL(string: featuredImageUrlString!)!)
+            let imageRecord = ImageRecord(name: "", url: imageURL(featuredImageUrlString))
             self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
         }
     }

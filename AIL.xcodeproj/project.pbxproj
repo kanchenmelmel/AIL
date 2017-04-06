@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */; };
 		3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */; };
+		3D275F111E823AB500490722 /* storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D275F101E823AB500490722 /* storage.swift */; };
+		3D28BF971E553781005A2046 /* SpeechRecognitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28BF961E553781005A2046 /* SpeechRecognitionController.swift */; };
+		3D76F5461E7D60FE0072006F /* UIView-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D76F5451E7D60FE0072006F /* UIView-Extensions.swift */; };
+		3D76F5491E7E2AA20072006F /* SpeechRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */; };
+		3D9D3E171E72677E00A56BD4 /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */; };
+		3DA95BA21E5BE29300084DA4 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95BA01E5BE28800084DA4 /* RestKit.framework */; };
+		3DA95BA31E5BE29300084DA4 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95BA01E5BE28800084DA4 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DA95BA51E5BE29500084DA4 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */; };
+		3DA95BA61E5BE29500084DA4 /* SpeechToTextV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3DDBA89F1E53D31C00743BB3 /* JiJingPDF in Resources */ = {isa = PBXBuildFile; fileRef = 3DDBA89E1E53D31C00743BB3 /* JiJingPDF */; };
 		3DE209341D8FA03C001BCEA4 /* EmailEjecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */; };
 		3DE674D11E4D703700F41EDF /* CacheableURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE674D01E4D703700F41EDF /* CacheableURLProtocol.swift */; };
@@ -96,9 +105,31 @@
 		C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2662452685324A770F0164 /* Pods_AIL.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3DA95BA41E5BE29300084DA4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3DA95BA31E5BE29300084DA4 /* RestKit.framework in Embed Frameworks */,
+				3DA95BA61E5BE29500084DA4 /* SpeechToTextV1.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainButtonsContainer.swift; path = AIL/MainButtonsContainer.swift; sourceTree = "<group>"; };
 		3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMainButton.swift; path = AIL/HomeMainButton.swift; sourceTree = "<group>"; };
+		3D275F101E823AB500490722 /* storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = storage.swift; path = AIL/storage.swift; sourceTree = "<group>"; };
+		3D28BF961E553781005A2046 /* SpeechRecognitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionController.swift; sourceTree = "<group>"; };
+		3D76F5451E7D60FE0072006F /* UIView-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView-Extensions.swift"; path = "AIL/UIView-Extensions.swift"; sourceTree = "<group>"; };
+		3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpeechRecognition.storyboard; sourceTree = "<group>"; };
+		3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
+		3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		3DA95BA01E5BE28800084DA4 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		3DDBA89E1E53D31C00743BB3 /* JiJingPDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JiJingPDF; sourceTree = "<group>"; };
 		3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailEjecter.swift; path = AIL/EmailEjecter.swift; sourceTree = "<group>"; };
 		3DE674CF1E4D6FD000F41EDF /* AIL 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AIL 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -197,12 +228,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */,
+				3DA95BA21E5BE29300084DA4 /* RestKit.framework in Frameworks */,
+				3DA95BA51E5BE29500084DA4 /* SpeechToTextV1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D76F5471E7E02E30072006F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3D76F5451E7D60FE0072006F /* UIView-Extensions.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		4DAEAFA71D7A486700842C4F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +266,7 @@
 				960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */,
 				961E89901DADE2520084B5DF /* JiJingDBViewController.swift */,
 				3DE674D61E4D7D3200F41EDF /* JiJingViewController.swift */,
+				3D28BF961E553781005A2046 /* SpeechRecognitionController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -232,6 +274,7 @@
 		4DAEAFA81D7A486F00842C4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3D76F5471E7E02E30072006F /* Extension */,
 				96EB3F631DAF54A400A96460 /* SelfTestDB */,
 				96F188141DA356F900987E98 /* AboutAIL */,
 				4DDD18051D9ACBD800294ACC /* UserMessage */,
@@ -255,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				9671E5EA1D7E8095008250C7 /* ManagedObject */,
+				3D275F101E823AB500490722 /* storage.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -310,6 +354,8 @@
 		69EFDD5AB6EBC4F4E4D8ED54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DA95BA01E5BE28800084DA4 /* RestKit.framework */,
+				3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */,
 				AE2662452685324A770F0164 /* Pods_AIL.framework */,
 			);
 			name = Frameworks;
@@ -379,9 +425,11 @@
 				963061CE1D77E1280079B7C5 /* Assets.xcassets */,
 				4DDD17E91D965E3600294ACC /* AllPosts.storyboard */,
 				9672A1561D9BA14300A64A01 /* Main.storyboard */,
+				3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */,
 				963061D01D77E1280079B7C5 /* LaunchScreen.storyboard */,
 				963061D31D77E1280079B7C5 /* Info.plist */,
 				3DE674D21E4D70FA00F41EDF /* SpeechRecognition.xib */,
+				3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */,
 				3DE674D81E4EBDF300F41EDF /* ZuiQuanJiJing.storyboard */,
 				963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */,
 				9683A6731D88DEDF00360D98 /* Messages.storyboard */,
@@ -564,6 +612,8 @@
 				C54BA3BAEA90F0656782D836 /* [CP] Copy Pods Resources */,
 				665269B806FA97C96BA6105E /* 📦 Embed Pods Frameworks */,
 				B9B95BDF09578CD752AAD50D /* 📦 Copy Pods Resources */,
+				3DA95BA41E5BE29300084DA4 /* Embed Frameworks */,
+				3D76F5441E727C460072006F /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -629,8 +679,10 @@
 				96A691D31D98F90200D29995 /* BeiKaoGongLue.storyboard in Resources */,
 				960E65961DAC908700DEE9BF /* IntroPage2View.xib in Resources */,
 				3DE674D91E4EBDF300F41EDF /* ZuiQuanJiJing.storyboard in Resources */,
+				3D76F5491E7E2AA20072006F /* SpeechRecognition.storyboard in Resources */,
 				9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */,
 				960E658F1DAC6D9F00DEE9BF /* RewardAccount.storyboard in Resources */,
+				3D9D3E171E72677E00A56BD4 /* UserInfo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +703,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3D76F5441E727C460072006F /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\n    FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n    FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n    echo \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\n    EXTRACTED_ARCHS=()\n\n    for ARCH in $ARCHS\n    do\n        echo \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\n        lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n        EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n    done\n\n    echo \"Merging extracted architectures: ${ARCHS}\"\n    lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n    rm \"${EXTRACTED_ARCHS[@]}\"\n\n    echo \"Replacing original executable with thinned version\"\n    rm \"$FRAMEWORK_EXECUTABLE_PATH\"\n    mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
 		};
 		6615F2FF09926148D377B99E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -740,6 +806,7 @@
 				3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */,
 				4DAEAFAB1D7A50EF00842C4F /* PostCollectionViewCell.swift in Sources */,
 				4D333F901DA3C67800D557C2 /* Alert.swift in Sources */,
+				3D28BF971E553781005A2046 /* SpeechRecognitionController.swift in Sources */,
 				963574981D90E15D00B8D1A5 /* ImageDownloader.swift in Sources */,
 				3DE674D11E4D703700F41EDF /* CacheableURLProtocol.swift in Sources */,
 				963574951D90C3F800B8D1A5 /* Category+CoreDataProperties.swift in Sources */,
@@ -769,6 +836,7 @@
 				960A6BAA1D8126E6000ABE5A /* WordPressSyncManager.swift in Sources */,
 				962652061D87D5EF00CB92BB /* SubjectResourcesTableViewCell.swift in Sources */,
 				9678CCDB1DA9E45900F2EBB2 /* CustomizeActivityIndicatorView.swift in Sources */,
+				3D76F5461E7D60FE0072006F /* UIView-Extensions.swift in Sources */,
 				4DAEAFB01D7ACC5A00842C4F /* UIViewController.swift in Sources */,
 				963574941D90C3F800B8D1A5 /* Category+CoreDataClass.swift in Sources */,
 				966D82001DA208440069270A /* Archive+CoreDataProperties.swift in Sources */,
@@ -777,6 +845,7 @@
 				96E63CBD1DAF07E700EB11C7 /* MutableCollectionExtension.swift in Sources */,
 				96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */,
 				967978711DA682BE0095EB91 /* BookProcessViewController.swift in Sources */,
+				3D275F111E823AB500490722 /* storage.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
 				96E63CBF1DAF099100EB11C7 /* SelTestDBTableViewController.swift in Sources */,
 				9679786F1DA6727C0095EB91 /* TestWebViewController.swift in Sources */,
@@ -914,9 +983,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62J5NG6GE2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AIL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -931,9 +1003,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62J5NG6GE2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AIL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

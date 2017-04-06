@@ -16,7 +16,7 @@ let MESSAGES_RESOURCES = "messages"
 
 
 let WEEKEND_CLASS_URL = "http://ail.vic.edu.au/pte-course-weekend/"
-let DAY_CLASS_URL = "http://ail.vic.edu.au/pte-course-dayclass/"
+let DAY_CLASS_URL = "http://ail.vic.edu.au/pte-courses/"//"http://ail.vic.edu.au/pte-course-dayclass/"
 let VIP_CLASS_URL = "http://ail.vic.edu.au/pte-course-vip/"
 let QUESTION_CLASS_URL = "http://ail.vic.edu.au/pte-course-question/"
 

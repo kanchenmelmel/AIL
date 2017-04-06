@@ -30,7 +30,7 @@ extension UIImageView {
 
 extension UIView {
     
-    @IBInspectable
+    /*@IBInspectable
     var cornerRadius:CGFloat {
         get {
             return self.layer.cornerRadius
@@ -39,7 +39,7 @@ extension UIView {
             layer.cornerRadius = newValue
             layer.masksToBounds = newValue != 0
         }
-    }
+    }*/
     
     
     

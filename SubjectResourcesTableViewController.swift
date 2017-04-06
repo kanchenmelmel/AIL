@@ -10,6 +10,17 @@ import UIKit
 import NVActivityIndicatorView
 
 
+func imageURL(_ featuredImageURLString: String?) -> URL {
+    if featuredImageURLString != nil {
+        let url = URL(string: featuredImageURLString!)
+        if url != nil {
+            return url!
+        }
+    }
+    return URL(string: "http://ail.vic.edu.au/wp-content/uploads/2016/05/29-banner.jpg")!
+}
+
+
 class SubjectResourcesTableViewController: UITableViewController, NVActivityIndicatorViewable {
     var resourcesPosts = [Post]()
     
@@ -136,7 +147,8 @@ class SubjectResourcesTableViewController: UITableViewController, NVActivityIndi
         for post in resourcesPosts {
             
             let featuredImageURLString = post.featuredImageUrl!.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)
-            let imageRecord = ImageRecord(name: "", url: URL(string: featuredImageURLString!)!)
+            //let imageRecord = ImageRecord(name: "", url: URL(string: featuredImageURLString!)!)
+            let imageRecord = ImageRecord(name: "", url: imageURL(featuredImageURLString))
             self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
         }
     }

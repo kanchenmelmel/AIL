@@ -38,7 +38,8 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SlideMenuControllerDelegate,UISearchBarDelegate {
     
     
-    
+    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var speechRecognitionButton: UIView!
     @IBOutlet weak var jiJingButton: UIButton!
     var introView:EAIntroView?
     var rootView:UIView?
@@ -63,7 +64,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let alert = Alert()
     
     var timer:Timer? = nil
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        circleView.layer.cornerRadius = circleView.frame.height / 2.0;
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -118,20 +122,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.setupIntroPages()
             UserDefaults.standard.set(true, forKey: "hasSeenIntroduction")
         }
-        
-        
-        jiJingButton.addTarget(self, action: #selector(ViewController.presentJiJingViewController(_:)), for: .touchUpInside)
     }
-    
-    
-    func presentJiJingViewController(_ sender:UIButton!) {
-        let storyboard = UIStoryboard(name: "ZuiQuanJiJing", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "ZuiQuanJiJing")
-        self.navigationController?.pushViewController(controller, animated: true)
-        //self.present(controller, animated: true, completion: nil)
-        //self.navigationController?.pushViewController(UIViewController(nibName: "JiJingViewController", bundle: nil), animated: true)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         //        self.setNavigationBarItem()
         
@@ -211,7 +202,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         for post in featurePosts {
             if post.featuredImageUrl != nil{
                 let featuredImageURLString = post.featuredImageUrl!.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)
-                let imageRecord = ImageRecord(name: "", url: URL(string: featuredImageURLString!)!)
+                let imageRecord = ImageRecord(name: "", url: imageURL(featuredImageURLString))
                 self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
             }
         }
@@ -230,7 +221,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 300, height: collectionView.frame.height - 16)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: -56, left: 8, bottom: 8, right: 8)
+    }
     
     
     

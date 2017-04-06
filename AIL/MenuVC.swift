@@ -8,8 +8,10 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import Alamofire
 
 enum LeftMenuOption {
+    case userInfo
     case main
     case rewardAccount
     case archive
@@ -32,7 +34,10 @@ class LeftMenuVC: UIViewController {
     var archiveVC:UIViewController!
     var messageVC:UIViewController!
     var aboutAILVC:UIViewController!
+    var userInfoVC:UIViewController!
     
+    
+    @IBOutlet weak var credButton: UIButton!
     
     
     
@@ -55,6 +60,7 @@ class LeftMenuVC: UIViewController {
         // Do any additional setup after loading the view.
         
         self.setUpAccessableVCs()
+        self.updateCredit()
     }
     
 
@@ -79,8 +85,69 @@ class LeftMenuVC: UIViewController {
     @IBAction func ShowAboutAILButtonClick(_ sender: AnyObject) {
         self.changeViewController(.aboutAIL)
     }
-    
-    
+    func isValidEmail(_ testStr:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
+    var credLoggedIn = false
+    var credit = ""
+    var userLogin = ""
+    func updateCredit() {
+        let obj = UserDefaults.standard.object(forKey: "myCredUserIdentifier")
+        if obj != nil && (obj! as! String) != "" {
+            let value = obj! as! String
+            let field = isValidEmail(value) ? "email" : "login"
+            Alamofire.request("http://ail.vic.edu.au/cred.php?field=\(field)&value=\(value)").responseJSON { response in
+                if let json = response.result.value as? [String: AnyObject] {
+                    if json["ok"] as! Bool {
+                        self.credLoggedIn = true
+                        self.credit = "\(json["credit"]!)"
+                        self.userLogin = "\(json["user_login"]!)"
+                        self.credButton.setTitle("\(self.userLogin) 积分：\(self.credit)", for: .normal)
+                        return
+                    }
+                }
+                self.credLoggedIn = false
+                UserDefaults.standard.removeObject(forKey: "myCredUserIdentifier")
+                let alert = UIAlertController(title: "获取积分失败", message: "用户名／邮箱错误", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "确认", style: .cancel))
+                self.present(alert, animated:true)
+                self.credButton.setTitle("登录查看积分", for: .normal)
+            }
+        } else {
+            self.credLoggedIn = false
+            self.credButton.setTitle("登录查看积分", for: .normal)
+        }
+    }
+    @IBAction func userInfoButtonClick(_ sender: AnyObject) {
+        if self.credLoggedIn {
+            let alert = UIAlertController(title: self.userLogin, message: "积分: \(self.credit)", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "退出登录", style: .destructive) { _ in
+                UserDefaults.standard.removeObject(forKey: "myCredUserIdentifier")
+                self.updateCredit()
+            })
+            
+            alert.addAction(UIAlertAction(title: "确认", style: .cancel))
+            
+            self.present(alert, animated:true)
+        } else {
+            let alert = UIAlertController(title: "AIL积分", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "确认", style: .default) { _ in
+                if let value = alert.textFields![0].text {
+                    UserDefaults.standard.set(value, forKey: "myCredUserIdentifier")
+                    UserDefaults.standard.synchronize()
+                    self.updateCredit()
+                }
+            })
+            alert.addTextField() { textField in
+                textField.placeholder = "请输入用户名或邮箱"
+            }
+            self.present(alert, animated:true, completion:nil)
+        }
+    }
     
 
     @IBAction func userMessagePressed(_ sender: AnyObject) {
@@ -90,6 +157,9 @@ class LeftMenuVC: UIViewController {
     
     
     func setUpAccessableVCs() {
+        let userInfoStoryboard = UIStoryboard(name: "UserInfo", bundle: nil)
+        self.userInfoVC = userInfoStoryboard.instantiateViewController(withIdentifier: "UserInfoNavCtrl")
+        
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         self.mainVC = mainStoryboard.instantiateViewController(withIdentifier: "mainNavCtrl")
         
@@ -126,6 +196,8 @@ class LeftMenuVC: UIViewController {
 extension LeftMenuVC:LeftMenuProtocol {
     func changeViewController(_ menu: LeftMenuOption) {
         switch menu {
+        case .userInfo:
+            self.slideMenuController()?.changeMainViewController(self.userInfoVC, close: true)
         case .main:
             self.slideMenuController()?.changeMainViewController(self.mainVC, close: true)
         case .rewardAccount:

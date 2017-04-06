@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NFc-CJ-0fE">
-                                <frame key="frameInset" minY="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz0-vj-z9u">
-                                <frame key="frameInset" minX="16" minY="82" width="343" height="89"/>
+                                <rect key="frame" x="16" y="82" width="343" height="89"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="X25-w3-8IP"/>
@@ -36,11 +39,13 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kMh-CM-laD">
-                                <frame key="frameInset" minX="11" minY="190" width="353" height="460"/>
+                                <rect key="frame" x="11" y="190" width="353" height="460"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="y76-bL-Xio">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="146.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11X-DA-Gqv" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="146.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="1"/>
@@ -51,6 +56,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-x4-MSR" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <rect key="frame" x="181" y="0.0" width="172" height="146.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="2"/>
@@ -72,8 +78,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-JJ-snz">
+                                        <rect key="frame" x="0.0" y="156.5" width="353" height="147"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-8I-8Mb" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="147"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
@@ -84,6 +92,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xf-jB-0nA" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <rect key="frame" x="181" y="0.0" width="172" height="147"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
@@ -104,8 +113,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-m1-Z9J">
+                                        <rect key="frame" x="0.0" y="313.5" width="353" height="146.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwu-I9-d5u" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="146.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
@@ -116,6 +127,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-GT-8M7" customClass="SelfTestDBHomeButton" customModule="AIL" customModuleProvider="target">
+                                                <rect key="frame" x="181" y="0.0" width="172" height="146.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
@@ -181,10 +193,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x1u-Ah-Jfm" id="pbJ-ZG-PiU">
-                                    <frame key="frameInset" width="375" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDE-Rh-EuR">
+                                            <rect key="frame" x="8" y="12" width="205" height="41"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Model BlackHole Re-Creates Stephen Hawking Prediction">
                                                     <attributes>
@@ -197,17 +210,19 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这段语音主要说了通过模拟黑洞的吞噬方式，霍金这段语音主要说了通过模拟黑洞的吞噬方式，霍金" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdI-G1-9RK">
+                                            <rect key="frame" x="8" y="57" width="182" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12.08.2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWJ-Ud-KMv">
-                                            <frame key="frameInset" minX="8" minY="93" width="55" height="10"/>
+                                            <rect key="frame" x="8" y="93" width="55" height="10"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group_shot_1" translatesAutoresizingMaskIntoConstraints="NO" id="UU0-ml-6Bt" customClass="RoundedImageView" customModule="AIL">
+                                            <rect key="frame" x="252" y="11.5" width="115" height="88"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="115" id="MHU-w3-RYx"/>
                                                 <constraint firstAttribute="height" constant="88" id="nJR-88-3Mq"/>
@@ -265,9 +280,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CF0-2m-P1n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jbo-cO-Bz8">
+                                <rect key="frame" x="0.0" y="65" width="375" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="rbx-0k-em8"/>
                                 </constraints>
@@ -313,9 +330,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDd-PM-t5J">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vWZ-2N-bf5">
+                                <rect key="frame" x="0.0" y="65" width="375" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="mVp-zv-Vlz"/>
                                 </constraints>
