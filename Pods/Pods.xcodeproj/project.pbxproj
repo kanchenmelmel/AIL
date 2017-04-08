@@ -7,46 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		009F7DADD5C6A77979868631ED1589C1 /* PDFKBasicPDFViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD3B4968E3A0CFF96BC2ABFF5C15702 /* PDFKBasicPDFViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		009F7DADD5C6A77979868631ED1589C1 /* PDFKBasicPDFViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC5AD0B7BF10CBC2586F6EC244339B1 /* PDFKBasicPDFViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02B7C158A1AA5D2DD540B05C96559430 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D92EAD5B587A7A2BFC3166349D60C2 /* SwiftyJSON.swift */; };
 		02BF5457B27969211CEE7E4F7737D0A6 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA06D87E6FE332863BDBC3BC05027DE /* SlideMenuController.swift */; };
 		05316E7D30AA2C9EFCB992BABF8EDF54 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493A60F096D82C8CE0F3B8198262042 /* NVActivityIndicatorAnimationCubeTransition.swift */; };
 		096C5F8267302D1AA6F2F9688DD960DF /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E84813CD451637656EB6C4B1268EB /* NetworkActivityIndicatorManager.swift */; };
 		0AEDBAA7547F9D40C010EA3BFFEE78D2 /* NVActivityIndicatorAnimationOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888E66C0C5D6094451AE837E36E3B286 /* NVActivityIndicatorAnimationOrbit.swift */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CDB7D1199B456B4A858C4AFF9373B /* Timeline.swift */; };
-		134B194CD45033C4ADB849654293D793 /* PDFKThumbFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9FEEE1868205D77FB052D80C5DE9 /* PDFKThumbFetcher.m */; };
-		16D257A1D3E44446A16B01436826A3E4 /* Bookmarked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BB46F1AD2C82287494A3C69E3D2EF4 /* Bookmarked@3x.png */; };
+		134B194CD45033C4ADB849654293D793 /* PDFKThumbFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = DC86DD8A7CBB772F62ABC3D8B721B2B2 /* PDFKThumbFetcher.m */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E54284C1ABBAD4E8F6C84F75522E5ED /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FD494199615D5ED85E3D06DE5C5982F /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3B7FD0E1FA3A013DDA026B3948D77 /* NVActivityIndicatorPresenter.swift */; };
 		20954D57A9A0A2CCE608530975BD9880 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0DC876D97B646D4E477FC920B8649 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */; };
 		20F2F8B31260F2869F2502026771BF8C /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565215C836B8EE07500639258C178F8 /* NVActivityIndicatorAnimationBallZigZag.swift */; };
 		22D3199CCAF17AAC70B801EFAC8609A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
-		24D239B738AF6BC0D3982F9799085B48 /* Bookmarked@3x.psd in Resources */ = {isa = PBXBuildFile; fileRef = 828AB8EDBF27D2DC43961596A8ABFF93 /* Bookmarked@3x.psd */; };
-		253A77A47DE4ACCDAA3621FA6B47D4EA /* PageList@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABD24723565D3EB61112B1801DB4433F /* PageList@3x.png */; };
 		25BDC994496B11D3453236618FEE4C8E /* SlideMenuControllerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42FE583271248C92F84717107EDA4835 /* SlideMenuControllerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		271FC90CFE95DF4EDA35D2328BD3FC89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
 		2B2323F72B3257C9E64E4C464430805A /* NVActivityIndicatorAnimationBlank.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22BB9469543B562DAF249879552E3CF /* NVActivityIndicatorAnimationBlank.swift */; };
-		2C2B21268644AA6E2FFD102FF625829C /* CGPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 321282DDAC6FBE0B42B972C9EA798417 /* CGPDFDocument.m */; };
-		2D3D389EA58982A1452E3304DC97C66B /* PDFKDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F47418DCC628109DA527BE04E9A59 /* PDFKDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C2B21268644AA6E2FFD102FF625829C /* CGPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF726F5C04C8CB81F4D90A92B897496 /* CGPDFDocument.m */; };
+		2D3D389EA58982A1452E3304DC97C66B /* PDFKDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F895D524B34225316C93CC66352DF3A /* PDFKDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E18222599F0511C13F7994BA044AEA3 /* AlamofireNetworkActivityIndicator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A5FB0FACCECB4707900E37F5ECB5AA /* AlamofireNetworkActivityIndicator-dummy.m */; };
 		2EA20B5C8416D7B2825E0E7ED81B46AC /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE70227528DF8045B969DE6F7EA4AB /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */; };
 		342FD0CF5A19992200CDCD679F2D71C6 /* EAIntroView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF4A3155A656729EEA799F87AFBB9D3 /* EAIntroView-dummy.m */; };
-		3569137D9A9A74E88AFFBC11EB501A5F /* Bookmark@3x.psd in Resources */ = {isa = PBXBuildFile; fileRef = 71210FE7AF23E317A7D3E55A97FAF4A7 /* Bookmark@3x.psd */; };
 		35843D6B720611CD4E0BB4372C6E521A /* EAIntroPage.h in Headers */ = {isa = PBXBuildFile; fileRef = E4FCF2E3A99FB466786FDE0CC711A3A7 /* EAIntroPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		360F6BC30D537400D45FD223C24B305C /* Thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE8A37C5A7F345ABC5DBC0E2D6C6AD2 /* Thumbs.png */; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CF74EAB4FB82EC893344D0ABA2936 /* TaskDelegate.swift */; };
 		3788F2C3035A3BF423D83B6E42338310 /* TTOpenInAppActivity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFDB918C3F26A75A8089FD14452060D /* TTOpenInAppActivity-dummy.m */; };
-		37A39F5827CB53F0B4FBD9EE6172222C /* Thumbs@3x.psd in Resources */ = {isa = PBXBuildFile; fileRef = 878C7F1EB5E149390E0E8D0D57858423 /* Thumbs@3x.psd */; };
-		390B03204973017D281D0262C71D55FB /* PDFKBasicPDFViewerSinglePageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A301128464E21561CE1F916F937EE2 /* PDFKBasicPDFViewerSinglePageCollectionView.m */; };
-		3A20D7E3AA0B27A81579F80BA5535434 /* CGPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = F3521A050FE63B93D3771BC8E87D0027 /* CGPDFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		390B03204973017D281D0262C71D55FB /* PDFKBasicPDFViewerSinglePageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C19F47E73F60BEF9227BF23D2AB6C4B /* PDFKBasicPDFViewerSinglePageCollectionView.m */; };
+		3A20D7E3AA0B27A81579F80BA5535434 /* CGPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 79FD7B39CC4921A996A2ADE41AD09F42 /* CGPDFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BF00FC98DC28EB65FD64CD61CBE469F /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD512412DCAAFBCE1E1F997E3AE1E7 /* NVActivityIndicatorAnimationBallGridBeat.swift */; };
+		3CEA15ACCBA696C24881D2D5EE2A2B43 /* PageList@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546B9B25A24B009DC74FBA97724D567A /* PageList@3x.png */; };
 		4158ECAFFDCDFD4051AF0E16CCE551AB /* M13PDFKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FED7DC3C8CAE3FEE89EA330FC18C63F4 /* M13PDFKitResources.bundle */; };
-		430D535E45440D62595314CA226A88F4 /* PDFKThumbRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FE1159CC9B0DAC5756EA993D6D2600 /* PDFKThumbRequest.m */; };
-		496681EB5779132534D60420A1F023B0 /* PDFKThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1317B671E8BA1E5A52051A92754E1F5F /* PDFKThumbView.m */; };
+		42ECE3C210A4B953A65599B2A628DBC5 /* Bookmarked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77485FC25D1B3F66EDC5E4E9C8431B7E /* Bookmarked@2x.png */; };
+		42F9A75ED8129B25733871174E6F556E /* Bookmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84773C1DE191FA815A2B0FE157012F18 /* Bookmark@2x.png */; };
+		430D535E45440D62595314CA226A88F4 /* PDFKThumbRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CDA7F3C0530E9F58F56AF89F25EADE /* PDFKThumbRequest.m */; };
+		480AD1BBDD53881773E282623B128794 /* PageList.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0759AED58E6C6E15BA870C0289A19A /* PageList.png */; };
+		496681EB5779132534D60420A1F023B0 /* PDFKThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC864C631F9BC732133149B5E72D5A8 /* PDFKThumbView.m */; };
 		49A40958B574F4AA0622B86E3DAA19F5 /* EARestrictedScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9188CA1D5C1DBDA1D276C27ED7688E5C /* EARestrictedScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D7F64AC19454C57F7C900664F31EC04 /* NVActivityIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88914158B7D99859E2443FF8D9EFA2D1 /* NVActivityIndicatorView-dummy.m */; };
 		4EA4A852D1D8C36A63ED5E157029EC06 /* EAIntroView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBEA95D98A5AEDB4A679FC8413BEEBD2 /* EAIntroView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		501396162015F7B2D3D6629BFB27F7C9 /* EAIntroView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5325D314D3F223B1D5DA212C1A62D186 /* EAIntroView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		509055AEDB8A418F4B8B96BFA91713B0 /* PDFKThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = F375B98B9E2C4CCCC324FE005AB1BBD8 /* PDFKThumbView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		509055AEDB8A418F4B8B96BFA91713B0 /* PDFKThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38180796437F2925CA30FBCE4FC59493 /* PDFKThumbView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52D3876E9F684B13890FB1C3B11E4515 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5293D76BA51EC2C88DB6249D6A766812 /* SwiftyJSON-dummy.m */; };
 		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605FB4C5AB1326E04E13D41E3A95C382 /* Request.swift */; };
 		55C9B5E4EDA63AD29CFBDB4AC1B06293 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C85F012C635EE6F65660AF21C5761D /* ImageIO.framework */; };
@@ -54,72 +54,67 @@
 		561B1B7C5A104DE40A4FA33668E5D304 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
 		5737C21535BE234C9D6918E845A95878 /* Pods-AIL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C508B6A6ACA045BBB555164563BE29 /* Pods-AIL-dummy.m */; };
 		57D46053523694399834EA1172A911CE /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03D24CACB7A061326BD7885CF847D61 /* NVActivityIndicatorAnimationBallPulseSync.swift */; };
+		58E9B35268BEDB1DB77F72A4D60B2967 /* Thumbs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4011B4DAA9717C1CE6652F170521A40D /* Thumbs@3x.png */; };
+		591DC12558D7EB0ACD43CC85FEFA3C33 /* Thumbs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E80738D4469D2F9EA9831B9A7AE3AD72 /* Thumbs@2x.png */; };
 		599EC797D93F4BEB8EC9C246DBC36125 /* EARestrictedScrollView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 057DFCFA00B4A78F41256D56E57542A7 /* EARestrictedScrollView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DC0AE22F0935E1B0AA75B3D50AB4ACF /* Bookmark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D802355129A791E74122A6F2B4B3F69D /* Bookmark@3x.png */; };
-		5EE7FC9C6663638A106748FA66B90973 /* M13PDFKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CCFED3CAF9442E170BC03A6E2E62B /* M13PDFKit-dummy.m */; };
+		5EE7FC9C6663638A106748FA66B90973 /* M13PDFKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23315D39D905FFBEBEE3EA797D7EEF64 /* M13PDFKit-dummy.m */; };
 		6103E9903EB4E06491FC5DCF246FCAA5 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B992549CB739535DEED4142DDA1CC /* NVActivityIndicatorAnimationBallRotate.swift */; };
 		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48893E7378A6446DA8BDC044502DE92C /* DispatchQueue+Alamofire.swift */; };
 		6151CAD1CAD7F34BFD688580ABA02686 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF517EF65249522682F5F415664FCBC1 /* NVActivityIndicatorAnimationBallGridPulse.swift */; };
 		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE6DF9CD3D511763A0B9044EB23EF6 /* ServerTrustPolicy.swift */; };
 		66A1D1994E2DA7303C41872B5E0C05A8 /* NVActivityIndicatorAnimationLineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063137A9A33228D6F09E7FAA2B0FF87 /* NVActivityIndicatorAnimationLineScale.swift */; };
-		69912E15C3DE0376A3211CCE4E234691 /* Bookmarked@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = 925F9D10AB8825636B1A9249FB434B65 /* Bookmarked@2x.psd */; };
 		6B1CFFAC79BAE248A1CB24E01BC7E74A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CBCA4433DDE81783AABB9C1A4C0106 /* UIKit.framework */; };
+		6C927EEAE1478E19B85B463C5019FDD6 /* Bookmark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3355426E1EA7F3D7EA71DD224D7A570 /* Bookmark@3x.png */; };
 		734896A911D37758CC661CBAAD673DA1 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1626D7A7D6736846D2A5A596C58D62F4 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */; };
 		7693B72E6F0E317692B5457B14DFD304 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
 		76DBBB98A6C38DCC9255A58F686144F3 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43485E5A8A5F59706C47F8E6A69227 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FAC3D16E96691DA63661D8DB06F7A /* SessionDelegate.swift */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FD553841177F27689D3176E5C89ED2 /* Result.swift */; };
-		7F7ADEE7307A970A46454F884C35D063 /* PDFKPageContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC9896C2744B487D51C763380C25F41D /* PDFKPageContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F7ADEE7307A970A46454F884C35D063 /* PDFKPageContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7FBD10A3DA923C8CEB960EBF74CCD5 /* PDFKPageContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80A9D9B9A70679D5BDE4D528687FD86C /* TTOpenInAppActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEDFC96DDF2B7B8BA3756AA5D0FBAD0 /* TTOpenInAppActivity.framework */; };
 		82182CE8F228C83F26CA94BE11C2B17A /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8DB4A5B25F7138052D745C7910884 /* NVActivityIndicatorShape.swift */; };
-		854522D0972B6218BD35EF44E4C12B60 /* PDFKThumbCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C964CFB29BF94D4DDE2C88E2B892E58A /* PDFKThumbCache.m */; };
-		865BF833092734F990BF6663D4179EC3 /* PDFKThumbQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C6F8361944F9E33B2B0BDBA93D69FD /* PDFKThumbQueue.m */; };
-		8737F3AC383E137111D22DB7EE9DD9F6 /* Bookmark.psd in Resources */ = {isa = PBXBuildFile; fileRef = B74F54AD482912021380B4A32E0C47D1 /* Bookmark.psd */; };
-		875FEB95F5B5ACBF276C79BBA1DF2B34 /* Thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CADD6D79D4CCE634DE23BB3C8F16E8 /* Thumbs.png */; };
+		854522D0972B6218BD35EF44E4C12B60 /* PDFKThumbCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D200E8EE848B350E316C5B96570A364 /* PDFKThumbCache.m */; };
+		865BF833092734F990BF6663D4179EC3 /* PDFKThumbQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6974A203D56F82C28E50C2F10C62F51C /* PDFKThumbQueue.m */; };
 		87D83CACE21C33DCBCD33C6461646EE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
-		883008D38BDB61CFC1E7E09F79FD333B /* PDFKThumbRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B5F3B08834EC16DD3AFD64B76C0A4 /* PDFKThumbRenderer.m */; };
+		883008D38BDB61CFC1E7E09F79FD333B /* PDFKThumbRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D14ACC716AB95B88C3F253A281AB0285 /* PDFKThumbRenderer.m */; };
 		88FFF096603628E062CB2C41CB8471A6 /* TTOpenInAppActivity7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E99989A9AF3F10653AF756125469972 /* TTOpenInAppActivity7@2x.png */; };
 		89237C6F5FD5E992915906EB96C5E5EC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECD5B8CF38C3484D1DCAE73CA4B33FA /* Alamofire.framework */; };
-		8996B411E0C0BB4D625BF47DA0DD43FC /* PDFKBasicPDFViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEFE1295887AD118585512CA2B10C1F /* PDFKBasicPDFViewer.m */; };
+		8996B411E0C0BB4D625BF47DA0DD43FC /* PDFKBasicPDFViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F87BDF8D8A52D34953C01D8399D05C7 /* PDFKBasicPDFViewer.m */; };
 		8AE014E6246D550FF0290C45D4821F22 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF636BB033CE4D93ED4733D664EDEDF2 /* NVActivityIndicatorAnimationBallPulseRise.swift */; };
-		8B78E4E4BF0418A9BFC833A62D80E814 /* Bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = E733BFE49A62EFA0576579027573DB49 /* Bookmark.png */; };
-		8D10BE061A3AD43A6B602305C5C472C0 /* Bookmarked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D95F72DCAFA2F98FA9212C9DEEDDE3 /* Bookmarked@2x.png */; };
-		8D6C20725F0ADB522AE81254A5580BA7 /* PDFKPageContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CE47BDFEDBFCC3A423E922AB3253E1 /* PDFKPageContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D76AB29D2AAB26D908B02A6D3F02684 /* Bookmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F93D797F7292B8B672653C6009EB4FC7 /* Bookmark@2x.png */; };
+		8D6C20725F0ADB522AE81254A5580BA7 /* PDFKPageContent.h in Headers */ = {isa = PBXBuildFile; fileRef = B93843DA39BA2239D6DE5C48CC01DEDD /* PDFKPageContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D961959484FC1FF71D46A27E889A75A /* NVActivityIndicatorView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 271BB49D2AAFA1E8E0BC106C6EBE9B0A /* NVActivityIndicatorView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D99066E1BC1725B731527B6BF200FB8 /* PDFKPageContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F41B238B4AD68C68C7AA6A9450C16E /* PDFKPageContentLayer.m */; };
-		8E4CC63D235B18E3EFA0D15C4609AF52 /* PDFKBasicPDFViewerThumbsCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 926CAA4B905051E2B5CFD5414F285B1F /* PDFKBasicPDFViewerThumbsCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E8B727C0F0009356450B831EC61C1B3 /* PDFKPageScrubber.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F5FD43462CCD58EC2FA8A2CF33A64A /* PDFKPageScrubber.m */; };
+		8D99066E1BC1725B731527B6BF200FB8 /* PDFKPageContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3103707D8BC7E017BE5122FB0BBC3A97 /* PDFKPageContentLayer.m */; };
+		8E4CC63D235B18E3EFA0D15C4609AF52 /* PDFKBasicPDFViewerThumbsCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4091E497AA3086C0AEF2212C876A034F /* PDFKBasicPDFViewerThumbsCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E8B727C0F0009356450B831EC61C1B3 /* PDFKPageScrubber.m in Sources */ = {isa = PBXBuildFile; fileRef = A6705DC4E35C4D8EF7268C64DD362DF1 /* PDFKPageScrubber.m */; };
 		8EB0AD01FFFBD40A81836BFFC0D94416 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED4F3EE7558D87D134DBB4AA566173 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */; };
 		8F79989E412A5B21058E3B6A137B2968 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74F82722ABE8A9D657C071EEC7E4152 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */; };
-		911C80B75D3A75330DEA4DBEF65A843A /* PDFKPageScrubber.h in Headers */ = {isa = PBXBuildFile; fileRef = D210B76274F6FEDA7F9A1C1A27F80F55 /* PDFKPageScrubber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90F4A0DD2C5CB658D9A9C41AC626DD24 /* Bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B81C976588E69CFF1E23857C115E0CC9 /* Bookmark.png */; };
+		911C80B75D3A75330DEA4DBEF65A843A /* PDFKPageScrubber.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA843C8E512A6CA03D16A174181CCB2 /* PDFKPageScrubber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		925C420400E51A60BA3DFD8D52D63DBE /* PageList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 857C1C12B248D7C9DF167448A13446D7 /* PageList@2x.png */; };
 		92A34DDF760EF960F95C39C8618BA1A9 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F41633844B54EF8002A5439908C1E27 /* NVActivityIndicatorAnimationBallPulse.swift */; };
-		9329409371F15E11FCD3F015A1EC0343 /* PDFKThumbQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6AD6C6E324BE8FF718EF3F434DF1AA /* PDFKThumbQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9602B14A16462D027DF773F14167732B /* Bookmarked.psd in Resources */ = {isa = PBXBuildFile; fileRef = EAC7A0BA4649149C323739EA167630C7 /* Bookmarked.psd */; };
-		98BE21D2035C136BBA6E7EC5FEFF23CD /* PDFKDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E250D83934E8BC172B803CFE8AE18CB2 /* PDFKDocument.m */; };
+		9329409371F15E11FCD3F015A1EC0343 /* PDFKThumbQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2F778CA2F89399796C2753786A1C9B /* PDFKThumbQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98BE21D2035C136BBA6E7EC5FEFF23CD /* PDFKDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3D197ACC810BD740F0B388E1460B94 /* PDFKDocument.m */; };
 		9907E9EF4FDDA27EAF8B0267299A12E0 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC07682393A6639D79639BEB28D23D8F /* NVActivityIndicatorAnimationBallBeat.swift */; };
 		9976DCB033041F8981560B850E5EF434 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76136C69D984D1561556452546EFB9B4 /* NVActivityIndicatorView.swift */; };
 		9B36EBBA33B908FC3AC6B606771150C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
 		9CED4898B3EA83ABDFAB48532C73C3DC /* Pods-AIL-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5E23A38699EB00868F0EB3EB10E533 /* Pods-AIL-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CF1CEADD41EC88E5C10C2353AE4F752 /* PageList.png in Resources */ = {isa = PBXBuildFile; fileRef = 17BE9863181B3032E77C91530DE887EB /* PageList.png */; };
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C2F4F15B167893674D0DD423C6B20 /* AFError.swift */; };
 		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
 		A28BC96BFBF5928CFD4C70A1314A5901 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FDD60551EDE1FFBB4DBD9FDC74F398 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */; };
+		A29BE147BA61A050853668663F3BA6D9 /* Bookmarked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B65CC76686866A8008E0B56A1F5201 /* Bookmarked@3x.png */; };
 		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6650AF093F89B12A9BD16019E595F909 /* NetworkReachabilityManager.swift */; };
 		A3E994C8D39F0C5426CC372A13F3A0BC /* TTOpenInAppActivity-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06D766837B4B41C3ED9144517DC686EE /* TTOpenInAppActivity-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A40733D4BB77E3F0309F8A46A034A250 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A856092ED879E52590D18AD2561E8 /* NVActivityIndicatorAnimationBallRotateChase.swift */; };
 		A6EE5071A29AF5E8B20E03914F2EA8F7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21352899935298C30EB825CC19312F6 /* MobileCoreServices.framework */; };
-		A8421B4508A8E47863D895736C512946 /* PDFKPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35661EB93C459BDFD7602F2AE61DECD4 /* PDFKPageContentView.m */; };
-		A855E9024E202E3E6231E762ADFC4DC4 /* PDFKThumbRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E5199720AA5639F6AAB0C7F49D2E97C5 /* PDFKThumbRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8421B4508A8E47863D895736C512946 /* PDFKPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BE93AC15DF1A517925DE9CA131A5F8 /* PDFKPageContentView.m */; };
+		A855E9024E202E3E6231E762ADFC4DC4 /* PDFKThumbRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 928C8B66A38510772FB4C568036FB083 /* PDFKThumbRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88260450A01EE71B8636B6F99B96F85A /* Alamofire-dummy.m */; };
 		AA03B45AE77FB5039236B42EBE5F309E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145D15F866DD8714F0F85120D3B7A53C /* QuartzCore.framework */; };
-		AB42B094548DFBEFFD626F60483B2D0E /* Thumbs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BF66A7D9F9BC35DECD0989D45B06613 /* Thumbs@2x.png */; };
 		AB7C2D179D130003609035B8F38C3B45 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8233C6F6D04C332984B0BFB8E2BD8B /* NVActivityIndicatorViewable.swift */; };
 		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FF778E99BECDEF1C64BE23D57A869 /* SessionManager.swift */; };
-		B0747E072C73B20B0ACDDF57C094A477 /* PDFKBasicPDFViewerSinglePageCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4420A6C512911C0366D7C2CD2F167A35 /* PDFKBasicPDFViewerSinglePageCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0747E072C73B20B0ACDDF57C094A477 /* PDFKBasicPDFViewerSinglePageCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1519097CD9098684A9FB22023E6617 /* PDFKBasicPDFViewerSinglePageCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1D8105FDFFB088D18B64B0D40C32378 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F440D68C163E02E95585F5ABD7F2F89 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */; };
-		B26910677CA8CC9E81F676ABEE57FFA4 /* PDFKThumbCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FB8F30757BBCC5EDDFB1927908F7CF9D /* PDFKThumbCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4D6346A4BDD69409CE031A8619FB9F8 /* PageList.psd in Resources */ = {isa = PBXBuildFile; fileRef = 725171EF5FC03868A3A18140110C666D /* PageList.psd */; };
+		B26910677CA8CC9E81F676ABEE57FFA4 /* PDFKThumbCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A22F8C1DBC2C2DB4592CB396FA00DEB4 /* PDFKThumbCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B82ECB4464CA20310D3E4271463152 /* MultipartFormData.swift */; };
 		B820EB8902E948072290C657D8B1C3BE /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677FC6E28130FBDE0BC99EB638B24D3A /* NVActivityIndicatorAnimationBallTrianglePath.swift */; };
 		B9729ABF7B34465ACDF3622F299AF463 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D9D972CCEFC23960894B89052BB9B5 /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
@@ -129,40 +124,32 @@
 		C3680F12DE1E444D4312F4113E6366EE /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC96E94F20999F7B094EB724DD2D843 /* NVActivityIndicatorAnimationAudioEqualizer.swift */; };
 		C41EB9232CC9C9A7A1D5A6F221D1EDB4 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E1701B48C0BCEBC3F3B456E3A0A9B /* EAIntroPage.m */; };
 		C588352D205115A9A7AAB716E450D570 /* TTOpenInAppActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DA9C205318781D4764E1D702D44D5C /* TTOpenInAppActivity.m */; };
-		C760EB7D22A5F866FF87E56D8561A395 /* Bookmarked.png in Resources */ = {isa = PBXBuildFile; fileRef = AAB2190DBCE39800F01F15A2FC2138F3 /* Bookmarked.png */; };
-		C7964E93336104D7EB83BB89C4EA77DE /* PDFKBasicPDFViewerThumbsCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A1482A8F4B29FDDF53AA8BB0697A4D /* PDFKBasicPDFViewerThumbsCollectionView.m */; };
+		C7964E93336104D7EB83BB89C4EA77DE /* PDFKBasicPDFViewerThumbsCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6407B52BB654706DAC719DB8650F88 /* PDFKBasicPDFViewerThumbsCollectionView.m */; };
 		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92C1FE194F429AB96248915B666D9A /* Response.swift */; };
 		CCD230BC815C775651F2054A0DAE32E7 /* EARestrictedScrollView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F19C83184DB21125D2993729151B0DBE /* EARestrictedScrollView-dummy.m */; };
 		CD21360061606DF7E88CFBE52894E97E /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2179160CCF1B6A829003BE754EE0DA9D /* NVActivityIndicatorAnimationLineScaleParty.swift */; };
-		CD97BF8D922315400D0E773049D95FBC /* PDFKPageContentLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B533DB156C478764D2E224D8545659C /* PDFKPageContentLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFD2E990C1C5EFA734727AF0BA00F142 /* PDFKThumbRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 06D9CD062C48CB17CE482FE7CD591F68 /* PDFKThumbRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD97BF8D922315400D0E773049D95FBC /* PDFKPageContentLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5B08148E4D3EE7838509B85C9C182D /* PDFKPageContentLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFD2E990C1C5EFA734727AF0BA00F142 /* PDFKThumbRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = A3EF7C3D5143DAC5E1AB64D7754AFA4D /* PDFKThumbRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D043585B57EB4F52A3E8DC796E938B6E /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9900B7BBD4C9E0143E7236DF60E88D /* NVActivityIndicatorAnimationDelegate.swift */; };
 		D196A425B69E7C870FF2AE2EF9AC0561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
 		D19EE707FE40D8B0E4C006D4517C7C17 /* NVActivityIndicatorAnimationPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC592435BB23177B20B87B5FFC92555A /* NVActivityIndicatorAnimationPacman.swift */; };
 		D222816ABFD1304562E2900ABC8A9658 /* TTOpenInAppActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78FDCA84676952C864CF92BED659E0BD /* TTOpenInAppActivity@2x.png */; };
 		D279F5870D34FA56DB988CFB63736331 /* TTOpenInAppActivity7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F572C6224A9D2E557DCFD75DAB62F /* TTOpenInAppActivity7.png */; };
-		D3E78FB1BD8653DDD3DAB572F4A19DA1 /* PageList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3044775611BF2938D9AC33B7F9475061 /* PageList@2x.png */; };
-		D4018DD634D4CFFFD8851F3606A8F49B /* Thumbs@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = 05169A2CF37A9B715E88323BE1C9A768 /* Thumbs@2x.psd */; };
-		D6C27D3D19B7EF14376E430E64C4F57E /* PageList@3x.psd in Resources */ = {isa = PBXBuildFile; fileRef = 53B087127E017084FE4AEA07ACC8DB1A /* PageList@3x.psd */; };
-		D77BFE8DBBE6E1464DCFEF87EEC9C874 /* Bookmark@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = F2899E5A13052DBC5EFB8E8AE5FE28A0 /* Bookmark@2x.psd */; };
 		D7C7525D0BC01EDCE9F5F1D81145280E /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46F1CE82063E7230970987B7C6E42B /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
 		D936824C9B2977BF24138010300CD67D /* AlamofireNetworkActivityIndicator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E77242CAFCF1B495EC5A1112F156432E /* AlamofireNetworkActivityIndicator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D979FA91CF7F0B63516DB79D191B19A7 /* TTOpenInAppActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 0675F054E41DFBA8D6859E28CF4A8A4F /* TTOpenInAppActivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFBD4FBC7F5BBC2D300C20E59884B389 /* M13PDFKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B640BEAFCBDF933A36DA3912D710E9A0 /* M13PDFKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFBD4FBC7F5BBC2D300C20E59884B389 /* M13PDFKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F02976D389BAFC329F7C9329EAE2D25C /* M13PDFKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1CA4235BD5AD69B13C648C1E7A3AE96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
-		E4781D20BFA1EF1BA2ADAC667AD087F9 /* PageList@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = C79F600B1C0A7E39AC189566393EC7B1 /* PageList@2x.psd */; };
-		E9D4586BEA25E37DC89D1D213DCBD8C8 /* Thumbs.psd in Resources */ = {isa = PBXBuildFile; fileRef = 417D4344F5FB065D2FF9C45F05CE3102 /* Thumbs.psd */; };
-		E9EADA0457CC0F2833FB5F076EAA283F /* PDFKPageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9583F751A99BCE0AF06F19D2E0DE05 /* PDFKPageContent.m */; };
+		E9EADA0457CC0F2833FB5F076EAA283F /* PDFKPageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D6E87F1BA3D854A00F44278FC03E1 /* PDFKPageContent.m */; };
 		EA705D6826863CE9297E92D5673EEDCE /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2CE127FCA019C5AB336E251E0135C9 /* EAIntroView.m */; };
 		EABBB2F663609893680E5B6F1622F5E6 /* EARestrictedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4684F4725D90300F264943C330091125 /* EARestrictedScrollView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		EBC01ED6CC74AB0035E3965674E3BF72 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9893905C75333DD8676205D28A58E196 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED5BE9F3F74614A80C0AF064BB9C1D2A /* NVActivityIndicatorAnimationBallScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B1F0572FC9BDA727F3E1A89E5BF07 /* NVActivityIndicatorAnimationBallScale.swift */; };
 		EEBAF0C76A07D7EC362A8E28F1814814 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A26C688D68624DF063759C61A643D /* Foundation.framework */; };
 		EEE1478B79092EB209968D14D213C2F9 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790B609F0AEBD65191BA458099F002F1 /* NVActivityIndicatorAnimationSquareSpin.swift */; };
-		EEEA5A6BE9BBE0515D25D3393298113B /* Thumbs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B73AA9B886A9F08B5A2D11586C0D5BB6 /* Thumbs@3x.png */; };
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08423E0994D89D920E02DCB385BEDE /* Notifications.swift */; };
 		F3B8870A51612FE16508BA9448362CB9 /* EARestrictedScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CC8F8AEF48AE28BFE481764DE911FE /* EARestrictedScrollView.framework */; };
-		F65138DA8C3F65EE8ABCDC324F8D0CC6 /* PDFKThumbFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 76D41378B5660131AFA95B0FEA7A518D /* PDFKThumbFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65138DA8C3F65EE8ABCDC324F8D0CC6 /* PDFKThumbFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A505B726F20FECA3D87764F614A17317 /* PDFKThumbFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313793EBDA562897B2E55B15FCAEB1AE /* ResponseSerialization.swift */; };
 		F74A71F0DE9D10DC638F244189B10DF0 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C85D3DAE1132BAD644D12DC40D9E21 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */; };
 		F7D73313DFD7F85D77D06156C5B80895 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E377022F4AC5877F8CCD1599AC988 /* NVActivityIndicatorAnimationBallScaleRipple.swift */; };
@@ -171,6 +158,7 @@
 		FBE3C40A6A88024A491634F62DC692D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CBCA4433DDE81783AABB9C1A4C0106 /* UIKit.framework */; };
 		FC6E07D83186171C8C0E9F20458A817A /* SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5795B6C8E47F181FDC628BA4AFCDA7F8 /* SlideMenuControllerSwift-dummy.m */; };
 		FD816CC4636C84850BEBC1C84A160C65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CBCA4433DDE81783AABB9C1A4C0106 /* UIKit.framework */; };
+		FEEB9E143D73AF0E3F0367426E3A4A8C /* Bookmarked.png in Resources */ = {isa = PBXBuildFile; fileRef = 079683CA9979B80F76D66E5F63BDC73F /* Bookmarked.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,146 +259,142 @@
 		015CDB7D1199B456B4A858C4AFF9373B /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		0493A60F096D82C8CE0F3B8198262042 /* NVActivityIndicatorAnimationCubeTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationCubeTransition.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationCubeTransition.swift; sourceTree = "<group>"; };
 		04C508B6A6ACA045BBB555164563BE29 /* Pods-AIL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AIL-dummy.m"; sourceTree = "<group>"; };
-		05169A2CF37A9B715E88323BE1C9A768 /* Thumbs@2x.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = "Thumbs@2x.psd"; path = "Resources/Thumbs@2x.psd"; sourceTree = "<group>"; };
 		057DFCFA00B4A78F41256D56E57542A7 /* EARestrictedScrollView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EARestrictedScrollView-umbrella.h"; sourceTree = "<group>"; };
 		0675F054E41DFBA8D6859E28CF4A8A4F /* TTOpenInAppActivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTOpenInAppActivity.h; path = TTOpenInAppActivity/TTOpenInAppActivity.h; sourceTree = "<group>"; };
 		06D766837B4B41C3ED9144517DC686EE /* TTOpenInAppActivity-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTOpenInAppActivity-umbrella.h"; sourceTree = "<group>"; };
-		06D9CD062C48CB17CE482FE7CD591F68 /* PDFKThumbRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbRenderer.h; path = Classes/Thumbs/PDFKThumbRenderer.h; sourceTree = "<group>"; };
-		07CC8F06B2AC549A9BDBE7474C85FE42 /* EARestrictedScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EARestrictedScrollView.framework; path = EARestrictedScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A14E6AE6BA7B1DEE4DFE567BDF6A511 /* M13PDFKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = M13PDFKit.modulemap; sourceTree = "<group>"; };
+		079683CA9979B80F76D66E5F63BDC73F /* Bookmarked.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bookmarked.png; path = Resources/Bookmarked.png; sourceTree = "<group>"; };
+		07CC8F06B2AC549A9BDBE7474C85FE42 /* EARestrictedScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EARestrictedScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A0759AED58E6C6E15BA870C0289A19A /* PageList.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = PageList.png; path = Resources/PageList.png; sourceTree = "<group>"; };
+		0AC864C631F9BC732133149B5E72D5A8 /* PDFKThumbView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbView.m; path = Classes/Thumbs/PDFKThumbView.m; sourceTree = "<group>"; };
 		0D46F1CE82063E7230970987B7C6E42B /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallSpinFadeLoader.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallSpinFadeLoader.swift; sourceTree = "<group>"; };
 		0EFEBC126F6E427B956D749F1630011E /* AlamofireNetworkActivityIndicator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlamofireNetworkActivityIndicator.xcconfig; sourceTree = "<group>"; };
 		1063137A9A33228D6F09E7FAA2B0FF87 /* NVActivityIndicatorAnimationLineScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScale.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScale.swift; sourceTree = "<group>"; };
-		11BB46F1AD2C82287494A3C69E3D2EF4 /* Bookmarked@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Bookmarked@3x.png"; path = "Resources/Bookmarked@3x.png"; sourceTree = "<group>"; };
 		11C85D3DAE1132BAD644D12DC40D9E21 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleMultiple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
 		12FDD60551EDE1FFBB4DBD9FDC74F398 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationTriangleSkewSpin.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationTriangleSkewSpin.swift; sourceTree = "<group>"; };
-		1317B671E8BA1E5A52051A92754E1F5F /* PDFKThumbView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbView.m; path = Classes/Thumbs/PDFKThumbView.m; sourceTree = "<group>"; };
 		145D15F866DD8714F0F85120D3B7A53C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		1626D7A7D6736846D2A5A596C58D62F4 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineSpinFadeLoader.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineSpinFadeLoader.swift; sourceTree = "<group>"; };
 		16D9D972CCEFC23960894B89052BB9B5 /* NVActivityIndicatorAnimationBallClipRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotate.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotate.swift; sourceTree = "<group>"; };
-		17BE9863181B3032E77C91530DE887EB /* PageList.png */ = {isa = PBXFileReference; includeInIndex = 1; name = PageList.png; path = Resources/PageList.png; sourceTree = "<group>"; };
-		1D5F47418DCC628109DA527BE04E9A59 /* PDFKDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKDocument.h; path = Classes/Document/PDFKDocument.h; sourceTree = "<group>"; };
-		1E6A4969B8738414D928EB330BE1355B /* M13PDFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = M13PDFKit.framework; path = M13PDFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D200E8EE848B350E316C5B96570A364 /* PDFKThumbCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbCache.m; path = Classes/Thumbs/PDFKThumbCache.m; sourceTree = "<group>"; };
+		1E6A4969B8738414D928EB330BE1355B /* M13PDFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = M13PDFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20CBCA4433DDE81783AABB9C1A4C0106 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		21023F9DA33727DAA58121542A7A287F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		211D9FB521BA15412CAD238660EA8EBC /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
+		211D9FB521BA15412CAD238660EA8EBC /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
 		2179160CCF1B6A829003BE754EE0DA9D /* NVActivityIndicatorAnimationLineScaleParty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScaleParty.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScaleParty.swift; sourceTree = "<group>"; };
-		22F41B238B4AD68C68C7AA6A9450C16E /* PDFKPageContentLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKPageContentLayer.m; path = Classes/View/PDFKPageContentLayer.m; sourceTree = "<group>"; };
+		23315D39D905FFBEBEE3EA797D7EEF64 /* M13PDFKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13PDFKit-dummy.m"; sourceTree = "<group>"; };
+		24B65CC76686866A8008E0B56A1F5201 /* Bookmarked@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Bookmarked@3x.png"; path = "Resources/Bookmarked@3x.png"; sourceTree = "<group>"; };
 		24C85F012C635EE6F65660AF21C5761D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		271BB49D2AAFA1E8E0BC106C6EBE9B0A /* NVActivityIndicatorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-umbrella.h"; sourceTree = "<group>"; };
 		291BD30444C87977CDCC8E1722E67103 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29B82ECB4464CA20310D3E4271463152 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		29D92EAD5B587A7A2BFC3166349D60C2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		2A9583F751A99BCE0AF06F19D2E0DE05 /* PDFKPageContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKPageContent.m; path = Classes/View/PDFKPageContent.m; sourceTree = "<group>"; };
 		2B8233C6F6D04C332984B0BFB8E2BD8B /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorViewable.swift; path = NVActivityIndicatorView/NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
 		2BEF037A49F788DCDBC79A7B2C8A6134 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3044775611BF2938D9AC33B7F9475061 /* PageList@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "PageList@2x.png"; path = "Resources/PageList@2x.png"; sourceTree = "<group>"; };
+		2D1519097CD9098684A9FB22023E6617 /* PDFKBasicPDFViewerSinglePageCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKBasicPDFViewerSinglePageCollectionView.h; path = Classes/View/PDFKBasicPDFViewerSinglePageCollectionView.h; sourceTree = "<group>"; };
+		2F87BDF8D8A52D34953C01D8399D05C7 /* PDFKBasicPDFViewer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKBasicPDFViewer.m; path = Classes/View/PDFKBasicPDFViewer.m; sourceTree = "<group>"; };
+		2F895D524B34225316C93CC66352DF3A /* PDFKDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKDocument.h; path = Classes/Document/PDFKDocument.h; sourceTree = "<group>"; };
+		3103707D8BC7E017BE5122FB0BBC3A97 /* PDFKPageContentLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKPageContentLayer.m; path = Classes/View/PDFKPageContentLayer.m; sourceTree = "<group>"; };
 		313793EBDA562897B2E55B15FCAEB1AE /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		318513D7428919F22F8677A4C995A1B3 /* Pods-AIL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AIL.release.xcconfig"; sourceTree = "<group>"; };
-		321282DDAC6FBE0B42B972C9EA798417 /* CGPDFDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGPDFDocument.m; path = Classes/Document/CGPDFDocument.m; sourceTree = "<group>"; };
-		35661EB93C459BDFD7602F2AE61DECD4 /* PDFKPageContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKPageContentView.m; path = Classes/View/PDFKPageContentView.m; sourceTree = "<group>"; };
 		357DE7FD54EE4162CEA5A91F515F6287 /* TTOpenInAppActivity-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTOpenInAppActivity-prefix.pch"; sourceTree = "<group>"; };
 		3585F2FB703D1AB42E1AED24C24E50CC /* Pods-AIL-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AIL-acknowledgements.markdown"; sourceTree = "<group>"; };
-		35A301128464E21561CE1F916F937EE2 /* PDFKBasicPDFViewerSinglePageCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKBasicPDFViewerSinglePageCollectionView.m; path = Classes/View/PDFKBasicPDFViewerSinglePageCollectionView.m; sourceTree = "<group>"; };
 		35BA4191DCD1D49B52F9DE4923E9190A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B533DB156C478764D2E224D8545659C /* PDFKPageContentLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKPageContentLayer.h; path = Classes/View/PDFKPageContentLayer.h; sourceTree = "<group>"; };
+		38180796437F2925CA30FBCE4FC59493 /* PDFKThumbView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbView.h; path = Classes/Thumbs/PDFKThumbView.h; sourceTree = "<group>"; };
 		3C3E1701B48C0BCEBC3F3B456E3A0A9B /* EAIntroPage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EAIntroPage.m; path = EAIntroView/EAIntroPage.m; sourceTree = "<group>"; };
-		3CD218161237B424F3A08317A1D7E593 /* EAIntroView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EAIntroView.modulemap; sourceTree = "<group>"; };
+		3CD218161237B424F3A08317A1D7E593 /* EAIntroView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EAIntroView.modulemap; sourceTree = "<group>"; };
+		3E2F778CA2F89399796C2753786A1C9B /* PDFKThumbQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbQueue.h; path = Classes/Thumbs/PDFKThumbQueue.h; sourceTree = "<group>"; };
 		3E6A26C688D68624DF063759C61A643D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3F8F572C6224A9D2E557DCFD75DAB62F /* TTOpenInAppActivity7.png */ = {isa = PBXFileReference; includeInIndex = 1; name = TTOpenInAppActivity7.png; path = TTOpenInAppActivity/TTOpenInAppActivity7.png; sourceTree = "<group>"; };
-		417D4344F5FB065D2FF9C45F05CE3102 /* Thumbs.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = Thumbs.psd; path = Resources/Thumbs.psd; sourceTree = "<group>"; };
+		3F8F572C6224A9D2E557DCFD75DAB62F /* TTOpenInAppActivity7.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = TTOpenInAppActivity7.png; path = TTOpenInAppActivity/TTOpenInAppActivity7.png; sourceTree = "<group>"; };
+		4011B4DAA9717C1CE6652F170521A40D /* Thumbs@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Thumbs@3x.png"; path = "Resources/Thumbs@3x.png"; sourceTree = "<group>"; };
+		4091E497AA3086C0AEF2212C876A034F /* PDFKBasicPDFViewerThumbsCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKBasicPDFViewerThumbsCollectionView.h; path = Classes/View/PDFKBasicPDFViewerThumbsCollectionView.h; sourceTree = "<group>"; };
+		4282AC2FE6CD151A7B8ECB01AA44DCA1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42FE583271248C92F84717107EDA4835 /* SlideMenuControllerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-umbrella.h"; sourceTree = "<group>"; };
-		4420A6C512911C0366D7C2CD2F167A35 /* PDFKBasicPDFViewerSinglePageCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKBasicPDFViewerSinglePageCollectionView.h; path = Classes/View/PDFKBasicPDFViewerSinglePageCollectionView.h; sourceTree = "<group>"; };
 		45EBCC73B1CE01B61C659B5D0B9D54B7 /* SlideMenuControllerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-prefix.pch"; sourceTree = "<group>"; };
 		4684F4725D90300F264943C330091125 /* EARestrictedScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EARestrictedScrollView.m; path = EARestrictedScrollView/EARestrictedScrollView.m; sourceTree = "<group>"; };
 		48893E7378A6446DA8BDC044502DE92C /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		4A761534B0C79771EFBD4E96E2FBC3D5 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NVActivityIndicatorView.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A761534B0C79771EFBD4E96E2FBC3D5 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF32B692A76F075970647E6109FCDD5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C2FAC3D16E96691DA63661D8DB06F7A /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		4E99989A9AF3F10653AF756125469972 /* TTOpenInAppActivity7@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "TTOpenInAppActivity7@2x.png"; path = "TTOpenInAppActivity/TTOpenInAppActivity7@2x.png"; sourceTree = "<group>"; };
+		4E99989A9AF3F10653AF756125469972 /* TTOpenInAppActivity7@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "TTOpenInAppActivity7@2x.png"; path = "TTOpenInAppActivity/TTOpenInAppActivity7@2x.png"; sourceTree = "<group>"; };
 		519A79A6B12FA2B93A2BE24D0D85FA20 /* EAIntroView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EAIntroView.xcconfig; sourceTree = "<group>"; };
 		5293D76BA51EC2C88DB6249D6A766812 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		5325D314D3F223B1D5DA212C1A62D186 /* EAIntroView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EAIntroView.h; path = EAIntroView/EAIntroView.h; sourceTree = "<group>"; };
 		533852F0E552CFA8A29147E38E240A3F /* EARestrictedScrollView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EARestrictedScrollView.xcconfig; sourceTree = "<group>"; };
 		537861017D7F4C2FDDDE67AF8FFCFA53 /* NVActivityIndicatorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NVActivityIndicatorView.xcconfig; sourceTree = "<group>"; };
-		53B087127E017084FE4AEA07ACC8DB1A /* PageList@3x.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = "PageList@3x.psd"; path = "Resources/PageList@3x.psd"; sourceTree = "<group>"; };
-		546B5F3B08834EC16DD3AFD64B76C0A4 /* PDFKThumbRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbRenderer.m; path = Classes/Thumbs/PDFKThumbRenderer.m; sourceTree = "<group>"; };
+		546B9B25A24B009DC74FBA97724D567A /* PageList@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PageList@3x.png"; path = "Resources/PageList@3x.png"; sourceTree = "<group>"; };
 		56FD553841177F27689D3176E5C89ED2 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		5795B6C8E47F181FDC628BA4AFCDA7F8 /* SlideMenuControllerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlideMenuControllerSwift-dummy.m"; sourceTree = "<group>"; };
 		58A5FB0FACCECB4707900E37F5ECB5AA /* AlamofireNetworkActivityIndicator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlamofireNetworkActivityIndicator-dummy.m"; sourceTree = "<group>"; };
 		5952ACE2469C44452C1B4C506450AAE5 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; sourceTree = "<group>"; };
 		5B43569FE793D2F4BB47B570BAAE09F5 /* EARestrictedScrollView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EARestrictedScrollView-prefix.pch"; sourceTree = "<group>"; };
 		5B5E23A38699EB00868F0EB3EB10E533 /* Pods-AIL-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AIL-umbrella.h"; sourceTree = "<group>"; };
+		5EFED7F820F17AB33478C203524B891C /* ResourceBundle-M13PDFKitResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-M13PDFKitResources-Info.plist"; sourceTree = "<group>"; };
 		5F41633844B54EF8002A5439908C1E27 /* NVActivityIndicatorAnimationBallPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulse.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulse.swift; sourceTree = "<group>"; };
 		6039B4D5B0EB1A60B1598B5C3B2102AF /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		605FB4C5AB1326E04E13D41E3A95C382 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		60FE1159CC9B0DAC5756EA993D6D2600 /* PDFKThumbRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbRequest.m; path = Classes/Thumbs/PDFKThumbRequest.m; sourceTree = "<group>"; };
-		61D95F72DCAFA2F98FA9212C9DEEDDE3 /* Bookmarked@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Bookmarked@2x.png"; path = "Resources/Bookmarked@2x.png"; sourceTree = "<group>"; };
 		65DB2CA7377182F1F789FB68DA5256C7 /* Pods-AIL-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AIL-frameworks.sh"; sourceTree = "<group>"; };
 		6650AF093F89B12A9BD16019E595F909 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		677FC6E28130FBDE0BC99EB638B24D3A /* NVActivityIndicatorAnimationBallTrianglePath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallTrianglePath.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallTrianglePath.swift; sourceTree = "<group>"; };
+		6974A203D56F82C28E50C2F10C62F51C /* PDFKThumbQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbQueue.m; path = Classes/Thumbs/PDFKThumbQueue.m; sourceTree = "<group>"; };
 		6B9714C88D5163632171ED4F3E215FDB /* Pods-AIL-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AIL-resources.sh"; sourceTree = "<group>"; };
-		6BF66A7D9F9BC35DECD0989D45B06613 /* Thumbs@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Thumbs@2x.png"; path = "Resources/Thumbs@2x.png"; sourceTree = "<group>"; };
 		6D5EEF58865A11F8C53D9038CEF81B47 /* Pods-AIL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AIL.debug.xcconfig"; sourceTree = "<group>"; };
+		6DC5AD0B7BF10CBC2586F6EC244339B1 /* PDFKBasicPDFViewer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKBasicPDFViewer.h; path = Classes/View/PDFKBasicPDFViewer.h; sourceTree = "<group>"; };
 		6DE82DB5963ABFC74D6B82AE34B40CEC /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		6E5A856092ED879E52590D18AD2561E8 /* NVActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotateChase.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
-		71210FE7AF23E317A7D3E55A97FAF4A7 /* Bookmark@3x.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = "Bookmark@3x.psd"; path = "Resources/Bookmark@3x.psd"; sourceTree = "<group>"; };
 		71CC8F8AEF48AE28BFE481764DE911FE /* EARestrictedScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EARestrictedScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		725171EF5FC03868A3A18140110C666D /* PageList.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = PageList.psd; path = Resources/PageList.psd; sourceTree = "<group>"; };
 		743731AE267055E36F47906DFD3B200D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		749B1F0572FC9BDA727F3E1A89E5BF07 /* NVActivityIndicatorAnimationBallScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScale.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScale.swift; sourceTree = "<group>"; };
 		74DA9C205318781D4764E1D702D44D5C /* TTOpenInAppActivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTOpenInAppActivity.m; path = TTOpenInAppActivity/TTOpenInAppActivity.m; sourceTree = "<group>"; };
 		76136C69D984D1561556452546EFB9B4 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorView.swift; path = NVActivityIndicatorView/NVActivityIndicatorView.swift; sourceTree = "<group>"; };
-		76D41378B5660131AFA95B0FEA7A518D /* PDFKThumbFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbFetcher.h; path = Classes/Thumbs/PDFKThumbFetcher.h; sourceTree = "<group>"; };
+		77485FC25D1B3F66EDC5E4E9C8431B7E /* Bookmarked@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Bookmarked@2x.png"; path = "Resources/Bookmarked@2x.png"; sourceTree = "<group>"; };
 		77A3B7FD0E1FA3A013DDA026B3948D77 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorPresenter.swift; path = NVActivityIndicatorView/NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
-		78FDCA84676952C864CF92BED659E0BD /* TTOpenInAppActivity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "TTOpenInAppActivity@2x.png"; path = "TTOpenInAppActivity/TTOpenInAppActivity@2x.png"; sourceTree = "<group>"; };
+		78FDCA84676952C864CF92BED659E0BD /* TTOpenInAppActivity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "TTOpenInAppActivity@2x.png"; path = "TTOpenInAppActivity/TTOpenInAppActivity@2x.png"; sourceTree = "<group>"; };
 		790B609F0AEBD65191BA458099F002F1 /* NVActivityIndicatorAnimationSquareSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSquareSpin.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSquareSpin.swift; sourceTree = "<group>"; };
+		793D6E87F1BA3D854A00F44278FC03E1 /* PDFKPageContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKPageContent.m; path = Classes/View/PDFKPageContent.m; sourceTree = "<group>"; };
+		79FD7B39CC4921A996A2ADE41AD09F42 /* CGPDFDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGPDFDocument.h; path = Classes/Document/CGPDFDocument.h; sourceTree = "<group>"; };
 		7D08423E0994D89D920E02DCB385BEDE /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		7D2CCFED3CAF9442E170BC03A6E2E62B /* M13PDFKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13PDFKit-dummy.m"; sourceTree = "<group>"; };
-		7DAC9F00FAB11340214A470564DBCF7F /* EAIntroView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EAIntroView.framework; path = EAIntroView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAC9F00FAB11340214A470564DBCF7F /* EAIntroView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EAIntroView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E54284C1ABBAD4E8F6C84F75522E5ED /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		809B9FEEE1868205D77FB052D80C5DE9 /* PDFKThumbFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbFetcher.m; path = Classes/Thumbs/PDFKThumbFetcher.m; sourceTree = "<group>"; };
-		821F6C3E3F1742BFF39198BFE7614F8A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		828AB8EDBF27D2DC43961596A8ABFF93 /* Bookmarked@3x.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = "Bookmarked@3x.psd"; path = "Resources/Bookmarked@3x.psd"; sourceTree = "<group>"; };
+		80CDA7F3C0530E9F58F56AF89F25EADE /* PDFKThumbRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbRequest.m; path = Classes/Thumbs/PDFKThumbRequest.m; sourceTree = "<group>"; };
+		84773C1DE191FA815A2B0FE157012F18 /* Bookmark@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Bookmark@2x.png"; path = "Resources/Bookmark@2x.png"; sourceTree = "<group>"; };
 		850B18C8E03989320FBC0F37822553A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85431DB600F4E6929A540ED6182364EC /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		85431DB600F4E6929A540ED6182364EC /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		857C1C12B248D7C9DF167448A13446D7 /* PageList@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PageList@2x.png"; path = "Resources/PageList@2x.png"; sourceTree = "<group>"; };
 		86ED4F3EE7558D87D134DBB4AA566173 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; sourceTree = "<group>"; };
-		878C7F1EB5E149390E0E8D0D57858423 /* Thumbs@3x.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = "Thumbs@3x.psd"; path = "Resources/Thumbs@3x.psd"; sourceTree = "<group>"; };
 		88260450A01EE71B8636B6F99B96F85A /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		888E66C0C5D6094451AE837E36E3B286 /* NVActivityIndicatorAnimationOrbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationOrbit.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationOrbit.swift; sourceTree = "<group>"; };
 		88914158B7D99859E2443FF8D9EFA2D1 /* NVActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NVActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
-		8BBA68906A04B439684E08C3595214BF /* TTOpenInAppActivity.png */ = {isa = PBXFileReference; includeInIndex = 1; name = TTOpenInAppActivity.png; path = TTOpenInAppActivity/TTOpenInAppActivity.png; sourceTree = "<group>"; };
-		8C31504C583F5098E421184C4AA947E2 /* EARestrictedScrollView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EARestrictedScrollView.modulemap; sourceTree = "<group>"; };
-		8E6AD6C6E324BE8FF718EF3F434DF1AA /* PDFKThumbQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbQueue.h; path = Classes/Thumbs/PDFKThumbQueue.h; sourceTree = "<group>"; };
+		8A5B08148E4D3EE7838509B85C9C182D /* PDFKPageContentLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKPageContentLayer.h; path = Classes/View/PDFKPageContentLayer.h; sourceTree = "<group>"; };
+		8B6407B52BB654706DAC719DB8650F88 /* PDFKBasicPDFViewerThumbsCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKBasicPDFViewerThumbsCollectionView.m; path = Classes/View/PDFKBasicPDFViewerThumbsCollectionView.m; sourceTree = "<group>"; };
+		8BBA68906A04B439684E08C3595214BF /* TTOpenInAppActivity.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = TTOpenInAppActivity.png; path = TTOpenInAppActivity/TTOpenInAppActivity.png; sourceTree = "<group>"; };
+		8BF726F5C04C8CB81F4D90A92B897496 /* CGPDFDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CGPDFDocument.m; path = Classes/Document/CGPDFDocument.m; sourceTree = "<group>"; };
+		8C19F47E73F60BEF9227BF23D2AB6C4B /* PDFKBasicPDFViewerSinglePageCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKBasicPDFViewerSinglePageCollectionView.m; path = Classes/View/PDFKBasicPDFViewerSinglePageCollectionView.m; sourceTree = "<group>"; };
+		8C31504C583F5098E421184C4AA947E2 /* EARestrictedScrollView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EARestrictedScrollView.modulemap; sourceTree = "<group>"; };
 		8F440D68C163E02E95585F5ABD7F2F89 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSemiCircleSpin.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSemiCircleSpin.swift; sourceTree = "<group>"; };
 		8F6CF74EAB4FB82EC893344D0ABA2936 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		9188CA1D5C1DBDA1D276C27ED7688E5C /* EARestrictedScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EARestrictedScrollView.h; path = EARestrictedScrollView/EARestrictedScrollView.h; sourceTree = "<group>"; };
-		925F9D10AB8825636B1A9249FB434B65 /* Bookmarked@2x.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = "Bookmarked@2x.psd"; path = "Resources/Bookmarked@2x.psd"; sourceTree = "<group>"; };
-		926CAA4B905051E2B5CFD5414F285B1F /* PDFKBasicPDFViewerThumbsCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKBasicPDFViewerThumbsCollectionView.h; path = Classes/View/PDFKBasicPDFViewerThumbsCollectionView.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93C6F8361944F9E33B2B0BDBA93D69FD /* PDFKThumbQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbQueue.m; path = Classes/Thumbs/PDFKThumbQueue.m; sourceTree = "<group>"; };
-		93CE47BDFEDBFCC3A423E922AB3253E1 /* PDFKPageContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKPageContent.h; path = Classes/View/PDFKPageContent.h; sourceTree = "<group>"; };
+		928C8B66A38510772FB4C568036FB083 /* PDFKThumbRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbRequest.h; path = Classes/Thumbs/PDFKThumbRequest.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9620518BC9979617DE41409CD0CD366C /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		96D8DB4A5B25F7138052D745C7910884 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorShape.swift; path = NVActivityIndicatorView/NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
 		9893905C75333DD8676205D28A58E196 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		98F5FD43462CCD58EC2FA8A2CF33A64A /* PDFKPageScrubber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKPageScrubber.m; path = Classes/View/PDFKPageScrubber.m; sourceTree = "<group>"; };
-		9AD3B4968E3A0CFF96BC2ABFF5C15702 /* PDFKBasicPDFViewer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKBasicPDFViewer.h; path = Classes/View/PDFKBasicPDFViewer.h; sourceTree = "<group>"; };
 		9B8B992549CB739535DEED4142DDA1CC /* NVActivityIndicatorAnimationBallRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotate.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotate.swift; sourceTree = "<group>"; };
 		9BC96E94F20999F7B094EB724DD2D843 /* NVActivityIndicatorAnimationAudioEqualizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationAudioEqualizer.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationAudioEqualizer.swift; sourceTree = "<group>"; };
-		9CA8BC2094544B583C3B93AF84927180 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlamofireNetworkActivityIndicator.framework; path = AlamofireNetworkActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CA8BC2094544B583C3B93AF84927180 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireNetworkActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9900B7BBD4C9E0143E7236DF60E88D /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationDelegate.swift; path = NVActivityIndicatorView/NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
 		9DF29318A464CB6B537196F8B4A60F4F /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		9F1FF778E99BECDEF1C64BE23D57A869 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		9F7FBD10A3DA923C8CEB960EBF74CCD5 /* PDFKPageContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKPageContentView.h; path = Classes/View/PDFKPageContentView.h; sourceTree = "<group>"; };
 		A01E377022F4AC5877F8CCD1599AC988 /* NVActivityIndicatorAnimationBallScaleRipple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRipple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRipple.swift; sourceTree = "<group>"; };
 		A04C2F4F15B167893674D0DD423C6B20 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		A22F8C1DBC2C2DB4592CB396FA00DEB4 /* PDFKThumbCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbCache.h; path = Classes/Thumbs/PDFKThumbCache.h; sourceTree = "<group>"; };
+		A3EF7C3D5143DAC5E1AB64D7754AFA4D /* PDFKThumbRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbRenderer.h; path = Classes/Thumbs/PDFKThumbRenderer.h; sourceTree = "<group>"; };
 		A414D85CDF0DA0CF487F623E62C08127 /* AlamofireNetworkActivityIndicator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireNetworkActivityIndicator-prefix.pch"; sourceTree = "<group>"; };
-		A62B84D44F41D3F8B04FDC15C60141E8 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SlideMenuControllerSwift.framework; path = SlideMenuControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A505B726F20FECA3D87764F614A17317 /* PDFKThumbFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbFetcher.h; path = Classes/Thumbs/PDFKThumbFetcher.h; sourceTree = "<group>"; };
+		A62B84D44F41D3F8B04FDC15C60141E8 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlideMenuControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6705DC4E35C4D8EF7268C64DD362DF1 /* PDFKPageScrubber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKPageScrubber.m; path = Classes/View/PDFKPageScrubber.m; sourceTree = "<group>"; };
 		A893BEFE8BC84AC00BB779CB2CFC085C /* SlideMenuControllerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlideMenuControllerSwift.xcconfig; sourceTree = "<group>"; };
-		A95EE9BF5C34D506A7E008AB0EC88679 /* SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SlideMenuControllerSwift.modulemap; sourceTree = "<group>"; };
-		AAB2190DBCE39800F01F15A2FC2138F3 /* Bookmarked.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Bookmarked.png; path = Resources/Bookmarked.png; sourceTree = "<group>"; };
-		ABD24723565D3EB61112B1801DB4433F /* PageList@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "PageList@3x.png"; path = "Resources/PageList@3x.png"; sourceTree = "<group>"; };
-		AC0CEA04430C992FD3136B2E4A224B15 /* M13PDFKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13PDFKit.xcconfig; sourceTree = "<group>"; };
-		AE1FA7149B2A9E83CE9ED2D58C436BF0 /* Pods_AIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AIL.framework; path = "Pods-AIL.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95EE9BF5C34D506A7E008AB0EC88679 /* SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SlideMenuControllerSwift.modulemap; sourceTree = "<group>"; };
+		AE1FA7149B2A9E83CE9ED2D58C436BF0 /* Pods_AIL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4F9B45B618E24B61191728D2057107 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		AF5E84813CD451637656EB6C4B1268EB /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkActivityIndicatorManager.swift; path = Source/NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		AF636BB033CE4D93ED4733D664EDEDF2 /* NVActivityIndicatorAnimationBallPulseRise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseRise.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseRise.swift; sourceTree = "<group>"; };
@@ -418,65 +402,57 @@
 		B005F3EC1CC575A808AA61B7DBF5EC6E /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		B3B650A31E76F30EB2EE99E8E93BB305 /* Pods-AIL-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AIL-acknowledgements.plist"; sourceTree = "<group>"; };
 		B4B0F7800B96FF2FF80970632F042425 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B640BEAFCBDF933A36DA3912D710E9A0 /* M13PDFKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13PDFKit-umbrella.h"; sourceTree = "<group>"; };
-		B73AA9B886A9F08B5A2D11586C0D5BB6 /* Thumbs@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Thumbs@3x.png"; path = "Resources/Thumbs@3x.png"; sourceTree = "<group>"; };
-		B74F54AD482912021380B4A32E0C47D1 /* Bookmark.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = Bookmark.psd; path = Resources/Bookmark.psd; sourceTree = "<group>"; };
-		B8A1482A8F4B29FDDF53AA8BB0697A4D /* PDFKBasicPDFViewerThumbsCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKBasicPDFViewerThumbsCollectionView.m; path = Classes/View/PDFKBasicPDFViewerThumbsCollectionView.m; sourceTree = "<group>"; };
+		B81C976588E69CFF1E23857C115E0CC9 /* Bookmark.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Bookmark.png; path = Resources/Bookmark.png; sourceTree = "<group>"; };
+		B93843DA39BA2239D6DE5C48CC01DEDD /* PDFKPageContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKPageContent.h; path = Classes/View/PDFKPageContent.h; sourceTree = "<group>"; };
 		BAFE6DF9CD3D511763A0B9044EB23EF6 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		BC07682393A6639D79639BEB28D23D8F /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallBeat.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
+		BC3D197ACC810BD740F0B388E1460B94 /* PDFKDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKDocument.m; path = Classes/Document/PDFKDocument.m; sourceTree = "<group>"; };
 		BCA06D87E6FE332863BDBC3BC05027DE /* SlideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
-		BE0595982803F638D8B9832B83059750 /* AlamofireNetworkActivityIndicator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AlamofireNetworkActivityIndicator.modulemap; sourceTree = "<group>"; };
+		BDA843C8E512A6CA03D16A174181CCB2 /* PDFKPageScrubber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKPageScrubber.h; path = Classes/View/PDFKPageScrubber.h; sourceTree = "<group>"; };
+		BE0595982803F638D8B9832B83059750 /* AlamofireNetworkActivityIndicator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AlamofireNetworkActivityIndicator.modulemap; sourceTree = "<group>"; };
 		BE3D09D3DB6C4D783451D82BE8A5DC79 /* NVActivityIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-prefix.pch"; sourceTree = "<group>"; };
 		BFC03228CED4CE3B9BDFEE47B9ECACF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		C22BB9469543B562DAF249879552E3CF /* NVActivityIndicatorAnimationBlank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBlank.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBlank.swift; sourceTree = "<group>"; };
-		C2CADD6D79D4CCE634DE23BB3C8F16E8 /* Thumbs.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Thumbs.png; path = Resources/Thumbs.png; sourceTree = "<group>"; };
 		C2D4D3E29860DC22BC70ECC78A595E01 /* EAIntroView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EAIntroView-prefix.pch"; sourceTree = "<group>"; };
 		C565215C836B8EE07500639258C178F8 /* NVActivityIndicatorAnimationBallZigZag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZag.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZag.swift; sourceTree = "<group>"; };
-		C69A3CDD76664D86909EB222D7063CE2 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		C79F600B1C0A7E39AC189566393EC7B1 /* PageList@2x.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = "PageList@2x.psd"; path = "Resources/PageList@2x.psd"; sourceTree = "<group>"; };
-		C964CFB29BF94D4DDE2C88E2B892E58A /* PDFKThumbCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbCache.m; path = Classes/Thumbs/PDFKThumbCache.m; sourceTree = "<group>"; };
-		CB929276E71092F1A2577A93F63C3E7B /* Pods-AIL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AIL.modulemap"; sourceTree = "<group>"; };
+		C69A3CDD76664D86909EB222D7063CE2 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		CB929276E71092F1A2577A93F63C3E7B /* Pods-AIL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AIL.modulemap"; sourceTree = "<group>"; };
 		CCF4A3155A656729EEA799F87AFBB9D3 /* EAIntroView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EAIntroView-dummy.m"; sourceTree = "<group>"; };
-		CFC4C6A29782C5C3827017D0E4C3CAFC /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE8A37C5A7F345ABC5DBC0E2D6C6AD2 /* Thumbs.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Thumbs.png; path = Resources/Thumbs.png; sourceTree = "<group>"; };
+		CFC4C6A29782C5C3827017D0E4C3CAFC /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03D24CACB7A061326BD7885CF847D61 /* NVActivityIndicatorAnimationBallPulseSync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseSync.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseSync.swift; sourceTree = "<group>"; };
-		D210B76274F6FEDA7F9A1C1A27F80F55 /* PDFKPageScrubber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKPageScrubber.h; path = Classes/View/PDFKPageScrubber.h; sourceTree = "<group>"; };
-		D802355129A791E74122A6F2B4B3F69D /* Bookmark@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Bookmark@3x.png"; path = "Resources/Bookmark@3x.png"; sourceTree = "<group>"; };
-		DC93E80D9EBCD6CD80DB9FD7F319160D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C8A2352195A29F30EC430470CAB6B9 /* M13PDFKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13PDFKit-prefix.pch"; sourceTree = "<group>"; };
+		D14ACC716AB95B88C3F253A281AB0285 /* PDFKThumbRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbRenderer.m; path = Classes/Thumbs/PDFKThumbRenderer.m; sourceTree = "<group>"; };
+		DC86DD8A7CBB772F62ABC3D8B721B2B2 /* PDFKThumbFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKThumbFetcher.m; path = Classes/Thumbs/PDFKThumbFetcher.m; sourceTree = "<group>"; };
+		DC93E80D9EBCD6CD80DB9FD7F319160D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7E893431B61F09FA9C604F10FBB8D3 /* TTOpenInAppActivity.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTOpenInAppActivity.xcconfig; sourceTree = "<group>"; };
-		DDDDFEEA2BC7992A24B66B83F8CBBD7C /* TTOpenInAppActivity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTOpenInAppActivity.framework; path = TTOpenInAppActivity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDDDFEEA2BC7992A24B66B83F8CBBD7C /* TTOpenInAppActivity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TTOpenInAppActivity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DECD5B8CF38C3484D1DCAE73CA4B33FA /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEEFE1295887AD118585512CA2B10C1F /* PDFKBasicPDFViewer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKBasicPDFViewer.m; path = Classes/View/PDFKBasicPDFViewer.m; sourceTree = "<group>"; };
 		DEFDB918C3F26A75A8089FD14452060D /* TTOpenInAppActivity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTOpenInAppActivity-dummy.m"; sourceTree = "<group>"; };
 		DF517EF65249522682F5F415664FCBC1 /* NVActivityIndicatorAnimationBallGridPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridPulse.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridPulse.swift; sourceTree = "<group>"; };
 		E1EE70227528DF8045B969DE6F7EA4AB /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotateMultiple.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotateMultiple.swift; sourceTree = "<group>"; };
 		E21352899935298C30EB825CC19312F6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		E250D83934E8BC172B803CFE8AE18CB2 /* PDFKDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKDocument.m; path = Classes/Document/PDFKDocument.m; sourceTree = "<group>"; };
-		E30D41A8C6468099D55295AF0C157FC1 /* TTOpenInAppActivity.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TTOpenInAppActivity.modulemap; sourceTree = "<group>"; };
+		E30D41A8C6468099D55295AF0C157FC1 /* TTOpenInAppActivity.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TTOpenInAppActivity.modulemap; sourceTree = "<group>"; };
+		E3355426E1EA7F3D7EA71DD224D7A570 /* Bookmark@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Bookmark@3x.png"; path = "Resources/Bookmark@3x.png"; sourceTree = "<group>"; };
+		E413967D5A804372E9E2F8FDCB30382C /* M13PDFKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = M13PDFKit.modulemap; sourceTree = "<group>"; };
 		E4FCF2E3A99FB466786FDE0CC711A3A7 /* EAIntroPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EAIntroPage.h; path = EAIntroView/EAIntroPage.h; sourceTree = "<group>"; };
-		E5199720AA5639F6AAB0C7F49D2E97C5 /* PDFKThumbRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbRequest.h; path = Classes/Thumbs/PDFKThumbRequest.h; sourceTree = "<group>"; };
-		E733BFE49A62EFA0576579027573DB49 /* Bookmark.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Bookmark.png; path = Resources/Bookmark.png; sourceTree = "<group>"; };
 		E77242CAFCF1B495EC5A1112F156432E /* AlamofireNetworkActivityIndicator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireNetworkActivityIndicator-umbrella.h"; sourceTree = "<group>"; };
 		E7BAE98398F5B4DB424B68437D6D3DEC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E80738D4469D2F9EA9831B9A7AE3AD72 /* Thumbs@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "Thumbs@2x.png"; path = "Resources/Thumbs@2x.png"; sourceTree = "<group>"; };
 		EA2CE127FCA019C5AB336E251E0135C9 /* EAIntroView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EAIntroView.m; path = EAIntroView/EAIntroView.m; sourceTree = "<group>"; };
-		EAC7A0BA4649149C323739EA167630C7 /* Bookmarked.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = Bookmarked.psd; path = Resources/Bookmarked.psd; sourceTree = "<group>"; };
 		EACD512412DCAAFBCE1E1F997E3AE1E7 /* NVActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridBeat.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
 		EBEA95D98A5AEDB4A679FC8413BEEBD2 /* EAIntroView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EAIntroView-umbrella.h"; sourceTree = "<group>"; };
 		EBEDFC96DDF2B7B8BA3756AA5D0FBAD0 /* TTOpenInAppActivity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TTOpenInAppActivity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC592435BB23177B20B87B5FFC92555A /* NVActivityIndicatorAnimationPacman.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationPacman.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationPacman.swift; sourceTree = "<group>"; };
-		EC9896C2744B487D51C763380C25F41D /* PDFKPageContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKPageContentView.h; path = Classes/View/PDFKPageContentView.h; sourceTree = "<group>"; };
 		ED92C1FE194F429AB96248915B666D9A /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		F02976D389BAFC329F7C9329EAE2D25C /* M13PDFKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13PDFKit-umbrella.h"; sourceTree = "<group>"; };
 		F19C83184DB21125D2993729151B0DBE /* EARestrictedScrollView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EARestrictedScrollView-dummy.m"; sourceTree = "<group>"; };
-		F2899E5A13052DBC5EFB8E8AE5FE28A0 /* Bookmark@2x.psd */ = {isa = PBXFileReference; includeInIndex = 1; name = "Bookmark@2x.psd"; path = "Resources/Bookmark@2x.psd"; sourceTree = "<group>"; };
-		F28D5196358F53FC44B745C6C6E921A8 /* ResourceBundle-M13PDFKitResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-M13PDFKitResources-Info.plist"; sourceTree = "<group>"; };
-		F3521A050FE63B93D3771BC8E87D0027 /* CGPDFDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CGPDFDocument.h; path = Classes/Document/CGPDFDocument.h; sourceTree = "<group>"; };
-		F375B98B9E2C4CCCC324FE005AB1BBD8 /* PDFKThumbView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbView.h; path = Classes/Thumbs/PDFKThumbView.h; sourceTree = "<group>"; };
+		F4BE93AC15DF1A517925DE9CA131A5F8 /* PDFKPageContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PDFKPageContentView.m; path = Classes/View/PDFKPageContentView.m; sourceTree = "<group>"; };
 		F74F82722ABE8A9D657C071EEC7E4152 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOut.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOut.swift; sourceTree = "<group>"; };
-		F7933CF269062C39983B60339A384351 /* M13PDFKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13PDFKit-prefix.pch"; sourceTree = "<group>"; };
-		F93D797F7292B8B672653C6009EB4FC7 /* Bookmark@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Bookmark@2x.png"; path = "Resources/Bookmark@2x.png"; sourceTree = "<group>"; };
+		F75AA792B9371B1E29EBF75F59454BCA /* M13PDFKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13PDFKit.xcconfig; sourceTree = "<group>"; };
 		FA43485E5A8A5F59706C47F8E6A69227 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZagDeflect.swift; path = NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZagDeflect.swift; sourceTree = "<group>"; };
 		FB4118E77C739DD4E4CBC218AB1776F0 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		FB8F30757BBCC5EDDFB1927908F7CF9D /* PDFKThumbCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFKThumbCache.h; path = Classes/Thumbs/PDFKThumbCache.h; sourceTree = "<group>"; };
-		FED7DC3C8CAE3FEE89EA330FC18C63F4 /* M13PDFKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = M13PDFKitResources.bundle; path = M13PDFKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED7DC3C8CAE3FEE89EA330FC18C63F4 /* M13PDFKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M13PDFKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -611,7 +587,6 @@
 				BCA06D87E6FE332863BDBC3BC05027DE /* SlideMenuController.swift */,
 				636D4094236047484801BB9DE909CE3D /* Support Files */,
 			);
-			name = SlideMenuControllerSwift;
 			path = SlideMenuControllerSwift;
 			sourceTree = "<group>";
 		};
@@ -635,7 +610,6 @@
 				29D92EAD5B587A7A2BFC3166349D60C2 /* SwiftyJSON.swift */,
 				14F537599A4EA62030D8739D67910CCC /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -681,7 +655,6 @@
 				2B8233C6F6D04C332984B0BFB8E2BD8B /* NVActivityIndicatorViewable.swift */,
 				C52DE1A892C24930F0F33858E2FAC39D /* Support Files */,
 			);
-			name = NVActivityIndicatorView;
 			path = NVActivityIndicatorView;
 			sourceTree = "<group>";
 		};
@@ -716,8 +689,26 @@
 				AF5E84813CD451637656EB6C4B1268EB /* NetworkActivityIndicatorManager.swift */,
 				23AE1CCD7766607ECA6DE4BE9D6ED5F4 /* Support Files */,
 			);
-			name = AlamofireNetworkActivityIndicator;
 			path = AlamofireNetworkActivityIndicator;
+			sourceTree = "<group>";
+		};
+		4EC5AD1CF1F9875FC79114E54477A9BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B81C976588E69CFF1E23857C115E0CC9 /* Bookmark.png */,
+				84773C1DE191FA815A2B0FE157012F18 /* Bookmark@2x.png */,
+				E3355426E1EA7F3D7EA71DD224D7A570 /* Bookmark@3x.png */,
+				079683CA9979B80F76D66E5F63BDC73F /* Bookmarked.png */,
+				77485FC25D1B3F66EDC5E4E9C8431B7E /* Bookmarked@2x.png */,
+				24B65CC76686866A8008E0B56A1F5201 /* Bookmarked@3x.png */,
+				0A0759AED58E6C6E15BA870C0289A19A /* PageList.png */,
+				857C1C12B248D7C9DF167448A13446D7 /* PageList@2x.png */,
+				546B9B25A24B009DC74FBA97724D567A /* PageList@3x.png */,
+				CDE8A37C5A7F345ABC5DBC0E2D6C6AD2 /* Thumbs.png */,
+				E80738D4469D2F9EA9831B9A7AE3AD72 /* Thumbs@2x.png */,
+				4011B4DAA9717C1CE6652F170521A40D /* Thumbs@3x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		5241D63A799E3595F38EFA5528E19057 /* EAIntroView */ = {
@@ -729,7 +720,6 @@
 				EA2CE127FCA019C5AB336E251E0135C9 /* EAIntroView.m */,
 				46994C152B55CAD2BF62166A8A1F0D1B /* Support Files */,
 			);
-			name = EAIntroView;
 			path = EAIntroView;
 			sourceTree = "<group>";
 		};
@@ -758,7 +748,7 @@
 				4B3D418BA67CCA1CA087713AEEE7E207 /* AlamofireNetworkActivityIndicator */,
 				5241D63A799E3595F38EFA5528E19057 /* EAIntroView */,
 				DCC88BD6D7DE6E0D7857704FDB2C9505 /* EARestrictedScrollView */,
-				693A47F624E734972ED19C1F37018A54 /* M13PDFKit */,
+				B15AC05853DC628FB9F80337576650F1 /* M13PDFKit */,
 				362C5BEF905E885070C04813870C5283 /* NVActivityIndicatorView */,
 				1D531DFBD688B5A7B5555FEF53D0F84B /* SlideMenuControllerSwift */,
 				24801F2CD7D2F4F12BE5250416BFEB72 /* SwiftyJSON */,
@@ -779,46 +769,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SlideMenuControllerSwift";
-			sourceTree = "<group>";
-		};
-		693A47F624E734972ED19C1F37018A54 /* M13PDFKit */ = {
-			isa = PBXGroup;
-			children = (
-				F3521A050FE63B93D3771BC8E87D0027 /* CGPDFDocument.h */,
-				321282DDAC6FBE0B42B972C9EA798417 /* CGPDFDocument.m */,
-				9AD3B4968E3A0CFF96BC2ABFF5C15702 /* PDFKBasicPDFViewer.h */,
-				DEEFE1295887AD118585512CA2B10C1F /* PDFKBasicPDFViewer.m */,
-				4420A6C512911C0366D7C2CD2F167A35 /* PDFKBasicPDFViewerSinglePageCollectionView.h */,
-				35A301128464E21561CE1F916F937EE2 /* PDFKBasicPDFViewerSinglePageCollectionView.m */,
-				926CAA4B905051E2B5CFD5414F285B1F /* PDFKBasicPDFViewerThumbsCollectionView.h */,
-				B8A1482A8F4B29FDDF53AA8BB0697A4D /* PDFKBasicPDFViewerThumbsCollectionView.m */,
-				1D5F47418DCC628109DA527BE04E9A59 /* PDFKDocument.h */,
-				E250D83934E8BC172B803CFE8AE18CB2 /* PDFKDocument.m */,
-				93CE47BDFEDBFCC3A423E922AB3253E1 /* PDFKPageContent.h */,
-				2A9583F751A99BCE0AF06F19D2E0DE05 /* PDFKPageContent.m */,
-				3B533DB156C478764D2E224D8545659C /* PDFKPageContentLayer.h */,
-				22F41B238B4AD68C68C7AA6A9450C16E /* PDFKPageContentLayer.m */,
-				EC9896C2744B487D51C763380C25F41D /* PDFKPageContentView.h */,
-				35661EB93C459BDFD7602F2AE61DECD4 /* PDFKPageContentView.m */,
-				D210B76274F6FEDA7F9A1C1A27F80F55 /* PDFKPageScrubber.h */,
-				98F5FD43462CCD58EC2FA8A2CF33A64A /* PDFKPageScrubber.m */,
-				FB8F30757BBCC5EDDFB1927908F7CF9D /* PDFKThumbCache.h */,
-				C964CFB29BF94D4DDE2C88E2B892E58A /* PDFKThumbCache.m */,
-				76D41378B5660131AFA95B0FEA7A518D /* PDFKThumbFetcher.h */,
-				809B9FEEE1868205D77FB052D80C5DE9 /* PDFKThumbFetcher.m */,
-				8E6AD6C6E324BE8FF718EF3F434DF1AA /* PDFKThumbQueue.h */,
-				93C6F8361944F9E33B2B0BDBA93D69FD /* PDFKThumbQueue.m */,
-				06D9CD062C48CB17CE482FE7CD591F68 /* PDFKThumbRenderer.h */,
-				546B5F3B08834EC16DD3AFD64B76C0A4 /* PDFKThumbRenderer.m */,
-				E5199720AA5639F6AAB0C7F49D2E97C5 /* PDFKThumbRequest.h */,
-				60FE1159CC9B0DAC5756EA993D6D2600 /* PDFKThumbRequest.m */,
-				F375B98B9E2C4CCCC324FE005AB1BBD8 /* PDFKThumbView.h */,
-				1317B671E8BA1E5A52051A92754E1F5F /* PDFKThumbView.m */,
-				DFB83D8E19D56180BCC6C8421378B005 /* Resources */,
-				AC0B419BDFF13F3C00557A97CBD5FA39 /* Support Files */,
-			);
-			name = M13PDFKit;
-			path = M13PDFKit;
 			sourceTree = "<group>";
 		};
 		7B4AD63409F2F8BA7E5885296F92BFA8 /* Targets Support Files */ = {
@@ -848,7 +798,6 @@
 				43B34F65847F9CB83B32F426212F6155 /* Resources */,
 				8261E8491CE79DBE8B9EDD6DD7BFFA6A /* Support Files */,
 			);
-			name = TTOpenInAppActivity;
 			path = TTOpenInAppActivity;
 			sourceTree = "<group>";
 		};
@@ -906,23 +855,7 @@
 				6039B4D5B0EB1A60B1598B5C3B2102AF /* Validation.swift */,
 				C657C6F21C7B8230377046E973C72BC7 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		AC0B419BDFF13F3C00557A97CBD5FA39 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				821F6C3E3F1742BFF39198BFE7614F8A /* Info.plist */,
-				0A14E6AE6BA7B1DEE4DFE567BDF6A511 /* M13PDFKit.modulemap */,
-				AC0CEA04430C992FD3136B2E4A224B15 /* M13PDFKit.xcconfig */,
-				7D2CCFED3CAF9442E170BC03A6E2E62B /* M13PDFKit-dummy.m */,
-				F7933CF269062C39983B60339A384351 /* M13PDFKit-prefix.pch */,
-				B640BEAFCBDF933A36DA3912D710E9A0 /* M13PDFKit-umbrella.h */,
-				F28D5196358F53FC44B745C6C6E921A8 /* ResourceBundle-M13PDFKitResources-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/M13PDFKit";
 			sourceTree = "<group>";
 		};
 		AC41D54EA431A3926B269F919D76C9BE /* Support Files */ = {
@@ -937,6 +870,45 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/EARestrictedScrollView";
+			sourceTree = "<group>";
+		};
+		B15AC05853DC628FB9F80337576650F1 /* M13PDFKit */ = {
+			isa = PBXGroup;
+			children = (
+				79FD7B39CC4921A996A2ADE41AD09F42 /* CGPDFDocument.h */,
+				8BF726F5C04C8CB81F4D90A92B897496 /* CGPDFDocument.m */,
+				6DC5AD0B7BF10CBC2586F6EC244339B1 /* PDFKBasicPDFViewer.h */,
+				2F87BDF8D8A52D34953C01D8399D05C7 /* PDFKBasicPDFViewer.m */,
+				2D1519097CD9098684A9FB22023E6617 /* PDFKBasicPDFViewerSinglePageCollectionView.h */,
+				8C19F47E73F60BEF9227BF23D2AB6C4B /* PDFKBasicPDFViewerSinglePageCollectionView.m */,
+				4091E497AA3086C0AEF2212C876A034F /* PDFKBasicPDFViewerThumbsCollectionView.h */,
+				8B6407B52BB654706DAC719DB8650F88 /* PDFKBasicPDFViewerThumbsCollectionView.m */,
+				2F895D524B34225316C93CC66352DF3A /* PDFKDocument.h */,
+				BC3D197ACC810BD740F0B388E1460B94 /* PDFKDocument.m */,
+				B93843DA39BA2239D6DE5C48CC01DEDD /* PDFKPageContent.h */,
+				793D6E87F1BA3D854A00F44278FC03E1 /* PDFKPageContent.m */,
+				8A5B08148E4D3EE7838509B85C9C182D /* PDFKPageContentLayer.h */,
+				3103707D8BC7E017BE5122FB0BBC3A97 /* PDFKPageContentLayer.m */,
+				9F7FBD10A3DA923C8CEB960EBF74CCD5 /* PDFKPageContentView.h */,
+				F4BE93AC15DF1A517925DE9CA131A5F8 /* PDFKPageContentView.m */,
+				BDA843C8E512A6CA03D16A174181CCB2 /* PDFKPageScrubber.h */,
+				A6705DC4E35C4D8EF7268C64DD362DF1 /* PDFKPageScrubber.m */,
+				A22F8C1DBC2C2DB4592CB396FA00DEB4 /* PDFKThumbCache.h */,
+				1D200E8EE848B350E316C5B96570A364 /* PDFKThumbCache.m */,
+				A505B726F20FECA3D87764F614A17317 /* PDFKThumbFetcher.h */,
+				DC86DD8A7CBB772F62ABC3D8B721B2B2 /* PDFKThumbFetcher.m */,
+				3E2F778CA2F89399796C2753786A1C9B /* PDFKThumbQueue.h */,
+				6974A203D56F82C28E50C2F10C62F51C /* PDFKThumbQueue.m */,
+				A3EF7C3D5143DAC5E1AB64D7754AFA4D /* PDFKThumbRenderer.h */,
+				D14ACC716AB95B88C3F253A281AB0285 /* PDFKThumbRenderer.m */,
+				928C8B66A38510772FB4C568036FB083 /* PDFKThumbRequest.h */,
+				80CDA7F3C0530E9F58F56AF89F25EADE /* PDFKThumbRequest.m */,
+				38180796437F2925CA30FBCE4FC59493 /* PDFKThumbView.h */,
+				0AC864C631F9BC732133149B5E72D5A8 /* PDFKThumbView.m */,
+				4EC5AD1CF1F9875FC79114E54477A9BF /* Resources */,
+				FBBB38C3C6065BD4830E84DB7BA4C747 /* Support Files */,
+			);
+			path = M13PDFKit;
 			sourceTree = "<group>";
 		};
 		C52DE1A892C24930F0F33858E2FAC39D /* Support Files */ = {
@@ -974,39 +946,7 @@
 				4684F4725D90300F264943C330091125 /* EARestrictedScrollView.m */,
 				AC41D54EA431A3926B269F919D76C9BE /* Support Files */,
 			);
-			name = EARestrictedScrollView;
 			path = EARestrictedScrollView;
-			sourceTree = "<group>";
-		};
-		DFB83D8E19D56180BCC6C8421378B005 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E733BFE49A62EFA0576579027573DB49 /* Bookmark.png */,
-				B74F54AD482912021380B4A32E0C47D1 /* Bookmark.psd */,
-				F93D797F7292B8B672653C6009EB4FC7 /* Bookmark@2x.png */,
-				F2899E5A13052DBC5EFB8E8AE5FE28A0 /* Bookmark@2x.psd */,
-				D802355129A791E74122A6F2B4B3F69D /* Bookmark@3x.png */,
-				71210FE7AF23E317A7D3E55A97FAF4A7 /* Bookmark@3x.psd */,
-				AAB2190DBCE39800F01F15A2FC2138F3 /* Bookmarked.png */,
-				EAC7A0BA4649149C323739EA167630C7 /* Bookmarked.psd */,
-				61D95F72DCAFA2F98FA9212C9DEEDDE3 /* Bookmarked@2x.png */,
-				925F9D10AB8825636B1A9249FB434B65 /* Bookmarked@2x.psd */,
-				11BB46F1AD2C82287494A3C69E3D2EF4 /* Bookmarked@3x.png */,
-				828AB8EDBF27D2DC43961596A8ABFF93 /* Bookmarked@3x.psd */,
-				17BE9863181B3032E77C91530DE887EB /* PageList.png */,
-				725171EF5FC03868A3A18140110C666D /* PageList.psd */,
-				3044775611BF2938D9AC33B7F9475061 /* PageList@2x.png */,
-				C79F600B1C0A7E39AC189566393EC7B1 /* PageList@2x.psd */,
-				ABD24723565D3EB61112B1801DB4433F /* PageList@3x.png */,
-				53B087127E017084FE4AEA07ACC8DB1A /* PageList@3x.psd */,
-				C2CADD6D79D4CCE634DE23BB3C8F16E8 /* Thumbs.png */,
-				417D4344F5FB065D2FF9C45F05CE3102 /* Thumbs.psd */,
-				6BF66A7D9F9BC35DECD0989D45B06613 /* Thumbs@2x.png */,
-				05169A2CF37A9B715E88323BE1C9A768 /* Thumbs@2x.psd */,
-				B73AA9B886A9F08B5A2D11586C0D5BB6 /* Thumbs@3x.png */,
-				878C7F1EB5E149390E0E8D0D57858423 /* Thumbs@3x.psd */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		FACD9250DFDB04DDC7E8C8FD30AA5EB1 /* iOS */ = {
@@ -1020,6 +960,21 @@
 				20CBCA4433DDE81783AABB9C1A4C0106 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		FBBB38C3C6065BD4830E84DB7BA4C747 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4282AC2FE6CD151A7B8ECB01AA44DCA1 /* Info.plist */,
+				E413967D5A804372E9E2F8FDCB30382C /* M13PDFKit.modulemap */,
+				F75AA792B9371B1E29EBF75F59454BCA /* M13PDFKit.xcconfig */,
+				23315D39D905FFBEBEE3EA797D7EEF64 /* M13PDFKit-dummy.m */,
+				D0C8A2352195A29F30EC430470CAB6B9 /* M13PDFKit-prefix.pch */,
+				F02976D389BAFC329F7C9329EAE2D25C /* M13PDFKit-umbrella.h */,
+				5EFED7F820F17AB33478C203524B891C /* ResourceBundle-M13PDFKitResources-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/M13PDFKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1272,7 +1227,7 @@
 			buildPhases = (
 				123DED70C96A9D97AD4A8CC6971EC0F2 /* Sources */,
 				6CFC288FAB49B8F7F312BE98A1A721E8 /* Frameworks */,
-				A55F70D1464AD99121494CB8AF708BBB /* Resources */,
+				5B708CA2B8A8046822340164BDD55069 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1377,42 +1332,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5B708CA2B8A8046822340164BDD55069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F4A0DD2C5CB658D9A9C41AC626DD24 /* Bookmark.png in Resources */,
+				42F9A75ED8129B25733871174E6F556E /* Bookmark@2x.png in Resources */,
+				6C927EEAE1478E19B85B463C5019FDD6 /* Bookmark@3x.png in Resources */,
+				FEEB9E143D73AF0E3F0367426E3A4A8C /* Bookmarked.png in Resources */,
+				42ECE3C210A4B953A65599B2A628DBC5 /* Bookmarked@2x.png in Resources */,
+				A29BE147BA61A050853668663F3BA6D9 /* Bookmarked@3x.png in Resources */,
+				480AD1BBDD53881773E282623B128794 /* PageList.png in Resources */,
+				925C420400E51A60BA3DFD8D52D63DBE /* PageList@2x.png in Resources */,
+				3CEA15ACCBA696C24881D2D5EE2A2B43 /* PageList@3x.png in Resources */,
+				360F6BC30D537400D45FD223C24B305C /* Thumbs.png in Resources */,
+				591DC12558D7EB0ACD43CC85FEFA3C33 /* Thumbs@2x.png in Resources */,
+				58E9B35268BEDB1DB77F72A4D60B2967 /* Thumbs@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5D18F12C800257C84037F472C9DEFEAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4158ECAFFDCDFD4051AF0E16CCE551AB /* M13PDFKitResources.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A55F70D1464AD99121494CB8AF708BBB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B78E4E4BF0418A9BFC833A62D80E814 /* Bookmark.png in Resources */,
-				8737F3AC383E137111D22DB7EE9DD9F6 /* Bookmark.psd in Resources */,
-				8D76AB29D2AAB26D908B02A6D3F02684 /* Bookmark@2x.png in Resources */,
-				D77BFE8DBBE6E1464DCFEF87EEC9C874 /* Bookmark@2x.psd in Resources */,
-				5DC0AE22F0935E1B0AA75B3D50AB4ACF /* Bookmark@3x.png in Resources */,
-				3569137D9A9A74E88AFFBC11EB501A5F /* Bookmark@3x.psd in Resources */,
-				C760EB7D22A5F866FF87E56D8561A395 /* Bookmarked.png in Resources */,
-				9602B14A16462D027DF773F14167732B /* Bookmarked.psd in Resources */,
-				8D10BE061A3AD43A6B602305C5C472C0 /* Bookmarked@2x.png in Resources */,
-				69912E15C3DE0376A3211CCE4E234691 /* Bookmarked@2x.psd in Resources */,
-				16D257A1D3E44446A16B01436826A3E4 /* Bookmarked@3x.png in Resources */,
-				24D239B738AF6BC0D3982F9799085B48 /* Bookmarked@3x.psd in Resources */,
-				9CF1CEADD41EC88E5C10C2353AE4F752 /* PageList.png in Resources */,
-				B4D6346A4BDD69409CE031A8619FB9F8 /* PageList.psd in Resources */,
-				D3E78FB1BD8653DDD3DAB572F4A19DA1 /* PageList@2x.png in Resources */,
-				E4781D20BFA1EF1BA2ADAC667AD087F9 /* PageList@2x.psd in Resources */,
-				253A77A47DE4ACCDAA3621FA6B47D4EA /* PageList@3x.png in Resources */,
-				D6C27D3D19B7EF14376E430E64C4F57E /* PageList@3x.psd in Resources */,
-				875FEB95F5B5ACBF276C79BBA1DF2B34 /* Thumbs.png in Resources */,
-				E9D4586BEA25E37DC89D1D213DCBD8C8 /* Thumbs.psd in Resources */,
-				AB42B094548DFBEFFD626F60483B2D0E /* Thumbs@2x.png in Resources */,
-				D4018DD634D4CFFFD8851F3606A8F49B /* Thumbs@2x.psd in Resources */,
-				EEEA5A6BE9BBE0515D25D3393298113B /* Thumbs@3x.png in Resources */,
-				37A39F5827CB53F0B4FBD9EE6172222C /* Thumbs@3x.psd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1733,7 +1676,7 @@
 		};
 		13D6F1188F4AE6B3C6F41E466F523F11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC0CEA04430C992FD3136B2E4A224B15 /* M13PDFKit.xcconfig */;
+			baseConfigurationReference = F75AA792B9371B1E29EBF75F59454BCA /* M13PDFKit.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/M13PDFKit";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1914,7 +1857,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -1959,7 +1902,7 @@
 		};
 		6A8ADE215C510CA6FDD9DE469BEF4603 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC0CEA04430C992FD3136B2E4A224B15 /* M13PDFKit.xcconfig */;
+			baseConfigurationReference = F75AA792B9371B1E29EBF75F59454BCA /* M13PDFKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2055,7 +1998,7 @@
 		};
 		8422470ED297CD3FAF9F08870AA07253 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC0CEA04430C992FD3136B2E4A224B15 /* M13PDFKit.xcconfig */;
+			baseConfigurationReference = F75AA792B9371B1E29EBF75F59454BCA /* M13PDFKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2355,7 +2298,7 @@
 		};
 		DA6F405592DBEC16741F15D6565F6122 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC0CEA04430C992FD3136B2E4A224B15 /* M13PDFKit.xcconfig */;
+			baseConfigurationReference = F75AA792B9371B1E29EBF75F59454BCA /* M13PDFKit.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/M13PDFKit";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

@@ -149,13 +149,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "PTELiveCell", for: indexPath) as! LastCollectionViewCell
-        } else if indexPath.row <= self.featurePosts.count {
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as? PostCollectionViewCell{
+        } else if indexPath.row == 1 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "PTEExchangeCell", for: indexPath) as! LastCollectionViewCell
+        } else if indexPath.row <= self.featurePosts.count + 1 {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as? PostCollectionViewCell {
                 cell.backgroundColor = UIColor.white
                 
                 print ("123123: \(self.featurePosts.count)")
                 
-                let featurePost = self.featurePosts[indexPath.row - 1]
+                let featurePost = self.featurePosts[indexPath.row - 2]
                 
                 cell.postLabel.text = featurePost.title
                 
@@ -164,7 +166,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     
                     cell.postImage.contentMode = .scaleAspectFill
                     
-                    let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row - 1]
+                    let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row - 2]
                     cell.postImage.image = imageRecord.image
                     
                     switch (imageRecord.state) {
@@ -175,7 +177,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                             self.collectionView.reloadItems(at: [indexPath])
                         })
                     default:
-                        print("Do Nothing for loading cell image \(indexPath.row - 1)")
+                        print("Do Nothing for loading cell image \(indexPath.row - 2)")
                     }
                     
                     
@@ -211,13 +213,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //TODO Goes to another view controller
-        if indexPath.row == featurePosts.count + 1 {
+        if indexPath.row == featurePosts.count + 2 {
             self.performSegue(withIdentifier: "allPostVC", sender: nil)
-        }
-        else if indexPath.row != 0{
+        } else if indexPath.row > 1 {
             let featurePost = featurePosts[indexPath.row - 1]
-            
             self.performSegue(withIdentifier: "showPostWebViewSegue", sender: featurePost)
+        } else if indexPath.row == 1 {
+            print("==2==2==2==2==2==2==2==")
         }
         
     }
@@ -236,7 +238,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.featurePosts.count + 2
+        return self.featurePosts.count + 3
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -279,7 +281,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         rootView = self.navigationController?.view
-        introView = EAIntroView(frame: rootView!.bounds, andPages: [page1,page2,page3])
+        introView = EAIntroView(frame: rootView!.bounds, andPages: [page1 as Any,page2 as Any,page3 as Any])
         
         let startButton = page3?.pageView.viewWithTag(1) as! UIButton
         

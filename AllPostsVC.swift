@@ -84,7 +84,7 @@ class AllPostsVC: UITableViewController, NVActivityIndicatorViewable {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        print ("visiblePaths: \(tableView.indexPathsForVisibleRows)")
+        print ("visiblePaths: \(String(describing: tableView.indexPathsForVisibleRows))")
         
         
         return 1
@@ -97,7 +97,10 @@ class AllPostsVC: UITableViewController, NVActivityIndicatorViewable {
     func setUpTableViewImageCoordinator(){
         //self.tableViewImageLoadingCoordinator.imageRecords.removeAll()
         for post in allPosts {
-            if let imageURL = post.featuredImageUrl{
+            if var imageURL = post.featuredImageUrl {
+                if imageURL == "" {
+                    imageURL = "http://ail.vic.edu.au/wp-content/uploads/2016/09/book-1628732_1280.jpg"
+                }
                 let imageRecord = ImageRecord(name: "", url: URL(string: imageURL.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!)
                 self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
             }
@@ -111,21 +114,24 @@ class AllPostsVC: UITableViewController, NVActivityIndicatorViewable {
             
             if reachToTheEnd == false {
                 numOfPosts = allPosts.count
-                print ("num1:\(numOfPosts)")
+                print ("num1:\(String(describing: numOfPosts))")
                 let oldestPost = allPosts[indexPath.row]
 
                 client.requestPreviousPosts(oldestPost.date!, excludeID: oldestPost.id as! Int, completionHandler: { (posts) in
                         self.allPosts = CoreDataOperation.fetchResourcesPostFromCoreData()!
-                        print ("num2:\(self.numOfPosts)")
+                        print ("num2:\(String(describing: self.numOfPosts))")
                         print ("num3: \(self.allPosts.count)")
                         if self.numOfPosts == self.allPosts.count{
                             self.reachToTheEnd = true
                             print ("pppTRUE")
                         }
                         for post in posts {
-                            print ("ppp: \(post.featuredImageUrl)")
-                            if let imageURL = post.featuredImageUrl{
+                            print ("ppp: \(String(describing: post.featuredImageUrl))")
+                            if var imageURL = post.featuredImageUrl {
                                 print("pppnn")
+                                if imageURL == "" {
+                                    imageURL = "http://ail.vic.edu.au/wp-content/uploads/2016/09/book-1628732_1280.jpg"
+                                }
                                 let imageRecord = ImageRecord(name: "", url: URL(string: imageURL.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!)
                                 self.tableViewImageLoadingCoordinator.imageRecords.append(imageRecord)
                             }
@@ -165,7 +171,7 @@ class AllPostsVC: UITableViewController, NVActivityIndicatorViewable {
             
             let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
             cell.cellImageView.image = imageRecord.image
-            print(imageRecord.image)
+            print(imageRecord.image as Any)
             
             switch (imageRecord.state) {
             case .new, .downloaded:

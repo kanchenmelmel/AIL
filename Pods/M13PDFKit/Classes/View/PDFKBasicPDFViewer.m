@@ -21,57 +21,26 @@
 #import "PDFKBasicPDFViewerSinglePageCollectionView.h"
 #import <TTOpenInAppActivity/TTOpenInAppActivity.h>
 
+
 @interface PDFKBasicPDFViewer () <UIToolbarDelegate, UIDocumentInteractionControllerDelegate, PDFKPageScrubberDelegate, UIGestureRecognizerDelegate, PDFKBasicPDFViewerThumbsCollectionViewDelegate, PDFKBasicPDFViewerSinglePageCollectionViewDelegate>
 
-/**
- The toolbar displaied at the top of the screen.
- */
-@property (nonatomic, retain) UIToolbar *navigationToolbar;
-/**
- The slider at the bottom of the screen to show the thumbnails.
- */
-@property (nonatomic, retain) UIToolbar *thumbnailSlider;
-/**
- The popover controller to share the document on the iPad.
- */
-@property (nonatomic, strong) UIPopoverController *activityPopoverController;
-/**
- The share button.
- */
-@property (nonatomic, strong) UIBarButtonItem *shareItem;
-/**
- The item that notes wether or not the page is bookmarked.
- */
-@property (nonatomic, strong) UIBarButtonItem *bookmarkItem;
-/**
- The page scrubber at the bottom of the view.
- */
-@property (nonatomic, strong) PDFKPageScrubber *pageScrubber;
-/**
- The collection view of single pages to display.
- */
-@property (nonatomic, strong) PDFKBasicPDFViewerSinglePageCollectionView *pageCollectionView;
-/**
- Wether or not the view is showing a single page.
- */
-@property (nonatomic, assign) BOOL showingSinglePage;
-/**
- The collection view that displays all the thumbs.
- */
-@property (nonatomic, strong) PDFKBasicPDFViewerThumbsCollectionView *thumbsCollectionView;
-/**
- Wether or not the thumbs collection view is showing thumbs.
- */
-@property (nonatomic, assign) BOOL showingBookmarks;
-/**
- YES once view did load called.
- */
-@property (nonatomic, assign) BOOL loadedView;
+@property (nonatomic, retain, readwrite) UIToolbar *navigationToolbar;
+@property (nonatomic, retain, readwrite) UIToolbar *thumbnailSlider;
+@property (nonatomic, strong, readwrite) UIPopoverController *activityPopoverController;
+@property (nonatomic, strong, readwrite) UIBarButtonItem *shareItem;
+@property (nonatomic, strong, readwrite) UIBarButtonItem *bookmarkItem;
+@property (nonatomic, strong, readwrite) PDFKPageScrubber *pageScrubber;
+@property (nonatomic, strong, readwrite) PDFKBasicPDFViewerSinglePageCollectionView *pageCollectionView;
+@property (nonatomic, assign, readwrite) BOOL showingSinglePage;
+@property (nonatomic, strong, readwrite) PDFKBasicPDFViewerThumbsCollectionView *thumbsCollectionView;
+@property (nonatomic, assign, readwrite) BOOL showingBookmarks;
+@property (nonatomic, assign, readwrite) BOOL loadedView;
 
 @property (nonatomic, strong) UITapGestureRecognizer *singleTapGestureRecognizer;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTapGestureRecognizer;
 
 @end
+
 
 @implementation PDFKBasicPDFViewer
 
@@ -115,13 +84,6 @@
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     //Defaults
-    _enableBookmarks = YES;
-    _enableSharing = YES;
-    _enablePrinting = YES;
-    _enableOpening = YES;
-    _enableThumbnailSlider = YES;
-    _enablePreview = YES;
-    _standalone = YES;
     _document = document;
     
     //Create the thumbs view
@@ -257,13 +219,14 @@
     return UIBarPositionBottom;
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    //Invalidate the layouts of the collection views on rotation, and animate the rotation.
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
     
     [_thumbsCollectionView.collectionViewLayout invalidateLayout];
     [_pageCollectionView.collectionViewLayout invalidateLayout];
+    
+    [_pageCollectionView displayPage:_document.currentPage animated:NO];
+    
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -296,15 +259,6 @@
         UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Thumbs"] landscapeImagePhone:[UIImage imageNamed:@"Thumbs"] style:UIBarButtonItemStylePlain target:self action:@selector(list)];
         [buttonsArray addObject:listItem];
         
-        //Sharing Button
-        if (_enableSharing || _enablePrinting || _enableOpening) {
-            UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-            space.width = 10.0;
-            [buttonsArray addObject:space];
-            _shareItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(send)];
-            [buttonsArray addObject:_shareItem];
-        }
-        
         //Flexible space
         [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
         
@@ -324,6 +278,15 @@
             
             [buttonsArray addObject:_bookmarkItem];
         }
+        
+        //Sharing Button
+        if (_enableSharing || _enablePrinting || _enableOpening) {
+            UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+            space.width = 10.0;
+            [buttonsArray addObject:space];
+            _shareItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(send)];
+            [buttonsArray addObject:_shareItem];
+        }
     } else {
         
         //Set controls for thumbs
@@ -341,7 +304,10 @@
         }
         
         //Go back
-        UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithTitle:@"Resume" style:UIBarButtonItemStylePlain target:self action:@selector(list)];
+        if (!self.backButtonTitle) {
+            self.backButtonTitle = @"Resume";
+        }
+        UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithTitle:self.backButtonTitle style:UIBarButtonItemStylePlain target:self action:@selector(list)];
         [buttonsArray addObject:listItem];
         
         //Flexible space
@@ -441,7 +407,7 @@
 
 - (void)thumbCollectionView:(PDFKBasicPDFViewerThumbsCollectionView *)thumbsCollectionView didSelectPage:(NSUInteger)page
 {
-    [self.pageCollectionView displayPage:page animated:NO];
+    [self.pageCollectionView displayPage:page animated:YES];
     self.document.currentPage = page;
     [self.pageScrubber updateScrubber];
     [self toggleSinglePageView];
@@ -459,6 +425,10 @@
     self.document.currentPage = page;
     [self.pageScrubber updateScrubber];
     [self resetNavigationToolbar];
+    
+    if (_pageChangeBlock) {
+        _pageChangeBlock(page);
+    }
 }
 
 - (void)nextPage

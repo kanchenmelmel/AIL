@@ -11,6 +11,7 @@
 		3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */; };
 		3D275F111E823AB500490722 /* storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D275F101E823AB500490722 /* storage.swift */; };
 		3D28BF971E553781005A2046 /* SpeechRecognitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28BF961E553781005A2046 /* SpeechRecognitionController.swift */; };
+		3D60E77B1E989D0E00D958F0 /* PTEExchangeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60E77A1E989D0E00D958F0 /* PTEExchangeWebViewController.swift */; };
 		3D76F5461E7D60FE0072006F /* UIView-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D76F5451E7D60FE0072006F /* UIView-Extensions.swift */; };
 		3D76F5491E7E2AA20072006F /* SpeechRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */; };
 		3D9D3E171E72677E00A56BD4 /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */; };
@@ -125,6 +126,7 @@
 		3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMainButton.swift; path = AIL/HomeMainButton.swift; sourceTree = "<group>"; };
 		3D275F101E823AB500490722 /* storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = storage.swift; path = AIL/storage.swift; sourceTree = "<group>"; };
 		3D28BF961E553781005A2046 /* SpeechRecognitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionController.swift; sourceTree = "<group>"; };
+		3D60E77A1E989D0E00D958F0 /* PTEExchangeWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTEExchangeWebViewController.swift; sourceTree = "<group>"; };
 		3D76F5451E7D60FE0072006F /* UIView-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView-Extensions.swift"; path = "AIL/UIView-Extensions.swift"; sourceTree = "<group>"; };
 		3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpeechRecognition.storyboard; sourceTree = "<group>"; };
 		3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				9679786E1DA6727C0095EB91 /* TestWebViewController.swift */,
 				967978701DA682BE0095EB91 /* BookProcessViewController.swift */,
 				960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */,
+				3D60E77A1E989D0E00D958F0 /* PTEExchangeWebViewController.swift */,
 				960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */,
 				961E89901DADE2520084B5DF /* JiJingDBViewController.swift */,
 				3DE674D61E4D7D3200F41EDF /* JiJingViewController.swift */,
@@ -631,7 +634,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = au.com.melmel;
 				TargetAttributes = {
 					963061C01D77E1270079B7C5 = {
@@ -813,6 +816,7 @@
 				967978741DA6E90B0095EB91 /* CourseWebViewController.swift in Sources */,
 				965693401D9392B300FAC04B /* Post+CoreDataClass.swift in Sources */,
 				4D333F921DA3C6C300D557C2 /* Constants.swift in Sources */,
+				3D60E77B1E989D0E00D958F0 /* PTEExchangeWebViewController.swift in Sources */,
 				965693411D9392B300FAC04B /* Post+CoreDataProperties.swift in Sources */,
 				9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */,
 				96E8C7741D9A307100843C89 /* CourseTrainingViewController.swift in Sources */,
@@ -983,6 +987,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62J5NG6GE2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -992,6 +997,7 @@
 				INFOPLIST_FILE = AIL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.vic.ail.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -1003,6 +1009,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62J5NG6GE2;
 				FRAMEWORK_SEARCH_PATHS = (

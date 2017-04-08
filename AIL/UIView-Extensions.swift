@@ -38,7 +38,7 @@ extension UIView {
     }
     @IBInspectable var _circle: Bool {
         get {
-            return abs(layer.cornerRadius - layer.frame.height) <= CGFloat(FLT_EPSILON)
+            return abs(layer.cornerRadius - layer.frame.height) <= CGFloat(Float.ulpOfOne)
         }
         set {
             if (newValue) {

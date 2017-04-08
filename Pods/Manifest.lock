@@ -1,37 +1,37 @@
 PODS:
-  - Alamofire (4.3.0)
+  - Alamofire (4.4.0)
   - AlamofireNetworkActivityIndicator (2.1.0):
     - Alamofire (~> 4.1)
-  - EAIntroView (2.9.0):
+  - EAIntroView (2.10.0):
     - EARestrictedScrollView (~> 1.1.0)
   - EARestrictedScrollView (1.1.0)
-  - M13PDFKit (1.0.2):
+  - M13PDFKit (1.1.0):
     - TTOpenInAppActivity
-  - NVActivityIndicatorView (3.2)
+  - NVActivityIndicatorView (3.6.0)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftyJSON (3.1.4)
   - TTOpenInAppActivity (1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.3)
-  - AlamofireNetworkActivityIndicator (~> 2.0)
-  - EAIntroView (~> 2.9.0)
-  - M13PDFKit (= 1.0.2)
-  - NVActivityIndicatorView (~> 3.0)
-  - SlideMenuControllerSwift (~> 3.0)
-  - SwiftyJSON (~> 3.1)
+  - Alamofire (~> 4.4)
+  - AlamofireNetworkActivityIndicator
+  - EAIntroView
+  - M13PDFKit
+  - NVActivityIndicatorView
+  - SlideMenuControllerSwift
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
-  EAIntroView: 76f68cc56242f2e25359419e6ecc2344ee7e1756
+  EAIntroView: 3494b7bbd1212e3a4f7e8d16194a1b00e7b9abb2
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
-  M13PDFKit: bc121a55ccb8ddfcf3982f1a5a8592b9f492cd73
-  NVActivityIndicatorView: 28942c18ced111a6a3ce5e6f5b27d9d40116d639
+  M13PDFKit: 4417c8a98dd22c0fe1e615f40bdf38848bb3b367
+  NVActivityIndicatorView: c7c1c4300b418bd9ed06459e78d4df859ddbe31f
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TTOpenInAppActivity: c2218fe419d03ddd4ffb1f07d52d66e0d213d0d4
 
-PODFILE CHECKSUM: bd11db0d5c599a5441f726170114644cb6bf7493
+PODFILE CHECKSUM: 74a1b22ddec1ff449fbe52e3f13f5b94489bc8bd
 
 COCOAPODS: 1.1.1

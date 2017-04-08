@@ -92,9 +92,9 @@ class SpeechRecognitionController: UIViewController {
                 let weightedPartialConfidence = item.alternatives[0].confidence! * weight
                 let __confidence = _confidence + weightedPartialConfidence
                 if __confidence >= 1.0 {
-                    return 1.0 - DBL_EPSILON
+                    return 1.0 - Double.ulpOfOne
                 } else if __confidence <= 0 {
-                    return DBL_EPSILON
+                    return Double.ulpOfOne
                 } else {
                     return __confidence
                 }

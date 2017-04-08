@@ -85,8 +85,41 @@
                                                     <segue destination="FJM-uR-bq7" kind="show" id="eLu-UO-QZY"/>
                                                 </connections>
                                             </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PTEExchangeCell" id="QQX-Nq-ABM" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
+                                                <rect key="frame" x="210" y="0.33333333333333331" width="200" height="132"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xKu-4S-CK0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PTELiveCellButton" translatesAutoresizingMaskIntoConstraints="NO" id="YEA-xJ-Unq">
+                                                                    <rect key="frame" x="9" y="0.0" width="60" height="60"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE考位交流" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX7-IV-muZ">
+                                                                    <rect key="frame" x="0.0" y="70" width="78.333333333333343" height="15.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" red="0.1450980392" green="0.48627450979999998" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="xKu-4S-CK0" firstAttribute="centerX" secondItem="QQX-Nq-ABM" secondAttribute="centerX" id="8fq-eL-RtK"/>
+                                                    <constraint firstItem="xKu-4S-CK0" firstAttribute="centerY" secondItem="QQX-Nq-ABM" secondAttribute="centerY" id="GQz-Ac-SHD"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="Mk5-4w-Xyf" kind="show" id="Lte-ue-j4D"/>
+                                                </connections>
+                                            </collectionViewCell>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                                <rect key="frame" x="210" y="0.0" width="200" height="132"/>
+                                                <rect key="frame" x="420" y="0.0" width="200" height="132"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
@@ -129,7 +162,7 @@
                                                 </connections>
                                             </collectionViewCell>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPostCell" id="3aG-XG-aY6" customClass="LastCollectionViewCell" customModule="AIL" customModuleProvider="target">
-                                                <rect key="frame" x="420" y="0.33333333333333331" width="200" height="132"/>
+                                                <rect key="frame" x="630" y="0.33333333333333331" width="200" height="132"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
@@ -1050,7 +1083,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQw-1o-oat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876" y="-528"/>
+            <point key="canvasLocation" x="1348" y="-483"/>
         </scene>
         <!--机经题库-->
         <scene sceneID="Gfs-sV-wRq">
@@ -1101,6 +1134,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6y-H8-ZXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="652" y="-564"/>
+        </scene>
+        <!--PTE考位交流-->
+        <scene sceneID="6Gc-lj-7RT">
+            <objects>
+                <viewController id="Mk5-4w-Xyf" customClass="PTEExchangeWebViewController" customModule="AIL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7D8-Y1-Qsj"/>
+                        <viewControllerLayoutGuide type="bottom" id="a14-Ql-ea8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tqm-Ga-Gb8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkm-cf-hRO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e3K-Dq-Fnx">
+                                <rect key="frame" x="0.0" y="65" width="414" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="VGh-dt-z1R"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.27058823529999998" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Jkm-cf-hRO" firstAttribute="top" secondItem="tqm-Ga-Gb8" secondAttribute="top" id="8sk-8N-kzF"/>
+                            <constraint firstItem="e3K-Dq-Fnx" firstAttribute="top" secondItem="tqm-Ga-Gb8" secondAttribute="top" constant="65" id="9g5-2k-A39"/>
+                            <constraint firstItem="a14-Ql-ea8" firstAttribute="top" secondItem="Jkm-cf-hRO" secondAttribute="bottom" id="FR4-LO-feA"/>
+                            <constraint firstItem="Jkm-cf-hRO" firstAttribute="leading" secondItem="tqm-Ga-Gb8" secondAttribute="leading" id="Fdq-Aq-JYF"/>
+                            <constraint firstAttribute="trailing" secondItem="Jkm-cf-hRO" secondAttribute="trailing" id="NCb-b0-LVc"/>
+                            <constraint firstAttribute="trailing" secondItem="e3K-Dq-Fnx" secondAttribute="trailing" id="dzp-5x-qg0"/>
+                            <constraint firstItem="e3K-Dq-Fnx" firstAttribute="leading" secondItem="tqm-Ga-Gb8" secondAttribute="leading" id="xIu-cC-iRn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PTE考位交流" id="CXe-yl-T33">
+                        <barButtonItem key="rightBarButtonItem" image="ActivityVCButton" id="qZM-xT-oeh">
+                            <connections>
+                                <action selector="activityButtonClick:" destination="Mk5-4w-Xyf" id="Jq6-9L-ek6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="e3K-Dq-Fnx" id="kwL-lk-Eyf"/>
+                        <outlet property="webView" destination="Jkm-cf-hRO" id="c1J-tN-0YU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uh3-yL-yZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2080" y="-750"/>
         </scene>
     </scenes>
     <resources>

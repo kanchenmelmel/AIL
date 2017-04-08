@@ -6,13 +6,13 @@ target 'AIL' do
   use_frameworks!
 
   # Pods for AIL
-  pod 'SlideMenuControllerSwift', '~> 3.0'
-  pod 'SwiftyJSON', '~> 3.1'
-  pod 'Alamofire', '~> 4.3'
-  pod 'AlamofireNetworkActivityIndicator', '~> 2.0'
-  pod 'EAIntroView', '~> 2.9.0'
-  pod 'NVActivityIndicatorView', '~> 3.0'
+  pod 'SlideMenuControllerSwift'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
+  pod 'AlamofireNetworkActivityIndicator'
+  pod 'EAIntroView'
+  pod 'NVActivityIndicatorView'
 
   source 'https://github.com/CocoaPods/Specs.git'
-  pod 'M13PDFKit', '1.0.2'
+  pod 'M13PDFKit'
 end

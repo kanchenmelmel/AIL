@@ -86,12 +86,12 @@ class SelTestDBTableViewController: UITableViewController, NVActivityIndicatorVi
         
         
         // Images
-        print(resourcesPosts[indexPath.row].featuredImageUrl)
+        print(resourcesPosts[indexPath.row].featuredImageUrl as Any)
         if resourcesPosts[indexPath.row].featuredImageUrl != nil {
             
             let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
             cell.cellImageView.image = imageRecord.image
-            print(imageRecord.image)
+            print(imageRecord.image as Any)
             
             switch (imageRecord.state) {
             case .new, .downloaded:

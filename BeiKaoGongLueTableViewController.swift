@@ -87,7 +87,7 @@ class BeiKaoGongLueTableViewController: UITableViewController, NVActivityIndicat
         
         
         // Images
-        print(posts[indexPath.row].featuredImageUrl)
+        print(posts[indexPath.row].featuredImageUrl as Any)
         if posts[indexPath.row].featuredImageUrl != nil {
             
             let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
@@ -114,7 +114,7 @@ class BeiKaoGongLueTableViewController: UITableViewController, NVActivityIndicat
     
     func setUpTableViewImageCoordinator(){
         for post in posts {
-            NSLog("\(post.featuredImageUrl)")
+            NSLog("\(String(describing: post.featuredImageUrl))")
             
             let imageUrlString = post.featuredImageUrl!.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
             let imageRecord = ImageRecord(name: "", url: URL(string: imageUrlString!)!)

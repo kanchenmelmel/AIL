@@ -41,7 +41,7 @@ class RewardAccountWebViewController: UIViewController,UIWebViewDelegate {
         webView.loadRequest(request as URLRequest)
         webView.delegate = self
         post = CoreDataOperation.buildRandomPost(0, title: "全真模考", excerpt: "全真模考", date: Date(), link: urlString!)
-        self
+        //self
     }
     
     
