@@ -35,7 +35,7 @@ class PTELiveForumWebViewController: UIViewController,UIWebViewDelegate {
         progressView.progress  = 0
         let url = URL(string:urlString!)
         
-        let request = NSMutableURLRequest(url: url!, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10.0)
+        let request = NSMutableURLRequest(url: url!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 10.0)
         //        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
         webView.loadRequest(request as URLRequest)
         webView.delegate = self
