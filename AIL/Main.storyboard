@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yoz-IM-NgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yoz-IM-NgN">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -213,13 +213,13 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="119.33333333333331"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-jX-bSI">
-                                                                        <rect key="frame" x="-37.333333333333329" y="18.666666666666629" width="209" height="83.333333333333371"/>
+                                                                        <rect key="frame" x="-36.666666666666671" y="18.666666666666629" width="207.66666666666669" height="83"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="jijing" translatesAutoresizingMaskIntoConstraints="NO" id="RU1-LC-ipL">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="209" height="47.666666666666686"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="207.66666666666666" height="47.666666666666686"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="PTE最全机经" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-vY-Q9o">
-                                                                                <rect key="frame" x="0.0" y="55.666666666666686" width="209" height="27.666666666666686"/>
+                                                                                <rect key="frame" x="0.0" y="55.666666666666686" width="207.66666666666666" height="27.333333333333314"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -250,13 +250,13 @@
                                                                 <rect key="frame" x="203" y="0.0" width="195" height="119.33333333333331"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CBA-Gm-aK2">
-                                                                        <rect key="frame" x="23.333333333333329" y="18.333333333333314" width="209.33333333333337" height="83.666666666666686"/>
+                                                                        <rect key="frame" x="23.333333333333329" y="18.333333333333314" width="209.33333333333337" height="83.333333333333314"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="pte" translatesAutoresizingMaskIntoConstraints="NO" id="5eS-y8-9aH">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="209.33333333333334" height="49"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="PTE素材资料" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJz-Li-isO">
-                                                                                <rect key="frame" x="0.0" y="57" width="209.33333333333334" height="26.666666666666686"/>
+                                                                                <rect key="frame" x="0.0" y="57" width="209.33333333333334" height="26.333333333333314"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -292,13 +292,13 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="119.33333333333337"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IUW-cZ-PFP">
-                                                                        <rect key="frame" x="-16.333333333333329" y="17.333333333333314" width="167.33333333333331" height="83.333333333333371"/>
+                                                                        <rect key="frame" x="-15.666666666666671" y="17.666666666666686" width="166" height="83"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="zice" translatesAutoresizingMaskIntoConstraints="NO" id="AAb-5G-ouS">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="48.333333333333371"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="48"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="题型自测" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-DC-eQs">
-                                                                                <rect key="frame" x="0.0" y="56.333333333333371" width="167.33333333333334" height="27"/>
+                                                                                <rect key="frame" x="0.0" y="56" width="166" height="27"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -329,13 +329,13 @@
                                                                 <rect key="frame" x="203" y="0.0" width="195" height="119.33333333333337"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZIv-48-UFR">
-                                                                        <rect key="frame" x="44" y="17.333333333333314" width="167" height="83.333333333333371"/>
+                                                                        <rect key="frame" x="44.333333333333343" y="17.666666666666686" width="166.33333333333334" height="83"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="mokao" translatesAutoresizingMaskIntoConstraints="NO" id="aCO-jP-X2P">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167" height="48.333333333333371"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="166.33333333333334" height="48"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="全真模考" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8E-dq-ahN">
-                                                                                <rect key="frame" x="0.0" y="56.333333333333371" width="167" height="27"/>
+                                                                                <rect key="frame" x="0.0" y="56" width="166.33333333333334" height="27"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -434,13 +434,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="137.33333333333334" height="103.33333333333326"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rxn-Ha-vYz">
-                                                                <rect key="frame" x="7.3333333333333357" y="10.333333333333258" width="123.66666666666666" height="82.333333333333371"/>
+                                                                <rect key="frame" x="7" y="10.333333333333258" width="123.66666666666666" height="82.333333333333371"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="baokao" translatesAutoresizingMaskIntoConstraints="NO" id="9oU-zA-phu">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="123.66666666666667" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="123.66666666666666" height="50"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="报考流程" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEl-pS-BJu">
-                                                                        <rect key="frame" x="0.0" y="58" width="123.66666666666667" height="24.333333333333371"/>
+                                                                        <rect key="frame" x="0.0" y="58" width="123.66666666666666" height="24.333333333333371"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -466,13 +466,13 @@
                                                         <rect key="frame" x="138.33333333333331" y="0.0" width="137.33333333333331" height="103.33333333333326"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Agh-py-XJh">
-                                                                <rect key="frame" x="7" y="10.333333333333258" width="123.66666666666666" height="82.333333333333371"/>
+                                                                <rect key="frame" x="6.6666666666666572" y="10.333333333333258" width="124" height="82.333333333333371"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="lianxi" translatesAutoresizingMaskIntoConstraints="NO" id="Jkk-9z-uw1">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="123.66666666666666" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="联系我们" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPb-GS-cgp">
-                                                                        <rect key="frame" x="0.0" y="58" width="123.66666666666666" height="24.333333333333371"/>
+                                                                        <rect key="frame" x="0.0" y="58" width="124" height="24.333333333333371"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -541,16 +541,16 @@
                                         <rect key="frame" x="0.0" y="570.66666666666663" width="414" height="85"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-0m-AUV">
-                                                <rect key="frame" x="137" y="21" width="140" height="42.666666666666742"/>
+                                                <rect key="frame" x="137" y="21" width="140" height="43"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cortana" translatesAutoresizingMaskIntoConstraints="NO" id="pHT-fc-ssy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="42.666666666666742"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="pHT-fc-ssy" secondAttribute="height" multiplier="1:1" id="dmo-KP-ZAC"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuP-qQ-y0O">
-                                                        <rect key="frame" x="42" y="0.0" width="98" height="42.666666666666742"/>
+                                                        <rect key="frame" x="43" y="0.0" width="97" height="43"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="发音测试">
                                                                 <attributes>

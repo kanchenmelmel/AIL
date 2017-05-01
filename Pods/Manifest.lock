@@ -8,16 +8,18 @@ PODS:
   - M13PDFKit (1.1.0):
     - TTOpenInAppActivity
   - NVActivityIndicatorView (3.6.0)
+  - OAuthSwift (1.1.1)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftyJSON (3.1.4)
   - TTOpenInAppActivity (1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.4)
+  - Alamofire
   - AlamofireNetworkActivityIndicator
   - EAIntroView
   - M13PDFKit
   - NVActivityIndicatorView
+  - OAuthSwift (~> 1.1.0)
   - SlideMenuControllerSwift
   - SwiftyJSON
 
@@ -28,10 +30,11 @@ SPEC CHECKSUMS:
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
   M13PDFKit: 4417c8a98dd22c0fe1e615f40bdf38848bb3b367
   NVActivityIndicatorView: c7c1c4300b418bd9ed06459e78d4df859ddbe31f
+  OAuthSwift: 6e3a103b3e5639411769cc7e199ec7e14bd1547f
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TTOpenInAppActivity: c2218fe419d03ddd4ffb1f07d52d66e0d213d0d4
 
-PODFILE CHECKSUM: 74a1b22ddec1ff449fbe52e3f13f5b94489bc8bd
+PODFILE CHECKSUM: 217042dd0c454f879e2153f3e59a29696cc99a47
 
 COCOAPODS: 1.1.1

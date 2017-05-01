@@ -987,7 +987,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0DBD4F8AC5ABAE1E99C6BB1 /* Pods-AIL.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62J5NG6GE2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1009,7 +1009,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C5E07B5BD151A8502A096B3 /* Pods-AIL.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62J5NG6GE2;
 				FRAMEWORK_SEARCH_PATHS = (

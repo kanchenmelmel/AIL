@@ -134,16 +134,20 @@ class LeftMenuVC: UIViewController {
             
             self.present(alert, animated:true)
         } else {
-            let alert = UIAlertController(title: "AIL积分", message: nil, preferredStyle: .alert)
+            let alert = UIAlertController(title: "AIL登录", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "确认", style: .default) { _ in
-                if let value = alert.textFields![0].text {
-                    UserDefaults.standard.set(value, forKey: "myCredUserIdentifier")
+                if let user = alert.textFields![0].text, let pass = alert.textFields![1].text {
+                    UserDefaults.standard.set(user, forKey: "wp-username")
+                    UserDefaults.standard.set(pass, forKey: "wp-password")
                     UserDefaults.standard.synchronize()
                     self.updateCredit()
                 }
             })
             alert.addTextField() { textField in
-                textField.placeholder = "请输入用户名或邮箱"
+                textField.placeholder = "用户名"
+            }
+            alert.addTextField() { textField in
+                textField.placeholder = "密码"
             }
             self.present(alert, animated:true, completion:nil)
         }

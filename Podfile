@@ -12,6 +12,7 @@ target 'AIL' do
   pod 'AlamofireNetworkActivityIndicator'
   pod 'EAIntroView'
   pod 'NVActivityIndicatorView'
+  pod 'OAuthSwift', '~> 1.1.0'
 
   source 'https://github.com/CocoaPods/Specs.git'
   pod 'M13PDFKit'
