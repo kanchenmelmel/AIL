@@ -19,8 +19,8 @@ class TableViewImageLoadingCoordinator {
             self.startdownloadForRecord(imageRecord, indexPath: indexPath, completionHandler: {
                 completionhandler()
             })
-        default:
-            print("do nothing")
+        default: break
+            //print("do nothing")
         }
     }
     

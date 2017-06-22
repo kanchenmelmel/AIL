@@ -155,7 +155,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as? PostCollectionViewCell {
                 cell.backgroundColor = UIColor.white
                 
-                print ("123123: \(self.featurePosts.count)")
+                //print ("123123: \(self.featurePosts.count)")
                 
                 let featurePost = self.featurePosts[indexPath.row - 2]
                 
@@ -176,8 +176,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                             // self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
                             self.collectionView.reloadItems(at: [indexPath])
                         })
-                    default:
-                        print("Do Nothing for loading cell image \(indexPath.row - 2)")
+                    default: break
+                        //print("Do Nothing for loading cell image \(indexPath.row - 2)")
                     }
                     
                     
@@ -219,7 +219,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let featurePost = featurePosts[indexPath.row - 1]
             self.performSegue(withIdentifier: "showPostWebViewSegue", sender: featurePost)
         } else if indexPath.row == 1 {
-            print("==2==2==2==2==2==2==2==")
+            //print("==2==2==2==2==2==2==2==")
         }
         
     }

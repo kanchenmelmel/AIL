@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0F6E851EB6D9E5000EDF53 /* WPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F6E841EB6D9E5000EDF53 /* WPClient.swift */; };
 		3D2175F81D88DB9A002F0EEF /* MainButtonsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */; };
 		3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */; };
 		3D275F111E823AB500490722 /* storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D275F101E823AB500490722 /* storage.swift */; };
 		3D28BF971E553781005A2046 /* SpeechRecognitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D28BF961E553781005A2046 /* SpeechRecognitionController.swift */; };
+		3D4C89551EC5F6AB002B1D4C /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C89541EC5F6AB002B1D4C /* WaveView.swift */; };
+		3D54A1CC1ED17442001A25FF /* VoiceAnalysis.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D54A1CB1ED17442001A25FF /* VoiceAnalysis.storyboard */; };
+		3D54A1D51ED17885001A25FF /* VoiceAnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D54A1D41ED17885001A25FF /* VoiceAnalysisController.swift */; };
+		3D54A1D71ED19565001A25FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D54A1D61ED19565001A25FF /* Assets.xcassets */; };
 		3D60E77B1E989D0E00D958F0 /* PTEExchangeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60E77A1E989D0E00D958F0 /* PTEExchangeWebViewController.swift */; };
 		3D76F5461E7D60FE0072006F /* UIView-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D76F5451E7D60FE0072006F /* UIView-Extensions.swift */; };
 		3D76F5491E7E2AA20072006F /* SpeechRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */; };
+		3D9417481ED9A3C600C2638E /* FrequencyWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9417471ED9A3C600C2638E /* FrequencyWaveView.swift */; };
 		3D9D3E171E72677E00A56BD4 /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */; };
 		3DA95BA21E5BE29300084DA4 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95BA01E5BE28800084DA4 /* RestKit.framework */; };
 		3DA95BA31E5BE29300084DA4 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95BA01E5BE28800084DA4 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -60,7 +66,6 @@
 		963061C51D77E1280079B7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C41D77E1280079B7C5 /* AppDelegate.swift */; };
 		963061C71D77E1280079B7C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963061C61D77E1280079B7C5 /* MainViewController.swift */; };
 		963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */; };
-		963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963061CE1D77E1280079B7C5 /* Assets.xcassets */; };
 		963061D21D77E1280079B7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963061D01D77E1280079B7C5 /* LaunchScreen.storyboard */; };
 		963574941D90C3F800B8D1A5 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963574921D90C3F800B8D1A5 /* Category+CoreDataClass.swift */; };
 		963574951D90C3F800B8D1A5 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963574931D90C3F800B8D1A5 /* Category+CoreDataProperties.swift */; };
@@ -122,16 +127,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D0F6E841EB6D9E5000EDF53 /* WPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WPClient.swift; path = AIL/WPClient.swift; sourceTree = "<group>"; };
 		3D2175F71D88DB9A002F0EEF /* MainButtonsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainButtonsContainer.swift; path = AIL/MainButtonsContainer.swift; sourceTree = "<group>"; };
 		3D2175F91D8923D1002F0EEF /* HomeMainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeMainButton.swift; path = AIL/HomeMainButton.swift; sourceTree = "<group>"; };
 		3D275F101E823AB500490722 /* storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = storage.swift; path = AIL/storage.swift; sourceTree = "<group>"; };
 		3D28BF961E553781005A2046 /* SpeechRecognitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionController.swift; sourceTree = "<group>"; };
+		3D4C89541EC5F6AB002B1D4C /* WaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		3D54A1CB1ED17442001A25FF /* VoiceAnalysis.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VoiceAnalysis.storyboard; sourceTree = "<group>"; };
+		3D54A1D41ED17885001A25FF /* VoiceAnalysisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceAnalysisController.swift; sourceTree = "<group>"; };
+		3D54A1D61ED19565001A25FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D60E77A1E989D0E00D958F0 /* PTEExchangeWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTEExchangeWebViewController.swift; sourceTree = "<group>"; };
 		3D76F5451E7D60FE0072006F /* UIView-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView-Extensions.swift"; path = "AIL/UIView-Extensions.swift"; sourceTree = "<group>"; };
 		3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpeechRecognition.storyboard; sourceTree = "<group>"; };
+		3D9417471ED9A3C600C2638E /* FrequencyWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyWaveView.swift; sourceTree = "<group>"; };
 		3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
 		3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 		3DA95BA01E5BE28800084DA4 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
+		3DC5326B1EC06A17002A81AC /* EZAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZAudio.framework; path = "../../../Library/Developer/Xcode/DerivedData/AIL-gxgpccpakjqlebbcqicahiytvrar/Build/Products/Release-iphonesimulator/EZAudio/EZAudio.framework"; sourceTree = "<group>"; };
 		3DDBA89E1E53D31C00743BB3 /* JiJingPDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JiJingPDF; sourceTree = "<group>"; };
 		3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailEjecter.swift; path = AIL/EmailEjecter.swift; sourceTree = "<group>"; };
 		3DE674CF1E4D6FD000F41EDF /* AIL 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AIL 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -176,7 +188,6 @@
 		963061C41D77E1280079B7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		963061C61D77E1280079B7C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = AIL/MainViewController.swift; sourceTree = "<group>"; };
 		963061CC1D77E1280079B7C5 /* AIL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AIL.xcdatamodel; sourceTree = "<group>"; };
-		963061CE1D77E1280079B7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		963061D11D77E1280079B7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		963061D31D77E1280079B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		963574921D90C3F800B8D1A5 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -270,6 +281,7 @@
 				961E89901DADE2520084B5DF /* JiJingDBViewController.swift */,
 				3DE674D61E4D7D3200F41EDF /* JiJingViewController.swift */,
 				3D28BF961E553781005A2046 /* SpeechRecognitionController.swift */,
+				3D54A1D41ED17885001A25FF /* VoiceAnalysisController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -293,6 +305,8 @@
 				965216B21D94B29F00EA1823 /* HomeViewBottomButton.swift */,
 				96E8C7751D9A311000843C89 /* CustomizedSegmentedControl.swift */,
 				968E0DA11DA4C7B30067DA8D /* LastCollectionViewCell.swift */,
+				3D4C89541EC5F6AB002B1D4C /* WaveView.swift */,
+				3D9417471ED9A3C600C2638E /* FrequencyWaveView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -357,6 +371,7 @@
 		69EFDD5AB6EBC4F4E4D8ED54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DC5326B1EC06A17002A81AC /* EZAudio.framework */,
 				3DA95BA01E5BE28800084DA4 /* RestKit.framework */,
 				3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */,
 				AE2662452685324A770F0164 /* Pods_AIL.framework */,
@@ -423,9 +438,9 @@
 		963061C31D77E1280079B7C5 /* AIL */ = {
 			isa = PBXGroup;
 			children = (
+				3D54A1D61ED19565001A25FF /* Assets.xcassets */,
 				960E65921DAC8E1600DEE9BF /* IntroPages */,
 				963061C41D77E1280079B7C5 /* AppDelegate.swift */,
-				963061CE1D77E1280079B7C5 /* Assets.xcassets */,
 				4DDD17E91D965E3600294ACC /* AllPosts.storyboard */,
 				9672A1561D9BA14300A64A01 /* Main.storyboard */,
 				3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */,
@@ -433,6 +448,7 @@
 				963061D31D77E1280079B7C5 /* Info.plist */,
 				3DE674D21E4D70FA00F41EDF /* SpeechRecognition.xib */,
 				3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */,
+				3D54A1CB1ED17442001A25FF /* VoiceAnalysis.storyboard */,
 				3DE674D81E4EBDF300F41EDF /* ZuiQuanJiJing.storyboard */,
 				963061CB1D77E1280079B7C5 /* AIL.xcdatamodeld */,
 				9683A6731D88DEDF00360D98 /* Messages.storyboard */,
@@ -548,6 +564,7 @@
 				9671E5EB1D7E835D008250C7 /* CoreDataOperation.swift */,
 				4DDD17E31D8F7DCE00294ACC /* PostRetriever.swift */,
 				96E63CBC1DAF07E700EB11C7 /* MutableCollectionExtension.swift */,
+				3D0F6E841EB6D9E5000EDF53 /* WPClient.swift */,
 			);
 			name = Uitility;
 			sourceTree = "<group>";
@@ -616,7 +633,7 @@
 				665269B806FA97C96BA6105E /* 📦 Embed Pods Frameworks */,
 				B9B95BDF09578CD752AAD50D /* 📦 Copy Pods Resources */,
 				3DA95BA41E5BE29300084DA4 /* Embed Frameworks */,
-				3D76F5441E727C460072006F /* Run Script */,
+				3D54A1D81ED1BA3B001A25FF /* Remove Unsupported Architectures */,
 			);
 			buildRules = (
 			);
@@ -668,12 +685,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				96A1739A1DA0D29E0002F360 /* Archive.storyboard in Resources */,
+				3D54A1CC1ED17442001A25FF /* VoiceAnalysis.storyboard in Resources */,
 				3DE674D31E4D70FA00F41EDF /* SpeechRecognition.xib in Resources */,
 				9672A1571D9BA14300A64A01 /* Main.storyboard in Resources */,
 				963061D21D77E1280079B7C5 /* LaunchScreen.storyboard in Resources */,
 				9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */,
 				96A173981DA0D1F30002F360 /* AboutAIL.storyboard in Resources */,
-				963061CF1D77E1280079B7C5 /* Assets.xcassets in Resources */,
 				961E89931DADFE400084B5DF /* SelfTestDB.storyboard in Resources */,
 				4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */,
 				960E65941DAC8E3800DEE9BF /* IntroPage1View.xib in Resources */,
@@ -681,6 +698,7 @@
 				3DDBA89F1E53D31C00743BB3 /* JiJingPDF in Resources */,
 				96A691D31D98F90200D29995 /* BeiKaoGongLue.storyboard in Resources */,
 				960E65961DAC908700DEE9BF /* IntroPage2View.xib in Resources */,
+				3D54A1D71ED19565001A25FF /* Assets.xcassets in Resources */,
 				3DE674D91E4EBDF300F41EDF /* ZuiQuanJiJing.storyboard in Resources */,
 				3D76F5491E7E2AA20072006F /* SpeechRecognition.storyboard in Resources */,
 				9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */,
@@ -707,19 +725,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D76F5441E727C460072006F /* Run Script */ = {
+		3D54A1D81ED1BA3B001A25FF /* Remove Unsupported Architectures */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run Script";
+			name = "Remove Unsupported Architectures";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\n    FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n    FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n    echo \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\n    EXTRACTED_ARCHS=()\n\n    for ARCH in $ARCHS\n    do\n        echo \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\n        lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n        EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n    done\n\n    echo \"Merging extracted architectures: ${ARCHS}\"\n    lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n    rm \"${EXTRACTED_ARCHS[@]}\"\n\n    echo \"Replacing original executable with thinned version\"\n    rm \"$FRAMEWORK_EXECUTABLE_PATH\"\n    mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\n    FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n    FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n    echo \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\n    EXTRACTED_ARCHS=()\n\n    for ARCH in $ARCHS\n    do\n        echo \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\n        lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n        EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n    done\n\n    echo \"Merging extracted architectures: ${ARCHS}\"\n    lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n    rm \"${EXTRACTED_ARCHS[@]}\"\n\n    echo \"Replacing original executable with thinned version\"\n    rm \"$FRAMEWORK_EXECUTABLE_PATH\"\n    mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\nfi\n";
 		};
 		6615F2FF09926148D377B99E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -816,6 +834,7 @@
 				967978741DA6E90B0095EB91 /* CourseWebViewController.swift in Sources */,
 				965693401D9392B300FAC04B /* Post+CoreDataClass.swift in Sources */,
 				4D333F921DA3C6C300D557C2 /* Constants.swift in Sources */,
+				3D0F6E851EB6D9E5000EDF53 /* WPClient.swift in Sources */,
 				3D60E77B1E989D0E00D958F0 /* PTEExchangeWebViewController.swift in Sources */,
 				965693411D9392B300FAC04B /* Post+CoreDataProperties.swift in Sources */,
 				9671E5EC1D7E835D008250C7 /* CoreDataOperation.swift in Sources */,
@@ -848,6 +867,7 @@
 				4D9C9A6E1D86C41800EA98D0 /* CustomUINavigationItem.swift in Sources */,
 				96E63CBD1DAF07E700EB11C7 /* MutableCollectionExtension.swift in Sources */,
 				96ADCDA31D925AC600ACBC05 /* CustomizedSearchBar.swift in Sources */,
+				3D4C89551EC5F6AB002B1D4C /* WaveView.swift in Sources */,
 				967978711DA682BE0095EB91 /* BookProcessViewController.swift in Sources */,
 				3D275F111E823AB500490722 /* storage.swift in Sources */,
 				963061CD1D77E1280079B7C5 /* AIL.xcdatamodeld in Sources */,
@@ -865,6 +885,7 @@
 				4D9C9A741D88B2FF00EA98D0 /* UserMessageVC.swift in Sources */,
 				968E0DA21DA4C7B30067DA8D /* LastCollectionViewCell.swift in Sources */,
 				4DDD17E61D90226900294ACC /* ImageOperation.swift in Sources */,
+				3D54A1D51ED17885001A25FF /* VoiceAnalysisController.swift in Sources */,
 				964096831DA221FC006D63B8 /* ArchiveWebViewController.swift in Sources */,
 				96A1739F1DA0D3660002F360 /* ArchiveVCsTableViewController.swift in Sources */,
 				4DAEAFAD1D7AB7B000842C4F /* MenuVC.swift in Sources */,
@@ -876,6 +897,7 @@
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,
 				4DDD18041D9ACA0000294ACC /* Message+CoreDataProperties.swift in Sources */,
 				962652041D87D5A200CB92BB /* SubjectResourcesTableViewController.swift in Sources */,
+				3D9417481ED9A3C600C2638E /* FrequencyWaveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,6 +940,11 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -934,8 +961,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "EZAudio-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -966,6 +995,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -976,7 +1010,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "EZAudio-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -997,11 +1033,13 @@
 				INFOPLIST_FILE = AIL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.vic.ail.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s $(ARCHS_STANDARD)";
 			};
 			name = Debug;
 		};
@@ -1019,10 +1057,13 @@
 				INFOPLIST_FILE = AIL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.vic.ail.AIL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s $(ARCHS_STANDARD)";
 			};
 			name = Release;
 		};

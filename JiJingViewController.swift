@@ -18,21 +18,17 @@ class JiJingViewController: UITableViewController {
     ]
     let files: [String:[String]] = [
         "listening": [
-            "Write from Dictation",
-            "Write from Dictation 2",
+            "Write from Dictation 17-5",
         ],
         "speaking": [
             "Answer short question",
-            "Describe Image updated",
-            "Read aloud",
-            "Read aloud 2",
-            "Repeat Sentence",
-            "Repeat Sentence 2",
+            "Describe Image 17-5",
+            "Read aloud 23-3",
+            "Repeat Sentence 23-3",
         ],
         "reading": [
-            "Reading & Writing Fill in the blanks",
-            "Reorder paragraphs",
-            "Reorder paragraphs 2",
+            "Reading Fill in the Blanks 18-5",
+            "Reorder paragraphs 23-3",
         ],
         "writing": [
             "Summarize Written Text",

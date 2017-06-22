@@ -35,11 +35,11 @@ class CacheableURLProtocol: URLProtocol, URLSessionDataDelegate, URLSessionTaskD
     
     override func startLoading() {
         requestCount+=1
-        print("Request \(requestCount): \(request.url!.absoluteString)")
+        //print("Request \(requestCount): \(request.url!.absoluteString)")
         
         let possibleCachedResponse = self.cachedResponseForCurrentRequest()
         if let cachedResponse = possibleCachedResponse {
-            print("----- Get response data from cache -----")
+            //print("----- Get response data from cache -----")
             
             let data = cachedResponse.value(forKey: "data") as! Data!
             let mimeType = cachedResponse.value(forKey: "mimeType") as! String!
@@ -65,7 +65,7 @@ class CacheableURLProtocol: URLProtocol, URLSessionDataDelegate, URLSessionTaskD
     }
     
     func fetchFromInternet() {
-        print("----- Get response data from internet -----")
+        //print("----- Get response data from internet -----")
         
         let newRequest = (self.request as NSURLRequest).mutableCopy() as! NSMutableURLRequest
         URLProtocol.setProperty(true, forKey: "CacheableURLProtocolHandledKey", in: newRequest)
@@ -108,7 +108,7 @@ class CacheableURLProtocol: URLProtocol, URLSessionDataDelegate, URLSessionTaskD
     }
     
     func saveCachedResponse () {
-        print("----- Cache response data -----")
+        //print("----- Cache response data -----")
         
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let context = delegate.managedObjectContext
@@ -124,7 +124,7 @@ class CacheableURLProtocol: URLProtocol, URLSessionDataDelegate, URLSessionTaskD
             do {
                 try context.save()
             } catch {
-                print("不能保存：\(error)")
+                //print("不能保存：\(error)")
             }
         })
     }
@@ -148,7 +148,7 @@ class CacheableURLProtocol: URLProtocol, URLSessionDataDelegate, URLSessionTaskD
                 }
             }
         } catch {
-            print("Faild to fetch data：\(error)")
+            //print("Faild to fetch data：\(error)")
         }
         return nil
     }

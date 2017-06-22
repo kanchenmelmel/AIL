@@ -8,31 +8,7 @@
 
 import UIKit
 import SpeechToTextV1
-/*
-[
-    SpeechToTextV1.SpeechRecognitionResult(final: true, alternatives: [
-        SpeechToTextV1.SpeechRecognitionAlternative(transcript: "we\'ll see who feels that basic needs that people have for security privacy and show ", confidence: Optional(0.755), timestamps: nil, wordConfidence: nil)
-    ], keywordResults: nil, wordAlternatives: nil),
-    
-    SpeechToTextV1.SpeechRecognitionResult(final: true, alternatives: [
-        SpeechToTextV1.SpeechRecognitionAlternative(transcript: "well while the ", confidence: Optional(0.623), timestamps: nil, wordConfidence: nil)
-    ], keywordResults: nil, wordAlternatives: nil),
-    
-    SpeechToTextV1.SpeechRecognitionResult(final: true, alternatives: [
-        SpeechToTextV1.SpeechRecognitionAlternative(transcript: "and the crazy elf close in his writing portent ", confidence: Optional(0.33800000000000002), timestamps: nil, wordConfidence: nil)
-    ], keywordResults: nil, wordAlternatives: nil),
-    
-    SpeechToTextV1.SpeechRecognitionResult(final: true, alternatives: [
-        SpeechToTextV1.SpeechRecognitionAlternative(transcript: "hundreds of individual well being ", confidence: Optional(0.68300000000000005), timestamps: nil, wordConfidence: nil)
-    ], keywordResults: nil, wordAlternatives: nil),
-    
-    SpeechToTextV1.SpeechRecognitionResult(final: true, alternatives: [
-        SpeechToTextV1.SpeechRecognitionAlternative(transcript: "closing also ", confidence: Optional(0.58599999999999997), timestamps: nil, wordConfidence: nil)
-    ], keywordResults: nil, wordAlternatives: nil)
-]
-
-"we'll see who feels that basic needs that people have for security privacy and show  well while the  and the crazy elf close in his writing portent  hundreds of individual well being  closing also "
-*/
+import EZAudio
 
 func adjust(x: Double) -> Double {
     if x < 0 { return 0 }
@@ -46,7 +22,7 @@ class SpeechRecognitionController: UIViewController {
     @IBOutlet weak var recognizedTextView: UITextView!
     @IBOutlet weak var recognizeButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
-
+    
     let speechToText = SpeechToText(username: "619904ee-6747-4e6b-9976-bdc002d9d433", password: "C3mWO3hzjFmX")
     var text: String = ""
     
@@ -126,9 +102,9 @@ class SpeechRecognitionController: UIViewController {
                 attrString.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 0, green: 0, blue: 0, alpha: alpha), range: range)
             }
         }
-        self.recognizedTextView.attributedText = attrString
+        attrString.addAttributes([ NSFontAttributeName: UIFont.systemFont(ofSize: 16) ], range: NSMakeRange(0, attrString.length))
         
-        //self.recognizedTextView.text = transcript
+        self.recognizedTextView.attributedText = attrString
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -136,7 +112,6 @@ class SpeechRecognitionController: UIViewController {
         formatter.roundingMode = .up
 
         let score = formatter.string(from: (adjust(x: confidence * accuracy) * (100.0 as Double)) as NSNumber)
-        print("confidence \(confidence) accuracy \(accuracy)")
         self.scoreLabel.text = "得分: \(score!)/100"
     }
 
@@ -147,7 +122,6 @@ class SpeechRecognitionController: UIViewController {
         settings.inactivityTimeout = -1
         settings.continuous = true
         settings.interimResults = true
-        
         
         speechToText.recognizeMicrophone(settings: settings, failure: { print($0) }) { results in
             self.lastResult = results
@@ -207,9 +181,11 @@ class SpeechRecognitionController: UIViewController {
         if self.isRecognizing {
             self.stopRecognizing()
         }
+        
         self.text = SpeechRecognitionTestData[Int(arc4random_uniform(UInt32(SpeechRecognitionTestData.count)))]
         self.originalTextView.text = "📃: " + text
         self.recognizedTextView.text = "👂: "
+        //waveView!.setupPlot()
     }
     
     override func viewDidLoad() {

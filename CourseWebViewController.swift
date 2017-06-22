@@ -39,7 +39,7 @@ class CourseWebViewController: UIViewController,UIWebViewDelegate {
         //        let request = NSMutableURLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
         webView.loadRequest(request as URLRequest)
         webView.delegate = self
-        print("Loading")
+        //print("Loading")
     }
     
     

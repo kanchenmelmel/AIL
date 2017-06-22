@@ -47,7 +47,7 @@ class SubjectResourcesTableViewController: UITableViewController, NVActivityIndi
         client.requestLatestPostsByCategories(159) { (posts) in
             
             self.resourcesPosts = posts
-            print(posts.count)
+            //print(posts.count)
             self.tableView.reloadData()
             self.setUpTableViewImageCoordinator()
             self.stopAnimating()
@@ -91,12 +91,12 @@ class SubjectResourcesTableViewController: UITableViewController, NVActivityIndi
         
         
         // Images
-        print(resourcesPosts[indexPath.row].featuredImageUrl as Any)
+        //print(resourcesPosts[indexPath.row].featuredImageUrl as Any)
         if resourcesPosts[indexPath.row].featuredImageUrl != nil {
             
             let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
             cell.cellImageView.image = imageRecord.image
-            print(imageRecord.image as Any)
+            //print(imageRecord.image as Any)
             
             switch (imageRecord.state) {
             case .new, .downloaded:
@@ -106,8 +106,8 @@ class SubjectResourcesTableViewController: UITableViewController, NVActivityIndi
                         self.tableView.reloadRows(at: [indexPath], with: .fade)
                     })
                 }
-            default:
-                print("Do Nothing for loading cell image \(indexPath.row)")
+            default: break
+                //print("Do Nothing for loading cell image \(indexPath.row)")
             }
             
             

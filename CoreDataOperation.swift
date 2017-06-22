@@ -27,13 +27,13 @@ class CoreDataOperation {
         do {
             count = try managedObjectContext.count(for: request)
         } catch {
-            print("There is error when fetch data count from core data")
+            //print("There is error when fetch data count from core data")
         }
         
         if count != 0 {
             return true
         }
-        print(false)
+        //print(false)
         return false
         
     }
@@ -80,7 +80,7 @@ class CoreDataOperation {
         do{
             try managedObjectContext.save()
         } catch {
-            print("Errors when save Core Data managedObjectContext!!")
+            //print("Errors when save Core Data managedObjectContext!!")
         }
     }
     
@@ -98,7 +98,7 @@ class CoreDataOperation {
             
             
         } catch {
-            print("fetch request errors!")
+            //print("fetch request errors!")
         }
         
         return nil
@@ -119,7 +119,7 @@ class CoreDataOperation {
             
             
         } catch {
-            print("fetch request errors!")
+            //print("fetch request errors!")
         }
         
         return nil
@@ -139,7 +139,7 @@ class CoreDataOperation {
             
             
         } catch {
-            print("fetch request errors!")
+            //print("fetch request errors!")
         }
         return nil
     }
@@ -183,7 +183,7 @@ class CoreDataOperation {
             let result = try managedObjectContext.fetch(request)
             count = result.count
         } catch {
-            print("There is error when fetch data count from core data")
+            //print("There is error when fetch data count from core data")
         }
         
         if count != 0 {

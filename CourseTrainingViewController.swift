@@ -109,7 +109,7 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate, NVActiv
     /// - parameter gesture:swipeGestureLeft
     func handleGestureLeft(_ gesture:UIGestureRecognizer) {
         if segmentedControl.selectedIndex < 2 {
-            print("swipe left")
+            //print("swipe left")
             segmentedControl.selectedIndex += 1
             segmentedControl.displayNewSelectedIndex()
             segmentedControl.sendActions(for: .valueChanged)
@@ -122,7 +122,7 @@ class CourseTrainingViewController: UIViewController, UIWebViewDelegate, NVActiv
     /// - parameter gesture: swipeGestureRight
     func handleGestureRight(_ gesture:UIGestureRecognizer) {
         if segmentedControl.selectedIndex > 0 {
-            print("swipe right")
+            //print("swipe right")
             segmentedControl.selectedIndex -= 1
             segmentedControl.displayNewSelectedIndex()
             segmentedControl.sendActions(for: .valueChanged)

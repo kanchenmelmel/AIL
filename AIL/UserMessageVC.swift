@@ -42,7 +42,7 @@ class UserMessageVC: UITableViewController, NVActivityIndicatorViewable {
         startAnimating()
         client.requestAllMessages { (messages) in
             
-            print ("abc: \(messages.count)")
+            //print ("abc: \(messages.count)")
             self.userMessages = CoreDataOperation.fetchAllMessagesFromCoreData()!
           
             self.tableView.reloadData()
@@ -177,7 +177,7 @@ class UserMessageVC: UITableViewController, NVActivityIndicatorViewable {
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
         }
-        print ("updateMessages")
+        //print ("updateMessages")
         
     }
     

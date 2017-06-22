@@ -35,7 +35,7 @@ class BeiKaoGongLueTableViewController: UITableViewController, NVActivityIndicat
         
         client.requestLatestPostsByCategories(166, completionHandler: { (posts) in
             self.posts = posts
-            print(posts.count)
+            //print(posts.count)
             self.tableView.reloadData()
             self.stopAnimating()
             self.setUpTableViewImageCoordinator()
@@ -87,7 +87,7 @@ class BeiKaoGongLueTableViewController: UITableViewController, NVActivityIndicat
         
         
         // Images
-        print(posts[indexPath.row].featuredImageUrl as Any)
+        //print(posts[indexPath.row].featuredImageUrl as Any)
         if posts[indexPath.row].featuredImageUrl != nil {
             
             let imageRecord = self.tableViewImageLoadingCoordinator.imageRecords[indexPath.row]
@@ -100,8 +100,8 @@ class BeiKaoGongLueTableViewController: UITableViewController, NVActivityIndicat
                 self.tableViewImageLoadingCoordinator.startOperationsForImageRecord(imageRecord, indexPath: indexPath, completionhandler: {
                     self.tableView.reloadRows(at: [indexPath], with: .fade)
                 })
-            default:
-                print("Do Nothing for loading cell image \(indexPath.row)")
+            default: break
+                //print("Do Nothing for loading cell image \(indexPath.row)")
             }
             
             

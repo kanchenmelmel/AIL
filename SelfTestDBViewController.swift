@@ -48,8 +48,8 @@ class SelfTestDBViewController: UIViewController {
         // Do any additional setup after loading the view.
         randomTestButton.layer.cornerRadius = 5.0
         setUpButtons()
-        for item in buttonItems! {
-            print(item.0)
+        for _ in buttonItems! {
+            //print(item.0)
         }
     }
 

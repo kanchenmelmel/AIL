@@ -133,7 +133,7 @@ class SelfTestDBWebViewController: UIViewController,UIWebViewDelegate, NVActivit
         client.requestTestPostsByCategories(categoryId) { (posts) in
             
             self.resourcesPosts = posts.shuffle()
-            print(posts.count)
+            //print(posts.count)
             
             self.post = self.resourcesPosts[0]
             

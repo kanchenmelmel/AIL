@@ -45,7 +45,7 @@ class HomeViewBottomButton: UIButton {
     }
     
     override init(frame:CGRect) {
-        print("ttttt")
+        //print("ttttt")
         super.init(frame: frame)
         self.setUpButton()
     }

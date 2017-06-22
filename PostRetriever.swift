@@ -37,7 +37,7 @@ class PostRetriever{
                 return posts
 
         }catch {
-            print ("Error: Could not fetch featured Posts")
+            //print ("Error: Could not fetch featured Posts")
         }
         
         return posts

@@ -43,7 +43,7 @@ class WordPressClient {
     func requestLatestPostsByCategories(_ categoryId:Int, completionHandler: @escaping ([Post]) -> Void) {
         //159
         let urlArguments = "?filter[posts_per_page]=-1&categories=\(categoryId)&\(EXCLUDED_CAT_ARGUMENTS)"
-        print(BASE_URL+RESOURSES+urlArguments)
+        //print(BASE_URL+RESOURSES+urlArguments)
         Alamofire.request(BASE_URL+RESOURSES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
             case .success:
@@ -67,7 +67,7 @@ class WordPressClient {
     func requestTestPostsByCategories(_ categoryId:Int, completionHandler: @escaping ([Post]) -> Void) {
         //159
         let urlArguments = "?filter[posts_per_page]=-1&categories=\(categoryId)"
-        print(BASE_URL+RESOURSES+urlArguments)
+        //print(BASE_URL+RESOURSES+urlArguments)
         Alamofire.request(BASE_URL+RESOURSES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
             case .success:
@@ -90,7 +90,7 @@ class WordPressClient {
     
     func requestAllPosts(_ completionHandler: @escaping ([Post]) -> Void) {
         let urlArguments = "?filter[posts_per_page]=-1&\(EXCLUDED_CAT_ARGUMENTS)"
-        print(BASE_URL+RESOURSES+urlArguments)
+        //print(BASE_URL+RESOURSES+urlArguments)
         Alamofire.request(BASE_URL+RESOURSES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
             case .success:
@@ -119,7 +119,7 @@ class WordPressClient {
         
         //let url = NSURL(string: "\(baseURIString)?before=\(beforeDateString)&exclude=\(excludeId)")
         let urlArguments = "?before=\(beforeDateString)&exclude=\(excludeID)"
-        print("num: \(BASE_URL+RESOURSES+urlArguments)")
+        //print("num: \(BASE_URL+RESOURSES+urlArguments)")
         Alamofire.request(BASE_URL+RESOURSES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
             case .success:
@@ -174,7 +174,7 @@ class WordPressClient {
         
         //let url = NSURL(string: "\(baseURIString)?before=\(beforeDateString)&exclude=\(excludeId)")
         let urlArguments = "?before=\(beforeDateString)&exclude=\(excludeID)"
-        print("num: \(MESSAGES_URL+MESSAGES_RESOURCES+urlArguments)")
+        //print("num: \(MESSAGES_URL+MESSAGES_RESOURCES+urlArguments)")
         Alamofire.request(MESSAGES_URL+MESSAGES_RESOURCES+urlArguments).validate().responseJSON { (response) in
             switch response.result {
             case .success:

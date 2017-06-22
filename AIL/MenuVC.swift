@@ -9,6 +9,9 @@
 import UIKit
 import SlideMenuControllerSwift
 import Alamofire
+import OAuthSwift
+
+
 
 enum LeftMenuOption {
     case userInfo
@@ -23,6 +26,7 @@ enum LeftMenuOption {
 protocol LeftMenuProtocol : class {
     func changeViewController(_ menu: LeftMenuOption)
 }
+
 
 class LeftMenuVC: UIViewController {
     
@@ -41,17 +45,6 @@ class LeftMenuVC: UIViewController {
     
     
     
-//    override func awakeFromNib() {
-////        if let controller = self.storyboard?.instantiateViewControllerWithIdentifier("main") {
-////            self.mainViewController = controller
-////        }
-////        if let controller = self.storyboard?.instantiateViewControllerWithIdentifier("left") {
-////            self.mainViewController = controller
-////        }
-//        
-//        super.awakeFromNib()
-//    }
-    
     
     
     override func viewDidLoad() {
@@ -60,7 +53,7 @@ class LeftMenuVC: UIViewController {
         // Do any additional setup after loading the view.
         
         self.setUpAccessableVCs()
-        self.updateCredit()
+        //self.updateCredit()
     }
     
 
@@ -122,6 +115,13 @@ class LeftMenuVC: UIViewController {
         }
     }
     @IBAction func userInfoButtonClick(_ sender: AnyObject) {
+        /*WPClient.authorize() { done in
+            print(done ? "Auth Succeeded" : "Auth Failed")
+            WPClient.users() { data in
+                print(data)
+            }
+        }*/
+        
         if self.credLoggedIn {
             let alert = UIAlertController(title: self.userLogin, message: "积分: \(self.credit)", preferredStyle: .alert)
             
@@ -136,9 +136,8 @@ class LeftMenuVC: UIViewController {
         } else {
             let alert = UIAlertController(title: "AIL登录", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "确认", style: .default) { _ in
-                if let user = alert.textFields![0].text, let pass = alert.textFields![1].text {
-                    UserDefaults.standard.set(user, forKey: "wp-username")
-                    UserDefaults.standard.set(pass, forKey: "wp-password")
+                if let user = alert.textFields![0].text {
+                    UserDefaults.standard.set(user, forKey: "myCredUserIdentifier")
                     UserDefaults.standard.synchronize()
                     self.updateCredit()
                 }
@@ -146,11 +145,10 @@ class LeftMenuVC: UIViewController {
             alert.addTextField() { textField in
                 textField.placeholder = "用户名"
             }
-            alert.addTextField() { textField in
-                textField.placeholder = "密码"
-            }
             self.present(alert, animated:true, completion:nil)
         }
+        
+        
     }
     
 

@@ -62,7 +62,7 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
                 preferredStyle: UIAlertControllerStyle.alert
             )
             alert.addAction(UIAlertAction(title: "确认", style: UIAlertActionStyle.default) { _ in
-                print("done")
+                //print("done")
                 })
             loadingAlert.dismiss(animated: true, completion: nil)
             self.present(alert, animated: true, completion: nil)
@@ -73,7 +73,7 @@ class AboutAILViewController: UITableViewController,UITextViewDelegate,UITextFie
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
-        print("test")
+        //print("test")
         if text == "\n" {
             self.messageTextView.resignFirstResponder()
             return false
