@@ -2,29 +2,23 @@ PODS:
   - Alamofire (4.4.0)
   - AlamofireNetworkActivityIndicator (2.1.0):
     - Alamofire (~> 4.1)
+  - AudioKit (3.6)
   - EAIntroView (2.10.0):
     - EARestrictedScrollView (~> 1.1.0)
   - EARestrictedScrollView (1.1.0)
-  - EZAudio (1.1.5):
-    - EZAudio/Full (= 1.1.5)
-  - EZAudio/Core (1.1.5)
-  - EZAudio/Full (1.1.5):
-    - EZAudio/Core
-    - TPCircularBuffer (= 1.1)
   - M13PDFKit (1.1.0):
     - TTOpenInAppActivity
   - NVActivityIndicatorView (3.6.0)
   - OAuthSwift (1.1.1)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftyJSON (3.1.4)
-  - TPCircularBuffer (1.1)
   - TTOpenInAppActivity (1.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireNetworkActivityIndicator
+  - AudioKit (~> 3.5)
   - EAIntroView
-  - EZAudio (~> 1.1.4)
   - M13PDFKit
   - NVActivityIndicatorView
   - OAuthSwift (~> 1.1.0)
@@ -34,17 +28,16 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
+  AudioKit: 7823de92f3c9570178d2347042867b6a93be1464
   EAIntroView: 3494b7bbd1212e3a4f7e8d16194a1b00e7b9abb2
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
-  EZAudio: 3b1cb4b6d7ebca68f0c2478576d75940aad4aa99
   M13PDFKit: 4417c8a98dd22c0fe1e615f40bdf38848bb3b367
   NVActivityIndicatorView: c7c1c4300b418bd9ed06459e78d4df859ddbe31f
   OAuthSwift: 6e3a103b3e5639411769cc7e199ec7e14bd1547f
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  TPCircularBuffer: 4960a919e667280f7f38963d771f45871b64fe62
   TTOpenInAppActivity: c2218fe419d03ddd4ffb1f07d52d66e0d213d0d4
 
-PODFILE CHECKSUM: f1546bac7d5cbf969f7a9ed8a0a72b1188d2035c
+PODFILE CHECKSUM: 1ad88ef165b32ff26315cfc25ba660ceaba4bca3
 
 COCOAPODS: 1.1.1

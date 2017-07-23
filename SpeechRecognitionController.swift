@@ -8,7 +8,7 @@
 
 import UIKit
 import SpeechToTextV1
-import EZAudio
+//import EZAudio
 
 func adjust(x: Double) -> Double {
     if x < 0 { return 0 }

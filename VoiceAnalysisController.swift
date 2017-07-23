@@ -7,45 +7,69 @@
 //
 
 import UIKit
-import EZAudio
+//import EZAudio
+import AudioKit
 
 
-class VoiceAnalysisController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDelegate {
+class VoiceAnalysisController: UIViewController/*, EZMicrophoneDelegate, EZAudioFFTDelegate*/ {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var frequencyWaveView: FrequencyWaveView!
     @IBOutlet weak var audioPlot: EZAudioPlot!
     @IBOutlet weak var recognitionButton: UIButton!
-    var fft: EZAudioFFTRolling!
-    var microphone: EZMicrophone!
+    
+    var plot: AKNodeOutputPlot!
+    var microphone: AKMicrophone!
+    var tracker: AKFrequencyTracker!
+    var silence: AKBooster!
+    var timer: Timer!
     
     func changeText() {
+        AudioKit.stop()
+        if (timer != nil) {
+            timer.invalidate()
+            timer = nil
+        }
         self.textView.text = SpeechRecognitionTestData[Int(arc4random_uniform(UInt32(SpeechRecognitionTestData.count)))]
-        self.audioPlot.clear()
+        if self.plot != nil {
+            self.plot.clear()
+        }
+        self.frequencyWaveView.clear()
     }
     
+    func setupPlot() {
+    
+        self.plot = AKNodeOutputPlot(microphone, frame: audioPlot.bounds)
+        plot.plotType = .rolling
+        plot.shouldFill = true
+        plot.shouldMirror = true
+        plot.color = UIColor.tintColor()
+        plot.gain = 5
+        audioPlot.addSubview(plot)
+    }
+    
+    //var ampTracker: AKAmplitudeTracker!
     override func viewDidLoad() {
-        self.microphone = EZMicrophone(delegate: self)
-        self.fft = EZAudioFFTRolling.fft(withWindowSize: 4096, sampleRate: Float(self.microphone.audioStreamBasicDescription().mSampleRate), delegate: self)
+        super.viewDidLoad()
+        
+        AKSettings.audioInputEnabled = true
+        self.microphone = AKMicrophone()
+        tracker = AKFrequencyTracker(microphone)
+        //ampTracker = AKAmplitudeTracker(microphone)
+        silence = AKBooster(tracker)
+        
         
         self.navigationItem.title = "AIL读音分析"
         self.navigationItem.rightBarButtonItems = [
             UIBarButtonItem(title: "换题", style: .plain, target: self, action: #selector(VoiceAnalysisController.changeText))
         ]
         self.changeText()
-        
-        let session = AVAudioSession.sharedInstance()
-        do {
-            try session.setCategory("AVAudioSessionCategoryPlayAndRecord")
-            try session.setActive(true)
-        } catch let e {
-            print("AVAudioSession error: \(e.localizedDescription)")
-        }
-        self.audioPlot.clipsToBounds = true
-        self.audioPlot.backgroundColor = UIColor.white
-        self.audioPlot.color = UIColor.tintColor()
-        self.recognitionButton.setTitleColor(UIColor.tintColor(), for: .normal)
-        self.audioPlot.plotType = EZPlotType.rolling;
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AudioKit.output = silence
+        setupPlot()
     }
     
     override func viewDidLayoutSubviews() {
@@ -54,36 +78,39 @@ class VoiceAnalysisController: UIViewController, EZMicrophoneDelegate, EZAudioFF
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        //self.stopRecognizing()
+        super.viewWillDisappear(animated)
+        stop()
     }
     
-    func microphone(_ microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>?>!, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
-        self.fft.computeFFT(withBuffer: buffer[0], withBufferSize: bufferSize)
-        DispatchQueue.main.async {
-            self.audioPlot.updateBuffer(buffer[0], withBufferSize: bufferSize)
-        }
-    }
-    
-    func fft(_ fft: EZAudioFFT!, updatedWithFFTData fftData: UnsafeMutablePointer<Float>!, bufferSize: vDSP_Length) {
-        let frequency = self.fft.maxFrequency // Assume 0 ~ 1000
-        DispatchQueue.main.async {
-            self.frequencyWaveView.update(frequency);
-        }
+    func updateFrequency() {
+        let frequency = tracker.frequency > 1100 || tracker.frequency < 85 ? -1 : tracker.frequency
+        let decibel = 20 * log10(tracker.amplitude / 0.000020)
+        print("frequency: \(frequency), decibel: \(decibel)")
         
+        DispatchQueue.main.async {
+            self.frequencyWaveView.update(Float(frequency));
+        }
+    }
+    
+    func start() {
+        recognitionButton.setTitle("开始朗读", for: .normal)
+        AudioKit.start()
+        timer = Timer.scheduledTimer(timeInterval: 0.035, target: self, selector: #selector(VoiceAnalysisController.updateFrequency), userInfo: nil, repeats: true)
+    }
+    
+    func stop() {
+        recognitionButton.setTitle("结束朗读", for: .normal)
+        AudioKit.stop()
+        if (timer != nil) {
+            timer.invalidate()
+            timer = nil
+        }
     }
     
     var started = false
     @IBAction func onRecognitionButtonClicked(_ sender: Any) {
-        if (started) {
-            self.microphone.stopFetchingAudio()
-            recognitionButton.setTitle("开始朗读", for: .normal)
-        } else {
-            self.microphone.startFetchingAudio()
-            recognitionButton.setTitle("结束朗读", for: .normal)
-        }
+        started ? stop() : start()
         started = !started
-        
     }
-    
 }
 

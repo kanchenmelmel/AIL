@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>EZAudio.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>M13PDFKit-M13PDFKitResources.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -64,11 +59,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TPCircularBuffer.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>TTOpenInAppActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,12 +67,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0FD8B88CBA741A6DDE7DF87851C7BAED</key>
+		<key>115FA0D867E07C04838493890DBD8D29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>115FA0D867E07C04838493890DBD8D29</key>
+		<key>16B2429B1905847B5E7C854D66FBC451</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2FA6B629BBBB137A308DCF47D754CF79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,17 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68E504159A95438F18EAACAB7BBD121C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>822DA31A6A34C7EF41E1EC7A5EF8FC2F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>854C3E8288E94E3248E77615DB93701A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,17 +112,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB1E0C83FCAFB50E522BCBE50A5F6EB1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B42A1C563331D6A5A52594827651E956</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>BA99DDAC73B1ED8E4B1629164038D9C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAD6852574E06FDD8CBC34B0934A92A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

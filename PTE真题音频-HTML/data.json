@@ -1,0 +1,16 @@
+{
+    "ReadAloud": {
+        "Sample 1": {
+            "url": "audios/ReadAloud/Harvind/Sample 1.mp3",
+            "transcript": "Domestication is an evolutionary, rather than a political, development. They were more likely to survive and prosper in an alliance with humans than on their own. Humans provided the animals with food and protection, in exchange for which the animals provided the humans their milk and eggs and their flesh.",
+            "views": 2137,
+            "duration": 10
+        },
+        "Sample 2": {
+            "url": "audios/ReadAloud/Harvind/Sample 2.mp3",
+            "transcript": "Akimbo, this must be one of the odder-looking words in the language and puzzles us in part because it doesn’t seem to have any relatives. What's more, it is now virtually a fossil word, until recently almost invariably found in arms akimbo, a posture in which a person stands with hands on hips and elbows sharply bent outward, one that signals impatience, hostility or contempt.",
+            "views": 948,
+            "duration": 20
+        }
+    }
+}

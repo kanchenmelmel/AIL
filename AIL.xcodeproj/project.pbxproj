@@ -25,6 +25,9 @@
 		3DA95BA31E5BE29300084DA4 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95BA01E5BE28800084DA4 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3DA95BA51E5BE29500084DA4 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */; };
 		3DA95BA61E5BE29500084DA4 /* SpeechToTextV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DABDC791F13C5E700D4CE9E /* PTETestAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DABDC781F13C5E700D4CE9E /* PTETestAudio.storyboard */; };
+		3DABDC7B1F13DDF500D4CE9E /* PTETestAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABDC7A1F13DDF500D4CE9E /* PTETestAudioController.swift */; };
+		3DABDC7D1F147C9C00D4CE9E /* PTETestAudioWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABDC7C1F147C9C00D4CE9E /* PTETestAudioWebViewController.swift */; };
 		3DDBA89F1E53D31C00743BB3 /* JiJingPDF in Resources */ = {isa = PBXBuildFile; fileRef = 3DDBA89E1E53D31C00743BB3 /* JiJingPDF */; };
 		3DE209341D8FA03C001BCEA4 /* EmailEjecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */; };
 		3DE674D11E4D703700F41EDF /* CacheableURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE674D01E4D703700F41EDF /* CacheableURLProtocol.swift */; };
@@ -143,7 +146,9 @@
 		3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
 		3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 		3DA95BA01E5BE28800084DA4 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
-		3DC5326B1EC06A17002A81AC /* EZAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZAudio.framework; path = "../../../Library/Developer/Xcode/DerivedData/AIL-gxgpccpakjqlebbcqicahiytvrar/Build/Products/Release-iphonesimulator/EZAudio/EZAudio.framework"; sourceTree = "<group>"; };
+		3DABDC781F13C5E700D4CE9E /* PTETestAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PTETestAudio.storyboard; sourceTree = "<group>"; };
+		3DABDC7A1F13DDF500D4CE9E /* PTETestAudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTETestAudioController.swift; sourceTree = "<group>"; };
+		3DABDC7C1F147C9C00D4CE9E /* PTETestAudioWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTETestAudioWebViewController.swift; sourceTree = "<group>"; };
 		3DDBA89E1E53D31C00743BB3 /* JiJingPDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JiJingPDF; sourceTree = "<group>"; };
 		3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailEjecter.swift; path = AIL/EmailEjecter.swift; sourceTree = "<group>"; };
 		3DE674CF1E4D6FD000F41EDF /* AIL 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AIL 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -257,6 +262,15 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
+		3DABDC7E1F14991900D4CE9E /* PTETestAudio */ = {
+			isa = PBXGroup;
+			children = (
+				3DABDC7A1F13DDF500D4CE9E /* PTETestAudioController.swift */,
+				3DABDC7C1F147C9C00D4CE9E /* PTETestAudioWebViewController.swift */,
+			);
+			name = PTETestAudio;
+			sourceTree = "<group>";
+		};
 		4DAEAFA71D7A486700842C4F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +289,7 @@
 				4DAEAFAC1D7AB7B000842C4F /* MenuVC.swift */,
 				9679786E1DA6727C0095EB91 /* TestWebViewController.swift */,
 				967978701DA682BE0095EB91 /* BookProcessViewController.swift */,
+				3DABDC7E1F14991900D4CE9E /* PTETestAudio */,
 				960E65891DAC67BD00DEE9BF /* PTELiveForumWebViewController.swift */,
 				3D60E77A1E989D0E00D958F0 /* PTEExchangeWebViewController.swift */,
 				960E658B1DAC6B1B00DEE9BF /* RewardAccountWebViewController.swift */,
@@ -371,7 +386,6 @@
 		69EFDD5AB6EBC4F4E4D8ED54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DC5326B1EC06A17002A81AC /* EZAudio.framework */,
 				3DA95BA01E5BE28800084DA4 /* RestKit.framework */,
 				3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */,
 				AE2662452685324A770F0164 /* Pods_AIL.framework */,
@@ -458,6 +472,7 @@
 				96A173991DA0D29E0002F360 /* Archive.storyboard */,
 				960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */,
 				961E89921DADFE400084B5DF /* SelfTestDB.storyboard */,
+				3DABDC781F13C5E700D4CE9E /* PTETestAudio.storyboard */,
 			);
 			path = AIL;
 			sourceTree = "<group>";
@@ -690,6 +705,7 @@
 				9672A1571D9BA14300A64A01 /* Main.storyboard in Resources */,
 				963061D21D77E1280079B7C5 /* LaunchScreen.storyboard in Resources */,
 				9683A6761D88DFAB00360D98 /* SubjectResources.storyboard in Resources */,
+				3DABDC791F13C5E700D4CE9E /* PTETestAudio.storyboard in Resources */,
 				96A173981DA0D1F30002F360 /* AboutAIL.storyboard in Resources */,
 				961E89931DADFE400084B5DF /* SelfTestDB.storyboard in Resources */,
 				4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */,
@@ -849,6 +865,7 @@
 				96E8C7761D9A311000843C89 /* CustomizedSegmentedControl.swift in Sources */,
 				4D333F8E1DA3B87600D557C2 /* MessageVC.swift in Sources */,
 				9635749A1D90EF3300B8D1A5 /* TableViewImageLoadingCoordinator.swift in Sources */,
+				3DABDC7D1F147C9C00D4CE9E /* PTETestAudioWebViewController.swift in Sources */,
 				9656DF201DA372B500DAFC7C /* UIColorExtension.swift in Sources */,
 				961E89911DADE2520084B5DF /* JiJingDBViewController.swift in Sources */,
 				3D2175FA1D8923D1002F0EEF /* HomeMainButton.swift in Sources */,
@@ -892,6 +909,7 @@
 				4DCA80721DB1C5F2000B8841 /* IntroPageVC.swift in Sources */,
 				4DDD17F41D97BDEF00294ACC /* AllPostsVC.swift in Sources */,
 				965693431D939BA800FAC04B /* ResourceWebViewController.swift in Sources */,
+				3DABDC7B1F13DDF500D4CE9E /* PTETestAudioController.swift in Sources */,
 				961E89961DAE0F880084B5DF /* SelfTestDBViewController.swift in Sources */,
 				96EB3F651DAF560900A96460 /* SelfTestDBHomeButton.swift in Sources */,
 				9671E5DD1D7E4FCF008250C7 /* WordPressClient.swift in Sources */,

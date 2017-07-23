@@ -14,5 +14,6 @@ target 'AIL' do
   pod 'NVActivityIndicatorView'
   pod 'OAuthSwift', '~> 1.1.0'
   pod 'M13PDFKit'
-  pod 'EZAudio', '~> 1.1.4'
+  #pod 'EZAudio', '~> 1.1.4'
+  pod 'AudioKit', '~> 3.5'
 end

@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-
+/*
 func sigmoid(_ x: Float) -> Float {
     return 1 / (1 + exp(-x))
 }
-
+*/
 class FrequencyWaveView : UIView {
     var data: [Float] = []
     var maxValue = CGFloat(1000)
@@ -28,17 +28,23 @@ class FrequencyWaveView : UIView {
             for i in 1..<data.count {
                 let h1 = rect.height * CGFloat(data[i - 1])
                 let h2 = rect.height * CGFloat(data[i])
-                context.move(to: CGPoint(x: CGFloat(i - 1), y: rect.height - h1))
-                context.addLine(to: CGPoint(x: CGFloat(i), y: rect.height - h2))
+                if data[i - 1] > 0 && data[i] > 0 {
+                    context.move(to: CGPoint(x: CGFloat(i - 1), y: rect.height - h1))
+                    context.addLine(to: CGPoint(x: CGFloat(i), y: rect.height - h2))
+                }
             }
         }
         context.strokePath();
     }
     public func update(_ x: Float) {
-        data.append(x / 1000)
+        data.append(x / 1100)
         if data.count > Int(self.bounds.width) {
             data.remove(at: 0)
         }
+        self.setNeedsDisplay()
+    }
+    public func clear() {
+        data = []
         self.setNeedsDisplay()
     }
 }
