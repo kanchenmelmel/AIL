@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bzd-6C-ZAz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bzd-6C-ZAz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NFc-CJ-0fE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NFc-CJ-0fE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kMh-CM-laD">
                                 <rect key="frame" x="11" y="169" width="353" height="459"/>
@@ -123,48 +123,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-JJ-snz">
                                         <rect key="frame" x="0.0" y="156.5" width="353" height="146"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJf-dS-opx">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="146"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="lBO-5s-x2o">
-                                                        <rect key="frame" x="0.0" y="28" width="172" height="89"/>
-                                                        <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="总结归纳段落" translatesAutoresizingMaskIntoConstraints="NO" id="lXQ-4z-SDg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="47"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Describe Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1v-uv-ycF">
-                                                                <rect key="frame" x="0.0" y="71" width="172" height="18"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="18" id="TgZ-cm-KwQ"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="lBO-5s-x2o" secondAttribute="height" multiplier="2.5:1.3" id="gyk-ae-g5O"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="lBO-5s-x2o" secondAttribute="trailing" id="HR4-jB-5ns"/>
-                                                    <constraint firstItem="lBO-5s-x2o" firstAttribute="centerY" secondItem="sJf-dS-opx" secondAttribute="centerY" id="YdR-eQ-BGz"/>
-                                                    <constraint firstItem="lBO-5s-x2o" firstAttribute="leading" secondItem="sJf-dS-opx" secondAttribute="leading" id="utO-7g-yMl"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="DKN-jV-04W" appends="YES" id="ewi-bX-zvA"/>
-                                                </connections>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mN6-21-lEp">
-                                                <rect key="frame" x="181" y="0.0" width="172" height="146"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="145.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="tCU-ME-aYa">
                                                         <rect key="frame" x="0.0" y="29" width="172" height="89"/>
@@ -203,14 +163,21 @@
                                                     <outletCollection property="gestureRecognizers" destination="1Ya-gZ-S47" appends="YES" id="Td3-yk-i1i"/>
                                                 </connections>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJf-dS-opx">
+                                                <rect key="frame" x="181" y="0.0" width="172" height="146"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="sJf-dS-opx" firstAttribute="top" secondItem="Yaf-JJ-snz" secondAttribute="top" id="BnP-e6-M2C"/>
-                                            <constraint firstItem="mN6-21-lEp" firstAttribute="top" secondItem="Yaf-JJ-snz" secondAttribute="top" id="QjM-P1-AOi"/>
                                             <constraint firstAttribute="bottom" secondItem="sJf-dS-opx" secondAttribute="bottom" id="T8s-PZ-Ej9"/>
                                             <constraint firstAttribute="bottom" secondItem="mN6-21-lEp" secondAttribute="bottom" id="eRi-EH-Hda"/>
-                                            <constraint firstAttribute="trailing" secondItem="mN6-21-lEp" secondAttribute="trailing" id="usr-Fx-Myb"/>
-                                            <constraint firstItem="sJf-dS-opx" firstAttribute="leading" secondItem="Yaf-JJ-snz" secondAttribute="leading" id="z0x-VC-ZbA"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-m1-Z9J">
@@ -443,7 +410,6 @@
         <image name="book" width="70" height="70"/>
         <image name="play" width="150" height="150"/>
         <image name="图片描述" width="47" height="46"/>
-        <image name="总结归纳段落" width="45" height="46"/>
         <image name="段落朗读" width="46" height="46"/>
         <image name="阅读排序" width="49" height="46"/>
     </resources>
