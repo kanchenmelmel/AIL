@@ -12,66 +12,75 @@ import SwiftyJSON
 import Alamofire
 
 class WPClient {
-    private static let oauth = OAuth1Swift(
-        consumerKey:    "mKlDVzmTLls9",
-        consumerSecret: "ly8suK3daYWLgKYzgYN0CO20RjW7RwbG9Jm4RwdpPoo7n6FI",
-        requestTokenUrl: "http://ail.vic.edu.au/oauth1/request",
-        authorizeUrl:    "http://ail.vic.edu.au/oauth1/authorize",
-        accessTokenUrl:  "http://ail.vic.edu.au/oauth1/access"
-    )
-    //private static var credential: OAuthSwiftCredential? = nil
-    //private static var parameters: OAuthSwift.Parameters? = nil
-    fileprivate static var client = oauth.client
-    static var params: OAuthSwift.Parameters = [:]
-    
-    func getURLHandler() -> OAuthSwiftURLHandlerType {
-        return OAuthSwiftOpenURLExternally.sharedInstance
+    private static var _auth: String?
+    private static var _user: [String: Any]?
+    static var me: [String: Any]? {
+        get {
+            return self._user;
+        }
     }
-    
-    static func authorize(completionHandler: @escaping (Bool) -> ()) {
-        /*if let tok = kvstore.string(forKey: "oauth_token"), let tok_sec = kvstore.string(forKey: "oauth_token_secret"), let params = kvstore.dictionary(forKey: "oauth_parameters") {
-            oauth.client.credential.oauthToken = tok
-            oauth.client.credential.oauthTokenSecret = tok_sec
-            WPClient.params = params
-            completionHandler(true)
-        } else {*/
-            oauth.authorize(
-                withCallbackURL: URL(string: "AIL://oauth-callback/ail")!,
-                success: { credential, response, parameters in
-                
-                    kvstore.set(parameters, forKey: "oauth_parameters")
-                    WPClient.params = parameters
-                    print(credential.authorizationHeader(method: .GET, url: URL(string: "http://ail.vic.edu.au/wp-json/wp/v2/users/me")!, parameters: params))
-                    
-                    oauth.client.get("http://ail.vic.edu.au/wp-json/wp/v2/users/me",
-                        success: { response in
-                            print(response.string!);
-                            //completionHandler(nil)
-                        }, failure: { error in
-                            print(error)
-                            //completionHandler(nil)
-                        }
-                    )
+    static var authorized: Bool {
+        get {
+            return self._auth != nil;
+        }
+    }
+    static func clear() {
+        self._auth = nil
+        self._user = nil
+    }
+    static func authorize(auth: String, completionHandler: @escaping (Bool) -> ()) {
+        let headers = [
+            "Authorization": "Basic \(auth)",
+            "Accept": "application/json"
+        ]
+        request("http://ail.vic.edu.au/wp-json/wp/v2/users/me", headers: headers).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                if let json = response.result.value as? [String: Any] {
+                    _auth = auth
+                    _user = json
                     completionHandler(true)
-                },
-                failure: { error in
-                    print(error.localizedDescription)
+                } else {
                     completionHandler(false)
-                    //print(error.localizedDescription)
                 }
-            )
-        //}
+            case .failure: completionHandler(false)
+            }
+        }
     }
-    static func users(completionHandler: @escaping (JSON?) -> ()) {
-        /*let a = oauth.client.get("http://ail.vic.edu.au/wp-json/wp/v2/users/me",
-            success: { response in
-                print(response.string!);
-                completionHandler(nil)
-            }, failure: { error in
-                print(error)
+    static func user(id: Int, completionHandler: @escaping ([String: Any]?) -> ()) {
+        let headers = [
+            "Authorization": "Basic YWlsOjFxMnczZTRyQEA=",
+            "Accept": "application/json"
+        ]
+        request("http://ail.vic.edu.au/wp-json/wp/v2/users/\(id)?context=edit", headers: headers).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                if let data = response.result.value as? [String: Any] {
+                    completionHandler(data)
+                } else {
+                    completionHandler(nil)
+                }
+            case .failure: completionHandler(nil)
+            }
+        }
+    }
+    static func credit(completionHandler: @escaping (Int?) -> ()) {
+        if self._auth != nil {
+            let userId = _user!["id"]!
+            print("Current user id: \(userId)")
+            Alamofire.request("http://ail.vic.edu.au/cred.php?field=ID&value=\(userId)").responseJSON { response in
+                print(response)
+                if let json = response.result.value as? [String: Any] {
+                    if json["ok"] as! Bool {
+                        completionHandler(json["credit"] as? Int)
+                        return
+                    }
+                }
                 completionHandler(nil)
             }
-        )*/
+        } else {
+            completionHandler(nil)
+        }
     }
 }
 

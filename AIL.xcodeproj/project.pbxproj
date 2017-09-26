@@ -17,6 +17,8 @@
 		3D54A1D51ED17885001A25FF /* VoiceAnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D54A1D41ED17885001A25FF /* VoiceAnalysisController.swift */; };
 		3D54A1D71ED19565001A25FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D54A1D61ED19565001A25FF /* Assets.xcassets */; };
 		3D60E77B1E989D0E00D958F0 /* PTEExchangeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60E77A1E989D0E00D958F0 /* PTEExchangeWebViewController.swift */; };
+		3D6863871F73777D0059ECF7 /* VideoCourses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6863861F73777D0059ECF7 /* VideoCourses.storyboard */; };
+		3D6863891F7378850059ECF7 /* VideoCoursesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6863881F7378850059ECF7 /* VideoCoursesController.swift */; };
 		3D76F5461E7D60FE0072006F /* UIView-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D76F5451E7D60FE0072006F /* UIView-Extensions.swift */; };
 		3D76F5491E7E2AA20072006F /* SpeechRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */; };
 		3D9417481ED9A3C600C2638E /* FrequencyWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9417471ED9A3C600C2638E /* FrequencyWaveView.swift */; };
@@ -140,6 +142,8 @@
 		3D54A1D41ED17885001A25FF /* VoiceAnalysisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceAnalysisController.swift; sourceTree = "<group>"; };
 		3D54A1D61ED19565001A25FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D60E77A1E989D0E00D958F0 /* PTEExchangeWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTEExchangeWebViewController.swift; sourceTree = "<group>"; };
+		3D6863861F73777D0059ECF7 /* VideoCourses.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoCourses.storyboard; sourceTree = "<group>"; };
+		3D6863881F7378850059ECF7 /* VideoCoursesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCoursesController.swift; sourceTree = "<group>"; };
 		3D76F5451E7D60FE0072006F /* UIView-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView-Extensions.swift"; path = "AIL/UIView-Extensions.swift"; sourceTree = "<group>"; };
 		3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpeechRecognition.storyboard; sourceTree = "<group>"; };
 		3D9417471ED9A3C600C2638E /* FrequencyWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyWaveView.swift; sourceTree = "<group>"; };
@@ -297,6 +301,7 @@
 				3DE674D61E4D7D3200F41EDF /* JiJingViewController.swift */,
 				3D28BF961E553781005A2046 /* SpeechRecognitionController.swift */,
 				3D54A1D41ED17885001A25FF /* VoiceAnalysisController.swift */,
+				3D6863881F7378850059ECF7 /* VideoCoursesController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				960E658E1DAC6D9F00DEE9BF /* RewardAccount.storyboard */,
 				961E89921DADFE400084B5DF /* SelfTestDB.storyboard */,
 				3DABDC781F13C5E700D4CE9E /* PTETestAudio.storyboard */,
+				3D6863861F73777D0059ECF7 /* VideoCourses.storyboard */,
 			);
 			path = AIL;
 			sourceTree = "<group>";
@@ -708,6 +714,7 @@
 				3DABDC791F13C5E700D4CE9E /* PTETestAudio.storyboard in Resources */,
 				96A173981DA0D1F30002F360 /* AboutAIL.storyboard in Resources */,
 				961E89931DADFE400084B5DF /* SelfTestDB.storyboard in Resources */,
+				3D6863871F73777D0059ECF7 /* VideoCourses.storyboard in Resources */,
 				4DDD17EA1D965E3600294ACC /* AllPosts.storyboard in Resources */,
 				960E65941DAC8E3800DEE9BF /* IntroPage1View.xib in Resources */,
 				960E65981DAC91DC00DEE9BF /* IntroPage3View.xib in Resources */,
@@ -859,6 +866,7 @@
 				966D81FF1DA208440069270A /* Archive+CoreDataClass.swift in Sources */,
 				96A691D61D98FF5500D29995 /* BeiKaoGongLueTableViewController.swift in Sources */,
 				9671E5E11D7E6EAC008250C7 /* JSONParser.swift in Sources */,
+				3D6863891F7378850059ECF7 /* VideoCoursesController.swift in Sources */,
 				966B56C91DC1AA8200E86C96 /* SelfTestDBWebViewController.swift in Sources */,
 				3DE209341D8FA03C001BCEA4 /* EmailEjecter.swift in Sources */,
 				4DDD17E81D90942A00294ACC /* FileDownloader.swift in Sources */,

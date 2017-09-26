@@ -24,6 +24,9 @@ class PTETestAudioController: UIViewController {
         case repeatSentence
         case describeImage
         case writeFromDictation
+        case retellLecture
+        case summariseSpokenText
+        case videoLectures
         case random
     }
     @IBAction func handleReadAloudButtonPress(_ sender: Any) {
@@ -40,6 +43,16 @@ class PTETestAudioController: UIViewController {
     }
     @IBAction func handleRandomButtonPress(_ sender: Any) {
         presentWebView(.random)
+    }
+    @IBAction func handleRetellLectureButtonPress(_ sender: Any) {
+        presentWebView(.retellLecture)
+    }
+    @IBAction func handleSummariseSpokenTextButtonPress(_ sender: Any) {
+        presentWebView(.summariseSpokenText)
+    }
+    
+    @IBAction func handleVideoLecturesButtonPress(_ sender: Any) {
+        presentWebView(.videoLectures)
     }
     func presentWebView(_ category: Category) {
         let audioWebView = self.storyboard?.instantiateViewController(withIdentifier: "PTEAudioWebViewController") as? PTETestAudioWebViewController

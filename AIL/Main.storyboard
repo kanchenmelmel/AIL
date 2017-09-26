@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yoz-IM-NgN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yoz-IM-NgN">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -836,19 +836,44 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vSq-uJ-YpP">
                                 <rect key="frame" x="164" y="64" width="87" height="89"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-xz-gex">
-                                <rect key="frame" x="150" y="228" width="114" height="266"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-xz-gex">
+                                <rect key="frame" x="150" y="183" width="114" height="296"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK7-fN-fgQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="22"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1No-GL-M9M">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZz-2V-hsU">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkA-Gz-8Wm">
+                                                <rect key="frame" x="0.0" y="18" width="114" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="tZz-2V-hsU" firstAttribute="leading" secondItem="1No-GL-M9M" secondAttribute="leading" id="PZW-U0-M0L"/>
+                                            <constraint firstAttribute="trailing" secondItem="tZz-2V-hsU" secondAttribute="trailing" id="TEg-14-yao"/>
+                                            <constraint firstAttribute="width" constant="114" id="rnj-xp-IoX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="rV1-hS-LoM" appends="YES" id="bMY-iq-67o"/>
+                                        </connections>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS7-ct-Wvo">
+                                        <rect key="frame" x="0.0" y="66" width="112" height="22"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                         <state key="normal" title="     备考神器" image="HomeButton"/>
                                         <connections>
-                                            <action selector="homeButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="TlW-NS-rqM"/>
+                                            <action selector="homeButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="RPy-53-l52"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ci-Au-Nwv">
-                                        <rect key="frame" x="0.0" y="61" width="111" height="22"/>
+                                        <rect key="frame" x="0.0" y="118" width="111" height="22"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                         <state key="normal" title="     积分账户" image="RewardAccount"/>
                                         <connections>
@@ -856,27 +881,32 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-ny-SrX">
-                                        <rect key="frame" x="0.0" y="122" width="113" height="22"/>
+                                        <rect key="frame" x="0.0" y="170" width="113" height="22"/>
                                         <state key="normal" title="     我的收藏" image="ArchiveButton"/>
                                         <connections>
                                             <action selector="archiveButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="SRx-jK-hW0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-UM-vGr">
-                                        <rect key="frame" x="0.0" y="183" width="111" height="22"/>
+                                        <rect key="frame" x="0.0" y="222" width="111" height="22"/>
                                         <state key="normal" title="     通知消息" image="messagesButton"/>
                                         <connections>
                                             <action selector="showMessageButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="TgD-vt-E3A"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-3b-Ygs">
-                                        <rect key="frame" x="0.0" y="244" width="114" height="22"/>
+                                        <rect key="frame" x="0.0" y="274" width="114" height="22"/>
                                         <state key="normal" title="     联系我们" image="AboutAILButton"/>
                                         <connections>
                                             <action selector="ShowAboutAILButtonClick:" destination="Qug-lZ-qUb" eventType="touchUpInside" id="iSH-s4-9cp"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1No-GL-M9M" secondAttribute="trailing" id="Bos-1H-oG7"/>
+                                    <constraint firstItem="1No-GL-M9M" firstAttribute="leading" secondItem="Ypy-xz-gex" secondAttribute="leading" id="G8E-uw-I6m"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -886,15 +916,24 @@
                             <constraint firstItem="SWP-CC-47e" firstAttribute="leading" secondItem="op8-Ba-Ov1" secondAttribute="leading" id="6gs-ZZ-l1w"/>
                             <constraint firstItem="Ypy-xz-gex" firstAttribute="centerX" secondItem="op8-Ba-Ov1" secondAttribute="centerX" id="G5K-Xf-Vev"/>
                             <constraint firstItem="G9D-PS-47j" firstAttribute="top" secondItem="SWP-CC-47e" secondAttribute="bottom" id="Xgs-W3-Okz"/>
-                            <constraint firstItem="Ypy-xz-gex" firstAttribute="top" secondItem="vSq-uJ-YpP" secondAttribute="bottom" constant="75" id="sFA-BY-mWw"/>
+                            <constraint firstItem="Ypy-xz-gex" firstAttribute="top" secondItem="vSq-uJ-YpP" secondAttribute="bottom" constant="30" id="sFA-BY-mWw"/>
                             <constraint firstItem="SWP-CC-47e" firstAttribute="top" secondItem="op8-Ba-Ov1" secondAttribute="top" id="vpT-J4-n10"/>
                             <constraint firstItem="vSq-uJ-YpP" firstAttribute="top" secondItem="QAP-Kv-tes" secondAttribute="bottom" constant="44" id="yYg-AK-Qor"/>
                             <constraint firstAttribute="trailing" secondItem="SWP-CC-47e" secondAttribute="trailing" id="yy2-yW-fJ8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8au-UR-PtK"/>
+                    <connections>
+                        <outlet property="creditLabel" destination="NkA-Gz-8Wm" id="P8M-Oo-PDc"/>
+                        <outlet property="usernameLabel" destination="tZz-2V-hsU" id="XBD-5S-U2w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZ1-8d-r4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rV1-hS-LoM" userLabel="LoginButtonPress">
+                    <connections>
+                        <action selector="userInfoButtonClick:" destination="Qug-lZ-qUb" id="zsN-Ad-V7M"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4239.1999999999998" y="97.601199400299862"/>
         </scene>

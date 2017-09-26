@@ -40,22 +40,14 @@ class LeftMenuVC: UIViewController {
     var aboutAILVC:UIViewController!
     var userInfoVC:UIViewController!
     
-    
-    @IBOutlet weak var credButton: UIButton!
-    
-    
-    
-    
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var creditLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
         self.setUpAccessableVCs()
-        //self.updateCredit()
+        self.initializeUser()
     }
-    
 
     @IBAction func homeButtonClick(_ sender: AnyObject) {
         self.changeViewController(.main)
@@ -63,92 +55,76 @@ class LeftMenuVC: UIViewController {
     @IBAction func rewardAccountButtonClick(_ sender: AnyObject) {
         self.changeViewController(.rewardAccount)
     }
-    
     @IBAction func archiveButtonClick(_ sender: AnyObject) {
         self.changeViewController(.archive)
         
         
     }
-    
     @IBAction func showMessageButtonClick(_ sender: AnyObject) {
         self.changeViewController(.message)
     }
-
-    
     @IBAction func ShowAboutAILButtonClick(_ sender: AnyObject) {
         self.changeViewController(.aboutAIL)
     }
-    func isValidEmail(_ testStr:String) -> Bool {
-        // print("validate calendar: \(testStr)")
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: testStr)
-    }
-    var credLoggedIn = false
+    
     var credit = ""
-    var userLogin = ""
-    func updateCredit() {
-        let obj = UserDefaults.standard.object(forKey: "myCredUserIdentifier")
-        if obj != nil && (obj! as! String) != "" {
-            let value = obj! as! String
-            let field = isValidEmail(value) ? "email" : "login"
-            Alamofire.request("http://ail.vic.edu.au/cred.php?field=\(field)&value=\(value)").responseJSON { response in
-                if let json = response.result.value as? [String: AnyObject] {
-                    if json["ok"] as! Bool {
-                        self.credLoggedIn = true
-                        self.credit = "\(json["credit"]!)"
-                        self.userLogin = "\(json["user_login"]!)"
-                        self.credButton.setTitle("\(self.userLogin) 积分：\(self.credit)", for: .normal)
-                        return
-                    }
-                }
-                self.credLoggedIn = false
-                UserDefaults.standard.removeObject(forKey: "myCredUserIdentifier")
-                let alert = UIAlertController(title: "获取积分失败", message: "用户名／邮箱错误", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "确认", style: .cancel))
-                self.present(alert, animated:true)
-                self.credButton.setTitle("登录查看积分", for: .normal)
+    
+    func initializeUser() {
+        if let auth = UserDefaults.standard.string(forKey: "WordPress-Basic-Auth") {
+            print("Start Auth")
+            WPClient.authorize(auth: auth) { x in
+                print("Auth: \(x)")
+                self.updateUserInfo()
             }
         } else {
-            self.credLoggedIn = false
-            self.credButton.setTitle("登录查看积分", for: .normal)
+            self.updateUserInfo()
         }
     }
-    @IBAction func userInfoButtonClick(_ sender: AnyObject) {
-        /*WPClient.authorize() { done in
-            print(done ? "Auth Succeeded" : "Auth Failed")
-            WPClient.users() { data in
-                print(data)
+    
+    func updateUserInfo() {
+        WPClient.credit() { _credit in
+            if let credit = _credit {
+                self.credit = "\(credit)";
+                let userName = WPClient.me!["name"] as! String
+                self.usernameLabel.text = userName
+                self.creditLabel.text = "积分: \(self.credit)"
+            } else {
+                self.usernameLabel.text = "未登录"
+                self.creditLabel.text = " "
             }
-        }*/
-        
-        if self.credLoggedIn {
-            let alert = UIAlertController(title: self.userLogin, message: "积分: \(self.credit)", preferredStyle: .alert)
-            
+        }
+    }
+    
+    @IBAction func userInfoButtonClick(_ sender: AnyObject) {
+        if WPClient.authorized {
+            let userName = WPClient.me?["name"] as! String
+            let alert = UIAlertController(title: userName, message: "积分: \(self.credit)", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "退出登录", style: .destructive) { _ in
-                UserDefaults.standard.removeObject(forKey: "myCredUserIdentifier")
-                self.updateCredit()
+                UserDefaults.standard.removeObject(forKey: "WordPress-Basic-Auth")
+                WPClient.clear()
+                self.initializeUser()
             })
-            
             alert.addAction(UIAlertAction(title: "确认", style: .cancel))
-            
             self.present(alert, animated:true)
         } else {
             let alert = UIAlertController(title: "AIL登录", message: nil, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "确认", style: .default) { _ in
-                if let user = alert.textFields![0].text {
-                    UserDefaults.standard.set(user, forKey: "myCredUserIdentifier")
+            alert.addAction(UIAlertAction(title: "取消", style: .cancel))
+            alert.addAction(UIAlertAction(title: "登录", style: .default) { _ in
+                if let user = alert.textFields![0].text, let pass = alert.textFields![1].text {
+                    let auth = Data("\(user):\(pass)".utf8).base64EncodedString()
+                    UserDefaults.standard.set(auth, forKey: "WordPress-Basic-Auth")
                     UserDefaults.standard.synchronize()
-                    self.updateCredit()
+                    self.initializeUser()
                 }
             })
             alert.addTextField() { textField in
                 textField.placeholder = "用户名"
             }
+            alert.addTextField() { textField in
+                textField.placeholder = "密码"
+            }
             self.present(alert, animated:true, completion:nil)
         }
-        
-        
     }
     
 

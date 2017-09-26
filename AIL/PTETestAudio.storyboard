@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -163,25 +164,140 @@
                                                     <outletCollection property="gestureRecognizers" destination="1Ya-gZ-S47" appends="YES" id="Td3-yk-i1i"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJf-dS-opx">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMf-8p-rKG">
                                                 <rect key="frame" x="181" y="0.0" width="172" height="146"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="RNF-RP-47n">
+                                                        <rect key="frame" x="0.0" y="28" width="172" height="89.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="短问题回答" translatesAutoresizingMaskIntoConstraints="NO" id="hdl-dO-Sm8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="47.5"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Retell Lecture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wt-Sm-Ukb">
+                                                                <rect key="frame" x="0.0" y="71.5" width="172" height="18"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="18" id="EPB-sj-8fB"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="RNF-RP-47n" secondAttribute="height" multiplier="2.5:1.3" id="iG3-aJ-0gu"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="RNF-RP-47n" secondAttribute="trailing" id="AA2-yg-htP"/>
+                                                    <constraint firstItem="RNF-RP-47n" firstAttribute="centerY" secondItem="gMf-8p-rKG" secondAttribute="centerY" id="CE5-3W-OCO"/>
+                                                    <constraint firstItem="RNF-RP-47n" firstAttribute="leading" secondItem="gMf-8p-rKG" secondAttribute="leading" id="o4L-Eg-zAY"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Sl1-eM-eDj" appends="YES" id="jy3-D0-pbu"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="sJf-dS-opx" firstAttribute="top" secondItem="Yaf-JJ-snz" secondAttribute="top" id="BnP-e6-M2C"/>
-                                            <constraint firstAttribute="bottom" secondItem="sJf-dS-opx" secondAttribute="bottom" id="T8s-PZ-Ej9"/>
                                             <constraint firstAttribute="bottom" secondItem="mN6-21-lEp" secondAttribute="bottom" id="eRi-EH-Hda"/>
+                                            <constraint firstItem="gMf-8p-rKG" firstAttribute="bottom" secondItem="Yaf-JJ-snz" secondAttribute="bottomMargin" id="gzs-Bq-fm4"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-m1-Z9J">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="W5k-zy-g5K">
                                         <rect key="frame" x="0.0" y="312.5" width="353" height="146.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbr-U3-6GB">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="146"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="z2e-hS-0em">
+                                                        <rect key="frame" x="0.0" y="28.5" width="172" height="89"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="写作高分范文" translatesAutoresizingMaskIntoConstraints="NO" id="wi9-lG-A1q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="47"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Summarise Spoken Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyy-E2-Pzx">
+                                                                <rect key="frame" x="0.0" y="71" width="172" height="18"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="18" id="mD8-EB-bwg"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="z2e-hS-0em" secondAttribute="height" multiplier="2.5:1.3" id="UAl-R2-7MQ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstItem="z2e-hS-0em" firstAttribute="centerY" secondItem="Vbr-U3-6GB" secondAttribute="centerY" id="LbV-LE-04q"/>
+                                                    <constraint firstItem="z2e-hS-0em" firstAttribute="leading" secondItem="Vbr-U3-6GB" secondAttribute="leading" id="WCx-iQ-BIc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="z2e-hS-0em" secondAttribute="trailing" id="ms4-5Q-z8q"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="eWp-R0-S2a" appends="YES" id="KrE-3I-pIB"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsY-8W-pa2">
+                                                <rect key="frame" x="181" y="0.0" width="172" height="146"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vdW-XI-3gI">
+                                                        <rect key="frame" x="0.0" y="29" width="172" height="89.5"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="nuR-I0-ge4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="47.5"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Video Lectures" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPC-DU-soK">
+                                                                <rect key="frame" x="0.0" y="71.5" width="172" height="18"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="18" id="K5I-ct-YCw"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="vdW-XI-3gI" secondAttribute="height" multiplier="2.5:1.3" id="lvb-FM-7ED"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstItem="vdW-XI-3gI" firstAttribute="leading" secondItem="rsY-8W-pa2" secondAttribute="leading" id="IPj-Xw-3d4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vdW-XI-3gI" secondAttribute="trailing" id="fyC-5H-yXs"/>
+                                                    <constraint firstItem="vdW-XI-3gI" firstAttribute="centerY" secondItem="rsY-8W-pa2" secondAttribute="centerY" id="xf1-Oo-AWP"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="lKs-Dc-aEc" appends="YES" id="b84-8Y-dFf"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Vbr-U3-6GB" secondAttribute="bottom" id="API-0N-7Gw"/>
+                                            <constraint firstAttribute="bottom" secondItem="rsY-8W-pa2" secondAttribute="bottom" id="cK9-j0-khi"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -264,9 +380,24 @@
                         <action selector="handleWriteFromDictationButtonPress:" destination="bzd-6C-ZAz" id="sp2-D8-bQI"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="Sl1-eM-eDj" userLabel="Retell Lecture">
+                    <connections>
+                        <action selector="handleRetellLectureButtonPress:" destination="bzd-6C-ZAz" id="5vF-4g-WIq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="eWp-R0-S2a" userLabel="Summarise Spoken Text">
+                    <connections>
+                        <action selector="handleSummariseSpokenTextButtonPress:" destination="bzd-6C-ZAz" id="loS-uY-lEv"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="J6J-wd-zhn" userLabel="Random">
                     <connections>
                         <action selector="handleRandomButtonPress:" destination="bzd-6C-ZAz" id="It9-NB-9tu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lKs-Dc-aEc" userLabel="Video Lectures">
+                    <connections>
+                        <action selector="handleVideoLecturesButtonPress:" destination="bzd-6C-ZAz" id="zyv-z9-jZ9"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -403,14 +534,24 @@
             </objects>
             <point key="canvasLocation" x="-1308" y="243"/>
         </scene>
+        <!--VideoCourses-->
+        <scene sceneID="r4I-xf-aAk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VideoCourses" id="dn9-Rm-Ylh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKO-rH-zOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1720" y="826"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="183" height="667"/>
         <image name="arrow_drop_down" width="72" height="72"/>
         <image name="book" width="70" height="70"/>
         <image name="play" width="150" height="150"/>
+        <image name="写作高分范文" width="47" height="46"/>
         <image name="图片描述" width="47" height="46"/>
         <image name="段落朗读" width="46" height="46"/>
+        <image name="短问题回答" width="42" height="46"/>
         <image name="阅读排序" width="49" height="46"/>
     </resources>
 </document>
