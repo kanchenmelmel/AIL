@@ -9,7 +9,7 @@
 import UIKit
 //import EZAudio
 import AudioKit
-
+import AudioKitUI
 
 class VoiceAnalysisController: UIViewController/*, EZMicrophoneDelegate, EZAudioFFTDelegate*/ {
     

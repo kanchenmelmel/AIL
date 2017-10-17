@@ -120,7 +120,7 @@ class SpeechRecognitionController: UIViewController {
         var settings = RecognitionSettings(contentType: .opus)
         settings.maxAlternatives = 1
         settings.inactivityTimeout = -1
-        settings.continuous = true
+        // settings.continuous = true
         settings.interimResults = true
         
         speechToText.recognizeMicrophone(settings: settings, failure: { print($0) }) { results in

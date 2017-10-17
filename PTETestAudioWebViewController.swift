@@ -23,41 +23,44 @@ class PTETestAudioWebViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = category == .videoLectures ? "PTE视频课程" : "PTE真题音频"
+        
+        webView.delegate = self
+        webView.allowsInlineMediaPlayback = false
+        
+        
+        let path = Bundle.main.path(forResource: category != .videoLectures ? "audios" : "videos", ofType: "html", inDirectory: "www")!
+        webView.loadRequest(URLRequest(url: URL(fileURLWithPath: path)))
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         if (category != .videoLectures) {
             var kind: String
             switch category! {
-            case .readAloud: kind = "ReadAloud"; break
-            case .repeatSentence: kind = "RepeatSentence"; break
-            case .describeImage: kind = "DescribeImage"; break
-            case .writeFromDictation: kind = "WriteFromDictation"; break
-            case .retellLecture: kind = "RetellLecture"; break
-            case .summariseSpokenText: kind = "SummariseSpokenText"; break
-            case .random: kind = "Random"; break
-            case .videoLectures: kind = ""; break
+                case .readAloud: kind = "ReadAloud"
+                case .repeatSentence: kind = "RepeatSentence"
+                case .describeImage: kind = "DescribeImage"
+                case .writeFromDictation: kind = "WriteFromDictation"
+                case .retellLecture: kind = "RetellLecture"
+                case .summariseSpokenText: kind = "SummariseSpokenText"
+                case .random: kind = "Random"
+                case .videoLectures: kind = ""
             }
-            let urlString = "http://ail.vic.edu.au/PTE%E7%9C%9F%E9%A2%98%E9%9F%B3%E9%A2%91/index.html?category=\(kind)"
-            let request = NSMutableURLRequest(url: URL(string: urlString)!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 10.0)
-            webView.loadRequest(request as URLRequest)
+            webView.stringByEvaluatingJavaScript(from: "window.CATEGORY = \"\(kind)\";");
         } else {
             if (WPClient.authorized) {
                 WPClient.user(id: WPClient.me!["id"] as! Int) { user in
                     let roles = user!["roles"] as! [String]
-                    let rolesQuery = roles.map { "roles[]=" + $0 }.joined(separator: "&")
-                    let urlString = "\(VIDEO_URL)?\(rolesQuery)"
-                    let request = NSMutableURLRequest(url: URL(string: urlString)!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 10.0)
-                    self.webView.loadRequest(request as URLRequest)
+                    let data = try! JSONSerialization.data(withJSONObject: roles)
+                    let jsonString = String(data: data, encoding: String.Encoding.utf8)!
+                    webView.stringByEvaluatingJavaScript(from: "window.start(\(jsonString));")
                 }
             } else {
                 let alert = UIAlertController(title: "未登录", message: "未登录用户仅能查看免费视频", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "确认", style: .cancel))
                 self.present(alert, animated:true)
-            
-                let urlString = "\(VIDEO_URL)?roles[]=subscriber"
-                let request = NSMutableURLRequest(url: URL(string: urlString)!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 10.0)
-                webView.loadRequest(request as URLRequest)
+                webView.stringByEvaluatingJavaScript(from: "window.ROLES = ['subscriber'];")
             }
         }
-        webView.delegate = self
     }
 
 }

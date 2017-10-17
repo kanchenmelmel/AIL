@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bzd-6C-ZAz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bzd-6C-ZAz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -272,6 +273,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="vdW-XI-3gI" secondAttribute="height" multiplier="2.5:1.3" id="lvb-FM-7ED"/>
                                                         </constraints>
@@ -290,7 +292,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="lKs-Dc-aEc" appends="YES" id="b84-8Y-dFf"/>
+                                                    <outletCollection property="gestureRecognizers" destination="lKs-Dc-aEc" appends="YES" id="SfC-j2-Cps"/>
                                                 </connections>
                                             </view>
                                         </subviews>
@@ -513,16 +515,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-Go-XjC">
+                            <webView contentMode="scaleToFill" allowsInlineMediaPlayback="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-Go-XjC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </webView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="bHd-Go-XjC" firstAttribute="leading" secondItem="1rt-H5-cjH" secondAttribute="leading" id="8xi-hj-s77"/>
                             <constraint firstAttribute="trailing" secondItem="bHd-Go-XjC" secondAttribute="trailing" id="Deu-j7-7cL"/>
                             <constraint firstItem="bHd-Go-XjC" firstAttribute="top" secondItem="1rt-H5-cjH" secondAttribute="top" id="cMJ-hM-zvN"/>
-                            <constraint firstItem="bNI-RQ-P6Z" firstAttribute="top" secondItem="bHd-Go-XjC" secondAttribute="bottom" id="zR3-Xq-GTJ"/>
+                            <constraint firstAttribute="bottom" secondItem="bHd-Go-XjC" secondAttribute="bottom" id="zR3-Xq-GTJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PTE真题音频" id="udv-dr-LUo"/>

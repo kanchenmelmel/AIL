@@ -23,6 +23,11 @@
 		3D76F5491E7E2AA20072006F /* SpeechRecognition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */; };
 		3D9417481ED9A3C600C2638E /* FrequencyWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9417471ED9A3C600C2638E /* FrequencyWaveView.swift */; };
 		3D9D3E171E72677E00A56BD4 /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */; };
+		3D9EFA741F7B5D4E00BB192D /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9EFA721F7B5D4D00BB192D /* AudioKit.framework */; };
+		3D9EFA751F7B5D4E00BB192D /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9EFA731F7B5D4D00BB192D /* AudioKitUI.framework */; };
+		3D9EFA761F7B5D5E00BB192D /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9EFA721F7B5D4D00BB192D /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3D9EFA771F7B5D5E00BB192D /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9EFA731F7B5D4D00BB192D /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3D9EFA781F7B5EE000BB192D /* www in Resources */ = {isa = PBXBuildFile; fileRef = 3DB7FFB71F7B42D00069A1CE /* www */; };
 		3DA95BA21E5BE29300084DA4 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95BA01E5BE28800084DA4 /* RestKit.framework */; };
 		3DA95BA31E5BE29300084DA4 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95BA01E5BE28800084DA4 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3DA95BA51E5BE29500084DA4 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */; };
@@ -125,6 +130,8 @@
 			files = (
 				3DA95BA31E5BE29300084DA4 /* RestKit.framework in Embed Frameworks */,
 				3DA95BA61E5BE29500084DA4 /* SpeechToTextV1.framework in Embed Frameworks */,
+				3D9EFA761F7B5D5E00BB192D /* AudioKit.framework in Embed Frameworks */,
+				3D9EFA771F7B5D5E00BB192D /* AudioKitUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,11 +155,14 @@
 		3D76F5481E7E2AA20072006F /* SpeechRecognition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpeechRecognition.storyboard; sourceTree = "<group>"; };
 		3D9417471ED9A3C600C2638E /* FrequencyWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyWaveView.swift; sourceTree = "<group>"; };
 		3D9D3E161E72677E00A56BD4 /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
+		3D9EFA721F7B5D4D00BB192D /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
+		3D9EFA731F7B5D4D00BB192D /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKitUI.framework; path = Carthage/Build/iOS/AudioKitUI.framework; sourceTree = "<group>"; };
 		3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 		3DA95BA01E5BE28800084DA4 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		3DABDC781F13C5E700D4CE9E /* PTETestAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PTETestAudio.storyboard; sourceTree = "<group>"; };
 		3DABDC7A1F13DDF500D4CE9E /* PTETestAudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTETestAudioController.swift; sourceTree = "<group>"; };
 		3DABDC7C1F147C9C00D4CE9E /* PTETestAudioWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTETestAudioWebViewController.swift; sourceTree = "<group>"; };
+		3DB7FFB71F7B42D00069A1CE /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		3DDBA89E1E53D31C00743BB3 /* JiJingPDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JiJingPDF; sourceTree = "<group>"; };
 		3DE209331D8FA03C001BCEA4 /* EmailEjecter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailEjecter.swift; path = AIL/EmailEjecter.swift; sourceTree = "<group>"; };
 		3DE674CF1E4D6FD000F41EDF /* AIL 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AIL 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -249,7 +259,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D9EFA741F7B5D4E00BB192D /* AudioKit.framework in Frameworks */,
 				C30419239AD44AC2671F7F63 /* Pods_AIL.framework in Frameworks */,
+				3D9EFA751F7B5D4E00BB192D /* AudioKitUI.framework in Frameworks */,
 				3DA95BA21E5BE29300084DA4 /* RestKit.framework in Frameworks */,
 				3DA95BA51E5BE29500084DA4 /* SpeechToTextV1.framework in Frameworks */,
 			);
@@ -391,6 +403,8 @@
 		69EFDD5AB6EBC4F4E4D8ED54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D9EFA721F7B5D4D00BB192D /* AudioKit.framework */,
+				3D9EFA731F7B5D4D00BB192D /* AudioKitUI.framework */,
 				3DA95BA01E5BE28800084DA4 /* RestKit.framework */,
 				3DA95B981E5BE08B00084DA4 /* SpeechToTextV1.framework */,
 				AE2662452685324A770F0164 /* Pods_AIL.framework */,
@@ -430,6 +444,7 @@
 		963061B81D77E1270079B7C5 = {
 			isa = PBXGroup;
 			children = (
+				3DB7FFB71F7B42D00069A1CE /* www */,
 				3DDBA89E1E53D31C00743BB3 /* JiJingPDF */,
 				9678CCD91DA9E40900F2EBB2 /* ActivityIndicatorView */,
 				963574961D90E12600B8D1A5 /* TableCellImageAsycLoading */,
@@ -727,6 +742,7 @@
 				9683A6741D88DEDF00360D98 /* Messages.storyboard in Resources */,
 				960E658F1DAC6D9F00DEE9BF /* RewardAccount.storyboard in Resources */,
 				3D9D3E171E72677E00A56BD4 /* UserInfo.storyboard in Resources */,
+				3D9EFA781F7B5EE000BB192D /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,9 +755,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AIL/Pods-AIL-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/EAIntroView/EAIntroView.framework",
+				"${BUILT_PRODUCTS_DIR}/EARestrictedScrollView/EARestrictedScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/M13PDFKit/M13PDFKit.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TTOpenInAppActivity/TTOpenInAppActivity.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EAIntroView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EARestrictedScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13PDFKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTOpenInAppActivity.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -768,13 +803,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIL-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		665269B806FA97C96BA6105E /* 📦 Embed Pods Frameworks */ = {

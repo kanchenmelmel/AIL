@@ -12,7 +12,7 @@ import SlideMenuControllerSwift
 import Alamofire
 import AlamofireNetworkActivityIndicator
 import EAIntroView
-import OAuthSwift
+// import OAuthSwift
 
 
 @UIApplicationMain
@@ -67,6 +67,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        let presentedViewController = window?.rootViewController!.presentedViewController
+        let className = presentedViewController != nil ? NSStringFromClass(type(of: presentedViewController!)) : nil
+        if (window != nil && (className == "MPInlineVideoFullscreenViewController" || className == "AVFullScreenViewController")) {
+            return .all;
+        } else {
+            return .portrait;
+        }
+    }
+    
 //    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 //        
 //        
@@ -108,7 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         if (url.host == "oauth-callback") {
-            OAuthSwift.handle(url: url)
+            // OAuthSwift.handle(url: url)
         }
         return true
     }
