@@ -254,7 +254,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="eWp-R0-S2a" appends="YES" id="KrE-3I-pIB"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsY-8W-pa2">
+                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsY-8W-pa2">
                                                 <rect key="frame" x="181" y="0.0" width="172" height="146"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vdW-XI-3gI">
@@ -291,9 +291,6 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="lKs-Dc-aEc" appends="YES" id="SfC-j2-Cps"/>
-                                                </connections>
                                             </view>
                                         </subviews>
                                         <constraints>

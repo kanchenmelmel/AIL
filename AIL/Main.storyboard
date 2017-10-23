@@ -100,7 +100,7 @@
                                                                     <rect key="frame" x="9" y="0.0" width="60" height="60"/>
                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE考位交流" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX7-IV-muZ">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PTE在线视频" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX7-IV-muZ">
                                                                     <rect key="frame" x="0.0" y="70" width="78.333333333333343" height="15.666666666666671"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,9 +115,6 @@
                                                     <constraint firstItem="xKu-4S-CK0" firstAttribute="centerX" secondItem="QQX-Nq-ABM" secondAttribute="centerX" id="8fq-eL-RtK"/>
                                                     <constraint firstItem="xKu-4S-CK0" firstAttribute="centerY" secondItem="QQX-Nq-ABM" secondAttribute="centerY" id="GQz-Ac-SHD"/>
                                                 </constraints>
-                                                <connections>
-                                                    <segue destination="Mk5-4w-Xyf" kind="show" id="Lte-ue-j4D"/>
-                                                </connections>
                                             </collectionViewCell>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="GOM-uh-xnG" customClass="PostCollectionViewCell" customModule="AIL" customModuleProvider="target">
                                                 <rect key="frame" x="420" y="32.333333333333336" width="200" height="132"/>
@@ -767,7 +764,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-4x-vcE" customClass="CustomizedSegmentedControl" customModule="AIL" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="D5Y-ZE-ajO"/>
@@ -794,7 +791,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKh-tq-Xzw">
-                                <rect key="frame" x="0.0" y="133" width="414" height="603"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="623"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>

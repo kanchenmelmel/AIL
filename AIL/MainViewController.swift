@@ -148,9 +148,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "PTELiveCell", for: indexPath) as! LastCollectionViewCell
-        } else if indexPath.row == 1 {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "PTEExchangeCell", for: indexPath) as! LastCollectionViewCell
+        } else if indexPath.row == 1 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "PTELiveCell", for: indexPath) as! LastCollectionViewCell
         } else if indexPath.row <= self.featurePosts.count + 1 {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as? PostCollectionViewCell {
                 cell.backgroundColor = UIColor.white
@@ -212,13 +212,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // print("Select \(indexPath)")
         //TODO Goes to another view controller
         if indexPath.row == featurePosts.count + 2 {
             self.performSegue(withIdentifier: "allPostVC", sender: nil)
         } else if indexPath.row > 1 {
             let featurePost = featurePosts[indexPath.row - 1]
             self.performSegue(withIdentifier: "showPostWebViewSegue", sender: featurePost)
-        } else if indexPath.row == 1 {
+        } else if indexPath.row == 0 {
+            let storyboard = UIStoryboard(name: "PTETestAudio", bundle: nil)
+            let audioWebView = storyboard.instantiateViewController(withIdentifier: "PTEAudioWebViewController") as? PTETestAudioWebViewController
+            audioWebView?.category = .videoLectures;
+            self.navigationController?.pushViewController(audioWebView!, animated: true)
             //print("==2==2==2==2==2==2==2==")
         }
         
@@ -227,7 +232,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return CGSize(width: 300, height: collectionView.frame.height - 16)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: -56, left: 8, bottom: 8, right: 8)
+        return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
     
     

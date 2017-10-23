@@ -52,7 +52,9 @@ class PTETestAudioWebViewController: UIViewController, UIWebViewDelegate {
                     let roles = user!["roles"] as! [String]
                     let data = try! JSONSerialization.data(withJSONObject: roles)
                     let jsonString = String(data: data, encoding: String.Encoding.utf8)!
-                    webView.stringByEvaluatingJavaScript(from: "window.start(\(jsonString));")
+                    if (self.isViewLoaded && self.view.window != nil) {
+                        webView.stringByEvaluatingJavaScript(from: "window.start(\(jsonString));")
+                    }
                 }
             } else {
                 let alert = UIAlertController(title: "未登录", message: "未登录用户仅能查看免费视频", preferredStyle: .alert)
