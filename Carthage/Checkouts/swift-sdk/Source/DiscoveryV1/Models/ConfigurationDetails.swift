@@ -15,7 +15,6 @@
  **/
 
 import Foundation
-import RestKit
 
 /** A custom configuration for the environment. */
 public struct ConfigurationDetails: JSONDecodable, JSONEncodable {
@@ -46,7 +45,7 @@ public struct ConfigurationDetails: JSONDecodable, JSONEncodable {
     public let normalizations: [Normalization]?
     
     /// Used internally to initialize a `ConfigurationDetails` model from JSON.
-    public init(json: JSON) throws {
+    public init(json: JSONWrapper) throws {
         configurationID = try? json.getString(at: "configuration_id")
         created = try json.getString(at: "created")
         updated = try json.getString(at: "updated")
@@ -125,7 +124,7 @@ public struct Conversion: JSONDecodable {
     public let jsonNormalizations: [Normalization]?
     
     /// Used internally to initialize a `Conversion` model from JSON.
-    public init(json: JSON) throws {
+    public init(json: JSONWrapper) throws {
         word = try? json.getDictionary(at: "word")
         pdf = try? json.getDictionary(at: "pdf")
         html = try? json.getDictionary(at: "html")
@@ -194,7 +193,7 @@ public struct Enrichment: JSONDecodable {
     public let options: [String: Any]
     
     /// Used internally to initialize an `Enrichment` model from JSON.
-    public init(json: JSON) throws {
+    public init(json: JSONWrapper) throws {
         destinationField = try json.getString(at: "destination_field")
         sourceField = try json.getString(at: "source_field")
         enrichment = try json.getString(at: "enrichment")
@@ -237,7 +236,7 @@ public struct Normalization: JSONDecodable {
     
     /// Can be one of the following: copy, move, merge, remove, or remove_nulls. For more 
     /// information, please refer to the documentation page here:
-    /// http://www.ibm.com/watson/developercloud/discovery/api/v1/#json_normalizations
+    /// https://www.ibm.com/watson/developercloud/discovery/api/v1/#json_normalizations
     public let operation: NormalizationOperation
     
     /// The field that contains the original information.
@@ -247,9 +246,9 @@ public struct Normalization: JSONDecodable {
     public let destinationField: String?
     
     /// Used internally to initialize a `Normalization` model from JSON.
-    public init(json: JSON) throws {
+    public init(json: JSONWrapper) throws {
         guard let normalizationOperation = NormalizationOperation(rawValue: try json.getString(at: "operation")) else {
-            throw JSON.Error.valueNotConvertible(value: json, to: NormalizationOperation.self)
+            throw JSONWrapper.Error.valueNotConvertible(value: json, to: NormalizationOperation.self)
         }
         operation = normalizationOperation
         sourceField = try? json.getString(at: "source_field")
@@ -261,7 +260,7 @@ public struct Normalization: JSONDecodable {
      
      - parameter operation: Can be one of the following: copy, move, merge, remove, or remove_nulls. 
             For more information, please refer to the documentation page here:
-            http://www.ibm.com/watson/developercloud/discovery/api/v1/#json_normalizations
+            https://www.ibm.com/watson/developercloud/discovery/api/v1/#json_normalizations
      - parameter sourceField: The field that contains the original information.
      - parameter destinationField: The field that information is written to.
      */
@@ -291,7 +290,7 @@ public struct Normalization: JSONDecodable {
 
 /**
  The different JSON normalization operations. Visit the documentation page for more information:
- http://www.ibm.com/watson/developercloud/discovery/api/v1/#json_normalizations
+ https://www.ibm.com/watson/developercloud/discovery/api/v1/#json_normalizations
  */
 public enum NormalizationOperation: String {
     

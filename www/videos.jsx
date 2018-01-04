@@ -54,20 +54,26 @@ const Loading = () => (
     </div>
 );
 
-
+function alertWithoutTitle(message) {
+    const iframe = document.createElement("IFRAME");
+    iframe.setAttribute("src", 'data:text/plain,');
+    document.documentElement.appendChild(iframe);
+    window.frames[0].window.alert(message);
+    iframe.parentNode.removeChild(iframe);
+}
 
 class Main extends React.Component {
     state = {
         data: undefined,
     }
     async componentDidMount() {
-        const res = await fetch('http://ail.vic.edu.au/PTE真题音频/videos-data.php');
-        const data = await res.json();
-        console.log(data);
-        for (let k of Object.keys(data)) {
-            if (!data[k].permitted_roles.some(x => this.props.roles.includes(x))) {
-                delete data[k];
-            }
+        const res = await fetch('http://ail.vic.edu.au/PTE真题音频/videos-data.php' + (
+            window.USER_ID ? `?user_id=${window.USER_ID}` : ''
+        ));
+        const { data, vip } = await res.json();
+        console.log(vip, data);
+        if (!vip) {
+            alertWithoutTitle('非会员仅能查看免费视频。');
         }
         this.setState({ data });
     }
@@ -85,7 +91,7 @@ class Main extends React.Component {
     }
 }
 
-
+/*
 console.log(window.ROLES);
 
 if (!window.ROLES) {
@@ -94,3 +100,6 @@ if (!window.ROLES) {
 } else {
     ReactDOM.render(<Main roles={window.ROLES}/>, document.getElementById('root'));
 }
+*/
+console.log(window.USER_ID);
+ReactDOM.render(<Main/>, document.getElementById('root'));

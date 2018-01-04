@@ -15,7 +15,6 @@
  **/
 
 import Foundation
-import RestKit
 
 /**
  The IBM Watson Retrieve and Rank service combines two information retrieval components into a 
@@ -68,7 +67,7 @@ public class RetrieveAndRank {
         }
         
         do {
-            let json = try JSON(data: data)
+            let json = try JSONWrapper(data: data)
             let code = response?.statusCode ?? 400
             let userInfo: [String: String]
             if let message = try? json.getString(at: "msg") {
@@ -140,7 +139,7 @@ public class RetrieveAndRank {
             json["cluster_size"] = String(size)
         }
         
-        guard let body = try? JSON(dictionary: json).serialize() else {
+        guard let body = try? JSONWrapper(dictionary: json).serialize() else {
             let failureReason = "Classification text could not be serialized to JSON."
             let userInfo = [NSLocalizedFailureReasonErrorKey: failureReason]
             let error = NSError(domain: domain, code: 0, userInfo: userInfo)
@@ -179,7 +178,7 @@ public class RetrieveAndRank {
     public func deleteSolrCluster(
         withID solrClusterID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil) {
+        success: (() -> Void)? = nil) {
         
         // construct REST request
         let request = RestRequest(
@@ -278,7 +277,7 @@ public class RetrieveAndRank {
         withName configName: String,
         fromSolrClusterID solrClusterID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil) {
+        success: (() -> Void)? = nil) {
         
         // construct REST request
         let request = RestRequest(
@@ -396,7 +395,7 @@ public class RetrieveAndRank {
         toSolrClusterID solrClusterID: String,
         zipFile: URL,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil) {
+        success: (() -> Void)? = nil) {
         
         // construct body
         guard let body = try? Data(contentsOf: zipFile) else {
@@ -442,7 +441,7 @@ public class RetrieveAndRank {
         forSolrClusterID solrClusterID: String,
         withConfigurationName configName: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil) {
+        success: (() -> Void)? = nil) {
         
         // construct query parameters
         var queryParameters = [URLQueryItem]()
@@ -485,7 +484,7 @@ public class RetrieveAndRank {
         withName name: String,
         fromSolrClusterID solrClusterID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil) {
+        success: (() -> Void)? = nil) {
         
         // construct query parameters
         var queryParameters = [URLQueryItem]()
@@ -574,7 +573,7 @@ public class RetrieveAndRank {
         contentFile: URL,
         contentType: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil) {
+        success: (() -> Void)? = nil) {
         
         // construct REST body
         guard let body = try? Data(contentsOf: contentFile) else {
@@ -773,7 +772,7 @@ public class RetrieveAndRank {
         if let name = name {
             json["name"] = name
         }
-        guard let trainingMetadata = try? JSON(dictionary: json).serialize() else {
+        guard let trainingMetadata = try? JSONWrapper(dictionary: json).serialize() else {
             let failureReason = "Ranker metadata could not be serialized to JSON."
             let userInfo = [NSLocalizedFailureReasonErrorKey: failureReason]
             let error = NSError(domain: domain, code: 0, userInfo: userInfo)
@@ -872,7 +871,7 @@ public class RetrieveAndRank {
     public func deleteRanker(
         withID rankerID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil) {
+        success: (() -> Void)? = nil) {
         
         // construct REST request
         let request = RestRequest(

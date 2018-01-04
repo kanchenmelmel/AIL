@@ -78,7 +78,7 @@ open class AKMoogLadder: AKNode, AKToggleable, AKComponent, AKInput {
     ///                Higher than 1 resonance values might cause aliasing,
     ///                analogue synths generally allow resonances to be above 1.
     ///
-    public init(
+    @objc public init(
         _ input: AKNode? = nil,
         cutoffFrequency: Double = 1_000,
         resonance: Double = 0.5) {
@@ -108,7 +108,7 @@ open class AKMoogLadder: AKNode, AKToggleable, AKComponent, AKInput {
         token = tree.token(byAddingParameterObserver: { [weak self] _, _ in
 
             guard let _ = self else {
-                AKLog("Unable to create strong reference to self")
+                //AKLog("Unable to create strong reference to self")
                 return
             } // Replace _ with strongSelf if needed
             DispatchQueue.main.async {

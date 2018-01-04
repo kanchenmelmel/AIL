@@ -15,7 +15,6 @@
  **/
 
 import Foundation
-import RestKit
 
 /** The results the search engine Blekko returns. */
 public struct BlekkoResult: JSONDecodable {
@@ -50,13 +49,13 @@ public struct BlekkoResult: JSONDecodable {
     public let json: [String: Any]
     
     /// Used internally to initialize a `BlekkoResult` model from JSON.
-    public init(json: JSON) throws {
+    public init(json: JSONWrapper) throws {
         language = try? json.getString(at: "lang")
-        rawTitle = try? json.decodedArray(at: "raw_title", type: Swift.String)
-        cleanTitle = try? json.decodedArray(at: "clean_title", type: Swift.String)
+        rawTitle = try? json.decodedArray(at: "raw_title", type: Swift.String.self)
+        cleanTitle = try? json.decodedArray(at: "clean_title", type: Swift.String.self)
         url = try? json.getString(at: "url")
         chrondate = try? json.getInt(at: "chrondate")
-        snippets = try? json.decodedArray(at: "snippets", type: Swift.String)
+        snippets = try? json.decodedArray(at: "snippets", type: Swift.String.self)
         host = try? json.getString(at: "host")
         documentType = try? json.getString(at: "documentType")
         self.json = try json.getDictionaryObject()

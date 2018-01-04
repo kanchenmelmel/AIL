@@ -27,6 +27,7 @@ There are many resources to help you build your first cognitive application with
 * [Custom Service URLs](#custom-service-urls)
 * [Custom Headers](#custom-headers)
 * [Sample Applications](#sample-applications)
+* [Synchronous Execution](#synchronous-execution)
 * [Objective-C Compatibility](#objective-c-compatibility)
 * [Linux Compatibility](#linux-compatibility)
 * [Contributing](#contributing)
@@ -53,8 +54,8 @@ There are many resources to help you build your first cognitive application with
 ## Requirements
 
 - iOS 8.0+
-- Xcode 8.0+
-- Swift 3.0+
+- Xcode 9.0+
+- Swift 3.2+ or Swift 4.0+
 
 ## Installation
 
@@ -156,6 +157,20 @@ naturalLanguageClassifier.defaultHeaders = ["X-Watson-Learning-Opt-Out": "true"]
 * [Speech to Text](https://github.com/watson-developer-cloud/speech-to-text-swift)
 * [Text to Speech](https://github.com/watson-developer-cloud/text-to-speech-swift)
 * [Cognitive Concierge](https://github.com/IBM-MIL/CognitiveConcierge)
+
+## Synchronous Execution
+
+By default, the SDK executes all networking operations asynchonously. If your application requires synchronous execution, you can use a `DispatchGroup`. For example:
+
+```swift
+let dispatchGroup = DispatchGroup()
+dispatchGroup.enter()
+conversation.message(withWorkspace: workspaceID) { response in
+    print(response.output.text)
+    dispatchGroup.leave()
+}
+dispatchGroup.wait(timeout: .distantFuture)
+```
 
 ## Objective-C Compatibility
 
@@ -267,7 +282,8 @@ let conversation = Conversation(username: username, password: password, version:
 let workspaceID = "your-workspace-id-here"
 let failure = { (error: Error) in print(error) }
 var context: Context? // save context to continue conversation
-conversation.message(withWorkspace: workspaceID, failure: failure) { response in
+conversation.message(workspaceID: workspaceID, failure: failure) {
+    response in
     print(response.output.text)
     context = response.context
 }
@@ -276,27 +292,51 @@ conversation.message(withWorkspace: workspaceID, failure: failure) { response in
 The following example shows how to continue an existing conversation with the Conversation service:
 
 ```swift
-let text = "Turn on the radio."
+let input = InputData(text: "Turn on the radio.")
+let request = MessageRequest(input: input, context: context)
 let failure = { (error: Error) in print(error) }
-let request = MessageRequest(text: text, context: context)
-conversation.message(withWorkspace: workspaceID, request: request, failure: failure) {
+conversation.message(workspaceID: workspaceID, request: request, failure: failure) {
     response in
     print(response.output.text)
     context = response.context
 }
 ```
 
-The Conversation service allows users to define custom variables and values in their application's payload. For example, a Conversation workspace that guides users through a pizza order might include a user-defined variable for pizza toppings: `"pizza_toppings": ["ketchup", "ham", "onion"]`.
+#### Context Variables
 
-Unfortunately, the Swift SDK does not have advance knowledge of the user-defined variables so it cannot conveniently parse them as properties or model classes. Instead, users of the SDK can manually parse user-defined variables. All models in the `Conversation` framework include a `json: [String: Any]` property to allow users to access the underlying JSON payload and manually parse user-defined variables.
+The Conversation service allows users to define custom context variables in their application's payload. For example, a Conversation workspace that guides users through a pizza order might include a context variable for pizza size: `"pizza_size": "large"`.
 
-The following example shows how to extract a user-defined `pizza_toppings` variable from the `context` of a Conversation response:
+Context variables are get/set using the `var additionalProperties: [String: JSON]` property of a `Context` model. The following example shows how to get and set a user-defined `pizza_size` variable:
 
 ```swift
-conversation.message(withWorkspace: workspaceID, request: request, failure: failure) {
+// get the `pizza_size` context variable
+conversation.message(workspaceID: workspaceID, request: request, failure: failure) {
     response in
-    let pizzaToppings = response.context.json["pizza_toppings"] as! [String]
-    print(pizzaToppings) // ["ketchup", "ham", "onion"]
+    if case let .string(size) = response.context.additionalProperties["pizza_size"]! {
+        print(size)
+    }
+}
+
+// set the `pizza_size` context variable
+conversation.message(workspaceID: workspaceID, request: request, failure: failure) {
+    response in
+    var context = response.context // `var` makes the context mutable
+    context?.additionalProperties["pizza_size"] = .string("large")
+}
+```
+
+For reference, the `JSON` type is defined as:
+
+```swift
+/// A JSON value (one of string, number, object, array, true, false, or null).
+public enum JSON: Equatable, Codable {
+    case null
+    case boolean(Bool)
+    case string(String)
+    case int(Int)
+    case double(Double)
+    case array([JSON])
+    case object([String: JSON])
 }
 ```
 

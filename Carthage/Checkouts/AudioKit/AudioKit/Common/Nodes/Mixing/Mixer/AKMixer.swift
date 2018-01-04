@@ -52,10 +52,6 @@ open class AKMixer: AKNode, AKToggleable, AKInput {
         }
     }
 
-    @objc public var nextInput: AKInputConnection {
-        return AKInputConnection(node: self, bus: mixerAU.nextAvailableInputBus)
-    }
-
     /// Function to start, play, or activate the node, all do the same thing
     @objc open func start() {
         if isStopped {
@@ -71,6 +67,11 @@ open class AKMixer: AKNode, AKToggleable, AKInput {
         }
     }
 
+    /// Detach
+    @objc open override func detach() {
+      super.detach()
+    }
+
     /// Connnect another input after initialization // Deprecated
     ///
     /// - parameter input: AKNode to connect
@@ -84,5 +85,17 @@ open class AKMixer: AKNode, AKToggleable, AKInput {
         input?.connect(to: self, bus: bus ?? nextInput.bus)
     }
     //swiftlint:enable line_length
+
+    // It is not possible to use @objc on AKOutput extension, so [connectWithInput:bus:]
+    /// Connect for Objectivec access, with bus definition
+    @objc open func connect(input: AKNode?, bus: Int) {
+      input?.connect(to: self, bus: bus)
+    }
+
+    // It is not possible to use @objc on AKOutput extension, so [connectWithInput:]
+    /// Connect for Objectivec access
+    @objc open func connect(input: AKNode?) {
+      input?.connect(to: self, bus: nextInput.bus)
+    }
 
 }

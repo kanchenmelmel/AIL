@@ -15,7 +15,6 @@
  **/
 
 import Foundation
-import RestKit
 
 /**
  The IBM Watson Visual Recognition service uses deep learning algorithms to analyze images,
@@ -70,7 +69,7 @@ public class VisualRecognition {
         }
         
         do {
-            let json = try JSON(data: data)
+            let json = try JSONWrapper(data: data)
             var code = response?.statusCode ?? 400
             let userInfo: [String: String]
             if let status = try? json.getString(at: "status") {
@@ -214,7 +213,7 @@ public class VisualRecognition {
         if let threshold = threshold {
             parameters["threshold"] = threshold
         }
-        guard let json = try? JSON(dictionary: parameters).serialize() else {
+        guard let json = try? JSONWrapper(dictionary: parameters).serialize() else {
             failure?(RestError.encodingError)
             return
         }
@@ -480,7 +479,7 @@ public class VisualRecognition {
     public func deleteClassifier(
         withID classifierID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct query parameters
         var queryParameters = [URLQueryItem]()
@@ -630,6 +629,7 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed with the newly created collection.
     */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func createCollection (
         withName name: String,
         failure: ((Error) -> Void)? = nil,
@@ -677,6 +677,7 @@ public class VisualRecognition {
     - parameter failure: A function executed if an error occurs.
     - parameter success: A function executed with the list of classifiers.
     */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func getCollections(
         failure: ((Error) -> Void)? = nil,
         success: @escaping ([Collection]) -> Void)
@@ -713,6 +714,7 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed with the collection retrieved.
      */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func retrieveCollectionDetails(
         withID collectionID: String,
         failure: ((Error) -> Void)? = nil,
@@ -749,10 +751,11 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed after the collection has been successfully deleted.
     */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func deleteCollection(
         withID collectionID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct query parameters
         var queryParameters = [URLQueryItem]()
@@ -799,6 +802,7 @@ public class VisualRecognition {
      - parameter success: A function executed with information about the image added to the
         collection.
      */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func addImageToCollection(
         withID collectionID: String,
         imageFile image: URL,
@@ -852,6 +856,7 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed with the list of images in the collection.
      */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func getImagesInCollection(
         withID collectionID: String,
         failure: ((Error) -> Void)? = nil,
@@ -889,6 +894,7 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed with the image's details.
      */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func listImageDetailsInCollection(
         withID collectionID: String,
         imageID: String,
@@ -927,11 +933,12 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed when the image is deleted successfully.
     */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func deleteImageFromCollection(
         withID collectionID: String,
         imageID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct query parameters
         var queryParameters = [URLQueryItem]()
@@ -969,11 +976,12 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed when the image metadata is deleted successfully.
     */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func deleteImageMetadata(
         forImageID imageID: String,
         inCollectionID collectionID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct query parameters
         var queryParameters = [URLQueryItem]()
@@ -1011,6 +1019,7 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed when the image metadata is listed successfully.
      */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func listImageMetadata(
         forImageID imageID: String,
         inCollectionID collectionID: String,
@@ -1051,6 +1060,7 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed when the image metadata is updated successfully.
     */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func updateImageMetadata(
         forImageID imageID: String,
         inCollectionID collectionID: String,
@@ -1104,6 +1114,7 @@ public class VisualRecognition {
      - parameter failure: A function executed if an error occurs.
      - parameter success: A function executed with the list of similar images.
     */
+    @available(*, deprecated, message: "The beta period for Similarity Search was closed on September 8, 2017.")
     public func findSimilarImages(
         toImageFile image: URL,
         inCollectionID collectionID: String,
@@ -1188,7 +1199,7 @@ public class VisualRecognition {
         let fileURL = directoryURL.appendingPathComponent(fileName)!
         
         // save JSON dictionary to file
-        let data = try JSON(dictionary: json).serialize()
+        let data = try JSONWrapper(dictionary: json).serialize()
         try data.write(to: fileURL, options: .atomic)
         
         return fileURL

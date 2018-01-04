@@ -50,7 +50,7 @@ class SynthViewController: UIViewController {
     @IBOutlet fileprivate weak var fattenToggle: UIButton!
     @IBOutlet fileprivate weak var holdToggle: UIButton!
     @IBOutlet fileprivate weak var monoToggle: UIButton!
-    @IBOutlet fileprivate weak var audioPlot: AKOutputWaveformPlot!
+    @IBOutlet weak var audioPlot: AKNodeOutputPlot!
     @IBOutlet fileprivate weak var plotToggle: UIButton!
 
     enum ControlTag: Int {
@@ -386,6 +386,10 @@ class SynthViewController: UIViewController {
     // About App
     @IBAction func buildThisSynth(_ sender: RoundedButton) {
         openURL("http://audiokit.io/examples/AnalogSynthX")
+    }
+
+    @IBAction func newAppPressed(_ sender: RoundedButton) {
+         openURL("https://audiokitpro.com/audiokit-synth-one/")
     }
 
     //*****************************************************************

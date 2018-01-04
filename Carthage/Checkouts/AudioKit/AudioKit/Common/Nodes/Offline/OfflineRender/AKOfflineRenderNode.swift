@@ -1,6 +1,6 @@
 //
 //  AKOfflineRenderNode.swift
-//  AudioKit For iOS
+//  AudioKit
 //
 //  Created by David O'Neill on 8/7/17.
 //  Copyright © 2017 AudioKit. All rights reserved.
@@ -8,6 +8,9 @@
 
 import Foundation
 
+@available(iOS, obsoleted: 11)
+@available(tvOS, obsoleted: 11)
+@available(macOS, obsoleted: 10.13)
 open class AKOfflineRenderNode: AKNode, AKComponent, AKInput {
 
     public typealias AKAudioUnitType = AKOfflineRenderAudioUnit
@@ -25,7 +28,7 @@ open class AKOfflineRenderNode: AKNode, AKComponent, AKInput {
     open func renderToBuffer(seconds: Double) throws -> AVAudioPCMBuffer {
         return try internalAU!.render(toBuffer:seconds)
     }
-    public init(_ input: AKNode? = nil) {
+    @objc public init(_ input: AKNode? = nil) {
 
         _Self.register()
         super.init()

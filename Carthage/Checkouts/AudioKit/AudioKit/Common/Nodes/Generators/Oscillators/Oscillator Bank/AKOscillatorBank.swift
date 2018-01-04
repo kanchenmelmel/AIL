@@ -168,7 +168,7 @@ open class AKOscillatorBank: AKPolyphonicNode, AKComponent {
     ///   - vibratoRate: Frequency of vibrato in Hz
 
     ///
-    public init(
+    @objc public init(
         waveform: AKTable,
         attackDuration: Double = 0.1,
         decayDuration: Double = 0.1,
@@ -233,6 +233,10 @@ open class AKOscillatorBank: AKPolyphonicNode, AKComponent {
         internalAU?.pitchBend = Float(pitchBend)
         internalAU?.vibratoDepth = Float(vibratoDepth)
         internalAU?.vibratoRate = Float(vibratoRate)
+    }
+
+    open func reset() {
+        internalAU?.reset()
     }
 
     // MARK: - AKPolyphonic

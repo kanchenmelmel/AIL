@@ -15,7 +15,6 @@
  **/
 
 import Foundation
-import RestKit
 
 /// A DialogID uniquely identifies a dialog application.
 public typealias DialogID = String
@@ -77,7 +76,7 @@ public class Dialog {
         }
         
         do {
-            let json = try JSON(data: data)
+            let json = try JSONWrapper(data: data)
             let code = response?.statusCode ?? 400
             let message = try json.getString(at: "error")
             let userInfo = [NSLocalizedFailureReasonErrorKey: message]
@@ -185,7 +184,7 @@ public class Dialog {
     public func deleteDialog(
         withID dialogID: DialogID,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct REST request
         let request = RestRequest(
@@ -321,7 +320,7 @@ public class Dialog {
         withID dialogID: DialogID,
         fromFile fileURL: URL,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct body
         let multipartFormData = MultipartFormData()
@@ -400,10 +399,10 @@ public class Dialog {
         fromDialogID dialogID: DialogID,
         forNodes nodes: [Node],
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // serialize nodes to JSON
-        let json = JSON(dictionary: ["items": nodes.map { $0.toJSONObject() }])
+        let json = JSONWrapper(dictionary: ["items": nodes.map { $0.toJSONObject() }])
         guard let body = try? json.serialize() else {
             let failureReason = "Nodes could not be serialized to JSON."
             let userInfo = [NSLocalizedFailureReasonErrorKey: failureReason]
@@ -613,7 +612,7 @@ public class Dialog {
         withClientID clientID: Int? = nil,
         parameters: [String: String],
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // serialize the profile to JSON
         let profile = Profile(clientID: clientID, parameters: parameters)

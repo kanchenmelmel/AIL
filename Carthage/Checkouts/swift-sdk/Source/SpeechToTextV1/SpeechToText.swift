@@ -15,7 +15,6 @@
  **/
 
 import Foundation
-import RestKit
 import AVFoundation
 
 /**
@@ -87,7 +86,7 @@ public class SpeechToText {
         }
         
         do {
-            let json = try JSON(data: data)
+            let json = try JSONWrapper(data: data)
             let code = response?.statusCode ?? 400
             let message = try json.getString(at: "error")
             var userInfo = [NSLocalizedFailureReasonErrorKey: message]
@@ -165,7 +164,7 @@ public class SpeechToText {
      - parameter audio: The audio file to transcribe.
      - parameter settings: The configuration to use for this recognition request.
      - parameter model: The language and sample rate of the audio. For supported models, visit
-        https://www.ibm.com/watson/developercloud/doc/speech-to-text/input.shtml#models.
+        https://console.bluemix.net/docs/services/speech-to-text/input.html#models.
      - parameter customizationID: The GUID of a custom language model that is to be used with the
         request. The base language model of the specified custom language model must match the
         model specified with the `model` parameter. By default, no custom model is used.
@@ -209,7 +208,7 @@ public class SpeechToText {
      - parameter audio: The audio data to transcribe.
      - parameter settings: The configuration to use for this recognition request.
      - parameter model: The language and sample rate of the audio. For supported models, visit
-        https://www.ibm.com/watson/developercloud/doc/speech-to-text/input.shtml#models.
+        https://console.bluemix.net/docs/services/speech-to-text/input.html#models.
      - parameter customizationID: The GUID of a custom language model that is to be used with the
         request. The base language model of the specified custom language model must match the
         model specified with the `model` parameter. By default, no custom model is used.
@@ -271,7 +270,7 @@ public class SpeechToText {
 
      - parameter settings: The configuration for this transcription request.
      - parameter model: The language and sample rate of the audio. For supported models, visit
-        https://www.ibm.com/watson/developercloud/doc/speech-to-text/input.shtml#models.
+        https://console.bluemix.net/docs/services/speech-to-text/input.html#models.
      - parameter customizationID: The GUID of a custom language model that is to be used with the
         request. The base language model of the specified custom language model must match the
         model specified with the `model` parameter. By default, no custom model is used.
@@ -420,7 +419,7 @@ public class SpeechToText {
         if let description = description {
             jsonData["description"] = description
         }
-        guard let body = try? JSON(dictionary: jsonData).serialize() else {
+        guard let body = try? JSONWrapper(dictionary: jsonData).serialize() else {
             failure?(RestError.serializationError)
             return
         }
@@ -457,7 +456,7 @@ public class SpeechToText {
     public func deleteCustomization(
         withID customizationID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct REST request
         let request = RestRequest(
@@ -533,7 +532,7 @@ public class SpeechToText {
         withID customizationID: String,
         wordTypeToAdd: WordTypeToAdd? = nil,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct query parameters
         var queryParameters = [URLQueryItem]()
@@ -575,7 +574,7 @@ public class SpeechToText {
     public func resetCustomization(
         withID customizationID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct REST request
         let request = RestRequest(
@@ -609,7 +608,7 @@ public class SpeechToText {
     public func upgradeCustomization(
         withID customizationID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct REST request
         let request = RestRequest(
@@ -680,7 +679,7 @@ public class SpeechToText {
         withName name: String,
         customizationID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct REST request
         let request = RestRequest(
@@ -743,7 +742,7 @@ public class SpeechToText {
      
      - parameter textFile: A plain text file that contains the training data for the corpus. For 
         more information about how to prepare a corpus file, visit this link:
-        http://www.ibm.com/watson/developercloud/doc/speech-to-text/custom.shtml#prepareCorpus
+        https://console.bluemix.net/docs/services/speech-to-text/custom-resource.html#corporaWords
      - parameter name: The name of the corpus to be added. This cannot be `user`, which is a 
         reserved word. If a corpus with the same name exists already, you must set `allowOverwrite` 
         to true or the request will fail.
@@ -760,7 +759,7 @@ public class SpeechToText {
         customizationID: String,
         allowOverwrite: Bool? = nil,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct query parameters
         var queryParameters = [URLQueryItem]()
@@ -869,12 +868,12 @@ public class SpeechToText {
         customizationID: String,
         words: [NewWord],
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct body
         var jsonData = [String: Any]()
         jsonData["words"] = words.map { word in word.toJSONObject() }
-        guard let body = try? JSON(dictionary: jsonData).serialize() else {
+        guard let body = try? JSONWrapper(dictionary: jsonData).serialize() else {
             failure?(RestError.serializationError)
             return
         }
@@ -921,7 +920,7 @@ public class SpeechToText {
         withName name: String,
         customizationID: String,
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct REST request
         let request = RestRequest(
@@ -993,7 +992,7 @@ public class SpeechToText {
         customizationID: String,
         word: NewWord? = NewWord(),
         failure: ((Error) -> Void)? = nil,
-        success: ((Void) -> Void)? = nil)
+        success: (() -> Void)? = nil)
     {
         // construct body
         guard let body = try? word?.toJSON().serialize() else {

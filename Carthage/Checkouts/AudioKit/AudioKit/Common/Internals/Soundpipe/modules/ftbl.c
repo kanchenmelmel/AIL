@@ -84,12 +84,16 @@ int sp_gen_vals(sp_data *sp, sp_ftbl *ft, const char *string)
         out = tokenize(&str, &size);
         if(ft->size < j + 1){
             ft->tbl = realloc(ft->tbl, sizeof(SPFLOAT) * (ft->size + 2));
+            /* zero out new tables */
+            ft->tbl[ft->size] = 0;
+            ft->tbl[ft->size + 1] = 0;
             ft->size++;
         }
         ft->tbl[j] = atof(out);
         j++;
     }
-   
+  
+    sp_ftbl_init(sp, ft, ft->size);
     free(ptr); 
     return SP_OK;
 }
@@ -368,5 +372,31 @@ int sp_gen_rand(sp_data *sp, sp_ftbl *ft, const char *argstring)
         ft->size = pos;
     }
     sp_ftbl_destroy(&args);
+    return SP_OK;
+}
+
+int sp_gen_triangle(sp_data *sp, sp_ftbl *ft)
+{
+    unsigned int i;
+    unsigned int counter;
+    SPFLOAT incr;
+    int step;
+
+    incr = 1.0f / (SPFLOAT)ft->size;
+    incr *= 2;
+
+    step = 1;
+
+    counter = 0;
+
+    for(i = 0; i < ft->size; i++) {
+        if(i == ft->size / 2) {
+            step = -1;
+        }
+        ft->tbl[i] = (2.f*(counter * incr) - 1.f);
+
+        counter += step;
+    }
+
     return SP_OK;
 }

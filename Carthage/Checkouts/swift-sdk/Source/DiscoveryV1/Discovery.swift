@@ -15,7 +15,6 @@
  **/
 
 import Foundation
-import RestKit
 
 /**
  The IBM Watson Discovery service uses data analysis combined with cognitive intuition to take your
@@ -74,7 +73,7 @@ public class Discovery {
         }
         
         do {
-            let json = try JSON(data: data)
+            let json = try JSONWrapper(data: data)
             let code = response?.statusCode ?? 400
             let message = try json.getString(at: "error")
             let userInfo: [String: String]
@@ -165,7 +164,7 @@ public class Discovery {
         if let description = description {
             jsonData["description"] = description
         }
-        guard let body = try? JSON(dictionary: jsonData).serialize() else {
+        guard let body = try? JSONWrapper(dictionary: jsonData).serialize() else {
             failure?(RestError.encodingError)
             return
         }
@@ -288,7 +287,7 @@ public class Discovery {
         if let description = description {
             jsonData["description"] = description
         }
-        guard let body = try? JSON(dictionary: jsonData).serialize() else {
+        guard let body = try? JSONWrapper(dictionary: jsonData).serialize() else {
             failure?(RestError.encodingError)
             return
         }
@@ -692,7 +691,7 @@ public class Discovery {
         if let configurationID = configurationID {
             bodyData["configuration_id"] = configurationID
         }
-        guard let json = try? JSON(dictionary: bodyData).serialize() else {
+        guard let json = try? JSONWrapper(dictionary: bodyData).serialize() else {
             failure?(RestError.encodingError)
             return
         }
@@ -829,7 +828,7 @@ public class Discovery {
         if let configurationID = configurationID {
             bodyData["configuration_id"] = configurationID
         }
-        guard let json = try? JSON(dictionary: bodyData).serialize() else {
+        guard let json = try? JSONWrapper(dictionary: bodyData).serialize() else {
             failure?(RestError.encodingError)
             return
         }
@@ -1170,7 +1169,7 @@ public class Discovery {
     
     /** 
      Query the documents in your collection. See the documentation for reference on how to build
-     a query string. https://www.ibm.com/watson/developercloud/doc/discovery/using.shtml.
+     a query string. https://console.bluemix.net/docs/services/discovery/using.html.
      
      - parameter environmentID: The unique identifier of the environment the collection is in.
      - parameter collectionID: The unique identifier of the collection to add a document to.

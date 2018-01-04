@@ -15,7 +15,6 @@
  **/
 
 import Foundation
-import RestKit
 
 /** A custom word that has been added to a custom language model. */
 public struct Word: JSONDecodable {
@@ -42,12 +41,12 @@ public struct Word: JSONDecodable {
     public let error: [WordError]?
     
     /// Used internally to initialize a `Word` model from JSON.
-    public init(json: JSON) throws {
+    public init(json: JSONWrapper) throws {
         word = try json.getString(at: "word")
-        soundsLike = try json.decodedArray(at: "sounds_like", type: Swift.String)
+        soundsLike = try json.decodedArray(at: "sounds_like", type: Swift.String.self)
         displayAs = try json.getString(at: "display_as")
         count = try json.getInt(at: "count")
-        source = try json.decodedArray(at: "source", type: Swift.String)
+        source = try json.decodedArray(at: "source", type: Swift.String.self)
         error = try? json.decodedArray(at: "error", type: WordError.self)
     }
 }
@@ -60,7 +59,7 @@ public struct NewWord: JSONEncodable {
     
     /// An array of pronunciations for the custom word. You can specify a maximum of five sounds-like 
     /// pronunciations for each word. For pronunciation rules, refer to the following link:
-    /// http://www.ibm.com/watson/developercloud/doc/speech-to-text/custom.shtml#soundsLike
+    /// https://console.bluemix.net/docs/services/speech-to-text/custom.html#addWords
     public let soundsLike: [String]?
     
     /// The spelling of the custom word that the service uses to display the word in a transcript.
@@ -114,7 +113,7 @@ public struct WordError: JSONDecodable {
     public let json: [String: Any]
     
     /// Used internally to intialize a `WordError` model from JSON.
-    public init(json: JSON) throws {
+    public init(json: JSONWrapper) throws {
         self.json = try json.getDictionaryObject()
     }
 }

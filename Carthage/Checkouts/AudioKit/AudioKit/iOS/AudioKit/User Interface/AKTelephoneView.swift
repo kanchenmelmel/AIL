@@ -35,7 +35,7 @@ open class AKTelephoneView: UIView {
 
             if currentKey != "" {
                 callback(currentKey, "down")
-                if currentKey.characters.count == 1 {
+                if currentKey.count == 1 {
                     last10Presses.removeFirst()
                     last10Presses.append(currentKey)
                 }
@@ -55,8 +55,8 @@ open class AKTelephoneView: UIView {
     }
 
     /// Initialize the telephone view
-    public init(frame: CGRect = CGRect(x: 0, y: 0, width: 440, height: 782),
-                callback: @escaping (String, String) -> Void) {
+    @objc public init(frame: CGRect = CGRect(x: 0, y: 0, width: 440, height: 782),
+                      callback: @escaping (String, String) -> Void) {
         self.callback = callback
         super.init(frame: frame)
     }
