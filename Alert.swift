@@ -9,6 +9,16 @@
 import Foundation
 import UIKit
 
+func alert(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "确认", style: .cancel))
+    if var topController = UIApplication.shared.keyWindow?.rootViewController {
+        while let presentedViewController = topController.presentedViewController {
+            topController = presentedViewController
+        }
+        topController.present(alert, animated: true)
+    }
+}
 
 class Alert {
     

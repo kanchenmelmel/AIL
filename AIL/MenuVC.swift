@@ -69,12 +69,16 @@ class LeftMenuVC: UIViewController {
     
     var credit = ""
     
-    func initializeUser() {
+    func initializeUser(alertLoginStatus: Bool = false) {
         if let auth = UserDefaults.standard.string(forKey: "WordPress-Basic-Auth") {
             print("Start Auth")
-            WPClient.authorize(auth: auth) { x in
-                print("Auth: \(x)")
+            WPClient.authorize(auth: auth) { success in
                 self.updateUserInfo()
+                if success && alertLoginStatus {
+                    alert(title: "", message: "登陆成功！")
+                } else {
+                    alert(title: "登陆失败", message: "用户名或密码错误")
+                }
             }
         } else {
             self.updateUserInfo()
@@ -114,13 +118,14 @@ class LeftMenuVC: UIViewController {
                     let auth = Data("\(user):\(pass)".utf8).base64EncodedString()
                     UserDefaults.standard.set(auth, forKey: "WordPress-Basic-Auth")
                     UserDefaults.standard.synchronize()
-                    self.initializeUser()
+                    self.initializeUser(alertLoginStatus: true)
                 }
             })
             alert.addTextField() { textField in
                 textField.placeholder = "用户名"
             }
             alert.addTextField() { textField in
+                textField.isSecureTextEntry = true
                 textField.placeholder = "密码"
             }
             self.present(alert, animated:true, completion:nil)

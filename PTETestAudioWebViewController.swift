@@ -53,4 +53,13 @@ class PTETestAudioWebViewController: UIViewController, UIWebViewDelegate {
         }
     }
 
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if let url = request.url {
+            if url.absoluteString == "http://ail.vic.edu.au/pte-online-courses" {
+                UIApplication.shared.openURL(request.url!)
+                return false
+            }
+        }
+        return true
+    }
 }

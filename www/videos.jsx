@@ -17,12 +17,12 @@ class VedioItem extends React.Component {
         const durationString = `${(minutes < 10 ? '0' : '') + minutes}:${(seconds < 10 ? '0' : '') + seconds}`;
         return (
             <div style={{ marginLeft: 8, marginRight: 8, paddingTop: 8, paddingBottom: 8, height: 80, display: 'flex', flexDirection: 'row', alignItems: 'stretch', borderBottom: '1px solid #EEEEEE' }}> 
-                <div style={{ width: '40%', overflow: 'hidden' }}>
-                    <video style={{ width: '100%', height: '100%', objectFit: 'cover' }} onPlay={this.increaseViews} controls>
+                <div style={{ width: '35%', overflow: 'hidden' }}>
+                    <video style={{ width: '100%', height: '100%', objectFit: 'cover', backgroundColor: 'black', borderRadius: 6 }} onPlay={this.increaseViews} controls>
                         <source src={url} type="video/mp4"/>
                     </video>
                 </div>
-                <div style={{ marginLeft: 8, maxWidth: '60%', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+                <div style={{ marginLeft: 8, maxWidth: '65%', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
                     <p style={{ margin: 2, fontSize: 20, whiteSpace: 'nowrap', overflowX: 'auto' }}>{ title }</p>
                     <div style={{ margin: 2, marginLeft: 0, display: 'flex', flexDirection: 'row', alignItems: 'center', color: '#9E9E9E', fontSize: 13 }}>
                         <Icon name="play_arrow" style={{ fontSize: 18 }}/>
@@ -65,6 +65,7 @@ function alertWithoutTitle(message) {
 class Main extends React.Component {
     state = {
         data: undefined,
+        vip: false,
     }
     async componentDidMount() {
         const res = await fetch('http://ail.vic.edu.au/PTE真题音频/videos-data.php' + (
@@ -73,9 +74,12 @@ class Main extends React.Component {
         const { data, vip } = await res.json();
         console.log(vip, data);
         if (!vip) {
-            alertWithoutTitle('非会员仅能查看免费视频。');
+            alertWithoutTitle('非会员仅能查看免费视频\n请在首页左侧登陆AIL账号');
         }
-        this.setState({ data });
+        this.setState({ data, vip });
+    }
+    openMembershipPage = () => {
+        window.open('http://ail.vic.edu.au/pte-online-courses');
     }
     render() {
         if (!this.state.data) return <Loading/>;
@@ -85,6 +89,27 @@ class Main extends React.Component {
                 { Object.keys(this.state.data).map((k, i) => (
                     <VedioItem ref={k} key={i} title={k} {...this.state.data[k]}/>)
                 ) }
+                { !this.state.vip &&
+                    <div
+                        style={{
+                            width: 'calc(100% - 4rem)',
+                            height: 50,
+                            margin: '2rem',
+                            borderRadius: 6,
+                            background: 'linear-gradient(to right, #2196F3, #673AB7)',
+                            color: 'white',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: 18,
+                            fontWeight: '100',
+                        }}
+                        onClick={this.openMembershipPage}
+                    >
+                        成为会员查看更多视频
+                    </div>
+                }
                 <Footer/>
             </div>
         );
