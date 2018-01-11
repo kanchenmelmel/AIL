@@ -74,10 +74,12 @@ class LeftMenuVC: UIViewController {
             print("Start Auth")
             WPClient.authorize(auth: auth) { success in
                 self.updateUserInfo()
-                if success && alertLoginStatus {
-                    alert(title: "", message: "登陆成功！")
-                } else {
-                    alert(title: "登陆失败", message: "用户名或密码错误")
+                if alertLoginStatus {
+                    if success {
+                        alert(title: "", message: "登陆成功！")
+                    } else {
+                        alert(title: "登陆失败", message: "用户名或密码错误")
+                    }
                 }
             }
         } else {

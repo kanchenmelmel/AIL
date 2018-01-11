@@ -18,7 +18,19 @@ class VedioItem extends React.Component {
         return (
             <div style={{ marginLeft: 8, marginRight: 8, paddingTop: 8, paddingBottom: 8, height: 80, display: 'flex', flexDirection: 'row', alignItems: 'stretch', borderBottom: '1px solid #EEEEEE' }}> 
                 <div style={{ width: '35%', overflow: 'hidden' }}>
-                    <video style={{ width: '100%', height: '100%', objectFit: 'cover', backgroundColor: 'black', borderRadius: 6 }} onPlay={this.increaseViews} controls>
+                    <video
+                        style={{
+                            width: '100%', height: '100%',
+                            objectFit: 'cover',
+                            backgroundImage: 'url(video-background.png)',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center center',
+                            borderRadius: 6,
+                        }}
+                        onPlay={this.increaseViews}
+                        controls
+                    >
                         <source src={url} type="video/mp4"/>
                     </video>
                 </div>
@@ -62,13 +74,48 @@ function alertWithoutTitle(message) {
     iframe.parentNode.removeChild(iframe);
 }
 
+const VideoList = ({ data }) => (
+    Object.keys(data).map(k => (
+        <VedioItem key={k} title={k} {...data[k]}/>)
+    )
+);
+
+const TABS = [ 'Listening', 'Speaking', 'Reading', 'Writing' ];
+
+const Tabs = ({ selectedTab, onTabSelected }) => (
+    <div style={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'stretch',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        backgroundColor: 'white',
+        zIndex: 100,
+        borderBottom: '1px solid #eee',
+    }}>
+        { TABS.map(tab =>
+            <div
+                key={tab}
+                style={{ height: '2rem', transition: 'all 0.5s', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', flex: 1, color: tab == selectedTab ? '#4478B4' : 'black', borderBottom: `2px solid ${tab == selectedTab ? '#4478B4' : 'transparent'}`, fontWeight: tab == selectedTab ? 'bold' : 100 }}
+                onClick={() => onTabSelected(tab)}
+            >
+                { tab }
+            </div>
+        ) }
+        <div></div>
+    </div>
+)
+
 class Main extends React.Component {
     state = {
         data: undefined,
         vip: false,
+        tab: TABS[0],
     }
     async componentDidMount() {
-        const res = await fetch('http://ail.vic.edu.au/PTE真题音频/videos-data.php' + (
+        const res = await fetch('http://ail.vic.edu.au/PTE真题音频/videos-data-v2.php' + (
             window.USER_ID ? `?user_id=${window.USER_ID}` : ''
         ));
         const { data, vip } = await res.json();
@@ -81,14 +128,16 @@ class Main extends React.Component {
     openMembershipPage = () => {
         window.open('http://ail.vic.edu.au/pte-online-courses');
     }
+    handleTabSelected = tab => this.setState({ tab })
     render() {
         if (!this.state.data) return <Loading/>;
         return (
-            <div>
-                <Title/>
-                { Object.keys(this.state.data).map((k, i) => (
+            <div style={{paddingTop: '2rem'}}>
+                <Tabs selectedTab={this.state.tab} onTabSelected={this.handleTabSelected}/>
+                <VideoList data={this.state.data[this.state.tab]} />
+                { /*Object.keys(this.state.data).map((k, i) => (
                     <VedioItem ref={k} key={i} title={k} {...this.state.data[k]}/>)
-                ) }
+                )*/ }
                 { !this.state.vip &&
                     <div
                         style={{
