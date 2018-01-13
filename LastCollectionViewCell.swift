@@ -19,7 +19,7 @@ class LastCollectionViewCell: UICollectionViewCell {
         layer.shadowRadius = 3
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = CGSize.zero
-        layer.masksToBounds = false
+        layer.masksToBounds = true
         //self.backgroundColor = UIColor.whiteColor()
         
         

@@ -115,6 +115,9 @@ class LeftMenuVC: UIViewController {
         } else {
             let alert = UIAlertController(title: "AIL登录", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "取消", style: .cancel))
+            alert.addAction(UIAlertAction(title: "注册", style: .default) { _ in
+                UIApplication.shared.openURL(URL(string: "http://ail.vic.edu.au/my-account")!)
+            })
             alert.addAction(UIAlertAction(title: "登录", style: .default) { _ in
                 if let user = alert.textFields![0].text, let pass = alert.textFields![1].text {
                     let auth = Data("\(user):\(pass)".utf8).base64EncodedString()

@@ -1,14 +1,10 @@
 // Tine Color: #4478B4
-const DEBUG = false;
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-
 
 const Icon = ({ name, ...props }) => <i className="material-icons" {...props}>{name}</i>;
 
 class VedioItem extends React.Component {
     increaseViews = async () => {
-        await fetch(`http://${DEBUG ? 'localhost:8888/wordpress/pte' : 'ail.vic.edu.au/PTE真题音频'}/increaseVideoVisitCount.php?title=${this.props.title}`).catch(console.error);
+        await fetch(`http://ail.vic.edu.au/PTE真题音频/increaseVideoVisitCount.php?title=${this.props.title}`);
     }
     render() {
         const { title, url, views, duration } = this.props;
@@ -30,6 +26,7 @@ class VedioItem extends React.Component {
                         }}
                         onPlay={this.increaseViews}
                         controls
+                        preload='none'
                     >
                         <source src={url} type="video/mp4"/>
                     </video>
@@ -74,27 +71,14 @@ function alertWithoutTitle(message) {
     iframe.parentNode.removeChild(iframe);
 }
 
-const VideoList = ({ data }) => (
-    Object.keys(data).map(k => (
-        <VedioItem key={k} title={k} {...data[k]}/>)
-    )
+const VideoList = ({ data }) => Object.keys(data).map(k =>
+    <VedioItem key={k} title={k} {...data[k]}/>
 );
 
 const TABS = [ 'Listening', 'Speaking', 'Reading', 'Writing' ];
 
 const Tabs = ({ selectedTab, onTabSelected }) => (
-    <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'stretch',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: 'white',
-        zIndex: 100,
-        borderBottom: '1px solid #eee',
-    }}>
+    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch', position: 'fixed', top: 0, left: 0, right: 0, backgroundColor: 'white', zIndex: 100, borderBottom: '1px solid #eee' }}>
         { TABS.map(tab =>
             <div
                 key={tab}
@@ -115,15 +99,19 @@ class Main extends React.Component {
         tab: TABS[0],
     }
     async componentDidMount() {
-        const res = await fetch('http://ail.vic.edu.au/PTE真题音频/videos-data-v2.php' + (
-            window.USER_ID ? `?user_id=${window.USER_ID}` : ''
-        ));
-        const { data, vip } = await res.json();
-        console.log(vip, data);
-        if (!vip) {
-            alertWithoutTitle('非会员仅能查看免费视频\n请在首页左侧登陆AIL账号');
+        try {
+            const res = await fetch('http://ail.vic.edu.au/PTE真题音频/videos-data-v2.php' + (
+                window.USER_ID ? `?user_id=${window.USER_ID}` : ''
+            ));
+            const { data, vip } = await res.json();
+            console.log(vip, data);
+            if (!vip) {
+                alertWithoutTitle('非会员仅能查看免费视频\n请在首页左侧登陆AIL账号');
+            }
+            this.setState({ data, vip });
+        } catch (e) {
+            alert(`Error: ${e.message}`);
         }
-        this.setState({ data, vip });
     }
     openMembershipPage = () => {
         window.open('http://ail.vic.edu.au/pte-online-courses');
@@ -135,9 +123,6 @@ class Main extends React.Component {
             <div style={{paddingTop: '2rem'}}>
                 <Tabs selectedTab={this.state.tab} onTabSelected={this.handleTabSelected}/>
                 <VideoList data={this.state.data[this.state.tab]} />
-                { /*Object.keys(this.state.data).map((k, i) => (
-                    <VedioItem ref={k} key={i} title={k} {...this.state.data[k]}/>)
-                )*/ }
                 { !this.state.vip &&
                     <div
                         style={{
@@ -165,15 +150,4 @@ class Main extends React.Component {
     }
 }
 
-/*
-console.log(window.ROLES);
-
-if (!window.ROLES) {
-    window.start = roles =>
-        ReactDOM.render(<Main roles={roles}/>, document.getElementById('root'));
-} else {
-    ReactDOM.render(<Main roles={window.ROLES}/>, document.getElementById('root'));
-}
-*/
-console.log(window.USER_ID);
 ReactDOM.render(<Main/>, document.getElementById('root'));
